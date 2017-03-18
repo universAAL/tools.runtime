@@ -8,9 +8,10 @@
 		<relativePath>../tools.pom/pom.xml</relativePath>
 	</parent>
 
+	<packaging>bundle</packaging>
   <artifactId>tools.sparql-tester</artifactId>
   <version>3.4.1-SNAPSHOT</version>
-  <name>SPARQL Tester</name>
+  <name>universAAL Tools SPARQL Tester</name>
   <description>A runtime tool to inject SPARQL queries into the CHe query service.</description>
 
   <properties>

@@ -9,7 +9,7 @@
 	</parent>
 	<packaging>bundle</packaging>
 	<artifactId>tools.log-monitor</artifactId>  
-	<name>Log Monitor</name>
+	<name>universAAL Tools Log Monitor</name>
 	<description></description>
 	<url />
 

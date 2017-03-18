@@ -9,19 +9,29 @@
 	</parent>
 	<packaging>pom</packaging>
 	<artifactId>tools.makro-recorder</artifactId>
-	<name>Makro recorder</name>
+	<name>universAAL Tools Makro Recorder Suite</name>
 	<version>3.4.1-SNAPSHOT</version>
   <modules>
   	<module>tools.makro-recorder.osgi</module>
   	<module>tools.makro-recorder.swingGUI</module>
   </modules>
   
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+		<groupId>org.universAAL.tools</groupId>
+        <artifactId>tools.makro-recorder.osgi</artifactId>
+	     <version>3.4.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+		<groupId>org.universAAL.tools</groupId>
+        <artifactId>tools.makro-recorder.swingGUI</artifactId>
+	     <version>3.4.1-SNAPSHOT</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  
   <dependencies>
-		<dependency>
-			<groupId>org.apache.felix</groupId>
-			<artifactId>org.osgi.core</artifactId>
-			<scope>provided</scope>
-		</dependency>
 		<dependency>
 			<groupId>org.universAAL.middleware</groupId>
 			<artifactId>mw.bus.service.core</artifactId>

@@ -8,6 +8,7 @@
   </parent>
   <artifactId>tools.makro-recorder.osgi</artifactId>
   <packaging>bundle</packaging>
+  <name>universAAL Tools Makro Recorder</name>
   <build>
   	<plugins>
   		<plugin>

@@ -8,11 +8,11 @@
   </parent>
   <artifactId>tools.makro-recorder.swingGUI</artifactId>
   <packaging>bundle</packaging>
+  <name>universAAL Tools Makro Recorder GUI</name>
   <dependencies>
   <dependency>
   	<groupId>org.universAAL.tools</groupId>
-  	<artifactId>makro.recorder.osgi</artifactId>
-  	<type>bundle</type>
+  	<artifactId>tools.makro-recorder.osgi</artifactId>
   </dependency>
   </dependencies>
   <build>
@@ -30,7 +30,6 @@
 						<Private-Package>org.universAAL.tools.makrorecorder.swingGUI.*</Private-Package>
 						<Bundle-ClassPath>.,{maven-dependencies}</Bundle-ClassPath>
 						<Import-Package>*</Import-Package>
-						
 					</instructions>
 				</configuration>
   		</plugin>
