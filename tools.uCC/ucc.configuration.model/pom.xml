@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.universAAL.tools.ucc</groupId>
+		<artifactId>ucc.pom</artifactId>
+		<version>3.0.0</version>
+		<relativePath>../ucc.pom/pom.xml</relativePath>
+	</parent>
+	<artifactId>ucc.configuration.model</artifactId>
+	<version>3.0.0</version>
+	<packaging>bundle</packaging>
+	<name>universAAL uCC configuration model</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.universAAL.middleware</groupId>
+			<artifactId>mw.container.osgi</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+						<Bundle-Name>${project.groupId}.${project.artifactId}</Bundle-Name>
+						<Bundle-Version>${project.version}</Bundle-Version>
+						<!--  Private-Package>
+							javax.xml.bind.annotation,
+							javax.xml.bind.annotation.adapters						
+						</Private-Package -->						
+						<Import-Package>
+							javax.xml.*,
+							org.w3c.dom,
+							org.universAAL.middleware.container,
+							org.universAAL.middleware.container.osgi,
+							org.universAAL.middleware.container.utils, 
+							javax.xml.bind,
+<!-- 							javax.xml.bind.annotation, -->
+<!-- 							javax.xml.bind.annotation.adapters, -->
+							javax.xml.namespace,
+							org.osgi.framework;version="[1,2)",
+							org.osgi.util.tracker;version="[1,2)", org.slf4j;version="[1,2)"</Import-Package>
+						<Export-Package>
+							org.universAAL.ucc.configuration.model.*
+							<!-- org.universAAL.ucc.configuration.model, -->
+							<!-- org.universAAL.ucc.configuration.model.configurationinstances, -->
+							<!-- org.universAAL.ucc.configuration.model.configurationdefinition, -->
+							<!-- org.universAAL.ucc.configuration.model.servicetracker, -->
+							<!-- org.universAAL.ucc.configuration.model.validators, -->
+							<!-- org.universAAL.ucc.configuration.model.exceptions, -->
+							<!-- org.universAAL.ucc.configuration.model.interfaces -->
+						</Export-Package>
+					</instructions>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

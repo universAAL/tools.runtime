@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configurationInstance xmlns:ns2="http://uaal.cas.de/uaalconfiguration" isSecondary="false" isPrimary="true" author="melnikov" version="1.0.0" usecaseid="de.cas.uc.infoframe2" id="first">
+    <ns2:configOption id="RSSUpdateTime">
+        <ns2:value>100</ns2:value>
+    </ns2:configOption>
+    <ns2:configOption id="ImageWidth">
+        <ns2:value>1200</ns2:value>
+    </ns2:configOption>
+    <ns2:configOption id="ImageHeight">
+        <ns2:value>700</ns2:value>
+    </ns2:configOption>
+    <ns2:configOption id="InfoFont">
+        <ns2:value key="2">Tahoma</ns2:value>
+    </ns2:configOption>
+    <ns2:configOption id="FontScale">
+        <ns2:value>1</ns2:value>
+    </ns2:configOption>
+    <ns2:configOption id="WeatherStationLocation">
+        <ns2:value>Karlsruhe</ns2:value>
+    </ns2:configOption>
+    <ns2:configOption id="InterfaceLanguage">
+        <ns2:value>de</ns2:value>
+    </ns2:configOption>
+    <ns2:configOption id="AddFeedPlugin">
+        <ns2:value>1</ns2:value>
+    </ns2:configOption>
+    <ns2:configOption id="FeedURL1">
+        <ns2:value>http://www.heise.de/newsticker/heise-atom.xml</ns2:value>
+    </ns2:configOption>
+    <ns2:configOption id="MaxDispItems1">
+        <ns2:value>5</ns2:value>
+    </ns2:configOption>
+    <ns2:configOption id="MaxDispItems2">
+        <ns2:value>5</ns2:value>
+    </ns2:configOption>
+    <ns2:configOption id="MaxDispItems3">
+        <ns2:value>5</ns2:value>
+    </ns2:configOption>
+</configurationInstance>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<universaal:configuration 	author="xy" name="medicationManager" version="1.0" id="medicationManager"
+							xmlns:universaal="http://universaal.cas.de" 
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+							xsi:schemaLocation="http://universaal.cas.de universaalconfiguration.xsd ">
+	<universaal:category id="general" active="true" label="General">
+		<universaal:SPARQLConfigItem cardinality="1..1" id="ap" active="true">
+			<universaal:label>Chose the AP</universaal:label>
+			<universaal:description>Please chose the AP</universaal:description>
+			<universaal:query>
+				PREFIX foaf:  &lt;http://xmlns.com/foaf/0.1/&gt;
+					SELECT ?name
+				WHERE {
+					?person foaf:name ?name .
+				}
+			</universaal:query>
+		</universaal:SPARQLConfigItem>
+		
+		<universaal:SPARQLConfigItem cardinality="0..*" id="medicine">
+			<universaal:label>Chose the medicine</universaal:label>
+			<universaal:description>Please the chose the medicine for the AP</universaal:description>
+			<universaal:dependencies>
+				<universaal:item id="ap"/>
+			</universaal:dependencies>
+			<universaal:modificator class="MyModificator"/>
+			<universaal:query>
+				PREFIX foaf:  &lt;http://xmlns.com/foaf/0.1/&gt;
+				SELECT ?name
+				WHERE {
+					?medicine foaf:name ?name .
+				}
+			</universaal:query>
+		</universaal:SPARQLConfigItem>
+		
+		<universaal:SPARQLConfigItem cardinality="0..*" id="doctor">
+			<universaal:label>Chose the doctor</universaal:label>
+			<universaal:description>Please the chose the doctors of the AP</universaal:description>
+			<universaal:dependencies>
+				<universaal:item id="medicine"/>
+			</universaal:dependencies>
+			<universaal:query>
+				PREFIX foaf:  &lt;http://xmlns.com/foaf/0.1/&gt;
+				SELECT ?name
+				WHERE {
+					?doctor foaf:name ?name .
+				}
+			</universaal:query>
+		</universaal:SPARQLConfigItem>
+		
+		<universaal:MapConfigItem cardinality="1..1" id="medicine_ordering">
+			<universaal:label>How to behave with medicine orders?</universaal:label>
+			<universaal:description>How to behave with medicine orders?</universaal:description>
+			<universaal:dependencies>
+				<universaal:item id="doctor"/>
+			</universaal:dependencies>
+			<universaal:modificator class="MyModificator"/>
+			<universaal:options>
+				<universaal:option key="1">Order without asking.</universaal:option>
+				<universaal:option key="2">Order, but ask.</universaal:option>
+				<universaal:option key="3">Don't order.</universaal:option>
+			</universaal:options>
+		</universaal:MapConfigItem>
+		
+		<universaal:SPARQLConfigItem cardinality="0..*" id="pharmacy">
+			<universaal:label>Chose the pharmacy</universaal:label>
+			<universaal:description>Please chose the pharmacy</universaal:description>
+			<universaal:dependencies>
+				<universaal:item id="medicine_ordering"/>
+			</universaal:dependencies>
+			<universaal:query>
+				PREFIX foaf:  &lt;http://xmlns.com/foaf/0.1/&gt;
+				SELECT ?name
+				WHERE {
+					?pharmacy foaf:name ?name .
+				}
+			</universaal:query>
+		</universaal:SPARQLConfigItem>
+		
+		<universaal:SimpleConfigItem cardinality="1..1" id="notification_message" type="string">
+			<universaal:label>Notification message</universaal:label>
+			<universaal:description>Please enter the notification message for medicine</universaal:description>
+			<universaal:dependencies>
+				<universaal:item id="pharmacy"/>
+			</universaal:dependencies>
+			<universaal:validators>
+				<universaal:validator class="com.universaal...validator.RegularExpressionValidator">
+					<universaal:attribute>[a-zA-Z]*</universaal:attribute>
+				</universaal:validator>
+			</universaal:validators>
+			<universaal:defaultValue>It's time for medicine</universaal:defaultValue>
+		</universaal:SimpleConfigItem>
+		
+	</universaal:category>
+</universaal:configuration>

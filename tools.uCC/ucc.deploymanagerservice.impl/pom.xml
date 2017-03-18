@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.universAAL.tools.ucc</groupId>
+		<artifactId>ucc.pom</artifactId>
+		<version>3.0.0</version>
+		<relativePath>../ucc.pom/pom.xml</relativePath>
+	</parent>
+	<artifactId>ucc.deploymanagerservice.impl</artifactId>
+	<version>3.0.0</version>
+	<packaging>bundle</packaging>
+	<name>universAAL uCC deploy manager service implementation</name>
+	<description>uCC deploy manager service implementation for uStore</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.universAAL.tools.ucc</groupId>
+			<artifactId>ucc.deploymanagerservice</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.universAAL.tools.ucc</groupId>
+			<artifactId>ucc.frontend</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+						<Bundle-Name>${project.artifactId}</Bundle-Name>
+						<Bundle-Description>Implementation of a service for deploy manager
+							service for uStore</Bundle-Description>
+						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+						<Bundle-Activator>org.universAAL.ucc.deploymanager
+							service.impl.Activator</Bundle-Activator>
+						<Import-Package>org.universAAL.middleware.container.utils,
+							org.universAAL.ucc.deploymanagerservice,
+							org.universAAL.ucc.frontend.api,org.osgi.framework;version="[1,2)"</Import-Package>
+					</instructions>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

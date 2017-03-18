@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<universaal:configuration 	author="eclipse author" bundlename="the bundlename of the project"
+							id="someID" version="1.0" 
+							xmlns:universaal="http://universaal.cas.de" 
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+							xsi:schemaLocation="http://universaal.cas.de universaalconfiguration.xsd ">
+  <!-- Only one category -->
+  <universaal:category id="general" label="General configuration">
+	<universaal:SimpleConfigItem cardinality="0..1" id="calendarMsgCount" type="int">
+		<universaal:label>calendarMsgCount</universaal:label>
+		<universaal:description>Sorry no description</universaal:description>
+		<universaal:defaultValue>3</universaal:defaultValue>
+	</universaal:SimpleConfigItem>
+	<universaal:SimpleConfigItem cardinality="0..1" id="RSSUpdateTime" type="int">
+		<universaal:label>RSSUpdateTime</universaal:label>
+		<universaal:description>Sorry no description</universaal:description>
+		<universaal:defaultValue>20</universaal:defaultValue>
+	</universaal:SimpleConfigItem>
+	<universaal:SimpleConfigItem cardinality="0..1" id="ImageHeight" type="int">
+		<universaal:label>ImageHeight</universaal:label>
+		<universaal:description>Sorry no description</universaal:description>
+		<universaal:defaultValue>700</universaal:defaultValue>
+	</universaal:SimpleConfigItem>
+	<universaal:SimpleConfigItem cardinality="0..1" id="ImageWidth" type="int">
+		<universaal:label>ImageWidth</universaal:label>
+		<universaal:description>Sorry no description</universaal:description>
+		<universaal:defaultValue>1200</universaal:defaultValue>
+	</universaal:SimpleConfigItem>
+	<universaal:SimpleConfigItem cardinality="0..1" id="InfoFont" type="string">
+		<universaal:label>InfoFont</universaal:label>
+		<universaal:description>Sorry no description</universaal:description>
+		<universaal:defaultValue>Arial</universaal:defaultValue>
+	</universaal:SimpleConfigItem>
+  </universaal:category>
+</universaal:configuration>
+

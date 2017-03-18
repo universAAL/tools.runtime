@@ -1,0 +1,163 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.universAAL.tools.ucc</groupId>
+		<artifactId>ucc.pom</artifactId>
+		<version>3.0.0</version>
+		<relativePath>../ucc.pom/pom.xml</relativePath>
+	</parent>
+	<artifactId>ucc.frontend</artifactId>
+	<version>3.0.0</version>
+	<packaging>bundle</packaging>
+	<name>universAAL uCC frontend</name>
+
+	<developers>
+		<developer>
+			<name>Nicole Merkle</name>
+		</developer>
+	</developers>
+
+	<properties>
+		<cxf.version>2.3.1</cxf.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>com.vaadin</groupId>
+			<artifactId>vaadin</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.universAAL.tools.ucc</groupId>
+			<artifactId>ucc.database</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.universAAL.tools.ucc</groupId>
+			<artifactId>ucc.deploymanagerservice</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.universAAL.tools.ucc</groupId>
+			<artifactId>ucc.controller</artifactId>
+		</dependency>
+   		<dependency>
+			<groupId>org.universAAL.middleware</groupId>
+			<artifactId>mw.interfaces.core</artifactId>
+   		</dependency>
+		<dependency>
+			<groupId>org.universAAL.tools.ucc</groupId>
+			<artifactId>
+  			ucc.configuration.configdefinitionregistry
+  		</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.universAAL.tools.ucc</groupId>
+			<artifactId>ucc.configuration.configurator</artifactId>
+		</dependency>
+		<!-- Jetty is needed if you're are not using the CXFServlet -->
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-ws-metadata_2.0_spec</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-frontend-jaxws</artifactId>
+			<version>${cxf.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-transports-http</artifactId>
+			<version>${cxf.version}</version>
+		</dependency>
+		<!-- Jetty is needed if you're are not using the CXFServlet -->
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-transports-http-jetty</artifactId>
+			<version>${cxf.version}</version>
+		</dependency>
+		<!--dependency>
+			<groupId>org.universAAL.middleware</groupId>
+			<artifactId>mw.bus.context.osgi</artifactId>
+			<version>2.0.1-SNAPSHOT</version>
+			<type>bundle</type>
+		</dependency>
+		<dependency>
+			<groupId>org.universAAL.middleware</groupId>
+			<artifactId>mw.schemas</artifactId>
+			<version>2.0.1-SNAPSHOT</version>
+			<type>bundle</type>
+		</dependency-->
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.core</artifactId>
+		</dependency>
+   		<dependency>
+			<groupId>org.universAAL.ontology</groupId>
+			<artifactId>ont.profile.ui.mainmenu</artifactId>
+   		</dependency>
+   		<dependency>
+			<groupId>org.universAAL.ontology</groupId>
+			<artifactId>ont.profile</artifactId>
+   		</dependency>
+	</dependencies>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<version>2.3.7</version>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Bundle-Name>${project.groupId}.${project.artifactId}</Bundle-Name>
+						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+						<Bundle-Version>${project.version}</Bundle-Version>
+						<Bundle-Activator>org.universAAL.ucc.service.manager.Activator</Bundle-Activator>
+						<Bundle-Vendor>FZI Karlsruhe</Bundle-Vendor>
+<!-- 						<Private-Package>javax.xml.bind.*</Private-Package> -->
+						<Private-Package>
+							org.universAAL.ucc.client.util,
+							org.universAAL.ucc.subscriber,
+							<!-- org.universAAL.ucc.webconnection,-->
+							org.universAAL.ucc.windows,
+							org.universAAL.ucc.controller.desktop, 
+							org.universAAL.ucc.controller.install, 
+							org.universAAL.ucc.controller.aalspace, 
+							org.universAAL.ucc.controller.preferences, 
+							org.universAAL.ucc.controller.ustore.*, 
+							org.universAAL.ucc.frontend.*,
+							org.universAAL.commerce.ustore.tools,
+							org.universAAL.ucc.service.*
+						</Private-Package>
+						<Export-Package>
+<!-- 							org.universAAL.ucc.client.util, -->
+<!-- 							org.universAAL.ucc.controller.desktop, -->
+<!-- 							org.universAAL.ucc.controller.install, -->
+<!-- 							org.universAAL.ucc.controller.aalspace, -->
+<!-- 							org.universAAL.ucc.subscriber, -->
+<!-- 							org.universAAL.ucc.controller.preferences, -->
+							org.universAAL.ucc.frontend.api
+<!-- 							org.universAAL.ucc.frontend.api.impl, -->
+<!-- 							org.universAAL.ucc.service.api, -->
+<!-- 							org.universAAL.ucc.service.impl, -->
+<!-- 							org.universAAL.ucc.service.manager, -->
+<!-- 							org.universAAL.ucc.ustore.ws.client, -->
+<!-- 							org.universAAL.ucc.webconnection, -->
+<!-- 							org.universAAL.ucc.windows, -->
+<!-- 							org.universAAL.ucc.controller.ustore.services -->
+							</Export-Package>
+<!-- 						<Require-Bundle>com.vaadin;bundle-version="6.8.3"</Require-Bundle> -->
+						<Service-Component>OSGI-INF/ucc.xml</Service-Component>
+					</instructions>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

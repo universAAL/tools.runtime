@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.universAAL.tools.ucc</groupId>
+		<artifactId>ucc.pom</artifactId>
+		<version>3.0.0</version>
+		<relativePath>../ucc.pom/pom.xml</relativePath>
+	</parent>
+	<artifactId>ucc.database</artifactId>
+	<version>3.0.0</version>
+	<packaging>bundle</packaging>
+	<name>universAAL uCC database</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.universAAL.tools.ucc</groupId>
+			<artifactId>ucc.model</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.universAAL.tools.ucc</groupId>
+			<artifactId>ucc.profile.agent</artifactId>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Bundle-Name>${project.groupId}.${project.artifactId}</Bundle-Name>
+						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+						<Bundle-Activator>org.universAAL.ucc.database.Activator</Bundle-Activator>
+						<Import-Package>javax.xml.bind, javax.xml.bind.annotation,
+							org.universAAL.middleware.container.utils,
+							org.universAAL.middleware.deploymanager.uapp.model,
+							org.universAAL.ontology.phThing, org.universAAL.ontology.profile,
+							org.universAAL.ucc.model.usrv,
+							org.universAAL.ucc.profile.agent,org.osgi.framework;version="[1,2)",org.universAAL.ucc.model.jaxb</Import-Package>
+						<Export-Package>org.universAAL.ucc.database.aalspace,
+							org.universAAL.ucc.database.listener.interfaces,
+							org.universAAL.ucc.database.listener.services,
+							org.universAAL.ucc.startup.api,
+							org.universAAL.ucc.startup.api.impl,
+							org.universAAL.ucc.startup.model,
+							org.universAAL.ucc.database.parser</Export-Package>
+						<Private-Package>org.universAAL.ucc.database</Private-Package>
+					</instructions>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
