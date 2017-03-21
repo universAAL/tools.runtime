@@ -9,6 +9,29 @@
   <artifactId>tools.makro-recorder.osgi</artifactId>
   <packaging>bundle</packaging>
   <name>universAAL Tools Makro Recorder</name>
+  <dependencies>
+		<dependency>
+			<groupId>org.universAAL.middleware</groupId>
+			<artifactId>mw.bus.service.osgi</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.universAAL.middleware</groupId>
+			<artifactId>mw.bus.context.osgi</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.universAAL.middleware</groupId>
+			<artifactId>mw.bus.model.osgi</artifactId>
+		</dependency>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.compendium</artifactId>
+    </dependency>
+      <dependency>
+        <groupId>org.osgi</groupId>
+        <artifactId>org.osgi.core</artifactId>
+        <scope>provided</scope>
+      </dependency>
+  </dependencies>
   <build>
   	<plugins>
   		<plugin>
@@ -22,8 +45,6 @@
 						<Bundle-Description>${pom.description}</Bundle-Description>
 						<Bundle-SymbolicName>${pom.artifactId}</Bundle-SymbolicName>
 						<Private-Package>org.universAAL.tools.makrorecorder.osgi.*</Private-Package>
-						<Bundle-ClassPath>.,{maven-dependencies}</Bundle-ClassPath>
-						<Import-Package>*</Import-Package>
 					</instructions>
 				</configuration>
   		</plugin>
