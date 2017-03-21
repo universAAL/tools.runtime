@@ -234,7 +234,7 @@ public class PatternEditFrame extends javax.swing.JFrame implements Observer{
                     recordButton.setForeground(new Color(25, 128, 0));
                     recordButton.setText("Start");
                     pattern.stopRecording();
-                    recordingLabel.setText("Recording stoped");
+                    recordingLabel.setText("Recording stopped");
                 } else {
                     recordButton.setForeground(new Color(128, 25, 0));
                     recordButton.setText("Stop");

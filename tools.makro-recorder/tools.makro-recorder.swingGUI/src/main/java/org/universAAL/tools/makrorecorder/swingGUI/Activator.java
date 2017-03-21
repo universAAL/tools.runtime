@@ -27,7 +27,7 @@ public class Activator implements BundleActivator{
 		moduleContext = uAALBundleContainer.THE_CONTAINER.registerModule(new Object[] { bundleContext });
 		serializer = (MessageContentSerializer) context.getService(context.getServiceReference(MessageContentSerializer.class.getName()));
 		
-		new MakroRecorderSwingGUI(new MakroRecorder(moduleContext)).setVisible(true);
+		new MakroRecorderSwingGUI(makroRecorder = new MakroRecorder(moduleContext)).setVisible(true);
 	}
 	
 	public void stop(BundleContext arg0) throws Exception {

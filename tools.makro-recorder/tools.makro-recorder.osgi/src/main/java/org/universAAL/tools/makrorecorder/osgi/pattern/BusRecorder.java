@@ -21,8 +21,10 @@ public class BusRecorder  implements LogListener {
 	private ServiceRegistration sr = null;
 	
 	public void start() {
-		if(sr==null)
-			sr=Activator.getBundleContext().registerService(new String[] { BusRecorder.class.getName() }, this, null);
+		if(sr==null) {
+			sr=Activator.getBundleContext().registerService(new String[] { LogListener.class.getName() }, this, null);
+			System.out.println(" -- BusRecorder registered");
+		}
 	}
 	
 	public void stop() {
@@ -38,9 +40,11 @@ public class BusRecorder  implements LogListener {
 	
 	public void log(int logLevel, String module, String pkg, String cls,
 		    String method, Object[] msgPart, Throwable t) {
-		if(pattern != null) {
-			if (module.equals("mw.bus.model.osgi")) {
-				addToPattern(convertToResource(extractResource(msgPart)));
+		if (pattern != null) {
+			if ("assessContentSerialization".equals(method)) {
+				if ("ContextBusImpl".equals(cls) || "ServiceBusImpl".equals(cls))  {
+					addToPattern(convertToResource(msgPart[1]));
+				}
 			}
 		}
 	}

@@ -19,7 +19,7 @@ public class PatternListener extends ContextSubscriber {
 	private ContextEvent waitForElement = null;
 	
 	public PatternListener(Pattern pattern) {
-		super(Activator.getModuleContext(), null);
+		super(Activator.getModuleContext(), new ContextEventPattern[]{});
 		this.pattern = pattern;
 	}
 	
