@@ -19,7 +19,9 @@ package org.universAAL.tools;
 
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -108,6 +110,38 @@ public class SparQLQuerySubPanel extends JPanel implements Runnable{
 	 */
 	public void clear() {
 		this.query.setText("");
+		this.result.setText("");
+	}
+
+	/**
+	 * @param absolutePath
+	 */
+	public void saveQuery(String absolutePath) {
+		PrintWriter out;
+		try {
+			out = new PrintWriter( absolutePath );
+			out.println( this.query.getText() );
+			out.flush();
+			out.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}  
 	}
     
+	/**
+	 * @param absolutePath
+	 */
+	public void saveResult(String absolutePath) {
+		PrintWriter out;
+		try {
+			out = new PrintWriter( absolutePath );
+			out.println( this.result.getText() );
+			out.flush();
+			out.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}  
+	}
 }
