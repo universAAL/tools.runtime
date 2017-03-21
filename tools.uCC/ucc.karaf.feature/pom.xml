@@ -9,7 +9,7 @@
 	</parent>
 	<artifactId>ucc.karaf.feature</artifactId>
 	<version>3.0.0</version>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
 	<name>universAAL uCC Karaf feature</name>
 	<description>The uCC feature for Karaf</description>
 
