@@ -15,7 +15,7 @@
   <description></description>
   <modules>
     <module>../tools.log-monitor</module>
-    <!--<module>../tools.makro-recorder</module> -->
+    <module>../tools.makro-recorder</module>
     <module>../tools.sparql-tester</module>
     <!--<module>../tools.uCC</module>-->
   </modules>
