@@ -23,6 +23,7 @@ import org.universAAL.middleware.container.ModuleContext;
 import org.universAAL.middleware.owl.MergedRestriction;
 import org.universAAL.middleware.rdf.PropertyPath;
 import org.universAAL.middleware.serialization.MessageContentSerializer;
+import org.universAAL.middleware.service.CallStatus;
 import org.universAAL.middleware.service.DefaultServiceCaller;
 import org.universAAL.middleware.service.ServiceCaller;
 import org.universAAL.middleware.service.ServiceRequest;
@@ -64,11 +65,14 @@ public class CHeQuerrier {
 		ServiceCaller sc = new DefaultServiceCaller(owner);
 		ServiceResponse sr = sc.call(getQuery);
 		sc.close();
+		if (!sr.getCallStatus().equals(CallStatus.succeeded)) {
+			throw new RuntimeException(getSerializer().serialize(sr));
+		}
 		List res = sr.getOutput(OUTPUT_RESULT_STRING);
 		if (res != null && res.size() > 0 && res.get(0) instanceof String) {
 			return (String) res.get(0);
 		}
-		return null;
+		throw new RuntimeException("No output in response: \n" + getSerializer().serialize(sr));
 	}
 	
 	public Object query(String query) {

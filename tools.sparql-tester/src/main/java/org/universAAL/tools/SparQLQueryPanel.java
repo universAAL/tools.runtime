@@ -54,6 +54,8 @@ public class SparQLQueryPanel extends JPanel {
 	private int tabcount = 2;
 	private JButton btnLoad;
 	private JButton btnClear;
+	private JButton btnSaveQ;
+	private JButton btnSaveR;
 
 	/**
 	 * Create the panel.
@@ -62,6 +64,7 @@ public class SparQLQueryPanel extends JPanel {
 		setLayout(new BorderLayout(0, 0));
 		
 		JPanel panel = new JPanel();
+		panel.setPreferredSize(new Dimension(125, 100));
 		add(panel, BorderLayout.EAST);
 		
 		btnClear = new JButton("Clear");
@@ -108,32 +111,71 @@ public class SparQLQueryPanel extends JPanel {
 			}
 		    }
 		});
+		
+		btnSaveQ = new JButton("Save Query");
+		btnSaveQ.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				JFileChooser fileChooser = new JFileChooser();
+				if (fileChooser.showSaveDialog(ProjectActivator.frame) == JFileChooser.APPROVE_OPTION) {
+				  File file = fileChooser.getSelectedFile();
+				  // save to file
+				  Component c = sparqlQueries.getSelectedComponent();
+					if (c instanceof SparQLQuerySubPanel){
+						((SparQLQuerySubPanel)c).saveQuery(file.getAbsolutePath());
+					}
+				}
+				
+			}
+		});
+		btnSaveQ.setMnemonic('s');
+		btnSaveQ.setMinimumSize(new Dimension(63, 23));
+		btnSaveQ.setMaximumSize(new Dimension(63, 23));
+		
+		btnSaveR = new JButton("Save Result");
+		btnSaveR.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JFileChooser fileChooser = new JFileChooser();
+				if (fileChooser.showSaveDialog(ProjectActivator.frame) == JFileChooser.APPROVE_OPTION) {
+				  File file = fileChooser.getSelectedFile();
+				  // save to file
+				  Component c = sparqlQueries.getSelectedComponent();
+					if (c instanceof SparQLQuerySubPanel){
+						((SparQLQuerySubPanel)c).saveResult(file.getAbsolutePath());
+					}
+				}
+				
+			}
+		});
+		btnSaveR.setMnemonic('r');
+		btnSaveR.setMinimumSize(new Dimension(63, 23));
+		btnSaveR.setMaximumSize(new Dimension(63, 23));
 		GroupLayout gl_panel = new GroupLayout(panel);
 		gl_panel.setHorizontalGroup(
 			gl_panel.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_panel.createSequentialGroup()
+					.addContainerGap()
 					.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_panel.createSequentialGroup()
-							.addContainerGap()
-							.addComponent(btnQuery))
-						.addGroup(gl_panel.createSequentialGroup()
-							.addContainerGap()
-							.addComponent(btnLoad, GroupLayout.PREFERRED_SIZE, 63, GroupLayout.PREFERRED_SIZE))
-						.addGroup(gl_panel.createSequentialGroup()
-							.addContainerGap()
-							.addComponent(btnClear, GroupLayout.PREFERRED_SIZE, 63, GroupLayout.PREFERRED_SIZE)))
-					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+						.addComponent(btnQuery, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+						.addComponent(btnLoad, GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
+						.addComponent(btnSaveQ, GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
+						.addComponent(btnClear, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
+						.addComponent(btnSaveR, GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE))
+					.addContainerGap())
 		);
 		gl_panel.setVerticalGroup(
 			gl_panel.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_panel.createSequentialGroup()
 					.addContainerGap()
 					.addComponent(btnQuery)
-					.addGap(7)
+					.addGap(18)
 					.addComponent(btnLoad, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(btnSaveQ, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(btnSaveR, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+					.addGap(8)
 					.addComponent(btnClear, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-					.addGap(207))
+					.addGap(136))
 		);
 		panel.setLayout(gl_panel);
 		

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features name="universAAL-Tool-Feature" xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
+
+	<!-- Import Mw and Ontologies Feature Repositories -->
+	<repository>mvn:org.universAAL.middleware/mw.karaf.feature/${mw.karaf.feature.version}/xml/features</repository>
+	<repository>mvn:org.universAAL.ontology/ont.karaf.feature/${ont.karaf.feature.version}/xml/features</repository>
+
+	<feature name="uAAL-Tool.log" description="Log Monitor."
+		version="${tools.log-monitor.version}" resolver='(obr)'>
+		<feature>uAAL-MW</feature> 
+		<bundle start-level='60' start='true'>mvn:org.universAAL.tools/tools.log-monitor/${tools.log-monitor.version}</bundle>
+	</feature>
+	
+	<feature name="uAAL-Tool.sparql" description="SPARQL Tester."
+		version="${tools.sparql-tester.version}" resolver='(obr)'>
+		<feature>uAAL-Ont.CHe</feature> 
+		<bundle start-level='80' start='true'>mvn:org.universAAL.tools/tools.sparql-tester/${tools.sparql-tester.version}</bundle>
+	</feature>
+</features>
