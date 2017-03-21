@@ -19,6 +19,7 @@ package org.universAAL.tools;
 
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -39,7 +40,7 @@ public class SparQLQuerySubPanel extends JPanel implements Runnable{
 
     private JTextArea query;
     private JTextArea result;
-
+    private Color defaultBG;
     /**
      * Create the panel.
      */
@@ -64,7 +65,7 @@ public class SparQLQuerySubPanel extends JPanel implements Runnable{
     	result = new JTextArea();
     	result.setEditable(false);
     	scrollPane_1.setViewportView(result);
-
+    	defaultBG = result.getBackground();
     }
 
     public void query(){
@@ -75,8 +76,14 @@ public class SparQLQuerySubPanel extends JPanel implements Runnable{
     public void run() {
 	String text = this.query.getText();
 	if (!text.isEmpty()) {
-	    	    String res = ProjectActivator.querrier.unserialisedQuery(text);
-	    this.result.setText(res);
+	    	    try {
+					String res = ProjectActivator.querrier.unserialisedQuery(text);
+					this.result.setBackground(defaultBG);
+					this.result.setText(res);
+				} catch (Exception e) {
+					this.result.setText(e.getMessage());
+					this.result.setBackground(Color.red);
+				}
 	}	
     }
 
@@ -111,6 +118,7 @@ public class SparQLQuerySubPanel extends JPanel implements Runnable{
 	public void clear() {
 		this.query.setText("");
 		this.result.setText("");
+		this.result.setBackground(defaultBG);
 	}
 
 	/**
