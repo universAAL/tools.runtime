@@ -68,7 +68,7 @@ public class VaadinConfigurationController {
 			}
 		}
 		
-		BundleContext context = FrameworkUtil.getBundle(this.getClass()).getBundleContext();
+		BundleContext context = Activator.bc;//FrameworkUtil.getBundle(this.getClass()).getBundleContext();
 		ServiceReference reference = context.getServiceReference(ConfigurationInstancesStorage.class.getName());
 		storage = (ConfigurationInstancesStorage) context.getService(reference);
 	}
@@ -137,7 +137,7 @@ public class VaadinConfigurationController {
 		instance.setAuthor(saveOptions.getAuthor());
 		instance.setVersion(saveOptions.getVersion());
 		
-		BundleContext context = FrameworkUtil.getBundle(this.getClass()).getBundleContext();
+		BundleContext context = Activator.bc;//FrameworkUtil.getBundle(this.getClass()).getBundleContext();
 		ServiceReference reference = context.getServiceReference(ConfigurationInstancesStorage.class.getName());
 		ConfigurationInstancesStorage storage = (ConfigurationInstancesStorage) context.getService(reference);
 				

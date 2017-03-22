@@ -83,7 +83,7 @@ public class DesktopController implements Button.ClickListener {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		bc = FrameworkUtil.getBundle(getClass()).getBundleContext();
+		bc = Activator.bc;//FrameworkUtil.getBundle(getClass()).getBundleContext();
 		ServiceReference refer = bc.getServiceReference(Setup.class.getName());
 		setup = (Setup) bc.getService(refer);
 		bc.ungetService(refer);

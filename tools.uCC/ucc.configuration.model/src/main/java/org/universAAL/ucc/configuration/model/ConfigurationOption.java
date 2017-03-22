@@ -213,7 +213,10 @@ public abstract class ConfigurationOption implements Comparable<ConfigurationOpt
 							LogUtils.logInfo(Activator.getContext(), this.getClass(), "setValidators",
 									new Object[] { "Class not found. Register service tacker for ValidatorCclass: " + className }, null);
 
-							ValidationServiceTracker serviceTracker = new ValidationServiceTracker(FrameworkUtil.getBundle(getClass()).getBundleContext(), className, this, validator.getAttribute().toArray(new String[validator.getAttribute().size()]));
+							ValidationServiceTracker serviceTracker = new ValidationServiceTracker(
+									Activator.getBundleContext()
+									//FrameworkUtil.getBundle(getClass()).getBundleContext()
+									, className, this, validator.getAttribute().toArray(new String[validator.getAttribute().size()]));
 							serviceTracker.open();
 						}
 					}	
@@ -255,7 +258,10 @@ public abstract class ConfigurationOption implements Comparable<ConfigurationOpt
 						LogUtils.logError(Activator.getContext(), this.getClass(), "setOnChonfigurationModelChangedListener",
 								new Object[] { "Class not found. Register service tracker for class:" + className }, null);
 
-						ListenerServiceTracker serviceTracker = new ListenerServiceTracker(FrameworkUtil.getBundle(getClass()).getBundleContext(), className, this);
+						ListenerServiceTracker serviceTracker = new ListenerServiceTracker(
+								Activator.getBundleContext()
+								//FrameworkUtil.getBundle(getClass()).getBundleContext()
+								, className, this);
 						serviceTracker.open();
 					}
 				}

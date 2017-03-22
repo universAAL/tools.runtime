@@ -3,12 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.universAAL.tools.ucc</groupId>
-		<version>3.0.0</version>
+		<version>3.4.1-SNAPSHOT</version>
 		<artifactId>ucc.pom</artifactId>
 		<relativePath>../ucc.pom/pom.xml</relativePath>
 	</parent>
 	<artifactId>ucc.model</artifactId>
-	<version>3.0.0</version>
+	<version>3.4.1-SNAPSHOT</version>
 	<packaging>bundle</packaging>
 	<name>universAAL uCC model</name>
 

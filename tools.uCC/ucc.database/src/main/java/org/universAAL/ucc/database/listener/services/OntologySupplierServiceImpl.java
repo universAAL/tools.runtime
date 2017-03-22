@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.FrameworkUtil;
 import org.osgi.framework.ServiceReference;
-
+import org.universAAL.ucc.database.Activator;
 import org.universAAL.ucc.database.aalspace.DataAccess;
 import org.universAAL.ucc.database.listener.interfaces.OntologyChangedListener;
 import org.universAAL.ucc.database.listener.interfaces.OntologySupplierService;
@@ -30,7 +30,7 @@ public class OntologySupplierServiceImpl implements OntologySupplierService {
 
 
 	public ArrayList<OntologyInstance> getOntology(String flat) {
-		BundleContext context = FrameworkUtil.getBundle(getClass()).getBundleContext();
+		BundleContext context = Activator.getContext(); //FrameworkUtil.getBundle(getClass()).getBundleContext();
 		ServiceReference ref = context.getServiceReference(DataAccess.class.getName());
 		DataAccess access = (DataAccess)context.getService(ref);
 			ArrayList<OntologyInstance> ont = access.getFormFields(flat);

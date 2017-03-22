@@ -27,6 +27,7 @@ import org.universAAL.ucc.model.jaxb.OntologyInstance;
 import org.universAAL.ucc.model.jaxb.SimpleObject;
 import org.universAAL.ucc.model.jaxb.StringValue;
 import org.universAAL.ucc.model.jaxb.Subprofile;
+import org.universAAL.ucc.service.manager.Activator;
 import org.universAAL.ucc.subscriber.SensorEventSubscriber;
 import org.universAAL.ucc.windows.AddNewHardwareWindow;
 import org.universAAL.ucc.windows.HardwareWindow;
@@ -80,7 +81,7 @@ public class HardwareWindowController implements Property.ValueChangeListener, B
 		this.win = window;
 		actualFlat = device + "/Hardware.xml";
 		actualRoom = device + "/Rooms.xml";
-		context = FrameworkUtil.getBundle(getClass()).getBundleContext();
+		context = Activator.bc;//FrameworkUtil.getBundle(getClass()).getBundleContext();
 //		mContext = uAALBundleContainer.THE_CONTAINER.registerModule(new Object[] { context });
 //		sensorEventSubscriber = SensorEventSubscriber.getInstance(mContext, context);
 //		sensorEventSubscriber.addListener(this);

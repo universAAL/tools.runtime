@@ -119,7 +119,7 @@ public class ConfigurationOverviewWindow extends Window implements ModelRegistry
 		this.twin = this;
 		setWidth("450px");
 		setHeight("365px");
-		BundleContext context = FrameworkUtil.getBundle(this.getClass()).getBundleContext();
+		BundleContext context = Activator.bc;//FrameworkUtil.getBundle(this.getClass()).getBundleContext();
 		ServiceReference reference = context.getServiceReference(ConfigurationInstancesStorage.class.getName());
 		storage = (ConfigurationInstancesStorage) context.getService(reference);
 		storage.addListener(this);

@@ -43,7 +43,7 @@ public class AccountWindowController implements Button.ClickListener {
 		win.getSave().addListener(this);
 		win.getReset().addListener(this);
 		f = new File(Activator.getModuleConfigHome().getAbsolutePath()+"/user/users.xml");
-		context = FrameworkUtil.getBundle(getClass()).getBundleContext();
+		context = Activator.bc;//FrameworkUtil.getBundle(getClass()).getBundleContext();
 		ServiceReference ref = context.getServiceReference(Setup.class.getName());
 		setup = (Setup) context.getService(ref);
 		context.ungetService(ref);
@@ -89,5 +89,4 @@ public class AccountWindowController implements Button.ClickListener {
 			win.getCheck().setValue(false);
 		}
 	}
-
 }

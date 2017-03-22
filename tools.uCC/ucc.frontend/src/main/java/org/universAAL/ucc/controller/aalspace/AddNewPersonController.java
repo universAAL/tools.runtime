@@ -27,6 +27,7 @@ import org.universAAL.ucc.model.jaxb.OntologyInstance;
 import org.universAAL.ucc.model.jaxb.SimpleObject;
 import org.universAAL.ucc.model.jaxb.StringValue;
 import org.universAAL.ucc.model.jaxb.Subprofile;
+import org.universAAL.ucc.service.manager.Activator;
 import org.universAAL.ucc.startup.api.Setup;
 import org.universAAL.ucc.startup.model.Role;
 import org.universAAL.ucc.startup.model.UserAccountInfo;
@@ -80,7 +81,7 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 	public AddNewPersonController(AddNewPersonWindow window, HumansWindow hWin, SelectUserWindow sel,
 			UccUI app) throws JAXBException,
 			IOException, ParseException {
-		context = FrameworkUtil.getBundle(getClass()).getBundleContext();
+		context = Activator.bc;//FrameworkUtil.getBundle(getClass()).getBundleContext();
 		mc = new ModuleConfigHome("uccDB", "");
 		device = mc.getAbsolutePath();
 		ontoProfile = device+"/EmptyUser.xml";

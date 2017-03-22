@@ -39,7 +39,7 @@ public class Activator implements BundleActivator {
 	private static IDeinstaller deinstaller;
 	private static ServiceReference ref;
 	private static ServiceReference dRef;
-	private static BundleContext bc;
+	public static BundleContext bc;
 	private static ServiceRegistration regis;
 	private static IServiceManagement mgmt;
 	private static IServiceModel model;

@@ -19,7 +19,7 @@ import org.universAAL.ucc.configuration.storage.interfaces.ConfigurationInstance
 
 public class Activator implements BundleActivator {
 
-    private static BundleContext context;
+	public static BundleContext context;
     private static ModuleContext moduleContext;
     private static ModuleConfigHome moduleConfigHome;
 

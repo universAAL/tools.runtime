@@ -44,7 +44,7 @@ public class Activator implements BundleActivator {
 	public static final String DEVICE_SPACE = "urn:org.universAAL.aal.space:home_env#";
 	private static ModuleConfigHome moduleConfigHome;
 
-	static BundleContext getContext() {
+	public static BundleContext getContext() {
 		return context;
 	}
 

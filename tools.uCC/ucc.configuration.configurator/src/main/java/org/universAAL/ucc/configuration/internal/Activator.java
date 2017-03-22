@@ -10,6 +10,7 @@ import org.universAAL.ucc.configuration.configdefinitionregistry.interfaces.Conf
 
 public class Activator implements BundleActivator {
 	private static ModuleContext moduleContext;
+	public static BundleContext bc;
 
     ConfigurationDefinitionRegistry configReg;
     private static ModuleConfigHome moduleConfigHome;

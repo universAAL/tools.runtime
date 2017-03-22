@@ -3,19 +3,19 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.universAAL.tools.ucc</groupId>
-		<version>3.0.0</version>
+		<version>3.4.1-SNAPSHOT</version>
 		<artifactId>ucc.pom</artifactId>
 		<relativePath>../ucc.pom/pom.xml</relativePath>
 	</parent>
 	<artifactId>ucc.karaf.feature</artifactId>
-	<version>3.0.0</version>
+	<version>3.4.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>universAAL uCC Karaf feature</name>
 	<description>The uCC feature for Karaf</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<uaal.parent.version>3.0.0</uaal.parent.version>
+		<uaal.parent.version>3.4.1-SNAPSHOT</uaal.parent.version>
 	</properties>
 
 	<dependencies>

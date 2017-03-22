@@ -157,7 +157,7 @@ public class UccUI extends Application {
 	}
 
 	public Window createLogin() {
-		context = FrameworkUtil.getBundle(getClass()).getBundleContext();
+		context = Activator.bc;//FrameworkUtil.getBundle(getClass()).getBundleContext();
 		ServiceReference ref = context.getServiceReference(Setup.class.getName());
 		Setup su = (Setup) context.getService(ref);
 		context.ungetService(ref);

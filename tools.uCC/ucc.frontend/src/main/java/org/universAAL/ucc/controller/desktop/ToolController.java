@@ -81,7 +81,7 @@ public class ToolController implements Button.ClickListener,
 			f.mkdir();
 		}
 		frontend = new FrontendImpl();
-		bc = FrameworkUtil.getBundle(getClass()).getBundleContext();
+		bc = Activator.bc;//FrameworkUtil.getBundle(getClass()).getBundleContext();
 	}
 
 	public void buttonClick(ClickEvent event) {

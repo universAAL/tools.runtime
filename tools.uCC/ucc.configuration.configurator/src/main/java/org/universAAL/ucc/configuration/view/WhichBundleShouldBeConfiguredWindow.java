@@ -5,6 +5,7 @@ import org.osgi.framework.FrameworkUtil;
 import org.osgi.framework.ServiceReference;
 import org.universAAL.ucc.configuration.configdefinitionregistry.interfaces.ConfigurationDefinitionRegistry;
 import org.universAAL.ucc.configuration.configdefinitionregistry.interfaces.ConfigurationDefinitionRegistryChanged;
+import org.universAAL.ucc.configuration.internal.Activator;
 import org.universAAL.ucc.configuration.model.configurationdefinition.Configuration;
 
 import com.vaadin.ui.Button;
@@ -38,7 +39,7 @@ public class WhichBundleShouldBeConfiguredWindow extends Window implements Confi
 		center();
 //		this.flatId = flatId;
 		this.twin = this;
-		context = FrameworkUtil.getBundle(this.getClass()).getBundleContext();
+		context = Activator.bc;//FrameworkUtil.getBundle(this.getClass()).getBundleContext();
 		ServiceReference reference = context.getServiceReference(ConfigurationDefinitionRegistry.class.getName());
 		ConfigurationDefinitionRegistry configReg = (ConfigurationDefinitionRegistry) context.getService(reference);
 		configReg.addConfigurationDefinitionRegistryChanged(this);

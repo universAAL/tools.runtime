@@ -4,11 +4,11 @@
 	<parent>
 		<groupId>org.universAAL.tools.ucc</groupId>
 		<artifactId>ucc.pom</artifactId>
-		<version>3.0.0</version>
+		<version>3.4.1-SNAPSHOT</version>
 		<relativePath>../ucc.pom/pom.xml</relativePath>
 	</parent>
 	<artifactId>ucc.frontend</artifactId>
-	<version>3.0.0</version>
+	<version>3.4.1-SNAPSHOT</version>
 	<packaging>bundle</packaging>
 	<name>universAAL uCC frontend</name>
 
@@ -44,9 +44,7 @@
    		</dependency>
 		<dependency>
 			<groupId>org.universAAL.tools.ucc</groupId>
-			<artifactId>
-  			ucc.configuration.configdefinitionregistry
-  		</artifactId>
+			<artifactId>ucc.configuration.configdefinitionregistry</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.universAAL.tools.ucc</groupId>

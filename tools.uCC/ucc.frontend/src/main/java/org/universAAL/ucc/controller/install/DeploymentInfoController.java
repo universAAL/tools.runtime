@@ -78,7 +78,7 @@ public class DeploymentInfoController implements Button.ClickListener,
 		installer = Activator.getInstaller();
 		srvRegistration = Activator.getReg();
 		this.installingApp = uAPP;
-		bc = FrameworkUtil.getBundle(getClass()).getBundleContext();
+		bc = Activator.bc;//FrameworkUtil.getBundle(getClass()).getBundleContext();
 		this.aal = aal;
 		this.win = win;
 		this.app = app;

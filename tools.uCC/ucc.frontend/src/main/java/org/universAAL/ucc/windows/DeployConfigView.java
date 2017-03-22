@@ -7,6 +7,7 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.FrameworkUtil;
 import org.osgi.framework.ServiceReference;
 import org.universAAL.ucc.api.IInstaller;
+import org.universAAL.ucc.service.manager.Activator;
 
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.HorizontalLayout;
@@ -27,8 +28,7 @@ public class DeployConfigView extends VerticalLayout {
 	public DeployConfigView(UccUI app, String serviceId, String uappPath) {
 		base = "resources.ucc";
 		bundle = ResourceBundle.getBundle(base);
-		BundleContext bc = FrameworkUtil.getBundle(getClass())
-				.getBundleContext();
+		BundleContext bc = Activator.bc;//FrameworkUtil.getBundle(getClass()).getBundleContext();
 		ServiceReference ref = bc.getServiceReference(IInstaller.class
 				.getName());
 		IInstaller installer = (IInstaller) bc.getService(ref);

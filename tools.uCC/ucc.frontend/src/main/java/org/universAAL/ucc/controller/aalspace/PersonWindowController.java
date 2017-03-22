@@ -88,7 +88,7 @@ public class PersonWindowController  implements Property.ValueChangeListener, Bu
 		this.app = app;
 		this.win = window;
 		actualFlat = device + "/Users.xml";
-		context = FrameworkUtil.getBundle(getClass()).getBundleContext();
+		context = Activator.bc;//FrameworkUtil.getBundle(getClass()).getBundleContext();
 		ServiceReference ref = context.getServiceReference(DataAccess.class.getName());
 		dataAccess = (DataAccess)context.getService(ref);
 		context.ungetService(ref);

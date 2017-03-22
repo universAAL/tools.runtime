@@ -28,6 +28,7 @@ import org.universAAL.ucc.model.jaxb.OntologyInstance;
 import org.universAAL.ucc.model.jaxb.SimpleObject;
 import org.universAAL.ucc.model.jaxb.StringValue;
 import org.universAAL.ucc.model.jaxb.Subprofile;
+import org.universAAL.ucc.service.manager.Activator;
 import org.universAAL.ucc.windows.AddNewHardwareWindow;
 import org.universAAL.ucc.windows.HardwareWindow;
 import org.universAAL.ucc.windows.RoomsWindow;
@@ -85,7 +86,7 @@ public class RoomsWindowController implements Property.ValueChangeListener,
 		this.win = window;
 		actualFlat = device + "/Rooms.xml";
 		actualHW = device + "/Hardware.xml";
-		context = FrameworkUtil.getBundle(getClass()).getBundleContext();
+		context = Activator.bc;//FrameworkUtil.getBundle(getClass()).getBundleContext();
 		ServiceReference ref = context.getServiceReference(DataAccess.class
 				.getName());
 		dataAccess = (DataAccess) context.getService(ref);

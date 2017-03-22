@@ -4,11 +4,11 @@
 	<parent>
 		<groupId>org.universAAL.tools.ucc</groupId>
 		<artifactId>ucc.pom</artifactId>
-		<version>3.0.0</version>
+		<version>3.4.1-SNAPSHOT</version>
 		<relativePath>../ucc.pom/pom.xml</relativePath>
 	</parent>
 	<artifactId>ucc.configuration.configdefinitionregistry</artifactId>
-	<version>3.0.0</version>
+	<version>3.4.1-SNAPSHOT</version>
 	<packaging>bundle</packaging>
 	<name>universAAL uCC configuration config definition registry</name>
 

@@ -41,7 +41,7 @@ public class UstoreUtil {
 	 * the uStore webservice.
 	 */
 	public UstoreUtil() {
-		bc = FrameworkUtil.getBundle(getClass()).getBundleContext();
+		bc = Activator.bc;//FrameworkUtil.getBundle(getClass()).getBundleContext();
 		ref = bc.getServiceReference(Setup.class.getName());
 		setup = (Setup)bc.getService(ref);
 		bc.ungetService(ref);

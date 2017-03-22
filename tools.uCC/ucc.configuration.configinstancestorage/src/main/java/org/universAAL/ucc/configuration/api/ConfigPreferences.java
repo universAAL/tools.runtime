@@ -54,7 +54,7 @@ public class ConfigPreferences implements StorageChangedListener{
 	 */
 	public ConfigPreferences(Bundle bundle){
 		this.bundle = bundle;
-		BundleContext context = FrameworkUtil.getBundle(this.getClass()).getBundleContext();
+		BundleContext context = Activator.context;//FrameworkUtil.getBundle(this.getClass()).getBundleContext();
 		new StorageServiceTracker(context, ConfigurationInstancesStorage.class, null, this).open();
 	}
 	
