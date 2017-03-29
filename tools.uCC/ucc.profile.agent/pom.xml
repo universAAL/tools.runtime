@@ -17,16 +17,6 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.ops4j.pax.logging</groupId>
-			<artifactId>pax-logging-api</artifactId>
-			<version>1.6.2</version>
-		</dependency>
-		<!-- <dependency> -->
-		<!-- <groupId>org.ops4j.pax.logging</groupId> -->
-		<!-- <artifactId>pax-logging-service</artifactId> -->
-		<!-- <version>1.6.2</version> -->
-		<!-- </dependency> -->
-		<dependency>
 			<groupId>org.osgi</groupId>
 			<artifactId>org.osgi.core</artifactId>
 		</dependency>
@@ -42,10 +32,6 @@
 			<groupId>org.universAAL.middleware</groupId>
 			<artifactId>mw.container.osgi</artifactId>
 		</dependency>
-		<!-- <dependency> -->
-		<!-- <groupId>org.universAAL.middleware</groupId> -->
-		<!-- <artifactId>mw.data.serialization.osgi</artifactId> -->
-		<!-- </dependency> -->
 		<dependency>
 			<groupId>org.universAAL.support</groupId>
 			<artifactId>uAAL.utils</artifactId>
@@ -54,10 +40,6 @@
 		<!-- <groupId>org.universAAL.ontology</groupId> -->
 		<!-- <artifactId>ont.device</artifactId> -->
 		<!-- </dependency> -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.universAAL.ontology</groupId> -->
-<!-- 			<artifactId>ont.profile.userid</artifactId> -->
-<!-- 		</dependency> -->
 		<dependency>
 			<groupId>org.universAAL.ontology</groupId>
 			<artifactId>ont.phWorld</artifactId>
@@ -66,10 +48,6 @@
 			<groupId>org.universAAL.ontology</groupId>
 			<artifactId>ont.profile</artifactId>
 		</dependency>
-		<!-- <dependency> -->
-		<!-- <groupId>org.universAAL.ontology</groupId> -->
-		<!-- <artifactId>ont.che</artifactId> -->
-		<!-- </dependency> -->
 	</dependencies>
 
 	<build>
@@ -85,18 +63,6 @@
 						<Bundle-Activator>org.universAAL.ucc.profile.agent.osgi.Activator</Bundle-Activator>
 						<Bundle-Description>${project.description}</Bundle-Description>
 						<Export-Package>org.universAAL.ucc.profile.agent</Export-Package>
-						<Import-Package>org.universAAL.middleware.container.osgi,
-							org.universAAL.middleware.owl,
-							org.universAAL.middleware.service.owl,
-							org.universAAL.middleware.service.owls.process,
-							org.universAAL.ontology.profile.service,
-							org.universAAL.support.utils.service,
-							org.universAAL.support.utils.service.low,
-							org.universAAL.support.utils.service.mid,org.slf4j,
-							org.universAAL.middleware.container,
-							org.universAAL.middleware.rdf, org.universAAL.middleware.service,
-							org.universAAL.ontology.phThing,
-							org.universAAL.ontology.profile,org.osgi.framework;version="[1,2)"</Import-Package>
 						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
 					</instructions>
 				</configuration>

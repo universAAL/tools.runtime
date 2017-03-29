@@ -40,11 +40,6 @@
 						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
 						<Bundle-Version>${project.version}</Bundle-Version>
 						<Export-Package>org.universAAL.ucc.api</Export-Package>
-						<Import-Package>org.universAAL.middleware.container,
-							org.universAAL.middleware.container.osgi,
-							org.universAAL.middleware.interfaces,
-							org.universAAL.middleware.managers.api,
-							org.osgi.framework;version="[1,2)"</Import-Package>
 					</instructions>
 				</configuration>
 			</plugin>

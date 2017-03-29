@@ -21,10 +21,6 @@
 			<groupId>org.universAAL.middleware</groupId>
 			<artifactId>mw.container.osgi</artifactId>
 		</dependency>
-		<!-- <dependency> -->
-		<!-- <groupId>org.slf4j</groupId> -->
-		<!-- <artifactId>slf4j-api</artifactId> -->
-		<!-- </dependency> -->
 		<dependency>
 			<groupId>org.osgi</groupId>
 			<artifactId>org.osgi.core</artifactId>
@@ -47,11 +43,6 @@
 						<Bundle-Name>${project.groupId}.${project.artifactId}</Bundle-Name>
 						<Bundle-Version>${project.version}</Bundle-Version>
 						<Bundle-Activator>org.universAAL.ucc.configuration.storage.internal.Activator</Bundle-Activator>
-						<Import-Package>org.universAAL.middleware.container,
-							org.universAAL.middleware.container.osgi,
-							org.universAAL.middleware.container.utils, javax.xml.bind,
-							org.universAAL.ucc.configuration.model.configurationinstances,
-							org.osgi.util.tracker;version="[1,2)", org.osgi.framework;version="[1,2)"</Import-Package>
 						<Export-Package>org.universAAL.ucc.configuration.api,
 							org.universAAL.ucc.configuration.storage,
 							org.universAAL.ucc.configuration.storage.exceptions,

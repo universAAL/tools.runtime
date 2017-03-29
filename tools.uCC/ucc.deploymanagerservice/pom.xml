@@ -14,12 +14,6 @@
 	<description>This API contains of deploy manager service interfaces for uCC.</description>
 	<packaging>bundle</packaging>
 	
-	<dependencies>
-		<dependency>
-			<groupId>org.apache.geronimo.specs</groupId>
-			<artifactId>geronimo-ws-metadata_2.0_spec</artifactId>
-		</dependency>
-	</dependencies>
 	<build>
 		<plugins>
 			<plugin>
