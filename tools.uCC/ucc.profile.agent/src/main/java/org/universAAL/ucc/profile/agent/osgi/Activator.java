@@ -4,9 +4,9 @@ import java.util.List;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
-import org.slf4j.LoggerFactory;
 import org.universAAL.middleware.container.ModuleContext;
 import org.universAAL.middleware.container.osgi.uAALBundleContainer;
+import org.universAAL.middleware.container.utils.LogUtils;
 import org.universAAL.ontology.phThing.Device;
 import org.universAAL.ontology.profile.AALSpace;
 import org.universAAL.ontology.profile.AALSpaceProfile;
@@ -26,7 +26,6 @@ public class Activator implements BundleActivator {
 
   private static ModuleContext moduleContext = null;
   
-  private final static org.slf4j.Logger log = LoggerFactory.getLogger(Activator.class);
     
   /*
    * (non-Javadoc)
@@ -38,12 +37,12 @@ public class Activator implements BundleActivator {
 		Activator.moduleContext = uAALBundleContainer.THE_CONTAINER
 			.registerModule(new Object[] { context });
 		
-		log.info("starting Activator");
+		LogUtils.logInfo(moduleContext, Activator.class, "start", "starting Activator");
     this.context.registerService(ProfileAgent.class.getName(), new ProfileAgentImpl(moduleContext), null);
 
-    log.info("start testing...");
+	LogUtils.logInfo(moduleContext, Activator.class, "start", "start testing...");
     //test();
-    log.info("Test Space server....");
+	LogUtils.logInfo(moduleContext, Activator.class, "start", "Test Space server....");
     System.out.println("Test Space server....");
     //testSpaceServer();  
   }
