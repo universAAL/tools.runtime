@@ -84,6 +84,7 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 		context = Activator.bc;//FrameworkUtil.getBundle(getClass()).getBundleContext();
 		mc = new ModuleConfigHome("uccDB", "");
 		device = mc.getAbsolutePath();
+		System.out.println("uccDB is in folder: " + device);
 		ontoProfile = device+"/EmptyUser.xml";
 		this.app = app;
 		selWin = sel;
