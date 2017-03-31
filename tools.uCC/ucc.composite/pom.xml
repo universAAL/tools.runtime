@@ -20,6 +20,7 @@
    		<dependency>
 			<groupId>org.universAAL.ontology</groupId>
 			<artifactId>ont.profile.ui.mainmenu</artifactId>
+	      <scope>provided</scope>
    		</dependency>
    		<!-- <dependency>
   		    <groupId>org.universAAL.support</groupId>
@@ -43,6 +44,12 @@
 	      <scope>provided</scope>
 	    </dependency> -->
  	    <dependency>
+	      <groupId>org.apache.felix</groupId>
+	      <artifactId>org.apache.felix.scr</artifactId>
+	      <version>1.6.0</version>
+	      <scope>provided</scope>
+	    </dependency>
+ 	    <dependency>
 	      <groupId>javax.servlet</groupId>
 	      <artifactId>com.springsource.javax.servlet</artifactId>
 	      <version>2.5.0</version>
@@ -63,11 +70,11 @@
 	      <artifactId>ucc.deploymanagerservice</artifactId>
 	      <scope>provided</scope>
 	    </dependency>
-<!-- 	    <dependency>
+ 	    <dependency>
 	      <groupId>org.universAAL.tools.ucc</groupId>
 	      <artifactId>ucc.deploymanagerservice.impl</artifactId>
 	      <scope>provided</scope>
-	    </dependency> -->
+	    </dependency>
 	    <dependency>
 	      <groupId>org.apache.felix</groupId>
 	      <artifactId>org.apache.felix.http.jetty</artifactId>
@@ -132,11 +139,11 @@
 	      <artifactId>ucc.frontend</artifactId>
 	      <scope>provided</scope>
 	    </dependency>
-		<dependency>
+<!-- 		<dependency>
 	      <groupId>org.universAAL.tools.ucc</groupId>
 	      <artifactId>ucc.deploymanagerservice.impl</artifactId>
 	      <scope>provided</scope>
-	    </dependency>
+	    </dependency> -->
       </dependencies>
     </profile>
   </profiles>
