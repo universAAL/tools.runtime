@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.universAAL.tools.ucc</groupId>
-		<artifactId>ucc.pom</artifactId>
+		<groupId>org.universAAL.tools</groupId>
+		<artifactId>tools.ucc.pom</artifactId>
 		<version>3.4.1-SNAPSHOT</version>
 		<relativePath>../ucc.pom/pom.xml</relativePath>
 	</parent>
-	<artifactId>ucc.deploymanagerservice</artifactId>
+	<artifactId>tools.ucc.deploymanagerservice</artifactId>
 	<version>3.4.1-SNAPSHOT</version>
 	<name>universAAL uCC deploy manager service API</name>
 	<description>This API contains of deploy manager service interfaces for uCC.</description>

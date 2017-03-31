@@ -3,12 +3,12 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.universAAL.tools.ucc</groupId>
-    <artifactId>ucc.pom</artifactId>
+    <groupId>org.universAAL.tools</groupId>
+    <artifactId>tools.ucc.pom</artifactId>
     <version>3.4.1-SNAPSHOT</version>
     <relativePath>../ucc.pom</relativePath>
   </parent>
-  <artifactId>ucc.composite</artifactId>
+  <artifactId>tools.ucc.composite</artifactId>
   <version>3.4.1-SNAPSHOT</version>
   <name></name>
   <dependencies>

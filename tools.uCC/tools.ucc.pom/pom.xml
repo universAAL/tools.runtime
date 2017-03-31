@@ -10,8 +10,8 @@
 		<relativePath>../tools.pom/pom.xml</relativePath>
 	</parent>
 
-	<groupId>org.universAAL.tools.ucc</groupId>
-	<artifactId>ucc.pom</artifactId>
+	<groupId>org.universAAL.tools</groupId>
+	<artifactId>tools.ucc.pom</artifactId>
 	<version>3.4.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>universAAL Control Center</name>
