@@ -20,6 +20,7 @@ public class Activator implements BundleActivator {
     }
 
     public void start(BundleContext context) throws Exception {
+    	bc = context;
     	moduleConfigHome = new ModuleConfigHome("uCC", "tmpConfigFiles");
     	
 		Activator.moduleContext = uAALBundleContainer.THE_CONTAINER
