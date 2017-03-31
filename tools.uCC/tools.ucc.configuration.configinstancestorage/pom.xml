@@ -5,7 +5,7 @@
 		<groupId>org.universAAL.tools</groupId>
 		<artifactId>tools.ucc.pom</artifactId>
 		<version>3.4.1-SNAPSHOT</version>
-		<relativePath>../ucc.pom/pom.xml</relativePath>
+		<relativePath>../tools.ucc.pom/pom.xml</relativePath>
 	</parent>
 	<artifactId>tools.ucc.configuration.configinstancestorage</artifactId>
 	<version>3.4.1-SNAPSHOT</version>
@@ -14,8 +14,8 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.universAAL.tools.ucc</groupId>
-			<artifactId>ucc.configuration.model</artifactId>
+			<groupId>org.universAAL.tools</groupId>
+			<artifactId>tools.ucc.configuration.model</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.universAAL.middleware</groupId>

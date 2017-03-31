@@ -5,7 +5,7 @@
 		<groupId>org.universAAL.tools</groupId>
 		<version>3.4.1-SNAPSHOT</version>
 		<artifactId>tools.ucc.pom</artifactId>
-		<relativePath>../ucc.pom/pom.xml</relativePath>
+		<relativePath>../tools.ucc.pom/pom.xml</relativePath>
 	</parent>
 	<artifactId>tools.ucc.karaf.feature</artifactId>
 	<version>3.4.1-SNAPSHOT</version>
@@ -24,56 +24,56 @@
 			<artifactId>ont.karaf.feature</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.universAAL.tools.ucc</groupId>
-			<artifactId>ucc.model</artifactId>
+			<groupId>org.universAAL.tools</groupId>
+			<artifactId>tools.ucc.model</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.universAAL.tools.ucc</groupId>
-			<artifactId>ucc.controller</artifactId>
+			<groupId>org.universAAL.tools</groupId>
+			<artifactId>tools.ucc.controller</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.universAAL.tools.ucc</groupId>
-			<artifactId>ucc.database</artifactId>
+			<groupId>org.universAAL.tools</groupId>
+			<artifactId>tools.ucc.database</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.universAAL.tools.ucc</groupId>
-			<artifactId>ucc.frontend</artifactId>
+			<groupId>org.universAAL.tools</groupId>
+			<artifactId>tools.ucc.frontend</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.universAAL.tools.ucc</groupId>
-			<artifactId>ucc.configuration.model</artifactId>
+			<groupId>org.universAAL.tools</groupId>
+			<artifactId>tools.ucc.configuration.model</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.universAAL.tools.ucc</groupId>
-			<artifactId>ucc.configuration.configurator</artifactId>
+			<groupId>org.universAAL.tools</groupId>
+			<artifactId>tools.ucc.configuration.configurator</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.universAAL.tools.ucc</groupId>
-			<artifactId>ucc.configuration.configinstancestorage</artifactId>
+			<groupId>org.universAAL.tools</groupId>
+			<artifactId>tools.ucc.configuration.configinstancestorage</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.universAAL.tools.ucc</groupId>
-			<artifactId>ucc.configuration.configdefinitionregistry</artifactId>
+			<groupId>org.universAAL.tools</groupId>
+			<artifactId>tools.ucc.configuration.configdefinitionregistry</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.universAAL.tools.ucc</groupId>
-			<artifactId>ucc.vaadin.themes</artifactId>
+			<groupId>org.universAAL.tools</groupId>
+			<artifactId>tools.ucc.vaadin.themes</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.geronimo.specs</groupId>
 			<artifactId>geronimo-ws-metadata_2.0_spec</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.universAAL.tools.ucc</groupId>
-			<artifactId>ucc.deploymanagerservice</artifactId>
+			<groupId>org.universAAL.tools</groupId>
+			<artifactId>tools.ucc.deploymanagerservice</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.universAAL.tools.ucc</groupId>
-			<artifactId>ucc.deploymanagerservice.impl</artifactId>
+			<groupId>org.universAAL.tools</groupId>
+			<artifactId>tools.ucc.deploymanagerservice.impl</artifactId>
 		</dependency>
 	</dependencies>
 

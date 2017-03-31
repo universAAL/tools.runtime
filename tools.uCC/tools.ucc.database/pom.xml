@@ -5,7 +5,7 @@
 		<groupId>org.universAAL.tools</groupId>
 		<artifactId>tools.ucc.pom</artifactId>
 		<version>3.4.1-SNAPSHOT</version>
-		<relativePath>../ucc.pom/pom.xml</relativePath>
+		<relativePath>../tools.ucc.pom/pom.xml</relativePath>
 	</parent>
 	<artifactId>tools.ucc.database</artifactId>
 	<version>3.4.1-SNAPSHOT</version>
@@ -18,12 +18,12 @@
 			<artifactId>org.osgi.core</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.universAAL.tools.ucc</groupId>
-			<artifactId>ucc.model</artifactId>
+			<groupId>org.universAAL.tools</groupId>
+			<artifactId>tools.ucc.model</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.universAAL.tools.ucc</groupId>
-			<artifactId>ucc.profile.agent</artifactId>
+			<groupId>org.universAAL.tools</groupId>
+			<artifactId>tools.ucc.profile.agent</artifactId>
 		</dependency>
 	</dependencies>
 	<build>

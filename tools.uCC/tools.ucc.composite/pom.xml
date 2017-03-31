@@ -6,7 +6,7 @@
     <groupId>org.universAAL.tools</groupId>
     <artifactId>tools.ucc.pom</artifactId>
     <version>3.4.1-SNAPSHOT</version>
-    <relativePath>../ucc.pom</relativePath>
+    <relativePath>../tools.ucc.pom</relativePath>
   </parent>
   <artifactId>tools.ucc.composite</artifactId>
   <version>3.4.1-SNAPSHOT</version>
@@ -27,8 +27,8 @@
 			<artifactId>uAAL.utils</artifactId>
    		</dependency> -->
 	    <dependency>
-	      <groupId>org.universAAL.tools.ucc</groupId>
-	      <artifactId>ucc.profile.agent</artifactId>
+	      <groupId>org.universAAL.tools</groupId>
+	      <artifactId>tools.ucc.profile.agent</artifactId>
 	      <scope>provided</scope>
 	    </dependency>
 	    <dependency>
@@ -56,23 +56,23 @@
 	      <scope>provided</scope>
 	    </dependency>
 	    <dependency>
-	      <groupId>org.universAAL.tools.ucc</groupId>
-	      <artifactId>ucc.controller</artifactId>
+	      <groupId>org.universAAL.tools</groupId>
+	      <artifactId>tools.ucc.controller</artifactId>
 	      <scope>provided</scope>
 	    </dependency>
 	    <dependency>
-	      <groupId>org.universAAL.tools.ucc</groupId>
-	      <artifactId>ucc.model</artifactId>
+	      <groupId>org.universAAL.tools</groupId>
+	      <artifactId>tools.ucc.model</artifactId>
 	      <scope>provided</scope>
 	    </dependency>
 	    <dependency>
-	      <groupId>org.universAAL.tools.ucc</groupId>
-	      <artifactId>ucc.deploymanagerservice</artifactId>
+	      <groupId>org.universAAL.tools</groupId>
+	      <artifactId>tools.ucc.deploymanagerservice</artifactId>
 	      <scope>provided</scope>
 	    </dependency>
  	    <dependency>
-	      <groupId>org.universAAL.tools.ucc</groupId>
-	      <artifactId>ucc.deploymanagerservice.impl</artifactId>
+	      <groupId>org.universAAL.tools</groupId>
+	      <artifactId>tools.ucc.deploymanagerservice.impl</artifactId>
 	      <scope>provided</scope>
 	    </dependency>
 	    <dependency>
@@ -105,43 +105,43 @@
 	      <scope>provided</scope>
 	    </dependency>
 	    <dependency>
-	      <groupId>org.universAAL.tools.ucc</groupId>
-	      <artifactId>ucc.configuration.model</artifactId>
+	      <groupId>org.universAAL.tools</groupId>
+	      <artifactId>tools.ucc.configuration.model</artifactId>
 	      <scope>provided</scope>
 	    </dependency>
 	    <dependency>
-	      <groupId>org.universAAL.tools.ucc</groupId>
-	      <artifactId>ucc.configuration.configdefinitionregistry</artifactId>
+	      <groupId>org.universAAL.tools</groupId>
+	      <artifactId>tools.ucc.configuration.configdefinitionregistry</artifactId>
 	      <scope>provided</scope>
 	    </dependency>
 	    <dependency>
-	      <groupId>org.universAAL.tools.ucc</groupId>
-	      <artifactId>ucc.configuration.configinstancestorage</artifactId>
+	      <groupId>org.universAAL.tools</groupId>
+	      <artifactId>tools.ucc.configuration.configinstancestorage</artifactId>
 	      <scope>provided</scope>
 	    </dependency>
 	    <dependency>
-	      <groupId>org.universAAL.tools.ucc</groupId>
-	      <artifactId>ucc.configuration.configurator</artifactId>
+	      <groupId>org.universAAL.tools</groupId>
+	      <artifactId>tools.ucc.configuration.configurator</artifactId>
 	      <scope>provided</scope>
 	    </dependency>
 	    <dependency>
-	      <groupId>org.universAAL.tools.ucc</groupId>
-	      <artifactId>ucc.vaadin.themes</artifactId>
+	      <groupId>org.universAAL.tools</groupId>
+	      <artifactId>tools.ucc.vaadin.themes</artifactId>
 	      <scope>provided</scope>
 	    </dependency>
 	    <dependency>
-	      <groupId>org.universAAL.tools.ucc</groupId>
-	      <artifactId>ucc.database</artifactId>
+	      <groupId>org.universAAL.tools</groupId>
+	      <artifactId>tools.ucc.database</artifactId>
 	      <scope>provided</scope>
 	    </dependency>
 	    <dependency>
-	      <groupId>org.universAAL.tools.ucc</groupId>
-	      <artifactId>ucc.frontend</artifactId>
+	      <groupId>org.universAAL.tools</groupId>
+	      <artifactId>tools.ucc.frontend</artifactId>
 	      <scope>provided</scope>
 	    </dependency>
 <!-- 		<dependency>
-	      <groupId>org.universAAL.tools.ucc</groupId>
-	      <artifactId>ucc.deploymanagerservice.impl</artifactId>
+	      <groupId>org.universAAL.tools</groupId>
+	      <artifactId>tools.ucc.deploymanagerservice.impl</artifactId>
 	      <scope>provided</scope>
 	    </dependency> -->
       </dependencies>

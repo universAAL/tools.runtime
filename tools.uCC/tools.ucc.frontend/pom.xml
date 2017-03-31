@@ -5,7 +5,7 @@
 		<groupId>org.universAAL.tools</groupId>
 		<artifactId>tools.ucc.pom</artifactId>
 		<version>3.4.1-SNAPSHOT</version>
-		<relativePath>../ucc.pom/pom.xml</relativePath>
+		<relativePath>../tools.ucc.pom/pom.xml</relativePath>
 	</parent>
 	<artifactId>tools.ucc.frontend</artifactId>
 	<version>3.4.1-SNAPSHOT</version>
@@ -27,28 +27,28 @@
 			<artifactId>vaadin</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.universAAL.tools.ucc</groupId>
-			<artifactId>ucc.database</artifactId>
+			<groupId>org.universAAL.tools</groupId>
+			<artifactId>tools.ucc.database</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.universAAL.tools.ucc</groupId>
-			<artifactId>ucc.deploymanagerservice</artifactId>
+			<groupId>org.universAAL.tools</groupId>
+			<artifactId>tools.ucc.deploymanagerservice</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.universAAL.tools.ucc</groupId>
-			<artifactId>ucc.controller</artifactId>
+			<groupId>org.universAAL.tools</groupId>
+			<artifactId>tools.ucc.controller</artifactId>
 		</dependency>
    		<dependency>
 			<groupId>org.universAAL.middleware</groupId>
 			<artifactId>mw.interfaces.core</artifactId>
    		</dependency>
 		<dependency>
-			<groupId>org.universAAL.tools.ucc</groupId>
-			<artifactId>ucc.configuration.configdefinitionregistry</artifactId>
+			<groupId>org.universAAL.tools</groupId>
+			<artifactId>tools.ucc.configuration.configdefinitionregistry</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.universAAL.tools.ucc</groupId>
-			<artifactId>ucc.configuration.configurator</artifactId>
+			<groupId>org.universAAL.tools</groupId>
+			<artifactId>tools.ucc.configuration.configurator</artifactId>
 		</dependency>
 		<!-- Jetty is needed if you're are not using the CXFServlet -->
 		<dependency>

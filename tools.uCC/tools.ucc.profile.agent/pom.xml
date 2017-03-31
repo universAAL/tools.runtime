@@ -7,12 +7,12 @@
 		<groupId>org.universAAL.tools</groupId>
 		<artifactId>tools.ucc.pom</artifactId>
 		<version>3.4.1-SNAPSHOT</version>
-		<relativePath>../ucc.pom/pom.xml</relativePath>
+		<relativePath>../tools.ucc.pom/pom.xml</relativePath>
 	</parent>
 	<artifactId>tools.ucc.profile.agent</artifactId>
 	<version>3.4.1-SNAPSHOT</version>
 	<packaging>bundle</packaging>
-	<name>Profile Agent</name>
+	<name>universAAL uCC Profile Agent</name>
 	<description>This is a profile agent for connecting uCC to CHE/Profiling server.</description>
 
 	<dependencies>

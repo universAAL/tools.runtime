@@ -5,7 +5,7 @@
 		<groupId>org.universAAL.tools</groupId>
 		<version>3.4.1-SNAPSHOT</version>
 		<artifactId>tools.ucc.pom</artifactId>
-		<relativePath>../ucc.pom/pom.xml</relativePath>
+		<relativePath>../tools.ucc.pom/pom.xml</relativePath>
 	</parent>
 	<artifactId>tools.ucc.model</artifactId>
 	<version>3.4.1-SNAPSHOT</version>

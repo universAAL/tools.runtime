@@ -5,7 +5,7 @@
 		<groupId>org.universAAL.tools</groupId>
 		<artifactId>tools.ucc.pom</artifactId>
 		<version>3.4.1-SNAPSHOT</version>
-		<relativePath>../ucc.pom/pom.xml</relativePath>
+		<relativePath>../tools.ucc.pom/pom.xml</relativePath>
 	</parent>
 	<artifactId>tools.ucc.deploymanagerservice.impl</artifactId>
 	<version>3.4.1-SNAPSHOT</version>
@@ -19,12 +19,12 @@
 			<artifactId>org.osgi.core</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.universAAL.tools.ucc</groupId>
-			<artifactId>ucc.deploymanagerservice</artifactId>
+			<groupId>org.universAAL.tools</groupId>
+			<artifactId>tools.ucc.deploymanagerservice</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.universAAL.tools.ucc</groupId>
-			<artifactId>ucc.frontend</artifactId>
+			<groupId>org.universAAL.tools</groupId>
+			<artifactId>tools.ucc.frontend</artifactId>
 		</dependency>
 	</dependencies>
 
