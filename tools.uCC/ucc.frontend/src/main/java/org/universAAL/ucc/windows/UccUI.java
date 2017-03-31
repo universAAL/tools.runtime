@@ -55,13 +55,8 @@ public class UccUI extends Application {
 	private TextField user;
 	private PasswordField pwd;
 	private BundleContext context;
-
-	public UccUI() {
-		System.out.println(" -- UccUI.UccUI");
-	}
 	
 	public static UccUI getInstance() {
-		System.out.println(" -- UccUI.getInstance");
 		return uccUI;
 	}
 
