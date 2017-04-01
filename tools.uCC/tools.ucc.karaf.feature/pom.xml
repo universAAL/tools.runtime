@@ -10,7 +10,7 @@
 	<artifactId>tools.ucc.karaf.feature</artifactId>
 	<version>3.4.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>universAAL uCC Karaf feature</name>
+	<name>universAAL Tools uCC Karaf feature</name>
 	<description>The uCC feature for Karaf</description>
 
 	<properties>

@@ -10,7 +10,7 @@
 	<artifactId>tools.ucc.frontend</artifactId>
 	<version>3.4.1-SNAPSHOT</version>
 	<packaging>bundle</packaging>
-	<name>universAAL uCC frontend</name>
+	<name>universAAL Tools uCC Frontend</name>
 
 	<developers>
 		<developer>

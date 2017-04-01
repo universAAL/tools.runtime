@@ -14,7 +14,7 @@
 	<artifactId>tools.ucc.pom</artifactId>
 	<version>3.4.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>universAAL Control Center</name>
+	<name>universAAL Tools uCC universAAL Control Center Suite</name>
 	<description>A tool to install, manage and configure applications for universAAL at a local machine.</description>
 
 	<properties>

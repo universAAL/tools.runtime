@@ -10,7 +10,7 @@
   </parent>
   <artifactId>tools.ucc.composite</artifactId>
   <version>3.4.1-SNAPSHOT</version>
-  <name></name>
+  <name>universAAL Tools uCC Composite</name>
   <dependencies>
   </dependencies>
   <profiles>

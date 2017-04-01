@@ -10,7 +10,7 @@
 	<artifactId>tools.ucc.configuration.configinstancestorage</artifactId>
 	<version>3.4.1-SNAPSHOT</version>
 	<packaging>bundle</packaging>
-	<name>universAAL uCC configuration config instance storage</name>
+	<name>universAAL Tools uCC Configuration Config Instance Storage</name>
 
 	<dependencies>
 		<dependency>

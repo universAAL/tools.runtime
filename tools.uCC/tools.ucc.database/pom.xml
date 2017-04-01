@@ -10,7 +10,7 @@
 	<artifactId>tools.ucc.database</artifactId>
 	<version>3.4.1-SNAPSHOT</version>
 	<packaging>bundle</packaging>
-	<name>universAAL uCC database</name>
+	<name>universAAL Tools uCC Database</name>
 
 	<dependencies>
 		<dependency>

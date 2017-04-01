@@ -10,7 +10,7 @@
 	<artifactId>tools.ucc.configuration.configurator</artifactId>
 	<version>3.4.1-SNAPSHOT</version>
 	<packaging>bundle</packaging>
-	<name>universAAL uCC configuration configurator</name>
+	<name>universAAL Tools uCC Configuration Configurator</name>
 
 	<dependencies>
 		<dependency>

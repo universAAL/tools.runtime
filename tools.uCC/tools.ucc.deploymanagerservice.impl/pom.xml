@@ -10,7 +10,7 @@
 	<artifactId>tools.ucc.deploymanagerservice.impl</artifactId>
 	<version>3.4.1-SNAPSHOT</version>
 	<packaging>bundle</packaging>
-	<name>universAAL uCC deploy manager service implementation</name>
+	<name>universAAL Tools uCC Deploy Manager Service Implementation</name>
 	<description>uCC deploy manager service implementation for uStore</description>
 
 	<dependencies>

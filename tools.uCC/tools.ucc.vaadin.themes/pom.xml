@@ -10,7 +10,7 @@
 	<artifactId>tools.ucc.vaadin.themes</artifactId>
 	<version>3.4.1-SNAPSHOT</version>
 	<packaging>bundle</packaging>
-	<name>universAAL uCC vaadin themes</name>
+	<name>universAAL Tools uCC Vaadin Themes</name>
 
 	<dependencies>
 		<dependency>

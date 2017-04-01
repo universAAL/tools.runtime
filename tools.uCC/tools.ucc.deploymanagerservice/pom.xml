@@ -10,7 +10,7 @@
 	</parent>
 	<artifactId>tools.ucc.deploymanagerservice</artifactId>
 	<version>3.4.1-SNAPSHOT</version>
-	<name>universAAL uCC deploy manager service API</name>
+	<name>universAAL Tools uCC Deploy Manager Service API</name>
 	<description>This API contains of deploy manager service interfaces for uCC.</description>
 	<packaging>bundle</packaging>
 	
