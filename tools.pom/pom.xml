@@ -17,8 +17,8 @@
     <module>../tools.log-monitor</module>
     <module>../tools.makro-recorder</module>
     <module>../tools.sparql-tester</module>
-     <module>tools.karaf.feature</module>
-   <!--<module>../tools.uCC</module>-->
+    <module>tools.karaf.feature</module>
+    <module>../tools.uCC/tools.ucc.pom</module>
   </modules>
   <dependencyManagement>
     <dependencies>
