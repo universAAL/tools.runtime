@@ -12,7 +12,8 @@ import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
 import org.osgi.framework.ServiceRegistration;
-import org.universAAL.middleware.container.utils.ModuleConfigHome;
+import org.universAAL.middleware.container.ModuleContext;
+import org.universAAL.middleware.container.osgi.uAALBundleContainer;
 import org.universAAL.ucc.deploymanagerservice.DeployManagerService;
 import org.universAAL.ucc.frontend.api.IFrontend;
 
@@ -20,12 +21,13 @@ public class Activator implements BundleActivator {
     private ServiceRegistration registration;
     private static IFrontend frontend = null;
     private static BundleContext context;
-    private static ModuleConfigHome moduleConfigHome;
 
     public void start(BundleContext bc) throws Exception {
 	context = bc;
-	moduleConfigHome = new ModuleConfigHome("uCC", "setup");
-	System.err.println("[[DeploymanagerImpl]] "+moduleConfigHome.getAbsolutePath());
+	ModuleContext mc = uAALBundleContainer.THE_CONTAINER
+			.registerModule(new Object[] { context });
+
+	File setupProps = new File(new File(new File(mc.getConfigHome().getParentFile(), "uCC"), "setup"), "setup.properties");
 	Dictionary<String, String> props = new Hashtable<String, String>();
 	System.err.println("DEPLOYMANAGER STARTED");
 	props.put("service.exported.interfaces", "*");
@@ -33,10 +35,10 @@ public class Activator implements BundleActivator {
 	InetAddress thisIp = InetAddress.getLocalHost();
 	//Get port of uCC from setup.properties
 	Properties prop = new Properties();
-	Reader reader = new FileReader(new File(/*"file:///../etc/uCC/setup.properties"*/ moduleConfigHome.getAbsolutePath()+"/setup.properties"));
+	Reader reader = new FileReader(setupProps);
 	prop.load(reader);
 	String url = "http://" + thisIp.getHostAddress() + ":" + prop.getProperty("uccPort") + "/deploymanager";
-	System.out.println("url:" + url);
+	System.out.println("[DeployManagerServiceImpl] url:" + url);
 	// props.put("org.apache.cxf.ws.address",
 	// "http://localhost:9090/deploymanager");
 	props.put("org.apache.cxf.ws.address", url);

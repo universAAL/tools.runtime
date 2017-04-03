@@ -48,9 +48,9 @@ public class Activator implements BundleActivator {
 	private UstoreUtil client;
 	private static DataAccess dataAccess;
 	private static ParserService parserService;
-	private static File configHome;
-	private static File tempUsrvFiles;	// tempUsrvFiles
-	private static File setupProps;	// setup/setup.properties
+	private static File configHome;		// confadmin/uCC
+	private static File tempUsrvFiles;	// confadmin/uCC/tempUsrvFiles
+	private static File setupProps;		// confadmin/uCC/setup/setup.properties
 	private static ServiceCaller sc;
 
 	public void start(BundleContext context) throws Exception {
@@ -58,7 +58,7 @@ public class Activator implements BundleActivator {
 		mContext = uAALBundleContainer.THE_CONTAINER
 			.registerModule(new Object[] { context });
 
-		configHome = mContext.getConfigHome();
+		configHome = new File(mContext.getConfigHome().getParentFile(), "uCC");
 		tempUsrvFiles = new File(configHome, "tempUsrvFiles");
 //		 client = new UstoreUtil();
 		ServiceReference ref = bc.getServiceReference(DataAccess.class

@@ -66,7 +66,7 @@ public class UccUI extends Application {
 		Properties prop = new Properties();
 		Reader reader = null;
 		try {
-			reader = new FileReader(new File(new File(Activator.getConfigHome(),"setup"), "setup.properties"));
+			reader = new FileReader(Activator.getSetupProps());
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}

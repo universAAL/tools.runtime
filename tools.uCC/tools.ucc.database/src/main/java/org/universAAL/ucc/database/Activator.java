@@ -66,7 +66,7 @@ public class Activator implements BundleActivator {
 		mc = uAALBundleContainer.THE_CONTAINER
 			.registerModule(new Object[] { context });
 		
-		userxml = new File(new File(mc.getConfigHome(), "user"), "users.xml");
+		userxml = new File(new File(new File(mc.getConfigHome().getParent(), "uCC"), "user"), "users.xml");
 		
 		if (!userxml.exists()) {
 			userxml.createNewFile();
