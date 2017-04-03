@@ -1,6 +1,5 @@
 package org.universAAL.ucc.controller.aalspace;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -22,9 +21,7 @@ import java.util.Properties;
 import javax.xml.bind.JAXBException;
 
 import org.osgi.framework.BundleContext;
-import org.osgi.framework.FrameworkUtil;
 import org.osgi.framework.ServiceReference;
-import org.universAAL.middleware.container.utils.ModuleConfigHome;
 import org.universAAL.ucc.database.aalspace.DataAccess;
 import org.universAAL.ucc.model.jaxb.BooleanValue;
 import org.universAAL.ucc.model.jaxb.CalendarValue;
@@ -76,14 +73,12 @@ public class PersonWindowController  implements Property.ValueChangeListener, Bu
 	private String selectedItem;
 	private String device;
 	private String actualFlat;
-	private ModuleConfigHome mc;
 	private Setup setup;
 	private String path;
 
 	
 	public PersonWindowController(HumansWindow window, UccUI app) throws JAXBException, IOException, ParseException {
-		mc = new ModuleConfigHome("uccDB", "");
-		device = mc.getAbsolutePath();
+		device = Activator.getDB().getAbsolutePath();
 		this.app = app;
 		this.win = window;
 		actualFlat = device + "/Users.xml";

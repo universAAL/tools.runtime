@@ -1,6 +1,5 @@
 package org.universAAL.ucc.controller.aalspace;
 
-import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -14,9 +13,7 @@ import java.util.List;
 import javax.xml.bind.JAXBException;
 
 import org.osgi.framework.BundleContext;
-import org.osgi.framework.FrameworkUtil;
 import org.osgi.framework.ServiceReference;
-import org.universAAL.middleware.container.utils.ModuleConfigHome;
 import org.universAAL.ucc.database.aalspace.DataAccess;
 import org.universAAL.ucc.model.jaxb.BooleanValue;
 import org.universAAL.ucc.model.jaxb.CalendarValue;
@@ -76,15 +73,13 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 	private boolean saved;
 	private String device;
 	private Setup setup;
-	private ModuleConfigHome mc;
 	private SelectUserWindow selWin;
 
 	public AddNewPersonController(AddNewPersonWindow window, HumansWindow hWin, SelectUserWindow sel,
 			UccUI app) throws JAXBException,
 			IOException, ParseException {
 		context = Activator.bc;//FrameworkUtil.getBundle(getClass()).getBundleContext();
-		mc = new ModuleConfigHome("uccDB", "");
-		device = mc.getAbsolutePath();
+		device = Activator.getDB().getAbsolutePath();
 		System.out.println("uccDB is in folder: " + device);
 		ontoProfile = device+"/EmptyUser.xml";
 		this.app = app;

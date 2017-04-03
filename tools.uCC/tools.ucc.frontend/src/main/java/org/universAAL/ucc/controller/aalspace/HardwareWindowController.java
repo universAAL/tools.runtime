@@ -13,9 +13,7 @@ import java.util.Map;
 import javax.xml.bind.JAXBException;
 
 import org.osgi.framework.BundleContext;
-import org.osgi.framework.FrameworkUtil;
 import org.osgi.framework.ServiceReference;
-import org.universAAL.middleware.container.utils.ModuleConfigHome;
 import org.universAAL.ucc.database.aalspace.DataAccess;
 import org.universAAL.ucc.model.jaxb.BooleanValue;
 import org.universAAL.ucc.model.jaxb.CalendarValue;
@@ -70,18 +68,14 @@ public class HardwareWindowController implements Property.ValueChangeListener, B
 	private String actualRoom;
 	private SensorEventSubscriber sensorEventSubscriber;
 	private String device;
-	private ModuleConfigHome mc;
-
-
 	
 	public HardwareWindowController(HardwareWindow window, UccUI app) throws JAXBException, IOException, ParseException {
-		mc = new ModuleConfigHome("uccDB", "");
-		device = mc.getAbsolutePath();
+		device = Activator.getDB().getAbsolutePath();
 		this.app = app;
 		this.win = window;
 		actualFlat = device + "/Hardware.xml";
 		actualRoom = device + "/Rooms.xml";
-		context = Activator.bc;//FrameworkUtil.getBundle(getClass()).getBundleContext();
+		context = Activator.bc;
 //		mContext = uAALBundleContainer.THE_CONTAINER.registerModule(new Object[] { context });
 //		sensorEventSubscriber = SensorEventSubscriber.getInstance(mContext, context);
 //		sensorEventSubscriber.addListener(this);

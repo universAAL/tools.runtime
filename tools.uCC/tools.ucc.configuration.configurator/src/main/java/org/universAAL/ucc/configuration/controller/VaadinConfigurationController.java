@@ -43,7 +43,6 @@ public class VaadinConfigurationController {
 	private ConfigurationOverviewWindow view;
 	private Configurator configurator;
 	private ConfigOptionRegistry modelRegistry;
-	private String configFileFolder;
 	private ConfigurationInstancesStorage storage;
 //	private String flatId; 
 	
@@ -57,14 +56,13 @@ public class VaadinConfigurationController {
 //		this.flatId = view.getFlatId();
 		modelRegistry = new ConfigOptionRegistry();
 		configurator = new Configurator(config);
-		configFileFolder = Activator.getModuleConfigHome().getAbsolutePath() +"/"+config.getBundlename()+"/";
-		File file = new File(configFileFolder);
+		File file = new File(Activator.getTmpConfigFiles(), config.getBundlename());
 		if(!file.isDirectory()){
 			try{
 				file.mkdir();
 			}catch(Exception e){
 				LogUtils.logError(Activator.getContext(), this.getClass(), "VaadinConfigurationController",
-						new Object[] { "Could not create directory: " + configFileFolder }, null);
+						new Object[] { "Could not create directory: " + file }, null);
 			}
 		}
 		
@@ -72,11 +70,7 @@ public class VaadinConfigurationController {
 		ServiceReference reference = context.getServiceReference(ConfigurationInstancesStorage.class.getName());
 		storage = (ConfigurationInstancesStorage) context.getService(reference);
 	}
-	
-	public String getConfigFileFolder() {
-		return configFileFolder;
-	}
-	
+		
 	public Configurator getConfigurator() {
 		return configurator;
 	}

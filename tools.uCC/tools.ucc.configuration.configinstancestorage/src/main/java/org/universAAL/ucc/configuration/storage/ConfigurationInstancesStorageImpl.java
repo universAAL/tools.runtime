@@ -42,7 +42,7 @@ public class ConfigurationInstancesStorageImpl implements ConfigurationInstances
 	 * load all instances.
 	 */
 	public ConfigurationInstancesStorageImpl() {
-		basedir = Activator.getModuleConfigHome().getAbsolutePath() +"/";
+		basedir = Activator.getTmpConfigFiles().getAbsolutePath() +"/";
 		checkFolderOrCreate(basedir);
 		instances = new HashMap<String, ConfigurationInstance>();
 		listeners = new LinkedList<StorageChangedListener>();

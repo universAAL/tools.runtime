@@ -1,11 +1,12 @@
 package org.universAAL.ucc.configuration.storage.internal;
 
+import java.io.File;
+
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.universAAL.middleware.container.ModuleContext;
 import org.universAAL.middleware.container.osgi.uAALBundleContainer;
 
-import org.universAAL.middleware.container.utils.ModuleConfigHome;
 import org.universAAL.ucc.configuration.storage.ConfigurationInstancesStorageImpl;
 import org.universAAL.ucc.configuration.storage.interfaces.ConfigurationInstancesStorage;
 
@@ -20,49 +21,27 @@ import org.universAAL.ucc.configuration.storage.interfaces.ConfigurationInstance
 public class Activator implements BundleActivator {
 
 	public static BundleContext context;
-    private static ModuleContext moduleContext;
-    private static ModuleConfigHome moduleConfigHome;
-
-    public static ModuleContext getContext() {
-    	return moduleContext;
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see
-     * org.osgi.framework.BundleActivator#start(org.osgi.framework.BundleContext
-     * )
-     */
-    public void start(BundleContext bundleContext) throws Exception {
-
-    Activator.moduleContext = uAALBundleContainer.THE_CONTAINER
-        .registerModule(new Object[] { context });
+    private static ModuleContext mc;
+    private static File tmpConfigFiles;
     
-	Activator.context = bundleContext;
-	moduleConfigHome = new ModuleConfigHome("uCC", "tmpConfigFiles");
-	context.registerService(ConfigurationInstancesStorage.class.getName(),
-		new ConfigurationInstancesStorageImpl(), null);
+    public static ModuleContext getContext() {
+    	return mc;
     }
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see
-     * org.osgi.framework.BundleActivator#stop(org.osgi.framework.BundleContext)
-     */
+	public void start(BundleContext bundleContext) throws Exception {
+		context = bundleContext;
+		mc = uAALBundleContainer.THE_CONTAINER.registerModule(new Object[] { context });
+
+		tmpConfigFiles = new File(new File(mc.getConfigHome().getParent(), "uCC"), "tmpConfigFiles");
+		context.registerService(ConfigurationInstancesStorage.class.getName(), new ConfigurationInstancesStorageImpl(),
+				null);
+	}
+
     public void stop(BundleContext bundleContext) throws Exception {
 	Activator.context = null;
     }
 
-	public static ModuleConfigHome getModuleConfigHome() {
-		return moduleConfigHome;
+	public static File getTmpConfigFiles() {
+		return tmpConfigFiles;
 	}
-
-	public static void setModuleConfigHome(ModuleConfigHome moduleConfigHome) {
-		Activator.moduleConfigHome = moduleConfigHome;
-	}
-    
-    
-
 }

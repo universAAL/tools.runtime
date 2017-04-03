@@ -9,7 +9,6 @@ import java.util.HashMap;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
 import org.universAAL.middleware.container.ModuleContext;
-import org.universAAL.middleware.container.utils.ModuleConfigHome;
 import org.universAAL.middleware.context.ContextEvent;
 import org.universAAL.middleware.context.ContextEventPattern;
 import org.universAAL.middleware.context.ContextSubscriber;
@@ -20,6 +19,7 @@ import org.universAAL.ucc.model.jaxb.CalendarValue;
 import org.universAAL.ucc.model.jaxb.OntologyInstance;
 import org.universAAL.ucc.model.jaxb.SimpleObject;
 import org.universAAL.ucc.model.jaxb.Subprofile;
+import org.universAAL.ucc.service.manager.Activator;
 
 public class SensorEventSubscriber extends ContextSubscriber {
 	private static String room1;
@@ -30,7 +30,6 @@ public class SensorEventSubscriber extends ContextSubscriber {
 	private static BundleContext bContext;
 	private HashMap<String, ArrayList<Subprofile>>ontInstances;
 	private String device;
-	private ModuleConfigHome mc;
 	
 	private static ContextEventPattern[] getSubscriptions() {
 		ContextEventPattern ev = new ContextEventPattern();
@@ -40,8 +39,7 @@ public class SensorEventSubscriber extends ContextSubscriber {
 	
 	private SensorEventSubscriber(ModuleContext context) {
 		super(context, getSubscriptions());
-		mc = new ModuleConfigHome("uccDB", "");
-		device = mc.getAbsolutePath();
+		device = Activator.getDB().getAbsolutePath();
 		room1 = device+"/Rooms.xml";
 		flat1DB = device+"/Hardware.xml";
 		listener = new ArrayList<SensorActivityTimeChangedListener>();

@@ -14,9 +14,7 @@ import java.util.Map;
 import javax.xml.bind.JAXBException;
 
 import org.osgi.framework.BundleContext;
-import org.osgi.framework.FrameworkUtil;
 import org.osgi.framework.ServiceReference;
-import org.universAAL.middleware.container.utils.ModuleConfigHome;
 import org.universAAL.ucc.database.aalspace.DataAccess;
 import org.universAAL.ucc.model.jaxb.BooleanValue;
 import org.universAAL.ucc.model.jaxb.CalendarValue;
@@ -75,18 +73,16 @@ public class RoomsWindowController implements Property.ValueChangeListener,
 	private String actualFlat;
 	private String actualHW;
 	private String device;
-	private ModuleConfigHome mc;
 
 	public RoomsWindowController(RoomsWindow window,
 			UccUI app) throws JAXBException,
 			IOException, ParseException {
-		mc = new ModuleConfigHome("uccDB", "");
-		device = mc.getAbsolutePath();
+		device = Activator.getDB().getAbsolutePath();
 		this.app = app;
 		this.win = window;
 		actualFlat = device + "/Rooms.xml";
 		actualHW = device + "/Hardware.xml";
-		context = Activator.bc;//FrameworkUtil.getBundle(getClass()).getBundleContext();
+		context = Activator.bc;
 		ServiceReference ref = context.getServiceReference(DataAccess.class
 				.getName());
 		dataAccess = (DataAccess) context.getService(ref);

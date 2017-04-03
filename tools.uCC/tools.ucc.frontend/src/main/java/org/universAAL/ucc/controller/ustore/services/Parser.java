@@ -1,5 +1,6 @@
 package org.universAAL.ucc.controller.ustore.services;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -23,7 +24,7 @@ public class Parser {
 	static final String DETAILS = "details";
 	static final String IMAGE = "image";
 	
-	public List<Service> readServices(String servicesFile, String searchstring) {
+	public List<Service> readServices(File servicesFile, String searchstring) {
 		List<Service> services = new ArrayList<Service>();
 		try {
 			XMLInputFactory inputFactory = XMLInputFactory.newInstance();

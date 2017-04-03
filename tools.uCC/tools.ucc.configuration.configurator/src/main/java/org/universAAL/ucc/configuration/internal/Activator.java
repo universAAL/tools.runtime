@@ -1,45 +1,36 @@
 package org.universAAL.ucc.configuration.internal;
 
+import java.io.File;
+
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.universAAL.middleware.container.ModuleContext;
 import org.universAAL.middleware.container.osgi.uAALBundleContainer;
 
-import org.universAAL.middleware.container.utils.ModuleConfigHome;
 import org.universAAL.ucc.configuration.configdefinitionregistry.interfaces.ConfigurationDefinitionRegistry;
 
 public class Activator implements BundleActivator {
-	private static ModuleContext moduleContext;
+	private static ModuleContext mc;
 	public static BundleContext bc;
 
     ConfigurationDefinitionRegistry configReg;
-    private static ModuleConfigHome moduleConfigHome;
+    private static File tmpConfigFiles;
     
 	public static ModuleContext getContext() {
-	    return moduleContext;
+	    return mc;
     }
 
     public void start(BundleContext context) throws Exception {
-    	bc = context;
-    	moduleConfigHome = new ModuleConfigHome("uCC", "tmpConfigFiles");
-    	
-		Activator.moduleContext = uAALBundleContainer.THE_CONTAINER
-		.registerModule(new Object[] { context });
+		bc = context;
+		mc = uAALBundleContainer.THE_CONTAINER.registerModule(new Object[] { context });
+
+		tmpConfigFiles = new File(new File(mc.getConfigHome().getParent(), "uCC"), "tmpConfigFiles");
     }
 
     public void stop(BundleContext arg0) throws Exception {
-	// TODO Auto-generated method stub
-
     }
 
-	public static ModuleConfigHome getModuleConfigHome() {
-		return moduleConfigHome;
+	public static File getTmpConfigFiles() {
+		return tmpConfigFiles;
 	}
-
-	public static void setModuleConfigHome(ModuleConfigHome moduleConfigHome) {
-		Activator.moduleConfigHome = moduleConfigHome;
-	}
-    
-    
-
 }

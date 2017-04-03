@@ -12,9 +12,7 @@ import java.util.HashMap;
 import javax.xml.bind.JAXBException;
 
 import org.osgi.framework.BundleContext;
-import org.osgi.framework.FrameworkUtil;
 import org.osgi.framework.ServiceReference;
-import org.universAAL.middleware.container.utils.ModuleConfigHome;
 import org.universAAL.ucc.database.aalspace.DataAccess;
 import org.universAAL.ucc.model.jaxb.BooleanValue;
 import org.universAAL.ucc.model.jaxb.CalendarValue;
@@ -78,13 +76,11 @@ public class AddNewHardwareController implements Button.ClickListener,
 	private String actualRoomFile;
 	private ArrayList<OntologyInstance> savedObjects;
 	private boolean saved;
-	private ModuleConfigHome mc;
 
 	public AddNewHardwareController(AddNewHardwareWindow window,
 			HardwareWindow hWin, RoomsWindow rWin, UccUI app)
 			throws JAXBException, IOException, ParseException {
-		mc = new ModuleConfigHome("uccDB", "");
-		device = mc.getAbsolutePath();
+		device = Activator.getDB().getAbsolutePath();
 		ontoProfile = device + "/EmptyHardware.xml";
 		roomProfile = device + "/EmptyRoom.xml";
 		this.app = app;

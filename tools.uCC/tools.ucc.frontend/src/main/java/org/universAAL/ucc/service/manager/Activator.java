@@ -51,6 +51,7 @@ public class Activator implements BundleActivator {
 	private static File configHome;		// confadmin/uCC
 	private static File tempUsrvFiles;	// confadmin/uCC/tempUsrvFiles
 	private static File setupProps;		// confadmin/uCC/setup/setup.properties
+	private static File uccdb;			// confadmin/uCC/db
 	private static ServiceCaller sc;
 
 	public void start(BundleContext context) throws Exception {
@@ -60,6 +61,7 @@ public class Activator implements BundleActivator {
 
 		configHome = new File(mContext.getConfigHome().getParentFile(), "uCC");
 		tempUsrvFiles = new File(configHome, "tempUsrvFiles");
+		uccdb = new File(configHome, "db");
 //		 client = new UstoreUtil();
 		ServiceReference ref = bc.getServiceReference(DataAccess.class
 				.getName());
@@ -272,6 +274,10 @@ public class Activator implements BundleActivator {
 
 	public static File getSetupProps() {
 	    return setupProps;
+	}
+	
+	public static File getDB() {
+		return uccdb;
 	}
 
 	public static ServiceCaller getSc() {

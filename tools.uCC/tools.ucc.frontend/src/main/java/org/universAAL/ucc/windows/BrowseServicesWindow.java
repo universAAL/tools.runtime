@@ -1,14 +1,15 @@
 package org.universAAL.ucc.windows;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import org.universAAL.middleware.container.utils.ModuleConfigHome;
 import org.universAAL.ucc.controller.ustore.services.Parser;
 import org.universAAL.ucc.controller.ustore.services.PopupService;
 import org.universAAL.ucc.controller.ustore.services.Service;
+import org.universAAL.ucc.service.manager.Activator;
 
 import com.vaadin.terminal.ThemeResource;
 import com.vaadin.ui.Alignment;
@@ -91,9 +92,7 @@ public class BrowseServicesWindow extends Window {
 		buttons = new HashMap<String, Button>();
 		popups = new ArrayList<PopupService>();
 		//Path to the xml-file including the services
-		ModuleConfigHome mc = new ModuleConfigHome("service-xml", "");
-		
-		String xmlsrc = new String(mc.getAbsolutePath() + "/sample.xml");			
+		File xmlsrc = new File(new File(Activator.getConfigHome(), "service-xml"), "sample.xml");
 				
 		//generate the service-list
 		Parser read = new Parser();
@@ -206,7 +205,4 @@ public class BrowseServicesWindow extends Window {
 	public void setBack(Button back) {
 		this.back = back;
 	}
-	
-	
-
 }

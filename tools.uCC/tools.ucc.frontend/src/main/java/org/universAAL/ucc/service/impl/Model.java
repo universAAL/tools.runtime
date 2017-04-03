@@ -8,10 +8,10 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
-import org.universAAL.middleware.container.utils.ModuleConfigHome;
 import org.universAAL.ucc.service.api.IServiceManagement;
 import org.universAAL.ucc.service.api.IServiceModel;
 import org.universAAL.ucc.service.api.IServiceRegistration;
+import org.universAAL.ucc.service.manager.Activator;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -21,14 +21,11 @@ public class Model implements IServiceModel {
 	private IServiceManagement srvMan;
 	public static String SERVICEFILENAME;
 	private static Document doc;
-	private ModuleConfigHome mc;
 
 	public Model() {
 		srvReg = (IServiceRegistration) (new ServiceRegistration());
 		srvMan = (IServiceManagement) (new ServiceManagment());
-		mc = new ModuleConfigHome(" ", "");
-		String temp = mc.getAbsolutePath().trim();
-		SERVICEFILENAME = temp +"/services.xml";
+		SERVICEFILENAME = Activator.getConfigHome().getAbsolutePath() +"/services.xml";
 	}
 
 	public IServiceRegistration getServiceRegistration() {
