@@ -11,7 +11,6 @@ import java.util.Properties;
 import java.util.ResourceBundle;
 
 import org.osgi.framework.BundleContext;
-import org.osgi.framework.FrameworkUtil;
 import org.osgi.framework.ServiceReference;
 import org.universAAL.ucc.controller.desktop.DesktopController;
 import org.universAAL.ucc.service.manager.Activator;
@@ -67,7 +66,7 @@ public class UccUI extends Application {
 		Properties prop = new Properties();
 		Reader reader = null;
 		try {
-			reader = new FileReader(Activator.getModuleConfigHome().getAbsolutePath()+"/setup/setup.properties");
+			reader = new FileReader(new File(new File(Activator.getConfigHome(),"setup"), "setup.properties"));
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -88,7 +87,7 @@ public class UccUI extends Application {
 			Locale.setDefault(Locale.ENGLISH);
 		}
 		// Creating tempUsrvFiles directory
-		File file = new File(Activator.getModuleConfigHome().getAbsolutePath() + "/tempUsrvFiles");
+		File file = new File(Activator.getConfigHome(), "tempUsrvFiles");
 		if (!file.exists()) {
 			file.mkdir();
 			System.err.println("tempUsrvFiles was created!");
@@ -188,7 +187,7 @@ public class UccUI extends Application {
 		hl.addComponent(user);
 		pwd = new PasswordField(res.getString("pwd.label"));
 		hl.addComponent(pwd);
-		List<UserAccountInfo> cu = su.getUsers(Activator.getModuleConfigHome().getAbsolutePath()+"/user/users.xml");
+		List<UserAccountInfo> cu = su.getUsers();
 		if(!cu.isEmpty()) {
 		for(UserAccountInfo u : cu) {
 			if(u.isChecked() && (u.getRole().contains(Role.ENDUSER) || u.getRole().contains(Role.ASSISTEDPERSON))) {

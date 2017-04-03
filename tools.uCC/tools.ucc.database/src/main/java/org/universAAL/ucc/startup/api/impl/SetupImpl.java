@@ -1,9 +1,9 @@
 package org.universAAL.ucc.startup.api.impl;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.universAAL.ucc.database.Activator;
 import org.universAAL.ucc.startup.api.Setup;
 import org.universAAL.ucc.startup.model.UccUsers;
 import org.universAAL.ucc.startup.model.UserAccountInfo;
@@ -15,21 +15,21 @@ import javax.xml.bind.JAXB;
  *
  */
 public class SetupImpl implements Setup {
-
-	public void saveUsers(List<UserAccountInfo> users, String file) {
+    
+	public void saveUsers(List<UserAccountInfo> users) {
 		UccUsers all = new UccUsers();
 		all.setUser(users);
-		JAXB.marshal(all, new File(file));
+		JAXB.marshal(all, Activator.getUserxml());
 	}
 
-	public List<UserAccountInfo> getUsers(String file) {
-		UccUsers users = JAXB.unmarshal(new File(file), UccUsers.class);
+	public List<UserAccountInfo> getUsers() {
+		UccUsers users = JAXB.unmarshal(Activator.getUserxml(), UccUsers.class);
 		return users.getUser();
 	}
 
-	public void  updateUser(UserAccountInfo user, String file) {
+	public void  updateUser(UserAccountInfo user) {
 		System.err.println("In update user");
-		List<UserAccountInfo> all = getUsers(file);
+		List<UserAccountInfo> all = getUsers();
 		List<UserAccountInfo>up = new ArrayList<UserAccountInfo>();
 		for(UserAccountInfo ua : all) {
 			if(ua.getName().equals(user.getName())) {
@@ -46,11 +46,11 @@ public class SetupImpl implements Setup {
 		}
 		UccUsers in = new UccUsers();
 		in.setUser(up);
-		JAXB.marshal(in, new File(file));
+		JAXB.marshal(in, Activator.getUserxml());
 	}
 
-	public void deleteUser(UserAccountInfo user, String file) {
-		List<UserAccountInfo> users = getUsers(file);
+	public void deleteUser(UserAccountInfo user) {
+		List<UserAccountInfo> users = getUsers();
 		List<UserAccountInfo>list = new ArrayList<UserAccountInfo>();
 		for(UserAccountInfo ui : users) {
 			if(!ui.getName().equals(user.getName()) || !ui.getPassword().equals(user.getPassword())) {
@@ -64,16 +64,16 @@ public class SetupImpl implements Setup {
 		}
 		UccUsers del = new UccUsers();
 		del.setUser(list);
-		JAXB.marshal(del, new File(file));
+		JAXB.marshal(del, Activator.getUserxml());
 	
 	}
 
-	public void deleteAllUsers(String file) {
+	public void deleteAllUsers() {
 		// TODO Auto-generated method stub
 	}
 
-	public void saveUser(UserAccountInfo user, String file) {
-		List<UserAccountInfo> temp = getUsers(file);
+	public void saveUser(UserAccountInfo user) {
+		List<UserAccountInfo> temp = getUsers();
 		List<UserAccountInfo>saving = new ArrayList<UserAccountInfo>();
 		boolean flag = false;
 		if(!temp.isEmpty()) {
@@ -91,7 +91,7 @@ public class SetupImpl implements Setup {
 		} else {
 			saving.add(user);
 		}
-		saveUsers(saving, file);
+		saveUsers(saving);
 
 	}
 

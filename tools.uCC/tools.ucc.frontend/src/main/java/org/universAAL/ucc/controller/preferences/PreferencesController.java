@@ -1,5 +1,6 @@
 package org.universAAL.ucc.controller.preferences;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -24,12 +25,10 @@ public class PreferencesController implements ClickListener {
 	private String base;
 	private ResourceBundle bundle;
 	private Preferences oldPref;
-	private static String propFile;
 
 	public PreferencesController(UccUI app, PreferencesWindow win) {
 		base = "resources.ucc";
 		bundle = ResourceBundle.getBundle(base);
-		propFile = Activator.getModuleConfigHome().getAbsolutePath()+"/setup/setup.properties";
 		this.app = app;
 		this.win = win;
 		win.getSave().addListener(this);
@@ -39,7 +38,7 @@ public class PreferencesController implements ClickListener {
 		Properties prop = new Properties();
 		Reader reader = null;
 		try {
-			reader = new FileReader(propFile);
+			reader = new FileReader(Activator.getSetupProps());
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -99,7 +98,7 @@ public class PreferencesController implements ClickListener {
 			Properties prop = new Properties();
 			Writer writer = null;
 			try {
-				writer = new FileWriter(propFile);
+				writer = new FileWriter(Activator.getSetupProps());
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

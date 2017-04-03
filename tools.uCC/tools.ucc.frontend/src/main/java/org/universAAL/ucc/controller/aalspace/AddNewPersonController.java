@@ -1,5 +1,6 @@
 package org.universAAL.ucc.controller.aalspace;
 
+import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -483,9 +484,7 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 			if (tabSheet.getComponentCount() == 0) {
 				dataAccess.saveUserDataInCHE(instance);
 				//Save in Users.xml
-				ModuleConfigHome cm = new ModuleConfigHome("uCC", "user");
-				String path = cm.getAbsolutePath()+"/users.xml";
-				List<UserAccountInfo>ul = setup.getUsers(path);
+				List<UserAccountInfo>ul = setup.getUsers();
 				List<UserAccountInfo>temp = new ArrayList<UserAccountInfo>();
 				boolean flag = false;
 				UserAccountInfo uinfo = new UserAccountInfo();
@@ -525,7 +524,7 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 				}
 				if(!flag) {
 					temp.add(uinfo);
-					setup.saveUsers(temp, path);
+					setup.saveUsers(temp);
 				}
 				
 //				dataAccess.saveUserData(actualFlat, instance);

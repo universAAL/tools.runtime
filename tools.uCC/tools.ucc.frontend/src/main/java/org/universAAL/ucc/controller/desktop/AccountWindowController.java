@@ -1,12 +1,10 @@
 package org.universAAL.ucc.controller.desktop;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
 import org.osgi.framework.BundleContext;
-import org.osgi.framework.FrameworkUtil;
 import org.osgi.framework.ServiceReference;
 import org.universAAL.ucc.service.manager.Activator;
 import org.universAAL.ucc.startup.api.Setup;
@@ -33,7 +31,6 @@ public class AccountWindowController implements Button.ClickListener {
 	private String base;
 	private BundleContext context;
 	private Setup setup;
-	private File f;
 	
 	public AccountWindowController(AccountWindow win, UccUI app) {
 		base = "resources.ucc";
@@ -42,7 +39,6 @@ public class AccountWindowController implements Button.ClickListener {
 		this.win = win;
 		win.getSave().addListener(this);
 		win.getReset().addListener(this);
-		f = new File(Activator.getModuleConfigHome().getAbsolutePath()+"/user/users.xml");
 		context = Activator.bc;//FrameworkUtil.getBundle(getClass()).getBundleContext();
 		ServiceReference ref = context.getServiceReference(Setup.class.getName());
 		setup = (Setup) context.getService(ref);
@@ -55,7 +51,7 @@ public class AccountWindowController implements Button.ClickListener {
 				app.getMainWindow().showNotification(bundle.getString("input.empty"), Notification.TYPE_HUMANIZED_MESSAGE);
 			} else {
 				boolean inDB = false;
-				for(UserAccountInfo us : setup.getUsers(f.getAbsolutePath())) {
+				for(UserAccountInfo us : setup.getUsers()) {
 					if(us.getName().equals(win.getUser().getValue())) {
 						inDB = true;
 					}
@@ -68,7 +64,7 @@ public class AccountWindowController implements Button.ClickListener {
 					roles.add(Role.ENDUSER);
 					user.setRole(roles);
 					user.setChecked(win.getCheck().booleanValue());
-					setup.saveUser(user, f.getAbsolutePath());
+					setup.saveUser(user);
 					if(win.getCheck().getValue().equals(true)) {
 						app.getUser().setValue(win.getUser().getValue());
 						app.getPwd().setValue(win.getPwd().getValue());

@@ -14,7 +14,6 @@ import java.util.ResourceBundle;
 import javax.xml.bind.JAXBException;
 
 import org.osgi.framework.BundleContext;
-import org.osgi.framework.FrameworkUtil;
 import org.osgi.framework.ServiceReference;
 import org.universAAL.ucc.configuration.view.WhichBundleShouldBeConfiguredWindow;
 import org.universAAL.ucc.controller.install.AALServiceReceiver;
@@ -64,19 +63,16 @@ public class ToolController implements Button.ClickListener,
 	private Window installWindow;
 	private String base;
 	private ResourceBundle res;
-	private final static String dir = "tempUsrvFiles";
 	private ServiceReference ref;
 	private BundleContext bc;
 	private IFrontend frontend;
-	private static String file;
 
 	public ToolController(UccUI app, ToolWindow toolWin) {
 		this.app = app;
 		this.toolWin = toolWin;
 		base = "resources.ucc";
 		res = ResourceBundle.getBundle(base);
-		file = Activator.getModuleConfigHome().getAbsolutePath()+"/setup/setup.properties";
-		File f = new File(Activator.getModuleConfigHome().getAbsolutePath() + "/" + dir + "/");
+		File f = Activator.getTempUsrvFiles();
 		if (!f.exists()) {
 			f.mkdir();
 		}
@@ -267,7 +263,7 @@ public class ToolController implements Button.ClickListener,
 		Properties prop = new Properties();
 		Reader reader = null;
 		try {
-			reader = new FileReader(file);
+			reader = new FileReader(Activator.getSetupProps());
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
 		}

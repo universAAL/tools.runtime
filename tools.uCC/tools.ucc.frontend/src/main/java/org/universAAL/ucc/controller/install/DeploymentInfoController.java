@@ -10,7 +10,6 @@ import java.util.Map;
 import java.util.ResourceBundle;
 
 import org.osgi.framework.BundleContext;
-import org.osgi.framework.FrameworkUtil;
 import org.osgi.framework.ServiceReference;
 import org.universAAL.middleware.deploymanager.uapp.model.Part;
 import org.universAAL.middleware.interfaces.PeerCard;
@@ -24,7 +23,6 @@ import org.universAAL.ucc.configuration.configdefinitionregistry.interfaces.Conf
 import org.universAAL.ucc.configuration.model.configurationdefinition.Configuration;
 import org.universAAL.ucc.configuration.view.ConfigurationOverviewWindow;
 import org.universAAL.ucc.database.aalspace.DataAccess;
-import org.universAAL.ucc.frontend.api.impl.FrontendImpl;
 import org.universAAL.ucc.model.AALService;
 import org.universAAL.ucc.model.UAPP;
 import org.universAAL.ucc.model.UAPPPart;
@@ -251,9 +249,7 @@ public class DeploymentInfoController implements Button.ClickListener,
 				// add app and bundles to "services.xml" file.
 
 				app.getMainWindow().removeWindow(win);
-				File f = new File(Activator.getModuleConfigHome()
-						.getAbsolutePath() + "/tempUsrvFiles/");
-				deleteFiles(f);
+				deleteFiles(Activator.getTempUsrvFiles());
 
 			}
 			// }
@@ -276,9 +272,7 @@ public class DeploymentInfoController implements Button.ClickListener,
 			app.getMainWindow().showNotification(
 					bundle.getString("break.note"),
 					Notification.TYPE_HUMANIZED_MESSAGE);
-			File f = new File(Activator.getModuleConfigHome().getAbsolutePath()
-					+ "/tempUsrvFiles/");
-			deleteFiles(f);
+			deleteFiles(Activator.getTempUsrvFiles());
 		}
 
 	}

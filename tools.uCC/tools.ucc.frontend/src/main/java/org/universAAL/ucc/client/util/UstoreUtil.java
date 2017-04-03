@@ -60,7 +60,7 @@ public class UstoreUtil {
 	public void registerUser(String sessionKey) {
 		Reader reader = null;
 		try {
-			reader = new FileReader(Activator.getModuleConfigHome().getAbsolutePath()+"/setup/setup.properties");
+			reader = new FileReader(Activator.getSetupProps());
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
 		}
@@ -91,7 +91,7 @@ public class UstoreUtil {
 	 */
 	public String getSessionKey() {
 		//Calling registered Users from Database
-		List<UserAccountInfo>list = setup.getUsers(Activator.getModuleConfigHome().getAbsolutePath()+"/user/users.xml");
+		List<UserAccountInfo>list = setup.getUsers();
 		String sessionKey = "";
 		//Connection to uStore to get a session key for one user
 		for(UserAccountInfo info : list) {

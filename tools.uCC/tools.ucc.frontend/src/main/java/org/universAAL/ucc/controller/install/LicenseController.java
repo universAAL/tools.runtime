@@ -119,8 +119,7 @@ public class LicenseController implements Property.ValueChangeListener,
 			app.getMainWindow().showNotification(res.getString("break.note"),
 					Notification.TYPE_ERROR_MESSAGE);
 			app.getMainWindow().removeWindow(win);
-			File f = new File(Activator.getModuleConfigHome().getAbsolutePath() + "/tempUsrvFiles/");
-			deleteFiles(f);
+			deleteFiles(Activator.getTempUsrvFiles());
 		}
 		if (event.getButton() == win.getGo()) {
 			app.getMainWindow().removeWindow(win);

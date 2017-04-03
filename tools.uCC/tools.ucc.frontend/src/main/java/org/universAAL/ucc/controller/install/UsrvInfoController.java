@@ -79,8 +79,7 @@ public class UsrvInfoController implements Button.ClickListener {
 			app.getMainWindow().removeWindow(win);
 			app.getMainWindow()
 					.showNotification(bundle.getString("break.note"));
-			File f = new File(Activator.getModuleConfigHome().getAbsolutePath() + "/tempUsrvFiles/");
-			deleteFiles(f);
+			deleteFiles(Activator.getTempUsrvFiles());
 		}
 
 	}

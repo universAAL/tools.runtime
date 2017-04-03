@@ -12,7 +12,6 @@ import org.osgi.framework.ServiceReference;
 import org.osgi.framework.ServiceRegistration;
 import org.universAAL.middleware.container.ModuleContext;
 import org.universAAL.middleware.container.osgi.uAALBundleContainer;
-import org.universAAL.middleware.container.utils.ModuleConfigHome;
 import org.universAAL.middleware.service.DefaultServiceCaller;
 import org.universAAL.middleware.service.ServiceCaller;
 //import org.universAAL.middleware.service.ServiceResponse;
@@ -49,24 +48,29 @@ public class Activator implements BundleActivator {
 	private UstoreUtil client;
 	private static DataAccess dataAccess;
 	private static ParserService parserService;
-	private static ModuleConfigHome moduleConfigHome;
+	private static File configHome;
+	private static File tempUsrvFiles;	// tempUsrvFiles
+	private static File setupProps;	// setup/setup.properties
 	private static ServiceCaller sc;
 
 	public void start(BundleContext context) throws Exception {
 		Activator.bc = context;
-		moduleConfigHome = new ModuleConfigHome("uCC", "");
+		mContext = uAALBundleContainer.THE_CONTAINER
+			.registerModule(new Object[] { context });
+
+		configHome = mContext.getConfigHome();
+		tempUsrvFiles = new File(configHome, "tempUsrvFiles");
 //		 client = new UstoreUtil();
 		ServiceReference ref = bc.getServiceReference(DataAccess.class
 				.getName());
 		dataAccess = (DataAccess) bc.getService(ref);
 		// Setting setup properties in etc/ucc directory
-		File confHome = new File(moduleConfigHome.getAbsolutePath() + "/setup/");
+		File confHome = new File(configHome, "setup");
 		if (!confHome.exists()) {
 			confHome.mkdir();
 		}
-		File temp = new File(moduleConfigHome.getAbsolutePath()
-				+ "/setup/setup.properties");
-		if (!temp.exists()) {
+		setupProps = new File(confHome, "setup.properties");
+		if (!setupProps.exists()) {
 			// Setting default values for setup configuration
 			Properties prop = new Properties();
 			prop.setProperty("admin", "admin");
@@ -121,10 +125,8 @@ public class Activator implements BundleActivator {
 		ont.getSubprofiles().add(sub);
 		dataAccess.saveUserDataInCHE(ont);
 
-		File file = new File(moduleConfigHome.getAbsolutePath()
-				+ "/tempUsrvFiles/");
-		if (!file.exists()) {
-			file.mkdir();
+		if (!tempUsrvFiles.exists()) {
+		    tempUsrvFiles.mkdir();
 		}
 
 		ref = context.getServiceReference(IInstaller.class.getName());
@@ -147,9 +149,6 @@ public class Activator implements BundleActivator {
 		mgmt = model.getServiceManagment();
 
 		reg = model.getServiceRegistration();
-
-		mContext = uAALBundleContainer.THE_CONTAINER
-				.registerModule(new Object[] { context });
 
 		// Get SessionKey from uStore
 		if (client != null && client.getSessionKey() != null) {
@@ -235,9 +234,7 @@ public class Activator implements BundleActivator {
 	public void stop(BundleContext context) throws Exception {
 		Activator.bc = null;
 		regis.unregister();
-		File file = new File(moduleConfigHome.getAbsolutePath()
-				+ "/tempUsrvFiles/");
-		deleteFiles(file);
+		deleteFiles(tempUsrvFiles);
 //		WebConnector.getInstance().stopListening();
 	}
 
@@ -265,12 +262,16 @@ public class Activator implements BundleActivator {
 		return parserService;
 	}
 
-	public static ModuleConfigHome getModuleConfigHome() {
-		return moduleConfigHome;
+	public static File getConfigHome() {
+		return configHome;
+	}
+	
+	public static File getTempUsrvFiles() {
+	    return tempUsrvFiles;
 	}
 
-	public static void setModuleConfigHome(ModuleConfigHome moduleConfigHome) {
-		Activator.moduleConfigHome = moduleConfigHome;
+	public static File getSetupProps() {
+	    return setupProps;
 	}
 
 	public static ServiceCaller getSc() {
@@ -284,9 +285,4 @@ public class Activator implements BundleActivator {
 	public static ModuleContext getmContext() {
 		return mContext;
 	}
-
-	public static void setmContext(ModuleContext mContext) {
-		Activator.mContext = mContext;
-	}
-
 }

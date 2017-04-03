@@ -16,39 +16,39 @@ public interface Setup {
 	 * @param users a list of users
 	 * @param file the file for persistence
 	 */
-	public void saveUsers(List<UserAccountInfo>users, String file);
+	public void saveUsers(List<UserAccountInfo>users);
 	
 	/**
 	 * Gets a list of users.
 	 * @param file the file for persistence
 	 * @return a list of users
 	 */
-	public List<UserAccountInfo> getUsers(String file);
+	public List<UserAccountInfo> getUsers();
 	
 	/**
 	 * Deletes a user.
 	 * @param user the user to delete
 	 * @param file the file for persistence
 	 */
-	public void deleteUser(UserAccountInfo user, String file);
+	public void deleteUser(UserAccountInfo user);
 	
 	/**
 	 * Updates a user
 	 * @param user the user to update
 	 * @param file the file for persistence
 	 */
-	public void updateUser(UserAccountInfo user, String file);
+	public void updateUser(UserAccountInfo user);
 	
 	/**
 	 * Deletes all users.
 	 * @param file the file for persistence
 	 */
-	public void deleteAllUsers(String file);
+	public void deleteAllUsers();
 	
 	/**
 	 * Saves a user.
 	 * @param user the user to save
 	 * @param file the file for persistence
 	 */
-	public void saveUser(UserAccountInfo user, String file);
+	public void saveUser(UserAccountInfo user);
 }

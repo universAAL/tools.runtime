@@ -8,7 +8,8 @@ import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
 import org.osgi.framework.ServiceRegistration;
-import org.universAAL.middleware.container.utils.ModuleConfigHome;
+import org.universAAL.middleware.container.ModuleContext;
+import org.universAAL.middleware.container.osgi.uAALBundleContainer;
 import org.universAAL.ontology.phThing.Device;
 import org.universAAL.ontology.profile.AALSpace;
 import org.universAAL.ontology.profile.User;
@@ -33,6 +34,7 @@ import org.universAAL.ucc.startup.model.UserAccountInfo;
 public class Activator implements BundleActivator {
 
 	private static BundleContext context;
+	private static ModuleContext mc;
 	private ServiceRegistration reg1;
 	private ServiceRegistration reg2;
 	private ServiceRegistration reg3;
@@ -42,10 +44,14 @@ public class Activator implements BundleActivator {
 	public static final String USER_SPACE = "urn:org.universAAL.aal_space:user_env#";
 	public static final String HOME_SPACE = "urn:org.universAAL.aal.space:home_env#my_home_space";
 	public static final String DEVICE_SPACE = "urn:org.universAAL.aal.space:home_env#";
-	private static ModuleConfigHome moduleConfigHome;
+	private static File userxml;
 
 	public static BundleContext getContext() {
 		return context;
+	}
+	
+	public static File getUserxml() {
+		return userxml;
 	}
 
 	/*
@@ -57,11 +63,13 @@ public class Activator implements BundleActivator {
 	 */
 	public void start(BundleContext bundleContext) throws Exception {
 		Activator.context = bundleContext;
-		moduleConfigHome = new ModuleConfigHome("uCC", "user");
-
-		File uf = new File(moduleConfigHome.getAbsolutePath() + "/users.xml");
-		if (!uf.exists()) {
-			uf.createNewFile();
+		mc = uAALBundleContainer.THE_CONTAINER
+			.registerModule(new Object[] { context });
+		
+		userxml = new File(new File(mc.getConfigHome(), "user"), "users.xml");
+		
+		if (!userxml.exists()) {
+			userxml.createNewFile();
 			UserAccountInfo u = new UserAccountInfo();
 			u.setName("");
 			u.setPassword("");
@@ -72,8 +80,7 @@ public class Activator implements BundleActivator {
 			Setup set = new SetupImpl();
 			List<UserAccountInfo> users = new ArrayList<UserAccountInfo>();
 			users.add(u);
-			set.saveUsers(users, moduleConfigHome.getAbsolutePath()
-					+ "/users.xml");
+			set.saveUsers(users);
 		}
 
 		reg1 = context.registerService(Setup.class.getName(), new SetupImpl(),

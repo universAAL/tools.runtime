@@ -67,7 +67,7 @@ public class DesktopController implements Button.ClickListener {
 		Properties prop = new Properties();
 		Reader reader = null;
 		try {
-			reader = new FileReader(new File(Activator.getModuleConfigHome().getAbsolutePath()+"/setup/setup.properties"));
+			reader = new FileReader(Activator.getSetupProps());
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -156,7 +156,7 @@ public class DesktopController implements Button.ClickListener {
 			} else {
 				boolean in = false;
 				//Later comment out, only CHE is to be used
-				List<UserAccountInfo> users = setup.getUsers(Activator.getModuleConfigHome().getAbsolutePath()+"/user/users.xml");
+				List<UserAccountInfo> users = setup.getUsers();
 				if(users.size() <= 1) {
 				//AAL Space test
 					DataAccess da = Activator.getDataAccess();
@@ -210,7 +210,7 @@ public class DesktopController implements Button.ClickListener {
 			Properties prop = new Properties();
 			Reader reader = null;
 			try {
-				reader = new FileReader(Activator.getModuleConfigHome().getAbsolutePath()+"/setup/setup.properties");
+				reader = new FileReader(Activator.getSetupProps());
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}

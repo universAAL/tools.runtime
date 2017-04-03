@@ -78,7 +78,6 @@ public class PersonWindowController  implements Property.ValueChangeListener, Bu
 	private String actualFlat;
 	private ModuleConfigHome mc;
 	private Setup setup;
-	private ModuleConfigHome cm;
 	private String path;
 
 	
@@ -103,10 +102,6 @@ public class PersonWindowController  implements Property.ValueChangeListener, Bu
 		win.addFirstComponent(win.getUserTree());
 		win.addSecondComponent(tabSheet);
 		setup = new SetupImpl();
-		cm = new ModuleConfigHome("uCC", "user");
-		path = cm.getAbsolutePath()+"/users.xml";
-
-		
 	}
 	
 	private void loadData() throws JAXBException, IOException, ParseException {
@@ -529,14 +524,14 @@ public class PersonWindowController  implements Property.ValueChangeListener, Bu
 						}
 					}
 				}
-			setup.updateUser(uinfo, path);
+			setup.updateUser(uinfo);
 			//Update admin user in setup.properties
 			if(selectedItem.equals("admin")) {
 				Properties prop = new Properties();
 				Properties prop2 = new Properties();
 				Reader reader = null;
 				try {
-					reader = new FileReader(new File(Activator.getModuleConfigHome().getAbsolutePath()+"/setup/setup.properties"));
+					reader = new FileReader(Activator.getSetupProps());
 				} catch (FileNotFoundException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -558,7 +553,7 @@ public class PersonWindowController  implements Property.ValueChangeListener, Bu
 				}
 				Writer wr = null;
 				try {
-					wr = new FileWriter(new File(Activator.getModuleConfigHome().getAbsolutePath()+"/setup/setup.properties"));
+					wr = new FileWriter(Activator.getSetupProps());
 				} catch (IOException e1) {
 					e1.printStackTrace();
 				}
@@ -602,10 +597,10 @@ public class PersonWindowController  implements Property.ValueChangeListener, Bu
 		} //Delete Button was pushed
 		else if(event.getButton() == ((TabForm)tabSheet.getSelectedTab()).getDeleteButton()) {
 			dataAccess.deleteUserDataInChe(selectedItem);
-			List<UserAccountInfo> uinfo = setup.getUsers(path);
+			List<UserAccountInfo> uinfo = setup.getUsers();
 			for(UserAccountInfo ui : uinfo) {
 				if(ui.getName().equals(selectedItem)) {
-					setup.deleteUser(ui, path);
+					setup.deleteUser(ui);
 				}
 			}
 //			dataAccess.deleteUserData(actualFlat, selectedItem);

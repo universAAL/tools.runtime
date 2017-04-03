@@ -10,7 +10,6 @@ import java.io.InputStream;
 import java.io.Serializable;
 
 import java.math.BigInteger;
-import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URL;
 import java.net.URLConnection;
@@ -19,8 +18,6 @@ import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
-import java.util.Locale;
-import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipException;
@@ -102,8 +99,7 @@ public class FrontendImpl implements IFrontend {
 	public FrontendImpl() {
 		base = "resources.ucc";
 		bundle = ResourceBundle.getBundle(base);
-		usrvLocalStore = Activator.getModuleConfigHome().getAbsolutePath()
-				+ "/tempUsrvFiles/";
+		usrvLocalStore = Activator.getTempUsrvFiles().getAbsolutePath();
 	}
 
 	public boolean installService(String sessionkey, String serviceId,
@@ -199,10 +195,7 @@ public class FrontendImpl implements IFrontend {
 		URL url = new URL(downloadUri);
 		URLConnection con = url.openConnection();
 		InputStream in = new BufferedInputStream(con.getInputStream());
-		FileOutputStream out = new FileOutputStream(Activator
-				.getModuleConfigHome().getAbsolutePath()
-				+ "/tempUsrvFiles/"
-				+ filename);
+		FileOutputStream out = new FileOutputStream(new File(Activator.getTempUsrvFiles(), filename));
 		byte[] chunk = new byte[153600];
 		int chunkSize;
 		while ((chunkSize = in.read(chunk)) > 0) {
@@ -220,9 +213,7 @@ public class FrontendImpl implements IFrontend {
 		URL url = new URL(uri);
 		URLConnection con = url.openConnection();
 		InputStream in = new BufferedInputStream(con.getInputStream());
-		FileOutputStream out = new FileOutputStream(Activator
-				.getModuleConfigHome().getAbsolutePath()
-				+ "/tempUsrvFiles/"+filepath);
+		FileOutputStream out = new FileOutputStream(new File(Activator.getTempUsrvFiles(), filepath));
 		byte[] chunk = new byte[153600];
 		int chunkSize;
 		while ((chunkSize = in.read(chunk)) > 0) {
@@ -233,9 +224,7 @@ public class FrontendImpl implements IFrontend {
 		out.close();
 		in.close();
 
-		return Activator
-				.getModuleConfigHome().getAbsolutePath()
-				+ "/tempUsrvFiles/"+filepath;
+		return new File(Activator.getTempUsrvFiles(), filepath).getAbsolutePath();
 	}
 
 	/**
