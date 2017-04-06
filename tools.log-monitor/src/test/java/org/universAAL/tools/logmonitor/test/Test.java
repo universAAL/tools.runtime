@@ -101,7 +101,7 @@ public class Test extends BusTestCase {
 	// start log monitor
 	Activator a = new Activator();
 	a.start();
-	((JUnitContainer) mc.getContainer()).registerLogListeners(a.lm);
+	((JUnitContainer) mc.getContainer()).registerLogListener(Activator.lm);
     }
 
 //    public static ContextEventPattern[] providedEvents(Lighting theServer) {
