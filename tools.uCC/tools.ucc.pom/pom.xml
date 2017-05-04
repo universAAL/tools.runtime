@@ -7,7 +7,7 @@
 		<groupId>org.universAAL.tools</groupId>
 		<artifactId>tools.pom</artifactId>
 		<version>3.4.1-SNAPSHOT</version>
-		<relativePath>../tools.pom/pom.xml</relativePath>
+		<relativePath>../../tools.pom/pom.xml</relativePath>
 	</parent>
 
 	<groupId>org.universAAL.tools</groupId>
