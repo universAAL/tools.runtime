@@ -32,6 +32,9 @@ import org.universAAL.middleware.tracker.IBusMemberRegistry;
 //import org.universAAL.ontology.shape.ShapeOntology;
 import org.universAAL.tools.logmonitor.Activator;
 import org.universAAL.tools.logmonitor.BusMemberMonitor;
+
+import java.awt.HeadlessException;
+
 import org.universAAL.container.JUnit.JUnitContainer;
 import org.universAAL.container.JUnit.JUnitModuleContext;
 import org.universAAL.container.JUnit.JUnitModuleContext.LogLevel;
@@ -99,9 +102,13 @@ public class Test extends BusTestCase {
 		parBMLMgmt, parBMLMgmt, parLLMgmt, parLLMgmt, parEvtH, parEvtH);
 
 	// start log monitor
+	try {
 	Activator a = new Activator();
 	a.start();
 	((JUnitContainer) mc.getContainer()).registerLogListener(Activator.lm);
+	} catch(HeadlessException e) {
+	    System.out.println(" -- HeadlessException");
+	}
     }
 
 //    public static ContextEventPattern[] providedEvents(Lighting theServer) {
