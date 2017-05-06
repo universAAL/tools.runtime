@@ -331,26 +331,26 @@ public class ProfileAgentImpl implements ProfileAgent {
 		}
 	}
 
-	private String getSubProfile(String urn) {
-		System.out.println("Profile Agent: call GetSubProfile using urn");
-		SubProfile profile = new SubProfile(urn);
-		ServiceRequest req=new ServiceRequest(new ProfilingService(),null);
-		req.addValueFilter(new String[]{ProfilingService.PROP_CONTROLS,Profilable.PROP_HAS_PROFILE,Profile.PROP_HAS_SUB_PROFILE}, profile);
-		req.addRequiredOutput(OUTPUT_GETSUBPROFILE, new String[]{ProfilingService.PROP_CONTROLS,Profilable.PROP_HAS_PROFILE,Profile.PROP_HAS_SUB_PROFILE});
-		ServiceResponse resp = caller.call(req);
-		if (resp.getCallStatus() == CallStatus.succeeded) {
-		    Object out=getReturnValue(resp.getOutputs(),OUTPUT_GETSUBPROFILE);
-		    if (out != null) {
-		    	System.out.println(out.toString());
-		    	return out.toString();
-		    } else {
-		    	System.out.println("NOTHING!");
-		    	return "nothing";
-		    }
-		}else{
-		    return resp.getCallStatus().name();
-		}
-	    }
+//	private String getSubProfile(String urn) {
+//		System.out.println("Profile Agent: call GetSubProfile using urn");
+//		SubProfile profile = new SubProfile(urn);
+//		ServiceRequest req=new ServiceRequest(new ProfilingService(),null);
+//		req.addValueFilter(new String[]{ProfilingService.PROP_CONTROLS,Profilable.PROP_HAS_PROFILE,Profile.PROP_HAS_SUB_PROFILE}, profile);
+//		req.addRequiredOutput(OUTPUT_GETSUBPROFILE, new String[]{ProfilingService.PROP_CONTROLS,Profilable.PROP_HAS_PROFILE,Profile.PROP_HAS_SUB_PROFILE});
+//		ServiceResponse resp = caller.call(req);
+//		if (resp.getCallStatus() == CallStatus.succeeded) {
+//		    Object out=getReturnValue(resp.getOutputs(),OUTPUT_GETSUBPROFILE);
+//		    if (out != null) {
+//		    	System.out.println(out.toString());
+//		    	return out.toString();
+//		    } else {
+//		    	System.out.println("NOTHING!");
+//		    	return "nothing";
+//		    }
+//		}else{
+//		    return resp.getCallStatus().name();
+//		}
+//	    }
 	
 	public String addUserSubprofile(User user, SubProfile subProfile) {
 		System.out.println("Profile agent: add subProfile for user: " + user.getURI() + " subProfile: " + subProfile.toString());
