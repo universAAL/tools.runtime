@@ -10,7 +10,6 @@
   <groupId>org.universAAL.tools</groupId>
   <artifactId>tools.karaf.feature</artifactId>
   <version>3.4.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
   <name>universAAL Karaf Feature</name>
   <properties>
     <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
