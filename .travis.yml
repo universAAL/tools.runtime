@@ -1,0 +1,44 @@
+language: java
+jdk: oraclejdk8
+sudo: false
+ 
+cache:
+  directories:
+    - ~/.m2
+
+branches: 
+ only:
+ - master
+
+env:
+  global:
+    secure: "PnwBrARa+bZz3mjpHGOxGaU0KXErBrfQWCai0fHR6Iu2QVF0pxKj/h4hTwa27GQq4Ne7BtnhnJq2ugbzYQz4InaN352VEKCvPIHg7oa3EzmtkyzodPSxWeiTRszl/y1zUBEHYGWatJAarOqwmjUzYWqqdBXMSSOT3ajXANqN4/r5eeGyJrhYogHCcgbfHVDUjyN9xgJMzZYC2BqzhCiyWmZRZ/OANHeuRIXyqT2rc5miyP2pfv9M/9g5Pcre6hSCaKu8APmeVHwOhI4zwkLOsKlfZ6RyOFEU6tWDoJ3LnmcAzUvIzSTT3RJQOeN+7CIT8SFyel4TceT9+jLf4owdSEjlcVOEbcW2Lwi31p2JKpiPgM6ZDpcCcDRjDcPmlh9m8cUXFZRIh96mMjiSgbEqJu3dP89bohTzJfzNkBtEQmQvXr4hwfGPuWCUPGtE4NiUJBuH9CjgItvnbijz09nTzAme0KqvB7faDGLYimjXsWsN59zccjh0IxaWHJ5PQnqeDUZC19he/rTeTGgkF2Z1N5/IzJeB0rdkEDsxGGatOXWu9bb37XyhrrbeRQh6YUrlweDQ4RdwkK0h+ohFAREeOJOABTSgzzdNpch5VCmNpEhIkO9bSrVcrc5JvzAZxJJ+WU8lkdoW3fkmL5EipFaK15z6aZNIN4nCaeAWpUFSmyo="
+
+addons:
+  apt:
+    packages:
+      - graphviz
+
+before_install:
+ - cd pom
+ - (curl -s https://raw.githubusercontent.com/universAAL/platform/master/uAAL.pom/src/scripts/settings.xml) > settings.xml
+ - cp settings.xml $HOME/.m2/settings.xml
+ - (curl -s https://raw.githubusercontent.com/universAAL/platform/master/uAAL.pom/src/scripts/ci.sh) > ci.sh
+ - chmod +x ci.sh
+ - export MY_REPO="tools.runtime"
+
+install:
+ -
+
+before_script:
+ - cat /etc/mavenrc
+ - echo "MAVEN_OPTS='-Xmx2g'" > ~/.mavenrc
+
+script:
+ - ./ci.sh script
+
+after_success:
+ - ./ci.sh success
+
+notifications:
+  email: false
