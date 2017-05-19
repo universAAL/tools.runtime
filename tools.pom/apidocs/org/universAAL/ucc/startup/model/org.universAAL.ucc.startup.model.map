@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="c12565" href="./User.html" title="org.universAAL.ucc.startup.model.User" alt="" coords="17,19,66,45"/>
+<area shape="rect" id="node1" href="./User.html" title="&lt;TABLE&gt;" alt="" coords="5,8,77,56"/>
+<area shape="rect" id="c12566" href="./UccUsers.html" title="org.universAAL.ucc.startup.model.UccUsers" alt="" coords="112,19,192,45"/>
+<area shape="rect" id="node2" href="./UccUsers.html" title="&lt;TABLE&gt;" alt="" coords="101,8,203,56"/>
+<area shape="rect" id="c12567" href="./UserAccountInfo.html" title="org.universAAL.ucc.startup.model.UserAccountInfo" alt="" coords="237,19,355,45"/>
+<area shape="rect" id="node3" href="./UserAccountInfo.html" title="&lt;TABLE&gt;" alt="" coords="227,8,365,56"/>
+<area shape="rect" id="c12568" href="./Role.html" title="org.universAAL.ucc.startup.model.Role" alt="" coords="399,11,505,53"/>
+<area shape="rect" id="node4" href="./Role.html" title="&lt;TABLE&gt;" alt="" coords="389,6,515,58"/>
+</map>

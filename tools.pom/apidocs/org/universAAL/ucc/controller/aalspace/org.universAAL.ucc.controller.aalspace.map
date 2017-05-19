@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="c20406" href="./AddNewPersonController.html" title="org.universAAL.ucc.controller.aalspace.AddNewPersonController" alt="" coords="16,17,184,42"/>
+<area shape="rect" id="node1" href="./AddNewPersonController.html" title="&lt;TABLE&gt;" alt="" coords="5,5,195,53"/>
+<area shape="rect" id="c20407" href="./PersonWindowController.html" title="org.universAAL.ucc.controller.aalspace.PersonWindowController" alt="" coords="229,17,395,42"/>
+<area shape="rect" id="node2" href="./PersonWindowController.html" title="&lt;TABLE&gt;" alt="" coords="219,5,405,53"/>
+<area shape="rect" id="c20408" href="./AddNewHardwareController.html" title="org.universAAL.ucc.controller.aalspace.AddNewHardwareController" alt="" coords="439,17,622,42"/>
+<area shape="rect" id="node3" href="./AddNewHardwareController.html" title="&lt;TABLE&gt;" alt="" coords="429,5,632,53"/>
+<area shape="rect" id="c20409" href="./HardwareWindowController.html" title="org.universAAL.ucc.controller.aalspace.HardwareWindowController" alt="" coords="666,17,846,42"/>
+<area shape="rect" id="node4" href="./HardwareWindowController.html" title="&lt;TABLE&gt;" alt="" coords="656,5,856,53"/>
+<area shape="rect" id="c20410" href="./RoomsWindowController.html" title="org.universAAL.ucc.controller.aalspace.RoomsWindowController" alt="" coords="891,17,1056,42"/>
+<area shape="rect" id="node5" href="./RoomsWindowController.html" title="&lt;TABLE&gt;" alt="" coords="880,5,1067,53"/>
+</map>

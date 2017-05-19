@@ -1,0 +1,24 @@
+<map id="G" name="G">
+<area shape="rect" id="c19445" href="./SimpleConfiguratorPasswordField.html" title="org.universAAL.ucc.configuration.view.SimpleConfiguratorPasswordField" alt="" coords="15,19,233,45"/>
+<area shape="rect" id="node1" href="./SimpleConfiguratorPasswordField.html" title="&lt;TABLE&gt;" alt="" coords="5,8,243,56"/>
+<area shape="rect" id="c19446" href="./ConfigurationSaveWindow.html" title="org.universAAL.ucc.configuration.view.ConfigurationSaveWindow" alt="" coords="277,19,451,45"/>
+<area shape="rect" id="node2" href="./ConfigurationSaveWindow.html" title="&lt;TABLE&gt;" alt="" coords="267,8,461,56"/>
+<area shape="rect" id="c19447" href="./ConfigurationPanel.html" title="org.universAAL.ucc.configuration.view.ConfigurationPanel" alt="" coords="496,19,627,45"/>
+<area shape="rect" id="node3" href="./ConfigurationPanel.html" title="&lt;TABLE&gt;" alt="" coords="485,8,637,56"/>
+<area shape="rect" id="c19448" href="./WhichBundleShouldBeConfiguredWindow.html" title="org.universAAL.ucc.configuration.view.WhichBundleShouldBeConfiguredWindow" alt="" coords="672,19,936,45"/>
+<area shape="rect" id="node4" href="./WhichBundleShouldBeConfiguredWindow.html" title="&lt;TABLE&gt;" alt="" coords="661,8,947,56"/>
+<area shape="rect" id="c19449" href="./ConfigurationListSelect.html" title="org.universAAL.ucc.configuration.view.ConfigurationListSelect" alt="" coords="981,19,1137,45"/>
+<area shape="rect" id="node5" href="./ConfigurationListSelect.html" title="&lt;TABLE&gt;" alt="" coords="971,8,1147,56"/>
+<area shape="rect" id="c19450" href="./MultiselectionList.html" title="org.universAAL.ucc.configuration.view.MultiselectionList" alt="" coords="1181,19,1302,45"/>
+<area shape="rect" id="node6" href="./MultiselectionList.html" title="&lt;TABLE&gt;" alt="" coords="1171,8,1312,56"/>
+<area shape="rect" id="c19451" href="./ConfigurationOverviewWindow.html" title="org.universAAL.ucc.configuration.view.ConfigurationOverviewWindow" alt="" coords="1347,19,1547,45"/>
+<area shape="rect" id="node7" href="./ConfigurationOverviewWindow.html" title="&lt;TABLE&gt;" alt="" coords="1336,8,1557,56"/>
+<area shape="rect" id="c19452" href="./SimpleConfiguratorTextField.html" title="org.universAAL.ucc.configuration.view.SimpleConfiguratorTextField" alt="" coords="1591,19,1777,45"/>
+<area shape="rect" id="node8" href="./SimpleConfiguratorTextField.html" title="&lt;TABLE&gt;" alt="" coords="1581,8,1787,56"/>
+<area shape="rect" id="c19453" href="./YesNoDialog.html" title="org.universAAL.ucc.configuration.view.YesNoDialog" alt="" coords="1821,19,1918,45"/>
+<area shape="rect" id="node9" href="./YesNoDialog.html" title="&lt;TABLE&gt;" alt="" coords="1811,8,1928,56"/>
+<area shape="rect" id="c19454" href="./YesNoDialog.Callback.html" title="org.universAAL.ucc.configuration.view.YesNoDialog.Callback" alt="" coords="1963,11,2048,53"/>
+<area shape="rect" id="node10" href="./YesNoDialog.Callback.html" title="&lt;TABLE&gt;" alt="" coords="1952,6,2059,58"/>
+<area shape="rect" id="c19455" href="./SaveFormFactory.html" title="org.universAAL.ucc.configuration.view.SaveFormFactory" alt="" coords="2093,19,2219,45"/>
+<area shape="rect" id="node11" href="./SaveFormFactory.html" title="&lt;TABLE&gt;" alt="" coords="2083,8,2229,56"/>
+</map>

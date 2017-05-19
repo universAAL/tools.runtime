@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="c21660" href="./Service.html" title="org.universAAL.ucc.controller.ustore.services.Service" alt="" coords="15,17,81,42"/>
+<area shape="rect" id="node1" href="./Service.html" title="&lt;TABLE&gt;" alt="" coords="5,5,91,53"/>
+<area shape="rect" id="c21661" href="./Parser.html" title="org.universAAL.ucc.controller.ustore.services.Parser" alt="" coords="125,17,184,42"/>
+<area shape="rect" id="node2" href="./Parser.html" title="&lt;TABLE&gt;" alt="" coords="115,5,195,53"/>
+<area shape="rect" id="c21662" href="./PurchasedServicesController.html" title="org.universAAL.ucc.controller.ustore.services.PurchasedServicesController" alt="" coords="229,17,419,42"/>
+<area shape="rect" id="node3" href="./PurchasedServicesController.html" title="&lt;TABLE&gt;" alt="" coords="219,5,429,53"/>
+<area shape="rect" id="c21663" href="./PopupService.html" title="org.universAAL.ucc.controller.ustore.services.PopupService" alt="" coords="464,17,565,42"/>
+<area shape="rect" id="node4" href="./PopupService.html" title="&lt;TABLE&gt;" alt="" coords="453,5,576,53"/>
+</map>

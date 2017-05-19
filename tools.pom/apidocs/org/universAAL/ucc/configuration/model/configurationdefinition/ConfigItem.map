@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="c40265" href="./SPARQLConfigItem.html" title="org.universAAL.ucc.configuration.model.configurationdefinition.SPARQLConfigItem" alt="" coords="16,113,155,138"/>
+<area shape="rect" id="node1" href="./SPARQLConfigItem.html" title="&lt;TABLE&gt;" alt="" coords="5,101,165,149"/>
+<area shape="rect" id="c40266" href="./SimpleConfigItem.html" title="org.universAAL.ucc.configuration.model.configurationdefinition.SimpleConfigItem" alt="" coords="200,113,325,138"/>
+<area shape="rect" id="node2" href="./SimpleConfigItem.html" title="&lt;TABLE&gt;" alt="" coords="189,101,336,149"/>
+<area shape="rect" id="c40268" href="./MapConfigItem.html" title="org.universAAL.ucc.configuration.model.configurationdefinition.MapConfigItem" alt="" coords="371,113,480,138"/>
+<area shape="rect" id="node3" href="./MapConfigItem.html" title="&lt;TABLE&gt;" alt="" coords="360,101,491,149"/>
+<area shape="rect" id="c40277" href="./ConfigItem.html" title="org.universAAL.ucc.configuration.model.configurationdefinition.ConfigItem" alt="" coords="220,17,305,42"/>
+<area shape="rect" id="node4" href="./ConfigItem.html" title="&lt;TABLE&gt;" alt="" coords="209,5,316,53"/>
+</map>

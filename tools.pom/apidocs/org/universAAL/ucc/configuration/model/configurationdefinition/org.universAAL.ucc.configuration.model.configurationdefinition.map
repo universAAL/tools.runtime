@@ -1,0 +1,30 @@
+<map id="G" name="G">
+<area shape="rect" id="c13508" href="./ObjectFactory.html" title="org.universAAL.ucc.configuration.model.configurationdefinition.ObjectFactory" alt="" coords="73,17,175,42"/>
+<area shape="rect" id="node1" href="./ObjectFactory.html" title="&lt;TABLE&gt;" alt="" coords="63,5,185,53"/>
+<area shape="rect" id="c13509" href="./SPARQLConfigItem.html" title="org.universAAL.ucc.configuration.model.configurationdefinition.SPARQLConfigItem" alt="" coords="16,113,155,138"/>
+<area shape="rect" id="node2" href="./SPARQLConfigItem.html" title="&lt;TABLE&gt;" alt="" coords="5,101,165,149"/>
+<area shape="rect" id="c13510" href="./SimpleConfigItem.html" title="org.universAAL.ucc.configuration.model.configurationdefinition.SimpleConfigItem" alt="" coords="200,113,325,138"/>
+<area shape="rect" id="node3" href="./SimpleConfigItem.html" title="&lt;TABLE&gt;" alt="" coords="189,101,336,149"/>
+<area shape="rect" id="c13511" href="./Options.html" title="org.universAAL.ucc.configuration.model.configurationdefinition.Options" alt="" coords="350,17,415,42"/>
+<area shape="rect" id="node4" href="./Options.html" title="&lt;TABLE&gt;" alt="" coords="340,5,425,53"/>
+<area shape="rect" id="c13512" href="./MapConfigItem.html" title="org.universAAL.ucc.configuration.model.configurationdefinition.MapConfigItem" alt="" coords="371,113,480,138"/>
+<area shape="rect" id="node5" href="./MapConfigItem.html" title="&lt;TABLE&gt;" alt="" coords="360,101,491,149"/>
+<area shape="rect" id="c13513" href="./Option.html" title="org.universAAL.ucc.configuration.model.configurationdefinition.Option" alt="" coords="460,17,519,42"/>
+<area shape="rect" id="node6" href="./Option.html" title="&lt;TABLE&gt;" alt="" coords="449,5,529,53"/>
+<area shape="rect" id="c13514" href="./Configuration.html" title="org.universAAL.ucc.configuration.model.configurationdefinition.Configuration" alt="" coords="563,17,661,42"/>
+<area shape="rect" id="node7" href="./Configuration.html" title="&lt;TABLE&gt;" alt="" coords="553,5,671,53"/>
+<area shape="rect" id="c13515" href="./Validator.html" title="org.universAAL.ucc.configuration.model.configurationdefinition.Validator" alt="" coords="705,17,777,42"/>
+<area shape="rect" id="node8" href="./Validator.html" title="&lt;TABLE&gt;" alt="" coords="695,5,788,53"/>
+<area shape="rect" id="c13516" href="./Item.html" title="org.universAAL.ucc.configuration.model.configurationdefinition.Item" alt="" coords="825,17,871,42"/>
+<area shape="rect" id="node9" href="./Item.html" title="&lt;TABLE&gt;" alt="" coords="812,5,884,53"/>
+<area shape="rect" id="c13517" href="./OnConfigurationModelChangedListener.html" title="org.universAAL.ucc.configuration.model.configurationdefinition.OnConfigurationModelChangedListener" alt="" coords="919,17,1167,42"/>
+<area shape="rect" id="node10" href="./OnConfigurationModelChangedListener.html" title="&lt;TABLE&gt;" alt="" coords="908,5,1177,53"/>
+<area shape="rect" id="c13518" href="./Validators.html" title="org.universAAL.ucc.configuration.model.configurationdefinition.Validators" alt="" coords="1211,17,1290,42"/>
+<area shape="rect" id="node11" href="./Validators.html" title="&lt;TABLE&gt;" alt="" coords="1201,5,1300,53"/>
+<area shape="rect" id="c13519" href="./Dependency.html" title="org.universAAL.ucc.configuration.model.configurationdefinition.Dependency" alt="" coords="1335,17,1428,42"/>
+<area shape="rect" id="node12" href="./Dependency.html" title="&lt;TABLE&gt;" alt="" coords="1324,5,1439,53"/>
+<area shape="rect" id="c13520" href="./Category.html" title="org.universAAL.ucc.configuration.model.configurationdefinition.Category" alt="" coords="1473,17,1546,42"/>
+<area shape="rect" id="node13" href="./Category.html" title="&lt;TABLE&gt;" alt="" coords="1463,5,1556,53"/>
+<area shape="rect" id="c13521" href="./ConfigItem.html" title="org.universAAL.ucc.configuration.model.configurationdefinition.ConfigItem" alt="" coords="220,17,305,42"/>
+<area shape="rect" id="node14" href="./ConfigItem.html" title="&lt;TABLE&gt;" alt="" coords="209,5,316,53"/>
+</map>

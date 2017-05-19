@@ -1,0 +1,880 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<rss version="0.91">
+  <channel>
+    <title>universAAL Tools uCC Model - Checkstyle report</title>
+    <link>http://xtras/tools.runtime/tools.uCC/tools.ucc.model/</link>
+    <description>universAAL Tools uCC Model - Checkstyle report</description>
+    <language>en-us</language>
+    <copyright>&#169;2017 universAAL Consortium</copyright>
+    <item>
+      <title>File: 59,
+             Errors: 1821,
+             Warnings: 198,
+             Infos: 2344
+      </title>
+            <link>http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html</link>
+      <description>
+        <p>Click <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html">here</a> for the full Checkstyle report.</p>
+
+        <table summary="Files" boder="1">
+          <thead>
+            <tr>
+              <th>Files</th>
+              <th style="width:30px;"><abbr title="Info">I</abbr></th>
+              <th style="width:30px;"><abbr title="Warning">W</abbr></th>
+              <th style="width:30px;"><abbr title="Error">E</abbr></th>
+            </tr>
+          </thead>
+          <tbody>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.Dependency.java">org/universAAL/ucc/model/usrv/Dependency.java</a>
+                </td>
+                <td>
+                  32
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  13
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.jaxb.CalendarValue.java">org/universAAL/ucc/model/jaxb/CalendarValue.java</a>
+                </td>
+                <td>
+                  5
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  6
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.Config.java">org/universAAL/ucc/model/usrv/Config.java</a>
+                </td>
+                <td>
+                  30
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  13
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.Provider.java">org/universAAL/ucc/model/Provider.java</a>
+                </td>
+                <td>
+                  11
+                </td>
+                <td>
+                  7
+                </td>
+                <td>
+                  21
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.UAPPPart.java">org/universAAL/ucc/model/UAPPPart.java</a>
+                </td>
+                <td>
+                  32
+                </td>
+                <td>
+                  22
+                </td>
+                <td>
+                  64
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.CapabilityType.java">org/universAAL/ucc/model/usrv/CapabilityType.java</a>
+                </td>
+                <td>
+                  27
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  13
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.jaxb.BooleanValue.java">org/universAAL/ucc/model/jaxb/BooleanValue.java</a>
+                </td>
+                <td>
+                  6
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  8
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.HardwareType.java">org/universAAL/ucc/model/usrv/HardwareType.java</a>
+                </td>
+                <td>
+                  43
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  25
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.LicenseCategoryType.java">org/universAAL/ucc/model/usrv/LicenseCategoryType.java</a>
+                </td>
+                <td>
+                  11
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  6
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.ReqCriticalityType.java">org/universAAL/ucc/model/usrv/ReqCriticalityType.java</a>
+                </td>
+                <td>
+                  11
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  7
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.package-info.java">org/universAAL/ucc/model/usrv/package-info.java</a>
+                </td>
+                <td>
+                  7
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.Broker.java">org/universAAL/ucc/model/usrv/Broker.java</a>
+                </td>
+                <td>
+                  26
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  13
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.jaxb.MyFactory.java">org/universAAL/ucc/model/jaxb/MyFactory.java</a>
+                </td>
+                <td>
+                  20
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  24
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.LogicalCriteriaType.java">org/universAAL/ucc/model/usrv/LogicalCriteriaType.java</a>
+                </td>
+                <td>
+                  11
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  14
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.ExecutionUnit.java">org/universAAL/ucc/model/usrv/ExecutionUnit.java</a>
+                </td>
+                <td>
+                  33
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  19
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.SpaceType.java">org/universAAL/ucc/model/usrv/SpaceType.java</a>
+                </td>
+                <td>
+                  11
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  8
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.Bundle.java">org/universAAL/ucc/model/usrv/Bundle.java</a>
+                </td>
+                <td>
+                  43
+                </td>
+                <td>
+                  5
+                </td>
+                <td>
+                  31
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.jaxb.OntologyInstance.java">org/universAAL/ucc/model/jaxb/OntologyInstance.java</a>
+                </td>
+                <td>
+                  13
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  16
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.jaxb.DoubleValue.java">org/universAAL/ucc/model/jaxb/DoubleValue.java</a>
+                </td>
+                <td>
+                  7
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  11
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.AppItem.java">org/universAAL/ucc/model/AppItem.java</a>
+                </td>
+                <td>
+                  10
+                </td>
+                <td>
+                  5
+                </td>
+                <td>
+                  26
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.DeploymentUnit.java">org/universAAL/ucc/model/usrv/DeploymentUnit.java</a>
+                </td>
+                <td>
+                  155
+                </td>
+                <td>
+                  4
+                </td>
+                <td>
+                  96
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.VersionType.java">org/universAAL/ucc/model/usrv/VersionType.java</a>
+                </td>
+                <td>
+                  31
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  31
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.ConfigFile.java">org/universAAL/ucc/model/usrv/ConfigFile.java</a>
+                </td>
+                <td>
+                  30
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  13
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.UAPPReqAtom.java">org/universAAL/ucc/model/UAPPReqAtom.java</a>
+                </td>
+                <td>
+                  16
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  21
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.jaxb.EnumObject.java">org/universAAL/ucc/model/jaxb/EnumObject.java</a>
+                </td>
+                <td>
+                  18
+                </td>
+                <td>
+                  7
+                </td>
+                <td>
+                  36
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.RegisteredService.java">org/universAAL/ucc/model/RegisteredService.java</a>
+                </td>
+                <td>
+                  14
+                </td>
+                <td>
+                  9
+                </td>
+                <td>
+                  47
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.ContactType.java">org/universAAL/ucc/model/usrv/ContactType.java</a>
+                </td>
+                <td>
+                  90
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  62
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.ArtifactType.java">org/universAAL/ucc/model/usrv/ArtifactType.java</a>
+                </td>
+                <td>
+                  26
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  13
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.Activator.java">org/universAAL/ucc/model/Activator.java</a>
+                </td>
+                <td>
+                  5
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  7
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.OsType.java">org/universAAL/ucc/model/usrv/OsType.java</a>
+                </td>
+                <td>
+                  11
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  7
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.Feature.java">org/universAAL/ucc/model/usrv/Feature.java</a>
+                </td>
+                <td>
+                  60
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  33
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.ToBeDefined.java">org/universAAL/ucc/model/usrv/ToBeDefined.java</a>
+                </td>
+                <td>
+                  28
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  11
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.jaxb.Profiles.java">org/universAAL/ucc/model/jaxb/Profiles.java</a>
+                </td>
+                <td>
+                  15
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  6
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.jaxb.package-info.java">org/universAAL/ucc/model/jaxb/package-info.java</a>
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.LogicalRelationType.java">org/universAAL/ucc/model/usrv/LogicalRelationType.java</a>
+                </td>
+                <td>
+                  11
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  7
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.LicenseType.java">org/universAAL/ucc/model/usrv/LicenseType.java</a>
+                </td>
+                <td>
+                  34
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  19
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.OntologyType.java">org/universAAL/ucc/model/usrv/OntologyType.java</a>
+                </td>
+                <td>
+                  59
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  28
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.AalUapp.java">org/universAAL/ucc/model/usrv/AalUapp.java</a>
+                </td>
+                <td>
+                  367
+                </td>
+                <td>
+                  11
+                </td>
+                <td>
+                  217
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.ApplicationType.java">org/universAAL/ucc/model/usrv/ApplicationType.java</a>
+                </td>
+                <td>
+                  50
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  31
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.jaxb.SimpleObject.java">org/universAAL/ucc/model/jaxb/SimpleObject.java</a>
+                </td>
+                <td>
+                  34
+                </td>
+                <td>
+                  6
+                </td>
+                <td>
+                  37
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.ObjectFactory.java">org/universAAL/ucc/model/usrv/ObjectFactory.java</a>
+                </td>
+                <td>
+                  103
+                </td>
+                <td>
+                  4
+                </td>
+                <td>
+                  168
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.ProfileType.java">org/universAAL/ucc/model/usrv/ProfileType.java</a>
+                </td>
+                <td>
+                  26
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  13
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.PlatformType.java">org/universAAL/ucc/model/usrv/PlatformType.java</a>
+                </td>
+                <td>
+                  11
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  9
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.AalUsrv.java">org/universAAL/ucc/model/usrv/AalUsrv.java</a>
+                </td>
+                <td>
+                  263
+                </td>
+                <td>
+                  7
+                </td>
+                <td>
+                  147
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.preferences.Preferences.java">org/universAAL/ucc/model/preferences/Preferences.java</a>
+                </td>
+                <td>
+                  19
+                </td>
+                <td>
+                  10
+                </td>
+                <td>
+                  32
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.Part.java">org/universAAL/ucc/model/usrv/Part.java</a>
+                </td>
+                <td>
+                  105
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  65
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.ReqGroupType.java">org/universAAL/ucc/model/usrv/ReqGroupType.java</a>
+                </td>
+                <td>
+                  31
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  15
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.install.License.java">org/universAAL/ucc/model/install/License.java</a>
+                </td>
+                <td>
+                  10
+                </td>
+                <td>
+                  5
+                </td>
+                <td>
+                  22
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.jaxb.IntegerValue.java">org/universAAL/ucc/model/jaxb/IntegerValue.java</a>
+                </td>
+                <td>
+                  8
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  11
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.FeaturesRoot.java">org/universAAL/ucc/model/usrv/FeaturesRoot.java</a>
+                </td>
+                <td>
+                  38
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  15
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.jaxb.StringValue.java">org/universAAL/ucc/model/jaxb/StringValue.java</a>
+                </td>
+                <td>
+                  8
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  11
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.EmbeddingType.java">org/universAAL/ucc/model/usrv/EmbeddingType.java</a>
+                </td>
+                <td>
+                  11
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  7
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.ReqType.java">org/universAAL/ucc/model/usrv/ReqType.java</a>
+                </td>
+                <td>
+                  34
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  19
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.AALService.java">org/universAAL/ucc/model/AALService.java</a>
+                </td>
+                <td>
+                  29
+                </td>
+                <td>
+                  25
+                </td>
+                <td>
+                  68
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.ReqAtomType.java">org/universAAL/ucc/model/usrv/ReqAtomType.java</a>
+                </td>
+                <td>
+                  34
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  19
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.UAPP.java">org/universAAL/ucc/model/UAPP.java</a>
+                </td>
+                <td>
+                  17
+                </td>
+                <td>
+                  9
+                </td>
+                <td>
+                  36
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.jaxb.CollectionValues.java">org/universAAL/ucc/model/jaxb/CollectionValues.java</a>
+                </td>
+                <td>
+                  44
+                </td>
+                <td>
+                  11
+                </td>
+                <td>
+                  38
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.jaxb.Subprofile.java">org/universAAL/ucc/model/jaxb/Subprofile.java</a>
+                </td>
+                <td>
+                  45
+                </td>
+                <td>
+                  4
+                </td>
+                <td>
+                  21
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.HumanType.java">org/universAAL/ucc/model/usrv/HumanType.java</a>
+                </td>
+                <td>
+                  64
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  43
+                </td>
+              </tr>
+                      </tbody>
+        </table>
+        
+      </description>
+    </item>
+  </channel>
+</rss>
+

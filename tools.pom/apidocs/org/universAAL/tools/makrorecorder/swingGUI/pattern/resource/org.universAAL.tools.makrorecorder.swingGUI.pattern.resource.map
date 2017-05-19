@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="c5637" href="./EditResourceGUI.html" title="org.universAAL.tools.makrorecorder.swingGUI.pattern.resource.EditResourceGUI" alt="" coords="15,17,139,42"/>
+<area shape="rect" id="node1" href="./EditResourceGUI.html" title="&lt;TABLE&gt;" alt="" coords="5,5,149,53"/>
+<area shape="rect" id="c5638" href="./ResourceList.html" title="org.universAAL.tools.makrorecorder.swingGUI.pattern.resource.ResourceList" alt="" coords="183,17,281,42"/>
+<area shape="rect" id="node2" href="./ResourceList.html" title="&lt;TABLE&gt;" alt="" coords="173,5,291,53"/>
+<area shape="rect" id="c5639" href="./ResourceTree.html" title="org.universAAL.tools.makrorecorder.swingGUI.pattern.resource.ResourceTree" alt="" coords="325,17,427,42"/>
+<area shape="rect" id="node3" href="./ResourceTree.html" title="&lt;TABLE&gt;" alt="" coords="315,5,437,53"/>
+<area shape="rect" id="c5640" href="./ResourceInfoPanel.html" title="org.universAAL.tools.makrorecorder.swingGUI.pattern.resource.ResourceInfoPanel" alt="" coords="471,17,603,42"/>
+<area shape="rect" id="node4" href="./ResourceInfoPanel.html" title="&lt;TABLE&gt;" alt="" coords="461,5,613,53"/>
+</map>

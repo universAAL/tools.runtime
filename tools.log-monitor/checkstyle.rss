@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<rss version="0.91">
+  <channel>
+    <title>universAAL Tools Log Monitor - Checkstyle report</title>
+    <link></link>
+    <description>universAAL Tools Log Monitor - Checkstyle report</description>
+    <language>en-us</language>
+    <copyright>&#169;2017 universAAL Consortium</copyright>
+    <item>
+      <title>File: 45,
+             Errors: 723,
+             Warnings: 368,
+             Infos: 725
+      </title>
+            <link>/checkstyle.html</link>
+      <description>
+        <p>Click <a href="/checkstyle.html">here</a> for the full Checkstyle report.</p>
+
+        <table summary="Files" boder="1">
+          <thead>
+            <tr>
+              <th>Files</th>
+              <th style="width:30px;"><abbr title="Info">I</abbr></th>
+              <th style="width:30px;"><abbr title="Warning">W</abbr></th>
+              <th style="width:30px;"><abbr title="Error">E</abbr></th>
+            </tr>
+          </thead>
+          <tbody>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.LogListenerEx.java">org/universAAL/tools/logmonitor/LogListenerEx.java</a>
+                </td>
+                <td>
+                  6
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  3
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.msgflow.gui.MyScrollBarUI.java">org/universAAL/tools/logmonitor/msgflow/gui/MyScrollBarUI.java</a>
+                </td>
+                <td>
+                  11
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  5
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.service_bus_matching.CEStringUtil.java">org/universAAL/tools/logmonitor/service_bus_matching/CEStringUtil.java</a>
+                </td>
+                <td>
+                  21
+                </td>
+                <td>
+                  7
+                </td>
+                <td>
+                  7
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.util.ClipboardHandling.java">org/universAAL/tools/logmonitor/util/ClipboardHandling.java</a>
+                </td>
+                <td>
+                  16
+                </td>
+                <td>
+                  4
+                </td>
+                <td>
+                  17
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.bus_member.gui.BusMemberPane.java">org/universAAL/tools/logmonitor/bus_member/gui/BusMemberPane.java</a>
+                </td>
+                <td>
+                  15
+                </td>
+                <td>
+                  5
+                </td>
+                <td>
+                  26
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.Utils.java">org/universAAL/tools/logmonitor/Utils.java</a>
+                </td>
+                <td>
+                  6
+                </td>
+                <td>
+                  4
+                </td>
+                <td>
+                  4
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.ontology.gui.OntologyPane.java">org/universAAL/tools/logmonitor/ontology/gui/OntologyPane.java</a>
+                </td>
+                <td>
+                  18
+                </td>
+                <td>
+                  8
+                </td>
+                <td>
+                  14
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.all_log.gui.MessagePanel.java">org/universAAL/tools/logmonitor/all_log/gui/MessagePanel.java</a>
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  4
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.service_bus_matching.URI.java">org/universAAL/tools/logmonitor/service_bus_matching/URI.java</a>
+                </td>
+                <td>
+                  11
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  9
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.all_log.gui.AllLogPanel.java">org/universAAL/tools/logmonitor/all_log/gui/AllLogPanel.java</a>
+                </td>
+                <td>
+                  10
+                </td>
+                <td>
+                  7
+                </td>
+                <td>
+                  5
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.util.ProfileInfo.java">org/universAAL/tools/logmonitor/util/ProfileInfo.java</a>
+                </td>
+                <td>
+                  8
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  9
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.rdfvis.gui.RDFVis.java">org/universAAL/tools/logmonitor/rdfvis/gui/RDFVis.java</a>
+                </td>
+                <td>
+                  25
+                </td>
+                <td>
+                  8
+                </td>
+                <td>
+                  14
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.service_bus_matching.gui.Gui.java">org/universAAL/tools/logmonitor/service_bus_matching/gui/Gui.java</a>
+                </td>
+                <td>
+                  10
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  8
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.service_bus_matching.LogMonitor_Util.java">org/universAAL/tools/logmonitor/service_bus_matching/LogMonitor_Util.java</a>
+                </td>
+                <td>
+                  22
+                </td>
+                <td>
+                  17
+                </td>
+                <td>
+                  13
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.rdfvis.gui.GraphPanel.java">org/universAAL/tools/logmonitor/rdfvis/gui/GraphPanel.java</a>
+                </td>
+                <td>
+                  25
+                </td>
+                <td>
+                  16
+                </td>
+                <td>
+                  12
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.bus_member.gui.BusMemberGui.java">org/universAAL/tools/logmonitor/bus_member/gui/BusMemberGui.java</a>
+                </td>
+                <td>
+                  17
+                </td>
+                <td>
+                  11
+                </td>
+                <td>
+                  29
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.bus_member.SpaceListener.java">org/universAAL/tools/logmonitor/bus_member/SpaceListener.java</a>
+                </td>
+                <td>
+                  13
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  15
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.MemberData.java">org/universAAL/tools/logmonitor/MemberData.java</a>
+                </td>
+                <td>
+                  16
+                </td>
+                <td>
+                  8
+                </td>
+                <td>
+                  44
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.rdfvis.Node.java">org/universAAL/tools/logmonitor/rdfvis/Node.java</a>
+                </td>
+                <td>
+                  24
+                </td>
+                <td>
+                  24
+                </td>
+                <td>
+                  14
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.Activator.java">org/universAAL/tools/logmonitor/Activator.java</a>
+                </td>
+                <td>
+                  13
+                </td>
+                <td>
+                  4
+                </td>
+                <td>
+                  20
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.LogMonitor.java">org/universAAL/tools/logmonitor/LogMonitor.java</a>
+                </td>
+                <td>
+                  15
+                </td>
+                <td>
+                  9
+                </td>
+                <td>
+                  12
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.all_log.LogMonitor.java">org/universAAL/tools/logmonitor/all_log/LogMonitor.java</a>
+                </td>
+                <td>
+                  12
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  21
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.BusMemberListener.java">org/universAAL/tools/logmonitor/BusMemberListener.java</a>
+                </td>
+                <td>
+                  8
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  4
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.rdfvis.Edge.java">org/universAAL/tools/logmonitor/rdfvis/Edge.java</a>
+                </td>
+                <td>
+                  31
+                </td>
+                <td>
+                  26
+                </td>
+                <td>
+                  8
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.service_bus_matching.Sparul.java">org/universAAL/tools/logmonitor/service_bus_matching/Sparul.java</a>
+                </td>
+                <td>
+                  22
+                </td>
+                <td>
+                  15
+                </td>
+                <td>
+                  11
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.msgflow.MemberDataEx.java">org/universAAL/tools/logmonitor/msgflow/MemberDataEx.java</a>
+                </td>
+                <td>
+                  5
+                </td>
+                <td>
+                  7
+                </td>
+                <td>
+                  13
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.all_log.LogEntry.java">org/universAAL/tools/logmonitor/all_log/LogEntry.java</a>
+                </td>
+                <td>
+                  9
+                </td>
+                <td>
+                  8
+                </td>
+                <td>
+                  17
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.msgflow.LogMonitor.java">org/universAAL/tools/logmonitor/msgflow/LogMonitor.java</a>
+                </td>
+                <td>
+                  19
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  12
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.service_bus_matching.LogMonitor.java">org/universAAL/tools/logmonitor/service_bus_matching/LogMonitor.java</a>
+                </td>
+                <td>
+                  52
+                </td>
+                <td>
+                  24
+                </td>
+                <td>
+                  35
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.msgflow.gui.MsgFlowGui.java">org/universAAL/tools/logmonitor/msgflow/gui/MsgFlowGui.java</a>
+                </td>
+                <td>
+                  4
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  5
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.rdfvis.LogMonitor.java">org/universAAL/tools/logmonitor/rdfvis/LogMonitor.java</a>
+                </td>
+                <td>
+                  9
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  12
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.service_bus_matching.gui.MatchmakingPane.java">org/universAAL/tools/logmonitor/service_bus_matching/gui/MatchmakingPane.java</a>
+                </td>
+                <td>
+                  27
+                </td>
+                <td>
+                  15
+                </td>
+                <td>
+                  10
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.rdfvis.ResourceInterpreter.java">org/universAAL/tools/logmonitor/rdfvis/ResourceInterpreter.java</a>
+                </td>
+                <td>
+                  18
+                </td>
+                <td>
+                  20
+                </td>
+                <td>
+                  2
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.MainGui.java">org/universAAL/tools/logmonitor/MainGui.java</a>
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  5
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.util.HTMLVisibilityPane.java">org/universAAL/tools/logmonitor/util/HTMLVisibilityPane.java</a>
+                </td>
+                <td>
+                  8
+                </td>
+                <td>
+                  7
+                </td>
+                <td>
+                  14
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.service_bus_matching.Matchmaking.java">org/universAAL/tools/logmonitor/service_bus_matching/Matchmaking.java</a>
+                </td>
+                <td>
+                  13
+                </td>
+                <td>
+                  7
+                </td>
+                <td>
+                  58
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.msgflow.FlowData.java">org/universAAL/tools/logmonitor/msgflow/FlowData.java</a>
+                </td>
+                <td>
+                  12
+                </td>
+                <td>
+                  4
+                </td>
+                <td>
+                  21
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.util.HTMLPaneBase.java">org/universAAL/tools/logmonitor/util/HTMLPaneBase.java</a>
+                </td>
+                <td>
+                  29
+                </td>
+                <td>
+                  5
+                </td>
+                <td>
+                  37
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.ontology.gui.OntologyGui.java">org/universAAL/tools/logmonitor/ontology/gui/OntologyGui.java</a>
+                </td>
+                <td>
+                  5
+                </td>
+                <td>
+                  6
+                </td>
+                <td>
+                  16
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.BusMemberMonitor.java">org/universAAL/tools/logmonitor/BusMemberMonitor.java</a>
+                </td>
+                <td>
+                  26
+                </td>
+                <td>
+                  4
+                </td>
+                <td>
+                  16
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.bus_member.LogMonitor.java">org/universAAL/tools/logmonitor/bus_member/LogMonitor.java</a>
+                </td>
+                <td>
+                  10
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  10
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.util.HTMLBusOperationsPane.java">org/universAAL/tools/logmonitor/util/HTMLBusOperationsPane.java</a>
+                </td>
+                <td>
+                  41
+                </td>
+                <td>
+                  21
+                </td>
+                <td>
+                  29
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.util.PatternInfo.java">org/universAAL/tools/logmonitor/util/PatternInfo.java</a>
+                </td>
+                <td>
+                  4
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  11
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.msgflow.gui.MsgFlowPanel.java">org/universAAL/tools/logmonitor/msgflow/gui/MsgFlowPanel.java</a>
+                </td>
+                <td>
+                  41
+                </td>
+                <td>
+                  48
+                </td>
+                <td>
+                  61
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.ontology.LogMonitor.java">org/universAAL/tools/logmonitor/ontology/LogMonitor.java</a>
+                </td>
+                <td>
+                  13
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  11
+                </td>
+              </tr>
+                      </tbody>
+        </table>
+        
+      </description>
+    </item>
+  </channel>
+</rss>
+

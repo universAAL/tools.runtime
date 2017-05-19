@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<rss version="0.91">
+  <channel>
+    <title>universAAL Tools uCC Database - Checkstyle report</title>
+    <link>http://xtras/tools.runtime/tools.uCC/tools.ucc.database/</link>
+    <description>universAAL Tools uCC Database - Checkstyle report</description>
+    <language>en-us</language>
+    <copyright>&#169;2017 universAAL Consortium</copyright>
+    <item>
+      <title>File: 16,
+             Errors: 132,
+             Warnings: 22,
+             Infos: 389
+      </title>
+            <link>http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html</link>
+      <description>
+        <p>Click <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html">here</a> for the full Checkstyle report.</p>
+
+        <table summary="Files" boder="1">
+          <thead>
+            <tr>
+              <th>Files</th>
+              <th style="width:30px;"><abbr title="Info">I</abbr></th>
+              <th style="width:30px;"><abbr title="Warning">W</abbr></th>
+              <th style="width:30px;"><abbr title="Error">E</abbr></th>
+            </tr>
+          </thead>
+          <tbody>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.ucc.database.aalspace.DataAccess.java">org/universAAL/ucc/database/aalspace/DataAccess.java</a>
+                </td>
+                <td>
+                  27
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  8
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.ucc.database.parser.ParserService.java">org/universAAL/ucc/database/parser/ParserService.java</a>
+                </td>
+                <td>
+                  5
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.ucc.database.listener.interfaces.OntologySupplierService.java">org/universAAL/ucc/database/listener/interfaces/OntologySupplierService.java</a>
+                </td>
+                <td>
+                  4
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  4
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.ucc.startup.model.Role.java">org/universAAL/ucc/startup/model/Role.java</a>
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  6
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.ucc.startup.model.UccUsers.java">org/universAAL/ucc/startup/model/UccUsers.java</a>
+                </td>
+                <td>
+                  6
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  4
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.ucc.startup.api.impl.SetupImpl.java">org/universAAL/ucc/startup/api/impl/SetupImpl.java</a>
+                </td>
+                <td>
+                  27
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  11
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.ucc.startup.model.UserAccountInfo.java">org/universAAL/ucc/startup/model/UserAccountInfo.java</a>
+                </td>
+                <td>
+                  16
+                </td>
+                <td>
+                  4
+                </td>
+                <td>
+                  13
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.ucc.database.aalspace.DataAccessImpl.java">org/universAAL/ucc/database/aalspace/DataAccessImpl.java</a>
+                </td>
+                <td>
+                  192
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  19
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.ucc.database.listener.interfaces.OntologyChangedListener.java">org/universAAL/ucc/database/listener/interfaces/OntologyChangedListener.java</a>
+                </td>
+                <td>
+                  5
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  3
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.ucc.database.preferences.impl.UserAccountDBImpl.java">org/universAAL/ucc/database/preferences/impl/UserAccountDBImpl.java</a>
+                </td>
+                <td>
+                  5
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  5
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.ucc.startup.model.User.java">org/universAAL/ucc/startup/model/User.java</a>
+                </td>
+                <td>
+                  16
+                </td>
+                <td>
+                  4
+                </td>
+                <td>
+                  15
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.ucc.database.preferences.UserAccountDB.java">org/universAAL/ucc/database/preferences/UserAccountDB.java</a>
+                </td>
+                <td>
+                  8
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  1
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.ucc.startup.api.Setup.java">org/universAAL/ucc/startup/api/Setup.java</a>
+                </td>
+                <td>
+                  13
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  8
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.ucc.database.parser.ParserServiceImpl.java">org/universAAL/ucc/database/parser/ParserServiceImpl.java</a>
+                </td>
+                <td>
+                  10
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  5
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.ucc.database.Activator.java">org/universAAL/ucc/database/Activator.java</a>
+                </td>
+                <td>
+                  35
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  20
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.ucc.database.listener.services.OntologySupplierServiceImpl.java">org/universAAL/ucc/database/listener/services/OntologySupplierServiceImpl.java</a>
+                </td>
+                <td>
+                  18
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  10
+                </td>
+              </tr>
+                      </tbody>
+        </table>
+        
+      </description>
+    </item>
+  </channel>
+</rss>
+
