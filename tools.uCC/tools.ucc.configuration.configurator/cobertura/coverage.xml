@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="686" branches-covered="0" branches-valid="186" complexity="2.2577319587628866" version="2.1.1" timestamp="1495230455019">
+<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="686" branches-covered="0" branches-valid="186" complexity="2.2577319587628866" version="2.1.1" timestamp="1495725519809">
 	<sources>
 		<source>/home/travis/build/universAAL/tools.runtime/tools.uCC/tools.ucc.configuration.configurator/src/main/java</source>
 		<source>--source</source>
