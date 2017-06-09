@@ -27,8 +27,8 @@ under the License.
     <item>
       <title>File: 4,
              Errors: 44,
-             Warnings: 39,
-             Infos: 153
+             Warnings: 4,
+             Infos: 13
       </title>
             <link>http://xtras/tools.runtime/tools.sparql-tester//checkstyle.html</link>
       <description>
@@ -49,10 +49,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.sparql-tester//checkstyle.html#org.universAAL.tools.ProjectActivator.java">org/universAAL/tools/ProjectActivator.java</a>
                 </td>
                 <td>
-                  10
+                  0
                 </td>
                 <td>
-                  8
+                  0
                 </td>
                 <td>
                   11
@@ -63,10 +63,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.sparql-tester//checkstyle.html#org.universAAL.tools.SparQLQueryPanel.java">org/universAAL/tools/SparQLQueryPanel.java</a>
                 </td>
                 <td>
-                  73
+                  8
                 </td>
                 <td>
-                  26
+                  1
                 </td>
                 <td>
                   7
@@ -77,10 +77,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.sparql-tester//checkstyle.html#org.universAAL.tools.SparQLQuerySubPanel.java">org/universAAL/tools/SparQLQuerySubPanel.java</a>
                 </td>
                 <td>
-                  34
+                  1
                 </td>
                 <td>
-                  3
+                  1
                 </td>
                 <td>
                   15
@@ -91,7 +91,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.sparql-tester//checkstyle.html#org.universAAL.tools.CHeQuerrier.java">org/universAAL/tools/CHeQuerrier.java</a>
                 </td>
                 <td>
-                  36
+                  4
                 </td>
                 <td>
                   2

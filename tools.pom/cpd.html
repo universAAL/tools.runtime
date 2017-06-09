@@ -115,110 +115,110 @@
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>158</td></tr>
+<td>159</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>169</td></tr>
+<td>165</td></tr>
 <tr class="b"><td colspan='3'>
 <div>
-<pre>									box.setValue(enumObj.getSelectedValue());
-//									box.select(enumObj.getSelectedValue());
-								} 
-								box.setImmediate(true);
-								box.setDescription(enumObj.getDescription());
-								f.addField(enumObj.getType(), box);
-								if(enumObj.isRequired()) {
-									box.setRequired(true);
-									box.setRequiredError(enumObj.getLabel()+ &quot; is required&quot;);
-								}
-						}
-						//Add simpel objects to form
-						for(SimpleObject simpl : tab.getSimpleObjects()) {
-							createForm(simpl, f);
-						} 
-						//Adding collection objects as a list to form
-						if(tab.getCollections().size() &gt; 0) {
-						for(CollectionValues cols : tab.getCollections()) {
-							ListSelect list = new ListSelect();
-							list.setCaption(cols.getLabel());
-							list.setWidth(&quot;120px&quot;);
-							list.setDescription(cols.getDescription());
-							if(cols.isMultiselect()) {
-								list.setMultiSelect(true);
-							}
-							
-							if(cols.getValue_type().equals(&quot;string&quot;)) {
-								for(SimpleObject sim : cols.getCollection()) {
-									StringValue s = (StringValue)sim;
-									list.addItem(s.getValue());
-									list.select(s.getValue());
-								} 
-							}
-							if(cols.getValue_type().equals(&quot;integer&quot;)) {
-								for(SimpleObject sim : cols.getCollection()) {
-									IntegerValue i = (IntegerValue)sim;
-									list.addItem(i.getValue());
-									list.select(i.getValue());
-								} 
-								
-							}
-							if(cols.getValue_type().equals(&quot;double&quot;)) {
-								for(SimpleObject sim : cols.getCollection()) {
-									DoubleValue d = (DoubleValue)sim;
-									list.addItem(d.getValue());
-									list.select(d.getValue());
-								} 
-								
-							}
-							//Adding List to Form
-							list.setImmediate(true);
-							list.setNullSelectionAllowed(true);
-							list.setRows(5);
-							list.setNewItemsAllowed(true);
-							f.addField(cols.getLabel(), list);
-							}
-						}
-						f.createFooter();
-						f.getSaveButton().addListener((Button.ClickListener)this);
-						f.getEditButton().addListener((Button.ClickListener)this);
-						f.getResetButton().addListener((Button.ClickListener)this);
-						f.getDeleteButton().addListener((Button.ClickListener)this);
-						f.setReadOnly(true);
-						f.setHeader(tab.getName());
-						userForms.get(o.getId()).add(f);
-						ontInstances.get(o.getId()).add(tab);
-					}  
-					
+<pre>						box.setValue(enumObj.getSelectedValue());
+						// box.select(enumObj.getSelectedValue());
+					}
+					box.setImmediate(true);
+					box.setDescription(enumObj.getDescription());
+					f.addField(enumObj.getType(), box);
+					if (enumObj.isRequired()) {
+						box.setRequired(true);
+						box.setRequiredError(enumObj.getLabel() + &quot; is required&quot;);
+					}
 				}
+				// Add simpel objects to form
+				for (SimpleObject simpl : tab.getSimpleObjects()) {
+					createForm(simpl, f);
+				}
+				// Adding collection objects as a list to form
+				if (tab.getCollections().size() &gt; 0) {
+					for (CollectionValues cols : tab.getCollections()) {
+						ListSelect list = new ListSelect();
+						list.setCaption(cols.getLabel());
+						list.setWidth(&quot;120px&quot;);
+						list.setDescription(cols.getDescription());
+						if (cols.isMultiselect()) {
+							list.setMultiSelect(true);
+						}
+
+						if (cols.getValue_type().equals(&quot;string&quot;)) {
+							for (SimpleObject sim : cols.getCollection()) {
+								StringValue s = (StringValue) sim;
+								list.addItem(s.getValue());
+								list.select(s.getValue());
+							}
+						}
+						if (cols.getValue_type().equals(&quot;integer&quot;)) {
+							for (SimpleObject sim : cols.getCollection()) {
+								IntegerValue i = (IntegerValue) sim;
+								list.addItem(i.getValue());
+								list.select(i.getValue());
+							}
+
+						}
+						if (cols.getValue_type().equals(&quot;double&quot;)) {
+							for (SimpleObject sim : cols.getCollection()) {
+								DoubleValue d = (DoubleValue) sim;
+								list.addItem(d.getValue());
+								list.select(d.getValue());
+							}
+
+						}
+						// Adding List to Form
+						list.setImmediate(true);
+						list.setNullSelectionAllowed(true);
+						list.setRows(5);
+						list.setNewItemsAllowed(true);
+						f.addField(cols.getLabel(), list);
+					}
+				}
+				f.createFooter();
+				f.getSaveButton().addListener((Button.ClickListener) this);
+				f.getEditButton().addListener((Button.ClickListener) this);
+				f.getResetButton().addListener((Button.ClickListener) this);
+				f.getDeleteButton().addListener((Button.ClickListener) this);
+				f.setReadOnly(true);
+				f.setHeader(tab.getName());
+				userForms.get(o.getId()).add(f);
+				ontInstances.get(o.getId()).add(tab);
+			}
+
+		}
 	}
-	
+
 	private TabForm createForm(SimpleObject simpleObject, TabForm form) throws ParseException {
-		if(simpleObject instanceof CalendarValue) {
-			CalendarValue cal = (CalendarValue)simpleObject; 
+		if (simpleObject instanceof CalendarValue) {
+			CalendarValue cal = (CalendarValue) simpleObject;
 			PopupDateField date = new PopupDateField(cal.getLabel());
 			DateFormat format = new SimpleDateFormat();
-			if(cal.getCalendar() != null &amp;&amp; !cal.getCalendar().equals(&quot;&quot;)) {
-			String d = cal.getCalendar();
-			Date da = null;
-			if(d.contains(&quot;/&quot;)) {
-				format = new SimpleDateFormat(&quot;MM/dd/yy H:mm a&quot;);
-				da = format.parse(d);
-				date.setLocale(Locale.US);
+			if (cal.getCalendar() != null &amp;&amp; !cal.getCalendar().equals(&quot;&quot;)) {
+				String d = cal.getCalendar();
+				Date da = null;
+				if (d.contains(&quot;/&quot;)) {
+					format = new SimpleDateFormat(&quot;MM/dd/yy H:mm a&quot;);
+					da = format.parse(d);
+					date.setLocale(Locale.US);
+				} else {
+					format = new SimpleDateFormat(&quot;dd.MM.yy H:mm&quot;);
+					da = format.parse(d);
+					date.setLocale(Locale.GERMANY);
+				}
+				date.setValue(da);
+				date.setResolution(PopupDateField.RESOLUTION_MIN);
+				date.setImmediate(true);
+				date.setInputPrompt(cal.getLabel());
+				date.setShowISOWeekNumbers(true);
+				date.setDescription(cal.getDescription());
+				form.addField(cal.getLabel(), date);
 			} else {
-				format = new SimpleDateFormat(&quot;dd.MM.yy H:mm&quot;);
-				da = format.parse(d);
-				date.setLocale(Locale.GERMANY);
-			}
-			date.setValue(da);
-			date.setResolution(PopupDateField.RESOLUTION_MIN);
-			date.setImmediate(true);
-			date.setInputPrompt(cal.getLabel());
-			date.setShowISOWeekNumbers(true);
-			date.setDescription(cal.getDescription());
-			form.addField(cal.getLabel(), date);
-			} else {
-				if(cal.getName().equals(&quot;hardwareSettingTime&quot;)) {
+				if (cal.getName().equals(&quot;hardwareSettingTime&quot;)) {
 					date.setValue(format.format(new Date()));
 				} else {
 					date.setInputPrompt(&quot;Last activity&quot;);
@@ -226,189 +226,173 @@
 				date.setDescription(cal.getDescription());
 				form.addField(cal.getLabel(), date);
 			}
-			if(cal.isRequired()) {
+			if (cal.isRequired()) {
 				date.setRequired(true);
-				date.setRequiredError(cal.getLabel()+&quot; is required&quot;);
+				date.setRequiredError(cal.getLabel() + &quot; is required&quot;);
 			}
-		} 
-		else if(simpleObject instanceof StringValue) {
-				StringValue st = (StringValue)simpleObject;
-				if(st.getValue().length() &gt; 30) {
-					TextArea area = new TextArea(st.getLabel());
-					area.setImmediate(true);
-					area.setWriteThrough(false);
-					area.setRows(5);
-					area.setValue(st.getValue());
-					area.setDescription(st.getDescription());
-					form.addField(st.getLabel(), area);
-					if(st.isRequired()) {
-						area.setRequired(true);
-						area.setRequiredError(st.getLabel()+&quot; is required&quot;);
+		} else if (simpleObject instanceof StringValue) {
+			StringValue st = (StringValue) simpleObject;
+			if (st.getValue().length() &gt; 30) {
+				TextArea area = new TextArea(st.getLabel());
+				area.setImmediate(true);
+				area.setWriteThrough(false);
+				area.setRows(5);
+				area.setValue(st.getValue());
+				area.setDescription(st.getDescription());
+				form.addField(st.getLabel(), area);
+				if (st.isRequired()) {
+					area.setRequired(true);
+					area.setRequiredError(st.getLabel() + &quot; is required&quot;);
+				}
+				if (st.getValidator() != null) {
+					if (st.getValidator().equals(&quot;EmailValidator&quot;)) {
+						area.addValidator(new EmailValidator(&quot;Emailaddress isn't correct&quot;));
 					}
-					if(st.getValidator() != null) {
-						if(st.getValidator().equals(&quot;EmailValidator&quot;)) {
-							area.addValidator(new EmailValidator(&quot;Emailaddress isn't correct&quot;));
-						}
-					}
-				} else {
+				}
+			} else {
 				TextField tf = new TextField(st.getLabel());
 				tf.setWriteThrough(false);
 				tf.setImmediate(true);
 				tf.setValue(st.getValue());
 				tf.setDescription(st.getDescription());
 				form.addField(simpleObject.getLabel(), tf);
-				if(st.isRequired()) {
+				if (st.isRequired()) {
 					tf.setRequired(true);
-					tf.setRequiredError(st.getLabel()+&quot; is required&quot;);
+					tf.setRequiredError(st.getLabel() + &quot; is required&quot;);
 				}
-				if(st.getValidator() != null) {
-					if(st.getValidator().equals(&quot;EmailValidator&quot;)) {
+				if (st.getValidator() != null) {
+					if (st.getValidator().equals(&quot;EmailValidator&quot;)) {
 						tf.addValidator(new EmailValidator(&quot;Emailaddress isn't correct&quot;));
 					}
 				}
-				}
-				form.createFooter();
 			}
-			else if(simpleObject instanceof IntegerValue) {
-				IntegerValue integer = (IntegerValue)simpleObject;
-				TextField t = new TextField(integer.getLabel());
-				t.setImmediate(true);
-				t.setWriteThrough(false);
-				t.setValue(((IntegerValue) simpleObject).getValue());
-				t.setDescription(integer.getDescription());
-				form.addField(simpleObject.getLabel(), t);
-				if(integer.isRequired()) {
-					t.setRequired(true);
-					t.setRequiredError(integer.getLabel()+&quot; is required&quot;);
-				}
-				if(integer.getValidator() != null) {
-					if(integer.getValidator().equals(&quot;RegexpValidator&quot;)) {
-						if(integer.getName().contains(&quot;postalCode&quot;)) {
-							t.addValidator(new RegexpValidator(&quot;[1-9][0-9]{4}&quot;, &quot;Postal Code isn't correct&quot;));
-						} else {
-							t.addValidator(new RegexpValidator(&quot;[1-9][0-9]*&quot;, &quot;Number isn't correct&quot;));
-						}
+			form.createFooter();
+		} else if (simpleObject instanceof IntegerValue) {
+			IntegerValue integer = (IntegerValue) simpleObject;
+			TextField t = new TextField(integer.getLabel());
+			t.setImmediate(true);
+			t.setWriteThrough(false);
+			t.setValue(((IntegerValue) simpleObject).getValue());
+			t.setDescription(integer.getDescription());
+			form.addField(simpleObject.getLabel(), t);
+			if (integer.isRequired()) {
+				t.setRequired(true);
+				t.setRequiredError(integer.getLabel() + &quot; is required&quot;);
+			}
+			if (integer.getValidator() != null) {
+				if (integer.getValidator().equals(&quot;RegexpValidator&quot;)) {
+					if (integer.getName().contains(&quot;postalCode&quot;)) {
+						t.addValidator(new RegexpValidator(&quot;[1-9][0-9]{4}&quot;, &quot;Postal Code isn't correct&quot;));
+					} else {
+						t.addValidator(new RegexpValidator(&quot;[1-9][0-9]*&quot;, &quot;Number isn't correct&quot;));
 					}
 				}
 			}
-			else if(simpleObject instanceof BooleanValue) {
-				BooleanValue bool = (BooleanValue)simpleObject;
-				CheckBox box = new CheckBox(bool.getLabel());
-				box.setImmediate(true);
-				box.setWriteThrough(false);
-				if(bool.getValue()) {
-					box.setValue(true);
-				} else {
-					box.setValue(false);
-				}
-				box.setDescription(bool.getDescription());
-				form.addField(bool.getLabel(), box);
-				if(bool.isRequired()) {
-					box.setRequired(true);
-					box.setRequiredError(bool.getLabel()+&quot; is required&quot;);
+		} else if (simpleObject instanceof BooleanValue) {
+			BooleanValue bool = (BooleanValue) simpleObject;
+			CheckBox box = new CheckBox(bool.getLabel());
+			box.setImmediate(true);
+			box.setWriteThrough(false);
+			if (bool.getValue()) {
+				box.setValue(true);
+			} else {
+				box.setValue(false);
+			}
+			box.setDescription(bool.getDescription());
+			form.addField(bool.getLabel(), box);
+			if (bool.isRequired()) {
+				box.setRequired(true);
+				box.setRequiredError(bool.getLabel() + &quot; is required&quot;);
+			}
+		} else if (simpleObject instanceof DoubleValue) {
+			DoubleValue doub = (DoubleValue) simpleObject;
+			TextField tf = new TextField(doub.getLabel());
+			tf.setImmediate(true);
+			tf.setWriteThrough(false);
+			tf.setValue(doub.getValue());
+			tf.setDescription(doub.getDescription());
+			form.addField(doub.getLabel(), tf);
+			if (doub.isRequired()) {
+				tf.setRequired(true);
+				tf.setRequiredError(doub.getLabel() + &quot; is required&quot;);
+			}
+			if (doub.getValidator() != null) {
+				if (doub.getValidator().equals(&quot;RegexpValidator&quot;)) {
+					tf.addValidator(new RegexpValidator(&quot;[0-9]*[.][0-9]{5}&quot;, &quot;The floating value isn't correct&quot;));
 				}
 			}
-			else if(simpleObject instanceof DoubleValue) {
-				DoubleValue doub = (DoubleValue)simpleObject;
-				TextField tf = new TextField(doub.getLabel());
-				tf.setImmediate(true);
-				tf.setWriteThrough(false);
-				tf.setValue(doub.getValue());
-				tf.setDescription(doub.getDescription());
-				form.addField(doub.getLabel(), tf);
-				if(doub.isRequired()) {
-					tf.setRequired(true);
-					tf.setRequiredError(doub.getLabel()+ &quot; is required&quot;);
-				}
-				if(doub.getValidator() != null) {
-					if(doub.getValidator().equals(&quot;RegexpValidator&quot;)) {
-						tf.addValidator(new RegexpValidator(&quot;[0-9]*[.][0-9]{5}&quot;, &quot;The floating value isn't correct&quot;));
-					}
-				}
-			}
-			
+		}
+
 		return form;
 	}
 
 	public void buttonClick(ClickEvent event) {
 		String id = selectedItem;
-		if (event.getButton() == ((TabForm) tabSheet.getSelectedTab())
-				.getSaveButton()) {
+		if (event.getButton() == ((TabForm) tabSheet.getSelectedTab()).getSaveButton()) {
 			TabForm tab = ((TabForm) tabSheet.getSelectedTab());
 			Subprofile sub = subprofiles.get(tabSheet.getTab(tab).getCaption());
 			Subprofile subRoom = roomprofiles.get(tabSheet.getTab(tab).getCaption());
 			// Aktuelles Subprofile ubernimmt die anderungen des Formulars
-			ArrayList&lt;SimpleObject&gt;tempSim = new ArrayList&lt;SimpleObject&gt;();
-			for(SimpleObject simi : sub.getSimpleObjects()) {
+			ArrayList&lt;SimpleObject&gt; tempSim = new ArrayList&lt;SimpleObject&gt;();
+			for (SimpleObject simi : sub.getSimpleObjects()) {
 				tempSim.add(simi);
 			}
-			for (SimpleObject simpl : tempSim/*sub.getSimpleObjects()*/) {
+			for (SimpleObject simpl : tempSim/* sub.getSimpleObjects() */) {
 				// tab.getItemProperty(simpl.getLabel());
 				if (simpl instanceof StringValue) {
 					StringValue val = (StringValue) simpl;
-					if(val.isId()) 
-						id = (String)tab.getField(simpl.getLabel()).getValue();
-					val.setValue((String) tab.getField(simpl.getLabel())
-							.getValue());
+					if (val.isId())
+						id = (String) tab.getField(simpl.getLabel()).getValue();
+					val.setValue((String) tab.getField(simpl.getLabel()).getValue());
 				} else if (simpl instanceof IntegerValue) {
 					IntegerValue val = (IntegerValue) simpl;
-					if (isIntegerNum(tab.getField(val.getLabel()).getValue()
-							.toString())) {
-						val.setValue(Integer.parseInt(tab
-								.getField(simpl.getLabel()).getValue()
-								.toString()));
+					if (isIntegerNum(tab.getField(val.getLabel()).getValue().toString())) {
+						val.setValue(Integer.parseInt(tab.getField(simpl.getLabel()).getValue().toString()));
 					} else
 						val.setValue(val.getDefaultValue());
 				} else if (simpl instanceof DoubleValue) {
 					DoubleValue val = (DoubleValue) simpl;
-					if (isDoubleNum(tab.getField(val.getLabel()).getValue()
-							.toString()))
-						val.setValue(Double.parseDouble(tab
-								.getItemProperty(simpl.getLabel()).getValue()
-								.toString()));
+					if (isDoubleNum(tab.getField(val.getLabel()).getValue().toString()))
+						val.setValue(Double.parseDouble(tab.getItemProperty(simpl.getLabel()).getValue().toString()));
 					else
 						val.setValue(val.getDefaultValue());
 				} else if (simpl instanceof BooleanValue) {
 					BooleanValue val = (BooleanValue) simpl;
-					val.setValue((Boolean) tab.getField(simpl.getLabel())
-							.getValue());
+					val.setValue((Boolean) tab.getField(simpl.getLabel()).getValue());
 
 				} else if (simpl instanceof CalendarValue) {
 					CalendarValue cal = (CalendarValue) simpl;
 					DateFormat df = new SimpleDateFormat();
-					if(cal.getName().equals(&quot;hardwareSettingTime&quot;)) {
+					if (cal.getName().equals(&quot;hardwareSettingTime&quot;)) {
 						String date = df.format(new Date());
 						cal.setCalendar(date);
 					}
 				}
 			}
 			// Enum Objecte
-			ArrayList&lt;EnumObject&gt;tempEnums = new ArrayList&lt;EnumObject&gt;();
-			for(EnumObject e : sub.getEnums()) {
+			ArrayList&lt;EnumObject&gt; tempEnums = new ArrayList&lt;EnumObject&gt;();
+			for (EnumObject e : sub.getEnums()) {
 				tempEnums.add(e);
 			}
-			for (EnumObject en : tempEnums/*sub.getEnums()*/) {
+			for (EnumObject en : tempEnums/* sub.getEnums() */) {
 				if (en.isTreeParentNode()) {
 					String sel = (String) ((Tree) win.getUserTree()).getValue();
-					win.getUserTree().setParent(sel,
-							tab.getField(en.getType()).getValue());
+					win.getUserTree().setParent(sel, tab.getField(en.getType()).getValue());
 				}
-				en.setSelectedValue((String) tab.getField(en.getType())
-						.getValue());
+				en.setSelectedValue((String) tab.getField(en.getType()).getValue());
 			}
 
-			//Collections
-			ArrayList&lt;CollectionValues&gt;tempCols = new ArrayList&lt;CollectionValues&gt;();
-			for(CollectionValues v : sub.getCollections()) {
+			// Collections
+			ArrayList&lt;CollectionValues&gt; tempCols = new ArrayList&lt;CollectionValues&gt;();
+			for (CollectionValues v : sub.getCollections()) {
 				tempCols.add(v);
 			}
-			for (CollectionValues col : tempCols /*sub.getCollections()*/) {
+			for (CollectionValues col : tempCols /* sub.getCollections() */) {
 				Collection&lt;SimpleObject&gt; values = new ArrayList&lt;SimpleObject&gt;();
 				Collection&lt;SimpleObject&gt; newVal = null;
 				for (SimpleObject sim : col.getCollection()) {
 					if (sim instanceof StringValue) {
-						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(
-								col.getLabel()).getValue();
+						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(col.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i &lt; array.length; i++) {
 							StringValue n = new StringValue();
@@ -421,8 +405,7 @@
 						}
 
 					} else if (sim instanceof IntegerValue) {
-						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(
-								col.getLabel()).getValue();
+						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(col.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i &lt; array.length; i++) {
 							IntegerValue n = new IntegerValue();
@@ -438,8 +421,7 @@
 						}
 
 					} else if (sim instanceof DoubleValue) {
-						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(
-								col.getLabel()).getValue();
+						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(col.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i &lt; array.length; i++) {
 							DoubleValue n = new DoubleValue();
@@ -448,8 +430,7 @@
 							n.setRequired(sim.isRequired());
 							n.setValidator(sim.getValidator());
 							if (isDoubleNum(array[i].toString()))
-								n.setValue(Double.parseDouble(array[i]
-										.toString()));
+								n.setValue(Double.parseDouble(array[i].toString()));
 							else
 								n.setValue(n.getDefaultValue());
 							values.add(n);
@@ -459,71 +440,61 @@
 					col.setCollection(values);
 				}
 			}
-			
-			//Roomsfile
-			ArrayList&lt;SimpleObject&gt;roomSimpls = new ArrayList&lt;SimpleObject&gt;();
-			for(SimpleObject teSim : subRoom.getSimpleObjects()) {
+
+			// Roomsfile
+			ArrayList&lt;SimpleObject&gt; roomSimpls = new ArrayList&lt;SimpleObject&gt;();
+			for (SimpleObject teSim : subRoom.getSimpleObjects()) {
 				roomSimpls.add(teSim);
 			}
-			for (SimpleObject simpl : roomSimpls/*subRoom.getSimpleObjects()*/) {
+			for (SimpleObject simpl : roomSimpls/* subRoom.getSimpleObjects() */) {
 				// tab.getItemProperty(simpl.getLabel());
 				if (simpl instanceof StringValue) {
 					StringValue val = (StringValue) simpl;
-					val.setValue((String) tab.getField(simpl.getLabel())
-							.getValue());
+					val.setValue((String) tab.getField(simpl.getLabel()).getValue());
 				} else if (simpl instanceof IntegerValue) {
 					IntegerValue val = (IntegerValue) simpl;
-					if (isIntegerNum(tab.getField(val.getLabel()).getValue()
-							.toString())) {
-						val.setValue(Integer.parseInt(tab
-								.getField(simpl.getLabel()).getValue()
-								.toString()));
+					if (isIntegerNum(tab.getField(val.getLabel()).getValue().toString())) {
+						val.setValue(Integer.parseInt(tab.getField(simpl.getLabel()).getValue().toString()));
 					} else
 						val.setValue(val.getDefaultValue());
 				} else if (simpl instanceof DoubleValue) {
 					DoubleValue val = (DoubleValue) simpl;
-					if (isDoubleNum(tab.getField(val.getLabel()).getValue()
-							.toString()))
-						val.setValue(Double.parseDouble(tab
-								.getItemProperty(simpl.getLabel()).getValue()
-								.toString()));
+					if (isDoubleNum(tab.getField(val.getLabel()).getValue().toString()))
+						val.setValue(Double.parseDouble(tab.getItemProperty(simpl.getLabel()).getValue().toString()));
 					else
 						val.setValue(val.getDefaultValue());
 				} else if (simpl instanceof BooleanValue) {
 					BooleanValue val = (BooleanValue) simpl;
-					val.setValue((Boolean) tab.getField(simpl.getLabel())
-							.getValue());
+					val.setValue((Boolean) tab.getField(simpl.getLabel()).getValue());
 
 				} else if (simpl instanceof CalendarValue) {
 					CalendarValue cal = (CalendarValue) simpl;
 					DateFormat df = new SimpleDateFormat();
-					if(cal.getName().equals(&quot;hardwareSettingTime&quot;)) {
+					if (cal.getName().equals(&quot;hardwareSettingTime&quot;)) {
 						String date = df.format(new Date());
 						cal.setCalendar(date);
 					}
 				}
 			}
 			// Enum Objecte
-			ArrayList&lt;EnumObject&gt;roomEns = new ArrayList&lt;EnumObject&gt;();
-			for(EnumObject te : subRoom.getEnums()) {
+			ArrayList&lt;EnumObject&gt; roomEns = new ArrayList&lt;EnumObject&gt;();
+			for (EnumObject te : subRoom.getEnums()) {
 				roomEns.add(te);
 			}
-			for (EnumObject en : roomEns/*subRoom.getEnums()*/) {
-				en.setSelectedValue((String) tab.getItemProperty(en.getType())
-						.getValue());
+			for (EnumObject en : roomEns/* subRoom.getEnums() */) {
+				en.setSelectedValue((String) tab.getItemProperty(en.getType()).getValue());
 			}
 
-			ArrayList&lt;CollectionValues&gt;roomCols = new ArrayList&lt;CollectionValues&gt;();
-			for(CollectionValues c : subRoom.getCollections()) {
+			ArrayList&lt;CollectionValues&gt; roomCols = new ArrayList&lt;CollectionValues&gt;();
+			for (CollectionValues c : subRoom.getCollections()) {
 				roomCols.add(c);
 			}
-			for (CollectionValues col : roomCols /*subRoom.getCollections()*/) {
+			for (CollectionValues col : roomCols /* subRoom.getCollections() */) {
 				Collection&lt;SimpleObject&gt; values = new ArrayList&lt;SimpleObject&gt;();
 				Collection&lt;SimpleObject&gt; newVal = null;
 				for (SimpleObject sim : col.getCollection()) {
 					if (sim instanceof StringValue) {
-						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(
-								col.getLabel()).getValue();
+						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(col.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i &lt; array.length; i++) {
 							StringValue n = new StringValue();
@@ -536,8 +507,7 @@
 						}
 
 					} else if (sim instanceof IntegerValue) {
-						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(
-								col.getLabel()).getValue();
+						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(col.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i &lt; array.length; i++) {
 							IntegerValue n = new IntegerValue();
@@ -553,8 +523,7 @@
 						}
 
 					} else if (sim instanceof DoubleValue) {
-						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(
-								col.getLabel()).getValue();
+						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(col.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i &lt; array.length; i++) {
 							DoubleValue n = new DoubleValue();
@@ -563,8 +532,7 @@
 							n.setRequired(sim.isRequired());
 							n.setValidator(sim.getValidator());
 							if (isDoubleNum(array[i].toString()))
-								n.setValue(Double.parseDouble(array[i]
-										.toString()));
+								n.setValue(Double.parseDouble(array[i].toString()));
 							else
 								n.setValue(n.getDefaultValue());
 							values.add(n);
@@ -582,9 +550,9 @@
 			subRoom.setEnums(roomEns);
 			subRoom.setSimpleObjects(roomSimpls);
 			HashMap&lt;String, ArrayList&lt;Subprofile&gt;&gt; nOntInstances = new HashMap&lt;String, ArrayList&lt;Subprofile&gt;&gt;();
-			for(Map.Entry&lt;String, ArrayList&lt;Subprofile&gt;&gt;tOnt : ontInstances.entrySet()) {
-				
-				if(tOnt.getKey().equals(id)) {</pre></div></td></tr></table>
+			for (Map.Entry&lt;String, ArrayList&lt;Subprofile&gt;&gt; tOnt : ontInstances.entrySet()) {
+
+				if (tOnt.getKey().equals(id)) {</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>File</th>
@@ -597,107 +565,104 @@
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/PersonWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>254</td></tr>
+<td>253</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>282</td></tr>
+<td>276</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
-<pre>				if(st.getValue().length() &gt; 30) {
-					TextArea area = new TextArea(st.getLabel());
-					area.setImmediate(true);
-					area.setWriteThrough(false);
-					area.setRows(5);
-					area.setValue(st.getValue());
-					area.setDescription(st.getDescription());
-					form.addField(st.getLabel(), area);
-					if(st.isRequired()) {
-						area.setRequired(true);
-						area.setRequiredError(st.getLabel()+&quot; is required&quot;);
+<pre>			if (st.getValue().length() &gt; 30) {
+				TextArea area = new TextArea(st.getLabel());
+				area.setImmediate(true);
+				area.setWriteThrough(false);
+				area.setRows(5);
+				area.setValue(st.getValue());
+				area.setDescription(st.getDescription());
+				form.addField(st.getLabel(), area);
+				if (st.isRequired()) {
+					area.setRequired(true);
+					area.setRequiredError(st.getLabel() + &quot; is required&quot;);
+				}
+				if (st.getValidator() != null) {
+					if (st.getValidator().equals(&quot;EmailValidator&quot;)) {
+						area.addValidator(new EmailValidator(&quot;Emailaddress isn't correct&quot;));
 					}
-					if(st.getValidator() != null) {
-						if(st.getValidator().equals(&quot;EmailValidator&quot;)) {
-							area.addValidator(new EmailValidator(&quot;Emailaddress isn't correct&quot;));
-						}
-					}
-				} else {
+				}
+			} else {
 				TextField tf = new TextField(st.getLabel());
 				tf.setWriteThrough(false);
 				tf.setImmediate(true);
 				tf.setValue(st.getValue());
 				tf.setDescription(st.getDescription());
 				form.addField(simpleObject.getLabel(), tf);
-				if(st.isRequired()) {
+				if (st.isRequired()) {
 					tf.setRequired(true);
-					tf.setRequiredError(st.getLabel()+&quot; is required&quot;);
+					tf.setRequiredError(st.getLabel() + &quot; is required&quot;);
 				}
-				if(st.getValidator() != null) {
-					if(st.getValidator().equals(&quot;EmailValidator&quot;)) {
+				if (st.getValidator() != null) {
+					if (st.getValidator().equals(&quot;EmailValidator&quot;)) {
 						tf.addValidator(new EmailValidator(&quot;Emailaddress isn't correct&quot;));
 					}
 				}
-				}
-				form.createFooter();
 			}
-			else if(simpleObject instanceof IntegerValue) {
-				IntegerValue integer = (IntegerValue)simpleObject;
-				TextField t = new TextField(integer.getLabel());
-				t.setImmediate(true);
-				t.setWriteThrough(false);
-				t.setValue(((IntegerValue) simpleObject).getValue());
-				t.setDescription(integer.getDescription());
-				form.addField(simpleObject.getLabel(), t);
-				if(integer.isRequired()) {
-					t.setRequired(true);
-					t.setRequiredError(integer.getLabel()+&quot; is required&quot;);
-				}
-				if(integer.getValidator() != null) {
-					if(integer.getValidator().equals(&quot;RegexpValidator&quot;)) {
-						if(integer.getName().contains(&quot;postalCode&quot;)) {
-							t.addValidator(new RegexpValidator(&quot;[1-9][0-9]{4}&quot;, &quot;Postal Code isn't correct&quot;));
-						} else {
-							t.addValidator(new RegexpValidator(&quot;[1-9][0-9]*&quot;, &quot;Number isn't correct&quot;));
-						}
+			form.createFooter();
+		} else if (simpleObject instanceof IntegerValue) {
+			IntegerValue integer = (IntegerValue) simpleObject;
+			TextField t = new TextField(integer.getLabel());
+			t.setImmediate(true);
+			t.setWriteThrough(false);
+			t.setValue(((IntegerValue) simpleObject).getValue());
+			t.setDescription(integer.getDescription());
+			form.addField(simpleObject.getLabel(), t);
+			if (integer.isRequired()) {
+				t.setRequired(true);
+				t.setRequiredError(integer.getLabel() + &quot; is required&quot;);
+			}
+			if (integer.getValidator() != null) {
+				if (integer.getValidator().equals(&quot;RegexpValidator&quot;)) {
+					if (integer.getName().contains(&quot;postalCode&quot;)) {
+						t.addValidator(new RegexpValidator(&quot;[1-9][0-9]{4}&quot;, &quot;Postal Code isn't correct&quot;));
+					} else {
+						t.addValidator(new RegexpValidator(&quot;[1-9][0-9]*&quot;, &quot;Number isn't correct&quot;));
 					}
 				}
 			}
-			else if(simpleObject instanceof BooleanValue) {
-				BooleanValue bool = (BooleanValue)simpleObject;
-				CheckBox box = new CheckBox(bool.getLabel());
-				box.setImmediate(true);
-				box.setWriteThrough(false);
-				if(bool.getValue()) {
-					box.setValue(true);
-				} else {
-					box.setValue(false);
-				}
-				box.setDescription(bool.getDescription());
-				form.addField(bool.getLabel(), box);
-				if(bool.isRequired()) {
-					box.setRequired(true);
-					box.setRequiredError(bool.getLabel()+&quot; is required&quot;);
+		} else if (simpleObject instanceof BooleanValue) {
+			BooleanValue bool = (BooleanValue) simpleObject;
+			CheckBox box = new CheckBox(bool.getLabel());
+			box.setImmediate(true);
+			box.setWriteThrough(false);
+			if (bool.getValue()) {
+				box.setValue(true);
+			} else {
+				box.setValue(false);
+			}
+			box.setDescription(bool.getDescription());
+			form.addField(bool.getLabel(), box);
+			if (bool.isRequired()) {
+				box.setRequired(true);
+				box.setRequiredError(bool.getLabel() + &quot; is required&quot;);
+			}
+		} else if (simpleObject instanceof DoubleValue) {
+			DoubleValue doub = (DoubleValue) simpleObject;
+			TextField tf = new TextField(doub.getLabel());
+			tf.setImmediate(true);
+			tf.setWriteThrough(false);
+			tf.setValue(doub.getValue());
+			tf.setDescription(doub.getDescription());
+			form.addField(doub.getLabel(), tf);
+			if (doub.isRequired()) {
+				tf.setRequired(true);
+				tf.setRequiredError(doub.getLabel() + &quot; is required&quot;);
+			}
+			if (doub.getValidator() != null) {
+				if (doub.getValidator().equals(&quot;RegexpValidator&quot;)) {
+					tf.addValidator(new RegexpValidator(&quot;[0-9]*[.][0-9]{5}&quot;, &quot;The floating value isn't correct&quot;));
 				}
 			}
-			else if(simpleObject instanceof DoubleValue) {
-				DoubleValue doub = (DoubleValue)simpleObject;
-				TextField tf = new TextField(doub.getLabel());
-				tf.setImmediate(true);
-				tf.setWriteThrough(false);
-				tf.setValue(doub.getValue());
-				tf.setDescription(doub.getDescription());
-				form.addField(doub.getLabel(), tf);
-				if(doub.isRequired()) {
-					tf.setRequired(true);
-					tf.setRequiredError(doub.getLabel()+ &quot; is required&quot;);
-				}
-				if(doub.getValidator() != null) {
-					if(doub.getValidator().equals(&quot;RegexpValidator&quot;)) {
-						tf.addValidator(new RegexpValidator(&quot;[0-9]*[.][0-9]{5}&quot;, &quot;The floating value isn't correct&quot;));
-					}
-				}
-			}
-			
+		}
+
 		return form;
 	}</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
@@ -708,11 +673,11 @@
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/AddNewHardwareController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>271</td></tr>
+<td>267</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/AddNewPersonController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>227</td></tr>
+<td>223</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
 <pre>			if (st.getValue().length() &gt; 30) {
@@ -727,8 +692,7 @@
 				}
 				if (st.getValidator() != null) {
 					if (st.getValidator().equals(&quot;EmailValidator&quot;)) {
-						area.addValidator(new EmailValidator(
-								&quot;The Emailaddress isn't correct&quot;));
+						area.addValidator(new EmailValidator(&quot;The Emailaddress isn't correct&quot;));
 					}
 				}
 				form.addField(st.getLabel(), area);
@@ -743,8 +707,7 @@
 				}
 				if (st.getValidator() != null) {
 					if (st.getValidator().equals(&quot;EmailValidator&quot;)) {
-						tf.addValidator(new EmailValidator(
-								&quot;The Emailaddress isn't correct&quot;));
+						tf.addValidator(new EmailValidator(&quot;The Emailaddress isn't correct&quot;));
 					}
 				}
 				form.addField(simpleObject.getLabel(), tf);
@@ -763,11 +726,9 @@
 			if (integer.getValidator() != null) {
 				if (integer.getValidator().equals(&quot;RegexpValidator&quot;)) {
 					if (integer.getName().contains(&quot;postalCode&quot;)) {
-						t.addValidator(new RegexpValidator(&quot;[1-9][0-9]{4}&quot;,
-								&quot;The postal code isn't correct&quot;));
+						t.addValidator(new RegexpValidator(&quot;[1-9][0-9]{4}&quot;, &quot;The postal code isn't correct&quot;));
 					} else {
-						t.addValidator(new RegexpValidator(&quot;[1-9][0-9]*&quot;,
-								&quot;Please insert an valid number&quot;));
+						t.addValidator(new RegexpValidator(&quot;[1-9][0-9]*&quot;, &quot;Please insert an valid number&quot;));
 					}
 				}
 			}
@@ -795,8 +756,7 @@
 			}
 			if (doub.getValidator() != null) {
 				if (doub.getValidator().equals(&quot;RegexpValidator&quot;)) {
-					tf.addValidator(new RegexpValidator(&quot;[0-9]*[.][0-9]{5}&quot;,
-							&quot;Please insert a valid floating number&quot;));
+					tf.addValidator(new RegexpValidator(&quot;[0-9]*[.][0-9]{5}&quot;, &quot;Please insert a valid floating number&quot;));
 				}
 			}
 			form.addField(doub.getLabel(), tf);
@@ -814,11 +774,11 @@
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/AddNewHardwareController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>438</td></tr>
+<td>418</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/AddNewPersonController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>387</td></tr>
+<td>369</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
 <pre>			}
@@ -826,14 +786,12 @@
 
 			// CollectionValues
 			ArrayList&lt;CollectionValues&gt; collections = new ArrayList&lt;CollectionValues&gt;();
-			for (CollectionValues cols : subprofiles.get(tabHeader)
-					.getCollections()) {
+			for (CollectionValues cols : subprofiles.get(tabHeader).getCollections()) {
 				Collection&lt;SimpleObject&gt; values = new ArrayList&lt;SimpleObject&gt;();
 				Collection&lt;SimpleObject&gt; newVal = null;
 				for (SimpleObject sim : cols.getCollection()) {
 					if (sim instanceof StringValue) {
-						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(
-								cols.getLabel()).getValue();
+						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(cols.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i &lt; array.length; i++) {
 							StringValue n = new StringValue();
@@ -845,8 +803,7 @@
 							values.add(n);
 						}
 					} else if (sim instanceof IntegerValue) {
-						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(
-								cols.getLabel()).getValue();
+						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(cols.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i &lt; array.length; i++) {
 							IntegerValue n = new IntegerValue();
@@ -862,8 +819,7 @@
 						}
 
 					} else if (sim instanceof DoubleValue) {
-						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(
-								cols.getLabel()).getValue();
+						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(cols.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i &lt; array.length; i++) {
 							DoubleValue n = new DoubleValue();
@@ -872,8 +828,7 @@
 							n.setRequired(sim.isRequired());
 							n.setValidator(sim.getValidator());
 							if (isDoubleNum(array[i].toString()))
-								n.setValue(Double.parseDouble(array[i]
-										.toString()));
+								n.setValue(Double.parseDouble(array[i].toString()));
 							else
 								n.setValue(0.0);
 							values.add(n);
@@ -893,24 +848,23 @@
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>553</td></tr>
+<td>526</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/PersonWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>411</td></tr>
+<td>403</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>568</td></tr>
+<td>533</td></tr>
 <tr class="b"><td colspan='3'>
 <div>
-<pre>			for (CollectionValues col : roomCols /*subRoom.getCollections()*/) {
+<pre>			for (CollectionValues col : roomCols /* subRoom.getCollections() */) {
 				Collection&lt;SimpleObject&gt; values = new ArrayList&lt;SimpleObject&gt;();
 				Collection&lt;SimpleObject&gt; newVal = null;
 				for (SimpleObject sim : col.getCollection()) {
 					if (sim instanceof StringValue) {
-						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(
-								col.getLabel()).getValue();
+						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(col.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i &lt; array.length; i++) {
 							StringValue n = new StringValue();
@@ -923,8 +877,7 @@
 						}
 
 					} else if (sim instanceof IntegerValue) {
-						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(
-								col.getLabel()).getValue();
+						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(col.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i &lt; array.length; i++) {
 							IntegerValue n = new IntegerValue();
@@ -940,8 +893,7 @@
 						}
 
 					} else if (sim instanceof DoubleValue) {
-						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(
-								col.getLabel()).getValue();
+						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(col.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i &lt; array.length; i++) {
 							DoubleValue n = new DoubleValue();
@@ -950,8 +902,7 @@
 							n.setRequired(sim.isRequired());
 							n.setValidator(sim.getValidator());
 							if (isDoubleNum(array[i].toString()))
-								n.setValue(Double.parseDouble(array[i]
-										.toString()));
+								n.setValue(Double.parseDouble(array[i].toString()));
 							else
 								n.setValue(n.getDefaultValue());
 							values.add(n);
@@ -973,26 +924,25 @@
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>436</td></tr>
+<td>422</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/PersonWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>409</td></tr>
+<td>401</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>451</td></tr>
+<td>429</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
 <pre>				tempCols.add(v);
 			}
-			for (CollectionValues col : tempCols /*sub.getCollections()*/) {
+			for (CollectionValues col : tempCols /* sub.getCollections() */) {
 				Collection&lt;SimpleObject&gt; values = new ArrayList&lt;SimpleObject&gt;();
 				Collection&lt;SimpleObject&gt; newVal = null;
 				for (SimpleObject sim : col.getCollection()) {
 					if (sim instanceof StringValue) {
-						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(
-								col.getLabel()).getValue();
+						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(col.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i &lt; array.length; i++) {
 							StringValue n = new StringValue();
@@ -1005,8 +955,7 @@
 						}
 
 					} else if (sim instanceof IntegerValue) {
-						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(
-								col.getLabel()).getValue();
+						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(col.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i &lt; array.length; i++) {
 							IntegerValue n = new IntegerValue();
@@ -1022,8 +971,7 @@
 						}
 
 					} else if (sim instanceof DoubleValue) {
-						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(
-								col.getLabel()).getValue();
+						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(col.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i &lt; array.length; i++) {
 							DoubleValue n = new DoubleValue();
@@ -1032,8 +980,7 @@
 							n.setRequired(sim.isRequired());
 							n.setValidator(sim.getValidator());
 							if (isDoubleNum(array[i].toString()))
-								n.setValue(Double.parseDouble(array[i]
-										.toString()));
+								n.setValue(Double.parseDouble(array[i].toString()));
 							else
 								n.setValue(n.getDefaultValue());
 							values.add(n);
@@ -1051,25 +998,23 @@
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/AddNewHardwareController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>443</td></tr>
+<td>423</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/AddNewHardwareController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>574</td></tr>
+<td>541</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/AddNewPersonController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>392</td></tr>
+<td>374</td></tr>
 <tr class="b"><td colspan='3'>
 <div>
-<pre>			for (CollectionValues cols : subprofiles.get(tabHeader)
-					.getCollections()) {
+<pre>			for (CollectionValues cols : subprofiles.get(tabHeader).getCollections()) {
 				Collection&lt;SimpleObject&gt; values = new ArrayList&lt;SimpleObject&gt;();
 				Collection&lt;SimpleObject&gt; newVal = null;
 				for (SimpleObject sim : cols.getCollection()) {
 					if (sim instanceof StringValue) {
-						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(
-								cols.getLabel()).getValue();
+						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(cols.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i &lt; array.length; i++) {
 							StringValue n = new StringValue();
@@ -1081,8 +1026,7 @@
 							values.add(n);
 						}
 					} else if (sim instanceof IntegerValue) {
-						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(
-								cols.getLabel()).getValue();
+						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(cols.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i &lt; array.length; i++) {
 							IntegerValue n = new IntegerValue();
@@ -1098,8 +1042,7 @@
 						}
 
 					} else if (sim instanceof DoubleValue) {
-						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(
-								cols.getLabel()).getValue();
+						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(cols.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i &lt; array.length; i++) {
 							DoubleValue n = new DoubleValue();
@@ -1108,8 +1051,7 @@
 							n.setRequired(sim.isRequired());
 							n.setValidator(sim.getValidator());
 							if (isDoubleNum(array[i].toString()))
-								n.setValue(Double.parseDouble(array[i]
-										.toString()));
+								n.setValue(Double.parseDouble(array[i].toString()));
 							else
 								n.setValue(0.0);
 							values.add(n);
@@ -1126,28 +1068,27 @@
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>438</td></tr>
+<td>424</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>553</td></tr>
+<td>526</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>453</td></tr>
+<td>431</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>568</td></tr>
+<td>533</td></tr>
 <tr class="b"><td colspan='3'>
 <div>
-<pre>			for (CollectionValues col : tempCols /*sub.getCollections()*/) {
+<pre>			for (CollectionValues col : tempCols /* sub.getCollections() */) {
 				Collection&lt;SimpleObject&gt; values = new ArrayList&lt;SimpleObject&gt;();
 				Collection&lt;SimpleObject&gt; newVal = null;
 				for (SimpleObject sim : col.getCollection()) {
 					if (sim instanceof StringValue) {
-						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(
-								col.getLabel()).getValue();
+						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(col.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i &lt; array.length; i++) {
 							StringValue n = new StringValue();
@@ -1160,8 +1101,7 @@
 						}
 
 					} else if (sim instanceof IntegerValue) {
-						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(
-								col.getLabel()).getValue();
+						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(col.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i &lt; array.length; i++) {
 							IntegerValue n = new IntegerValue();
@@ -1177,8 +1117,7 @@
 						}
 
 					} else if (sim instanceof DoubleValue) {
-						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(
-								col.getLabel()).getValue();
+						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(col.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i &lt; array.length; i++) {
 							DoubleValue n = new DoubleValue();
@@ -1187,8 +1126,7 @@
 							n.setRequired(sim.isRequired());
 							n.setValidator(sim.getValidator());
 							if (isDoubleNum(array[i].toString()))
-								n.setValue(Double.parseDouble(array[i]
-										.toString()));
+								n.setValue(Double.parseDouble(array[i].toString()));
 							else
 								n.setValue(n.getDefaultValue());
 							values.add(n);
@@ -1206,71 +1144,71 @@
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>152</td></tr>
+<td>153</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/PersonWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
 <td>131</td></tr>
 <tr class="b"><td colspan='3'>
 <div>
-<pre>							}
-								//Create ComboBox with enum objects and add to form
-								for(String item : enumObj.getValues()) {
-									box.addItem(item);
-									box.setNullSelectionAllowed(false);
-									box.setNewItemsAllowed(false);
-									box.setValue(enumObj.getSelectedValue());
-//									box.select(enumObj.getSelectedValue());
-								} 
-								box.setImmediate(true);
-								box.setDescription(enumObj.getDescription());
-								f.addField(enumObj.getType(), box);
-								if(enumObj.isRequired()) {
-									box.setRequired(true);
-									box.setRequiredError(enumObj.getLabel()+ &quot; is required&quot;);
-								}
+<pre>					}
+					// Create ComboBox with enum objects and add to form
+					for (String item : enumObj.getValues()) {
+						box.addItem(item);
+						box.setNullSelectionAllowed(false);
+						box.setNewItemsAllowed(false);
+						box.setValue(enumObj.getSelectedValue());
+						// box.select(enumObj.getSelectedValue());
+					}
+					box.setImmediate(true);
+					box.setDescription(enumObj.getDescription());
+					f.addField(enumObj.getType(), box);
+					if (enumObj.isRequired()) {
+						box.setRequired(true);
+						box.setRequiredError(enumObj.getLabel() + &quot; is required&quot;);
+					}
+				}
+				// Add simpel objects to form
+				for (SimpleObject simpl : tab.getSimpleObjects()) {
+					createForm(simpl, f);
+				}
+				// Adding collection objects as a list to form
+				if (tab.getCollections().size() &gt; 0) {
+					for (CollectionValues cols : tab.getCollections()) {
+						ListSelect list = new ListSelect();
+						list.setCaption(cols.getLabel());
+						list.setWidth(&quot;120px&quot;);
+						list.setDescription(cols.getDescription());
+						if (cols.isMultiselect()) {
+							list.setMultiSelect(true);
 						}
-						//Add simpel objects to form
-						for(SimpleObject simpl : tab.getSimpleObjects()) {
-							createForm(simpl, f);
-						} 
-						//Adding collection objects as a list to form
-						if(tab.getCollections().size() &gt; 0) {
-						for(CollectionValues cols : tab.getCollections()) {
-							ListSelect list = new ListSelect();
-							list.setCaption(cols.getLabel());
-							list.setWidth(&quot;120px&quot;);
-							list.setDescription(cols.getDescription());
-							if(cols.isMultiselect()) {
-								list.setMultiSelect(true);
+
+						if (cols.getValue_type().equals(&quot;string&quot;)) {
+							for (SimpleObject sim : cols.getCollection()) {
+								StringValue s = (StringValue) sim;
+								list.addItem(s.getValue());
+								list.select(s.getValue());
 							}
-							
-							if(cols.getValue_type().equals(&quot;string&quot;)) {
-								for(SimpleObject sim : cols.getCollection()) {
-									StringValue s = (StringValue)sim;
-									list.addItem(s.getValue());
-									list.select(s.getValue());
-								} 
+						}
+						if (cols.getValue_type().equals(&quot;integer&quot;)) {
+							for (SimpleObject sim : cols.getCollection()) {
+								IntegerValue i = (IntegerValue) sim;
+								list.addItem(i.getValue());
+								list.select(i.getValue());
 							}
-							if(cols.getValue_type().equals(&quot;integer&quot;)) {
-								for(SimpleObject sim : cols.getCollection()) {
-									IntegerValue i = (IntegerValue)sim;
-									list.addItem(i.getValue());
-									list.select(i.getValue());
-								} 
-								
+
+						}
+						if (cols.getValue_type().equals(&quot;double&quot;)) {
+							for (SimpleObject sim : cols.getCollection()) {
+								DoubleValue d = (DoubleValue) sim;
+								list.addItem(d.getValue());
+								list.select(d.getValue());
 							}
-							if(cols.getValue_type().equals(&quot;double&quot;)) {
-								for(SimpleObject sim : cols.getCollection()) {
-									DoubleValue d = (DoubleValue)sim;
-									list.addItem(d.getValue());
-									list.select(d.getValue());
-								} 
-								
-							}
-							//Adding List to Form
-							list.setImmediate(true);
-							list.setNullSelectionAllowed(true);</pre></div></td></tr></table>
+
+						}
+						// Adding List to Form
+						list.setImmediate(true);
+						list.setNullSelectionAllowed(true);</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>File</th>
@@ -1283,60 +1221,61 @@
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>169</td></tr>
+<td>165</td></tr>
 <tr class="b"><td colspan='3'>
 <div>
-<pre>									box.setValue(enumObj.getSelectedValue());
-//									box.select(enumObj.getSelectedValue());
-								} box.setImmediate(true);
-								box.setDescription(enumObj.getDescription());
-								f.addField(enumObj.getType(), box);
-								if(enumObj.isRequired()) {
-									box.setRequired(true);
-									box.setRequiredError(enumObj.getLabel()+ &quot; is required&quot;);
-								}
+<pre>						box.setValue(enumObj.getSelectedValue());
+						// box.select(enumObj.getSelectedValue());
+					}
+					box.setImmediate(true);
+					box.setDescription(enumObj.getDescription());
+					f.addField(enumObj.getType(), box);
+					if (enumObj.isRequired()) {
+						box.setRequired(true);
+						box.setRequiredError(enumObj.getLabel() + &quot; is required&quot;);
+					}
+				}
+				// Add simpel objects to form
+				for (SimpleObject simpl : tab.getSimpleObjects()) {
+					createForm(simpl, f);
+				}
+				// Adding collection objects as a list to form
+				if (tab.getCollections().size() &gt; 0) {
+					for (CollectionValues cols : tab.getCollections()) {
+						ListSelect list = new ListSelect();
+						list.setCaption(cols.getLabel());
+						list.setWidth(&quot;120px&quot;);
+						list.setDescription(cols.getDescription());
+						if (cols.isMultiselect()) {
+							list.setMultiSelect(true);
 						}
-						//Add simpel objects to form
-						for(SimpleObject simpl : tab.getSimpleObjects()) {
-							createForm(simpl, f);
-						} 
-						//Adding collection objects as a list to form
-						if(tab.getCollections().size() &gt; 0) {
-						for(CollectionValues cols : tab.getCollections()) {
-							ListSelect list = new ListSelect();
-							list.setCaption(cols.getLabel());
-							list.setWidth(&quot;120px&quot;);
-							list.setDescription(cols.getDescription());
-							if(cols.isMultiselect()) {
-								list.setMultiSelect(true);
+
+						if (cols.getValue_type().equals(&quot;string&quot;)) {
+							for (SimpleObject sim : cols.getCollection()) {
+								StringValue s = (StringValue) sim;
+								list.addItem(s.getValue());
+								list.select(s.getValue());
 							}
-							
-							if(cols.getValue_type().equals(&quot;string&quot;)) {
-								for(SimpleObject sim : cols.getCollection()) {
-									StringValue s = (StringValue)sim;
-									list.addItem(s.getValue());
-									list.select(s.getValue());
-								} 
+						}
+						if (cols.getValue_type().equals(&quot;integer&quot;)) {
+							for (SimpleObject sim : cols.getCollection()) {
+								IntegerValue i = (IntegerValue) sim;
+								list.addItem(i.getValue());
+								list.select(i.getValue());
 							}
-							if(cols.getValue_type().equals(&quot;integer&quot;)) {
-								for(SimpleObject sim : cols.getCollection()) {
-									IntegerValue i = (IntegerValue)sim;
-									list.addItem(i.getValue());
-									list.select(i.getValue());
-								} 
-								
+
+						}
+						if (cols.getValue_type().equals(&quot;double&quot;)) {
+							for (SimpleObject sim : cols.getCollection()) {
+								DoubleValue d = (DoubleValue) sim;
+								list.addItem(d.getValue());
+								list.select(d.getValue());
 							}
-							if(cols.getValue_type().equals(&quot;double&quot;)) {
-								for(SimpleObject sim : cols.getCollection()) {
-									DoubleValue d = (DoubleValue)sim;
-									list.addItem(d.getValue());
-									list.select(d.getValue());
-								} 
-								
-							}
-							//Adding List to Form
-							list.setImmediate(true);
-							list.setNullSelectionAllowed(false);</pre></div></td></tr></table>
+
+						}
+						// Adding List to Form
+						list.setImmediate(true);
+						list.setNullSelectionAllowed(false);</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>File</th>
@@ -1345,18 +1284,17 @@
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/AddNewHardwareController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>373</td></tr>
+<td>363</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/AddNewPersonController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>325</td></tr>
+<td>316</td></tr>
 <tr class="b"><td colspan='3'>
 <div>
 <pre>			room.setName(tabHeader);
 			// SimpleObjects
 			ArrayList&lt;SimpleObject&gt; simpleObjects = new ArrayList&lt;SimpleObject&gt;();
-			for (SimpleObject sim : subprofiles.get(tabHeader)
-					.getSimpleObjects()) {
+			for (SimpleObject sim : subprofiles.get(tabHeader).getSimpleObjects()) {
 				if (sim instanceof StringValue) {
 					StringValue s = (StringValue) sim;
 					s.setValue((String) tab.getField(s.getLabel()).getValue());
@@ -1368,29 +1306,23 @@
 				}
 				if (sim instanceof IntegerValue) {
 					IntegerValue integer = (IntegerValue) sim;
-					if (isIntegerNum(tab.getField(sim.getLabel()).getValue()
-							.toString()))
-						integer.setValue(Integer.parseInt(tab
-								.getField(sim.getLabel()).getValue().toString()));
+					if (isIntegerNum(tab.getField(sim.getLabel()).getValue().toString()))
+						integer.setValue(Integer.parseInt(tab.getField(sim.getLabel()).getValue().toString()));
 					else
 						integer.setValue(0);
 					simpleObjects.add(integer);
 				}
 				if (sim instanceof DoubleValue) {
 					DoubleValue doub = (DoubleValue) sim;
-					if (isDoubleNum(tab.getField(doub.getLabel()).getValue()
-							.toString()))
-						doub.setValue(Double.parseDouble(tab
-								.getField(doub.getLabel()).getValue()
-								.toString()));
+					if (isDoubleNum(tab.getField(doub.getLabel()).getValue().toString()))
+						doub.setValue(Double.parseDouble(tab.getField(doub.getLabel()).getValue().toString()));
 					else
 						doub.setValue(0.0);
 					simpleObjects.add(doub);
 				}
 				if (sim instanceof BooleanValue) {
 					BooleanValue bool = (BooleanValue) sim;
-					bool.setValue((Boolean) tab.getField(bool.getLabel())
-							.getValue());
+					bool.setValue((Boolean) tab.getField(bool.getLabel()).getValue());
 					simpleObjects.add(bool);
 				}
 				if (sim instanceof CalendarValue) {
@@ -1405,17 +1337,17 @@
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>620</td></tr>
+<td>589</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>635</td></tr>
+<td>596</td></tr>
 <tr class="b"><td colspan='3'>
 <div>
-<pre>				if(tOnt.getKey().equals(id)) {
+<pre>				if (tOnt.getKey().equals(id)) {
 					nOntInstances.put(tOnt.getKey(), new ArrayList&lt;Subprofile&gt;());
-					for(Subprofile sp : tOnt.getValue()) {
-						if(sp.getName().equals(sub.getName())) {
+					for (Subprofile sp : tOnt.getValue()) {
+						if (sp.getName().equals(sub.getName())) {
 							nOntInstances.get(tOnt.getKey()).add(sub);
 						} else {
 							nOntInstances.get(tOnt.getKey()).add(sp);
@@ -1425,14 +1357,14 @@
 					nOntInstances.put(tOnt.getKey(), tOnt.getValue());
 				}
 			}
-			//For room
+			// For room
 			HashMap&lt;String, ArrayList&lt;Subprofile&gt;&gt; ri = new HashMap&lt;String, ArrayList&lt;Subprofile&gt;&gt;();
-			for(Map.Entry&lt;String, ArrayList&lt;Subprofile&gt;&gt;tOnt : roomInstances.entrySet()) {
-				
-				if(tOnt.getKey().equals(id)) {
+			for (Map.Entry&lt;String, ArrayList&lt;Subprofile&gt;&gt; tOnt : roomInstances.entrySet()) {
+
+				if (tOnt.getKey().equals(id)) {
 					ri.put(tOnt.getKey(), new ArrayList&lt;Subprofile&gt;());
-					for(Subprofile sp : tOnt.getValue()) {
-						if(sp.getName().equals(subRoom.getName())) {
+					for (Subprofile sp : tOnt.getValue()) {
+						if (sp.getName().equals(subRoom.getName())) {
 							ri.get(tOnt.getKey()).add(subRoom);
 						} else {
 							ri.get(tOnt.getKey()).add(sp);
@@ -1443,7 +1375,7 @@
 				}
 			}
 			dataAccess.updateUserData(actualFlat, id, nOntInstances);
-	        dataAccess.updateUserData(actualRoom, id, ri);</pre></div></td></tr></table>
+			dataAccess.updateUserData(actualRoom, id, ri);</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>File</th>
@@ -1452,57 +1384,49 @@
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>384</td></tr>
+<td>380</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>505</td></tr>
+<td>487</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>399</td></tr>
+<td>387</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>520</td></tr>
+<td>494</td></tr>
 <tr class="b"><td colspan='3'>
 <div>
-<pre>					val.setValue((String) tab.getField(simpl.getLabel())
-							.getValue());
+<pre>					val.setValue((String) tab.getField(simpl.getLabel()).getValue());
 				} else if (simpl instanceof IntegerValue) {
 					IntegerValue val = (IntegerValue) simpl;
-					if (isIntegerNum(tab.getField(val.getLabel()).getValue()
-							.toString())) {
-						val.setValue(Integer.parseInt(tab
-								.getField(simpl.getLabel()).getValue()
-								.toString()));
+					if (isIntegerNum(tab.getField(val.getLabel()).getValue().toString())) {
+						val.setValue(Integer.parseInt(tab.getField(simpl.getLabel()).getValue().toString()));
 					} else
 						val.setValue(val.getDefaultValue());
 				} else if (simpl instanceof DoubleValue) {
 					DoubleValue val = (DoubleValue) simpl;
-					if (isDoubleNum(tab.getField(val.getLabel()).getValue()
-							.toString()))
-						val.setValue(Double.parseDouble(tab
-								.getItemProperty(simpl.getLabel()).getValue()
-								.toString()));
+					if (isDoubleNum(tab.getField(val.getLabel()).getValue().toString()))
+						val.setValue(Double.parseDouble(tab.getItemProperty(simpl.getLabel()).getValue().toString()));
 					else
 						val.setValue(val.getDefaultValue());
 				} else if (simpl instanceof BooleanValue) {
 					BooleanValue val = (BooleanValue) simpl;
-					val.setValue((Boolean) tab.getField(simpl.getLabel())
-							.getValue());
+					val.setValue((Boolean) tab.getField(simpl.getLabel()).getValue());
 
 				} else if (simpl instanceof CalendarValue) {
 					CalendarValue cal = (CalendarValue) simpl;
 					DateFormat df = new SimpleDateFormat();
-					if(cal.getName().equals(&quot;hardwareSettingTime&quot;)) {
+					if (cal.getName().equals(&quot;hardwareSettingTime&quot;)) {
 						String date = df.format(new Date());
 						cal.setCalendar(date);
 					}
 				}
 			}
 			// Enum Objecte
-			ArrayList&lt;EnumObject&gt;tempEnums = new ArrayList&lt;EnumObject&gt;();</pre></div></td></tr></table>
+			ArrayList&lt;EnumObject&gt; tempEnums = new ArrayList&lt;EnumObject&gt;();</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>File</th>
@@ -1511,11 +1435,11 @@
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/AddNewHardwareController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>127</td></tr>
+<td>124</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/AddNewPersonController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>118</td></tr>
+<td>116</td></tr>
 <tr class="b"><td colspan='3'>
 <div>
 <pre>		TabForm form = null;
@@ -1566,45 +1490,37 @@
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>501</td></tr>
+<td>483</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/PersonWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>362</td></tr>
+<td>358</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>516</td></tr>
+<td>490</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
-<pre>			for (SimpleObject simpl : roomSimpls/*subRoom.getSimpleObjects()*/) {
+<pre>			for (SimpleObject simpl : roomSimpls/* subRoom.getSimpleObjects() */) {
 				// tab.getItemProperty(simpl.getLabel());
 				if (simpl instanceof StringValue) {
 					StringValue val = (StringValue) simpl;
-					val.setValue((String) tab.getField(simpl.getLabel())
-							.getValue());
+					val.setValue((String) tab.getField(simpl.getLabel()).getValue());
 				} else if (simpl instanceof IntegerValue) {
 					IntegerValue val = (IntegerValue) simpl;
-					if (isIntegerNum(tab.getField(val.getLabel()).getValue()
-							.toString())) {
-						val.setValue(Integer.parseInt(tab
-								.getField(simpl.getLabel()).getValue()
-								.toString()));
+					if (isIntegerNum(tab.getField(val.getLabel()).getValue().toString())) {
+						val.setValue(Integer.parseInt(tab.getField(simpl.getLabel()).getValue().toString()));
 					} else
 						val.setValue(val.getDefaultValue());
 				} else if (simpl instanceof DoubleValue) {
 					DoubleValue val = (DoubleValue) simpl;
-					if (isDoubleNum(tab.getField(val.getLabel()).getValue()
-							.toString()))
-						val.setValue(Double.parseDouble(tab
-								.getItemProperty(simpl.getLabel()).getValue()
-								.toString()));
+					if (isDoubleNum(tab.getField(val.getLabel()).getValue().toString()))
+						val.setValue(Double.parseDouble(tab.getItemProperty(simpl.getLabel()).getValue().toString()));
 					else
 						val.setValue(val.getDefaultValue());
 				} else if (simpl instanceof BooleanValue) {
 					BooleanValue val = (BooleanValue) simpl;
-					val.setValue((Boolean) tab.getField(simpl.getLabel())
-							.getValue());
+					val.setValue((Boolean) tab.getField(simpl.getLabel()).getValue());
 
 				} else if (simpl instanceof CalendarValue) {
 					CalendarValue cal = (CalendarValue) simpl;
@@ -1621,55 +1537,56 @@
 <tr class="b">
 <td>org/universAAL/ucc/configuration/view/MultiselectionList.java</td>
 <td>universAAL Tools uCC Configuration Configurator</td>
-<td>31</td></tr>
+<td>30</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
-<pre>	public ConfigurationListSelect(VaadinConfigurationController controller, MapConfigurationOption mapOption, ConfigOptionRegistry registry) {
+<pre>	public ConfigurationListSelect(VaadinConfigurationController controller, MapConfigurationOption mapOption,
+			ConfigOptionRegistry registry) {
 		super(mapOption.getLabel());
-		
+
 		b = new BeanItemContainer&lt;Option&gt;(Option.class);
 		b.addAll(mapOption.getOptions());
-		
+
 		setContainerDataSource(b);
-		
+
 		this.controller = controller;
 		factory = new ObjectFactory();
-		
+
 		configOption = mapOption;
-		
+
 		setSelection();
-		
+
 		configOption.addListener(this);
-		
+
 		addListener(new Property.ValueChangeListener() {
 
-			
 			public void valueChange(Property.ValueChangeEvent event) {
-				
+
 				setComponentError(null);
 
 				try {
-					
-					if(isMultiSelect()){
-						Collection&lt;Option&gt; values = (Collection&lt;Option&gt;)event.getProperty().getValue();
+
+					if (isMultiSelect()) {
+						Collection&lt;Option&gt; values = (Collection&lt;Option&gt;) event.getProperty().getValue();
 						List&lt;Value&gt; configValues = new LinkedList&lt;Value&gt;();
-						for(Option option : values){
+						for (Option option : values) {
 							Value v = factory.createValue();
 							v.setKey(option.getKey());
 							v.setValue(option.getValue());
 							configValues.add(v);
 						}
 						configOption.setValue(configValues);
-					}else{
+					} else {
 						Value v = factory.createValue();
-						Option p = (Option)event.getProperty().getValue();
+						Option p = (Option) event.getProperty().getValue();
 						v.setKey(p.getKey());
 						v.setValue(p.getValue());
 						configOption.setValue(v);
 					}
 
 				} catch (ValidationException e) {
-					//Set the error of the validators as error message of this list select.
+					// Set the error of the validators as error message of this
+					// list select.
 					setComponentError(new UserError(e.getMessage()));
 				}</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
@@ -1680,33 +1597,37 @@
 <tr class="a">
 <td>org/universAAL/ucc/configuration/view/SimpleConfiguratorPasswordField.java</td>
 <td>universAAL Tools uCC Configuration Configurator</td>
-<td>47</td></tr>
+<td>45</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/configuration/view/SimpleConfiguratorTextField.java</td>
 <td>universAAL Tools uCC Configuration Configurator</td>
-<td>56</td></tr>
+<td>54</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
 <pre>					SimpleConfiguratorPasswordField.this.controller.checkDependencies();
 
 				} catch (ValidationException e) {
-					//Set the error message of the validators as the error message of the text field
+					// Set the error message of the validators as the error
+					// message of the text field
 					setComponentError(new UserError(e.getMessage()));
 				}
 			}
 
 		});
 	}
-	
+
 	/**
 	 * Set default validators for double and integer.
+	 * 
 	 * @param option
 	 */
 	private void setDefaultValidators(SimpleConfigurationOption option) {
-		if(option.getType().equals(SimpleConfigItemTypes.INTEGER)){
-			configOption.addValidator(IntegerValidator.class.getName(), new IntegerValidator(&quot;Please use only numbers&quot;));
-		}else if(option.getType().equals(SimpleConfigItemTypes.DOUBLE)){
-			configOption.addValidator(DoubleValidator.class.getName(), new DoubleValidator(&quot;Please use only floating point numbers&quot;));
+		if (option.getType().equals(SimpleConfigItemTypes.INTEGER)) {
+			configOption.addValidator(IntegerValidator.class.getName(),
+					new IntegerValidator(&quot;Please use only numbers&quot;));
+		} else if (option.getType().equals(SimpleConfigItemTypes.DOUBLE)) {
+			configOption.addValidator(DoubleValidator.class.getName(),
+					new DoubleValidator(&quot;Please use only floating point numbers&quot;));
 		}
 
 		setRequired(configOption.isRequired());
@@ -1715,32 +1636,30 @@
 	public SimpleConfigurationOption getConfigOption() {
 		return configOption;
 	}
-	
+
 	/**
 	 * return true if the TextField is valid and the configuration option.
 	 */
-	public boolean isValid(){
-		if(!super.isValid()){
+	public boolean isValid() {
+		if (!super.isValid()) {
 			return false;
 		}
-		
+
 		return configOption.isValid();
-		
+
 	}
-	
-	public String getID(){
+
+	public String getID() {
 		return configOption.getId();
 	}
-	
+
 	@Override
 	public void detach() {
 		super.detach();
 		configOption.removeListener(this);
 	}
 
-
-	public void configurationChanged(ConfigOptionRegistry registry,
-			ConfigurationOption option) {
+	public void configurationChanged(ConfigOptionRegistry registry, ConfigurationOption option) {
 		setComponentError(null);
 		try {
 			option.doDeepValidation();
@@ -1761,38 +1680,36 @@
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>651</td></tr>
+<td>620</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>666</td></tr>
+<td>627</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
-<pre>	        dataAccess.updateUserData(actualRoom, id, ri);
+<pre>			dataAccess.updateUserData(actualRoom, id, ri);
 			tab.setReadOnly(true);
 			tab.getSaveButton().setVisible(false);
 			tab.getEditButton().setVisible(true);
 			tab.getDeleteButton().setVisible(true);
-			app.getMainWindow().showNotification(
-					tab.getHeader() + &quot; was updated&quot;,
-					Notification.POSITION_CENTERED);
+			app.getMainWindow().showNotification(tab.getHeader() + &quot; was updated&quot;, Notification.POSITION_CENTERED);
 
-		} //Edit button was pushed
-		else if(event.getButton() == ((TabForm)tabSheet.getSelectedTab()).getEditButton()) {
-			TabForm tab = ((TabForm)tabSheet.getSelectedTab());
+		} // Edit button was pushed
+		else if (event.getButton() == ((TabForm) tabSheet.getSelectedTab()).getEditButton()) {
+			TabForm tab = ((TabForm) tabSheet.getSelectedTab());
 			tab.getSaveButton().setVisible(true);
 			tab.getEditButton().setVisible(false);
 			tab.getResetButton().setVisible(true);
 			tab.getDeleteButton().setVisible(false);
 			tab.setReadOnly(false);
-			if(tab.getField(&quot;Device Address:&quot;) != null)
+			if (tab.getField(&quot;Device Address:&quot;) != null)
 				tab.getField(&quot;Device Address:&quot;).setReadOnly(true);
-			if(tab.getField(&quot;Last activity time:&quot;) != null)
+			if (tab.getField(&quot;Last activity time:&quot;) != null)
 				tab.getField(&quot;Last activity time:&quot;).setReadOnly(true);
-			if(tab.getField(&quot;Setting time:&quot;) != null)
+			if (tab.getField(&quot;Setting time:&quot;) != null)
 				tab.getField(&quot;Setting time:&quot;).setReadOnly(true);
-		} //Delete Button was pushed
-		else if(event.getButton() == ((TabForm)tabSheet.getSelectedTab()).getDeleteButton()) {
+		} // Delete Button was pushed
+		else if (event.getButton() == ((TabForm) tabSheet.getSelectedTab()).getDeleteButton()) {
 			dataAccess.deleteUserData(actualFlat, selectedItem);
 			dataAccess.deleteUserData(actualRoom, selectedItem);</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
@@ -1803,41 +1720,33 @@
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>384</td></tr>
+<td>380</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/PersonWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>365</td></tr>
+<td>361</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>399</td></tr>
+<td>387</td></tr>
 <tr class="b"><td colspan='3'>
 <div>
-<pre>					val.setValue((String) tab.getField(simpl.getLabel())
-							.getValue());
+<pre>					val.setValue((String) tab.getField(simpl.getLabel()).getValue());
 				} else if (simpl instanceof IntegerValue) {
 					IntegerValue val = (IntegerValue) simpl;
-					if (isIntegerNum(tab.getField(val.getLabel()).getValue()
-							.toString())) {
-						val.setValue(Integer.parseInt(tab
-								.getField(simpl.getLabel()).getValue()
-								.toString()));
+					if (isIntegerNum(tab.getField(val.getLabel()).getValue().toString())) {
+						val.setValue(Integer.parseInt(tab.getField(simpl.getLabel()).getValue().toString()));
 					} else
 						val.setValue(val.getDefaultValue());
 				} else if (simpl instanceof DoubleValue) {
 					DoubleValue val = (DoubleValue) simpl;
-					if (isDoubleNum(tab.getField(val.getLabel()).getValue()
-							.toString()))
-						val.setValue(Double.parseDouble(tab
-								.getItemProperty(simpl.getLabel()).getValue()
-								.toString()));
+					if (isDoubleNum(tab.getField(val.getLabel()).getValue().toString()))
+						val.setValue(Double.parseDouble(tab.getItemProperty(simpl.getLabel()).getValue().toString()));
 					else
 						val.setValue(val.getDefaultValue());
 				} else if (simpl instanceof BooleanValue) {
 					BooleanValue val = (BooleanValue) simpl;
-					val.setValue((Boolean) tab.getField(simpl.getLabel())
-							.getValue());
+					val.setValue((Boolean) tab.getField(simpl.getLabel()).getValue());
 
 				} else if (simpl instanceof CalendarValue) {
 					CalendarValue cal = (CalendarValue) simpl;
@@ -1850,19 +1759,18 @@
 <tr class="b">
 <td>org/universAAL/ucc/controller/install/DeploymentInfoController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>574</td></tr>
+<td>496</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/windows/SelectUserWindow.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>244</td></tr>
+<td>247</td></tr>
 <tr class="b"><td colspan='3'>
 <div>
 <pre>			app.getMainWindow().addWindow(sw);
 			// Selecting user for which service will be installed
 			List&lt;String&gt; users = new ArrayList&lt;String&gt;();
 			DataAccess da = Activator.getDataAccess();
-			ArrayList&lt;OntologyInstance&gt; ontList = da
-					.getEmptyCHEFormFields(&quot;User&quot;);
+			ArrayList&lt;OntologyInstance&gt; ontList = da.getEmptyCHEFormFields(&quot;User&quot;);
 			String uname = &quot;&quot;;
 			String role = &quot;&quot;;
 			for (OntologyInstance o : ontList) {
@@ -1882,8 +1790,7 @@
 							System.err.println(role);
 						}
 					}
-					if (role.equals(Role.ASSISTEDPERSON.name())
-							|| role.equals(Role.ENDUSER.name())) {
+					if (role.equals(Role.ASSISTEDPERSON.name()) || role.equals(Role.ENDUSER.name())) {
 						System.err.println(role);
 						users.add(uname);
 					}
@@ -1899,11 +1806,11 @@
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>690</td></tr>
+<td>657</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>707</td></tr>
+<td>664</td></tr>
 <tr class="b"><td colspan='3'>
 <div>
 <pre>							rWin.getRwc().getTabSheet().removeAllComponents();
@@ -1912,9 +1819,9 @@
 			}
 
 			tabSheet.removeAllComponents();
-			app.getMainWindow().showNotification(selectedItem+&quot; was deleted&quot;, Notification.POSITION_CENTERED);
+			app.getMainWindow().showNotification(selectedItem + &quot; was deleted&quot;, Notification.POSITION_CENTERED);
 		}
-		
+
 	}
 
 	public TabSheet getTabSheet() {
@@ -1925,12 +1832,11 @@
 		this.tabSheet = tabSheet;
 	}
 
-
 	public void valueChange(ValueChangeEvent event) {
-		Tree tree = ((Tree)event.getProperty());
-		if(tree.getValue() != null) {
-		if(!tree.isRoot(tree.getValue())) {
-			selectedItem = (String)tree.getValue();
+		Tree tree = ((Tree) event.getProperty());
+		if (tree.getValue() != null) {
+			if (!tree.isRoot(tree.getValue())) {
+				selectedItem = (String) tree.getValue();
 				try {
 					loadData();
 				} catch (JAXBException e) {
@@ -1944,15 +1850,15 @@
 					e.printStackTrace();
 				}
 
-			tabSheet.removeAllComponents();
-			for(TabForm form : userForms.get(selectedItem)) {
-				Tab act = tabSheet.addTab(form, form.getHeader());
-				act.setClosable(true);
-			}
-			
-		} else {
-			try {
-				AddNewHardwareWindow personWindow = new AddNewHardwareWindow(win, null, app);</pre></div></td></tr></table>
+				tabSheet.removeAllComponents();
+				for (TabForm form : userForms.get(selectedItem)) {
+					Tab act = tabSheet.addTab(form, form.getHeader());
+					act.setClosable(true);
+				}
+
+			} else {
+				try {
+					AddNewHardwareWindow personWindow = new AddNewHardwareWindow(win, null, app);</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>File</th>
@@ -1965,7 +1871,7 @@
 <tr class="a">
 <td>org/universAAL/ucc/windows/SelectUserWindow.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>278</td></tr>
+<td>279</td></tr>
 <tr class="b"><td colspan='3'>
 <div>
 <pre>		vl = new VerticalLayout();
@@ -1979,14 +1885,14 @@
 		list.setMultiSelect(false);
 		list.setWidth(&quot;200px&quot;);
 		list.setNullSelectionAllowed(false);
-//		list.setNewItemsAllowed(false);
-		for(String u : users) {
+		// list.setNewItemsAllowed(false);
+		for (String u : users) {
 			list.addItem(u);
 		}
 		vl.addComponent(l);
 		vl.addComponent(list);
 		vl.setComponentAlignment(list, Alignment.TOP_CENTER);
-		
+
 		addUser = new Button(&quot;Add User&quot;);
 		addUser.addListener(this);
 		ok = new Button(&quot;OK&quot;);
@@ -2009,27 +1915,28 @@
 <tr class="b">
 <td>org/universAAL/ucc/configuration/view/ConfigurationListSelect.java</td>
 <td>universAAL Tools uCC Configuration Configurator</td>
-<td>96</td></tr>
+<td>98</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/configuration/view/MultiselectionList.java</td>
 <td>universAAL Tools uCC Configuration Configurator</td>
-<td>88</td></tr>
+<td>89</td></tr>
 <tr class="b"><td colspan='3'>
 <div>
 <pre>		setMultiSelect(configOption.allowMultiselection());
 	}
-	
+
 	/**
-	 * If the is valid method of the list select is valid and the configuration option is valid return true else false. 
+	 * If the is valid method of the list select is valid and the configuration
+	 * option is valid return true else false.
 	 */
-	public boolean isValid(){
-		if(!super.isValid()){
+	public boolean isValid() {
+		if (!super.isValid()) {
 			return false;
 		}
-		
-		return configOption.isValid();	
+
+		return configOption.isValid();
 	}
-	
+
 	@Override
 	public void detach() {
 		super.detach();
@@ -2038,16 +1945,16 @@
 
 	private void setSelection() {
 		List&lt;Option&gt; selects = new ArrayList&lt;Option&gt;();
-		for(Value value : configOption.getValues()){
-			for(Option option : (Collection&lt;Option&gt;) b.getItemIds()){
-				if(value.getValue().equals(option.getValue())){
+		for (Value value : configOption.getValues()) {
+			for (Option option : (Collection&lt;Option&gt;) b.getItemIds()) {
+				if (value.getValue().equals(option.getValue())) {
 					selects.add(option);
 				}
 			}
 		}
-		if(selects.size() &gt; 1){
+		if (selects.size() &gt; 1) {
 			setValue(selects);
-		}else if(selects.size() == 1){
+		} else if (selects.size() == 1) {
 			setValue(selects.get(0));
 		}
 	}
@@ -2056,9 +1963,7 @@
 		return configOption;
 	}
 
-	
-	public void configurationChanged(ConfigOptionRegistry registry,
-			ConfigurationOption option) {
+	public void configurationChanged(ConfigOptionRegistry registry, ConfigurationOption option) {
 		setEnabled(configOption.isActive());</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
 <tr class="a">
@@ -2068,40 +1973,40 @@
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>209</td></tr>
+<td>210</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/PersonWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>187</td></tr>
+<td>188</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>221</td></tr>
+<td>216</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
-<pre>							list.setNullSelectionAllowed(true);
-							list.setRows(5);
-							list.setNewItemsAllowed(true);
-							f.addField(cols.getLabel(), list);
-							}
-						}
-						f.createFooter();
-						f.getSaveButton().addListener((Button.ClickListener)this);
-						f.getEditButton().addListener((Button.ClickListener)this);
-						f.getResetButton().addListener((Button.ClickListener)this);
-						f.getDeleteButton().addListener((Button.ClickListener)this);
-						f.setReadOnly(true);
-						f.setHeader(tab.getName());
-						userForms.get(o.getId()).add(f);
-						ontInstances.get(o.getId()).add(tab);
-					}  
-					
+<pre>						list.setNullSelectionAllowed(true);
+						list.setRows(5);
+						list.setNewItemsAllowed(true);
+						f.addField(cols.getLabel(), list);
+					}
 				}
+				f.createFooter();
+				f.getSaveButton().addListener((Button.ClickListener) this);
+				f.getEditButton().addListener((Button.ClickListener) this);
+				f.getResetButton().addListener((Button.ClickListener) this);
+				f.getDeleteButton().addListener((Button.ClickListener) this);
+				f.setReadOnly(true);
+				f.setHeader(tab.getName());
+				userForms.get(o.getId()).add(f);
+				ontInstances.get(o.getId()).add(tab);
+			}
+
+		}
 	}
-	
+
 	private TabForm createForm(SimpleObject simpleObject, TabForm form) throws ParseException {
-		if(simpleObject instanceof CalendarValue) {
-			CalendarValue cal = (CalendarValue)simpleObject; 
+		if (simpleObject instanceof CalendarValue) {
+			CalendarValue cal = (CalendarValue) simpleObject;
 			PopupDateField date = new PopupDateField(cal.getLabel());</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
 <tr class="b">
@@ -2111,39 +2016,37 @@
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>131</td></tr>
+<td>134</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>141</td></tr>
+<td>139</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
-<pre>						f = new TabForm();
-						//Save Subprofile Tabs for later use
-						subprofiles.put(tab.getName(), tab);
-						String selectedRole = null;
-						//Creating User tree and Comboboxes
-						for(EnumObject enumObj : tab.getEnums()) {
-							NativeSelect box = new NativeSelect(enumObj.getLabel());
-							box.setImmediate(true);
-							if (enumObj.isTreeParentNode()) {
-								for (String item : enumObj.getValues()) {
-									win.getUserTree().addItem(item);
-									win.getUserTree().setChildrenAllowed(item, true);
-									win.getUserTree().expandItemsRecursively(item);
-								}
+<pre>				f = new TabForm();
+				// Save Subprofile Tabs for later use
+				subprofiles.put(tab.getName(), tab);
+				String selectedRole = null;
+				// Creating User tree and Comboboxes
+				for (EnumObject enumObj : tab.getEnums()) {
+					NativeSelect box = new NativeSelect(enumObj.getLabel());
+					box.setImmediate(true);
+					if (enumObj.isTreeParentNode()) {
+						for (String item : enumObj.getValues()) {
+							win.getUserTree().addItem(item);
+							win.getUserTree().setChildrenAllowed(item, true);
+							win.getUserTree().expandItemsRecursively(item);
+						}
 
-								selectedRole = enumObj.getSelectedValue();
-								win.getUserTree().addItem(o.getId());
-								win.getUserTree()
-										.setParent(o.getId(), selectedRole);
-								win.getUserTree().setChildrenAllowed(o.getId(),
-										false);
-							}
-								//Create ComboBox with enum objects and add to form
-								for(String item : enumObj.getValues()) {
-									box.addItem(item);
-									box.setNullSelectionAllowed(false);</pre></div></td></tr></table>
+						selectedRole = enumObj.getSelectedValue();
+						win.getUserTree().addItem(o.getId());
+						win.getUserTree().setParent(o.getId(), selectedRole);
+						win.getUserTree().setChildrenAllowed(o.getId(), false);
+					}
+					// Create ComboBox with enum objects and add to form
+					for (String item : enumObj.getValues()) {
+						box.addItem(item);
+						box.setNullSelectionAllowed(false);</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
 <tr class="b">
 <th>File</th>
@@ -2152,7 +2055,7 @@
 <tr class="a">
 <td>org/universAAL/ucc/windows/NoConfigurationWindow.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>25</td></tr>
+<td>24</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/windows/SuccessWindow.java</td>
 <td>universAAL Tools uCC Frontend</td>
@@ -2195,31 +2098,31 @@
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/PersonWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>474</td></tr>
+<td>461</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>631</td></tr>
+<td>592</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
-<pre>				sub.setSimpleObjects(tempSim);
-				
-				HashMap&lt;String, ArrayList&lt;Subprofile&gt;&gt; nOntInstances = new HashMap&lt;String, ArrayList&lt;Subprofile&gt;&gt;();
-				for(Map.Entry&lt;String, ArrayList&lt;Subprofile&gt;&gt;tOnt : ontInstances.entrySet()) {
-					
-					if(tOnt.getKey().equals(selectedItem)) {
-						nOntInstances.put(tOnt.getKey(), new ArrayList&lt;Subprofile&gt;());
-						for(Subprofile sp : tOnt.getValue()) {
-							if(sp.getName().equals(sub.getName())) {
-								nOntInstances.get(tOnt.getKey()).add(sub);
-							} else {
-								nOntInstances.get(tOnt.getKey()).add(sp);
-							}
+<pre>			sub.setSimpleObjects(tempSim);
+
+			HashMap&lt;String, ArrayList&lt;Subprofile&gt;&gt; nOntInstances = new HashMap&lt;String, ArrayList&lt;Subprofile&gt;&gt;();
+			for (Map.Entry&lt;String, ArrayList&lt;Subprofile&gt;&gt; tOnt : ontInstances.entrySet()) {
+
+				if (tOnt.getKey().equals(selectedItem)) {
+					nOntInstances.put(tOnt.getKey(), new ArrayList&lt;Subprofile&gt;());
+					for (Subprofile sp : tOnt.getValue()) {
+						if (sp.getName().equals(sub.getName())) {
+							nOntInstances.get(tOnt.getKey()).add(sub);
+						} else {
+							nOntInstances.get(tOnt.getKey()).add(sp);
 						}
-					} else {
-						nOntInstances.put(tOnt.getKey(), tOnt.getValue());
 					}
-				}</pre></div></td></tr></table>
+				} else {
+					nOntInstances.put(tOnt.getKey(), tOnt.getValue());
+				}
+			}</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
 <tr class="b">
 <th>File</th>
@@ -2228,11 +2131,11 @@
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/AddNewHardwareController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>170</td></tr>
+<td>167</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/AddNewPersonController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>174</td></tr>
+<td>172</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
 <pre>					list.setNullSelectionAllowed(true);
@@ -2259,31 +2162,31 @@
 <tr class="a">
 <td>org/universAAL/tools/makrorecorder/swingGUI/pattern/PatternEditFrame.java</td>
 <td>universAAL Tools Makro Recorder GUI</td>
-<td>75</td></tr>
+<td>73</td></tr>
 <tr class="b">
 <td>org/universAAL/tools/makrorecorder/swingGUI/pattern/resource/ResourceList.java</td>
 <td>universAAL Tools Makro Recorder GUI</td>
-<td>113</td></tr>
+<td>116</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
-<pre>    	patternPanel.outputsListReload();
-    }
-    
-    public static String shortResourceInfo(Resource r) {
-    	String ret = &quot;&quot;;
-    	
-    	if(r instanceof ContextEvent) {
-    		ContextEvent ce = (ContextEvent)r;
-    		ret += shortURI(ce.getRDFSubject().toString())+&quot; &quot;;
-        	ret += shortURI(ce.getRDFPredicate())+&quot; &quot;;
-        	ret += shortURI(ce.getRDFObject().toString());
-    	}else if(r instanceof ServiceRequest) {
-    		ServiceRequest sr = (ServiceRequest)r;
-    		ret += shortURI(sr.getRequestedService().getType());
-    		for (Resource effect : sr.getRequiredEffects()) {
-    			for (String type : effect.getTypes()) {
-    				ret += &quot; &quot;+shortURI(type);
-				}    			</pre></div></td></tr></table>
+<pre>		patternPanel.outputsListReload();
+	}
+
+	public static String shortResourceInfo(Resource r) {
+		String ret = &quot;&quot;;
+
+		if (r instanceof ContextEvent) {
+			ContextEvent ce = (ContextEvent) r;
+			ret += shortURI(ce.getRDFSubject().toString()) + &quot; &quot;;
+			ret += shortURI(ce.getRDFPredicate()) + &quot; &quot;;
+			ret += shortURI(ce.getRDFObject().toString());
+		} else if (r instanceof ServiceRequest) {
+			ServiceRequest sr = (ServiceRequest) r;
+			ret += shortURI(sr.getRequestedService().getType());
+			for (Resource effect : sr.getRequiredEffects()) {
+				for (String type : effect.getTypes()) {
+					ret += &quot; &quot; + shortURI(type);
+				}</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
 <tr class="b">
 <th>File</th>
@@ -2292,27 +2195,27 @@
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>118</td></tr>
+<td>121</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>125</td></tr>
+<td>123</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
-<pre>				for(OntologyInstance o : tabs) {
-					if(userForms.get(o.getId()) == null) {
-						userForms.put(o.getId(), new ArrayList&lt;TabForm&gt;());
-					} else {
-						userForms.get(o.getId()).clear();
-					}
-					if(ontInstances.get(o.getId())==null) {
-						ontInstances.put(o.getId(), new ArrayList&lt;Subprofile&gt;());
-					} else {
-						ontInstances.get(o.getId()).clear();
-					}
-					//Every Subprofile is shown in a seperate tab
-					for(Subprofile tab : o.getSubprofiles()) {
-						f = new TabForm();</pre></div></td></tr></table>
+<pre>		for (OntologyInstance o : tabs) {
+			if (userForms.get(o.getId()) == null) {
+				userForms.put(o.getId(), new ArrayList&lt;TabForm&gt;());
+			} else {
+				userForms.get(o.getId()).clear();
+			}
+			if (ontInstances.get(o.getId()) == null) {
+				ontInstances.put(o.getId(), new ArrayList&lt;Subprofile&gt;());
+			} else {
+				ontInstances.get(o.getId()).clear();
+			}
+			// Every Subprofile is shown in a seperate tab
+			for (Subprofile tab : o.getSubprofiles()) {
+				f = new TabForm();</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
 <tr class="b">
 <th>File</th>
@@ -2321,38 +2224,38 @@
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/AddNewHardwareController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>450</td></tr>
+<td>428</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/AddNewHardwareController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>581</td></tr>
+<td>546</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/AddNewPersonController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>399</td></tr>
+<td>379</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>444</td></tr>
+<td>429</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>559</td></tr>
+<td>531</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/PersonWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>416</td></tr>
+<td>408</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>459</td></tr>
+<td>436</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>574</td></tr>
+<td>538</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
-<pre>								cols.getLabel()).getValue();
+<pre>						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(cols.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i &lt; array.length; i++) {
 							StringValue n = new StringValue();
@@ -2364,7 +2267,7 @@
 							values.add(n);
 						}
 					} else if (sim instanceof IntegerValue) {
-						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(</pre></div></td></tr></table>
+						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(cols.getLabel()).getValue();</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
 <tr class="b">
 <th>File</th>
@@ -2373,38 +2276,38 @@
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/AddNewHardwareController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>463</td></tr>
+<td>440</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/AddNewHardwareController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>594</td></tr>
+<td>558</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/AddNewPersonController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>412</td></tr>
+<td>391</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>458</td></tr>
+<td>442</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>573</td></tr>
+<td>544</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/PersonWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>430</td></tr>
+<td>421</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>473</td></tr>
+<td>449</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>588</td></tr>
+<td>551</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
-<pre>								cols.getLabel()).getValue();
+<pre>						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(cols.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i &lt; array.length; i++) {
 							IntegerValue n = new IntegerValue();
@@ -2424,38 +2327,38 @@
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/AddNewHardwareController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>480</td></tr>
+<td>456</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/AddNewHardwareController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>611</td></tr>
+<td>574</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/AddNewPersonController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>429</td></tr>
+<td>407</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>475</td></tr>
+<td>458</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>590</td></tr>
+<td>560</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/PersonWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>447</td></tr>
+<td>437</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>490</td></tr>
+<td>465</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>605</td></tr>
+<td>567</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
-<pre>								cols.getLabel()).getValue();
+<pre>						newVal = (Collection&lt;SimpleObject&gt;) tab.getField(cols.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i &lt; array.length; i++) {
 							DoubleValue n = new DoubleValue();
@@ -2464,8 +2367,7 @@
 							n.setRequired(sim.isRequired());
 							n.setValidator(sim.getValidator());
 							if (isDoubleNum(array[i].toString()))
-								n.setValue(Double.parseDouble(array[i]
-										.toString()));
+								n.setValue(Double.parseDouble(array[i].toString()));
 							else
 								n.setValue(0.0);</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
@@ -2476,14 +2378,14 @@
 <tr class="a">
 <td>org/universAAL/ucc/controller/install/DeploymentInfoController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>274</td></tr>
+<td>248</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/install/UsrvInfoController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>81</td></tr>
+<td>75</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
-<pre>					Notification.TYPE_HUMANIZED_MESSAGE);
+<pre>			app.getMainWindow().showNotification(bundle.getString(&quot;break.note&quot;), Notification.TYPE_HUMANIZED_MESSAGE);
 			deleteFiles(Activator.getTempUsrvFiles());
 		}
 
@@ -2492,14 +2394,10 @@
 	private void deleteFiles(File path) {
 		File[] files = path.listFiles();
 		for (File del : files) {
-			if (del.isDirectory()
-					&amp;&amp; !del.getPath()
-							.substring(del.getPath().lastIndexOf(&quot;.&quot;) + 1)
-							.equals(&quot;usrv&quot;)) {
+			if (del.isDirectory() &amp;&amp; !del.getPath().substring(del.getPath().lastIndexOf(&quot;.&quot;) + 1).equals(&quot;usrv&quot;)) {
 				deleteFiles(del);
 			}
-			if (!del.getPath().substring(del.getPath().lastIndexOf(&quot;.&quot;) + 1)
-					.equals(&quot;usrv&quot;))
+			if (!del.getPath().substring(del.getPath().lastIndexOf(&quot;.&quot;) + 1).equals(&quot;usrv&quot;))
 				del.delete();
 		}
 
@@ -2524,72 +2422,83 @@
 	private String password;
 	private List&lt;Role&gt; role;
 	private boolean checked;
-	
+
 	/**
 	 * Gets the name of a user.
+	 * 
 	 * @return name of a user
 	 */
 	public String getName() {
 		return name;
 	}
-	
+
 	/**
 	 * Sets the name of a user.
-	 * @param name the name of a user
+	 * 
+	 * @param name
+	 *            the name of a user
 	 */
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
 	/**
 	 * Gets the password of a user.
+	 * 
 	 * @return the password of a user
 	 */
 	public String getPassword() {
 		return password;
 	}
-	
+
 	/**
 	 * Sets the password of a user
-	 * @param password the password of a user
+	 * 
+	 * @param password
+	 *            the password of a user
 	 */
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
 	/**
 	 * Gets the role of a user.
+	 * 
 	 * @return the role of a user
 	 */
 	public List&lt;Role&gt; getRole() {
 		return role;
 	}
-	
+
 	/**
 	 * Sets the role of a user.
-	 * @param role the role of a user
+	 * 
+	 * @param role
+	 *            the role of a user
 	 */
 	public void setRole(List&lt;Role&gt; role) {
 		this.role = role;
 	}
-	
+
 	/**
 	 * Shows if the checkbox is checked
+	 * 
 	 * @return true or false
 	 */
 	public boolean isChecked() {
 		return checked;
 	}
-	
+
 	/**
 	 * Sets, if the checkbox is checked
-	 * @param checked true of false
+	 * 
+	 * @param checked
+	 *            true of false
 	 */
 	public void setChecked(boolean checked) {
 		this.checked = checked;
 	}
-	
-	
+
 }</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
 <tr class="b">
@@ -2599,27 +2508,27 @@
 <tr class="a">
 <td>org/universAAL/ucc/subscriber/SensorEventSubscriber.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>83</td></tr>
+<td>84</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/subscriber/SensorEventSubscriber.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>102</td></tr>
+<td>103</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
-<pre>		for(OntologyInstance oi : rooms) {
-			if(oi.getId().equals(adress)) {
-				for(Subprofile sp : oi.getSubprofiles()) {
-					for(SimpleObject so : sp.getSimpleObjects()) {
-						if(so instanceof CalendarValue) {
-							CalendarValue cv = (CalendarValue)so;
-							if(cv.getName().equals(&quot;lastActivityTime&quot;)) {
+<pre>		for (OntologyInstance oi : rooms) {
+			if (oi.getId().equals(adress)) {
+				for (Subprofile sp : oi.getSubprofiles()) {
+					for (SimpleObject so : sp.getSimpleObjects()) {
+						if (so instanceof CalendarValue) {
+							CalendarValue cv = (CalendarValue) so;
+							if (cv.getName().equals(&quot;lastActivityTime&quot;)) {
 								DateFormat df = new SimpleDateFormat();
 								String date = df.format(time);
 								cv.setCalendar(date);
 							}
 						}
 					}
-				} 
+				}
 				ontInstances.put(oi.getId(), oi.getSubprofiles());
 				db.updateUserData(room, oi.getId(), ontInstances);</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
@@ -2630,17 +2539,17 @@
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/AddNewPersonController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>168</td></tr>
+<td>166</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/PersonWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>181</td></tr>
+<td>182</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
 <pre>							list.select(st.getValue());
 						}
 					}
-						
+
 					// Adding List to Form
 					list.setImmediate(true);
 					list.setNullSelectionAllowed(false);
@@ -2663,93 +2572,95 @@
 <tr class="a">
 <td>org/universAAL/ucc/model/usrv/AalUapp.java</td>
 <td>universAAL Tools uCC Model</td>
-<td>1210</td></tr>
+<td>1115</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/model/usrv/Part.java</td>
 <td>universAAL Tools uCC Model</td>
-<td>340</td></tr>
+<td>319</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
-<pre>        implements Serializable
-    {
+<pre>	public static class ApplicationCapabilities implements Serializable {
 
-        private final static long serialVersionUID = 12343L;
-        @XmlElement(required = true)
-        protected List&lt;CapabilityType&gt; capability;
+		private final static long serialVersionUID = 12343L;
+		@XmlElement(required = true)
+		protected List&lt;CapabilityType&gt; capability;
 
-        /**
-         * Gets the value of the capability property.
-         * 
-         * &lt;p&gt;
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the capability property.
-         * 
-         * &lt;p&gt;
-         * For example, to add a new item, do as follows:
-         * &lt;pre&gt;
-         *    getCapability().add(newItem);
-         * &lt;/pre&gt;
-         * 
-         * 
-         * &lt;p&gt;
-         * Objects of the following type(s) are allowed in the list
-         * {@link CapabilityType }
-         * 
-         * 
-         */
-        public List&lt;CapabilityType&gt; getCapability() {
-            if (capability == null) {
-                capability = new ArrayList&lt;CapabilityType&gt;();
-            }
-            return this.capability;
-        }
+		/**
+		 * Gets the value of the capability property.
+		 * 
+		 * &lt;p&gt;
+		 * This accessor method returns a reference to the live list, not a
+		 * snapshot. Therefore any modification you make to the returned list
+		 * will be present inside the JAXB object. This is why there is not a
+		 * &lt;CODE&gt;set&lt;/CODE&gt; method for the capability property.
+		 * 
+		 * &lt;p&gt;
+		 * For example, to add a new item, do as follows:
+		 * 
+		 * &lt;pre&gt;
+		 * getCapability().add(newItem);
+		 * &lt;/pre&gt;
+		 * 
+		 * 
+		 * &lt;p&gt;
+		 * Objects of the following type(s) are allowed in the list
+		 * {@link CapabilityType }
+		 * 
+		 * 
+		 */
+		public List&lt;CapabilityType&gt; getCapability() {
+			if (capability == null) {
+				capability = new ArrayList&lt;CapabilityType&gt;();
+			}
+			return this.capability;
+		}
 
-        public boolean isSetCapability() {
-            return ((this.capability!= null)&amp;&amp;(!this.capability.isEmpty()));
-        }
+		public boolean isSetCapability() {
+			return ((this.capability != null) &amp;&amp; (!this.capability.isEmpty()));
+		}
 
-        public void unsetCapability() {
-            this.capability = null;
-        }
+		public void unsetCapability() {
+			this.capability = null;
+		}
 
-    }
+	}
 
-
-    /**
-     * &lt;p&gt;Java class for anonymous complex type.
-     * 
-     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.
-     * 
-     * &lt;pre&gt;
-     * &amp;lt;complexType&gt;
-     *   &amp;lt;complexContent&gt;
-     *     &amp;lt;restriction base=&quot;{http://www.w3.org/2001/XMLSchema}anyType&quot;&gt;
-     *       &amp;lt;sequence&gt;
-     *         &amp;lt;element name=&quot;contactPoint&quot; type=&quot;{http://www.w3.org/2001/XMLSchema}string&quot;/&gt;
-     *         &amp;lt;element name=&quot;remoteManagement&quot; minOccurs=&quot;0&quot;&gt;
-     *           &amp;lt;complexType&gt;
-     *             &amp;lt;complexContent&gt;
-     *               &amp;lt;restriction base=&quot;{http://www.w3.org/2001/XMLSchema}anyType&quot;&gt;
-     *                 &amp;lt;sequence&gt;
-     *                   &amp;lt;element name=&quot;protocols&quot; type=&quot;{http://www.w3.org/2001/XMLSchema}string&quot; maxOccurs=&quot;unbounded&quot;/&gt;
-     *                   &amp;lt;element name=&quot;software&quot; type=&quot;{http://www.universaal.org/aal-uapp/v1.0.2}artifactType&quot;/&gt;
-     *                 &amp;lt;/sequence&gt;
-     *               &amp;lt;/restriction&gt;
-     *             &amp;lt;/complexContent&gt;
-     *           &amp;lt;/complexType&gt;
-     *         &amp;lt;/element&gt;
-     *       &amp;lt;/sequence&gt;
-     *     &amp;lt;/restriction&gt;
-     *   &amp;lt;/complexContent&gt;
-     * &amp;lt;/complexType&gt;
-     * &lt;/pre&gt;
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = &quot;&quot;, propOrder = {</pre></div></td></tr></table>
+	/**
+	 * &lt;p&gt;
+	 * Java class for anonymous complex type.
+	 * 
+	 * &lt;p&gt;
+	 * The following schema fragment specifies the expected content contained
+	 * within this class.
+	 * 
+	 * &lt;pre&gt;
+	 * &amp;lt;complexType&gt;
+	 *   &amp;lt;complexContent&gt;
+	 *     &amp;lt;restriction base=&quot;{http://www.w3.org/2001/XMLSchema}anyType&quot;&gt;
+	 *       &amp;lt;sequence&gt;
+	 *         &amp;lt;element name=&quot;contactPoint&quot; type=&quot;{http://www.w3.org/2001/XMLSchema}string&quot;/&gt;
+	 *         &amp;lt;element name=&quot;remoteManagement&quot; minOccurs=&quot;0&quot;&gt;
+	 *           &amp;lt;complexType&gt;
+	 *             &amp;lt;complexContent&gt;
+	 *               &amp;lt;restriction base=&quot;{http://www.w3.org/2001/XMLSchema}anyType&quot;&gt;
+	 *                 &amp;lt;sequence&gt;
+	 *                   &amp;lt;element name=&quot;protocols&quot; type=&quot;{http://www.w3.org/2001/XMLSchema}string&quot; maxOccurs=&quot;unbounded&quot;/&gt;
+	 *                   &amp;lt;element name=&quot;software&quot; type=&quot;{http://www.universaal.org/aal-uapp/v1.0.2}artifactType&quot;/&gt;
+	 *                 &amp;lt;/sequence&gt;
+	 *               &amp;lt;/restriction&gt;
+	 *             &amp;lt;/complexContent&gt;
+	 *           &amp;lt;/complexType&gt;
+	 *         &amp;lt;/element&gt;
+	 *       &amp;lt;/sequence&gt;
+	 *     &amp;lt;/restriction&gt;
+	 *   &amp;lt;/complexContent&gt;
+	 * &amp;lt;/complexType&gt;
+	 * &lt;/pre&gt;
+	 * 
+	 * 
+	 */
+	@XmlAccessorType(XmlAccessType.FIELD)
+	@XmlType(name = &quot;&quot;, propOrder = { &quot;contactPoint&quot;, &quot;remoteManagement&quot; })</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
 <tr class="b">
 <th>File</th>
@@ -2758,30 +2669,28 @@
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>656</td></tr>
+<td>625</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/PersonWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>575</td></tr>
+<td>560</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>671</td></tr>
+<td>632</td></tr>
 <tr class="b"><td colspan='3'>
 <div>
-<pre>			app.getMainWindow().showNotification(
-					tab.getHeader() + &quot; was updated&quot;,
-					Notification.POSITION_CENTERED);
+<pre>			app.getMainWindow().showNotification(tab.getHeader() + &quot; was updated&quot;, Notification.POSITION_CENTERED);
 
-		} //Edit button was pushed
-		else if(event.getButton() == ((TabForm)tabSheet.getSelectedTab()).getEditButton()) {
-			TabForm tab = ((TabForm)tabSheet.getSelectedTab());
+		} // Edit button was pushed
+		else if (event.getButton() == ((TabForm) tabSheet.getSelectedTab()).getEditButton()) {
+			TabForm tab = ((TabForm) tabSheet.getSelectedTab());
 			tab.getSaveButton().setVisible(true);
 			tab.getEditButton().setVisible(false);
 			tab.getResetButton().setVisible(true);
 			tab.getDeleteButton().setVisible(false);
 			tab.setReadOnly(false);
-			if(tab.getField(&quot;Device Address:&quot;) != null)</pre></div></td></tr></table>
+			if (tab.getField(&quot;Device Address:&quot;) != null)</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>File</th>
@@ -2797,19 +2706,19 @@
 <td>127</td></tr>
 <tr class="b"><td colspan='3'>
 <div>
-<pre>	String getDateString() {
-	    Calendar c = new GregorianCalendar();
-	    c.setTime(date);
-	    String dateString = new String();
-	    dateString += c.get(Calendar.YEAR) + &quot;-&quot;;
-	    dateString += c.get(Calendar.MONTH) + &quot;-&quot;;
-	    dateString += c.get(Calendar.DAY_OF_MONTH) + &quot; &quot;;
-	    dateString += c.get(Calendar.HOUR_OF_DAY) + &quot;:&quot;;
-	    dateString += c.get(Calendar.MINUTE) + &quot;:&quot;;
-	    dateString += c.get(Calendar.SECOND) + &quot;.&quot;;
-	    dateString += c.get(Calendar.MILLISECOND);
-	    return dateString;
-	}</pre></div></td></tr></table>
+<pre>		String getDateString() {
+			Calendar c = new GregorianCalendar();
+			c.setTime(date);
+			String dateString = new String();
+			dateString += c.get(Calendar.YEAR) + &quot;-&quot;;
+			dateString += c.get(Calendar.MONTH) + &quot;-&quot;;
+			dateString += c.get(Calendar.DAY_OF_MONTH) + &quot; &quot;;
+			dateString += c.get(Calendar.HOUR_OF_DAY) + &quot;:&quot;;
+			dateString += c.get(Calendar.MINUTE) + &quot;:&quot;;
+			dateString += c.get(Calendar.SECOND) + &quot;.&quot;;
+			dateString += c.get(Calendar.MILLISECOND);
+			return dateString;
+		}</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>File</th>
@@ -2818,19 +2727,18 @@
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/AddNewHardwareController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>249</td></tr>
+<td>246</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/AddNewPersonController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>195</td></tr>
+<td>193</td></tr>
 <tr class="b"><td colspan='3'>
 <div>
 <pre>		}
 
 	}
 
-	private TabForm createForm(SimpleObject simpleObject, TabForm form)
-			throws ParseException {
+	private TabForm createForm(SimpleObject simpleObject, TabForm form) throws ParseException {
 		if (simpleObject instanceof CalendarValue) {
 			CalendarValue cal = (CalendarValue) simpleObject;
 			PopupDateField date = new PopupDateField(cal.getLabel());
@@ -2858,21 +2766,21 @@
 <td>127</td></tr>
 <tr class="b"><td colspan='3'>
 <div>
-<pre>    public static String getDateString(Date date) {
-	Calendar c = new GregorianCalendar();
-	c.setTime(date);
-	String dateString = new String();
-	dateString += c.get(Calendar.YEAR) + &quot;-&quot;;
-	dateString += c.get(Calendar.MONTH) + &quot;-&quot;;
-	dateString += c.get(Calendar.DAY_OF_MONTH) + &quot; &quot;;
-	dateString += c.get(Calendar.HOUR_OF_DAY) + &quot;:&quot;;
-	dateString += c.get(Calendar.MINUTE) + &quot;:&quot;;
-	dateString += c.get(Calendar.SECOND) + &quot;.&quot;;
-	dateString += c.get(Calendar.MILLISECOND);
-	return dateString;
-    }
+<pre>	public static String getDateString(Date date) {
+		Calendar c = new GregorianCalendar();
+		c.setTime(date);
+		String dateString = new String();
+		dateString += c.get(Calendar.YEAR) + &quot;-&quot;;
+		dateString += c.get(Calendar.MONTH) + &quot;-&quot;;
+		dateString += c.get(Calendar.DAY_OF_MONTH) + &quot; &quot;;
+		dateString += c.get(Calendar.HOUR_OF_DAY) + &quot;:&quot;;
+		dateString += c.get(Calendar.MINUTE) + &quot;:&quot;;
+		dateString += c.get(Calendar.SECOND) + &quot;.&quot;;
+		dateString += c.get(Calendar.MILLISECOND);
+		return dateString;
+	}
 
-    public static String buildMessage(Object[] msgPart) {</pre></div></td></tr></table>
+	public static String buildMessage(Object[] msgPart) {</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>File</th>
@@ -2881,11 +2789,11 @@
 <tr class="b">
 <td>org/universAAL/ucc/controller/install/LicenseController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>137</td></tr>
+<td>127</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/install/UsrvInfoController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>83</td></tr>
+<td>77</td></tr>
 <tr class="b"><td colspan='3'>
 <div>
 <pre>		}
@@ -2895,13 +2803,10 @@
 	private void deleteFiles(File path) {
 		File[] files = path.listFiles();
 		for (File del : files) {
-			if (del.isDirectory()
-					&amp;&amp; !del.getPath().substring(del.getPath().lastIndexOf(&quot;.&quot;) + 1)
-							.equals(&quot;usrv&quot;)) {
+			if (del.isDirectory() &amp;&amp; !del.getPath().substring(del.getPath().lastIndexOf(&quot;.&quot;) + 1).equals(&quot;usrv&quot;)) {
 				deleteFiles(del);
 			}
-			if (!del.getPath().substring(del.getPath().lastIndexOf(&quot;.&quot;) + 1)
-					.equals(&quot;usrv&quot;))
+			if (!del.getPath().substring(del.getPath().lastIndexOf(&quot;.&quot;) + 1).equals(&quot;usrv&quot;))
 				del.delete();
 		}
 
@@ -2923,19 +2828,19 @@
 <td>90</td></tr>
 <tr class="b"><td colspan='3'>
 <div>
-<pre>    public static String getDateString(Date date) {
-	Calendar c = new GregorianCalendar();
-	c.setTime(date);
-	String dateString = new String();
-	dateString += c.get(Calendar.YEAR) + &quot;-&quot;;
-	dateString += c.get(Calendar.MONTH) + &quot;-&quot;;
-	dateString += c.get(Calendar.DAY_OF_MONTH) + &quot; &quot;;
-	dateString += c.get(Calendar.HOUR_OF_DAY) + &quot;:&quot;;
-	dateString += c.get(Calendar.MINUTE) + &quot;:&quot;;
-	dateString += c.get(Calendar.SECOND) + &quot;.&quot;;
-	dateString += c.get(Calendar.MILLISECOND);
-	return dateString;
-    }</pre></div></td></tr></table>
+<pre>	public static String getDateString(Date date) {
+		Calendar c = new GregorianCalendar();
+		c.setTime(date);
+		String dateString = new String();
+		dateString += c.get(Calendar.YEAR) + &quot;-&quot;;
+		dateString += c.get(Calendar.MONTH) + &quot;-&quot;;
+		dateString += c.get(Calendar.DAY_OF_MONTH) + &quot; &quot;;
+		dateString += c.get(Calendar.HOUR_OF_DAY) + &quot;:&quot;;
+		dateString += c.get(Calendar.MINUTE) + &quot;:&quot;;
+		dateString += c.get(Calendar.SECOND) + &quot;.&quot;;
+		dateString += c.get(Calendar.MILLISECOND);
+		return dateString;
+	}</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>File</th>
@@ -2944,15 +2849,15 @@
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/AddNewHardwareController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>133</td></tr>
+<td>130</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/AddNewHardwareController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>194</td></tr>
+<td>191</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/AddNewPersonController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>124</td></tr>
+<td>122</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
 <pre>			subprofiles.put(tab.getName(), tab);
@@ -2978,17 +2883,17 @@
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>620</td></tr>
+<td>589</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/PersonWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>479</td></tr>
+<td>466</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
-<pre>				if(tOnt.getKey().equals(id)) {
+<pre>				if (tOnt.getKey().equals(id)) {
 					nOntInstances.put(tOnt.getKey(), new ArrayList&lt;Subprofile&gt;());
-					for(Subprofile sp : tOnt.getValue()) {
-						if(sp.getName().equals(sub.getName())) {
+					for (Subprofile sp : tOnt.getValue()) {
+						if (sp.getName().equals(sub.getName())) {
 							nOntInstances.get(tOnt.getKey()).add(sub);
 						} else {
 							nOntInstances.get(tOnt.getKey()).add(sp);
@@ -3006,11 +2911,11 @@
 <tr class="a">
 <td>org/universAAL/ucc/controller/install/DeploymentInfoController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>276</td></tr>
+<td>250</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/install/LicenseController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>137</td></tr>
+<td>127</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
 <pre>		}
@@ -3020,14 +2925,10 @@
 	private void deleteFiles(File path) {
 		File[] files = path.listFiles();
 		for (File del : files) {
-			if (del.isDirectory()
-					&amp;&amp; !del.getPath()
-							.substring(del.getPath().lastIndexOf(&quot;.&quot;) + 1)
-							.equals(&quot;usrv&quot;)) {
+			if (del.isDirectory() &amp;&amp; !del.getPath().substring(del.getPath().lastIndexOf(&quot;.&quot;) + 1).equals(&quot;usrv&quot;)) {
 				deleteFiles(del);
 			}
-			if (!del.getPath().substring(del.getPath().lastIndexOf(&quot;.&quot;) + 1)
-					.equals(&quot;usrv&quot;))
+			if (!del.getPath().substring(del.getPath().lastIndexOf(&quot;.&quot;) + 1).equals(&quot;usrv&quot;))
 				del.delete();
 		}
 
@@ -3040,11 +2941,11 @@
 <tr class="a">
 <td>org/universAAL/ucc/controller/install/DeploymentInfoController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>278</td></tr>
+<td>252</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/service/manager/Activator.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>241</td></tr>
+<td>228</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
 <pre>	}
@@ -3052,14 +2953,10 @@
 	private void deleteFiles(File path) {
 		File[] files = path.listFiles();
 		for (File del : files) {
-			if (del.isDirectory()
-					&amp;&amp; !del.getPath()
-							.substring(del.getPath().lastIndexOf(&quot;.&quot;) + 1)
-							.equals(&quot;usrv&quot;)) {
+			if (del.isDirectory() &amp;&amp; !del.getPath().substring(del.getPath().lastIndexOf(&quot;.&quot;) + 1).equals(&quot;usrv&quot;)) {
 				deleteFiles(del);
 			}
-			if (!del.getPath().substring(del.getPath().lastIndexOf(&quot;.&quot;) + 1)
-					.equals(&quot;usrv&quot;))
+			if (!del.getPath().substring(del.getPath().lastIndexOf(&quot;.&quot;) + 1).equals(&quot;usrv&quot;))
 				del.delete();
 		}
 
@@ -3074,15 +2971,15 @@
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/AddNewHardwareController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>166</td></tr>
+<td>163</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>206</td></tr>
+<td>207</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>218</td></tr>
+<td>213</td></tr>
 <tr class="b"><td colspan='3'>
 <div>
 <pre>					}
@@ -3109,15 +3006,15 @@
 <tr class="b">
 <td>org/universAAL/ucc/controller/install/LicenseController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>139</td></tr>
+<td>129</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/install/UsrvInfoController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>85</td></tr>
+<td>79</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/service/manager/Activator.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>241</td></tr>
+<td>228</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
 <pre>	}
@@ -3125,13 +3022,10 @@
 	private void deleteFiles(File path) {
 		File[] files = path.listFiles();
 		for (File del : files) {
-			if (del.isDirectory()
-					&amp;&amp; !del.getPath().substring(del.getPath().lastIndexOf(&quot;.&quot;) + 1)
-							.equals(&quot;usrv&quot;)) {
+			if (del.isDirectory() &amp;&amp; !del.getPath().substring(del.getPath().lastIndexOf(&quot;.&quot;) + 1).equals(&quot;usrv&quot;)) {
 				deleteFiles(del);
 			}
-			if (!del.getPath().substring(del.getPath().lastIndexOf(&quot;.&quot;) + 1)
-					.equals(&quot;usrv&quot;))
+			if (!del.getPath().substring(del.getPath().lastIndexOf(&quot;.&quot;) + 1).equals(&quot;usrv&quot;))
 				del.delete();
 		}
 
@@ -3144,11 +3038,11 @@
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>88</td></tr>
+<td>91</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>93</td></tr>
+<td>89</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
 <pre>		subprofiles = new HashMap&lt;String, Subprofile&gt;();
@@ -3160,13 +3054,13 @@
 		loadData();
 		win.addFirstComponent(win.getUserTree());
 		win.addSecondComponent(tabSheet);
-		
+
 	}
-	
+
 	private void loadData() throws JAXBException, IOException, ParseException {
-		//Creating Tabs with Forms
-				ArrayList&lt;OntologyInstance&gt; tabs = dataAccess.getFormFields(actualFlat);
-				ArrayList&lt;OntologyInstance&gt;roomSubs = dataAccess.getFormFields(actualRoom);</pre></div></td></tr></table>
+		// Creating Tabs with Forms
+		ArrayList&lt;OntologyInstance&gt; tabs = dataAccess.getFormFields(actualFlat);
+		ArrayList&lt;OntologyInstance&gt; roomSubs = dataAccess.getFormFields(actualRoom);</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
 <tr class="b">
 <th>File</th>
@@ -3175,80 +3069,81 @@
 <tr class="a">
 <td>org/universAAL/ucc/model/usrv/AalUsrv.java</td>
 <td>universAAL Tools uCC Model</td>
-<td>431</td></tr>
+<td>410</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/model/usrv/Part.java</td>
 <td>universAAL Tools uCC Model</td>
-<td>344</td></tr>
+<td>322</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
-<pre>        @XmlElement(namespace = &quot;http://www.universaal.org/aal-usrv/v1.0.2&quot;, required = true)
-        protected List&lt;CapabilityType&gt; capability;
+<pre>		@XmlElement(namespace = &quot;http://www.universaal.org/aal-usrv/v1.0.2&quot;, required = true)
+		protected List&lt;CapabilityType&gt; capability;
 
-        /**
-         * Gets the value of the capability property.
-         * 
-         * &lt;p&gt;
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a &lt;CODE&gt;set&lt;/CODE&gt; method for the capability property.
-         * 
-         * &lt;p&gt;
-         * For example, to add a new item, do as follows:
-         * &lt;pre&gt;
-         *    getCapability().add(newItem);
-         * &lt;/pre&gt;
-         * 
-         * 
-         * &lt;p&gt;
-         * Objects of the following type(s) are allowed in the list
-         * {@link CapabilityType }
-         * 
-         * 
-         */
-        public List&lt;CapabilityType&gt; getCapability() {
-            if (capability == null) {
-                capability = new ArrayList&lt;CapabilityType&gt;();
-            }
-            return this.capability;
-        }
+		/**
+		 * Gets the value of the capability property.
+		 * 
+		 * &lt;p&gt;
+		 * This accessor method returns a reference to the live list, not a
+		 * snapshot. Therefore any modification you make to the returned list
+		 * will be present inside the JAXB object. This is why there is not a
+		 * &lt;CODE&gt;set&lt;/CODE&gt; method for the capability property.
+		 * 
+		 * &lt;p&gt;
+		 * For example, to add a new item, do as follows:
+		 * 
+		 * &lt;pre&gt;
+		 * getCapability().add(newItem);
+		 * &lt;/pre&gt;
+		 * 
+		 * 
+		 * &lt;p&gt;
+		 * Objects of the following type(s) are allowed in the list
+		 * {@link CapabilityType }
+		 * 
+		 * 
+		 */
+		public List&lt;CapabilityType&gt; getCapability() {
+			if (capability == null) {
+				capability = new ArrayList&lt;CapabilityType&gt;();
+			}
+			return this.capability;
+		}
 
-        public boolean isSetCapability() {
-            return ((this.capability!= null)&amp;&amp;(!this.capability.isEmpty()));
-        }
+		public boolean isSetCapability() {
+			return ((this.capability != null) &amp;&amp; (!this.capability.isEmpty()));
+		}
 
-        public void unsetCapability() {
-            this.capability = null;
-        }
+		public void unsetCapability() {
+			this.capability = null;
+		}
 
-    }
+	}
 
-
-    /**
-     * &lt;p&gt;Java class for anonymous complex type.
-     * 
-     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.
-     * 
-     * &lt;pre&gt;
-     * &amp;lt;complexType&gt;
-     *   &amp;lt;complexContent&gt;
-     *     &amp;lt;restriction base=&quot;{http://www.w3.org/2001/XMLSchema}anyType&quot;&gt;
-     *       &amp;lt;sequence&gt;
-     *         &amp;lt;element name=&quot;requirement&quot; type=&quot;{http://www.universaal.org/aal-uapp/v1.0.2}reqType&quot; maxOccurs=&quot;unbounded&quot;/&gt;
-     *       &amp;lt;/sequence&gt;
-     *     &amp;lt;/restriction&gt;
-     *   &amp;lt;/complexContent&gt;
-     * &amp;lt;/complexType&gt;
-     * &lt;/pre&gt;
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = &quot;&quot;, propOrder = {
-        &quot;requirement&quot;
-    })
-    public static class ServiceRequirements</pre></div></td></tr></table>
+	/**
+	 * &lt;p&gt;
+	 * Java class for anonymous complex type.
+	 * 
+	 * &lt;p&gt;
+	 * The following schema fragment specifies the expected content contained
+	 * within this class.
+	 * 
+	 * &lt;pre&gt;
+	 * &amp;lt;complexType&gt;
+	 *   &amp;lt;complexContent&gt;
+	 *     &amp;lt;restriction base=&quot;{http://www.w3.org/2001/XMLSchema}anyType&quot;&gt;
+	 *       &amp;lt;sequence&gt;
+	 *         &amp;lt;element name=&quot;requirement&quot; type=&quot;{http://www.universaal.org/aal-uapp/v1.0.2}reqType&quot; maxOccurs=&quot;unbounded&quot;/&gt;
+	 *       &amp;lt;/sequence&gt;
+	 *     &amp;lt;/restriction&gt;
+	 *   &amp;lt;/complexContent&gt;
+	 * &amp;lt;/complexType&gt;
+	 * &lt;/pre&gt;
+	 * 
+	 * 
+	 */
+	@XmlAccessorType(XmlAccessType.FIELD)
+	@XmlType(name = &quot;&quot;, propOrder = { &quot;requirement&quot; })
+	public static class ServiceRequirements implements Serializable {</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
 <tr class="b">
 <th>File</th>
@@ -3264,26 +3159,24 @@
 <td>34</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
-<pre>	public SimpleConfiguratorPasswordField(SimpleConfigurationOption option, VaadinConfigurationController controller){
+<pre>	public SimpleConfiguratorPasswordField(SimpleConfigurationOption option, VaadinConfigurationController controller) {
 		super(option.getLabel());
-		
+
 		this.controller = controller;
-		
+
 		factory = new ObjectFactory();
 		configOption = option;
 		configOption.addListener(this);
-		
+
 		setDefaultValidators(configOption);
-		
+
 		setImmediate(true);
 		addListener(new ValueChangeListener() {
 
-			
-			public void valueChange(
-					com.vaadin.data.Property.ValueChangeEvent event) {
-				try{
+			public void valueChange(com.vaadin.data.Property.ValueChangeEvent event) {
+				try {
 					Value v = factory.createValue();
-					v.setValue((String)event.getProperty().getValue());
+					v.setValue((String) event.getProperty().getValue());
 					configOption.setValue(v);
 					setComponentError(null);</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
@@ -3294,11 +3187,11 @@
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/AddNewHardwareController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>155</td></tr>
+<td>152</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/AddNewHardwareController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>216</td></tr>
+<td>213</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
 <pre>				createForm(simpl, f);
@@ -3327,26 +3220,26 @@
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>104</td></tr>
+<td>107</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>112</td></tr>
+<td>110</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
-<pre>				for(OntologyInstance r : roomSubs) {
-			
-						if(roomInstances.get(r.getId()) == null) {
-						roomInstances.put(r.getId(), new ArrayList&lt;Subprofile&gt;());
-						} else {
-							roomInstances.get(r.getId()).clear();
-						}
-					for(Subprofile s : r.getSubprofiles()) {
-						roomInstances.get(r.getId()).add(s);
-						roomprofiles.put(s.getName(),s);
-					}
-					
-				}</pre></div></td></tr></table>
+<pre>		for (OntologyInstance r : roomSubs) {
+
+			if (roomInstances.get(r.getId()) == null) {
+				roomInstances.put(r.getId(), new ArrayList&lt;Subprofile&gt;());
+			} else {
+				roomInstances.get(r.getId()).clear();
+			}
+			for (Subprofile s : r.getSubprofiles()) {
+				roomInstances.get(r.getId()).add(s);
+				roomprofiles.put(s.getName(), s);
+			}
+
+		}</pre></div></td></tr></table>
 <table border="0" class="bodyTable">
 <tr class="b">
 <th>File</th>
@@ -3355,19 +3248,19 @@
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/AddNewPersonController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>145</td></tr>
+<td>143</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/HardwareWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>168</td></tr>
+<td>169</td></tr>
 <tr class="a">
 <td>org/universAAL/ucc/controller/aalspace/PersonWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>146</td></tr>
+<td>147</td></tr>
 <tr class="b">
 <td>org/universAAL/ucc/controller/aalspace/RoomsWindowController.java</td>
 <td>universAAL Tools uCC Frontend</td>
-<td>180</td></tr>
+<td>175</td></tr>
 <tr class="a"><td colspan='3'>
 <div>
 <pre>			}
@@ -3385,7 +3278,7 @@
 					if (cols.isMultiselect()) {
 						list.setMultiSelect(true);
 					}
-					if(cols.isRequired()) {</pre></div></td></tr></table></div>
+					if (cols.isRequired()) {</pre></div></td></tr></table></div>
       </div>
     </div>
     <div class="clear">

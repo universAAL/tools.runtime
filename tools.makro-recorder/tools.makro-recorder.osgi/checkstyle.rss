@@ -27,8 +27,8 @@ under the License.
     <item>
       <title>File: 6,
              Errors: 113,
-             Warnings: 28,
-             Infos: 278
+             Warnings: 6,
+             Infos: 1
       </title>
             <link>http://xtras/tools.runtime/tools.makro-recorder/tools.makro-recorder.osgi//checkstyle.html</link>
       <description>
@@ -49,10 +49,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.makro-recorder/tools.makro-recorder.osgi//checkstyle.html#org.universAAL.tools.makrorecorder.osgi.pattern.PatternListener.java">org/universAAL/tools/makrorecorder/osgi/pattern/PatternListener.java</a>
                 </td>
                 <td>
-                  31
+                  1
                 </td>
                 <td>
-                  3
+                  0
                 </td>
                 <td>
                   10
@@ -63,10 +63,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.makro-recorder/tools.makro-recorder.osgi//checkstyle.html#org.universAAL.tools.makrorecorder.osgi.MakroRecorder.java">org/universAAL/tools/makrorecorder/osgi/MakroRecorder.java</a>
                 </td>
                 <td>
-                  55
+                  0
                 </td>
                 <td>
-                  3
+                  2
                 </td>
                 <td>
                   30
@@ -77,7 +77,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.makro-recorder/tools.makro-recorder.osgi//checkstyle.html#org.universAAL.tools.makrorecorder.osgi.Activator.java">org/universAAL/tools/makrorecorder/osgi/Activator.java</a>
                 </td>
                 <td>
-                  16
+                  0
                 </td>
                 <td>
                   1
@@ -91,10 +91,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.makro-recorder/tools.makro-recorder.osgi//checkstyle.html#org.universAAL.tools.makrorecorder.osgi.pattern.BusRecorder.java">org/universAAL/tools/makrorecorder/osgi/pattern/BusRecorder.java</a>
                 </td>
                 <td>
-                  55
+                  0
                 </td>
                 <td>
-                  7
+                  1
                 </td>
                 <td>
                   14
@@ -105,10 +105,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.makro-recorder/tools.makro-recorder.osgi//checkstyle.html#org.universAAL.tools.makrorecorder.osgi.pattern.Pattern.java">org/universAAL/tools/makrorecorder/osgi/pattern/Pattern.java</a>
                 </td>
                 <td>
-                  68
+                  0
                 </td>
                 <td>
-                  8
+                  2
                 </td>
                 <td>
                   47
@@ -119,10 +119,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.makro-recorder/tools.makro-recorder.osgi//checkstyle.html#org.universAAL.tools.makrorecorder.osgi.pattern.PatternXMLParser.java">org/universAAL/tools/makrorecorder/osgi/pattern/PatternXMLParser.java</a>
                 </td>
                 <td>
-                  53
+                  0
                 </td>
                 <td>
-                  6
+                  0
                 </td>
                 <td>
                   3

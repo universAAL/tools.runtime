@@ -26,9 +26,9 @@ under the License.
     <copyright>&#169;2017 universAAL Consortium</copyright>
     <item>
       <title>File: 45,
-             Errors: 723,
-             Warnings: 368,
-             Infos: 725
+             Errors: 722,
+             Warnings: 41,
+             Infos: 147
       </title>
             <link>/checkstyle.html</link>
       <description>
@@ -49,7 +49,7 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.LogListenerEx.java">org/universAAL/tools/logmonitor/LogListenerEx.java</a>
                 </td>
                 <td>
-                  6
+                  1
                 </td>
                 <td>
                   0
@@ -63,10 +63,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.msgflow.gui.MyScrollBarUI.java">org/universAAL/tools/logmonitor/msgflow/gui/MyScrollBarUI.java</a>
                 </td>
                 <td>
-                  11
+                  2
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   5
@@ -77,10 +77,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.service_bus_matching.CEStringUtil.java">org/universAAL/tools/logmonitor/service_bus_matching/CEStringUtil.java</a>
                 </td>
                 <td>
-                  21
+                  1
                 </td>
                 <td>
-                  7
+                  1
                 </td>
                 <td>
                   7
@@ -91,10 +91,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.util.ClipboardHandling.java">org/universAAL/tools/logmonitor/util/ClipboardHandling.java</a>
                 </td>
                 <td>
-                  16
+                  1
                 </td>
                 <td>
-                  4
+                  1
                 </td>
                 <td>
                   17
@@ -105,10 +105,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.bus_member.gui.BusMemberPane.java">org/universAAL/tools/logmonitor/bus_member/gui/BusMemberPane.java</a>
                 </td>
                 <td>
-                  15
+                  2
                 </td>
                 <td>
-                  5
+                  2
                 </td>
                 <td>
                   26
@@ -119,10 +119,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.Utils.java">org/universAAL/tools/logmonitor/Utils.java</a>
                 </td>
                 <td>
-                  6
+                  2
                 </td>
                 <td>
-                  4
+                  1
                 </td>
                 <td>
                   4
@@ -133,10 +133,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.ontology.gui.OntologyPane.java">org/universAAL/tools/logmonitor/ontology/gui/OntologyPane.java</a>
                 </td>
                 <td>
-                  18
+                  6
                 </td>
                 <td>
-                  8
+                  1
                 </td>
                 <td>
                   14
@@ -147,7 +147,7 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.all_log.gui.MessagePanel.java">org/universAAL/tools/logmonitor/all_log/gui/MessagePanel.java</a>
                 </td>
                 <td>
-                  3
+                  1
                 </td>
                 <td>
                   0
@@ -161,10 +161,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.service_bus_matching.URI.java">org/universAAL/tools/logmonitor/service_bus_matching/URI.java</a>
                 </td>
                 <td>
-                  11
+                  1
                 </td>
                 <td>
-                  3
+                  0
                 </td>
                 <td>
                   9
@@ -175,10 +175,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.all_log.gui.AllLogPanel.java">org/universAAL/tools/logmonitor/all_log/gui/AllLogPanel.java</a>
                 </td>
                 <td>
-                  10
+                  4
                 </td>
                 <td>
-                  7
+                  1
                 </td>
                 <td>
                   5
@@ -189,10 +189,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.util.ProfileInfo.java">org/universAAL/tools/logmonitor/util/ProfileInfo.java</a>
                 </td>
                 <td>
-                  8
+                  1
                 </td>
                 <td>
-                  2
+                  0
                 </td>
                 <td>
                   9
@@ -203,10 +203,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.rdfvis.gui.RDFVis.java">org/universAAL/tools/logmonitor/rdfvis/gui/RDFVis.java</a>
                 </td>
                 <td>
-                  25
+                  8
                 </td>
                 <td>
-                  8
+                  0
                 </td>
                 <td>
                   14
@@ -217,10 +217,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.service_bus_matching.gui.Gui.java">org/universAAL/tools/logmonitor/service_bus_matching/gui/Gui.java</a>
                 </td>
                 <td>
-                  10
+                  4
                 </td>
                 <td>
-                  2
+                  1
                 </td>
                 <td>
                   8
@@ -231,10 +231,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.service_bus_matching.LogMonitor_Util.java">org/universAAL/tools/logmonitor/service_bus_matching/LogMonitor_Util.java</a>
                 </td>
                 <td>
-                  22
+                  1
                 </td>
                 <td>
-                  17
+                  1
                 </td>
                 <td>
                   13
@@ -245,10 +245,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.rdfvis.gui.GraphPanel.java">org/universAAL/tools/logmonitor/rdfvis/gui/GraphPanel.java</a>
                 </td>
                 <td>
-                  25
+                  7
                 </td>
                 <td>
-                  16
+                  1
                 </td>
                 <td>
                   12
@@ -259,10 +259,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.bus_member.gui.BusMemberGui.java">org/universAAL/tools/logmonitor/bus_member/gui/BusMemberGui.java</a>
                 </td>
                 <td>
-                  17
+                  2
                 </td>
                 <td>
-                  11
+                  2
                 </td>
                 <td>
                   29
@@ -273,10 +273,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.bus_member.SpaceListener.java">org/universAAL/tools/logmonitor/bus_member/SpaceListener.java</a>
                 </td>
                 <td>
-                  13
+                  2
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   15
@@ -287,10 +287,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.MemberData.java">org/universAAL/tools/logmonitor/MemberData.java</a>
                 </td>
                 <td>
-                  16
+                  3
                 </td>
                 <td>
-                  8
+                  0
                 </td>
                 <td>
                   44
@@ -301,10 +301,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.rdfvis.Node.java">org/universAAL/tools/logmonitor/rdfvis/Node.java</a>
                 </td>
                 <td>
-                  24
+                  8
                 </td>
                 <td>
-                  24
+                  3
                 </td>
                 <td>
                   14
@@ -315,10 +315,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.Activator.java">org/universAAL/tools/logmonitor/Activator.java</a>
                 </td>
                 <td>
-                  13
+                  2
                 </td>
                 <td>
-                  4
+                  1
                 </td>
                 <td>
                   20
@@ -329,10 +329,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.LogMonitor.java">org/universAAL/tools/logmonitor/LogMonitor.java</a>
                 </td>
                 <td>
-                  15
+                  3
                 </td>
                 <td>
-                  9
+                  0
                 </td>
                 <td>
                   12
@@ -343,7 +343,7 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.all_log.LogMonitor.java">org/universAAL/tools/logmonitor/all_log/LogMonitor.java</a>
                 </td>
                 <td>
-                  12
+                  2
                 </td>
                 <td>
                   0
@@ -357,7 +357,7 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.BusMemberListener.java">org/universAAL/tools/logmonitor/BusMemberListener.java</a>
                 </td>
                 <td>
-                  8
+                  2
                 </td>
                 <td>
                   0
@@ -371,10 +371,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.rdfvis.Edge.java">org/universAAL/tools/logmonitor/rdfvis/Edge.java</a>
                 </td>
                 <td>
-                  31
+                  11
                 </td>
                 <td>
-                  26
+                  1
                 </td>
                 <td>
                   8
@@ -385,10 +385,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.service_bus_matching.Sparul.java">org/universAAL/tools/logmonitor/service_bus_matching/Sparul.java</a>
                 </td>
                 <td>
-                  22
+                  1
                 </td>
                 <td>
-                  15
+                  1
                 </td>
                 <td>
                   11
@@ -399,10 +399,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.msgflow.MemberDataEx.java">org/universAAL/tools/logmonitor/msgflow/MemberDataEx.java</a>
                 </td>
                 <td>
-                  5
+                  2
                 </td>
                 <td>
-                  7
+                  0
                 </td>
                 <td>
                   13
@@ -413,10 +413,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.all_log.LogEntry.java">org/universAAL/tools/logmonitor/all_log/LogEntry.java</a>
                 </td>
                 <td>
-                  9
+                  1
                 </td>
                 <td>
-                  8
+                  1
                 </td>
                 <td>
                   17
@@ -427,7 +427,7 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.msgflow.LogMonitor.java">org/universAAL/tools/logmonitor/msgflow/LogMonitor.java</a>
                 </td>
                 <td>
-                  19
+                  3
                 </td>
                 <td>
                   0
@@ -441,10 +441,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.service_bus_matching.LogMonitor.java">org/universAAL/tools/logmonitor/service_bus_matching/LogMonitor.java</a>
                 </td>
                 <td>
-                  52
+                  6
                 </td>
                 <td>
-                  24
+                  0
                 </td>
                 <td>
                   35
@@ -455,10 +455,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.msgflow.gui.MsgFlowGui.java">org/universAAL/tools/logmonitor/msgflow/gui/MsgFlowGui.java</a>
                 </td>
                 <td>
-                  4
+                  1
                 </td>
                 <td>
-                  2
+                  1
                 </td>
                 <td>
                   5
@@ -469,10 +469,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.rdfvis.LogMonitor.java">org/universAAL/tools/logmonitor/rdfvis/LogMonitor.java</a>
                 </td>
                 <td>
-                  9
+                  1
                 </td>
                 <td>
-                  3
+                  0
                 </td>
                 <td>
                   12
@@ -483,10 +483,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.service_bus_matching.gui.MatchmakingPane.java">org/universAAL/tools/logmonitor/service_bus_matching/gui/MatchmakingPane.java</a>
                 </td>
                 <td>
-                  27
+                  5
                 </td>
                 <td>
-                  15
+                  1
                 </td>
                 <td>
                   10
@@ -497,10 +497,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.rdfvis.ResourceInterpreter.java">org/universAAL/tools/logmonitor/rdfvis/ResourceInterpreter.java</a>
                 </td>
                 <td>
-                  18
+                  6
                 </td>
                 <td>
-                  20
+                  8
                 </td>
                 <td>
                   2
@@ -511,10 +511,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.MainGui.java">org/universAAL/tools/logmonitor/MainGui.java</a>
                 </td>
                 <td>
-                  2
+                  1
                 </td>
                 <td>
-                  2
+                  0
                 </td>
                 <td>
                   5
@@ -525,10 +525,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.util.HTMLVisibilityPane.java">org/universAAL/tools/logmonitor/util/HTMLVisibilityPane.java</a>
                 </td>
                 <td>
-                  8
+                  2
                 </td>
                 <td>
-                  7
+                  1
                 </td>
                 <td>
                   14
@@ -539,10 +539,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.service_bus_matching.Matchmaking.java">org/universAAL/tools/logmonitor/service_bus_matching/Matchmaking.java</a>
                 </td>
                 <td>
-                  13
+                  10
                 </td>
                 <td>
-                  7
+                  0
                 </td>
                 <td>
                   58
@@ -553,10 +553,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.msgflow.FlowData.java">org/universAAL/tools/logmonitor/msgflow/FlowData.java</a>
                 </td>
                 <td>
-                  12
+                  4
                 </td>
                 <td>
-                  4
+                  1
                 </td>
                 <td>
                   21
@@ -567,13 +567,13 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.util.HTMLPaneBase.java">org/universAAL/tools/logmonitor/util/HTMLPaneBase.java</a>
                 </td>
                 <td>
-                  29
+                  2
                 </td>
                 <td>
-                  5
+                  0
                 </td>
                 <td>
-                  37
+                  36
                 </td>
               </tr>
                           <tr>
@@ -581,10 +581,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.ontology.gui.OntologyGui.java">org/universAAL/tools/logmonitor/ontology/gui/OntologyGui.java</a>
                 </td>
                 <td>
-                  5
+                  1
                 </td>
                 <td>
-                  6
+                  1
                 </td>
                 <td>
                   16
@@ -595,10 +595,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.BusMemberMonitor.java">org/universAAL/tools/logmonitor/BusMemberMonitor.java</a>
                 </td>
                 <td>
-                  26
+                  2
                 </td>
                 <td>
-                  4
+                  0
                 </td>
                 <td>
                   16
@@ -609,7 +609,7 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.bus_member.LogMonitor.java">org/universAAL/tools/logmonitor/bus_member/LogMonitor.java</a>
                 </td>
                 <td>
-                  10
+                  2
                 </td>
                 <td>
                   1
@@ -623,10 +623,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.util.HTMLBusOperationsPane.java">org/universAAL/tools/logmonitor/util/HTMLBusOperationsPane.java</a>
                 </td>
                 <td>
-                  41
+                  8
                 </td>
                 <td>
-                  21
+                  4
                 </td>
                 <td>
                   29
@@ -637,10 +637,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.util.PatternInfo.java">org/universAAL/tools/logmonitor/util/PatternInfo.java</a>
                 </td>
                 <td>
-                  4
+                  2
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   11
@@ -651,10 +651,10 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.msgflow.gui.MsgFlowPanel.java">org/universAAL/tools/logmonitor/msgflow/gui/MsgFlowPanel.java</a>
                 </td>
                 <td>
-                  41
+                  7
                 </td>
                 <td>
-                  48
+                  3
                 </td>
                 <td>
                   61
@@ -665,7 +665,7 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.ontology.LogMonitor.java">org/universAAL/tools/logmonitor/ontology/LogMonitor.java</a>
                 </td>
                 <td>
-                  13
+                  3
                 </td>
                 <td>
                   1

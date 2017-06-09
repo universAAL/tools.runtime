@@ -27,8 +27,8 @@ under the License.
     <item>
       <title>File: 8,
              Errors: 155,
-             Warnings: 177,
-             Infos: 456
+             Warnings: 5,
+             Infos: 5
       </title>
             <link>http://xtras/tools.runtime/tools.makro-recorder/tools.makro-recorder.swingGUI//checkstyle.html</link>
       <description>
@@ -49,10 +49,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.makro-recorder/tools.makro-recorder.swingGUI//checkstyle.html#org.universAAL.tools.makrorecorder.swingGUI.pattern.resource.ResourceList.java">org/universAAL/tools/makrorecorder/swingGUI/pattern/resource/ResourceList.java</a>
                 </td>
                 <td>
-                  67
+                  0
                 </td>
                 <td>
-                  3
+                  0
                 </td>
                 <td>
                   16
@@ -63,10 +63,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.makro-recorder/tools.makro-recorder.swingGUI//checkstyle.html#org.universAAL.tools.makrorecorder.swingGUI.pattern.resource.ResourceInfoPanel.java">org/universAAL/tools/makrorecorder/swingGUI/pattern/resource/ResourceInfoPanel.java</a>
                 </td>
                 <td>
-                  82
+                  2
                 </td>
                 <td>
-                  4
+                  0
                 </td>
                 <td>
                   21
@@ -77,10 +77,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.makro-recorder/tools.makro-recorder.swingGUI//checkstyle.html#org.universAAL.tools.makrorecorder.swingGUI.pattern.PatternPanel.java">org/universAAL/tools/makrorecorder/swingGUI/pattern/PatternPanel.java</a>
                 </td>
                 <td>
-                  69
+                  0
                 </td>
                 <td>
-                  20
+                  0
                 </td>
                 <td>
                   13
@@ -91,7 +91,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.makro-recorder/tools.makro-recorder.swingGUI//checkstyle.html#org.universAAL.tools.makrorecorder.swingGUI.Activator.java">org/universAAL/tools/makrorecorder/swingGUI/Activator.java</a>
                 </td>
                 <td>
-                  17
+                  0
                 </td>
                 <td>
                   2
@@ -105,10 +105,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.makro-recorder/tools.makro-recorder.swingGUI//checkstyle.html#org.universAAL.tools.makrorecorder.swingGUI.MakroRecorderSwingGUI.java">org/universAAL/tools/makrorecorder/swingGUI/MakroRecorderSwingGUI.java</a>
                 </td>
                 <td>
-                  82
+                  2
                 </td>
                 <td>
-                  53
+                  0
                 </td>
                 <td>
                   34
@@ -119,10 +119,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.makro-recorder/tools.makro-recorder.swingGUI//checkstyle.html#org.universAAL.tools.makrorecorder.swingGUI.pattern.PatternEditFrame.java">org/universAAL/tools/makrorecorder/swingGUI/pattern/PatternEditFrame.java</a>
                 </td>
                 <td>
-                  82
+                  1
                 </td>
                 <td>
-                  72
+                  2
                 </td>
                 <td>
                   26
@@ -133,10 +133,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.makro-recorder/tools.makro-recorder.swingGUI//checkstyle.html#org.universAAL.tools.makrorecorder.swingGUI.pattern.resource.ResourceTree.java">org/universAAL/tools/makrorecorder/swingGUI/pattern/resource/ResourceTree.java</a>
                 </td>
                 <td>
-                  32
+                  0
                 </td>
                 <td>
-                  2
+                  0
                 </td>
                 <td>
                   17
@@ -147,10 +147,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.makro-recorder/tools.makro-recorder.swingGUI//checkstyle.html#org.universAAL.tools.makrorecorder.swingGUI.pattern.resource.EditResourceGUI.java">org/universAAL/tools/makrorecorder/swingGUI/pattern/resource/EditResourceGUI.java</a>
                 </td>
                 <td>
-                  25
+                  0
                 </td>
                 <td>
-                  21
+                  1
                 </td>
                 <td>
                   17

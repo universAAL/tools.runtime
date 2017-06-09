@@ -27,8 +27,8 @@ under the License.
     <item>
       <title>File: 2,
              Errors: 29,
-             Warnings: 6,
-             Infos: 41
+             Warnings: 1,
+             Infos: 3
       </title>
             <link>http://xtras/tools.runtime/tools.uCC/tools.ucc.deploymanagerservice.impl//checkstyle.html</link>
       <description>
@@ -49,10 +49,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.deploymanagerservice.impl//checkstyle.html#org.universAAL.ucc.deploymanagerservice.impl.Activator.java">org/universAAL/ucc/deploymanagerservice/impl/Activator.java</a>
                 </td>
                 <td>
-                  10
+                  0
                 </td>
                 <td>
-                  6
+                  1
                 </td>
                 <td>
                   10
@@ -63,7 +63,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.deploymanagerservice.impl//checkstyle.html#org.universAAL.ucc.deploymanagerservice.impl.DeployManagerServiceImpl.java">org/universAAL/ucc/deploymanagerservice/impl/DeployManagerServiceImpl.java</a>
                 </td>
                 <td>
-                  31
+                  3
                 </td>
                 <td>
                   0

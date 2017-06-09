@@ -27,8 +27,8 @@ under the License.
     <item>
       <title>File: 3,
              Errors: 186,
-             Warnings: 31,
-             Infos: 742
+             Warnings: 9,
+             Infos: 47
       </title>
             <link>http://xtras/tools.runtime/tools.uCC/tools.ucc.profile.agent//checkstyle.html</link>
       <description>
@@ -49,7 +49,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.profile.agent//checkstyle.html#org.universAAL.ucc.profile.agent.ProfileAgent.java">org/universAAL/ucc/profile/agent/ProfileAgent.java</a>
                 </td>
                 <td>
-                  126
+                  25
                 </td>
                 <td>
                   2
@@ -63,10 +63,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.profile.agent//checkstyle.html#org.universAAL.ucc.profile.agent.osgi.Activator.java">org/universAAL/ucc/profile/agent/osgi/Activator.java</a>
                 </td>
                 <td>
-                  136
+                  18
                 </td>
                 <td>
-                  7
+                  1
                 </td>
                 <td>
                   10
@@ -77,10 +77,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.profile.agent//checkstyle.html#org.universAAL.ucc.profile.agent.impl.ProfileAgentImpl.java">org/universAAL/ucc/profile/agent/impl/ProfileAgentImpl.java</a>
                 </td>
                 <td>
-                  480
+                  4
                 </td>
                 <td>
-                  22
+                  6
                 </td>
                 <td>
                   126

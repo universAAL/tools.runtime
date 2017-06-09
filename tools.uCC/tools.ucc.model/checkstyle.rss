@@ -26,9 +26,9 @@ under the License.
     <copyright>&#169;2017 universAAL Consortium</copyright>
     <item>
       <title>File: 59,
-             Errors: 1821,
-             Warnings: 198,
-             Infos: 2344
+             Errors: 1664,
+             Warnings: 12,
+             Infos: 1242
       </title>
             <link>http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html</link>
       <description>
@@ -49,13 +49,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.Dependency.java">org/universAAL/ucc/model/usrv/Dependency.java</a>
                 </td>
                 <td>
-                  32
+                  22
                 </td>
                 <td>
-                  3
+                  0
                 </td>
                 <td>
-                  13
+                  11
                 </td>
               </tr>
                           <tr>
@@ -63,10 +63,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.jaxb.CalendarValue.java">org/universAAL/ucc/model/jaxb/CalendarValue.java</a>
                 </td>
                 <td>
-                  5
+                  1
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   6
@@ -77,13 +77,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.Config.java">org/universAAL/ucc/model/usrv/Config.java</a>
                 </td>
                 <td>
-                  30
+                  20
                 </td>
                 <td>
-                  3
+                  0
                 </td>
                 <td>
-                  13
+                  11
                 </td>
               </tr>
                           <tr>
@@ -91,10 +91,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.Provider.java">org/universAAL/ucc/model/Provider.java</a>
                 </td>
                 <td>
-                  11
+                  2
                 </td>
                 <td>
-                  7
+                  0
                 </td>
                 <td>
                   21
@@ -105,10 +105,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.UAPPPart.java">org/universAAL/ucc/model/UAPPPart.java</a>
                 </td>
                 <td>
-                  32
+                  3
                 </td>
                 <td>
-                  22
+                  0
                 </td>
                 <td>
                   64
@@ -119,13 +119,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.CapabilityType.java">org/universAAL/ucc/model/usrv/CapabilityType.java</a>
                 </td>
                 <td>
-                  27
+                  18
                 </td>
                 <td>
-                  3
+                  0
                 </td>
                 <td>
-                  13
+                  11
                 </td>
               </tr>
                           <tr>
@@ -133,10 +133,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.jaxb.BooleanValue.java">org/universAAL/ucc/model/jaxb/BooleanValue.java</a>
                 </td>
                 <td>
-                  6
+                  1
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   8
@@ -147,13 +147,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.HardwareType.java">org/universAAL/ucc/model/usrv/HardwareType.java</a>
                 </td>
                 <td>
-                  43
+                  26
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
-                  25
+                  21
                 </td>
               </tr>
                           <tr>
@@ -161,7 +161,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.LicenseCategoryType.java">org/universAAL/ucc/model/usrv/LicenseCategoryType.java</a>
                 </td>
                 <td>
-                  11
+                  7
                 </td>
                 <td>
                   0
@@ -175,7 +175,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.ReqCriticalityType.java">org/universAAL/ucc/model/usrv/ReqCriticalityType.java</a>
                 </td>
                 <td>
-                  11
+                  7
                 </td>
                 <td>
                   0
@@ -189,7 +189,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.package-info.java">org/universAAL/ucc/model/usrv/package-info.java</a>
                 </td>
                 <td>
-                  7
+                  5
                 </td>
                 <td>
                   0
@@ -203,13 +203,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.Broker.java">org/universAAL/ucc/model/usrv/Broker.java</a>
                 </td>
                 <td>
-                  26
+                  17
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
-                  13
+                  11
                 </td>
               </tr>
                           <tr>
@@ -217,7 +217,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.jaxb.MyFactory.java">org/universAAL/ucc/model/jaxb/MyFactory.java</a>
                 </td>
                 <td>
-                  20
+                  2
                 </td>
                 <td>
                   1
@@ -231,7 +231,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.LogicalCriteriaType.java">org/universAAL/ucc/model/usrv/LogicalCriteriaType.java</a>
                 </td>
                 <td>
-                  11
+                  7
                 </td>
                 <td>
                   0
@@ -245,13 +245,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.ExecutionUnit.java">org/universAAL/ucc/model/usrv/ExecutionUnit.java</a>
                 </td>
                 <td>
-                  33
+                  21
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
-                  19
+                  16
                 </td>
               </tr>
                           <tr>
@@ -259,7 +259,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.SpaceType.java">org/universAAL/ucc/model/usrv/SpaceType.java</a>
                 </td>
                 <td>
-                  11
+                  7
                 </td>
                 <td>
                   0
@@ -273,13 +273,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.Bundle.java">org/universAAL/ucc/model/usrv/Bundle.java</a>
                 </td>
                 <td>
-                  43
+                  28
                 </td>
                 <td>
-                  5
+                  0
                 </td>
                 <td>
-                  31
+                  27
                 </td>
               </tr>
                           <tr>
@@ -287,10 +287,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.jaxb.OntologyInstance.java">org/universAAL/ucc/model/jaxb/OntologyInstance.java</a>
                 </td>
                 <td>
-                  13
+                  1
                 </td>
                 <td>
-                  3
+                  0
                 </td>
                 <td>
                   16
@@ -301,10 +301,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.jaxb.DoubleValue.java">org/universAAL/ucc/model/jaxb/DoubleValue.java</a>
                 </td>
                 <td>
-                  7
+                  0
                 </td>
                 <td>
-                  2
+                  0
                 </td>
                 <td>
                   11
@@ -315,10 +315,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.AppItem.java">org/universAAL/ucc/model/AppItem.java</a>
                 </td>
                 <td>
-                  10
+                  0
                 </td>
                 <td>
-                  5
+                  0
                 </td>
                 <td>
                   26
@@ -329,13 +329,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.DeploymentUnit.java">org/universAAL/ucc/model/usrv/DeploymentUnit.java</a>
                 </td>
                 <td>
-                  155
+                  91
                 </td>
                 <td>
-                  4
+                  0
                 </td>
                 <td>
-                  96
+                  81
                 </td>
               </tr>
                           <tr>
@@ -343,13 +343,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.VersionType.java">org/universAAL/ucc/model/usrv/VersionType.java</a>
                 </td>
                 <td>
-                  31
+                  19
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
-                  31
+                  27
                 </td>
               </tr>
                           <tr>
@@ -357,13 +357,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.ConfigFile.java">org/universAAL/ucc/model/usrv/ConfigFile.java</a>
                 </td>
                 <td>
-                  30
+                  20
                 </td>
                 <td>
-                  3
+                  0
                 </td>
                 <td>
-                  13
+                  11
                 </td>
               </tr>
                           <tr>
@@ -371,7 +371,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.UAPPReqAtom.java">org/universAAL/ucc/model/UAPPReqAtom.java</a>
                 </td>
                 <td>
-                  16
+                  0
                 </td>
                 <td>
                   0
@@ -385,10 +385,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.jaxb.EnumObject.java">org/universAAL/ucc/model/jaxb/EnumObject.java</a>
                 </td>
                 <td>
-                  18
+                  1
                 </td>
                 <td>
-                  7
+                  0
                 </td>
                 <td>
                   36
@@ -399,10 +399,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.RegisteredService.java">org/universAAL/ucc/model/RegisteredService.java</a>
                 </td>
                 <td>
-                  14
+                  0
                 </td>
                 <td>
-                  9
+                  0
                 </td>
                 <td>
                   47
@@ -413,13 +413,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.ContactType.java">org/universAAL/ucc/model/usrv/ContactType.java</a>
                 </td>
                 <td>
-                  90
+                  54
                 </td>
                 <td>
-                  2
+                  0
                 </td>
                 <td>
-                  62
+                  52
                 </td>
               </tr>
                           <tr>
@@ -427,13 +427,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.ArtifactType.java">org/universAAL/ucc/model/usrv/ArtifactType.java</a>
                 </td>
                 <td>
-                  26
+                  17
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
-                  13
+                  11
                 </td>
               </tr>
                           <tr>
@@ -441,7 +441,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.Activator.java">org/universAAL/ucc/model/Activator.java</a>
                 </td>
                 <td>
-                  5
+                  2
                 </td>
                 <td>
                   0
@@ -455,7 +455,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.OsType.java">org/universAAL/ucc/model/usrv/OsType.java</a>
                 </td>
                 <td>
-                  11
+                  7
                 </td>
                 <td>
                   0
@@ -469,13 +469,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.Feature.java">org/universAAL/ucc/model/usrv/Feature.java</a>
                 </td>
                 <td>
-                  60
+                  35
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
-                  33
+                  28
                 </td>
               </tr>
                           <tr>
@@ -483,13 +483,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.ToBeDefined.java">org/universAAL/ucc/model/usrv/ToBeDefined.java</a>
                 </td>
                 <td>
-                  28
+                  21
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
-                  11
+                  10
                 </td>
               </tr>
                           <tr>
@@ -497,10 +497,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.jaxb.Profiles.java">org/universAAL/ucc/model/jaxb/Profiles.java</a>
                 </td>
                 <td>
-                  15
+                  1
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   6
@@ -525,7 +525,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.LogicalRelationType.java">org/universAAL/ucc/model/usrv/LogicalRelationType.java</a>
                 </td>
                 <td>
-                  11
+                  7
                 </td>
                 <td>
                   0
@@ -539,13 +539,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.LicenseType.java">org/universAAL/ucc/model/usrv/LicenseType.java</a>
                 </td>
                 <td>
-                  34
+                  22
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
-                  19
+                  16
                 </td>
               </tr>
                           <tr>
@@ -553,13 +553,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.OntologyType.java">org/universAAL/ucc/model/usrv/OntologyType.java</a>
                 </td>
                 <td>
-                  59
+                  36
                 </td>
                 <td>
-                  2
+                  0
                 </td>
                 <td>
-                  28
+                  24
                 </td>
               </tr>
                           <tr>
@@ -567,13 +567,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.AalUapp.java">org/universAAL/ucc/model/usrv/AalUapp.java</a>
                 </td>
                 <td>
-                  367
+                  215
                 </td>
                 <td>
-                  11
+                  0
                 </td>
                 <td>
-                  217
+                  185
                 </td>
               </tr>
                           <tr>
@@ -581,13 +581,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.ApplicationType.java">org/universAAL/ucc/model/usrv/ApplicationType.java</a>
                 </td>
                 <td>
-                  50
+                  30
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
-                  31
+                  26
                 </td>
               </tr>
                           <tr>
@@ -595,13 +595,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.jaxb.SimpleObject.java">org/universAAL/ucc/model/jaxb/SimpleObject.java</a>
                 </td>
                 <td>
-                  34
+                  1
                 </td>
                 <td>
-                  6
+                  0
                 </td>
                 <td>
-                  37
+                  31
                 </td>
               </tr>
                           <tr>
@@ -609,7 +609,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.ObjectFactory.java">org/universAAL/ucc/model/usrv/ObjectFactory.java</a>
                 </td>
                 <td>
-                  103
+                  66
                 </td>
                 <td>
                   4
@@ -623,13 +623,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.ProfileType.java">org/universAAL/ucc/model/usrv/ProfileType.java</a>
                 </td>
                 <td>
-                  26
+                  17
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
-                  13
+                  11
                 </td>
               </tr>
                           <tr>
@@ -637,7 +637,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.PlatformType.java">org/universAAL/ucc/model/usrv/PlatformType.java</a>
                 </td>
                 <td>
-                  11
+                  7
                 </td>
                 <td>
                   0
@@ -651,13 +651,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.AalUsrv.java">org/universAAL/ucc/model/usrv/AalUsrv.java</a>
                 </td>
                 <td>
-                  263
+                  157
                 </td>
                 <td>
-                  7
+                  0
                 </td>
                 <td>
-                  147
+                  126
                 </td>
               </tr>
                           <tr>
@@ -665,10 +665,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.preferences.Preferences.java">org/universAAL/ucc/model/preferences/Preferences.java</a>
                 </td>
                 <td>
-                  19
+                  2
                 </td>
                 <td>
-                  10
+                  1
                 </td>
                 <td>
                   32
@@ -679,13 +679,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.Part.java">org/universAAL/ucc/model/usrv/Part.java</a>
                 </td>
                 <td>
-                  105
+                  72
                 </td>
                 <td>
-                  3
+                  0
                 </td>
                 <td>
-                  65
+                  56
                 </td>
               </tr>
                           <tr>
@@ -693,13 +693,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.ReqGroupType.java">org/universAAL/ucc/model/usrv/ReqGroupType.java</a>
                 </td>
                 <td>
-                  31
+                  22
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
-                  15
+                  13
                 </td>
               </tr>
                           <tr>
@@ -707,10 +707,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.install.License.java">org/universAAL/ucc/model/install/License.java</a>
                 </td>
                 <td>
-                  10
+                  2
                 </td>
                 <td>
-                  5
+                  1
                 </td>
                 <td>
                   22
@@ -721,10 +721,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.jaxb.IntegerValue.java">org/universAAL/ucc/model/jaxb/IntegerValue.java</a>
                 </td>
                 <td>
-                  8
+                  1
                 </td>
                 <td>
-                  2
+                  0
                 </td>
                 <td>
                   11
@@ -735,13 +735,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.FeaturesRoot.java">org/universAAL/ucc/model/usrv/FeaturesRoot.java</a>
                 </td>
                 <td>
-                  38
+                  23
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
-                  15
+                  13
                 </td>
               </tr>
                           <tr>
@@ -749,10 +749,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.jaxb.StringValue.java">org/universAAL/ucc/model/jaxb/StringValue.java</a>
                 </td>
                 <td>
-                  8
+                  1
                 </td>
                 <td>
-                  2
+                  0
                 </td>
                 <td>
                   11
@@ -763,7 +763,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.EmbeddingType.java">org/universAAL/ucc/model/usrv/EmbeddingType.java</a>
                 </td>
                 <td>
-                  11
+                  7
                 </td>
                 <td>
                   0
@@ -777,13 +777,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.ReqType.java">org/universAAL/ucc/model/usrv/ReqType.java</a>
                 </td>
                 <td>
-                  34
+                  22
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
-                  19
+                  16
                 </td>
               </tr>
                           <tr>
@@ -791,10 +791,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.AALService.java">org/universAAL/ucc/model/AALService.java</a>
                 </td>
                 <td>
-                  29
+                  1
                 </td>
                 <td>
-                  25
+                  1
                 </td>
                 <td>
                   68
@@ -805,13 +805,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.ReqAtomType.java">org/universAAL/ucc/model/usrv/ReqAtomType.java</a>
                 </td>
                 <td>
-                  34
+                  23
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
-                  19
+                  16
                 </td>
               </tr>
                           <tr>
@@ -819,10 +819,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.UAPP.java">org/universAAL/ucc/model/UAPP.java</a>
                 </td>
                 <td>
-                  17
+                  2
                 </td>
                 <td>
-                  9
+                  0
                 </td>
                 <td>
                   36
@@ -833,10 +833,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.jaxb.CollectionValues.java">org/universAAL/ucc/model/jaxb/CollectionValues.java</a>
                 </td>
                 <td>
-                  44
+                  4
                 </td>
                 <td>
-                  11
+                  4
                 </td>
                 <td>
                   38
@@ -847,10 +847,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.jaxb.Subprofile.java">org/universAAL/ucc/model/jaxb/Subprofile.java</a>
                 </td>
                 <td>
-                  45
+                  0
                 </td>
                 <td>
-                  4
+                  0
                 </td>
                 <td>
                   21
@@ -861,13 +861,13 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.model//checkstyle.html#org.universAAL.ucc.model.usrv.HumanType.java">org/universAAL/ucc/model/usrv/HumanType.java</a>
                 </td>
                 <td>
-                  64
+                  38
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
-                  43
+                  36
                 </td>
               </tr>
                       </tbody>

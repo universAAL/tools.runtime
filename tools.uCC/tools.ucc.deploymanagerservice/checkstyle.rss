@@ -28,7 +28,7 @@ under the License.
       <title>File: 1,
              Errors: 25,
              Warnings: 1,
-             Infos: 27
+             Infos: 10
       </title>
             <link>http://xtras/tools.runtime/tools.uCC/tools.ucc.deploymanagerservice//checkstyle.html</link>
       <description>
@@ -49,7 +49,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.deploymanagerservice//checkstyle.html#org.universAAL.ucc.deploymanagerservice.DeployManagerService.java">org/universAAL/ucc/deploymanagerservice/DeployManagerService.java</a>
                 </td>
                 <td>
-                  27
+                  10
                 </td>
                 <td>
                   1

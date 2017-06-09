@@ -27,8 +27,8 @@ under the License.
     <item>
       <title>File: 14,
              Errors: 237,
-             Warnings: 23,
-             Infos: 981
+             Warnings: 7,
+             Infos: 38
       </title>
             <link>http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configurator//checkstyle.html</link>
       <description>
@@ -49,7 +49,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configurator//checkstyle.html#org.universAAL.ucc.configuration.exception.ConfigurationInstanceAlreadyExistsException.java">org/universAAL/ucc/configuration/exception/ConfigurationInstanceAlreadyExistsException.java</a>
                 </td>
                 <td>
-                  5
+                  2
                 </td>
                 <td>
                   1
@@ -63,10 +63,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configurator//checkstyle.html#org.universAAL.ucc.configuration.view.ConfigurationSaveWindow.java">org/universAAL/ucc/configuration/view/ConfigurationSaveWindow.java</a>
                 </td>
                 <td>
-                  95
+                  2
                 </td>
                 <td>
-                  2
+                  1
                 </td>
                 <td>
                   5
@@ -77,10 +77,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configurator//checkstyle.html#org.universAAL.ucc.configuration.view.YesNoDialog.java">org/universAAL/ucc/configuration/view/YesNoDialog.java</a>
                 </td>
                 <td>
-                  10
+                  3
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   11
@@ -91,10 +91,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configurator//checkstyle.html#org.universAAL.ucc.configuration.view.ConfigurationListSelect.java">org/universAAL/ucc/configuration/view/ConfigurationListSelect.java</a>
                 </td>
                 <td>
-                  74
+                  2
                 </td>
                 <td>
-                  2
+                  1
                 </td>
                 <td>
                   17
@@ -105,10 +105,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configurator//checkstyle.html#org.universAAL.ucc.configuration.view.SimpleConfiguratorTextField.java">org/universAAL/ucc/configuration/view/SimpleConfiguratorTextField.java</a>
                 </td>
                 <td>
-                  51
+                  3
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   17
@@ -119,10 +119,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configurator//checkstyle.html#org.universAAL.ucc.configuration.view.SimpleConfiguratorPasswordField.java">org/universAAL/ucc/configuration/view/SimpleConfiguratorPasswordField.java</a>
                 </td>
                 <td>
-                  48
+                  1
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   18
@@ -133,10 +133,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configurator//checkstyle.html#org.universAAL.ucc.configuration.view.ConfigurationOverviewWindow.java">org/universAAL/ucc/configuration/view/ConfigurationOverviewWindow.java</a>
                 </td>
                 <td>
-                  304
+                  4
                 </td>
                 <td>
-                  2
+                  1
                 </td>
                 <td>
                   57
@@ -147,7 +147,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configurator//checkstyle.html#org.universAAL.ucc.configuration.view.ConfigurationPanel.java">org/universAAL/ucc/configuration/view/ConfigurationPanel.java</a>
                 </td>
                 <td>
-                  79
+                  4
                 </td>
                 <td>
                   0
@@ -161,10 +161,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configurator//checkstyle.html#org.universAAL.ucc.configuration.controller.VaadinConfigurationController.java">org/universAAL/ucc/configuration/controller/VaadinConfigurationController.java</a>
                 </td>
                 <td>
-                  134
+                  7
                 </td>
                 <td>
-                  4
+                  1
                 </td>
                 <td>
                   28
@@ -175,10 +175,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configurator//checkstyle.html#org.universAAL.ucc.configuration.beans.ConfigurationSaveOptions.java">org/universAAL/ucc/configuration/beans/ConfigurationSaveOptions.java</a>
                 </td>
                 <td>
-                  10
+                  3
                 </td>
                 <td>
-                  7
+                  1
                 </td>
                 <td>
                   36
@@ -189,7 +189,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configurator//checkstyle.html#org.universAAL.ucc.configuration.view.SaveFormFactory.java">org/universAAL/ucc/configuration/view/SaveFormFactory.java</a>
                 </td>
                 <td>
-                  31
+                  2
                 </td>
                 <td>
                   0
@@ -203,7 +203,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configurator//checkstyle.html#org.universAAL.ucc.configuration.internal.Activator.java">org/universAAL/ucc/configuration/internal/Activator.java</a>
                 </td>
                 <td>
-                  8
+                  0
                 </td>
                 <td>
                   1
@@ -217,7 +217,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configurator//checkstyle.html#org.universAAL.ucc.configuration.view.WhichBundleShouldBeConfiguredWindow.java">org/universAAL/ucc/configuration/view/WhichBundleShouldBeConfiguredWindow.java</a>
                 </td>
                 <td>
-                  61
+                  5
                 </td>
                 <td>
                   0
@@ -231,10 +231,10 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configurator//checkstyle.html#org.universAAL.ucc.configuration.view.MultiselectionList.java">org/universAAL/ucc/configuration/view/MultiselectionList.java</a>
                 </td>
                 <td>
-                  71
+                  0
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   18
