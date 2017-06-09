@@ -6,7 +6,7 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.Form;
 import com.vaadin.ui.HorizontalLayout;
 
-public class TabForm extends Form{
+public class TabForm extends Form {
 	private Button saveButton;
 	private Button resetButton;
 	private Button editButton;
@@ -15,7 +15,7 @@ public class TabForm extends Form{
 	private String id;
 	private ResourceBundle bundle;
 	private String base;
-	
+
 	public TabForm() {
 		base = "resources.ucc";
 		bundle = ResourceBundle.getBundle(base);
@@ -23,8 +23,7 @@ public class TabForm extends Form{
 		setImmediate(true);
 		setWriteThrough(false);
 	}
-	
-	
+
 	public void createFooter() {
 		HorizontalLayout hl = new HorizontalLayout();
 		hl.setSpacing(true);
@@ -40,7 +39,6 @@ public class TabForm extends Form{
 		hl.addComponent(deleteButton);
 		setFooter(hl);
 	}
-	
 
 	public Button getSaveButton() {
 		return saveButton;
@@ -82,18 +80,12 @@ public class TabForm extends Form{
 		this.header = header;
 	}
 
-
 	public String getId() {
 		return id;
 	}
 
-
 	public void setId(String id) {
 		this.id = id;
 	}
-	
-	
-	
-	
 
 }

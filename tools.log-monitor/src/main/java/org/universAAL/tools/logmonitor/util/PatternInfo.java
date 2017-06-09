@@ -13,14 +13,14 @@ import org.universAAL.middleware.context.ContextEventPattern;
  */
 public class PatternInfo {
 
-    public ContextEventPattern pattern;
+	public ContextEventPattern pattern;
 
-    public String serialized = null;
-    public String serializedSubject = null;
-    public String serializedPredicate = null;
-    public String serializedObject = null;
+	public String serialized = null;
+	public String serializedSubject = null;
+	public String serializedPredicate = null;
+	public String serializedObject = null;
 
-    public PatternInfo(ContextEventPattern pattern) {
-	this.pattern = pattern;
-    }
+	public PatternInfo(ContextEventPattern pattern) {
+		this.pattern = pattern;
+	}
 }

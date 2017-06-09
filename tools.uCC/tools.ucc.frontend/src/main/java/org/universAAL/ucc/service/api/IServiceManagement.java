@@ -12,8 +12,8 @@ public interface IServiceManagement {
 	public String getInstalledUnitsForService(String serviceId);
 
 	public List<String> getInstalledApps(String serviceId);
-	
+
 	public void addUserIDToMenuEntry(String serviceId, String appId);
-	
+
 	public boolean isServiceId(String serviceId);
 }

@@ -5,11 +5,13 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Clase Java para getSessionKey complex type.
+ * <p>
+ * Clase Java para getSessionKey complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>
+ * El siguiente fragmento de esquema especifica el contenido que se espera que
+ * haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="getSessionKey">
@@ -27,61 +29,52 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "getSessionKey", propOrder = {
-    "userName",
-    "password"
-})
+@XmlType(name = "getSessionKey", propOrder = { "userName", "password" })
 public class GetSessionKey {
 
-    protected String userName;
-    protected String password;
+	protected String userName;
+	protected String password;
 
-    /**
-     * Obtiene el valor de la propiedad userName.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getUserName() {
-        return userName;
-    }
+	/**
+	 * Obtiene el valor de la propiedad userName.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getUserName() {
+		return userName;
+	}
 
-    /**
-     * Define el valor de la propiedad userName.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setUserName(String value) {
-        this.userName = value;
-    }
+	/**
+	 * Define el valor de la propiedad userName.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setUserName(String value) {
+		this.userName = value;
+	}
 
-    /**
-     * Obtiene el valor de la propiedad password.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getPassword() {
-        return password;
-    }
+	/**
+	 * Obtiene el valor de la propiedad password.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getPassword() {
+		return password;
+	}
 
-    /**
-     * Define el valor de la propiedad password.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setPassword(String value) {
-        this.password = value;
-    }
+	/**
+	 * Define el valor de la propiedad password.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setPassword(String value) {
+		this.password = value;
+	}
 
 }

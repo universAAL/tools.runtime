@@ -14,7 +14,7 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Window;
 
 public class UsrvInfoController implements Button.ClickListener {
-//	private AALService usrv;
+	// private AALService usrv;
 	private UsrvInformationWindow win;
 	private LicenceWindow lWin;
 	private UccUI app;
@@ -25,27 +25,23 @@ public class UsrvInfoController implements Button.ClickListener {
 		System.err.println("in UsrvInfoController");
 		base = "resources.ucc";
 		bundle = ResourceBundle.getBundle(base);
-//		this.usrv = usrv;
+		// this.usrv = usrv;
 		this.app = app;
 		win = new UsrvInformationWindow();
 		win.getOk().addListener(this);
 		win.getCancel().addListener(this);
 
-		win.getForm().getField(bundle.getString("name.label"))
-				.setValue(usrv.getName());
+		win.getForm().getField(bundle.getString("name.label")).setValue(usrv.getName());
 		win.getNameTxt().setReadOnly(true);
 		win.getProvider().setValue(usrv.getProvider());
-		win.getForm().getField(bundle.getString("provider.label"))
-				.setValue(usrv.getProvider());
+		win.getForm().getField(bundle.getString("provider.label")).setValue(usrv.getProvider());
 		win.getProvider().setReadOnly(true);
-		win.getForm().getField(bundle.getString("description.label"))
-				.setValue(usrv.getDescription());
+		win.getForm().getField(bundle.getString("description.label")).setValue(usrv.getDescription());
 		win.getUsrvDescription().setReadOnly(true);
 		String version = String.valueOf(usrv.getMajor() + ".");
 		version = version.concat(String.valueOf(usrv.getMinor() + "."));
 		version = version.concat(String.valueOf(usrv.getMicro()));
-		win.getForm().getField(bundle.getString("version.label"))
-				.setValue(version);
+		win.getForm().getField(bundle.getString("version.label")).setValue(version);
 		win.getVersion().setReadOnly(true);
 		// for(String s : usrv.getTags()) {
 		// win.getTags().addItem(s);
@@ -58,8 +54,7 @@ public class UsrvInfoController implements Button.ClickListener {
 			System.out.println("[UsrvInfoController] got UccUI");
 			Window mainW = app.getMainWindow();
 			if (mainW == null)
-				System.out
-						.println("[UsrvInfoController] can not get main window!");
+				System.out.println("[UsrvInfoController] can not get main window!");
 			else {
 				System.out.println("[UsrvInfoController] got main window");
 				app.getMainWindow().addWindow(win);
@@ -77,8 +72,7 @@ public class UsrvInfoController implements Button.ClickListener {
 		}
 		if (event.getButton() == win.getCancel()) {
 			app.getMainWindow().removeWindow(win);
-			app.getMainWindow()
-					.showNotification(bundle.getString("break.note"));
+			app.getMainWindow().showNotification(bundle.getString("break.note"));
 			deleteFiles(Activator.getTempUsrvFiles());
 		}
 
@@ -87,13 +81,10 @@ public class UsrvInfoController implements Button.ClickListener {
 	private void deleteFiles(File path) {
 		File[] files = path.listFiles();
 		for (File del : files) {
-			if (del.isDirectory()
-					&& !del.getPath().substring(del.getPath().lastIndexOf(".") + 1)
-							.equals("usrv")) {
+			if (del.isDirectory() && !del.getPath().substring(del.getPath().lastIndexOf(".") + 1).equals("usrv")) {
 				deleteFiles(del);
 			}
-			if (!del.getPath().substring(del.getPath().lastIndexOf(".") + 1)
-					.equals("usrv"))
+			if (!del.getPath().substring(del.getPath().lastIndexOf(".") + 1).equals("usrv"))
 				del.delete();
 		}
 

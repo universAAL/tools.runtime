@@ -6,8 +6,7 @@ public class CalendarValue extends SimpleObject {
 
 	private String calendar;
 
-
-	@XmlElement(name="value")
+	@XmlElement(name = "value")
 	public String getCalendar() {
 		return calendar;
 	}

@@ -44,8 +44,7 @@ public class DeploymentInformationView extends Window {
 		setClosable(false);
 	}
 
-	public VerticalLayout createSecondComponent(DeployStrategyView stratView,
-			DeployConfigView confView) {
+	public VerticalLayout createSecondComponent(DeployStrategyView stratView, DeployConfigView confView) {
 		VerticalLayout vl = new VerticalLayout();
 		vl.setSizeFull();
 		vl.setMargin(true);
@@ -98,7 +97,5 @@ public class DeploymentInformationView extends Window {
 	public void setCancel(Button cancel) {
 		this.cancel = cancel;
 	}
-	
-	
 
 }

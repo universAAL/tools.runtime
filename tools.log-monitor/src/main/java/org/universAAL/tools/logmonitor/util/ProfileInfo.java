@@ -12,18 +12,18 @@ import org.universAAL.middleware.service.owls.profile.ServiceProfile;
  *
  */
 public class ProfileInfo {
-    
-    public ServiceProfile profile;
-    
-    public String serialized;
-    
-    // provider URI is the bus member URI
-    public String providerURI;
-    
-    public String serviceURI;
 
-    public ProfileInfo(ServiceProfile profile, String providerURI) {
-	this.profile = profile;
-	this.providerURI = providerURI;
-    }
+	public ServiceProfile profile;
+
+	public String serialized;
+
+	// provider URI is the bus member URI
+	public String providerURI;
+
+	public String serviceURI;
+
+	public ProfileInfo(ServiceProfile profile, String providerURI) {
+		this.profile = profile;
+		this.providerURI = providerURI;
+	}
 }

@@ -26,12 +26,11 @@ import org.universAAL.middleware.rdf.Resource;
  * 
  */
 public interface BusMemberListener {
-    public void add(final MemberData m);
+	public void add(final MemberData m);
 
-    public void remove(final String busMemberID);
+	public void remove(final String busMemberID);
 
-    public void regParamsAdded(final String busMemberID, final Resource[] params);
+	public void regParamsAdded(final String busMemberID, final Resource[] params);
 
-    public void regParamsRemoved(final String busMemberID,
-	    final Resource[] params);
+	public void regParamsRemoved(final String busMemberID, final Resource[] params);
 }

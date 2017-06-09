@@ -25,7 +25,7 @@ public class Model implements IServiceModel {
 	public Model() {
 		srvReg = (IServiceRegistration) (new ServiceRegistration());
 		srvMan = (IServiceManagement) (new ServiceManagment());
-		SERVICEFILENAME = Activator.getConfigHome().getAbsolutePath() +"/services.xml";
+		SERVICEFILENAME = Activator.getConfigHome().getAbsolutePath() + "/services.xml";
 	}
 
 	public IServiceRegistration getServiceRegistration() {
@@ -36,22 +36,20 @@ public class Model implements IServiceModel {
 		return srvMan;
 	}
 
-	public static /*protected*/ Document getSrvDocument() {
+	public static /* protected */ Document getSrvDocument() {
 		if (doc == null) {
 			File file = new File(SERVICEFILENAME);
 			try {
 				if (file.exists()) {
-					DocumentBuilderFactory dbf = DocumentBuilderFactory
-							.newInstance();
+					DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 					DocumentBuilder db;
 					db = dbf.newDocumentBuilder();
 					doc = db.parse(file);
 				} else {
-					doc = DocumentBuilderFactory.newInstance()
-							.newDocumentBuilder().newDocument();
+					doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument();
 					Element appRoot = doc.createElement("services");
 					doc.appendChild(appRoot);
-					//My changes
+					// My changes
 					Element serv = doc.createElement("service");
 					serv.setAttribute("serviceId", "");
 					appRoot.appendChild(serv);
@@ -59,17 +57,13 @@ public class Model implements IServiceModel {
 					serv.appendChild(app);
 					Element menu = doc.createElement("menuEntry");
 					serv.appendChild(menu);
-					//My changes
+					// My changes
 					try {
-						TransformerFactory
-								.newInstance()
-								.newTransformer()
-								.transform(new DOMSource(doc),
-										new StreamResult(Model.SERVICEFILENAME));
+						TransformerFactory.newInstance().newTransformer().transform(new DOMSource(doc),
+								new StreamResult(Model.SERVICEFILENAME));
 					} catch (Exception e) {
 						e.printStackTrace();
-						System.out
-								.println("[Model.getSrvDocument] can not create the root element!");
+						System.out.println("[Model.getSrvDocument] can not create the root element!");
 					}
 				}
 

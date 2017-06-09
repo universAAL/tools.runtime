@@ -11,7 +11,7 @@ import org.universAAL.ucc.configuration.storage.interfaces.ConfigurationInstance
 import org.universAAL.ucc.configuration.storage.internal.Activator;
 
 public class StorageServiceTracker extends ServiceTracker {
-	
+
 	private ConfigPreferences pref;
 
 	public StorageServiceTracker(BundleContext context, Class<ConfigurationInstancesStorage> clazz,
@@ -29,16 +29,16 @@ public class StorageServiceTracker extends ServiceTracker {
 		LogUtils.logInfo(Activator.getContext(), this.getClass(), "addingService",
 				new Object[] { "Service added: " + reference.getClass().toString() }, null);
 
-		try{
+		try {
 			Object o = context.getService(reference);
-			if(o instanceof ConfigurationInstancesStorage){
-				pref.setStorage((ConfigurationInstancesStorage)o);
+			if (o instanceof ConfigurationInstancesStorage) {
+				pref.setStorage((ConfigurationInstancesStorage) o);
 			}
-		}catch(ClassCastException e){
+		} catch (ClassCastException e) {
 			LogUtils.logError(Activator.getContext(), this.getClass(), "addingService",
 					new Object[] { "Service cannot casted to ConfigurationInstancesStorage!" }, null);
 		}
 		return super.addingService(reference);
 	}
-	
+
 }

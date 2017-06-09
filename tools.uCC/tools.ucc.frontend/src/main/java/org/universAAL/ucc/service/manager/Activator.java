@@ -48,23 +48,21 @@ public class Activator implements BundleActivator {
 	private UstoreUtil client;
 	private static DataAccess dataAccess;
 	private static ParserService parserService;
-	private static File configHome;		// confadmin/uCC
-	private static File tempUsrvFiles;	// confadmin/uCC/tempUsrvFiles
-	private static File setupProps;		// confadmin/uCC/setup/setup.properties
-	private static File uccdb;			// confadmin/uCC/db
+	private static File configHome; // confadmin/uCC
+	private static File tempUsrvFiles; // confadmin/uCC/tempUsrvFiles
+	private static File setupProps; // confadmin/uCC/setup/setup.properties
+	private static File uccdb; // confadmin/uCC/db
 	private static ServiceCaller sc;
 
 	public void start(BundleContext context) throws Exception {
 		Activator.bc = context;
-		mContext = uAALBundleContainer.THE_CONTAINER
-			.registerModule(new Object[] { context });
+		mContext = uAALBundleContainer.THE_CONTAINER.registerModule(new Object[] { context });
 
 		configHome = new File(mContext.getConfigHome().getParentFile(), "uCC");
 		tempUsrvFiles = new File(configHome, "tempUsrvFiles");
 		uccdb = new File(configHome, "db");
-//		 client = new UstoreUtil();
-		ServiceReference ref = bc.getServiceReference(DataAccess.class
-				.getName());
+		// client = new UstoreUtil();
+		ServiceReference ref = bc.getServiceReference(DataAccess.class.getName());
 		dataAccess = (DataAccess) bc.getService(ref);
 		// Setting setup properties in etc/ucc directory
 		File confHome = new File(configHome, "setup");
@@ -79,8 +77,7 @@ public class Activator implements BundleActivator {
 			prop.setProperty("pwd", "uAAL");
 			prop.setProperty("uccPort", "9090");
 			prop.setProperty("uccUrl", "ucc-universaal.no-ip.org");
-			prop.setProperty(
-					"shopUrl",
+			prop.setProperty("shopUrl",
 					"srv-ustore.haifa.il.ibm.com/webapp/wcs/stores/servlet/TopCategories_10001_10001");
 			if (Locale.getDefault() == Locale.GERMAN) {
 				prop.setProperty("lang", "de");
@@ -91,8 +88,7 @@ public class Activator implements BundleActivator {
 			}
 			System.err.println(Locale.getDefault());
 			System.err.println(confHome.getAbsolutePath());
-			Writer in = new FileWriter(new File(confHome.getAbsolutePath(),
-					"setup.properties"));
+			Writer in = new FileWriter(new File(confHome.getAbsolutePath(), "setup.properties"));
 			prop.store(in, "Setup properties for initial setup of uCC");
 			in.close();
 		}
@@ -128,7 +124,7 @@ public class Activator implements BundleActivator {
 		dataAccess.saveUserDataInCHE(ont);
 
 		if (!tempUsrvFiles.exists()) {
-		    tempUsrvFiles.mkdir();
+			tempUsrvFiles.mkdir();
 		}
 
 		ref = context.getServiceReference(IInstaller.class.getName());
@@ -139,15 +135,13 @@ public class Activator implements BundleActivator {
 		deinstaller = (IDeinstaller) context.getService(dRef);
 
 		try {
-			regis = bc.registerService(IFrontend.class.getName(),
-					new FrontendImpl(), null);
+			regis = bc.registerService(IFrontend.class.getName(), new FrontendImpl(), null);
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
 
 		model = new Model();
-		context.registerService(new String[] { IServiceModel.class.getName() },
-				model, null);
+		context.registerService(new String[] { IServiceModel.class.getName() }, model, null);
 		mgmt = model.getServiceManagment();
 
 		reg = model.getServiceRegistration();
@@ -156,16 +150,14 @@ public class Activator implements BundleActivator {
 		if (client != null && client.getSessionKey() != null) {
 			sessionKey = client.getSessionKey();
 			if (sessionKey == null || sessionKey.equals("")) {
-				System.err
-						.println("No Session key when trying to setup connection to uStore");
+				System.err.println("No Session key when trying to setup connection to uStore");
 			} else {
 				System.err.println("WS-ANSWER: " + sessionKey);
 				client.registerUser(sessionKey);
 			}
 		}
 
-		ServiceReference sr = context.getServiceReference(ParserService.class
-				.getName());
+		ServiceReference sr = context.getServiceReference(ParserService.class.getName());
 		parserService = (ParserService) context.getService(sr);
 
 		// ServiceCaller init
@@ -173,22 +165,17 @@ public class Activator implements BundleActivator {
 
 		// Dedication to Gema :D
 		System.err.println(" ");
-		System.err
-				.println("\033[36m--------------------------------------------------------------------------");
+		System.err.println("\033[36m--------------------------------------------------------------------------");
 		System.err.println(" ");
-		System.err
-				.println("This programm is dedicated to a mad and unique person, whose name starts with G.:P");
-		System.err
-				.println("If you get this message, you could successfully install and run uCC. :)");
+		System.err.println("This programm is dedicated to a mad and unique person, whose name starts with G.:P");
+		System.err.println("If you get this message, you could successfully install and run uCC. :)");
 		System.err.println(" ");
 		System.err.println("Greetings from Germany to Spain :D @>->-");
 		System.err.println(" ");
-		System.err
-				.println("----------------------------------------------------------------------------------");
+		System.err.println("----------------------------------------------------------------------------------");
 		System.err.println("\033[37m ");
 		System.err.println(" ");
-				
-		
+
 	}
 
 	public static String getSessionKey() {
@@ -237,20 +224,16 @@ public class Activator implements BundleActivator {
 		Activator.bc = null;
 		regis.unregister();
 		deleteFiles(tempUsrvFiles);
-//		WebConnector.getInstance().stopListening();
+		// WebConnector.getInstance().stopListening();
 	}
 
 	private void deleteFiles(File path) {
 		File[] files = path.listFiles();
 		for (File del : files) {
-			if (del.isDirectory()
-					&& !del.getPath()
-							.substring(del.getPath().lastIndexOf(".") + 1)
-							.equals("usrv")) {
+			if (del.isDirectory() && !del.getPath().substring(del.getPath().lastIndexOf(".") + 1).equals("usrv")) {
 				deleteFiles(del);
 			}
-			if (!del.getPath().substring(del.getPath().lastIndexOf(".") + 1)
-					.equals("usrv"))
+			if (!del.getPath().substring(del.getPath().lastIndexOf(".") + 1).equals("usrv"))
 				del.delete();
 		}
 
@@ -267,15 +250,15 @@ public class Activator implements BundleActivator {
 	public static File getConfigHome() {
 		return configHome;
 	}
-	
+
 	public static File getTempUsrvFiles() {
-	    return tempUsrvFiles;
+		return tempUsrvFiles;
 	}
 
 	public static File getSetupProps() {
-	    return setupProps;
+		return setupProps;
 	}
-	
+
 	public static File getDB() {
 		return uccdb;
 	}

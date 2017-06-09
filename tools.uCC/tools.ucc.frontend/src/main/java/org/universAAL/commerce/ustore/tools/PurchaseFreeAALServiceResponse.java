@@ -6,11 +6,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Clase Java para purchaseFreeAALServiceResponse complex type.
+ * <p>
+ * Clase Java para purchaseFreeAALServiceResponse complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>
+ * El siguiente fragmento de esquema especifica el contenido que se espera que
+ * haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="purchaseFreeAALServiceResponse">
@@ -27,36 +29,31 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "purchaseFreeAALServiceResponse", propOrder = {
-    "_return"
-})
+@XmlType(name = "purchaseFreeAALServiceResponse", propOrder = { "_return" })
 public class PurchaseFreeAALServiceResponse {
 
-    @XmlElement(name = "return")
-    protected String _return;
+	@XmlElement(name = "return")
+	protected String _return;
 
-    /**
-     * Obtiene el valor de la propiedad return.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getReturn() {
-        return _return;
-    }
+	/**
+	 * Obtiene el valor de la propiedad return.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getReturn() {
+		return _return;
+	}
 
-    /**
-     * Define el valor de la propiedad return.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setReturn(String value) {
-        this._return = value;
-    }
+	/**
+	 * Define el valor de la propiedad return.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setReturn(String value) {
+		this._return = value;
+	}
 
 }

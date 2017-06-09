@@ -62,148 +62,142 @@ public class SparQLQueryPanel extends JPanel {
 	 */
 	public SparQLQueryPanel() {
 		setLayout(new BorderLayout(0, 0));
-		
+
 		JPanel panel = new JPanel();
 		panel.setPreferredSize(new Dimension(125, 100));
 		add(panel, BorderLayout.EAST);
-		
+
 		btnClear = new JButton("Clear");
 		btnClear.setMinimumSize(new Dimension(63, 23));
 		btnClear.setMaximumSize(new Dimension(63, 23));
 		btnClear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				Component c = sparqlQueries.getSelectedComponent();
-				if (c instanceof SparQLQuerySubPanel){
-					((SparQLQuerySubPanel)c).clear();
+				if (c instanceof SparQLQuerySubPanel) {
+					((SparQLQuerySubPanel) c).clear();
 				}
 			}
 		});
-		
+
 		btnLoad = new JButton("Load");
 		btnLoad.setMinimumSize(new Dimension(63, 23));
 		btnLoad.setMaximumSize(new Dimension(63, 23));
 		btnLoad.setMnemonic('l');
-		btnLoad.addActionListener( new ActionListener() {
-			
+		btnLoad.addActionListener(new ActionListener() {
+
 			public void actionPerformed(ActionEvent arg0) {
 				JFileChooser choose = new JFileChooser();
 				int ret = choose.showOpenDialog(ProjectActivator.frame);
 				if (ret == JFileChooser.APPROVE_OPTION) {
 					File f = choose.getSelectedFile();
 					Component c = sparqlQueries.getSelectedComponent();
-					if (c instanceof SparQLQuerySubPanel){
-						((SparQLQuerySubPanel)c).load(f.getAbsolutePath());
+					if (c instanceof SparQLQuerySubPanel) {
+						((SparQLQuerySubPanel) c).load(f.getAbsolutePath());
 					}
 				}
-				
+
 			}
 		});
-		
+
 		btnQuery = new JButton("Query");
 		btnQuery.setMnemonic('q');
 		btnQuery.addActionListener(new ActionListener() {
-		    
 
 			public void actionPerformed(ActionEvent e) {
-			Component c = sparqlQueries.getSelectedComponent();
-			if (c instanceof SparQLQuerySubPanel){
-			    ((SparQLQuerySubPanel)c).query();
+				Component c = sparqlQueries.getSelectedComponent();
+				if (c instanceof SparQLQuerySubPanel) {
+					((SparQLQuerySubPanel) c).query();
+				}
 			}
-		    }
 		});
-		
+
 		btnSaveQ = new JButton("Save Query");
 		btnSaveQ.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				JFileChooser fileChooser = new JFileChooser();
 				if (fileChooser.showSaveDialog(ProjectActivator.frame) == JFileChooser.APPROVE_OPTION) {
-				  File file = fileChooser.getSelectedFile();
-				  // save to file
-				  Component c = sparqlQueries.getSelectedComponent();
-					if (c instanceof SparQLQuerySubPanel){
-						((SparQLQuerySubPanel)c).saveQuery(file.getAbsolutePath());
+					File file = fileChooser.getSelectedFile();
+					// save to file
+					Component c = sparqlQueries.getSelectedComponent();
+					if (c instanceof SparQLQuerySubPanel) {
+						((SparQLQuerySubPanel) c).saveQuery(file.getAbsolutePath());
 					}
 				}
-				
+
 			}
 		});
 		btnSaveQ.setMnemonic('s');
 		btnSaveQ.setMinimumSize(new Dimension(63, 23));
 		btnSaveQ.setMaximumSize(new Dimension(63, 23));
-		
+
 		btnSaveR = new JButton("Save Result");
 		btnSaveR.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JFileChooser fileChooser = new JFileChooser();
 				if (fileChooser.showSaveDialog(ProjectActivator.frame) == JFileChooser.APPROVE_OPTION) {
-				  File file = fileChooser.getSelectedFile();
-				  // save to file
-				  Component c = sparqlQueries.getSelectedComponent();
-					if (c instanceof SparQLQuerySubPanel){
-						((SparQLQuerySubPanel)c).saveResult(file.getAbsolutePath());
+					File file = fileChooser.getSelectedFile();
+					// save to file
+					Component c = sparqlQueries.getSelectedComponent();
+					if (c instanceof SparQLQuerySubPanel) {
+						((SparQLQuerySubPanel) c).saveResult(file.getAbsolutePath());
 					}
 				}
-				
+
 			}
 		});
 		btnSaveR.setMnemonic('r');
 		btnSaveR.setMinimumSize(new Dimension(63, 23));
 		btnSaveR.setMaximumSize(new Dimension(63, 23));
 		GroupLayout gl_panel = new GroupLayout(panel);
-		gl_panel.setHorizontalGroup(
-			gl_panel.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_panel.createSequentialGroup()
-					.addContainerGap()
-					.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
+		gl_panel.setHorizontalGroup(gl_panel.createParallelGroup(Alignment.LEADING).addGroup(gl_panel
+				.createSequentialGroup().addContainerGap()
+				.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
 						.addComponent(btnQuery, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 						.addComponent(btnLoad, GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
 						.addComponent(btnSaveQ, GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
 						.addComponent(btnClear, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
 						.addComponent(btnSaveR, GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE))
-					.addContainerGap())
-		);
-		gl_panel.setVerticalGroup(
-			gl_panel.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_panel.createSequentialGroup()
-					.addContainerGap()
-					.addComponent(btnQuery)
-					.addGap(18)
-					.addComponent(btnLoad, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(btnSaveQ, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(btnSaveR, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-					.addGap(8)
-					.addComponent(btnClear, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-					.addGap(136))
-		);
+				.addContainerGap()));
+		gl_panel.setVerticalGroup(gl_panel.createParallelGroup(Alignment.LEADING).addGroup(gl_panel
+				.createSequentialGroup().addContainerGap().addComponent(btnQuery).addGap(18)
+				.addComponent(btnLoad, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+				.addPreferredGap(ComponentPlacement.RELATED)
+				.addComponent(btnSaveQ, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+						GroupLayout.PREFERRED_SIZE)
+				.addPreferredGap(ComponentPlacement.RELATED)
+				.addComponent(btnSaveR, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+						GroupLayout.PREFERRED_SIZE)
+				.addGap(8).addComponent(btnClear, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+						GroupLayout.PREFERRED_SIZE)
+				.addGap(136)));
 		panel.setLayout(gl_panel);
-		
-		
+
 		sparqlQueries = new JTabbedPane(JTabbedPane.LEFT);
 		add(sparqlQueries, BorderLayout.CENTER);
-		
+
 		sparqlQueries.addTab("1", null, new SparQLQuerySubPanel(), null);
-		
+
 		JPanel add = new JPanel();
 		add.addComponentListener(new ComponentListener() {
 
-
 			public void componentShown(ComponentEvent e) {
-			int lastIndex = sparqlQueries.getComponentCount() -1;
-			sparqlQueries.insertTab(Integer.toString(tabcount ++), null, new SparQLQuerySubPanel(), null, lastIndex);
-			sparqlQueries.setSelectedIndex(lastIndex);
-		    }
-		    
-		    public void componentResized(ComponentEvent e) {   }
-		    
-		    public void componentMoved(ComponentEvent e) {   }
-		    
-		    public void componentHidden(ComponentEvent e) {  }
+				int lastIndex = sparqlQueries.getComponentCount() - 1;
+				sparqlQueries.insertTab(Integer.toString(tabcount++), null, new SparQLQuerySubPanel(), null, lastIndex);
+				sparqlQueries.setSelectedIndex(lastIndex);
+			}
+
+			public void componentResized(ComponentEvent e) {
+			}
+
+			public void componentMoved(ComponentEvent e) {
+			}
+
+			public void componentHidden(ComponentEvent e) {
+			}
 		});
 		sparqlQueries.addTab("+", null, add, null);
 
-//		this.pack();
+		// this.pack();
 	}
 
 }

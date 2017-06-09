@@ -49,7 +49,7 @@ public class Activator implements BundleActivator {
 	public static BundleContext getContext() {
 		return context;
 	}
-	
+
 	public static File getUserxml() {
 		return userxml;
 	}
@@ -63,11 +63,10 @@ public class Activator implements BundleActivator {
 	 */
 	public void start(BundleContext bundleContext) throws Exception {
 		Activator.context = bundleContext;
-		mc = uAALBundleContainer.THE_CONTAINER
-			.registerModule(new Object[] { context });
-		
+		mc = uAALBundleContainer.THE_CONTAINER.registerModule(new Object[] { context });
+
 		userxml = new File(new File(new File(mc.getConfigHome().getParent(), "uCC"), "user"), "users.xml");
-		
+
 		if (!userxml.exists()) {
 			userxml.createNewFile();
 			UserAccountInfo u = new UserAccountInfo();
@@ -83,14 +82,11 @@ public class Activator implements BundleActivator {
 			set.saveUsers(users);
 		}
 
-		reg1 = context.registerService(Setup.class.getName(), new SetupImpl(),
+		reg1 = context.registerService(Setup.class.getName(), new SetupImpl(), null);
+		reg2 = context.registerService(DataAccess.class.getName(), new DataAccessImpl(), null);
+		reg3 = context.registerService(OntologySupplierService.class.getName(), new OntologySupplierServiceImpl(),
 				null);
-		reg2 = context.registerService(DataAccess.class.getName(),
-				new DataAccessImpl(), null);
-		reg3 = context.registerService(OntologySupplierService.class.getName(),
-				new OntologySupplierServiceImpl(), null);
-		reg4 = context.registerService(ParserService.class.getName(),
-				new ParserServiceImpl(), null);
+		reg4 = context.registerService(ParserService.class.getName(), new ParserServiceImpl(), null);
 
 		// connection to profile agent and setting an empty user from xml
 		// definition
@@ -103,8 +99,8 @@ public class Activator implements BundleActivator {
 	}
 
 	/**
-	 * Creates a empty user with username, password and role,
-	 * and stores this user with profileagent in CHE.
+	 * Creates a empty user with username, password and role, and stores this
+	 * user with profileagent in CHE.
 	 */
 	private void createEmptyUser() {
 		User enduser = new User(USER_SPACE + "User");
@@ -146,8 +142,9 @@ public class Activator implements BundleActivator {
 	}
 
 	/**
-	 * Creates a empty device with devicename, room, deviceType, deviceId, hardwareSettingTime and
-	 * lastActivityTime and stores it in spaceserver with profileagent.
+	 * Creates a empty device with devicename, room, deviceType, deviceId,
+	 * hardwareSettingTime and lastActivityTime and stores it in spaceserver
+	 * with profileagent.
 	 */
 	private void createEmptyDevice() {
 		AALSpace mySpace = null;
@@ -245,14 +242,13 @@ public class Activator implements BundleActivator {
 	}
 
 	/**
-	 * Gets an instance of the profileagent, which
-	 * supports access to the CHE
+	 * Gets an instance of the profileagent, which supports access to the CHE
+	 * 
 	 * @return a profileagent
 	 */
 	public static ProfileAgent getProfileAgent() {
 		if (pAgent == null) {
-			ServiceReference sr = context
-					.getServiceReference(ProfileAgent.class.getName());
+			ServiceReference sr = context.getServiceReference(ProfileAgent.class.getName());
 			pAgent = (ProfileAgent) context.getService(sr);
 		}
 		return pAgent;

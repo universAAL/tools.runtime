@@ -5,7 +5,6 @@
 // Generated on: 2012.08.02 at 01:53:27 PM MESZ 
 //
 
-
 package org.universAAL.ucc.configuration.model.configurationdefinition;
 
 import java.util.ArrayList;
@@ -15,11 +14,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for Options complex type.
+ * <p>
+ * Java class for Options complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="Options">
@@ -36,41 +37,39 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Options", propOrder = {
-    "option"
-})
+@XmlType(name = "Options", propOrder = { "option" })
 public class Options {
 
-    @XmlElement(required = true)
-    protected List<Option> option;
+	@XmlElement(required = true)
+	protected List<Option> option;
 
-    /**
-     * Gets the value of the option property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the option property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getOption().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link Option }
-     * 
-     * 
-     */
-    public List<Option> getOption() {
-        if (option == null) {
-            option = new ArrayList<Option>();
-        }
-        return this.option;
-    }
+	/**
+	 * Gets the value of the option property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the option property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getOption().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list {@link Option }
+	 * 
+	 * 
+	 */
+	public List<Option> getOption() {
+		if (option == null) {
+			option = new ArrayList<Option>();
+		}
+		return this.option;
+	}
 
 }

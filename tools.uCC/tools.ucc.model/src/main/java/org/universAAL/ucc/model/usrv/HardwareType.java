@@ -5,7 +5,6 @@
 // Generated on: 2013.08.05 at 09:10:43 PM CEST 
 //
 
-
 package org.universAAL.ucc.model.usrv;
 
 import java.io.Serializable;
@@ -14,13 +13,16 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * describes the hardware part, where the artifactID is the one set by the uStore
+ * describes the hardware part, where the artifactID is the one set by the
+ * uStore
  * 
- * <p>Java class for hardwareType complex type.
+ * <p>
+ * Java class for hardwareType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="hardwareType">
@@ -40,136 +42,118 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "hardwareType", namespace = "http://www.universaal.org/aal-usrv/v1.0.2", propOrder = {
-    "name",
-    "clazz",
-    "artifactID",
-    "category"
-})
-public class HardwareType
-    implements Serializable
-{
+@XmlType(name = "hardwareType", namespace = "http://www.universaal.org/aal-usrv/v1.0.2", propOrder = { "name", "clazz",
+		"artifactID", "category" })
+public class HardwareType implements Serializable {
 
-    private final static long serialVersionUID = 12343L;
-    @XmlElement(required = true)
-    protected String name;
-    @XmlElement(name = "class", required = true)
-    protected String clazz;
-    @XmlElement(required = true)
-    protected String artifactID;
-    @XmlElement(required = true)
-    protected String category;
+	private final static long serialVersionUID = 12343L;
+	@XmlElement(required = true)
+	protected String name;
+	@XmlElement(name = "class", required = true)
+	protected String clazz;
+	@XmlElement(required = true)
+	protected String artifactID;
+	@XmlElement(required = true)
+	protected String category;
 
-    /**
-     * Gets the value of the name property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getName() {
-        return name;
-    }
+	/**
+	 * Gets the value of the name property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getName() {
+		return name;
+	}
 
-    /**
-     * Sets the value of the name property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setName(String value) {
-        this.name = value;
-    }
+	/**
+	 * Sets the value of the name property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setName(String value) {
+		this.name = value;
+	}
 
-    public boolean isSetName() {
-        return (this.name!= null);
-    }
+	public boolean isSetName() {
+		return (this.name != null);
+	}
 
-    /**
-     * Gets the value of the clazz property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getClazz() {
-        return clazz;
-    }
+	/**
+	 * Gets the value of the clazz property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getClazz() {
+		return clazz;
+	}
 
-    /**
-     * Sets the value of the clazz property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setClazz(String value) {
-        this.clazz = value;
-    }
+	/**
+	 * Sets the value of the clazz property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setClazz(String value) {
+		this.clazz = value;
+	}
 
-    public boolean isSetClazz() {
-        return (this.clazz!= null);
-    }
+	public boolean isSetClazz() {
+		return (this.clazz != null);
+	}
 
-    /**
-     * Gets the value of the artifactID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getArtifactID() {
-        return artifactID;
-    }
+	/**
+	 * Gets the value of the artifactID property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getArtifactID() {
+		return artifactID;
+	}
 
-    /**
-     * Sets the value of the artifactID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setArtifactID(String value) {
-        this.artifactID = value;
-    }
+	/**
+	 * Sets the value of the artifactID property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setArtifactID(String value) {
+		this.artifactID = value;
+	}
 
-    public boolean isSetArtifactID() {
-        return (this.artifactID!= null);
-    }
+	public boolean isSetArtifactID() {
+		return (this.artifactID != null);
+	}
 
-    /**
-     * Gets the value of the category property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getCategory() {
-        return category;
-    }
+	/**
+	 * Gets the value of the category property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getCategory() {
+		return category;
+	}
 
-    /**
-     * Sets the value of the category property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setCategory(String value) {
-        this.category = value;
-    }
+	/**
+	 * Sets the value of the category property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setCategory(String value) {
+		this.category = value;
+	}
 
-    public boolean isSetCategory() {
-        return (this.category!= null);
-    }
+	public boolean isSetCategory() {
+		return (this.category != null);
+	}
 
 }

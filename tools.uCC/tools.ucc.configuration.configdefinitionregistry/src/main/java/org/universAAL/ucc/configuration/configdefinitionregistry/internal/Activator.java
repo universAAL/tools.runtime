@@ -37,12 +37,10 @@ public class Activator implements BundleActivator {
 	 */
 	public void start(BundleContext bundleContext) throws Exception {
 
-		Activator.moduleContext = uAALBundleContainer.THE_CONTAINER
-				.registerModule(new Object[] { context });
-		
+		Activator.moduleContext = uAALBundleContainer.THE_CONTAINER.registerModule(new Object[] { context });
+
 		Activator.context = bundleContext;
-		context.registerService(
-				ConfigurationDefinitionRegistry.class.getName(),
+		context.registerService(ConfigurationDefinitionRegistry.class.getName(),
 				new ConfigurationDefinitionRegistryImpl(), null);
 	}
 

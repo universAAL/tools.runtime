@@ -12,29 +12,28 @@ import org.universAAL.ucc.database.listener.interfaces.OntologySupplierService;
 import org.universAAL.ucc.model.jaxb.OntologyInstance;
 
 public class OntologySupplierServiceImpl implements OntologySupplierService {
-	private static ArrayList<OntologyChangedListener>listeners = new ArrayList<OntologyChangedListener>();
-	
+	private static ArrayList<OntologyChangedListener> listeners = new ArrayList<OntologyChangedListener>();
+
 	public void addListener(OntologyChangedListener listener) {
 		listeners.add(listener);
 
 	}
 
 	public void removeListener(OntologyChangedListener listener) {
-		for(OntologyChangedListener l : listeners) {
-			if(l.equals(listener)) {
+		for (OntologyChangedListener l : listeners) {
+			if (l.equals(listener)) {
 				listeners.remove(l);
 			}
 		}
 
 	}
 
-
 	public ArrayList<OntologyInstance> getOntology(String flat) {
-		BundleContext context = Activator.getContext(); //FrameworkUtil.getBundle(getClass()).getBundleContext();
+		BundleContext context = Activator.getContext(); // FrameworkUtil.getBundle(getClass()).getBundleContext();
 		ServiceReference ref = context.getServiceReference(DataAccess.class.getName());
-		DataAccess access = (DataAccess)context.getService(ref);
-			ArrayList<OntologyInstance> ont = access.getFormFields(flat);
-		
+		DataAccess access = (DataAccess) context.getService(ref);
+		ArrayList<OntologyInstance> ont = access.getFormFields(flat);
+
 		return ont;
 	}
 
@@ -45,7 +44,5 @@ public class OntologySupplierServiceImpl implements OntologySupplierService {
 	public static void setListeners(ArrayList<OntologyChangedListener> listeners) {
 		OntologySupplierServiceImpl.listeners = listeners;
 	}
-	
-	
 
 }

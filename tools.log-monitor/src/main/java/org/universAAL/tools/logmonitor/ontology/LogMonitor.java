@@ -21,45 +21,42 @@ import org.universAAL.tools.logmonitor.ontology.gui.OntologyGui;
  */
 public class LogMonitor implements LogListenerEx, OntologyListener {
 
-    private OntologyGui gui = new OntologyGui();
+	private OntologyGui gui = new OntologyGui();
 
-    public LogMonitor() {
-	// start ontology listener
-	OntologyManagement.getInstance()
-		.addOntologyListener(Activator.mc, this);
-	// add all existing ontologies
-	String uris[] = OntologyManagement.getInstance().getOntoloyURIs();
-	Arrays.sort(uris);
-	for (String uri : uris) {
-	    gui.add(uri);
+	public LogMonitor() {
+		// start ontology listener
+		OntologyManagement.getInstance().addOntologyListener(Activator.mc, this);
+		// add all existing ontologies
+		String uris[] = OntologyManagement.getInstance().getOntoloyURIs();
+		Arrays.sort(uris);
+		for (String uri : uris) {
+			gui.add(uri);
+		}
 	}
-    }
 
-    // dummy method for integration in main gui, not used
-    public void log(int logLevel, String module, String pkg, String cls,
-	    String method, Object[] msgPart, Throwable t) {
-    }
+	// dummy method for integration in main gui, not used
+	public void log(int logLevel, String module, String pkg, String cls, String method, Object[] msgPart, Throwable t) {
+	}
 
-    public JComponent getComponent() {
-	return gui;
-    }
+	public JComponent getComponent() {
+		return gui;
+	}
 
-    public String getTitle() {
-	return "Ontologies";
-    }
+	public String getTitle() {
+		return "Ontologies";
+	}
 
-    public void stop() {
-	OntologyManagement.getInstance().removeOntologyListener(Activator.mc,
-		this);
-    }
+	public void stop() {
+		OntologyManagement.getInstance().removeOntologyListener(Activator.mc, this);
+	}
 
-    @Override
-    public void ontologyAdded(String ontURI) {
-	gui.add(ontURI);
-    }
+	@Override
+	public void ontologyAdded(String ontURI) {
+		gui.add(ontURI);
+	}
 
-    @Override
-    public void ontologyRemoved(String ontURI) {
-	gui.remove(ontURI);
-    }
+	@Override
+	public void ontologyRemoved(String ontURI) {
+		gui.remove(ontURI);
+	}
 }

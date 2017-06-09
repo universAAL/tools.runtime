@@ -5,7 +5,6 @@
 // Generated on: 2012.08.02 at 01:53:27 PM MESZ 
 //
 
-
 package org.universAAL.ucc.configuration.model.configurationdefinition;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -15,11 +14,13 @@ import javax.xml.bind.annotation.XmlIDREF;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for Item complex type.
+ * <p>
+ * Java class for Item complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="Item">
@@ -37,33 +38,30 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "Item")
 public class Item {
 
-    @XmlAttribute(required = true)
-    @XmlIDREF
-    @XmlSchemaType(name = "IDREF")
-    protected Object id;
+	@XmlAttribute(required = true)
+	@XmlIDREF
+	@XmlSchemaType(name = "IDREF")
+	protected Object id;
 
-    /**
-     * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Object }
-     *     
-     */
-    public Object getId() {
-        return id;
-    }
+	/**
+	 * Gets the value of the id property.
+	 * 
+	 * @return possible object is {@link Object }
+	 * 
+	 */
+	public Object getId() {
+		return id;
+	}
 
-    /**
-     * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Object }
-     *     
-     */
-    public void setId(Object value) {
-        this.id = value;
-    }
+	/**
+	 * Sets the value of the id property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link Object }
+	 * 
+	 */
+	public void setId(Object value) {
+		this.id = value;
+	}
 
 }

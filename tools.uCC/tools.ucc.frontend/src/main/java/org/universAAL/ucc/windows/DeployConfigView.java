@@ -28,12 +28,10 @@ public class DeployConfigView extends VerticalLayout {
 	public DeployConfigView(UccUI app, String serviceId, String uappPath) {
 		base = "resources.ucc";
 		bundle = ResourceBundle.getBundle(base);
-		BundleContext bc = Activator.bc;//FrameworkUtil.getBundle(getClass()).getBundleContext();
-		ServiceReference ref = bc.getServiceReference(IInstaller.class
-				.getName());
+		BundleContext bc = Activator.bc;// FrameworkUtil.getBundle(getClass()).getBundleContext();
+		ServiceReference ref = bc.getServiceReference(IInstaller.class.getName());
 		IInstaller installer = (IInstaller) bc.getService(ref);
-		addComponent(new Label("<b>" + bundle.getString("deploy.config.capt")
-				+ "</b>", Label.CONTENT_XHTML));
+		addComponent(new Label("<b>" + bundle.getString("deploy.config.capt") + "</b>", Label.CONTENT_XHTML));
 		this.app = app;
 		// setSizeFull();
 		setSpacing(true);

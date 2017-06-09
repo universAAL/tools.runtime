@@ -13,25 +13,30 @@ import org.universAAL.ucc.configuration.model.exceptions.ValidationException;
  */
 
 public interface ConfigurationValidator {
-	
+
 	/**
 	 * Checks if the value is valid.
+	 * 
 	 * @param value
 	 * @return true if the value is valid else false.
 	 */
 	public boolean isValid(ConfigOptionRegistry registry, Value value);
-	
+
 	/**
-	 * Does the same as the isValid method but is able to thow an exception with an error message.
+	 * Does the same as the isValid method but is able to thow an exception with
+	 * an error message.
+	 * 
 	 * @param value
 	 * @throws ValidationException
 	 */
 	public void validate(ConfigOptionRegistry registry, Value value) throws ValidationException;
-	
+
 	/**
-	 * This method is used to set the attributes which where defined in the configuration definition.
+	 * This method is used to set the attributes which where defined in the
+	 * configuration definition.
+	 * 
 	 * @param attributes
 	 */
 	public void setAttributes(String[] attributes);
-	
+
 }

@@ -1,7 +1,6 @@
 package org.universAAL.ucc.model.jaxb;
 
-
-public class DoubleValue extends SimpleObject{
+public class DoubleValue extends SimpleObject {
 
 	private double value;
 	private double defaultValue;
@@ -21,7 +20,5 @@ public class DoubleValue extends SimpleObject{
 	public void setDefaultValue(double defaultValue) {
 		this.defaultValue = defaultValue;
 	}
-	
-	
-	
+
 }

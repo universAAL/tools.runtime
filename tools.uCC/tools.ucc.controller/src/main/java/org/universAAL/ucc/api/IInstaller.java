@@ -17,13 +17,14 @@ import org.universAAL.middleware.managers.api.UAPPPackage;
  */
 public interface IInstaller {
 
-    // interface with MW: call AALSpaceManager
-    public Map getPeers();
-    public MatchingResult getMatchingPeers(Map<String, Serializable> filter);
-    public Map<String, Serializable> getPeerAttributes(List<String> attributes,
-			PeerCard target);
-    
-    // interface with MW: call DeployManager
-    public InstallationResultsDetails requestToInstall(UAPPPackage app);  
+	// interface with MW: call AALSpaceManager
+	public Map getPeers();
+
+	public MatchingResult getMatchingPeers(Map<String, Serializable> filter);
+
+	public Map<String, Serializable> getPeerAttributes(List<String> attributes, PeerCard target);
+
+	// interface with MW: call DeployManager
+	public InstallationResultsDetails requestToInstall(UAPPPackage app);
 
 }

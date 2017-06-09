@@ -19,8 +19,9 @@ public class AddNewPersonWindow extends Window {
 	private HumansWindow hWindow;
 	private String base;
 	private ResourceBundle bundle;
-	
-	public AddNewPersonWindow(HumansWindow win, SelectUserWindow sel, UccUI app) throws JAXBException, IOException, ParseException {
+
+	public AddNewPersonWindow(HumansWindow win, SelectUserWindow sel, UccUI app)
+			throws JAXBException, IOException, ParseException {
 		base = "resources.ucc";
 		bundle = ResourceBundle.getBundle(base);
 		setCaption(bundle.getString("add.new.person"));
@@ -36,7 +37,7 @@ public class AddNewPersonWindow extends Window {
 		new AddNewPersonController(this, hWindow, sel, app);
 	}
 
-public void addWindowContent(Component c) {
+	public void addWindowContent(Component c) {
 		layout.addComponent(c);
 	}
 

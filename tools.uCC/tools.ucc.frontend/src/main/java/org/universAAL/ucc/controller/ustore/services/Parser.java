@@ -15,40 +15,40 @@ import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 
 public class Parser {
-	
-	static final String SERVICE ="service";
+
+	static final String SERVICE = "service";
 	static final String TITLE = "title";
 	static final String SUBTITLE = "subtitle";
 	static final String CATEGORY = "category";
 	static final String RATING = "rating";
 	static final String DETAILS = "details";
 	static final String IMAGE = "image";
-	
+
 	public List<Service> readServices(File servicesFile, String searchstring) {
 		List<Service> services = new ArrayList<Service>();
 		try {
 			XMLInputFactory inputFactory = XMLInputFactory.newInstance();
 			InputStream in = new FileInputStream(servicesFile);
 			XMLEventReader eventReader = inputFactory.createXMLEventReader(in);
-			
+
 			Service service = null;
-			
+
 			while (eventReader.hasNext()) {
 				XMLEvent event = eventReader.nextEvent();
-				
+
 				if (event.isStartElement()) {
 					StartElement startElement = event.asStartElement();
 					if (startElement.getName().getLocalPart() == (SERVICE)) {
 						service = new Service();
 					}
-					
+
 					if (event.isStartElement()) {
 						if (event.asStartElement().getName().getLocalPart().equals(TITLE)) {
 							event = eventReader.nextEvent();
 							service.setTitle(event.asCharacters().getData());
 							continue;
 						}
-					}					
+					}
 					if (event.asStartElement().getName().getLocalPart().equals(SUBTITLE)) {
 						event = eventReader.nextEvent();
 						service.setSubtitle(event.asCharacters().getData());

@@ -14,18 +14,17 @@ import org.universAAL.ucc.configuration.model.interfaces.ConfigurationValidator;
  */
 
 public class IntegerValidator implements ConfigurationValidator {
-	
+
 	String msg;
-	
-	public IntegerValidator(String msg){
+
+	public IntegerValidator(String msg) {
 		this.msg = msg;
 	}
 
-	
 	public boolean isValid(ConfigOptionRegistry registry, Value value) {
-		if(value == null || value.getValue() == null || value.getValue().equals("")){
+		if (value == null || value.getValue() == null || value.getValue().equals("")) {
 			return true;
-		}else{
+		} else {
 			try {
 				Integer.parseInt(value.getValue());
 			} catch (Exception e) {
@@ -35,15 +34,12 @@ public class IntegerValidator implements ConfigurationValidator {
 		return true;
 	}
 
-	
-	public void validate(ConfigOptionRegistry registry, Value value)
-			throws ValidationException {
-		if(!isValid(registry, value)){
+	public void validate(ConfigOptionRegistry registry, Value value) throws ValidationException {
+		if (!isValid(registry, value)) {
 			throw new ValidationException(msg);
 		}
 	}
 
-	
 	public void setAttributes(String[] attributes) {
 		// TODO Auto-generated method stub
 

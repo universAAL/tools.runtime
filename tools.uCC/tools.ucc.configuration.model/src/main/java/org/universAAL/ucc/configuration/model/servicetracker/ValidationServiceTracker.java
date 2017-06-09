@@ -10,16 +10,14 @@ import org.universAAL.ucc.configuration.model.ConfigurationOption;
 import org.universAAL.ucc.configuration.model.interfaces.ConfigurationValidator;
 import org.universAAL.ucc.configuration.model.interfaces.ConfigurationValidatorFactory;
 
-
 public class ValidationServiceTracker extends ServiceTracker {
-	
+
 	BundleContext context;
 	ConfigurationOption option;
 	ConfigurationValidator validator;
 	String[] attributes;
-	
-	public ValidationServiceTracker(BundleContext context,
-			String name, ConfigurationOption option,
+
+	public ValidationServiceTracker(BundleContext context, String name, ConfigurationOption option,
 			String[] attributes) {
 		super(context, name, null);
 		this.option = option;
@@ -35,17 +33,17 @@ public class ValidationServiceTracker extends ServiceTracker {
 		LogUtils.logInfo(Activator.getContext(), this.getClass(), "addingService",
 				new Object[] { "Service added: " + reference.getClass().toString() }, null);
 
-		try{
+		try {
 			Object o = context.getService(reference);
-			if(o instanceof ConfigurationValidator){
-				validator = (ConfigurationValidator)o;
+			if (o instanceof ConfigurationValidator) {
+				validator = (ConfigurationValidator) o;
 				validator.setAttributes(attributes);
 				LogUtils.logInfo(Activator.getContext(), this.getClass(), "addingService",
 						new Object[] { "loaded: " + validator.getClass() }, null);
 
 				option.addValidator(validator.getClass().getName(), validator);
-			}else if(o instanceof ConfigurationValidatorFactory){
-				ConfigurationValidatorFactory factory = (ConfigurationValidatorFactory)o; 
+			} else if (o instanceof ConfigurationValidatorFactory) {
+				ConfigurationValidatorFactory factory = (ConfigurationValidatorFactory) o;
 				validator = factory.create();
 				validator.setAttributes(attributes);
 				LogUtils.logInfo(Activator.getContext(), this.getClass(), "addingService",
@@ -53,18 +51,18 @@ public class ValidationServiceTracker extends ServiceTracker {
 
 				option.addValidator(validator.getClass().getName(), validator);
 			}
-		}catch(ClassCastException e){
+		} catch (ClassCastException e) {
 			LogUtils.logError(Activator.getContext(), this.getClass(), "addingService",
 					new Object[] { "Listener cannot casted to ConfigurationValidator!" }, null);
 
 		}
 		return super.addingService(reference);
 	}
-	
+
 	@Override
 	public void removedService(ServiceReference reference, Object service) {
 		option.removeValidator(validator);
 		super.removedService(reference, service);
 	}
-	
+
 }

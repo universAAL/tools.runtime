@@ -1,13 +1,13 @@
 package org.universAAL.ucc.configuration.model;
 
-
 import org.universAAL.ucc.configuration.model.configurationdefinition.Configuration;
 import org.universAAL.ucc.configuration.model.configurationinstances.ConfigurationInstance;
 import org.universAAL.ucc.configuration.model.configurationinstances.ObjectFactory;
 
 /**
  * 
- * This class holds both, the configuration definition and the configuration instance.
+ * This class holds both, the configuration definition and the configuration
+ * instance.
  * 
  * @author Sebastian.Schoebinge
  *
@@ -16,11 +16,11 @@ import org.universAAL.ucc.configuration.model.configurationinstances.ObjectFacto
 public class Configurator {
 	private Configuration configDefinition;
 	private ConfigurationInstance configInstance;
-	
+
 	public Configuration getConfigDefinition() {
 		return configDefinition;
 	}
-	
+
 	public ConfigurationInstance getConfigInstance() {
 		return configInstance;
 	}
@@ -31,7 +31,7 @@ public class Configurator {
 	}
 
 	public void setConfigurationInstance(ConfigurationInstance config) {
-		if(config != null){
+		if (config != null) {
 			configInstance = config;
 		}
 	}

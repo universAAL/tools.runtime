@@ -54,7 +54,7 @@ public class UccUI extends Application {
 	private TextField user;
 	private PasswordField pwd;
 	private BundleContext context;
-	
+
 	public static UccUI getInstance() {
 		return uccUI;
 	}
@@ -76,9 +76,9 @@ public class UccUI extends Application {
 			e.printStackTrace();
 		}
 		String lang = prop.getProperty("lang");
-		System.out.println("---------------------------------> LANGUAGE  " +lang);
-		if(lang != null && !lang.equals("")) {
-			if(lang.equals("de")) {
+		System.out.println("---------------------------------> LANGUAGE  " + lang);
+		if (lang != null && !lang.equals("")) {
+			if (lang.equals("de")) {
 				Locale.setDefault(Locale.GERMAN);
 			} else {
 				Locale.setDefault(Locale.ENGLISH);
@@ -117,7 +117,7 @@ public class UccUI extends Application {
 		startButton.setIcon(new ThemeResource("img/Zahnraeder-01-01.png"));
 		startLayout.addComponent(startButton);
 		startLayout.setComponentAlignment(startButton, Alignment.TOP_LEFT);
-		
+
 		HorizontalLayout uhl = new HorizontalLayout();
 		uhl.setWidth("100%");
 		uhl.setStyleName("uAAL");
@@ -156,7 +156,7 @@ public class UccUI extends Application {
 	}
 
 	public Window createLogin() {
-		context = Activator.bc;//FrameworkUtil.getBundle(getClass()).getBundleContext();
+		context = Activator.bc;// FrameworkUtil.getBundle(getClass()).getBundleContext();
 		ServiceReference ref = context.getServiceReference(Setup.class.getName());
 		Setup su = (Setup) context.getService(ref);
 		context.ungetService(ref);
@@ -174,11 +174,9 @@ public class UccUI extends Application {
 		vm.setSpacing(true);
 		vm.setMargin(true);
 		vm.setSizeFull();
-		Embedded uaal = new Embedded("", new ThemeResource(
-				"img/Konfiguration72.png"));
+		Embedded uaal = new Embedded("", new ThemeResource("img/Konfiguration72.png"));
 		vm.addComponent(uaal);
-		Label wel = new Label(res.getString("welcome.label"),
-				Label.CONTENT_XHTML);
+		Label wel = new Label(res.getString("welcome.label"), Label.CONTENT_XHTML);
 		vm.addComponent(wel);
 		HorizontalLayout hl = new HorizontalLayout();
 		hl.setMargin(true);
@@ -188,24 +186,26 @@ public class UccUI extends Application {
 		pwd = new PasswordField(res.getString("pwd.label"));
 		hl.addComponent(pwd);
 		List<UserAccountInfo> cu = su.getUsers();
-		if(!cu.isEmpty()) {
-		for(UserAccountInfo u : cu) {
-			if(u.isChecked() && (u.getRole().contains(Role.ENDUSER) || u.getRole().contains(Role.ASSISTEDPERSON))) {
-				user.setValue(u.getName());
-				pwd.setValue(u.getPassword());
+		if (!cu.isEmpty()) {
+			for (UserAccountInfo u : cu) {
+				if (u.isChecked()
+						&& (u.getRole().contains(Role.ENDUSER) || u.getRole().contains(Role.ASSISTEDPERSON))) {
+					user.setValue(u.getName());
+					pwd.setValue(u.getPassword());
+				}
 			}
 		}
-		} 
-//		else {
-//			getMainWindow().showNotification(res.getString("create.account"), Notification.TYPE_HUMANIZED_MESSAGE);
-//		}
+		// else {
+		// getMainWindow().showNotification(res.getString("create.account"),
+		// Notification.TYPE_HUMANIZED_MESSAGE);
+		// }
 		login = new Button(res.getString("login.label"));
 		hl.addComponent(login);
 		hl.setComponentAlignment(login, Alignment.BOTTOM_RIGHT);
-//		link = new Button(res.getString("create.account"));
-//		link.addListener(desk);
-//		hl.addComponent(link);
-//		hl.setComponentAlignment(link, Alignment.BOTTOM_RIGHT);
+		// link = new Button(res.getString("create.account"));
+		// link.addListener(desk);
+		// hl.addComponent(link);
+		// hl.setComponentAlignment(link, Alignment.BOTTOM_RIGHT);
 		login.addListener(desk);
 		vm.addComponent(hl);
 		loginWindow.setWidth("425px");
@@ -306,7 +306,5 @@ public class UccUI extends Application {
 	public void setPwd(PasswordField pwd) {
 		this.pwd = pwd;
 	}
-	
-	
 
 }

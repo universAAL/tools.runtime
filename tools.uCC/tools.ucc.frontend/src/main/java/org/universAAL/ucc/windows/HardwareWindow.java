@@ -15,14 +15,14 @@ import com.vaadin.ui.Tree;
 import com.vaadin.ui.Window;
 import com.vaadin.ui.themes.Reindeer;
 
-public class HardwareWindow extends Window implements Window.CloseListener{
+public class HardwareWindow extends Window implements Window.CloseListener {
 	private Tree userTree;
 	private HorizontalSplitPanel split;
 	private UccUI app;
 	private HardwareWindowController hwc;
 	private String base;
 	private ResourceBundle bundle;
-	
+
 	public HardwareWindow(UccUI app) throws JAXBException, IOException, ParseException {
 		base = "resources.ucc";
 		bundle = ResourceBundle.getBundle(base);
@@ -30,10 +30,10 @@ public class HardwareWindow extends Window implements Window.CloseListener{
 		StringBuffer breadcrump = new StringBuffer();
 		center();
 		int counter = 0;
-		for(Window w : app.getMainWindow().getChildWindows()) {
+		for (Window w : app.getMainWindow().getChildWindows()) {
 			counter++;
-			if(counter == app.getMainWindow().getChildWindows().size())
-				breadcrump.append(w.getCaption()+" > ");
+			if (counter == app.getMainWindow().getChildWindows().size())
+				breadcrump.append(w.getCaption() + " > ");
 		}
 		breadcrump.append(bundle.getString("hardware.title"));
 		setCaption(breadcrump.toString());
@@ -51,7 +51,7 @@ public class HardwareWindow extends Window implements Window.CloseListener{
 		setContent(split);
 		hwc = new HardwareWindowController(this, app);
 	}
-	
+
 	public HardwareWindowController getHwc() {
 		return hwc;
 	}
@@ -63,7 +63,7 @@ public class HardwareWindow extends Window implements Window.CloseListener{
 	public void addFirstComponent(Component c) {
 		split.setFirstComponent(c);
 	}
-	
+
 	public void addSecondComponent(Component c) {
 		split.setSecondComponent(c);
 	}
@@ -77,8 +77,8 @@ public class HardwareWindow extends Window implements Window.CloseListener{
 	}
 
 	public void windowClose(CloseEvent e) {
-//		hwc.getSensorEventSubscriber().removeListener(hwc);
-		
+		// hwc.getSensorEventSubscriber().removeListener(hwc);
+
 	}
 
 }

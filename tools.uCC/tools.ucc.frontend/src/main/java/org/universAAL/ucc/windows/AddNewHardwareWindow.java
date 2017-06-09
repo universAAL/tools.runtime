@@ -19,8 +19,9 @@ public class AddNewHardwareWindow extends Window {
 	private HardwareWindow hWindow;
 	private String base;
 	private ResourceBundle bundle;
-	
-	public AddNewHardwareWindow(HardwareWindow win, RoomsWindow rWin, UccUI app) throws JAXBException, IOException, ParseException {
+
+	public AddNewHardwareWindow(HardwareWindow win, RoomsWindow rWin, UccUI app)
+			throws JAXBException, IOException, ParseException {
 		base = "resources.ucc";
 		bundle = ResourceBundle.getBundle(base);
 		setCaption(bundle.getString("add.new.hw"));
@@ -36,9 +37,8 @@ public class AddNewHardwareWindow extends Window {
 		new AddNewHardwareController(this, hWindow, rWin, app);
 	}
 
-public void addWindowContent(Component c) {
+	public void addWindowContent(Component c) {
 		layout.addComponent(c);
 	}
-
 
 }

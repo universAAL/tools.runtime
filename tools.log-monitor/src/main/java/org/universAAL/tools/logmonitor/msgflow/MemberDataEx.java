@@ -26,26 +26,26 @@ import org.universAAL.tools.logmonitor.MemberData;
  * 
  */
 public class MemberDataEx {
-    public MemberData member;
-    public int idxStart = 0;
-    public int idxEnd = Integer.MAX_VALUE;
-    public String name;
-    public boolean active = true;
-    public int bus = -1;
+	public MemberData member;
+	public int idxStart = 0;
+	public int idxEnd = Integer.MAX_VALUE;
+	public String name;
+	public boolean active = true;
+	public int bus = -1;
 
-    public MemberDataEx(MemberData member, int idxStart) {
-	this.member = member;
-	this.idxStart = idxStart;
-	if (member.label != null)
-	    name = member.label;
-	else
-	    name = member.module + " " + member.number;
+	public MemberDataEx(MemberData member, int idxStart) {
+		this.member = member;
+		this.idxStart = idxStart;
+		if (member.label != null)
+			name = member.label;
+		else
+			name = member.module + " " + member.number;
 
-	if (MemberData.BUS_NAME_SERVICE.equals(member.busNameReadable))
-	    bus = 0;
-	if (MemberData.BUS_NAME_CONTEXT.equals(member.busNameReadable))
-	    bus = 1;
-	if (MemberData.BUS_NAME_UI.equals(member.busNameReadable))
-	    bus = 2;
-    }
+		if (MemberData.BUS_NAME_SERVICE.equals(member.busNameReadable))
+			bus = 0;
+		if (MemberData.BUS_NAME_CONTEXT.equals(member.busNameReadable))
+			bus = 1;
+		if (MemberData.BUS_NAME_UI.equals(member.busNameReadable))
+			bus = 2;
+	}
 }

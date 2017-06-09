@@ -21,19 +21,22 @@ public class UccUsers {
 
 	/**
 	 * Gets all user of uCC
+	 * 
 	 * @return a list of users
 	 */
-	@XmlElement(name="user")
-		public List<UserAccountInfo> getUser() {
+	@XmlElement(name = "user")
+	public List<UserAccountInfo> getUser() {
 		return user;
 	}
 
 	/**
 	 * Sets all User of uCC.
-	 * @param allUser a list of all users
+	 * 
+	 * @param allUser
+	 *            a list of all users
 	 */
 	public void setUser(List<UserAccountInfo> allUser) {
 		this.user = allUser;
 	}
-	
+
 }

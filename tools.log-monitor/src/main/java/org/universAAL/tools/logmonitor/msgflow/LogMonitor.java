@@ -35,61 +35,59 @@ import org.universAAL.tools.logmonitor.msgflow.gui.MsgFlowGui;
  * @author Carsten Stockloew
  * 
  */
-public class LogMonitor extends ContextSubscriber implements LogListenerEx,
-	BusMemberListener {
+public class LogMonitor extends ContextSubscriber implements LogListenerEx, BusMemberListener {
 
-    private MsgFlowGui gui = new MsgFlowGui();
-    private int msgCounter = 0;
+	private MsgFlowGui gui = new MsgFlowGui();
+	private int msgCounter = 0;
 
-    public LogMonitor() {
-	super(Activator.mc,
-		new ContextEventPattern[] { new ContextEventPattern() });
-	setLabel("Log Monitor Context Subscriber for Message Flow");
-	setComment("The Log Monitor requires a context subscriber with an empty pattern to receive all context events from nodes in the AAL Space.");
-    }
+	public LogMonitor() {
+		super(Activator.mc, new ContextEventPattern[] { new ContextEventPattern() });
+		setLabel("Log Monitor Context Subscriber for Message Flow");
+		setComment(
+				"The Log Monitor requires a context subscriber with an empty pattern to receive all context events from nodes in the AAL Space.");
+	}
 
-    public void log(int logLevel, String module, String pkg, String cls,
-	    String method, Object[] msgPart, Throwable t) {
-    }
+	public void log(int logLevel, String module, String pkg, String cls, String method, Object[] msgPart, Throwable t) {
+	}
 
-    public JComponent getComponent() {
-	return gui;
-    }
+	public JComponent getComponent() {
+		return gui;
+	}
 
-    public String getTitle() {
-	return "Message Flow";
-    }
+	public String getTitle() {
+		return "Message Flow";
+	}
 
-    public void stop() {
-    }
+	public void stop() {
+	}
 
-    @Override
-    public void add(MemberData member) {
-	MemberDataEx d = new MemberDataEx(member, msgCounter);
-	gui.panel.addMember(d);
-    }
+	@Override
+	public void add(MemberData member) {
+		MemberDataEx d = new MemberDataEx(member, msgCounter);
+		gui.panel.addMember(d);
+	}
 
-    @Override
-    public void remove(String busMemberID) {
-	gui.panel.stopMember(busMemberID, msgCounter);
-    }
+	@Override
+	public void remove(String busMemberID) {
+		gui.panel.stopMember(busMemberID, msgCounter);
+	}
 
-    @Override
-    public void regParamsAdded(String busMemberID, Resource[] params) {
-	// nothing to do
-    }
+	@Override
+	public void regParamsAdded(String busMemberID, Resource[] params) {
+		// nothing to do
+	}
 
-    @Override
-    public void regParamsRemoved(String busMemberID, Resource[] params) {
-	// nothing to do
-    }
+	@Override
+	public void regParamsRemoved(String busMemberID, Resource[] params) {
+		// nothing to do
+	}
 
-    @Override
-    public void handleContextEvent(ContextEvent event) {
-	gui.panel.addEvent(event);
-    }
+	@Override
+	public void handleContextEvent(ContextEvent event) {
+		gui.panel.addEvent(event);
+	}
 
-    @Override
-    public void communicationChannelBroken() {
-    }
+	@Override
+	public void communicationChannelBroken() {
+	}
 }

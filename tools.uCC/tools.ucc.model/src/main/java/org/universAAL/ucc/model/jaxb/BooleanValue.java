@@ -5,7 +5,7 @@ import javax.xml.bind.annotation.*;
 public class BooleanValue extends SimpleObject {
 
 	private Boolean value;
-	
+
 	@XmlElement
 	public Boolean isValue() {
 		return value;
@@ -18,7 +18,5 @@ public class BooleanValue extends SimpleObject {
 	public Boolean getValue() {
 		return value;
 	}
-	
-	
 
 }

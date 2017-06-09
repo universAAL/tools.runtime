@@ -16,29 +16,28 @@ import org.universAAL.tools.logmonitor.bus_member.gui.BusMemberGui;
  */
 public class LogMonitor implements LogListenerEx {
 
-    private BusMemberGui gui = new BusMemberGui();
-    private SpaceListener spaceListener = null;
+	private BusMemberGui gui = new BusMemberGui();
+	private SpaceListener spaceListener = null;
 
-    public LogMonitor() {
-	// start space listener
-	spaceListener = new SpaceListener(gui);
-	spaceListener.start();
-    }
+	public LogMonitor() {
+		// start space listener
+		spaceListener = new SpaceListener(gui);
+		spaceListener.start();
+	}
 
-    // dummy method for integration in main gui, not used
-    public void log(int logLevel, String module, String pkg, String cls,
-	    String method, Object[] msgPart, Throwable t) {
-    }
+	// dummy method for integration in main gui, not used
+	public void log(int logLevel, String module, String pkg, String cls, String method, Object[] msgPart, Throwable t) {
+	}
 
-    public JComponent getComponent() {
-	return gui;
-    }
+	public JComponent getComponent() {
+		return gui;
+	}
 
-    public String getTitle() {
-	return "Bus Member";
-    }
+	public String getTitle() {
+		return "Bus Member";
+	}
 
-    public void stop() {
-	spaceListener.stop();
-    }
+	public void stop() {
+		spaceListener.stop();
+	}
 }

@@ -5,11 +5,13 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Clase Java para getFreeAALServices complex type.
+ * <p>
+ * Clase Java para getFreeAALServices complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>
+ * El siguiente fragmento de esquema especifica el contenido que se espera que
+ * haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="getFreeAALServices">
@@ -27,53 +29,47 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "getFreeAALServices", propOrder = {
-    "sessionKey",
-    "isFitToUser"
-})
+@XmlType(name = "getFreeAALServices", propOrder = { "sessionKey", "isFitToUser" })
 public class GetFreeAALServices {
 
-    protected String sessionKey;
-    protected boolean isFitToUser;
+	protected String sessionKey;
+	protected boolean isFitToUser;
 
-    /**
-     * Obtiene el valor de la propiedad sessionKey.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getSessionKey() {
-        return sessionKey;
-    }
+	/**
+	 * Obtiene el valor de la propiedad sessionKey.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getSessionKey() {
+		return sessionKey;
+	}
 
-    /**
-     * Define el valor de la propiedad sessionKey.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setSessionKey(String value) {
-        this.sessionKey = value;
-    }
+	/**
+	 * Define el valor de la propiedad sessionKey.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setSessionKey(String value) {
+		this.sessionKey = value;
+	}
 
-    /**
-     * Obtiene el valor de la propiedad isFitToUser.
-     * 
-     */
-    public boolean isIsFitToUser() {
-        return isFitToUser;
-    }
+	/**
+	 * Obtiene el valor de la propiedad isFitToUser.
+	 * 
+	 */
+	public boolean isIsFitToUser() {
+		return isFitToUser;
+	}
 
-    /**
-     * Define el valor de la propiedad isFitToUser.
-     * 
-     */
-    public void setIsFitToUser(boolean value) {
-        this.isFitToUser = value;
-    }
+	/**
+	 * Define el valor de la propiedad isFitToUser.
+	 * 
+	 */
+	public void setIsFitToUser(boolean value) {
+		this.isFitToUser = value;
+	}
 
 }

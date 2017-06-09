@@ -13,33 +13,40 @@ public class RegisteredService {
 	private String provider;
 	private String serviceClass;
 	private String iconURL;
-	
+
 	public RegisteredService() {
 		bundleId = new ArrayList<String>();
 		appId = new ArrayList<String>();
 	}
-	
+
 	public String getServiceId() {
 		return serviceId;
 	}
+
 	public void setServiceId(String serviceId) {
 		this.serviceId = serviceId;
 	}
+
 	public List<String> getBundleId() {
 		return bundleId;
 	}
+
 	public void setBundleId(List<String> bundleId) {
 		this.bundleId = bundleId;
 	}
+
 	public List<String> getAppId() {
 		return appId;
 	}
+
 	public void setAppId(List<String> appId) {
 		this.appId = appId;
 	}
+
 	public String getBundleVersion() {
 		return bundleVersion;
 	}
+
 	public void setBundleVersion(String bundleVersion) {
 		this.bundleVersion = bundleVersion;
 	}
@@ -83,7 +90,5 @@ public class RegisteredService {
 	public void setIconURL(String iconURL) {
 		this.iconURL = iconURL;
 	}
-	
-	
 
 }

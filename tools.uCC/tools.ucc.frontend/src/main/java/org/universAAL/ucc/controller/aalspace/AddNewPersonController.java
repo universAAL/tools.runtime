@@ -66,7 +66,7 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 	private HashMap<String, Subprofile> subprofiles;
 	private String ontId;
 	private ArrayList<OntologyInstance> objects;
-	private ArrayList<OntologyInstance>savedObjects;
+	private ArrayList<OntologyInstance> savedObjects;
 	private OntologyInstance instance;
 	private static String ontoProfile;
 	private String actualFlat;
@@ -75,27 +75,25 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 	private Setup setup;
 	private SelectUserWindow selWin;
 
-	public AddNewPersonController(AddNewPersonWindow window, HumansWindow hWin, SelectUserWindow sel,
-			UccUI app) throws JAXBException,
-			IOException, ParseException {
-		context = Activator.bc;//FrameworkUtil.getBundle(getClass()).getBundleContext();
+	public AddNewPersonController(AddNewPersonWindow window, HumansWindow hWin, SelectUserWindow sel, UccUI app)
+			throws JAXBException, IOException, ParseException {
+		context = Activator.bc;// FrameworkUtil.getBundle(getClass()).getBundleContext();
 		device = Activator.getDB().getAbsolutePath();
 		System.out.println("uccDB is in folder: " + device);
-		ontoProfile = device+"/EmptyUser.xml";
+		ontoProfile = device + "/EmptyUser.xml";
 		this.app = app;
 		selWin = sel;
 		this.saved = false;
 		this.win = window;
 		this.win.addListener(this);
 		actualFlat = device + "/Users.xml";
-		ServiceReference ref = context.getServiceReference(DataAccess.class
-				.getName());
+		ServiceReference ref = context.getServiceReference(DataAccess.class.getName());
 		dataAccess = (DataAccess) context.getService(ref);
 		ServiceReference ref2 = context.getServiceReference(Setup.class.getName());
-		setup = (Setup)context.getService(ref2);
+		setup = (Setup) context.getService(ref2);
 		context.ungetService(ref);
 		context.ungetService(ref2);
-//		savedObjects = dataAccess.getCHEFormFields("User", );
+		// savedObjects = dataAccess.getCHEFormFields("User", );
 		savedObjects = dataAccess.getFormFields(actualFlat);
 		instance = new OntologyInstance();
 		subprofiles = new HashMap<String, Subprofile>();
@@ -114,7 +112,7 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 	private void loadData() throws JAXBException, IOException, ParseException {
 		// Creating Tabs with Forms
 		objects = dataAccess.getEmptyCHEFormFields("User");
-//		objects = dataAccess.getEmptyProfile(ontoProfile);
+		// objects = dataAccess.getEmptyProfile(ontoProfile);
 		TabForm f = null;
 		// Every Subprofile is shown in a seperate tab
 		for (Subprofile tab : objects.get(0).getSubprofiles()) {
@@ -125,12 +123,12 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 			// Creating User tree and Comboboxes
 			for (EnumObject enumObj : tab.getEnums()) {
 				NativeSelect box = new NativeSelect(enumObj.getLabel());
-//				box.addItem("");
+				// box.addItem("");
 				box.setDescription(enumObj.getDescription());
 				// Create ComboBox with enum objects and add to form
 				for (String item : enumObj.getValues()) {
-//					if(item != null)
-						box.addItem(item);
+					// if(item != null)
+					box.addItem(item);
 				}
 				box.setImmediate(true);
 				if (enumObj.isRequired()) {
@@ -157,18 +155,18 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 					if (cols.isMultiselect()) {
 						list.setMultiSelect(true);
 					}
-					if(cols.isRequired()) {
+					if (cols.isRequired()) {
 						list.setRequired(true);
 						list.setRequiredError("You have to add one or many preferred Languages");
 					}
-					if(cols.getCollection().size()>0) {
-						for(SimpleObject v : cols.getCollection()) {
-							StringValue st = (StringValue)v;
+					if (cols.getCollection().size() > 0) {
+						for (SimpleObject v : cols.getCollection()) {
+							StringValue st = (StringValue) v;
 							list.addItem(st.getValue());
 							list.select(st.getValue());
 						}
 					}
-						
+
 					// Adding List to Form
 					list.setImmediate(true);
 					list.setNullSelectionAllowed(false);
@@ -188,16 +186,15 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 			f.setHeader(tab.getName());
 			f.setReadOnly(false);
 			tabSheet.addTab(f, tab.getName());
-			if(tabSheet.getTabPosition(tabSheet.getTab(f)) != 0) {
+			if (tabSheet.getTabPosition(tabSheet.getTab(f)) != 0) {
 				tabSheet.getTab(f).setEnabled(false);
 			}
-				
+
 		}
 
 	}
 
-	private TabForm createForm(SimpleObject simpleObject, TabForm form)
-			throws ParseException {
+	private TabForm createForm(SimpleObject simpleObject, TabForm form) throws ParseException {
 		if (simpleObject instanceof CalendarValue) {
 			CalendarValue cal = (CalendarValue) simpleObject;
 			PopupDateField date = new PopupDateField(cal.getLabel());
@@ -213,7 +210,7 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 			form.addField(cal.getLabel(), date);
 		} else if (simpleObject instanceof StringValue) {
 			StringValue st = (StringValue) simpleObject;
-			if(st.getName().contains("password") || st.getName().contains("Password")) {
+			if (st.getName().contains("password") || st.getName().contains("Password")) {
 				PasswordField pwd = new PasswordField(st.getLabel());
 				pwd.setWriteThrough(false);
 				pwd.setImmediate(true);
@@ -223,8 +220,7 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 					pwd.setRequiredError(st.getLabel() + " is required");
 				}
 				form.addField(st.getLabel(), pwd);
-			} else 
-			if (st.getValue().length() > 30) {
+			} else if (st.getValue().length() > 30) {
 				TextArea area = new TextArea(st.getLabel());
 				area.setImmediate(true);
 				area.setWriteThrough(false);
@@ -236,8 +232,7 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 				}
 				if (st.getValidator() != null) {
 					if (st.getValidator().equals("EmailValidator")) {
-						area.addValidator(new EmailValidator(
-								"The Emailaddress isn't correct"));
+						area.addValidator(new EmailValidator("The Emailaddress isn't correct"));
 					}
 				}
 				form.addField(st.getLabel(), area);
@@ -252,8 +247,7 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 				}
 				if (st.getValidator() != null) {
 					if (st.getValidator().equals("EmailValidator")) {
-						tf.addValidator(new EmailValidator(
-								"The Emailaddress isn't correct"));
+						tf.addValidator(new EmailValidator("The Emailaddress isn't correct"));
 					}
 				}
 				form.addField(simpleObject.getLabel(), tf);
@@ -272,11 +266,9 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 			if (integer.getValidator() != null) {
 				if (integer.getValidator().equals("RegexpValidator")) {
 					if (integer.getName().contains("postalCode")) {
-						t.addValidator(new RegexpValidator("[1-9][0-9]{4}",
-								"The postal code isn't correct"));
+						t.addValidator(new RegexpValidator("[1-9][0-9]{4}", "The postal code isn't correct"));
 					} else {
-						t.addValidator(new RegexpValidator("[1-9][0-9]*",
-								"Please insert an valid number"));
+						t.addValidator(new RegexpValidator("[1-9][0-9]*", "Please insert an valid number"));
 					}
 				}
 			}
@@ -304,8 +296,7 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 			}
 			if (doub.getValidator() != null) {
 				if (doub.getValidator().equals("RegexpValidator")) {
-					tf.addValidator(new RegexpValidator("[0-9]*[.][0-9]{5}",
-							"Please insert a valid floating number"));
+					tf.addValidator(new RegexpValidator("[0-9]*[.][0-9]{5}", "Please insert a valid floating number"));
 				}
 			}
 			form.addField(doub.getLabel(), tf);
@@ -315,9 +306,9 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 	}
 
 	String user = "";
+
 	public void buttonClick(ClickEvent event) {
-		if (event.getButton() == ((TabForm) tabSheet.getSelectedTab())
-				.getSaveButton()) {
+		if (event.getButton() == ((TabForm) tabSheet.getSelectedTab()).getSaveButton()) {
 			saved = true;
 			TabForm tab = (TabForm) tabSheet.getSelectedTab();
 			String tabHeader = tabSheet.getTab(tab).getCaption();
@@ -325,8 +316,7 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 			sub.setName(tabHeader);
 			// SimpleObjects
 			ArrayList<SimpleObject> simpleObjects = new ArrayList<SimpleObject>();
-			for (SimpleObject sim : subprofiles.get(tabHeader)
-					.getSimpleObjects()) {
+			for (SimpleObject sim : subprofiles.get(tabHeader).getSimpleObjects()) {
 				if (sim instanceof StringValue) {
 					StringValue s = (StringValue) sim;
 					s.setValue((String) tab.getField(s.getLabel()).getValue());
@@ -337,37 +327,30 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 				}
 				if (sim instanceof IntegerValue) {
 					IntegerValue integer = (IntegerValue) sim;
-					if (isIntegerNum(tab.getField(sim.getLabel()).getValue()
-							.toString()))
-						integer.setValue(Integer.parseInt(tab
-								.getField(sim.getLabel()).getValue().toString()));
+					if (isIntegerNum(tab.getField(sim.getLabel()).getValue().toString()))
+						integer.setValue(Integer.parseInt(tab.getField(sim.getLabel()).getValue().toString()));
 					else
 						integer.setValue(0);
 					simpleObjects.add(integer);
 				}
 				if (sim instanceof DoubleValue) {
 					DoubleValue doub = (DoubleValue) sim;
-					if (isDoubleNum(tab.getField(doub.getLabel()).getValue()
-							.toString()))
-						doub.setValue(Double.parseDouble(tab
-								.getField(doub.getLabel()).getValue()
-								.toString()));
+					if (isDoubleNum(tab.getField(doub.getLabel()).getValue().toString()))
+						doub.setValue(Double.parseDouble(tab.getField(doub.getLabel()).getValue().toString()));
 					else
 						doub.setValue(0.0);
 					simpleObjects.add(doub);
 				}
 				if (sim instanceof BooleanValue) {
 					BooleanValue bool = (BooleanValue) sim;
-					bool.setValue((Boolean) tab.getField(bool.getLabel())
-							.getValue());
+					bool.setValue((Boolean) tab.getField(bool.getLabel()).getValue());
 					simpleObjects.add(bool);
 				}
 				if (sim instanceof CalendarValue) {
 					CalendarValue cal = (CalendarValue) sim;
 					DateFormat df = new SimpleDateFormat();
 					if (tab.getField(sim.getLabel()).getValue() != null) {
-						String date = df.format((Date) tab.getField(
-								sim.getLabel()).getValue());
+						String date = df.format((Date) tab.getField(sim.getLabel()).getValue());
 						cal.setCalendar(date);
 						simpleObjects.add(cal);
 					}
@@ -378,10 +361,9 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 			// EnumObjects
 			ArrayList<EnumObject> enums = new ArrayList<EnumObject>();
 			for (EnumObject en : subprofiles.get(tabHeader).getEnums()) {
-				en.setSelectedValue((String) tab.getField(en.getType())
-						.getValue());
+				en.setSelectedValue((String) tab.getField(en.getType()).getValue());
 				enums.add(en);
-				if(en.getType().equals("userRole")) {
+				if (en.getType().equals("userRole")) {
 					user = en.getSelectedValue();
 				}
 			}
@@ -389,14 +371,12 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 
 			// CollectionValues
 			ArrayList<CollectionValues> collections = new ArrayList<CollectionValues>();
-			for (CollectionValues cols : subprofiles.get(tabHeader)
-					.getCollections()) {
+			for (CollectionValues cols : subprofiles.get(tabHeader).getCollections()) {
 				Collection<SimpleObject> values = new ArrayList<SimpleObject>();
 				Collection<SimpleObject> newVal = null;
 				for (SimpleObject sim : cols.getCollection()) {
 					if (sim instanceof StringValue) {
-						newVal = (Collection<SimpleObject>) tab.getField(
-								cols.getLabel()).getValue();
+						newVal = (Collection<SimpleObject>) tab.getField(cols.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i < array.length; i++) {
 							StringValue n = new StringValue();
@@ -408,8 +388,7 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 							values.add(n);
 						}
 					} else if (sim instanceof IntegerValue) {
-						newVal = (Collection<SimpleObject>) tab.getField(
-								cols.getLabel()).getValue();
+						newVal = (Collection<SimpleObject>) tab.getField(cols.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i < array.length; i++) {
 							IntegerValue n = new IntegerValue();
@@ -425,8 +404,7 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 						}
 
 					} else if (sim instanceof DoubleValue) {
-						newVal = (Collection<SimpleObject>) tab.getField(
-								cols.getLabel()).getValue();
+						newVal = (Collection<SimpleObject>) tab.getField(cols.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i < array.length; i++) {
 							DoubleValue n = new DoubleValue();
@@ -435,8 +413,7 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 							n.setRequired(sim.isRequired());
 							n.setValidator(sim.getValidator());
 							if (isDoubleNum(array[i].toString()))
-								n.setValue(Double.parseDouble(array[i]
-										.toString()));
+								n.setValue(Double.parseDouble(array[i].toString()));
 							else
 								n.setValue(0.0);
 							values.add(n);
@@ -448,10 +425,11 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 				collections.add(cols);
 			}
 			sub.setCollections(collections);
-			for(OntologyInstance ont : savedObjects) {
-				if(tab.getField("Given name:") != null && tab.getField("Given name:").getValue().equals(ont.getId())) {
+			for (OntologyInstance ont : savedObjects) {
+				if (tab.getField("Given name:") != null && tab.getField("Given name:").getValue().equals(ont.getId())) {
 					tab.getField("Given name:").setValue("");
-					app.getMainWindow().showNotification("You can't add a person twice", Notification.TYPE_HUMANIZED_MESSAGE);
+					app.getMainWindow().showNotification("You can't add a person twice",
+							Notification.TYPE_HUMANIZED_MESSAGE);
 					return;
 				}
 			}
@@ -462,86 +440,83 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 				}
 			}
 			objects.add(instance);
-			
-				
+
 			tab.setReadOnly(true);
 			tabSheet.removeComponent(tab);
-			if(tabSheet.getComponentCount() > 0) {
+			if (tabSheet.getComponentCount() > 0) {
 				tabSheet.getTab(tabSheet.getTabIndex()).setEnabled(true);
 			}
-//			if (hWindow != null && tabSheet.getComponentCount() == 0) {
-//				hWindow.getUserTree().addItem(ontId);
-//				hWindow.getUserTree().setParent(ontId,
-//						hWindow.getUserTree().getValue());
-//				hWindow.getUserTree().setChildrenAllowed(ontId, false);
-//			}
+			// if (hWindow != null && tabSheet.getComponentCount() == 0) {
+			// hWindow.getUserTree().addItem(ontId);
+			// hWindow.getUserTree().setParent(ontId,
+			// hWindow.getUserTree().getValue());
+			// hWindow.getUserTree().setChildrenAllowed(ontId, false);
+			// }
 
 			if (tabSheet.getComponentCount() == 0) {
 				dataAccess.saveUserDataInCHE(instance);
-				//Save in Users.xml
-				List<UserAccountInfo>ul = setup.getUsers();
-				List<UserAccountInfo>temp = new ArrayList<UserAccountInfo>();
+				// Save in Users.xml
+				List<UserAccountInfo> ul = setup.getUsers();
+				List<UserAccountInfo> temp = new ArrayList<UserAccountInfo>();
 				boolean flag = false;
 				UserAccountInfo uinfo = new UserAccountInfo();
 				uinfo.setChecked(true);
 				ArrayList<Role> roles = new ArrayList<Role>();
-				for(Subprofile s : instance.getSubprofiles()) {
-					for(SimpleObject si : s.getSimpleObjects()) {
-						StringValue sv = (StringValue)si;
+				for (Subprofile s : instance.getSubprofiles()) {
+					for (SimpleObject si : s.getSimpleObjects()) {
+						StringValue sv = (StringValue) si;
 						System.err.println(sv.getName());
 						System.err.println(sv.getValue());
-						if(sv.getName().equals("username")) {
-							for(UserAccountInfo us : ul) {
-								if(us.getName().equals(sv.getValue())) {
+						if (sv.getName().equals("username")) {
+							for (UserAccountInfo us : ul) {
+								if (us.getName().equals(sv.getValue())) {
 									flag = true;
 								}
 							}
-							if(!flag) {
+							if (!flag) {
 								uinfo.setName(sv.getValue());
 							}
 						}
-						if(sv.getName().equals("password")) {
-							if(!flag)
+						if (sv.getName().equals("password")) {
+							if (!flag)
 								uinfo.setPassword(sv.getValue());
 						}
-						
+
 					}
-					if(!flag) {
-					for(EnumObject eo : s.getEnums()) {
-						System.err.println(eo.getType());
-						if(eo.getType().equals("userRole")) {
-							System.err.println(eo.getSelectedValue());
-							roles.add(Role.valueOf(eo.getSelectedValue()));
-							uinfo.setRole(roles);
+					if (!flag) {
+						for (EnumObject eo : s.getEnums()) {
+							System.err.println(eo.getType());
+							if (eo.getType().equals("userRole")) {
+								System.err.println(eo.getSelectedValue());
+								roles.add(Role.valueOf(eo.getSelectedValue()));
+								uinfo.setRole(roles);
+							}
 						}
 					}
 				}
-				}
-				if(!flag) {
+				if (!flag) {
 					temp.add(uinfo);
 					setup.saveUsers(temp);
 				}
-				
-//				dataAccess.saveUserData(actualFlat, instance);
+
+				// dataAccess.saveUserData(actualFlat, instance);
 				app.getMainWindow().removeWindow(win);
 			}
-			if(tabSheet.getComponentCount() == 0) {
-				for(Window w : app.getMainWindow().getChildWindows()) {
-					if(w instanceof HumansWindow) {
-						   HumansWindow users = (HumansWindow)w;
-//						   if(flatId.equals(users.getFlatId())) {
-							   users.getUserTree().addItem(ontId);
-							   users.getUserTree().setParent(ontId, user);
-							   users.getUserTree().setChildrenAllowed(ontId, false);
-//						   }
-						}
+			if (tabSheet.getComponentCount() == 0) {
+				for (Window w : app.getMainWindow().getChildWindows()) {
+					if (w instanceof HumansWindow) {
+						HumansWindow users = (HumansWindow) w;
+						// if(flatId.equals(users.getFlatId())) {
+						users.getUserTree().addItem(ontId);
+						users.getUserTree().setParent(ontId, user);
+						users.getUserTree().setChildrenAllowed(ontId, false);
+						// }
 					}
 				}
-			app.getMainWindow().showNotification(
-					tab.getHeader() + " was saved",
-					Notification.POSITION_CENTERED);
+			}
+			app.getMainWindow().showNotification(tab.getHeader() + " was saved", Notification.POSITION_CENTERED);
 			selWin.addUserToList();
-			
+
 		}
 
 	}
@@ -565,9 +540,10 @@ public class AddNewPersonController implements Button.ClickListener, Window.Clos
 	}
 
 	public void windowClose(CloseEvent e) {
-		if(tabSheet.getComponentCount() > 0 && saved)
-			app.getMainWindow().showNotification("The person won't be added, <br> because you've broken the operation", Notification.TYPE_HUMANIZED_MESSAGE);
-		
+		if (tabSheet.getComponentCount() > 0 && saved)
+			app.getMainWindow().showNotification("The person won't be added, <br> because you've broken the operation",
+					Notification.TYPE_HUMANIZED_MESSAGE);
+
 	}
 
 }

@@ -32,22 +32,19 @@ public class UstoreUtil {
 	private ServiceReference ref;
 	private Setup setup;
 	private OnlineStoreManager client;
-	private static final QName SERVICE_NAME = new QName(
-			"http://tools.ustore.commerce.universaal.org/",
+	private static final QName SERVICE_NAME = new QName("http://tools.ustore.commerce.universaal.org/",
 			"OnlineStoreManagerService");
 
 	/**
-	 * Creates an new UstoreUtil instance and connects to
-	 * the uStore webservice.
+	 * Creates an new UstoreUtil instance and connects to the uStore webservice.
 	 */
 	public UstoreUtil() {
-		bc = Activator.bc;//FrameworkUtil.getBundle(getClass()).getBundleContext();
+		bc = Activator.bc;// FrameworkUtil.getBundle(getClass()).getBundleContext();
 		ref = bc.getServiceReference(Setup.class.getName());
-		setup = (Setup)bc.getService(ref);
+		setup = (Setup) bc.getService(ref);
 		bc.ungetService(ref);
 		URL wsdlURL = OnlineStoreManagerService.WSDL_LOCATION;
-		OnlineStoreManagerService ss = new OnlineStoreManagerService(wsdlURL,
-				SERVICE_NAME);
+		OnlineStoreManagerService ss = new OnlineStoreManagerService(wsdlURL, SERVICE_NAME);
 		client = ss.getOnlineStoreManagerPort();
 	}
 
@@ -72,30 +69,32 @@ public class UstoreUtil {
 		}
 		String adminUserName = prop.getProperty("admin");
 		String adminPassword = prop.getProperty("pwd");
-		
+
 		String portNum = prop.getProperty("uccPort");
 		String idAddr = prop.getProperty("uccUrl");
-		
-		System.err.println(adminUserName+" "+adminPassword+" "+sessionKey+" "+portNum+ " "+" "+idAddr);
+
+		System.err.println(adminUserName + " " + adminPassword + " " + sessionKey + " " + portNum + " " + " " + idAddr);
 		try {
 			client.registerDeployManager(sessionKey, adminUserName, adminPassword, idAddr, portNum);
 		} catch (UAALException_Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	/**
 	 * Gets a session key from uStore.
+	 * 
 	 * @return session key from uStore
 	 */
 	public String getSessionKey() {
-		//Calling registered Users from Database
-		List<UserAccountInfo>list = setup.getUsers();
+		// Calling registered Users from Database
+		List<UserAccountInfo> list = setup.getUsers();
 		String sessionKey = "";
-		//Connection to uStore to get a session key for one user
-		for(UserAccountInfo info : list) {
-			if(info.getName() != null && !info.getName().equals("") && info.getPassword() != null && !info.getPassword().equals("")) {
+		// Connection to uStore to get a session key for one user
+		for (UserAccountInfo info : list) {
+			if (info.getName() != null && !info.getName().equals("") && info.getPassword() != null
+					&& !info.getPassword().equals("")) {
 				try {
 					sessionKey = client.getSessionKey(info.getName(), info.getPassword());
 				} catch (UAALException_Exception e) {

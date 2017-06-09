@@ -30,135 +30,131 @@ import org.universAAL.middleware.rdf.Resource;
  */
 public class OntologyGui extends JPanel implements TreeSelectionListener {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    /**
-     * The graphics panel where the content is drawn.
-     */
-    OntologyPane pane = new OntologyPane();
+	/**
+	 * The graphics panel where the content is drawn.
+	 */
+	OntologyPane pane = new OntologyPane();
 
-    private JTree tree;
-    private DefaultMutableTreeNode root = null;
-    DefaultTreeModel treeModel;
+	private JTree tree;
+	private DefaultMutableTreeNode root = null;
+	DefaultTreeModel treeModel;
 
-    private Map<String, DefaultMutableTreeNode> onts = new Hashtable<String, DefaultMutableTreeNode>();
-    private DefaultMutableTreeNode mwOnts;
-    private DefaultMutableTreeNode ontOnts;
-    private DefaultMutableTreeNode appOnts;
+	private Map<String, DefaultMutableTreeNode> onts = new Hashtable<String, DefaultMutableTreeNode>();
+	private DefaultMutableTreeNode mwOnts;
+	private DefaultMutableTreeNode ontOnts;
+	private DefaultMutableTreeNode appOnts;
 
-    /**
-     * Create the main frame.
-     */
-    public OntologyGui() {
-	this.setLayout(new BorderLayout());
-	// Message overview
-	root = new DefaultMutableTreeNode("root");
-	treeModel = new DefaultTreeModel(root);
-	tree = new JTree(treeModel);
-	tree.setRootVisible(false);
-	tree.addTreeSelectionListener(this);
+	/**
+	 * Create the main frame.
+	 */
+	public OntologyGui() {
+		this.setLayout(new BorderLayout());
+		// Message overview
+		root = new DefaultMutableTreeNode("root");
+		treeModel = new DefaultTreeModel(root);
+		tree = new JTree(treeModel);
+		tree.setRootVisible(false);
+		tree.addTreeSelectionListener(this);
 
-	// overall view
-	JScrollPane scrollPaneLeft = new JScrollPane(tree);
-	JScrollPane scrollPaneRight = new JScrollPane(pane);
+		// overall view
+		JScrollPane scrollPaneLeft = new JScrollPane(tree);
+		JScrollPane scrollPaneRight = new JScrollPane(pane);
 
-	JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,
-		scrollPaneLeft, scrollPaneRight);
-	splitPane.setDividerLocation(0.4);
-	add(splitPane, BorderLayout.CENTER);
+		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, scrollPaneLeft, scrollPaneRight);
+		splitPane.setDividerLocation(0.4);
+		add(splitPane, BorderLayout.CENTER);
 
-	mwOnts = new DefaultMutableTreeNode("universAAL Middleware Ontologies");
-	ontOnts = new DefaultMutableTreeNode("universAAL Ontologies");
-	appOnts = new DefaultMutableTreeNode("Application Ontologies");
-	root.add(appOnts);
-	root.add(ontOnts);
-	root.add(mwOnts);
-	treeModel.reload(root);
-    }
+		mwOnts = new DefaultMutableTreeNode("universAAL Middleware Ontologies");
+		ontOnts = new DefaultMutableTreeNode("universAAL Ontologies");
+		appOnts = new DefaultMutableTreeNode("Application Ontologies");
+		root.add(appOnts);
+		root.add(ontOnts);
+		root.add(mwOnts);
+		treeModel.reload(root);
+	}
 
-    public void add(final String ontURI) {
-	if (ontURI == null)
-	    return;
-	SwingUtilities.invokeLater(new Runnable() {
-	    public void run() {
-		// add a tree node
-		DefaultMutableTreeNode ontNode = onts.get(ontURI);
-		if (ontNode == null) {
-		    // ontology not yet available
-		    ontNode = new DefaultMutableTreeNode(ontURI);
+	public void add(final String ontURI) {
+		if (ontURI == null)
+			return;
+		SwingUtilities.invokeLater(new Runnable() {
+			public void run() {
+				// add a tree node
+				DefaultMutableTreeNode ontNode = onts.get(ontURI);
+				if (ontNode == null) {
+					// ontology not yet available
+					ontNode = new DefaultMutableTreeNode(ontURI);
 
-		    DefaultMutableTreeNode group = appOnts;
+					DefaultMutableTreeNode group = appOnts;
 
-		    String module = OntologyManagement.getInstance()
-			    .getRegisteringModuleID(ontURI);
-		    if (ontURI.toLowerCase().startsWith(
-			    Resource.uAAL_NAMESPACE_PREFIX.toLowerCase())) {
-			if (module.startsWith("mw."))
-			    group = mwOnts;
-			else if (module.startsWith("ont."))
-			    group = ontOnts;
-		    }
-		    // System.out.println("Ontology: " + ontURI + "  " +
-		    // module);
+					String module = OntologyManagement.getInstance().getRegisteringModuleID(ontURI);
+					if (ontURI.toLowerCase().startsWith(Resource.uAAL_NAMESPACE_PREFIX.toLowerCase())) {
+						if (module.startsWith("mw."))
+							group = mwOnts;
+						else if (module.startsWith("ont."))
+							group = ontOnts;
+					}
+					// System.out.println("Ontology: " + ontURI + " " +
+					// module);
 
-		    group.add(ontNode);
-		    treeModel.reload(group);
-		    expand(group);
+					group.add(ontNode);
+					treeModel.reload(group);
+					expand(group);
 
-		    onts.put(ontURI, ontNode);
-		}
-	    }
-	});
-    }
-
-    public void remove(final String ontURI) {
-	SwingUtilities.invokeLater(new Runnable() {
-	    public void run() {
-		// remove from gui
-		DefaultMutableTreeNode node = onts.get(ontURI);
-		treeModel.removeNodeFromParent(node);
-
-		// remove ontology
-		onts.remove(ontURI);
-	    }
-	});
-    }
-
-    private void expand(DefaultMutableTreeNode node) {
-	TreeNode[] path = node.getPath();
-	TreePath treePath = new TreePath(path);
-	tree.expandPath(treePath);
-    }
-
-    @Override
-    public void valueChanged(TreeSelectionEvent e) {
-	final JTree tree = (JTree) e.getSource();
-	SwingUtilities.invokeLater(new Runnable() {
-	    public void run() {
-		DefaultMutableTreeNode node = (DefaultMutableTreeNode) tree
-			.getLastSelectedPathComponent();
-		// String selectedNodeName = selectedNode.toString();
-		if (node == null) {
-		    pane.show(null);
-		    return;
-		}
-
-		if (onts.containsValue(node)) {
-		    // get the member ID from the node
-		    // this could be done more efficient
-		    String ontURI = null;
-		    for (String id : onts.keySet()) {
-			DefaultMutableTreeNode tmp = onts.get(id);
-			if (node == tmp) {
-			    ontURI = id;
+					onts.put(ontURI, ontNode);
+				}
 			}
-		    }
-		    // get member data and show it
-		    if (ontURI != null) {
-			pane.show(ontURI);
-		    }
-		}
-	    }
-	});
-    }
+		});
+	}
+
+	public void remove(final String ontURI) {
+		SwingUtilities.invokeLater(new Runnable() {
+			public void run() {
+				// remove from gui
+				DefaultMutableTreeNode node = onts.get(ontURI);
+				treeModel.removeNodeFromParent(node);
+
+				// remove ontology
+				onts.remove(ontURI);
+			}
+		});
+	}
+
+	private void expand(DefaultMutableTreeNode node) {
+		TreeNode[] path = node.getPath();
+		TreePath treePath = new TreePath(path);
+		tree.expandPath(treePath);
+	}
+
+	@Override
+	public void valueChanged(TreeSelectionEvent e) {
+		final JTree tree = (JTree) e.getSource();
+		SwingUtilities.invokeLater(new Runnable() {
+			public void run() {
+				DefaultMutableTreeNode node = (DefaultMutableTreeNode) tree.getLastSelectedPathComponent();
+				// String selectedNodeName = selectedNode.toString();
+				if (node == null) {
+					pane.show(null);
+					return;
+				}
+
+				if (onts.containsValue(node)) {
+					// get the member ID from the node
+					// this could be done more efficient
+					String ontURI = null;
+					for (String id : onts.keySet()) {
+						DefaultMutableTreeNode tmp = onts.get(id);
+						if (node == tmp) {
+							ontURI = id;
+						}
+					}
+					// get member data and show it
+					if (ontURI != null) {
+						pane.show(ontURI);
+					}
+				}
+			}
+		});
+	}
 }

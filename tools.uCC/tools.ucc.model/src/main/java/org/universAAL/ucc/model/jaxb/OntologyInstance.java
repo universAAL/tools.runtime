@@ -8,8 +8,8 @@ public class OntologyInstance {
 	private ArrayList<Subprofile> subprofiles = new ArrayList<Subprofile>();
 	private String type;
 
-	@XmlElementWrapper(name="subprofiles")
-	@XmlElement(name ="subprofile")
+	@XmlElementWrapper(name = "subprofiles")
+	@XmlElement(name = "subprofile")
 	public ArrayList<Subprofile> getSubprofiles() {
 		return subprofiles;
 	}
@@ -18,7 +18,7 @@ public class OntologyInstance {
 		this.subprofiles = subprofiles;
 	}
 
-	@XmlAttribute(name="id", required=true)
+	@XmlAttribute(name = "id", required = true)
 	public String getId() {
 		return id;
 	}
@@ -34,6 +34,5 @@ public class OntologyInstance {
 	public void setType(String type) {
 		this.type = type;
 	}
-	
 
 }

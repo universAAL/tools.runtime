@@ -16,16 +16,16 @@ import org.universAAL.tools.logmonitor.all_log.LogEntry;
  */
 public class MessagePanel extends JTextPane {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    MessagePanel() {
-	setEditable(false);
-	setContentType("text/plain");
-	setCaret(new DefaultCaret());
-	((DefaultCaret) getCaret()).setUpdatePolicy(DefaultCaret.NEVER_UPDATE);
-    }
+	MessagePanel() {
+		setEditable(false);
+		setContentType("text/plain");
+		setCaret(new DefaultCaret());
+		((DefaultCaret) getCaret()).setUpdatePolicy(DefaultCaret.NEVER_UPDATE);
+	}
 
-    public void show(LogEntry le) {
-	setText(Utils.buildMessage(le.msgPart));
-    }
+	public void show(LogEntry le) {
+		setText(Utils.buildMessage(le.msgPart));
+	}
 }

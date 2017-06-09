@@ -5,11 +5,13 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Clase Java para registerDeployManager complex type.
+ * <p>
+ * Clase Java para registerDeployManager complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>
+ * El siguiente fragmento de esquema especifica el contenido que se espera que
+ * haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="registerDeployManager">
@@ -30,139 +32,119 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "registerDeployManager", propOrder = {
-    "sessionKey",
-    "adminUserName",
-    "adminPassword",
-    "ipAddress",
-    "port"
-})
+@XmlType(name = "registerDeployManager", propOrder = { "sessionKey", "adminUserName", "adminPassword", "ipAddress",
+		"port" })
 public class RegisterDeployManager {
 
-    protected String sessionKey;
-    protected String adminUserName;
-    protected String adminPassword;
-    protected String ipAddress;
-    protected String port;
+	protected String sessionKey;
+	protected String adminUserName;
+	protected String adminPassword;
+	protected String ipAddress;
+	protected String port;
 
-    /**
-     * Obtiene el valor de la propiedad sessionKey.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getSessionKey() {
-        return sessionKey;
-    }
+	/**
+	 * Obtiene el valor de la propiedad sessionKey.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getSessionKey() {
+		return sessionKey;
+	}
 
-    /**
-     * Define el valor de la propiedad sessionKey.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setSessionKey(String value) {
-        this.sessionKey = value;
-    }
+	/**
+	 * Define el valor de la propiedad sessionKey.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setSessionKey(String value) {
+		this.sessionKey = value;
+	}
 
-    /**
-     * Obtiene el valor de la propiedad adminUserName.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getAdminUserName() {
-        return adminUserName;
-    }
+	/**
+	 * Obtiene el valor de la propiedad adminUserName.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getAdminUserName() {
+		return adminUserName;
+	}
 
-    /**
-     * Define el valor de la propiedad adminUserName.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setAdminUserName(String value) {
-        this.adminUserName = value;
-    }
+	/**
+	 * Define el valor de la propiedad adminUserName.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setAdminUserName(String value) {
+		this.adminUserName = value;
+	}
 
-    /**
-     * Obtiene el valor de la propiedad adminPassword.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getAdminPassword() {
-        return adminPassword;
-    }
+	/**
+	 * Obtiene el valor de la propiedad adminPassword.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getAdminPassword() {
+		return adminPassword;
+	}
 
-    /**
-     * Define el valor de la propiedad adminPassword.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setAdminPassword(String value) {
-        this.adminPassword = value;
-    }
+	/**
+	 * Define el valor de la propiedad adminPassword.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setAdminPassword(String value) {
+		this.adminPassword = value;
+	}
 
-    /**
-     * Obtiene el valor de la propiedad ipAddress.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getIpAddress() {
-        return ipAddress;
-    }
+	/**
+	 * Obtiene el valor de la propiedad ipAddress.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getIpAddress() {
+		return ipAddress;
+	}
 
-    /**
-     * Define el valor de la propiedad ipAddress.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setIpAddress(String value) {
-        this.ipAddress = value;
-    }
+	/**
+	 * Define el valor de la propiedad ipAddress.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setIpAddress(String value) {
+		this.ipAddress = value;
+	}
 
-    /**
-     * Obtiene el valor de la propiedad port.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getPort() {
-        return port;
-    }
+	/**
+	 * Obtiene el valor de la propiedad port.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getPort() {
+		return port;
+	}
 
-    /**
-     * Define el valor de la propiedad port.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setPort(String value) {
-        this.port = value;
-    }
+	/**
+	 * Define el valor de la propiedad port.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setPort(String value) {
+		this.port = value;
+	}
 
 }

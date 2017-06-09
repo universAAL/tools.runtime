@@ -7,6 +7,7 @@ import org.universAAL.ucc.configuration.model.interfaces.ConfigurationValidator;
 
 /**
  * This validator class checks whether the value is of type double or not.
+ * 
  * @author Sebastian.Schoebinge
  *
  */
@@ -14,16 +15,15 @@ import org.universAAL.ucc.configuration.model.interfaces.ConfigurationValidator;
 public class DoubleValidator implements ConfigurationValidator {
 
 	String msg;
-	
-	public DoubleValidator(String msg){
+
+	public DoubleValidator(String msg) {
 		this.msg = msg;
 	}
-	
-	
+
 	public boolean isValid(ConfigOptionRegistry registry, Value value) {
-		if(value == null || value.getValue() == null || value.getValue().equals("")){
+		if (value == null || value.getValue() == null || value.getValue().equals("")) {
 			return true;
-		}else{
+		} else {
 			try {
 				Double.parseDouble(value.getValue());
 			} catch (Exception e) {
@@ -33,15 +33,12 @@ public class DoubleValidator implements ConfigurationValidator {
 		return true;
 	}
 
-	
-	public void validate(ConfigOptionRegistry registry, Value value)
-			throws ValidationException {
-		if(!isValid(registry, value)){
+	public void validate(ConfigOptionRegistry registry, Value value) throws ValidationException {
+		if (!isValid(registry, value)) {
 			throw new ValidationException(msg);
 		}
 	}
 
-	
 	public void setAttributes(String[] attributes) {
 		// TODO Auto-generated method stub
 

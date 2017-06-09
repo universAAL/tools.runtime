@@ -36,81 +36,81 @@ import javax.swing.undo.UndoManager;
  * @author amedrano
  *
  */
-public class SparQLQuerySubPanel extends JPanel implements Runnable{
+public class SparQLQuerySubPanel extends JPanel implements Runnable {
 
-    private JTextArea query;
-    private JTextArea result;
-    private Color defaultBG;
-    /**
-     * Create the panel.
-     */
-    public SparQLQuerySubPanel() {
-    	setLayout(new BorderLayout(0, 0));
-    	
-    	JSplitPane splitPane = new JSplitPane();
-    	splitPane.setResizeWeight(0.5);
-    	splitPane.setOrientation(JSplitPane.VERTICAL_SPLIT);
-    	add(splitPane, BorderLayout.CENTER);
-    	
-    	JScrollPane scrollPane = new JScrollPane();
-    	splitPane.setLeftComponent(scrollPane);
-    	
-    	query = new JTextArea();
-    	scrollPane.setViewportView(query);
-    	query.getDocument().addUndoableEditListener(new UndoManager());
-    	
-    	JScrollPane scrollPane_1 = new JScrollPane();
-    	splitPane.setRightComponent(scrollPane_1);
-    	
-    	result = new JTextArea();
-    	result.setEditable(false);
-    	scrollPane_1.setViewportView(result);
-    	defaultBG = result.getBackground();
-    }
+	private JTextArea query;
+	private JTextArea result;
+	private Color defaultBG;
 
-    public void query(){
-	new Thread(this).start();
-    }
+	/**
+	 * Create the panel.
+	 */
+	public SparQLQuerySubPanel() {
+		setLayout(new BorderLayout(0, 0));
 
-    /** {@ inheritDoc}	 */
-    public void run() {
-	String text = this.query.getText();
-	if (!text.isEmpty()) {
-	    	    try {
-					String res = ProjectActivator.querrier.unserialisedQuery(text);
-					this.result.setBackground(defaultBG);
-					this.result.setText(res);
-				} catch (Exception e) {
-					this.result.setText(e.getMessage());
-					this.result.setBackground(Color.red);
-				}
-	}	
-    }
+		JSplitPane splitPane = new JSplitPane();
+		splitPane.setResizeWeight(0.5);
+		splitPane.setOrientation(JSplitPane.VERTICAL_SPLIT);
+		add(splitPane, BorderLayout.CENTER);
+
+		JScrollPane scrollPane = new JScrollPane();
+		splitPane.setLeftComponent(scrollPane);
+
+		query = new JTextArea();
+		scrollPane.setViewportView(query);
+		query.getDocument().addUndoableEditListener(new UndoManager());
+
+		JScrollPane scrollPane_1 = new JScrollPane();
+		splitPane.setRightComponent(scrollPane_1);
+
+		result = new JTextArea();
+		result.setEditable(false);
+		scrollPane_1.setViewportView(result);
+		defaultBG = result.getBackground();
+	}
+
+	public void query() {
+		new Thread(this).start();
+	}
+
+	/** {@ inheritDoc} */
+	public void run() {
+		String text = this.query.getText();
+		if (!text.isEmpty()) {
+			try {
+				String res = ProjectActivator.querrier.unserialisedQuery(text);
+				this.result.setBackground(defaultBG);
+				this.result.setText(res);
+			} catch (Exception e) {
+				this.result.setText(e.getMessage());
+				this.result.setBackground(Color.red);
+			}
+		}
+	}
 
 	/**
 	 * @param absolutePath
 	 */
 	public void load(String absolutePath) {
-		
+
 		String load;
-		
+
 		try {
 			load = readFile(absolutePath, Charset.defaultCharset());
 		} catch (IOException e) {
 			load = null;
 		}
-		
+
 		if (load != null) {
 			this.query.setText(load);
 		}
-		
+
 	}
-	static String readFile(String path, Charset encoding) 
-			  throws IOException 
-			{
-			  byte[] encoded = Files.readAllBytes(Paths.get(path));
-			  return new String(encoded, encoding);
-			}
+
+	static String readFile(String path, Charset encoding) throws IOException {
+		byte[] encoded = Files.readAllBytes(Paths.get(path));
+		return new String(encoded, encoding);
+	}
 
 	/**
 	 * 
@@ -127,29 +127,29 @@ public class SparQLQuerySubPanel extends JPanel implements Runnable{
 	public void saveQuery(String absolutePath) {
 		PrintWriter out;
 		try {
-			out = new PrintWriter( absolutePath );
-			out.println( this.query.getText() );
+			out = new PrintWriter(absolutePath);
+			out.println(this.query.getText());
 			out.flush();
 			out.close();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}  
+		}
 	}
-    
+
 	/**
 	 * @param absolutePath
 	 */
 	public void saveResult(String absolutePath) {
 		PrintWriter out;
 		try {
-			out = new PrintWriter( absolutePath );
-			out.println( this.result.getText() );
+			out = new PrintWriter(absolutePath);
+			out.println(this.result.getText());
 			out.flush();
 			out.close();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}  
+		}
 	}
 }

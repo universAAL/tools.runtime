@@ -21,12 +21,12 @@ import org.universAAL.ucc.configuration.storage.interfaces.ConfigurationInstance
 public class Activator implements BundleActivator {
 
 	public static BundleContext context;
-    private static ModuleContext mc;
-    private static File tmpConfigFiles;
-    
-    public static ModuleContext getContext() {
-    	return mc;
-    }
+	private static ModuleContext mc;
+	private static File tmpConfigFiles;
+
+	public static ModuleContext getContext() {
+		return mc;
+	}
 
 	public void start(BundleContext bundleContext) throws Exception {
 		context = bundleContext;
@@ -37,9 +37,9 @@ public class Activator implements BundleActivator {
 				null);
 	}
 
-    public void stop(BundleContext bundleContext) throws Exception {
-	Activator.context = null;
-    }
+	public void stop(BundleContext bundleContext) throws Exception {
+		Activator.context = null;
+	}
 
 	public static File getTmpConfigFiles() {
 		return tmpConfigFiles;

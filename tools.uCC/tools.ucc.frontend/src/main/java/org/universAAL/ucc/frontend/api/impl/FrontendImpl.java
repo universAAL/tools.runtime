@@ -102,18 +102,15 @@ public class FrontendImpl implements IFrontend {
 		usrvLocalStore = Activator.getTempUsrvFiles().getAbsolutePath();
 	}
 
-	public boolean installService(String sessionkey, String serviceId,
-			String serviceLink) {
+	public boolean installService(String sessionkey, String serviceId, String serviceLink) {
 		startUCC();
 		aal = new AALService();
 		// check for sessionkey
 		// if(sessionkey.equals(DesktopController.getSessionKey())) {
 		// downloads a usrv-file from the given download-uri
 		// TO be unmarked
-		System.err
-				.println("[[FrontendImpl]] SessionKey: " + sessionkey
-						+ " Service-Link: " + serviceLink + " Service-ID: "
-						+ serviceId);
+		System.err.println("[[FrontendImpl]] SessionKey: " + sessionkey + " Service-Link: " + serviceLink
+				+ " Service-ID: " + serviceId);
 
 		System.err.println("The service link from ustore: " + serviceLink);
 
@@ -124,11 +121,9 @@ public class FrontendImpl implements IFrontend {
 				e2.printStackTrace();
 			}
 		}
-		System.out.println("Using the usrfile:"
-				+ System.getProperty("uAAL.uCC.usrvfile", usrvLocalStore
-						+ serviceId + ".usrv"));
-		File temp = new File(System.getProperty("uAAL.uCC.usrvfile",
-				usrvLocalStore + serviceId + ".usrv"));
+		System.out.println(
+				"Using the usrfile:" + System.getProperty("uAAL.uCC.usrvfile", usrvLocalStore + serviceId + ".usrv"));
+		File temp = new File(System.getProperty("uAAL.uCC.usrvfile", usrvLocalStore + serviceId + ".usrv"));
 		if (temp.exists()) {
 			try {
 				extractFolder(temp.getAbsolutePath(), usrvLocalStore);
@@ -139,17 +134,15 @@ public class FrontendImpl implements IFrontend {
 			}
 
 			// Copy uapp files to C:/tempUsrvFiles/hwo_uapp/
-			uappURI = createUAPPLocation(usrvLocalStore + "bin", serviceId
-					+ "_temp");
+			uappURI = createUAPPLocation(usrvLocalStore + "bin", serviceId + "_temp");
 
 			// extract available uapp files
 			File usrv = new File(uappURI);
 			File[] uapps = usrv.listFiles();
 			for (File cur : uapps) {
 				try {
-					extractFolder(usrvLocalStore + serviceId + "_temp" + "/"
-							+ cur.getName(), usrvLocalStore + serviceId
-							+ "_temp" + "/");
+					extractFolder(usrvLocalStore + serviceId + "_temp" + "/" + cur.getName(),
+							usrvLocalStore + serviceId + "_temp" + "/");
 				} catch (ZipException e) {
 					e.printStackTrace();
 				} catch (IOException e) {
@@ -168,10 +161,9 @@ public class FrontendImpl implements IFrontend {
 					System.err.println(configFileName);
 				}
 			}
-			
-				parseUappConfiguration(usrvLocalStore + serviceId + "_temp"
-						+ "/config/" + configFileName, serviceId);
-			
+
+			parseUappConfiguration(usrvLocalStore + serviceId + "_temp" + "/config/" + configFileName, serviceId);
+
 			return true;
 			// } else {
 			// //TODO: SessionKey was not right, what todo?
@@ -187,11 +179,8 @@ public class FrontendImpl implements IFrontend {
 	 * @param downloadUri
 	 *            link from where to download the usrv file
 	 */
-	private String downloadUsrvFile(String downloadUri, String filename)
-			throws IOException {
-		System.out
-				.println("[FrontendImpl.downloadUsrvFile] the usrv file name is: "
-						+ filename);
+	private String downloadUsrvFile(String downloadUri, String filename) throws IOException {
+		System.out.println("[FrontendImpl.downloadUsrvFile] the usrv file name is: " + filename);
 		URL url = new URL(downloadUri);
 		URLConnection con = url.openConnection();
 		InputStream in = new BufferedInputStream(con.getInputStream());
@@ -208,7 +197,7 @@ public class FrontendImpl implements IFrontend {
 
 		return filename;
 	}
-	
+
 	private String downloadFile(String uri, String filepath) throws IOException {
 		URL url = new URL(uri);
 		URLConnection con = url.openConnection();
@@ -240,7 +229,7 @@ public class FrontendImpl implements IFrontend {
 		License license = null;
 		ArrayList<License> licenseList = new ArrayList<License>();
 		ArrayList<File> list = new ArrayList<File>();
-		
+
 		// Read uapp config xml
 		AalUapp uapp = null;
 		System.err.println(f);
@@ -253,14 +242,14 @@ public class FrontendImpl implements IFrontend {
 		String icon_path = "";
 		String icon_name = "";
 		String menuName = "";
-		if(uapp.getApp().getMenuEntry() != null) {
+		if (uapp.getApp().getMenuEntry() != null) {
 			app_ontology_uri = uapp.getApp().getMenuEntry().getServiceUri();
-			if(uapp.getApp().getMenuEntry().getIcon().getName() != null 
+			if (uapp.getApp().getMenuEntry().getIcon().getName() != null
 					&& !uapp.getApp().getMenuEntry().getIcon().getName().equals("")) {
 				icon_name = uapp.getApp().getMenuEntry().getIcon().getName();
 				aal.setIconPath(icon_name);
 			}
-			if(uapp.getApp().getMenuEntry().getIcon().getPath() != null 
+			if (uapp.getApp().getMenuEntry().getIcon().getPath() != null
 					&& !uapp.getApp().getMenuEntry().getIcon().getPath().equals("")) {
 				icon_path = uapp.getApp().getMenuEntry().getIcon().getPath();
 				aal.setIconPath(icon_path);
@@ -273,38 +262,36 @@ public class FrontendImpl implements IFrontend {
 		aal.setMenuName(menuName);
 		aal.setOntologyUri(app_ontology_uri);
 		List<Part> parts = uapp.getApplicationPart().getPart();
-		
-		//Creating an new UAPP on uCC side
+
+		// Creating an new UAPP on uCC side
 		UAPP up = new UAPP();
 		up.setLocation(uappURI);
 		up.setAppID(uapp.getApp().getAppId());
 		up.setName(uapp.getApp().getName());
-		Provider provider = new Provider(uapp.getApp().getApplicationProvider()
-				.getContactPerson(), uapp.getApp().getApplicationProvider()
-				.getPhone(), uapp.getApp().getApplicationProvider().getEmail(),
+		Provider provider = new Provider(uapp.getApp().getApplicationProvider().getContactPerson(),
+				uapp.getApp().getApplicationProvider().getPhone(), uapp.getApp().getApplicationProvider().getEmail(),
 				uapp.getApp().getApplicationProvider().getWebAddress());
-		//Setting the provider
+		// Setting the provider
 		up.setProvider(provider);
-		String version = String.valueOf(uapp.getApp().getVersion().getMajor())
-				.concat(".")
+		String version = String.valueOf(uapp.getApp().getVersion().getMajor()).concat(".")
 				.concat(String.valueOf(uapp.getApp().getVersion().getMicro())).concat(".")
 				.concat(String.valueOf(uapp.getApp().getVersion().getMinor()));
-		System.err.println("Version of usrv: "+version);
-		//Setting the version
+		System.err.println("Version of usrv: " + version);
+		// Setting the version
 		up.setVersion(version);
-		
-		//Setting the uapp parts
+
+		// Setting the uapp parts
 		for (Part p : parts) {
 			UAPPPart ua = new UAPPPart();
 			ua.setUappLocation(uappURI);
-			System.err.println("The Parts-Location: "+ uappURI);
-			System.err.println("Part-ID: "+p.getPartId());
+			System.err.println("The Parts-Location: " + uappURI);
+			System.err.println("Part-ID: " + p.getPartId());
 			ua.setAppId(p.getPartId());
 			ua.setPart(p);
 			ua.setBundleId(p.getBundleId());
 			System.err.println(p.getBundleId());
 			ua.setBundleVersion(p.getBundleVersion());
-			System.err.println("Deployment-UNIT_SIZE: "+p.getDeploymentUnit().size());
+			System.err.println("Deployment-UNIT_SIZE: " + p.getDeploymentUnit().size());
 			// Here starts the error and breaks the parsing
 			// Getting DeploymentUnit
 			for (DeploymentUnit du : p.getDeploymentUnit()) {
@@ -316,37 +303,29 @@ public class FrontendImpl implements IFrontend {
 							System.err.println("No features for " + du.getId());
 							continue;
 						}
-						for (Serializable so : du.getContainerUnit().getKaraf()
-								.getFeatures().getRepositoryOrFeature()) {
+						for (Serializable so : du.getContainerUnit().getKaraf().getFeatures()
+								.getRepositoryOrFeature()) {
 							if (so instanceof Feature) {
 								Feature feat = (Feature) so;
-								for (Serializable dco : feat
-										.getDetailsOrConfigOrConfigfile()) {
+								for (Serializable dco : feat.getDetailsOrConfigOrConfigfile()) {
 									if (dco instanceof Bundle) {
 										Bundle b = (Bundle) dco;
-										System.err.println("Bundle-Value: "
-												+ b.getValue());
+										System.err.println("Bundle-Value: " + b.getValue());
 										ua.setUappLocation(b.getValue().trim());
-										System.err.println("Bundle-Value: "
-												+ b.getValue());
+										System.err.println("Bundle-Value: " + b.getValue());
 									}
 								}
 							}
 						}
 						System.err.println("Featuresize: "
-								+ du.getContainerUnit().getKaraf()
-										.getFeatures().getRepositoryOrFeature()
-										.size());
+								+ du.getContainerUnit().getKaraf().getFeatures().getRepositoryOrFeature().size());
 
-						System.err.println("Feauture: "
-								+ du.getContainerUnit().getKaraf()
-										.getFeatures().getRepositoryOrFeature()
-										.get(0).toString());
+						System.err.println("Feauture: " + du.getContainerUnit().getKaraf().getFeatures()
+								.getRepositoryOrFeature().get(0).toString());
 					}
 					// Android app
 					if (du.getContainerUnit().isSetAndroid()) {
-						for (String loc : du.getContainerUnit().getAndroid()
-								.getLocation()) {
+						for (String loc : du.getContainerUnit().getAndroid().getLocation()) {
 							ua.setUappLocation(loc);
 							System.err.println(loc);
 						}
@@ -379,42 +358,35 @@ public class FrontendImpl implements IFrontend {
 
 			// Getting UAPPReqAtom for validation
 			UAPPReqAtom atom = null;
-			List<String>atomValues = new ArrayList<String>();
+			List<String> atomValues = new ArrayList<String>();
 			PartRequirements pr = p.getPartRequirements();
 			for (ReqType rt : pr.getRequirement()) {
 				atom = new UAPPReqAtom();
 				if (rt.isSetReqAtom()) {
-					System.err.println("ReqAtom Name: "
-							+ rt.getReqAtom().getReqAtomName());
+					System.err.println("ReqAtom Name: " + rt.getReqAtom().getReqAtomName());
 					atom.setName(rt.getReqAtom().getReqAtomName());
-					System.err.println("ReqAtom Value: "
-							+ rt.getReqAtom().getReqAtomValue());
+					System.err.println("ReqAtom Value: " + rt.getReqAtom().getReqAtomValue());
 					// List<String> ll = new ArrayList<String>();
 					// ll.add(rt.getReqAtom().getReqAtomValue());
 					atomValues.add(rt.getReqAtom().getReqAtomValue());
-//					atom.setValue(rt.getReqAtom().getReqAtomValue());
+					// atom.setValue(rt.getReqAtom().getReqAtomValue());
 					if (rt.getReqAtom().getReqCriteria() != null) {
-						System.err.println("ReqAtom Criteria: "
-								+ rt.getReqAtom().getReqCriteria().value());
-						atom.setCriteria(rt.getReqAtom().getReqCriteria()
-								.value());
+						System.err.println("ReqAtom Criteria: " + rt.getReqAtom().getReqCriteria().value());
+						atom.setCriteria(rt.getReqAtom().getReqCriteria().value());
 					}
 				}
 				if (rt.isSetReqGroup()) {
 					for (ReqType rType : rt.getReqGroup().getRequirement()) {
 						if (rType.isSetReqAtom()) {
-							System.err.println(rType.getReqAtom()
-									.getReqAtomName());
-							System.err.println(rType.getReqAtom()
-									.getReqAtomValue());
-							System.err.println(rType.getReqAtom()
-									.getReqCriteria());
+							System.err.println(rType.getReqAtom().getReqAtomName());
+							System.err.println(rType.getReqAtom().getReqAtomValue());
+							System.err.println(rType.getReqAtom().getReqCriteria());
 						}
 					}
 				}
 				ua.addReqAtoms(atom);
 			}
-			if(atom != null) {
+			if (atom != null) {
 				atom.setValue(atomValues);
 			}
 
@@ -442,46 +414,85 @@ public class FrontendImpl implements IFrontend {
 
 			}
 			up.addPart(ua.getPart().getPartId(), ua);
-			
+
 		}
-		//Adding a uAAP 
+		// Adding a uAAP
 		appsList.add(up);
-		
-			// Creating license files
-			for (AalUapp.App.Licenses ls : uapp.getApp().getLicenses()) {
-				license = new License();
-				if (ls.isSetSla()) {
-					slaName = ls.getSla().getName();
-					System.err.println("SLA-Name: " + slaName);
-					license.setAppName(slaName);
-					if (ls.getSla().isSetLink()
-							&& !ls.getSla().getLink().trim().isEmpty()) {
-						// try {
-						// URL slaContent = new URL(ls.getSla().getLink());
-						// slaContent.get
-						// } catch (MalformedURLException e) {
-						// e.printStackTrace();
-						// }
-						try {
-							String link = ls.getSla().getLink();
-							System.err.println(link);
-							if(link.contains("./")) {
+
+		// Creating license files
+		for (AalUapp.App.Licenses ls : uapp.getApp().getLicenses()) {
+			license = new License();
+			if (ls.isSetSla()) {
+				slaName = ls.getSla().getName();
+				System.err.println("SLA-Name: " + slaName);
+				license.setAppName(slaName);
+				if (ls.getSla().isSetLink() && !ls.getSla().getLink().trim().isEmpty()) {
+					// try {
+					// URL slaContent = new URL(ls.getSla().getLink());
+					// slaContent.get
+					// } catch (MalformedURLException e) {
+					// e.printStackTrace();
+					// }
+					try {
+						String link = ls.getSla().getLink();
+						System.err.println(link);
+						if (link.contains("./")) {
 							link = link.substring(link.indexOf("./"));
 							System.err.println(link);
-							File file = new File(usrvLocalStore + serviceId
-									+ "_temp" + link);
+							File file = new File(usrvLocalStore + serviceId + "_temp" + link);
 							license.getSlaList().add(file);
-							} else if(link.contains("http://")) {
-								link = "http"+link.substring(link.indexOf(":"));
-								try {
-								String filePath = downloadFile(link,serviceId+"_temp/license"+link.substring(link.lastIndexOf("/")));
-								System.err.println("SLA-PATH: "+filePath);
+						} else if (link.contains("http://")) {
+							link = "http" + link.substring(link.indexOf(":"));
+							try {
+								String filePath = downloadFile(link,
+										serviceId + "_temp/license" + link.substring(link.lastIndexOf("/")));
+								System.err.println("SLA-PATH: " + filePath);
 								File sl = new File(filePath);
 								license.getSlaList().add(sl);
-								} catch(UnknownHostException io) {
-									NoConfigurationWindow nw = new NoConfigurationWindow(bundle.getString("unknown.host.exception"));
+							} catch (UnknownHostException io) {
+								NoConfigurationWindow nw = new NoConfigurationWindow(
+										bundle.getString("unknown.host.exception"));
+								UccUI.getInstance().getMainWindow().addWindow(nw);
+								io.printStackTrace();
+								return null;
+							}
+						}
+					} catch (Throwable t) {
+						NoConfigurationWindow nw = new NoConfigurationWindow(bundle.getString("no.license"));
+						UccUI.getInstance().getMainWindow().addWindow(nw);
+						t.printStackTrace();
+						return null;
+					}
+				}
+
+			}
+			if (ls.isSetLicense()) {
+				for (org.universAAL.middleware.deploymanager.uapp.model.LicenseType lt : ls.getLicense()) {
+
+					System.err.println("LicenseType is set!!! " + lt.getLink());
+					if (lt.isSetLink() && !lt.getLink().trim().isEmpty()) {
+						try {
+							txt = lt.getLink();
+							System.err.println(txt);
+							if (txt.contains("./")) {
+								txt = txt.substring(txt.indexOf("./"));
+
+								System.err.println(txt);
+								l = new File(usrvLocalStore + serviceId + "_temp" + txt);
+								list.add(l);
+							} else if (txt.contains("http://")) {
+								txt = "http" + txt.substring(txt.indexOf(":"));
+								try {
+									String filePath = downloadFile(txt,
+											serviceId + "_temp/license" + txt.substring(txt.lastIndexOf("/")));
+									System.err.println("FILE-PATH from license: " + filePath);
+									File lic = new File(filePath);
+									list.add(lic);
+								} catch (UnknownHostException uhe) {
+									NoConfigurationWindow nw = new NoConfigurationWindow(
+											bundle.getString("unknown.host.exception"));
 									UccUI.getInstance().getMainWindow().addWindow(nw);
-									io.printStackTrace();
+									uhe.printStackTrace();
 									return null;
 								}
 							}
@@ -494,58 +505,18 @@ public class FrontendImpl implements IFrontend {
 					}
 
 				}
-				if (ls.isSetLicense()) {
-					for (org.universAAL.middleware.deploymanager.uapp.model.LicenseType lt : ls
-							.getLicense()) {
+			}
 
-						System.err.println("LicenseType is set!!! "
-								+ lt.getLink());
-						if (lt.isSetLink() && !lt.getLink().trim().isEmpty()) {
-							try {
-								txt = lt.getLink();
-								System.err.println(txt);
-								if(txt.contains("./")) {
-									txt = txt.substring(txt.indexOf("./"));
-								 
-								System.err.println(txt);
-								l = new File(usrvLocalStore + serviceId
-										+ "_temp" + txt);
-								list.add(l);
-							} else if(txt.contains("http://")) {
-								txt = "http"+txt.substring(txt.indexOf(":"));
-								try {
-									String filePath = downloadFile(txt, serviceId+"_temp/license"+txt.substring(txt.lastIndexOf("/")));
-									System.err.println("FILE-PATH from license: "+filePath);
-									File lic = new File(filePath);
-									list.add(lic);
-								} catch(UnknownHostException uhe) {
-										NoConfigurationWindow nw = new NoConfigurationWindow(bundle.getString("unknown.host.exception"));
-										UccUI.getInstance().getMainWindow().addWindow(nw);
-										uhe.printStackTrace();
-										return null;
-								}
-							}
-							} catch (Throwable t) {
-								NoConfigurationWindow nw = new NoConfigurationWindow(bundle.getString("no.license"));
-								UccUI.getInstance().getMainWindow().addWindow(nw);
-								t.printStackTrace();
-								return null;
-							}
-						}
-
-					}
-				}
-
-//			}
+			// }
 			license.setLicense(list);
 			licenseList.add(license);
 			aal.setLicenses(license);
 
 		}
-		System.err.println("Size of APP-List "+appsList.size());
+		System.err.println("Size of APP-List " + appsList.size());
 		aal.setUaapList(appsList);
 		parseConfiguration(serviceId + "_temp", appsList, licenseList, aal);
-		
+
 		return appsList;
 
 	}
@@ -558,8 +529,8 @@ public class FrontendImpl implements IFrontend {
 	 * @throws SAXException
 	 * @throws IOException
 	 */
-	private AALService parseConfiguration(String f, ArrayList<UAPP> apps,
-			ArrayList<License> licenseList, AALService aal) {
+	private AALService parseConfiguration(String f, ArrayList<UAPP> apps, ArrayList<License> licenseList,
+			AALService aal) {
 
 		// Parsing usrv.xml
 		ParserService ps = Activator.getParserService();
@@ -573,32 +544,36 @@ public class FrontendImpl implements IFrontend {
 			}
 		}
 		AalUsrv usrv = ps.getUsrv(usrvLocalStore + "config/" + configFileName);
-//		List<ApplicationType> xmlApps = usrv.getComponents().getApplication();
-//		for (ApplicationType xmlApp : xmlApps) {
-//			UAPP modelUAAP = new UAPP();
-//			modelUAAP.setName(xmlApp.getName());
-//			Provider provider = new Provider(usrv.getSrv().getServiceProvider().getOrganizationName(), usrv.getSrv().getServiceProvider().getPhone(), 
-//					usrv.getSrv().getServiceProvider().getEmail(), usrv.getSrv().getServiceProvider().getWebAddress());
-//			modelUAAP.setProvider(provider);
-//			String version = usrv.getSrv().getVersion().getMajor()+ "."+ usrv.getSrv().getVersion().getMicro() + "." + usrv.getSrv().getVersion().getMinor();
-//			modelUAAP.setVersion(version);
-//			for(Map.Entry<String, UAPPPart> part : modelUAAP.getParts().entrySet()) {
-//				modelUAAP.getParts().put(part.getKey(), part.getValue());
-//				aal.getUaapList().add( modelUAAP );
-//			}
-//		}
+		// List<ApplicationType> xmlApps =
+		// usrv.getComponents().getApplication();
+		// for (ApplicationType xmlApp : xmlApps) {
+		// UAPP modelUAAP = new UAPP();
+		// modelUAAP.setName(xmlApp.getName());
+		// Provider provider = new
+		// Provider(usrv.getSrv().getServiceProvider().getOrganizationName(),
+		// usrv.getSrv().getServiceProvider().getPhone(),
+		// usrv.getSrv().getServiceProvider().getEmail(),
+		// usrv.getSrv().getServiceProvider().getWebAddress());
+		// modelUAAP.setProvider(provider);
+		// String version = usrv.getSrv().getVersion().getMajor()+ "."+
+		// usrv.getSrv().getVersion().getMicro() + "." +
+		// usrv.getSrv().getVersion().getMinor();
+		// modelUAAP.setVersion(version);
+		// for(Map.Entry<String, UAPPPart> part :
+		// modelUAAP.getParts().entrySet()) {
+		// modelUAAP.getParts().put(part.getKey(), part.getValue());
+		// aal.getUaapList().add( modelUAAP );
+		// }
+		// }
 		/*
-		for (UAPP up : aal.getUaapList()) {
-			for (Map.Entry<String, UAPPPart> ua : up.getParts().entrySet()) {
-				System.err.println(ua.getValue().getAppId());
-				aal.getUaapList().add(up);
-			}
-		}
-		*/
+		 * for (UAPP up : aal.getUaapList()) { for (Map.Entry<String, UAPPPart>
+		 * ua : up.getParts().entrySet()) {
+		 * System.err.println(ua.getValue().getAppId());
+		 * aal.getUaapList().add(up); } }
+		 */
 		if (usrv.isSetSrv()) {
 			if (usrv.getSrv().isSetServiceId()) {
-				System.err.println("Service-ID: "
-						+ usrv.getSrv().getServiceId());
+				System.err.println("Service-ID: " + usrv.getSrv().getServiceId());
 				aal.setServiceId(usrv.getSrv().getServiceId());
 			}
 			if (usrv.getSrv().isSetName()) {
@@ -606,8 +581,7 @@ public class FrontendImpl implements IFrontend {
 				System.err.println("Service-Name: " + usrv.getSrv().getName());
 			}
 			if (usrv.getSrv().isSetServiceProvider()) {
-				aal.setProvider(usrv.getSrv().getServiceProvider()
-						.getOrganizationName());
+				aal.setProvider(usrv.getSrv().getServiceProvider().getOrganizationName());
 				System.err.println("ServiceProvider: " + aal.getProvider());
 			}
 			if (usrv.getSrv().isSetDescription()) {
@@ -615,44 +589,44 @@ public class FrontendImpl implements IFrontend {
 				System.err.println("Description: " + aal.getDescription());
 			}
 
-//			 if(usrv.getSrv().isSetVersion()) {
-//			 if(usrv.getSrv().getVersion().isSetMajor()) {
-//			 aal.setMajor(usrv.getSrv().getVersion().getMajor());
-//			 System.err.println(aal.getMajor());
-//			 }
-//			 if(usrv.getSrv().getVersion().isSetMinor()) {
-//			 aal.setMinor(usrv.getSrv().getVersion().getMinor());
-//			 System.err.println(aal.getMinor());
-//			 }
-//			 if(usrv.getSrv().getVersion().isSetMicro()) {
-//			 aal.setMicro(usrv.getSrv().getVersion().getMicro());
-//			 System.err.println(aal.getMicro());
-//			 }
-//			 }
+			// if(usrv.getSrv().isSetVersion()) {
+			// if(usrv.getSrv().getVersion().isSetMajor()) {
+			// aal.setMajor(usrv.getSrv().getVersion().getMajor());
+			// System.err.println(aal.getMajor());
+			// }
+			// if(usrv.getSrv().getVersion().isSetMinor()) {
+			// aal.setMinor(usrv.getSrv().getVersion().getMinor());
+			// System.err.println(aal.getMinor());
+			// }
+			// if(usrv.getSrv().getVersion().isSetMicro()) {
+			// aal.setMicro(usrv.getSrv().getVersion().getMicro());
+			// System.err.println(aal.getMicro());
+			// }
+			// }
 			if (usrv.getSrv().isSetTags()) {
 				aal.getTags().add(usrv.getSrv().getTags());
 				System.err.println("Tags: " + aal.getTags());
 			}
 
 			System.err.println("SET LicenseWindow");
-			
+
 			boolean isAlreadyInstalled = Activator.getMgmt().isServiceId(aal.getServiceId());
-			
-			if(!isAlreadyInstalled) {
-			LicenceWindow lw = null;
-			for(UAPP installingApp : aal.getUaapList()) {
-			try {
-				lw = new LicenceWindow(UccUI.getInstance(), licenseList, aal, installingApp);
-			} catch (IOException e) {
-				e.printStackTrace();
+
+			if (!isAlreadyInstalled) {
+				LicenceWindow lw = null;
+				for (UAPP installingApp : aal.getUaapList()) {
+					try {
+						lw = new LicenceWindow(UccUI.getInstance(), licenseList, aal, installingApp);
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+					new UsrvInfoController(aal, lw, UccUI.getInstance());
+				}
+			} else {
+				NoConfigurationWindow ncw = new NoConfigurationWindow(bundle.getString("srv.already.exists"));
+				UccUI.getInstance().getMainWindow().addWindow(ncw);
+				return null;
 			}
-			new UsrvInfoController(aal, lw, UccUI.getInstance());
-			}
-		} else {
-			NoConfigurationWindow ncw = new NoConfigurationWindow(bundle.getString("srv.already.exists"));
-			UccUI.getInstance().getMainWindow().addWindow(ncw);
-			return null;
-		}
 		}
 		return aal;
 	}
@@ -663,8 +637,7 @@ public class FrontendImpl implements IFrontend {
 		File rootFile = new File(usrvLocalStore + newPath);
 		rootFile.mkdir();
 		for (int i = 0; i < dirs.length; i++) {
-			File f = new File(usrvLocalStore + newPath + "/"
-					+ dirs[i].getName());
+			File f = new File(usrvLocalStore + newPath + "/" + dirs[i].getName());
 			System.err.println("Dir-Name: " + dirs[i].getName());
 			if (dirs[i].isDirectory()) {
 				f.mkdir();
@@ -691,65 +664,62 @@ public class FrontendImpl implements IFrontend {
 			System.err.println("Size of apps to uninstall: " + uappList.size());
 			for (String del : uappList) {
 				System.err.println("Apps to delete: " + del);
-				InstallationResultsDetails result = Activator.getDeinstaller()
-						.requestToUninstall(serviceId, del);
+				InstallationResultsDetails result = Activator.getDeinstaller().requestToUninstall(serviceId, del);
 				System.err.println("Uninstall Result: " + result.getGlobalResult().toString());
 				if (result.getGlobalResult() == InstallationResults.SUCCESS) {
-					//My changes
+					// My changes
 					String entryName = "";
 					String userID = "";
 					String serviceClass = "";
 					String icon = "";
 					String vendor = "";
-//					List<RegisteredService> ids = new ArrayList<RegisteredService>();
+					// List<RegisteredService> ids = new
+					// ArrayList<RegisteredService>();
 					Document doc = Model.getSrvDocument();
 					NodeList nodeList = doc.getElementsByTagName("service");
 					for (int i = 0; i < nodeList.getLength(); i++) {
-						Element usrv = (Element)nodeList.item(i);
-						if(usrv.getAttribute("serviceId").equals(serviceId)) {
+						Element usrv = (Element) nodeList.item(i);
+						if (usrv.getAttribute("serviceId").equals(serviceId)) {
 							RegisteredService srv = new RegisteredService();
 							Element element = (Element) nodeList.item(i);
 							System.err.println(element.getAttribute("serviceId"));
 							srv.setServiceId(element.getAttribute("serviceId"));
 							NodeList srvChilds = element.getChildNodes();
-							for(int j = 0; j < srvChilds.getLength(); j++) {
+							for (int j = 0; j < srvChilds.getLength(); j++) {
 								Node n = srvChilds.item(j);
-//								if(n.getNodeName().equals("application")) {
-//									Element e = (Element)n;
-//									srv.getAppId().add(e.getAttribute("appId"));
-//								}
-								
-								if(n.getNodeName().equals("menuEntry")) {
-									Element e = (Element)n;
+								// if(n.getNodeName().equals("application")) {
+								// Element e = (Element)n;
+								// srv.getAppId().add(e.getAttribute("appId"));
+								// }
+
+								if (n.getNodeName().equals("menuEntry")) {
+									Element e = (Element) n;
 									entryName = e.getAttribute("entryName");
 									icon = e.getAttribute("iconURL");
 									vendor = e.getAttribute("vendor");
 									serviceClass = e.getAttribute("serviceClass");
 									userID = e.getAttribute("userID");
 								}
+							}
+							// ids.add(srv);
 						}
-//						ids.add(srv);
 					}
-				}
 					removeEntry(userID, entryName, vendor, serviceClass, icon);
-						//My changes
+					// My changes
 					Activator.getReg().unregisterService(serviceId);
 					NoConfigurationWindow nw = new NoConfigurationWindow(bundle.getString("success.uninstall.msg"));
 					UccUI.getInstance().getMainWindow().addWindow(nw);
 				} else if (result.getGlobalResult() == InstallationResults.MISSING_PEER) {
 					NoConfigurationWindow nw = new NoConfigurationWindow(
-							bundle.getString("uninstall.failure")
-									+ "<br>Error: Missing peer");
+							bundle.getString("uninstall.failure") + "<br>Error: Missing peer");
 					UccUI.getInstance().getMainWindow().addWindow(nw);
 				} else {
-					NoConfigurationWindow nw = new NoConfigurationWindow(
-							bundle.getString("uninstall.failure"));
+					NoConfigurationWindow nw = new NoConfigurationWindow(bundle.getString("uninstall.failure"));
 					UccUI.getInstance().getMainWindow().addWindow(nw);
 				}
 			}
 		} else {
-			NoConfigurationWindow nw = new NoConfigurationWindow(
-					bundle.getString("no.service"));
+			NoConfigurationWindow nw = new NoConfigurationWindow(bundle.getString("no.service"));
 			UccUI.getInstance().getMainWindow().addWindow(nw);
 		}
 
@@ -762,19 +732,13 @@ public class FrontendImpl implements IFrontend {
 
 	public String getInstalledServices(String sessionKey) {
 		String services = Activator.getMgmt().getInstalledServices();
-		System.out
-				.println("[FrontendImpl.getInstalledServices] the services installed: "
-						+ services);
+		System.out.println("[FrontendImpl.getInstalledServices] the services installed: " + services);
 		return services;
 	}
 
-	public String getInstalledUnitsForService(String sessionKey,
-			String serviceId) {
-		String units = Activator.getMgmt().getInstalledUnitsForService(
-				serviceId);
-		System.out
-				.println("[FrontendImpl.getInstalledUnitsForServices] the units installed: "
-						+ units);
+	public String getInstalledUnitsForService(String sessionKey, String serviceId) {
+		String units = Activator.getMgmt().getInstalledUnitsForService(serviceId);
+		System.out.println("[FrontendImpl.getInstalledUnitsForServices] the units installed: " + units);
 		return units;
 	}
 
@@ -782,14 +746,12 @@ public class FrontendImpl implements IFrontend {
 		return uappURI;
 	}
 
-//	public static void setUappURI(String uappURI) {
-//		FrontendImpl.uappURI = uappURI;
-//	}
+	// public static void setUappURI(String uappURI) {
+	// FrontendImpl.uappURI = uappURI;
+	// }
 
-	static public void extractFolder(String zipFile, String destdir)
-			throws ZipException, IOException {
-		System.out.println("[Installer.extractFolder] the zip file is: "
-				+ zipFile + " and dest dir: " + destdir);
+	static public void extractFolder(String zipFile, String destdir) throws ZipException, IOException {
+		System.out.println("[Installer.extractFolder] the zip file is: " + zipFile + " and dest dir: " + destdir);
 		int BUFFER = 2048;
 		File file = new File(zipFile);
 
@@ -812,16 +774,14 @@ public class FrontendImpl implements IFrontend {
 			destinationParent.mkdirs();
 
 			if (!entry.isDirectory()) {
-				BufferedInputStream is = new BufferedInputStream(
-						zip.getInputStream(entry));
+				BufferedInputStream is = new BufferedInputStream(zip.getInputStream(entry));
 				int currentByte;
 				// establish buffer for writing file
 				byte data[] = new byte[BUFFER];
 
 				// write the current file to disk
 				FileOutputStream fos = new FileOutputStream(destFile);
-				BufferedOutputStream dest = new BufferedOutputStream(fos,
-						BUFFER);
+				BufferedOutputStream dest = new BufferedOutputStream(fos, BUFFER);
 
 				// read and write until last byte is encountered
 				while ((currentByte = is.read(data, 0, BUFFER)) != -1) {
@@ -860,11 +820,10 @@ public class FrontendImpl implements IFrontend {
 			}
 		}
 	}
-	
-	private void removeEntry(String userID, String entryName, String vendor,
-		    String serviceClass, String iconURL) {
+
+	private void removeEntry(String userID, String entryName, String vendor, String serviceClass, String iconURL) {
 		if ("".equals(iconURL))
-		    iconURL = null;
+			iconURL = null;
 
 		MenuEntry me = new MenuEntry(null);
 		me.setVendor(new Resource(vendor));
@@ -875,24 +834,22 @@ public class FrontendImpl implements IFrontend {
 
 		ServiceRequest sr = new ServiceRequest(new ProfilingService(), null);
 		sr.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS },
-			new User(Constants.uAAL_MIDDLEWARE_LOCAL_ID_PREFIX+userID));
-		sr.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS,
-			Profilable.PROP_HAS_PROFILE, Profile.PROP_HAS_SUB_PROFILE,
-			MenuProfile.PROP_ENTRY }, me);
-		sr.addRemoveEffect(new String[] { ProfilingService.PROP_CONTROLS,
-			Profilable.PROP_HAS_PROFILE, Profile.PROP_HAS_SUB_PROFILE,
-			MenuProfile.PROP_ENTRY });
+				new User(Constants.uAAL_MIDDLEWARE_LOCAL_ID_PREFIX + userID));
+		sr.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS, Profilable.PROP_HAS_PROFILE,
+				Profile.PROP_HAS_SUB_PROFILE, MenuProfile.PROP_ENTRY }, me);
+		sr.addRemoveEffect(new String[] { ProfilingService.PROP_CONTROLS, Profilable.PROP_HAS_PROFILE,
+				Profile.PROP_HAS_SUB_PROFILE, MenuProfile.PROP_ENTRY });
 
 		ServiceResponse res = Activator.getSc().call(sr);
 		if (res.getCallStatus() == CallStatus.succeeded) {
-		    LogUtils.logDebug(Activator.getmContext(), FrontendImpl.class, "removeEntry",
-			    new Object[] {
-				    "existing menu entry " + entryName + " for user ",
-				    Constants.uAAL_MIDDLEWARE_LOCAL_ID_PREFIX+userID, " added." }, null);
+			LogUtils.logDebug(Activator.getmContext(), FrontendImpl.class, "removeEntry",
+					new Object[] { "existing menu entry " + entryName + " for user ",
+							Constants.uAAL_MIDDLEWARE_LOCAL_ID_PREFIX + userID, " added." },
+					null);
 		} else {
-		    LogUtils.logDebug(Activator.getmContext(), FrontendImpl.class, "removeEntry",
-			    new Object[] { "callstatus is not succeeded" }, null);
+			LogUtils.logDebug(Activator.getmContext(), FrontendImpl.class, "removeEntry",
+					new Object[] { "callstatus is not succeeded" }, null);
 		}
-	    }
+	}
 
 }

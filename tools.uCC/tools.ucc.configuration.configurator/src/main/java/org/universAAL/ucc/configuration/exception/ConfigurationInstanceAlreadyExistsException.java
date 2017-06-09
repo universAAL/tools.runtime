@@ -10,9 +10,9 @@ package org.universAAL.ucc.configuration.exception;
 
 @SuppressWarnings("serial")
 public class ConfigurationInstanceAlreadyExistsException extends Exception {
-	
+
 	public ConfigurationInstanceAlreadyExistsException() {
 		// TODO Auto-generated constructor stub
 	}
-	
+
 }

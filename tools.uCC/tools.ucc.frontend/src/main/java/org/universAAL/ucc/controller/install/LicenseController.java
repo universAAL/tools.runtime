@@ -26,8 +26,7 @@ import com.vaadin.ui.Panel;
 import com.vaadin.ui.Tree;
 import com.vaadin.ui.Window.Notification;
 
-public class LicenseController implements Property.ValueChangeListener,
-		ClickListener {
+public class LicenseController implements Property.ValueChangeListener, ClickListener {
 	private final LicenceWindow win;
 	private String base = "resources.ucc";
 	private ResourceBundle res;
@@ -37,8 +36,7 @@ public class LicenseController implements Property.ValueChangeListener,
 	private static int appCounter;
 	private UAPP installingApplication;
 
-	public LicenseController(UccUI app, LicenceWindow win,
-			ArrayList<License> lix, AALService aal, UAPP installingApp) {
+	public LicenseController(UccUI app, LicenceWindow win, ArrayList<License> lix, AALService aal, UAPP installingApp) {
 		res = ResourceBundle.getBundle(base);
 		this.win = win;
 		this.lix = lix;
@@ -56,8 +54,7 @@ public class LicenseController implements Property.ValueChangeListener,
 			Panel panel = new Panel();
 			for (License l : lix) {
 				for (File sla : l.getSlaList()) {
-					if (l.getAppName().contains(
-							event.getProperty().getValue().toString())) {
+					if (l.getAppName().contains(event.getProperty().getValue().toString())) {
 						System.err.println("SLA name: " + sla.getName());
 						FileReader fr = null;
 						try {
@@ -77,8 +74,7 @@ public class LicenseController implements Property.ValueChangeListener,
 					}
 				}
 				for (File f : l.getLicense()) {
-					if (f.getName().contains(
-							event.getProperty().getValue().toString())) {
+					if (f.getName().contains(event.getProperty().getValue().toString())) {
 						FileReader fr = null;
 						try {
 							fr = new FileReader(f);
@@ -102,12 +98,10 @@ public class LicenseController implements Property.ValueChangeListener,
 			win.createSecondComponent(panel);
 
 		} else {
-			if (event.getProperty().getValue().toString()
-					.equals(res.getString("agree.radio"))) {
+			if (event.getProperty().getValue().toString().equals(res.getString("agree.radio"))) {
 				win.getGo().setEnabled(true);
 			}
-			if (event.getProperty().getValue().toString()
-					.equals(res.getString("dontAgree.radio"))) {
+			if (event.getProperty().getValue().toString().equals(res.getString("dontAgree.radio"))) {
 				win.getGo().setEnabled(false);
 			}
 		}
@@ -116,8 +110,7 @@ public class LicenseController implements Property.ValueChangeListener,
 
 	public void buttonClick(ClickEvent event) {
 		if (event.getButton() == win.getCancel()) {
-			app.getMainWindow().showNotification(res.getString("break.note"),
-					Notification.TYPE_ERROR_MESSAGE);
+			app.getMainWindow().showNotification(res.getString("break.note"), Notification.TYPE_ERROR_MESSAGE);
 			app.getMainWindow().removeWindow(win);
 			deleteFiles(Activator.getTempUsrvFiles());
 		}
@@ -125,13 +118,10 @@ public class LicenseController implements Property.ValueChangeListener,
 			app.getMainWindow().removeWindow(win);
 			// Test, if uapps size greater than 0
 			if (aal.getUaapList().size() > 0) {
-				System.err.println("[LicenseController]: appCounter "
-						+ appCounter);
+				System.err.println("[LicenseController]: appCounter " + appCounter);
 				// Load Infoview for Deployment of uapps
-				DeploymentInformationView div = new DeploymentInformationView(
-						app);
-				new DeploymentInfoController(
-						app, aal, div, installingApplication);
+				DeploymentInformationView div = new DeploymentInformationView(app);
+				new DeploymentInfoController(app, aal, div, installingApplication);
 				app.getMainWindow().addWindow(div);
 			}
 		}
@@ -141,13 +131,10 @@ public class LicenseController implements Property.ValueChangeListener,
 	private void deleteFiles(File path) {
 		File[] files = path.listFiles();
 		for (File del : files) {
-			if (del.isDirectory()
-					&& !del.getPath().substring(del.getPath().lastIndexOf(".") + 1)
-							.equals("usrv")) {
+			if (del.isDirectory() && !del.getPath().substring(del.getPath().lastIndexOf(".") + 1).equals("usrv")) {
 				deleteFiles(del);
 			}
-			if (!del.getPath().substring(del.getPath().lastIndexOf(".") + 1)
-					.equals("usrv"))
+			if (!del.getPath().substring(del.getPath().lastIndexOf(".") + 1).equals("usrv"))
 				del.delete();
 		}
 

@@ -16,11 +16,8 @@ public class ServiceRegistration implements IServiceRegistration {
 		root.removeChild(ServiceManagment.getService(serviceId, doc));
 
 		try {
-			TransformerFactory
-					.newInstance()
-					.newTransformer()
-					.transform(new DOMSource(doc),
-							new StreamResult(Model.SERVICEFILENAME));
+			TransformerFactory.newInstance().newTransformer().transform(new DOMSource(doc),
+					new StreamResult(Model.SERVICEFILENAME));
 		} catch (Exception e) {
 			e.printStackTrace();
 			return false;
@@ -33,13 +30,12 @@ public class ServiceRegistration implements IServiceRegistration {
 	 * TODO: register the installed bundles? Can use Map<bundleId,
 	 * bundleVersion> as the second parameter Can call this (registerService)
 	 */
-	public boolean registerApp(String serviceId, String appId, String entryName, String vendorURL, String serviceClass, String iconURL) {
-		return addAppToXML(serviceId, appId, entryName, vendorURL, serviceClass, 
-				iconURL);
+	public boolean registerApp(String serviceId, String appId, String entryName, String vendorURL, String serviceClass,
+			String iconURL) {
+		return addAppToXML(serviceId, appId, entryName, vendorURL, serviceClass, iconURL);
 	}
 
-	public boolean registerBundle(String serviceId, String bundleId,
-			String bundleVersion) {
+	public boolean registerBundle(String serviceId, String bundleId, String bundleVersion) {
 		return addBundleToXML(serviceId, bundleId, bundleVersion);
 	}
 
@@ -82,7 +78,7 @@ public class ServiceRegistration implements IServiceRegistration {
 	 * success; }
 	 */
 
-	private boolean addAppToXML(String serviceId, String appId, String entryName, String vendorURL, String serviceClass, 
+	private boolean addAppToXML(String serviceId, String appId, String entryName, String vendorURL, String serviceClass,
 			String iconURL) {
 		boolean success = true;
 		try {
@@ -98,8 +94,8 @@ public class ServiceRegistration implements IServiceRegistration {
 			element.appendChild(appRoot);
 
 			appRoot.setAttribute("appId", appId);
-			
-			//Nicole changes for MenuEntry information
+
+			// Nicole changes for MenuEntry information
 			Element menuEntry = doc.createElement("menuEntry");
 			element.appendChild(menuEntry);
 			menuEntry.setAttribute("entryName", entryName);
@@ -108,11 +104,8 @@ public class ServiceRegistration implements IServiceRegistration {
 			menuEntry.setAttribute("serviceClass", serviceClass);
 			menuEntry.setAttribute("iconURL", iconURL);
 
-			TransformerFactory
-					.newInstance()
-					.newTransformer()
-					.transform(new DOMSource(doc),
-							new StreamResult(Model.SERVICEFILENAME));
+			TransformerFactory.newInstance().newTransformer().transform(new DOMSource(doc),
+					new StreamResult(Model.SERVICEFILENAME));
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -140,8 +133,7 @@ public class ServiceRegistration implements IServiceRegistration {
 	 * return success; }
 	 */
 
-	private boolean addBundleToXML(String appId, String bundleId,
-			String bundleVersion) {
+	private boolean addBundleToXML(String appId, String bundleId, String bundleVersion) {
 		boolean success = true;
 		try {
 			Document doc = Model.getSrvDocument();
@@ -158,11 +150,8 @@ public class ServiceRegistration implements IServiceRegistration {
 			bundleRoot.setAttribute("id", bundleId);
 			bundleRoot.setAttribute("version", bundleVersion);
 
-			TransformerFactory
-					.newInstance()
-					.newTransformer()
-					.transform(new DOMSource(doc),
-							new StreamResult(Model.SERVICEFILENAME));
+			TransformerFactory.newInstance().newTransformer().transform(new DOMSource(doc),
+					new StreamResult(Model.SERVICEFILENAME));
 
 		} catch (Exception e) {
 			e.printStackTrace();

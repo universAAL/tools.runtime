@@ -22,18 +22,18 @@ public class RoomsWindow extends Window {
 	private RoomsWindowController rwc;
 	private ResourceBundle bundle;
 	private String base;
-	
+
 	public RoomsWindow(UccUI app) throws JAXBException, IOException, ParseException {
 		base = "resources.ucc";
 		bundle = ResourceBundle.getBundle(base);
 		StringBuffer breadcrump = new StringBuffer();
 		int counter = 0;
-		for(Window w : app.getMainWindow().getChildWindows()) {
+		for (Window w : app.getMainWindow().getChildWindows()) {
 			counter++;
-			if(counter == app.getMainWindow().getChildWindows().size())
-				breadcrump.append(w.getCaption()+" > ");
+			if (counter == app.getMainWindow().getChildWindows().size())
+				breadcrump.append(w.getCaption() + " > ");
 		}
-		
+
 		breadcrump.append(bundle.getString("rooms.view"));
 		setCaption(breadcrump.toString());
 		center();
@@ -52,7 +52,7 @@ public class RoomsWindow extends Window {
 		setContent(split);
 		rwc = new RoomsWindowController(this, app);
 	}
-	
+
 	public RoomsWindowController getRwc() {
 		return rwc;
 	}
@@ -64,7 +64,7 @@ public class RoomsWindow extends Window {
 	public void addFirstComponent(Component c) {
 		split.setFirstComponent(c);
 	}
-	
+
 	public void addSecondComponent(Component c) {
 		split.setSecondComponent(c);
 	}

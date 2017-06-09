@@ -5,7 +5,6 @@
 // Generated on: 2012.08.02 at 01:53:27 PM MESZ 
 //
 
-
 package org.universAAL.ucc.configuration.model.configurationdefinition;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -13,11 +12,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for SimpleConfigItem complex type.
+ * <p>
+ * Java class for SimpleConfigItem complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="SimpleConfigItem">
@@ -41,63 +42,53 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SimpleConfigItem", propOrder = {
-    "defaultValue"
-})
-public class SimpleConfigItem
-    extends ConfigItem
-{
+@XmlType(name = "SimpleConfigItem", propOrder = { "defaultValue" })
+public class SimpleConfigItem extends ConfigItem {
 
-    protected String defaultValue;
-    @XmlAttribute(required = true)
-    protected String type;
+	protected String defaultValue;
+	@XmlAttribute(required = true)
+	protected String type;
 
-    /**
-     * Gets the value of the defaultValue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getDefaultValue() {
-        return defaultValue;
-    }
+	/**
+	 * Gets the value of the defaultValue property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getDefaultValue() {
+		return defaultValue;
+	}
 
-    /**
-     * Sets the value of the defaultValue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setDefaultValue(String value) {
-        this.defaultValue = value;
-    }
+	/**
+	 * Sets the value of the defaultValue property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setDefaultValue(String value) {
+		this.defaultValue = value;
+	}
 
-    /**
-     * Gets the value of the type property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getType() {
-        return type;
-    }
+	/**
+	 * Gets the value of the type property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getType() {
+		return type;
+	}
 
-    /**
-     * Sets the value of the type property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setType(String value) {
-        this.type = value;
-    }
+	/**
+	 * Sets the value of the type property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setType(String value) {
+		this.type = value;
+	}
 
 }

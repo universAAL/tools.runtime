@@ -5,7 +5,6 @@
 // Generated on: 2012.08.02 at 01:53:27 PM MESZ 
 //
 
-
 package org.universAAL.ucc.configuration.model.configurationdefinition;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -19,11 +18,13 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
-
 /**
- * <p>Java class for ConfigItem complex type.
+ * <p>
+ * Java class for ConfigItem complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="ConfigItem">
@@ -53,235 +54,202 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ConfigItem", propOrder = {
-    "label",
-    "description",
-    "dependencies",
-    "validators",
-    "onConfigurationModelChangedListener"
-})
-@XmlSeeAlso({
-    SPARQLConfigItem.class,
-    SimpleConfigItem.class,
-    MapConfigItem.class
-})
+@XmlType(name = "ConfigItem", propOrder = { "label", "description", "dependencies", "validators",
+		"onConfigurationModelChangedListener" })
+@XmlSeeAlso({ SPARQLConfigItem.class, SimpleConfigItem.class, MapConfigItem.class })
 public class ConfigItem {
 
-    @XmlElement(required = true)
-    protected String label;
-    @XmlElement(required = true)
-    protected String description;
-    protected Dependency dependencies;
-    protected Validators validators;
-    protected OnConfigurationModelChangedListener onConfigurationModelChangedListener;
-    @XmlAttribute(required = true)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    @XmlID
-    @XmlSchemaType(name = "ID")
-    protected String id;
-    @XmlAttribute
-    protected Boolean active;
-    @XmlAttribute
-    protected String cardinality;
+	@XmlElement(required = true)
+	protected String label;
+	@XmlElement(required = true)
+	protected String description;
+	protected Dependency dependencies;
+	protected Validators validators;
+	protected OnConfigurationModelChangedListener onConfigurationModelChangedListener;
+	@XmlAttribute(required = true)
+	@XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+	@XmlID
+	@XmlSchemaType(name = "ID")
+	protected String id;
+	@XmlAttribute
+	protected Boolean active;
+	@XmlAttribute
+	protected String cardinality;
 
-    /**
-     * Gets the value of the label property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getLabel() {
-        return label;
-    }
+	/**
+	 * Gets the value of the label property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getLabel() {
+		return label;
+	}
 
-    /**
-     * Sets the value of the label property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setLabel(String value) {
-        this.label = value;
-    }
+	/**
+	 * Sets the value of the label property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setLabel(String value) {
+		this.label = value;
+	}
 
-    /**
-     * Gets the value of the description property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getDescription() {
-        return description;
-    }
+	/**
+	 * Gets the value of the description property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getDescription() {
+		return description;
+	}
 
-    /**
-     * Sets the value of the description property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setDescription(String value) {
-        this.description = value;
-    }
+	/**
+	 * Sets the value of the description property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setDescription(String value) {
+		this.description = value;
+	}
 
-    /**
-     * Gets the value of the dependencies property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Dependency }
-     *     
-     */
-    public Dependency getDependencies() {
-        return dependencies;
-    }
+	/**
+	 * Gets the value of the dependencies property.
+	 * 
+	 * @return possible object is {@link Dependency }
+	 * 
+	 */
+	public Dependency getDependencies() {
+		return dependencies;
+	}
 
-    /**
-     * Sets the value of the dependencies property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Dependency }
-     *     
-     */
-    public void setDependencies(Dependency value) {
-        this.dependencies = value;
-    }
+	/**
+	 * Sets the value of the dependencies property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link Dependency }
+	 * 
+	 */
+	public void setDependencies(Dependency value) {
+		this.dependencies = value;
+	}
 
-    /**
-     * Gets the value of the validators property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Validators }
-     *     
-     */
-    public Validators getValidators() {
-        return validators;
-    }
+	/**
+	 * Gets the value of the validators property.
+	 * 
+	 * @return possible object is {@link Validators }
+	 * 
+	 */
+	public Validators getValidators() {
+		return validators;
+	}
 
-    /**
-     * Sets the value of the validators property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Validators }
-     *     
-     */
-    public void setValidators(Validators value) {
-        this.validators = value;
-    }
+	/**
+	 * Sets the value of the validators property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link Validators }
+	 * 
+	 */
+	public void setValidators(Validators value) {
+		this.validators = value;
+	}
 
-    /**
-     * Gets the value of the onConfigurationModelChangedListener property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link OnConfigurationModelChangedListener }
-     *     
-     */
-    public OnConfigurationModelChangedListener getOnConfigurationModelChangedListener() {
-        return onConfigurationModelChangedListener;
-    }
+	/**
+	 * Gets the value of the onConfigurationModelChangedListener property.
+	 * 
+	 * @return possible object is {@link OnConfigurationModelChangedListener }
+	 * 
+	 */
+	public OnConfigurationModelChangedListener getOnConfigurationModelChangedListener() {
+		return onConfigurationModelChangedListener;
+	}
 
-    /**
-     * Sets the value of the onConfigurationModelChangedListener property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link OnConfigurationModelChangedListener }
-     *     
-     */
-    public void setOnConfigurationModelChangedListener(OnConfigurationModelChangedListener value) {
-        this.onConfigurationModelChangedListener = value;
-    }
+	/**
+	 * Sets the value of the onConfigurationModelChangedListener property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link OnConfigurationModelChangedListener }
+	 * 
+	 */
+	public void setOnConfigurationModelChangedListener(OnConfigurationModelChangedListener value) {
+		this.onConfigurationModelChangedListener = value;
+	}
 
-    /**
-     * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getId() {
-        return id;
-    }
+	/**
+	 * Gets the value of the id property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getId() {
+		return id;
+	}
 
-    /**
-     * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setId(String value) {
-        this.id = value;
-    }
+	/**
+	 * Sets the value of the id property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setId(String value) {
+		this.id = value;
+	}
 
-    /**
-     * Gets the value of the active property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public boolean isActive() {
-        if (active == null) {
-            return true;
-        } else {
-            return active;
-        }
-    }
+	/**
+	 * Gets the value of the active property.
+	 * 
+	 * @return possible object is {@link Boolean }
+	 * 
+	 */
+	public boolean isActive() {
+		if (active == null) {
+			return true;
+		} else {
+			return active;
+		}
+	}
 
-    /**
-     * Sets the value of the active property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setActive(Boolean value) {
-        this.active = value;
-    }
+	/**
+	 * Sets the value of the active property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link Boolean }
+	 * 
+	 */
+	public void setActive(Boolean value) {
+		this.active = value;
+	}
 
-    /**
-     * Gets the value of the cardinality property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getCardinality() {
-        if (cardinality == null) {
-            return "0..1";
-        } else {
-            return cardinality;
-        }
-    }
+	/**
+	 * Gets the value of the cardinality property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getCardinality() {
+		if (cardinality == null) {
+			return "0..1";
+		} else {
+			return cardinality;
+		}
+	}
 
-    /**
-     * Sets the value of the cardinality property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setCardinality(String value) {
-        this.cardinality = value;
-    }
+	/**
+	 * Sets the value of the cardinality property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setCardinality(String value) {
+		this.cardinality = value;
+	}
 
 }

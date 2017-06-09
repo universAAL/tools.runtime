@@ -5,7 +5,6 @@
 // Generated on: 2012.08.02 at 01:53:27 PM MESZ 
 //
 
-
 package org.universAAL.ucc.configuration.model.configurationdefinition;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -13,11 +12,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for OnConfigurationModelChangedListener complex type.
+ * <p>
+ * Java class for OnConfigurationModelChangedListener complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="OnConfigurationModelChangedListener">
@@ -41,31 +42,28 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "OnConfigurationModelChangedListener")
 public class OnConfigurationModelChangedListener {
 
-    @XmlAttribute(name = "class")
-    protected String clazz;
+	@XmlAttribute(name = "class")
+	protected String clazz;
 
-    /**
-     * Gets the value of the clazz property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getClazz() {
-        return clazz;
-    }
+	/**
+	 * Gets the value of the clazz property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getClazz() {
+		return clazz;
+	}
 
-    /**
-     * Sets the value of the clazz property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setClazz(String value) {
-        this.clazz = value;
-    }
+	/**
+	 * Sets the value of the clazz property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setClazz(String value) {
+		this.clazz = value;
+	}
 
 }

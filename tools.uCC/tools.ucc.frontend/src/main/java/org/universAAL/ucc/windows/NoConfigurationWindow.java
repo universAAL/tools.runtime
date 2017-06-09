@@ -11,8 +11,7 @@ import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.Window;
 import com.vaadin.ui.themes.Reindeer;
 
-public class NoConfigurationWindow extends Window implements
-		Button.ClickListener {
+public class NoConfigurationWindow extends Window implements Button.ClickListener {
 	private Panel panel;
 	private Button ok;
 	private String base;
@@ -21,7 +20,7 @@ public class NoConfigurationWindow extends Window implements
 	public NoConfigurationWindow(String msg) {
 		base = "resources.ucc";
 		bundle = ResourceBundle.getBundle(base);
-//		setCaption(bundle.getString("result.installation"));
+		// setCaption(bundle.getString("result.installation"));
 		setWidth("425px");
 		setHeight("300px");
 		Label label = new Label("<b>" + msg + "</b>", Label.CONTENT_XHTML);

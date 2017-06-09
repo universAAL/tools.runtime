@@ -14,19 +14,19 @@ import org.universAAL.ucc.model.preferences.Preferences;
  */
 public class UserAccountDBImpl implements UserAccountDB {
 
-    public void saveStoreAccessData(Preferences pref, String filepath) {
-	JAXB.marshal(pref, new File(filepath));
+	public void saveStoreAccessData(Preferences pref, String filepath) {
+		JAXB.marshal(pref, new File(filepath));
 
-    }
+	}
 
-    public Preferences getPreferencesData(String file) {
-	Preferences pref = JAXB.unmarshal(new File(file), Preferences.class);
-	return pref;
-    }
+	public Preferences getPreferencesData(String file) {
+		Preferences pref = JAXB.unmarshal(new File(file), Preferences.class);
+		return pref;
+	}
 
-    public void updatePreferencesData() {
-	// TODO Auto-generated method stub
+	public void updatePreferencesData() {
+		// TODO Auto-generated method stub
 
-    }
+	}
 
 }

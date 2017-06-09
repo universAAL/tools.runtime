@@ -8,43 +8,39 @@ import org.universAAL.ucc.configuration.model.exceptions.ValidationException;
 import org.universAAL.ucc.configuration.model.interfaces.ConfigurationValidator;
 
 public class DoubleMinMaxValidator implements ConfigurationValidator {
-	
+
 	double min, max;
-	
+
 	public boolean isValid(ConfigOptionRegistry registry, Value value) {
-		try{
+		try {
 			double doubleValue = Double.parseDouble(value.getValue());
 			return doubleValue <= max && doubleValue >= min;
-		}catch (NumberFormatException e){
-			LogUtils.logError(Activator.getContext(), this.getClass(), "isValid",
-					new Object[] {e.toString() }, null);
+		} catch (NumberFormatException e) {
+			LogUtils.logError(Activator.getContext(), this.getClass(), "isValid", new Object[] { e.toString() }, null);
 
 		}
 		return false;
 	}
 
-	
 	public void validate(ConfigOptionRegistry registry, Value value) throws ValidationException {
-		if(!isValid(registry, value))
-		{
-			try{
+		if (!isValid(registry, value)) {
+			try {
 				double doubleValue = Double.parseDouble(value.getValue());
-				if(doubleValue > max){
+				if (doubleValue > max) {
 					throw new ValidationException("Value is too large! It needs to be less than or equal to " + max);
-				}else if(doubleValue < min){
+				} else if (doubleValue < min) {
 					throw new ValidationException("Value is too small! It needs to be greater than or equal to " + min);
 				}
-			}catch (NumberFormatException e){
-				LogUtils.logError(Activator.getContext(), this.getClass(), "validate",
-						new Object[] { e.toString() }, null);
+			} catch (NumberFormatException e) {
+				LogUtils.logError(Activator.getContext(), this.getClass(), "validate", new Object[] { e.toString() },
+						null);
 
 			}
 		}
 	}
 
-
 	public void setAttributes(String[] attributes) {
-		if(attributes.length > 1){
+		if (attributes.length > 1) {
 			try {
 				min = Double.parseDouble(attributes[0]);
 				max = Double.parseDouble(attributes[1]);

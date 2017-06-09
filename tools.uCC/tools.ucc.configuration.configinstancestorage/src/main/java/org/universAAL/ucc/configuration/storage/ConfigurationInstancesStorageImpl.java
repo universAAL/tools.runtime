@@ -22,36 +22,37 @@ import org.universAAL.ucc.configuration.storage.internal.Activator;
 
 /**
  * 
- * Implementation of the configuration instages storage interface.
- * On startup it loads all configuration instances from file system.
+ * Implementation of the configuration instages storage interface. On startup it
+ * loads all configuration instances from file system.
  * 
- * New configuration instances could be added at runtime, where all StorageChangedListener will be informed.
+ * New configuration instances could be added at runtime, where all
+ * StorageChangedListener will be informed.
  * 
  * @author Sebastian.Schoebinge
  *
  */
 
-public class ConfigurationInstancesStorageImpl implements ConfigurationInstancesStorage {	
+public class ConfigurationInstancesStorageImpl implements ConfigurationInstancesStorage {
 	String basedir;
 
 	HashMap<String, ConfigurationInstance> instances;
-	
+
 	LinkedList<StorageChangedListener> listeners;
-	
+
 	/**
 	 * load all instances.
 	 */
 	public ConfigurationInstancesStorageImpl() {
-		basedir = Activator.getTmpConfigFiles().getAbsolutePath() +"/";
+		basedir = Activator.getTmpConfigFiles().getAbsolutePath() + "/";
 		checkFolderOrCreate(basedir);
 		instances = new HashMap<String, ConfigurationInstance>();
 		listeners = new LinkedList<StorageChangedListener>();
 		loadInstances();
 	}
-	
+
 	private void checkFolderOrCreate(String dir) {
 		File folder = new File(dir);
-		if(!folder.exists()){
+		if (!folder.exists()) {
 			folder.mkdir();
 		}
 	}
@@ -59,75 +60,73 @@ public class ConfigurationInstancesStorageImpl implements ConfigurationInstances
 	/**
 	 * load the instances from file system.
 	 */
-	
-	public synchronized void loadInstances(){
+
+	public synchronized void loadInstances() {
 		instances.clear();
-		for(File dir: getOnlyDirectoryChildren(basedir)){
-			for(File file : getOnlyFileChildren(dir.getPath())){
+		for (File dir : getOnlyDirectoryChildren(basedir)) {
+			for (File file : getOnlyFileChildren(dir.getPath())) {
 				addConfigurationInstance(JAXB.unmarshal(file, ConfigurationInstance.class));
 			}
 		}
-		
+
 	}
-	
-	
+
 	public synchronized void addConfigurationInstance(ConfigurationInstance instance) {
-		if(!instances.containsKey(getKey(instance))){
+		if (!instances.containsKey(getKey(instance))) {
 			instances.put(getKey(instance), instance);
-			checkFolderOrCreate(basedir+instance.getUsecaseid()+"/");
-			File file = new File(basedir+instance.getUsecaseid()+"/"+instance.getId()+instance.getVersion()+".xml");
+			checkFolderOrCreate(basedir + instance.getUsecaseid() + "/");
+			File file = new File(
+					basedir + instance.getUsecaseid() + "/" + instance.getId() + instance.getVersion() + ".xml");
 			JAXB.marshal(instance, file);
 			LogUtils.logInfo(Activator.getContext(), this.getClass(), "addConfigurationInstance",
-					new Object[] { "Configuration saved in file: "+file.getPath() }, null);
+					new Object[] { "Configuration saved in file: " + file.getPath() }, null);
 		}
 	}
-	
-	
+
 	public synchronized void replaceConfigurationInstance(ConfigurationInstance instance) {
-		if(instances.containsKey(getKey(instance))){
+		if (instances.containsKey(getKey(instance))) {
 			removeConfigurationInstance(instance);
 			addConfigurationInstance(instance);
 		}
 	}
-	
-	
+
 	public synchronized boolean removeConfigurationInstance(ConfigurationInstance instance) {
 		instances.remove(getKey(instance));
-		File file = new File(basedir+instance.getUsecaseid()+"/"+instance.getId()+instance.getVersion()+".xml");
-		
+		File file = new File(
+				basedir + instance.getUsecaseid() + "/" + instance.getId() + instance.getVersion() + ".xml");
+
 		LogUtils.logInfo(Activator.getContext(), this.getClass(), "removeconfigurationInstance",
 				new Object[] { "delete file: " + file.getPath() }, null);
 
 		updateListeners();
 		return file.delete();
 	}
-	
-	private File[] getOnlyFileChildren(String basedir){
+
+	private File[] getOnlyFileChildren(String basedir) {
 		FileFilter fileFilter = new FileFilter() {
-		    public boolean accept(File file) {
-		        return file.isFile();
-		    }
+			public boolean accept(File file) {
+				return file.isFile();
+			}
 		};
 		File dir = new File(basedir);
 		return dir.listFiles(fileFilter);
 	}
-	
-	private File[] getOnlyDirectoryChildren(String basedir){
+
+	private File[] getOnlyDirectoryChildren(String basedir) {
 		FileFilter fileFilter = new FileFilter() {
-		    public boolean accept(File file) {
-		        return file.isDirectory();
-		    }
+			public boolean accept(File file) {
+				return file.isDirectory();
+			}
 		};
 		File dir = new File(basedir);
 		return dir.listFiles(fileFilter);
 	}
-	
-	
-	public synchronized List<ConfigurationInstance> getAllInstancesForBundle(String bundlename){
+
+	public synchronized List<ConfigurationInstance> getAllInstancesForBundle(String bundlename) {
 		LinkedList<ConfigurationInstance> bundleInstances = new LinkedList<ConfigurationInstance>();
-		if(bundlename != null && !"".equals(bundlename)){
-			for(ConfigurationInstance instance : instances.values()){
-				if(bundlename.equals(instance.getUsecaseid())){
+		if (bundlename != null && !"".equals(bundlename)) {
+			for (ConfigurationInstance instance : instances.values()) {
+				if (bundlename.equals(instance.getUsecaseid())) {
 					bundleInstances.add(instance);
 				}
 			}
@@ -135,41 +134,43 @@ public class ConfigurationInstancesStorageImpl implements ConfigurationInstances
 		return bundleInstances;
 	}
 
-	
 	public boolean contains(ConfigurationInstance configInstance) {
 		return instances.containsKey(getKey(configInstance));
 	}
-	
-	private String getKey(ConfigurationInstance instance){
-		return instance.getUsecaseid()+instance.getId();
+
+	private String getKey(ConfigurationInstance instance) {
+		return instance.getUsecaseid() + instance.getId();
 	}
-	
+
 	/**
-	 * returns the first primary configuration instance or if there is no primary instance then this method
-	 * returns the first configuration instance for the given bundle. 
+	 * returns the first primary configuration instance or if there is no
+	 * primary instance then this method returns the first configuration
+	 * instance for the given bundle.
 	 */
-	
+
 	public synchronized ConfigurationInstance getConfigurationForBundle(Bundle bundle)
 			throws NoConfigurationFoundException {
 		LogUtils.logInfo(Activator.getContext(), this.getClass(), "getConfigurationForBundle",
 				new Object[] { "search configuration instance for bundle: " + bundle.getSymbolicName() }, null);
 
 		ConfigurationInstance retInstance = null;
-		if(bundle != null && !"".equals(bundle.getSymbolicName())){
-			for(ConfigurationInstance instance : instances.values()){
-				if(bundle.getSymbolicName().equals(instance.getUsecaseid())){
+		if (bundle != null && !"".equals(bundle.getSymbolicName())) {
+			for (ConfigurationInstance instance : instances.values()) {
+				if (bundle.getSymbolicName().equals(instance.getUsecaseid())) {
 					retInstance = instance;
-					if(retInstance.isIsPrimary() != null && retInstance.isIsPrimary()){
-						
+					if (retInstance.isIsPrimary() != null && retInstance.isIsPrimary()) {
+
 						LogUtils.logInfo(Activator.getContext(), this.getClass(), "getConfigurationForBundle",
-								new Object[] { "return first primary configuration instance with id: " + instance.getId() }, null);
+								new Object[] {
+										"return first primary configuration instance with id: " + instance.getId() },
+								null);
 
 						return instance;
 					}
 				}
 			}
 		}
-		if(retInstance != null){
+		if (retInstance != null) {
 			LogUtils.logInfo(Activator.getContext(), this.getClass(), "getConfigurationForBundle",
 					new Object[] { "return configuration instance with id: " + retInstance.getId() }, null);
 
@@ -178,25 +179,23 @@ public class ConfigurationInstancesStorageImpl implements ConfigurationInstances
 		throw new NoConfigurationFoundException();
 	}
 
-	
 	public synchronized void addListener(StorageChangedListener listener) {
-		if(listener != null){
+		if (listener != null) {
 			listeners.add(listener);
 		}
 	}
-	
-	
+
 	public synchronized void removeListener(StorageChangedListener listener) {
-		if(listener != null){
+		if (listener != null) {
 			listeners.remove(listener);
 		}
 	}
-	
-	private synchronized void updateListeners(){
-		for(StorageChangedListener listener : new LinkedList<StorageChangedListener>(listeners)){
+
+	private synchronized void updateListeners() {
+		for (StorageChangedListener listener : new LinkedList<StorageChangedListener>(listeners)) {
 			listener.storageChanged();
 		}
-		
+
 	}
 
 }

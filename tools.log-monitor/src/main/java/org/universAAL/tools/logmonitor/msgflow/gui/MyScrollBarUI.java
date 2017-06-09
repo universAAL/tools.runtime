@@ -34,42 +34,40 @@ import org.universAAL.tools.logmonitor.msgflow.FlowData;
  * 
  */
 public class MyScrollBarUI extends BasicScrollBarUI {
-    public ScrollBarUI defaultUI = null;
+	public ScrollBarUI defaultUI = null;
 
-    MyScrollBarUI() {
-    }
-
-    @Override
-    protected void paintTrack(Graphics g, JComponent comp, Rectangle trackBounds) {
-	// super.paintTrack(g, c, trackBounds);
-	Color c = g.getColor();
-	MsgFlowPanel panel = MsgFlowPanel.instance;
-	synchronized (panel.messages) {
-	    int size = panel.messages.size();
-	    int i = 0;
-	    for (FlowData d : panel.messages) {
-		g.setColor(MsgFlowPanel.busColor[d.bus]);
-		int third = trackBounds.width / 3;
-		int x1 = d.bus * third;
-		int x2 = d.bus * third + third;
-		int y = i * trackBounds.height / size + 1;
-		g.drawLine(x1, y, x2, y);
-		i++;
-	    }
+	MyScrollBarUI() {
 	}
-	g.setColor(Color.RED);
-	g.drawRect(trackBounds.x, trackBounds.y, trackBounds.width - 1,
-		trackBounds.height - 1);
-	g.setColor(c);
-    }
 
-    @Override
-    protected void paintThumb(Graphics g, JComponent comp, Rectangle thumbBounds) {
-	// super.paintThumb(g, c, thumbBounds);
-	Color c = g.getColor();
-	g.setColor(Color.BLUE);
-	g.drawRect(thumbBounds.x, thumbBounds.y, thumbBounds.width - 1,
-		thumbBounds.height - 1);
-	g.setColor(c);
-    }
+	@Override
+	protected void paintTrack(Graphics g, JComponent comp, Rectangle trackBounds) {
+		// super.paintTrack(g, c, trackBounds);
+		Color c = g.getColor();
+		MsgFlowPanel panel = MsgFlowPanel.instance;
+		synchronized (panel.messages) {
+			int size = panel.messages.size();
+			int i = 0;
+			for (FlowData d : panel.messages) {
+				g.setColor(MsgFlowPanel.busColor[d.bus]);
+				int third = trackBounds.width / 3;
+				int x1 = d.bus * third;
+				int x2 = d.bus * third + third;
+				int y = i * trackBounds.height / size + 1;
+				g.drawLine(x1, y, x2, y);
+				i++;
+			}
+		}
+		g.setColor(Color.RED);
+		g.drawRect(trackBounds.x, trackBounds.y, trackBounds.width - 1, trackBounds.height - 1);
+		g.setColor(c);
+	}
+
+	@Override
+	protected void paintThumb(Graphics g, JComponent comp, Rectangle thumbBounds) {
+		// super.paintThumb(g, c, thumbBounds);
+		Color c = g.getColor();
+		g.setColor(Color.BLUE);
+		g.drawRect(thumbBounds.x, thumbBounds.y, thumbBounds.width - 1, thumbBounds.height - 1);
+		g.setColor(c);
+	}
 }

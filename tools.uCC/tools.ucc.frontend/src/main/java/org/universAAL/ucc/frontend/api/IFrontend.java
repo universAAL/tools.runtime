@@ -2,7 +2,6 @@ package org.universAAL.ucc.frontend.api;
 
 import org.universAAL.ucc.windows.DeinstallWindow;
 
-
 public interface IFrontend {
 	public boolean installService(String sessionkey, String serviceId, String serviceLink);
 
@@ -12,10 +11,9 @@ public interface IFrontend {
 
 	public String getInstalledServices(String sessionKey);
 
-	public String getInstalledUnitsForService(String sessionKey,
-			String serviceId);
-	
+	public String getInstalledUnitsForService(String sessionKey, String serviceId);
+
 	public String getSessionKey(String username, String password);
-	
+
 	public void startUCC();
 }

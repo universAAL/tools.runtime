@@ -5,7 +5,6 @@
 // Generated on: 2012.08.02 at 01:53:27 PM MESZ 
 //
 
-
 package org.universAAL.ucc.configuration.model.configurationdefinition;
 
 import java.util.ArrayList;
@@ -15,11 +14,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for Validators complex type.
+ * <p>
+ * Java class for Validators complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="Validators">
@@ -36,41 +37,40 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Validators", propOrder = {
-    "validator"
-})
+@XmlType(name = "Validators", propOrder = { "validator" })
 public class Validators {
 
-    @XmlElement(required = true)
-    protected List<Validator> validator;
+	@XmlElement(required = true)
+	protected List<Validator> validator;
 
-    /**
-     * Gets the value of the validator property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the validator property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getValidator().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link Validator }
-     * 
-     * 
-     */
-    public List<Validator> getValidator() {
-        if (validator == null) {
-            validator = new ArrayList<Validator>();
-        }
-        return this.validator;
-    }
+	/**
+	 * Gets the value of the validator property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the validator property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getValidator().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list {@link Validator
+	 * }
+	 * 
+	 * 
+	 */
+	public List<Validator> getValidator() {
+		if (validator == null) {
+			validator = new ArrayList<Validator>();
+		}
+		return this.validator;
+	}
 
 }

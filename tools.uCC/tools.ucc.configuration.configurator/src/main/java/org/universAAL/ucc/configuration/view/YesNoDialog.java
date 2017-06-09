@@ -7,7 +7,6 @@ import com.vaadin.ui.Label;
 import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Window;
 
-
 /**
  * 
  * An simple yes/no dialog to ask the user simple yes/no questions.
@@ -19,41 +18,41 @@ import com.vaadin.ui.Window;
 @SuppressWarnings("serial")
 public class YesNoDialog extends Window implements Button.ClickListener {
 
-    Callback callback;
-    Button yes;
-    Button no;
+	Callback callback;
+	Button yes;
+	Button no;
 
-    public YesNoDialog(String caption, String question, Callback callback) {
-        super(caption);
-        
-        yes = new Button("Yes", this);
-        no = new Button("No", this);
-        yes.setClickShortcut(KeyCode.ENTER);
-        
-        setModal(true);
+	public YesNoDialog(String caption, String question, Callback callback) {
+		super(caption);
 
-        this.callback = callback;
+		yes = new Button("Yes", this);
+		no = new Button("No", this);
+		yes.setClickShortcut(KeyCode.ENTER);
 
-        if (question != null) {
-            addComponent(new Label(question));
-        }
+		setModal(true);
 
-        HorizontalLayout hl = new HorizontalLayout();
-        hl.addComponent(yes);
-        hl.addComponent(no);
-        addComponent(hl);
-    }
+		this.callback = callback;
 
-    public void buttonClick(ClickEvent event) {
-        if (getParent() != null) {
-            ((Window) getParent()).removeWindow(this);
-        }
-        callback.onDialogResult(event.getSource() == yes);
-    }
+		if (question != null) {
+			addComponent(new Label(question));
+		}
 
-    public interface Callback {
+		HorizontalLayout hl = new HorizontalLayout();
+		hl.addComponent(yes);
+		hl.addComponent(no);
+		addComponent(hl);
+	}
 
-        public void onDialogResult(boolean resultIsYes);
-    }
+	public void buttonClick(ClickEvent event) {
+		if (getParent() != null) {
+			((Window) getParent()).removeWindow(this);
+		}
+		callback.onDialogResult(event.getSource() == yes);
+	}
+
+	public interface Callback {
+
+		public void onDialogResult(boolean resultIsYes);
+	}
 
 }

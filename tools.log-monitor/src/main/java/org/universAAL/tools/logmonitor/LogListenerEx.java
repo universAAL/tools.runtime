@@ -14,9 +14,9 @@ import org.universAAL.middleware.container.LogListener;
  */
 public interface LogListenerEx extends LogListener {
 
-    public JComponent getComponent();
+	public JComponent getComponent();
 
-    public String getTitle();
-    
-    public void stop();
+	public String getTitle();
+
+	public void stop();
 }

@@ -5,7 +5,6 @@
 // Generated on: 2012.08.02 at 01:53:27 PM MESZ 
 //
 
-
 package org.universAAL.ucc.configuration.model.configurationdefinition;
 
 import java.util.ArrayList;
@@ -21,11 +20,13 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
-
 /**
- * <p>Java class for Category complex type.
+ * <p>
+ * Java class for Category complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="Category">
@@ -48,130 +49,118 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Category", propOrder = {
-    "sparqlConfigItemAndMapConfigItemAndSimpleConfigItem"
-})
+@XmlType(name = "Category", propOrder = { "sparqlConfigItemAndMapConfigItemAndSimpleConfigItem" })
 public class Category {
 
-    @XmlElements({
-        @XmlElement(name = "Dependencies", type = Dependency.class),
-        @XmlElement(name = "SimpleConfigItem", type = SimpleConfigItem.class),
-        @XmlElement(name = "MapConfigItem", type = MapConfigItem.class),
-        @XmlElement(name = "SPARQLConfigItem", type = SPARQLConfigItem.class)
-    })
-    protected List<Object> sparqlConfigItemAndMapConfigItemAndSimpleConfigItem;
-    @XmlAttribute(required = true)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    @XmlID
-    @XmlSchemaType(name = "ID")
-    protected String id;
-    @XmlAttribute(required = true)
-    protected String label;
-    @XmlAttribute
-    protected String description;
+	@XmlElements({ @XmlElement(name = "Dependencies", type = Dependency.class),
+			@XmlElement(name = "SimpleConfigItem", type = SimpleConfigItem.class),
+			@XmlElement(name = "MapConfigItem", type = MapConfigItem.class),
+			@XmlElement(name = "SPARQLConfigItem", type = SPARQLConfigItem.class) })
+	protected List<Object> sparqlConfigItemAndMapConfigItemAndSimpleConfigItem;
+	@XmlAttribute(required = true)
+	@XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+	@XmlID
+	@XmlSchemaType(name = "ID")
+	protected String id;
+	@XmlAttribute(required = true)
+	protected String label;
+	@XmlAttribute
+	protected String description;
 
-    /**
-     * Gets the value of the sparqlConfigItemAndMapConfigItemAndSimpleConfigItem property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the sparqlConfigItemAndMapConfigItemAndSimpleConfigItem property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getSPARQLConfigItemAndMapConfigItemAndSimpleConfigItem().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link Dependency }
-     * {@link SimpleConfigItem }
-     * {@link MapConfigItem }
-     * {@link SPARQLConfigItem }
-     * 
-     * 
-     */
-    public List<Object> getSPARQLConfigItemAndMapConfigItemAndSimpleConfigItem() {
-        if (sparqlConfigItemAndMapConfigItemAndSimpleConfigItem == null) {
-            sparqlConfigItemAndMapConfigItemAndSimpleConfigItem = new ArrayList<Object>();
-        }
-        return this.sparqlConfigItemAndMapConfigItemAndSimpleConfigItem;
-    }
+	/**
+	 * Gets the value of the sparqlConfigItemAndMapConfigItemAndSimpleConfigItem
+	 * property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the
+	 * sparqlConfigItemAndMapConfigItemAndSimpleConfigItem property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getSPARQLConfigItemAndMapConfigItemAndSimpleConfigItem().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link Dependency } {@link SimpleConfigItem } {@link MapConfigItem }
+	 * {@link SPARQLConfigItem }
+	 * 
+	 * 
+	 */
+	public List<Object> getSPARQLConfigItemAndMapConfigItemAndSimpleConfigItem() {
+		if (sparqlConfigItemAndMapConfigItemAndSimpleConfigItem == null) {
+			sparqlConfigItemAndMapConfigItemAndSimpleConfigItem = new ArrayList<Object>();
+		}
+		return this.sparqlConfigItemAndMapConfigItemAndSimpleConfigItem;
+	}
 
-    /**
-     * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getId() {
-        return id;
-    }
+	/**
+	 * Gets the value of the id property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getId() {
+		return id;
+	}
 
-    /**
-     * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setId(String value) {
-        this.id = value;
-    }
+	/**
+	 * Sets the value of the id property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setId(String value) {
+		this.id = value;
+	}
 
-    /**
-     * Gets the value of the label property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getLabel() {
-        return label;
-    }
+	/**
+	 * Gets the value of the label property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getLabel() {
+		return label;
+	}
 
-    /**
-     * Sets the value of the label property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setLabel(String value) {
-        this.label = value;
-    }
+	/**
+	 * Sets the value of the label property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setLabel(String value) {
+		this.label = value;
+	}
 
-    /**
-     * Gets the value of the description property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getDescription() {
-        return description;
-    }
+	/**
+	 * Gets the value of the description property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getDescription() {
+		return description;
+	}
 
-    /**
-     * Sets the value of the description property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setDescription(String value) {
-        this.description = value;
-    }
+	/**
+	 * Sets the value of the description property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setDescription(String value) {
+		this.description = value;
+	}
 
 }

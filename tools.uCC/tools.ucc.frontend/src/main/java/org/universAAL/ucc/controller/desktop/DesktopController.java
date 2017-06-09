@@ -54,7 +54,7 @@ public class DesktopController implements Button.ClickListener {
 	private static boolean admin;
 	private static String currentUser;
 	private static String currentPassword;
-//	public static WebConnector web;
+	// public static WebConnector web;
 
 	public DesktopController(UccUI app) {
 		base = "resources.ucc";
@@ -63,7 +63,7 @@ public class DesktopController implements Button.ClickListener {
 		this.main = app.getMainWindow();
 		currentUser = "";
 		currentPassword = "";
-//		new UstoreUtil();
+		// new UstoreUtil();
 		Properties prop = new Properties();
 		Reader reader = null;
 		try {
@@ -83,7 +83,7 @@ public class DesktopController implements Button.ClickListener {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		bc = Activator.bc;//FrameworkUtil.getBundle(getClass()).getBundleContext();
+		bc = Activator.bc;// FrameworkUtil.getBundle(getClass()).getBundleContext();
 		ServiceReference refer = bc.getServiceReference(Setup.class.getName());
 		setup = (Setup) bc.getService(refer);
 		bc.ungetService(refer);
@@ -97,7 +97,7 @@ public class DesktopController implements Button.ClickListener {
 						main.removeWindow(w);
 					} else {
 						ToolWindow startWindow = new ToolWindow(app);
-						if(admin) {
+						if (admin) {
 							startWindow.getuStoreButton().setEnabled(false);
 							startWindow.getOpenAAL().setEnabled(false);
 							startWindow.getConfigButton().setEnabled(true);
@@ -121,7 +121,7 @@ public class DesktopController implements Button.ClickListener {
 				}
 			} else {
 				ToolWindow startWin = new ToolWindow(app);
-				if(admin) {
+				if (admin) {
 					startWin.getuStoreButton().setEnabled(false);
 					startWin.getOpenAAL().setEnabled(false);
 					startWin.getConfigButton().setEnabled(true);
@@ -148,56 +148,59 @@ public class DesktopController implements Button.ClickListener {
 			main.addWindow(sWin);
 		}
 		if (event.getButton() == app.getLogin()) {
-			if(app.getUser().getValue().equals("") || app.getPwd().getValue().equals("")) {
+			if (app.getUser().getValue().equals("") || app.getPwd().getValue().equals("")) {
 				app.getMainWindow().showNotification(bundle.getString("input.empty"));
 			} else {
-			if(app.getUser().getValue().equals(user) && app.getPwd().getValue().equals(pwd)) {
-				adminLogin();
-			} else {
-				boolean in = false;
-				//Later comment out, only CHE is to be used
-				List<UserAccountInfo> users = setup.getUsers();
-				if(users.size() <= 1) {
-				//AAL Space test
-					DataAccess da = Activator.getDataAccess();
-					ArrayList<OntologyInstance> ontList = da.getEmptyCHEFormFields("User");
-					String uname = "";
-					String pw = "";
-					for(OntologyInstance o : ontList) {
-					
-						for(Subprofile s : o.getSubprofiles()) {
-							for(SimpleObject sim : s.getSimpleObjects()) {
-								StringValue st = (StringValue)sim;
-								if(st.getName().equals("username")) {
-									uname = st.getValue();
-								}
-								if(st.getName().equals("password")) {
-									pw = st.getValue();
-								}
-								if(!uname.equals("") && !pw.equals("")) {
-									if(uname.equals(app.getUser().getValue()) && pw.equals(app.getPwd().getValue())) {
-										userLogin();
-										currentUser = app.getUser().getValue().toString();
-										currentPassword = app.getPwd().getValue().toString();
-										in = true;
+				if (app.getUser().getValue().equals(user) && app.getPwd().getValue().equals(pwd)) {
+					adminLogin();
+				} else {
+					boolean in = false;
+					// Later comment out, only CHE is to be used
+					List<UserAccountInfo> users = setup.getUsers();
+					if (users.size() <= 1) {
+						// AAL Space test
+						DataAccess da = Activator.getDataAccess();
+						ArrayList<OntologyInstance> ontList = da.getEmptyCHEFormFields("User");
+						String uname = "";
+						String pw = "";
+						for (OntologyInstance o : ontList) {
+
+							for (Subprofile s : o.getSubprofiles()) {
+								for (SimpleObject sim : s.getSimpleObjects()) {
+									StringValue st = (StringValue) sim;
+									if (st.getName().equals("username")) {
+										uname = st.getValue();
+									}
+									if (st.getName().equals("password")) {
+										pw = st.getValue();
+									}
+									if (!uname.equals("") && !pw.equals("")) {
+										if (uname.equals(app.getUser().getValue())
+												&& pw.equals(app.getPwd().getValue())) {
+											userLogin();
+											currentUser = app.getUser().getValue().toString();
+											currentPassword = app.getPwd().getValue().toString();
+											in = true;
+										}
 									}
 								}
 							}
 						}
-					}
-				} //Later comment out, only CHE is to be used
-				else {
-					for(UserAccountInfo u : users) {
-						if(u.getName().equals(app.getUser().getValue()) && u.getPassword().equals(app.getPwd().getValue())) {
-							userLogin();
-							currentUser = app.getUser().getValue().toString();
-							currentPassword = app.getPwd().getValue().toString();
-							in = true;
+					} // Later comment out, only CHE is to be used
+					else {
+						for (UserAccountInfo u : users) {
+							if (u.getName().equals(app.getUser().getValue())
+									&& u.getPassword().equals(app.getPwd().getValue())) {
+								userLogin();
+								currentUser = app.getUser().getValue().toString();
+								currentPassword = app.getPwd().getValue().toString();
+								in = true;
+							}
 						}
 					}
-				}
-					if(!in) {
-						app.getMainWindow().showNotification(bundle.getString("login.account.fail"), Notification.TYPE_ERROR_MESSAGE);
+					if (!in) {
+						app.getMainWindow().showNotification(bundle.getString("login.account.fail"),
+								Notification.TYPE_ERROR_MESSAGE);
 						app.getUser().setValue("");
 						app.getPwd().setValue("");
 					}
@@ -224,7 +227,7 @@ public class DesktopController implements Button.ClickListener {
 			pref.setShopIp(prop.getProperty("shopUrl"));
 			pref.setUccIp(prop.getProperty("uccUrl"));
 			pref.setUccPort(prop.getProperty("uccPort"));
-//			pref.setWsPort(prop.getProperty("storePort"));
+			// pref.setWsPort(prop.getProperty("storePort"));
 			pref.setLanguage(prop.getProperty("lang"));
 			try {
 				reader.close();
@@ -233,37 +236,37 @@ public class DesktopController implements Button.ClickListener {
 			}
 			PreferencesWindow p = new PreferencesWindow(app, pref);
 			app.getMainWindow().addWindow(p);
-			
+
 		}
-		
-//		if(event.getButton() == app.getLink()) {
-//			AccountWindow aw = new AccountWindow();
-//			new AccountWindowController(aw, app);
-//			app.getMainWindow().addWindow(aw);
-//		}
+
+		// if(event.getButton() == app.getLink()) {
+		// AccountWindow aw = new AccountWindow();
+		// new AccountWindowController(aw, app);
+		// app.getMainWindow().addWindow(aw);
+		// }
 
 	}
-	
+
 	private void adminLogin() {
 		admin = true;
 		main.removeWindow(app.getLoginWindow());
 		main.removeComponent(app.getVLog());
 		main.setContent(app.createContent(this));
-		app.getMainWindow().showNotification(bundle.getString("login.success"),Notification.TYPE_HUMANIZED_MESSAGE);
-//		web = WebConnector.getInstance();
-//		web.startListening();
-		
+		app.getMainWindow().showNotification(bundle.getString("login.success"), Notification.TYPE_HUMANIZED_MESSAGE);
+		// web = WebConnector.getInstance();
+		// web.startListening();
+
 	}
-	
+
 	private void userLogin() {
 		admin = false;
 		main.removeWindow(app.getLoginWindow());
 		main.removeComponent(app.getVLog());
 		main.setContent(app.createContent(this));
-		app.getMainWindow().showNotification(bundle.getString("login.success"),Notification.TYPE_HUMANIZED_MESSAGE);
-//		web = WebConnector.getInstance();
-//		web.startListening();
-		
+		app.getMainWindow().showNotification(bundle.getString("login.success"), Notification.TYPE_HUMANIZED_MESSAGE);
+		// web = WebConnector.getInstance();
+		// web.startListening();
+
 	}
 
 	public static String getCurrentUser() {
@@ -281,7 +284,5 @@ public class DesktopController implements Button.ClickListener {
 	public static void setCurrentPassword(String currentPassword) {
 		DesktopController.currentPassword = currentPassword;
 	}
-	
-	
 
 }

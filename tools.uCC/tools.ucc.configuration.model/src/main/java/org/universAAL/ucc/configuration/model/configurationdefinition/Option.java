@@ -5,7 +5,6 @@
 // Generated on: 2012.08.02 at 01:53:27 PM MESZ 
 //
 
-
 package org.universAAL.ucc.configuration.model.configurationdefinition;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -14,11 +13,13 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
-
 /**
- * <p>Java class for Option complex type.
+ * <p>
+ * Java class for Option complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="Option">
@@ -33,59 +34,54 @@ import javax.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Option", propOrder = {
-    "value"
-})
+@XmlType(name = "Option", propOrder = { "value" })
 public class Option {
 
-    @XmlValue
-    protected String value;
-    @XmlAttribute(required = true)
-    protected int key;
+	@XmlValue
+	protected String value;
+	@XmlAttribute(required = true)
+	protected int key;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getValue() {
-        return value;
-    }
+	/**
+	 * Gets the value of the value property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getValue() {
+		return value;
+	}
 
-    /**
-     * Sets the value of the value property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setValue(String value) {
-        this.value = value;
-    }
+	/**
+	 * Sets the value of the value property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setValue(String value) {
+		this.value = value;
+	}
 
-    /**
-     * Gets the value of the key property.
-     * 
-     */
-    public int getKey() {
-        return key;
-    }
+	/**
+	 * Gets the value of the key property.
+	 * 
+	 */
+	public int getKey() {
+		return key;
+	}
 
-    /**
-     * Sets the value of the key property.
-     * 
-     */
-    public void setKey(int value) {
-        this.key = value;
-    }
-    
-    @Override
-    public String toString() {
-    	return value;
-    }
+	/**
+	 * Sets the value of the key property.
+	 * 
+	 */
+	public void setKey(int value) {
+		this.key = value;
+	}
+
+	@Override
+	public String toString() {
+		return value;
+	}
 
 }

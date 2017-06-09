@@ -41,14 +41,12 @@ public class LicenceWindow extends Window {
 	private Tree tree;
 	private UAPP installingApplication;
 
-	public LicenceWindow(UccUI app, ArrayList<License> licenses, AALService aal, UAPP installApp)
-			throws IOException {
+	public LicenceWindow(UccUI app, ArrayList<License> licenses, AALService aal, UAPP installApp) throws IOException {
 		res = ResourceBundle.getBundle(base);
 		setCaption(res.getString("license.capt"));
 		this.app = app;
 		this.installingApplication = installApp;
-		modus = Arrays.asList(new String[] { res.getString("agree.radio"),
-				res.getString("dontAgree.radio") });
+		modus = Arrays.asList(new String[] { res.getString("agree.radio"), res.getString("dontAgree.radio") });
 		vl = new VerticalLayout();
 		vl.setSizeFull();
 		vl.setSpacing(true);
@@ -73,7 +71,7 @@ public class LicenceWindow extends Window {
 				tree.setChildrenAllowed(f.getName(), false);
 			}
 		}
-		if ( licenses.size() >0 ) {
+		if (licenses.size() > 0) {
 			tree.select(licenses.get(0).getLicense().get(0).getName());
 		}
 		Panel panel = new Panel();
@@ -82,22 +80,22 @@ public class LicenceWindow extends Window {
 		layout.setSpacing(true);
 		layout.setMargin(true);
 		for (License l : licenses) {
-			if(l.getSlaList().size() > 0) {
-			for (File slaFile : l.getSlaList()) {
-				FileReader fr = new FileReader(slaFile);
-				// SLA makes problems
-				BufferedReader reader = new BufferedReader(fr);
-				String line = null;
-				while ((line = reader.readLine()) != null) {
-					panel.addComponent(new Label(line));
+			if (l.getSlaList().size() > 0) {
+				for (File slaFile : l.getSlaList()) {
+					FileReader fr = new FileReader(slaFile);
+					// SLA makes problems
+					BufferedReader reader = new BufferedReader(fr);
+					String line = null;
+					while ((line = reader.readLine()) != null) {
+						panel.addComponent(new Label(line));
+					}
 				}
-			}
-			} else if(l.getLicense().size() > 0) {
-				for(File lFile : l.getLicense()) {
+			} else if (l.getLicense().size() > 0) {
+				for (File lFile : l.getLicense()) {
 					FileReader fr = new FileReader(lFile);
 					BufferedReader reader = new BufferedReader(fr);
 					String line = null;
-					while((line = reader.readLine()) != null) {
+					while ((line = reader.readLine()) != null) {
 						panel.addComponent(new Label(line));
 					}
 				}
@@ -133,8 +131,7 @@ public class LicenceWindow extends Window {
 	}
 
 	public void createSecondComponent(Panel p) {
-		modus = Arrays.asList(new String[] { res.getString("agree.radio"),
-				res.getString("dontAgree.radio") });
+		modus = Arrays.asList(new String[] { res.getString("agree.radio"), res.getString("dontAgree.radio") });
 		vl = new VerticalLayout();
 		vl.setSizeFull();
 		vl.setSpacing(true);

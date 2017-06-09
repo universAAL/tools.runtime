@@ -6,9 +6,8 @@ public class StringValue extends SimpleObject {
 
 	private String value = "";
 	private String defaultValue = "";
-	
 
-	@XmlElement(required=true)
+	@XmlElement(required = true)
 	public String getValue() {
 		return value;
 	}
@@ -24,7 +23,5 @@ public class StringValue extends SimpleObject {
 	public void setDefaultValue(String defaultValue) {
 		this.defaultValue = defaultValue;
 	}
-
-	
 
 }

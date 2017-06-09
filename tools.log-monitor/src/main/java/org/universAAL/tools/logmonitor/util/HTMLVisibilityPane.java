@@ -16,69 +16,69 @@ import javax.swing.event.HyperlinkListener;
  * 
  */
 public class HTMLVisibilityPane extends HTMLPaneBase {
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    private boolean all = false;
+	private boolean all = false;
 
-    // Storage visible objects; objects that are not visible, are not
-    // contained in this table. The value is ignored, only the key is used.
-    private Hashtable<String, String> visible = new Hashtable<String, String>();
+	// Storage visible objects; objects that are not visible, are not
+	// contained in this table. The value is ignored, only the key is used.
+	private Hashtable<String, String> visible = new Hashtable<String, String>();
 
-    private class HTMLListener implements HyperlinkListener {
-	public void hyperlinkUpdate(HyperlinkEvent e) {
-	    if (e.getEventType() == HyperlinkEvent.EventType.ACTIVATED) {
-		String link = e.getDescription();
-		togglevisibility(link);
+	private class HTMLListener implements HyperlinkListener {
+		public void hyperlinkUpdate(HyperlinkEvent e) {
+			if (e.getEventType() == HyperlinkEvent.EventType.ACTIVATED) {
+				String link = e.getDescription();
+				togglevisibility(link);
 
-		// test: print content of system clipboard
-		// Clipboard systemClipboard;
-		// systemClipboard = Toolkit.getDefaultToolkit()
-		// .getSystemClipboard();
-		// printClipboardContent(systemClipboard);
+				// test: print content of system clipboard
+				// Clipboard systemClipboard;
+				// systemClipboard = Toolkit.getDefaultToolkit()
+				// .getSystemClipboard();
+				// printClipboardContent(systemClipboard);
 
-		updateAfterHyperlink();
-	    }
+				updateAfterHyperlink();
+			}
+		}
 	}
-    }
 
-    public HTMLVisibilityPane() {
-	addHyperlinkListener(new HTMLListener());
-    }
+	public HTMLVisibilityPane() {
+		addHyperlinkListener(new HTMLListener());
+	}
 
-    protected void updateAfterHyperlink() {
-    }
+	protected void updateAfterHyperlink() {
+	}
 
-    protected void clear() {
-	all = false;
-	visible.clear();
-    }
-
-    protected boolean isVisible(String uri) {
-	if (all)
-	    return true;
-	Object o = visible.get(uri);
-	if (o == null)
-	    return false;
-	else
-	    return true;
-    }
-
-    private void makeVisible(String uri) {
-	visible.put(uri, uri);
-    }
-
-    private void makeInvisible(String uri) {
-	visible.remove(uri);
-    }
-
-    private void togglevisibility(String uri) {
-	if ("all".equals(uri)) {
-	    if (all)
+	protected void clear() {
+		all = false;
 		visible.clear();
-	    all = !all;
-	} else if (visible.get(uri) != null)
-	    makeInvisible(uri);
-	else
-	    makeVisible(uri);
-    }
+	}
+
+	protected boolean isVisible(String uri) {
+		if (all)
+			return true;
+		Object o = visible.get(uri);
+		if (o == null)
+			return false;
+		else
+			return true;
+	}
+
+	private void makeVisible(String uri) {
+		visible.put(uri, uri);
+	}
+
+	private void makeInvisible(String uri) {
+		visible.remove(uri);
+	}
+
+	private void togglevisibility(String uri) {
+		if ("all".equals(uri)) {
+			if (all)
+				visible.clear();
+			all = !all;
+		} else if (visible.get(uri) != null)
+			makeInvisible(uri);
+		else
+			makeVisible(uri);
+	}
 }

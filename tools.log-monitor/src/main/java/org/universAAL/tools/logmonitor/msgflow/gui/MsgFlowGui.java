@@ -32,34 +32,33 @@ import javax.swing.ScrollPaneConstants;
  */
 public class MsgFlowGui extends JScrollPane {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    public MyScrollBarUI scrollbarUI;
-    public MsgFlowPanel panel;
+	public MyScrollBarUI scrollbarUI;
+	public MsgFlowPanel panel;
 
-    /**
-     * Create the pane.
-     */
-    public MsgFlowGui() {
-	panel = new MsgFlowPanel(getHorizontalScrollBar(),
-		getVerticalScrollBar());
-	// setViewportView(panel);
+	/**
+	 * Create the pane.
+	 */
+	public MsgFlowGui() {
+		panel = new MsgFlowPanel(getHorizontalScrollBar(), getVerticalScrollBar());
+		// setViewportView(panel);
 
-	panel.setOpaque(false);
-	JViewport viewport = panel.new MyViewport();
-	viewport.setView(panel);
-	viewport.setBackground(Color.WHITE);
-	viewport.setOpaque(true);
-	setViewport(viewport);
+		panel.setOpaque(false);
+		JViewport viewport = panel.new MyViewport();
+		viewport.setView(panel);
+		viewport.setBackground(Color.WHITE);
+		viewport.setOpaque(true);
+		setViewport(viewport);
 
-	// set scroll bar
-	setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-	// setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-	// setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
-	JScrollBar sb = getVerticalScrollBar();
-	scrollbarUI = new MyScrollBarUI();
-	sb.setPreferredSize(new Dimension(60, Integer.MAX_VALUE));
-	sb.setUI(scrollbarUI);
-	setVerticalScrollBar(sb);
-    }
+		// set scroll bar
+		setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+		// setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		// setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
+		JScrollBar sb = getVerticalScrollBar();
+		scrollbarUI = new MyScrollBarUI();
+		sb.setPreferredSize(new Dimension(60, Integer.MAX_VALUE));
+		sb.setUI(scrollbarUI);
+		setVerticalScrollBar(sb);
+	}
 }

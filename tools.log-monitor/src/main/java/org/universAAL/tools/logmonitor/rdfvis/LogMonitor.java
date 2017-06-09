@@ -20,41 +20,39 @@ import org.universAAL.tools.logmonitor.rdfvis.gui.RDFVis;
  */
 public class LogMonitor implements LogListenerEx {
 
-    /**
-     * The main frame.
-     */
-    private RDFVis vis = new RDFVis();
+	/**
+	 * The main frame.
+	 */
+	private RDFVis vis = new RDFVis();
 
-    /**
-     * @see org.universAAL.middleware.container.LogListener
-     */
-    public void log(int logLevel, String module, String pkg, String cls,
-	    String method, Object[] msgPart, Throwable t) {
+	/**
+	 * @see org.universAAL.middleware.container.LogListener
+	 */
+	public void log(int logLevel, String module, String pkg, String cls, String method, Object[] msgPart, Throwable t) {
 
-	String msg = "";
-	LinkedList<Resource> lst = new LinkedList<Resource>();
-	for (int i = 0; i < msgPart.length; i++) {
-	    if (i > 0)
-		msg += " ";
-	    Object o = msgPart[i];
-	    msg += o;
-	    if (o instanceof Resource)
-		lst.add((Resource) o);
+		String msg = "";
+		LinkedList<Resource> lst = new LinkedList<Resource>();
+		for (int i = 0; i < msgPart.length; i++) {
+			if (i > 0)
+				msg += " ";
+			Object o = msgPart[i];
+			msg += o;
+			if (o instanceof Resource)
+				lst.add((Resource) o);
+		}
+		for (Resource r : lst)
+			vis.addMessage(cls, method, msg, r, ResourceInterpreter.getShortDescription(r));
 	}
-	for (Resource r : lst)
-	    vis.addMessage(cls, method, msg, r, ResourceInterpreter
-		    .getShortDescription(r));
-    }
 
-    public JComponent getComponent() {
-	return vis;
-    }
+	public JComponent getComponent() {
+		return vis;
+	}
 
-    public String getTitle() {
-	return "RDF graph";
-    }
+	public String getTitle() {
+		return "RDF graph";
+	}
 
-    @Override
-    public void stop() {
-    }
+	@Override
+	public void stop() {
+	}
 }

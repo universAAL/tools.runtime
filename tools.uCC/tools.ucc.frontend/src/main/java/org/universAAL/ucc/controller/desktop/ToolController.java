@@ -56,8 +56,7 @@ import com.vaadin.ui.Window.Notification;
  *
  */
 
-public class ToolController implements Button.ClickListener,
-		Upload.FinishedListener, Upload.FailedListener {
+public class ToolController implements Button.ClickListener, Upload.FinishedListener, Upload.FailedListener {
 	private UccUI app;
 	private ToolWindow toolWin;
 	private Window installWindow;
@@ -77,7 +76,7 @@ public class ToolController implements Button.ClickListener,
 			f.mkdir();
 		}
 		frontend = new FrontendImpl();
-		bc = Activator.bc;//FrameworkUtil.getBundle(getClass()).getBundleContext();
+		bc = Activator.bc;// FrameworkUtil.getBundle(getClass()).getBundleContext();
 	}
 
 	public void buttonClick(ClickEvent event) {
@@ -97,18 +96,18 @@ public class ToolController implements Button.ClickListener,
 			app.getMainWindow().addWindow(w);
 		}
 		if (event.getButton() == toolWin.getOpenAAL()) {
-//			Embedded em = new Embedded("", new ExternalResource(
-//					"http://wiki.openaal.org"));
-//			em.setType(Embedded.TYPE_BROWSER);
-//			em.setWidth("100%");
-//			em.setHeight("800px");
-//			Window w = new Window("openAAL");
-//			w.setWidth("1250px");
-//			w.setHeight("800px");
-//			VerticalLayout v = new VerticalLayout();
-//			w.center();
-//			v.addComponent(em);
-//			w.setContent(v);
+			// Embedded em = new Embedded("", new ExternalResource(
+			// "http://wiki.openaal.org"));
+			// em.setType(Embedded.TYPE_BROWSER);
+			// em.setWidth("100%");
+			// em.setHeight("800px");
+			// Window w = new Window("openAAL");
+			// w.setWidth("1250px");
+			// w.setHeight("800px");
+			// VerticalLayout v = new VerticalLayout();
+			// w.center();
+			// v.addComponent(em);
+			// w.setContent(v);
 			BrowseServicesWindow pw = new BrowseServicesWindow(app);
 			PurchasedServicesController pc = new PurchasedServicesController(pw, app);
 			app.getMainWindow().removeWindow(toolWin);
@@ -116,38 +115,38 @@ public class ToolController implements Button.ClickListener,
 		}
 		if (event.getButton() == toolWin.getInstallButton()) {
 			// Later uncomment again only for testing commented out!
-			 Upload up = new Upload("", new AALServiceReceiver());
-			 up.setButtonCaption(res.getString("install.button"));
-			 up.addListener((Upload.FinishedListener)this);
-			 up.addListener((Upload.FailedListener)this);
-			 installWindow = new Window(res.getString("install.win.caption"));
-			 installWindow.setResizable(false);
-			 installWindow.center();
-			 installWindow.setWidth("400px");
-			 VerticalLayout v = new VerticalLayout();
-			 v.setSizeFull();
-			 v.setSpacing(true);
-			 v.setMargin(true);
-			 v.addComponent(up);
-			 installWindow.setContent(v);
-			
-			 app.getMainWindow().removeWindow(toolWin);
-			 app.getMainWindow().addWindow(installWindow);
+			Upload up = new Upload("", new AALServiceReceiver());
+			up.setButtonCaption(res.getString("install.button"));
+			up.addListener((Upload.FinishedListener) this);
+			up.addListener((Upload.FailedListener) this);
+			installWindow = new Window(res.getString("install.win.caption"));
+			installWindow.setResizable(false);
+			installWindow.center();
+			installWindow.setWidth("400px");
+			VerticalLayout v = new VerticalLayout();
+			v.setSizeFull();
+			v.setSpacing(true);
+			v.setMargin(true);
+			v.addComponent(up);
+			installWindow.setContent(v);
+
+			app.getMainWindow().removeWindow(toolWin);
+			app.getMainWindow().addWindow(installWindow);
 		}
 		if (event.getButton() == toolWin.getLogoutButton()) {
 			DesktopController.setCurrentPassword("");
 			DesktopController.setCurrentUser("");
-//			if(!DesktopController.web.getSocket().isClosed()) {
-//				try {
-//					DesktopController.web.getSocket().close();
-//				} catch (IOException e) {
-//					e.printStackTrace();
-//				}
-//			}
+			// if(!DesktopController.web.getSocket().isClosed()) {
+			// try {
+			// DesktopController.web.getSocket().close();
+			// } catch (IOException e) {
+			// e.printStackTrace();
+			// }
+			// }
 			app.close();
 		}
-		
-		if(event.getButton() == toolWin.getUninstallButton()) {
+
+		if (event.getButton() == toolWin.getUninstallButton()) {
 			app.getMainWindow().removeWindow(toolWin);
 			List<RegisteredService> ids = new ArrayList<RegisteredService>();
 			Document doc = Model.getSrvDocument();
@@ -158,19 +157,19 @@ public class ToolController implements Button.ClickListener,
 				System.err.println(element.getAttribute("serviceId"));
 				srv.setServiceId(element.getAttribute("serviceId"));
 				NodeList srvChilds = element.getChildNodes();
-				for(int j = 0; j < srvChilds.getLength(); j++) {
+				for (int j = 0; j < srvChilds.getLength(); j++) {
 					Node n = srvChilds.item(j);
-					if(n.getNodeName().equals("application")) {
-						Element e = (Element)n;
+					if (n.getNodeName().equals("application")) {
+						Element e = (Element) n;
 						srv.getAppId().add(e.getAttribute("appId"));
 					}
-					if(n.getNodeName().equals("bundle")) {
-						Element b = (Element)n;
+					if (n.getNodeName().equals("bundle")) {
+						Element b = (Element) n;
 						srv.getBundleId().add(b.getAttribute("id"));
 						srv.setBundleVersion(b.getAttribute("version"));
 					}
-					if(n.getNodeName().equals("menuEntry")) {
-						Element e = (Element)n;
+					if (n.getNodeName().equals("menuEntry")) {
+						Element e = (Element) n;
 						srv.setMenuName(e.getAttribute("entryName"));
 						srv.setIconURL(e.getAttribute("iconURL"));
 						srv.setProvider(e.getAttribute("vendor"));
@@ -183,11 +182,12 @@ public class ToolController implements Button.ClickListener,
 			DeinstallWindow dw = new DeinstallWindow(ids);
 			app.getMainWindow().addWindow(dw);
 			DeinstallController dc = new DeinstallController(dw, app);
-//			frontend.uninstallService(Activator.getSessionKey(), "28002");
-//			frontend.getInstalledUnitsForService(Activator.getSessionKey(), "28002");
+			// frontend.uninstallService(Activator.getSessionKey(), "28002");
+			// frontend.getInstalledUnitsForService(Activator.getSessionKey(),
+			// "28002");
 		}
-		
-		if(event.getButton() == toolWin.getPersonButton()) {
+
+		if (event.getButton() == toolWin.getPersonButton()) {
 			AddNewPersonWindow apw = null;
 			try {
 				apw = new AddNewPersonWindow(null, null, app);
@@ -201,7 +201,7 @@ public class ToolController implements Button.ClickListener,
 			app.getMainWindow().removeWindow(toolWin);
 			app.getMainWindow().addWindow(apw);
 		}
-		if(event.getButton() == toolWin.getConfigButton()) {
+		if (event.getButton() == toolWin.getConfigButton()) {
 			AddNewHardwareWindow anhw = null;
 			try {
 				anhw = new AddNewHardwareWindow(null, null, app);
@@ -215,7 +215,7 @@ public class ToolController implements Button.ClickListener,
 			app.getMainWindow().removeWindow(toolWin);
 			app.getMainWindow().addWindow(anhw);
 		}
-		if(event.getButton() == toolWin.getEditHW()) {
+		if (event.getButton() == toolWin.getEditHW()) {
 			RoomsWindow hardWare = null;
 			try {
 				hardWare = new RoomsWindow(app);
@@ -228,12 +228,10 @@ public class ToolController implements Button.ClickListener,
 			}
 			app.getMainWindow().removeWindow(toolWin);
 			app.getMainWindow().addWindow(hardWare);
-			
-		
+
 		}
-			
-	
-		if(event.getButton() == toolWin.getEditPerson()) {
+
+		if (event.getButton() == toolWin.getEditPerson()) {
 			HumansWindow hw = null;
 			try {
 				hw = new HumansWindow(app);
@@ -247,11 +245,11 @@ public class ToolController implements Button.ClickListener,
 			app.getMainWindow().removeWindow(toolWin);
 			app.getMainWindow().addWindow(hw);
 		}
-		if(event.getButton() == toolWin.getEditUC()) {
+		if (event.getButton() == toolWin.getEditUC()) {
 			WhichBundleShouldBeConfiguredWindow uc = new WhichBundleShouldBeConfiguredWindow("Use Cases");
 			app.getMainWindow().removeWindow(toolWin);
 			app.getMainWindow().addWindow(uc);
-			
+
 		}
 
 	}
@@ -278,7 +276,7 @@ public class ToolController implements Button.ClickListener,
 		pref.setShopIp(prop.getProperty("shopUrl"));
 		pref.setUccIp(prop.getProperty("uccUrl"));
 		pref.setUccPort(prop.getProperty("uccPort"));
-//		pref.setWsPort(prop.getProperty("storePort"));
+		// pref.setWsPort(prop.getProperty("storePort"));
 		shop = pref.getShopIp();
 		try {
 			reader.close();
@@ -286,153 +284,153 @@ public class ToolController implements Button.ClickListener,
 			e.printStackTrace();
 		}
 		if (pref.getShopIp().contains("https")) {
-			shop = pref.getShopIp().substring(
-					pref.getShopIp().lastIndexOf("//") + 2);
+			shop = pref.getShopIp().substring(pref.getShopIp().lastIndexOf("//") + 2);
 		} else if (pref.getShopIp().contains("http")) {
-			shop = pref.getShopIp().substring(
-					pref.getShopIp().lastIndexOf("//") + 1);
+			shop = pref.getShopIp().substring(pref.getShopIp().lastIndexOf("//") + 1);
 		}
 		if (!DesktopController.getCurrentUser().equals("") && !DesktopController.getCurrentPassword().equals("")) {
-			url = "https://" + DesktopController.getCurrentUser() + ":" + DesktopController.getCurrentPassword()
-					+ "@" + shop;
-		}  
-		else {
+			url = "https://" + DesktopController.getCurrentUser() + ":" + DesktopController.getCurrentPassword() + "@"
+					+ shop;
+		} else {
 			url = "http://" + shop;
 		}
 		System.err.println(url);
 		return url;
 	}
-	
 
 	public void uploadFailed(FailedEvent event) {
 		app.getMainWindow().removeWindow(installWindow);
-		app.getMainWindow().showNotification(res.getString("break.note"),
-				Notification.TYPE_ERROR_MESSAGE);
+		app.getMainWindow().showNotification(res.getString("break.note"), Notification.TYPE_ERROR_MESSAGE);
 
 	}
 
 	public void uploadFinished(FinishedEvent event) {
-		try{
-		app.getMainWindow().removeWindow(installWindow);
-		String f = event.getFilename();
-		String file = f.substring(0, f.lastIndexOf("."));
-		
-		System.err.println("The local file: "+file);
-		frontend.installService(
-				Activator.getSessionKey(), file,"");
-		// iw.installProcess(System.getenv("systemdrive")+"/tempUsrvFiles/");
-		// File licenceFile = new
-		// File(System.getenv("systemdrive")+"/"+dir+"/config/hwo.usrv.xml");
-		// DocumentBuilderFactory fact = DocumentBuilderFactory.newInstance();
-		// File l = null;
-		// LicenceWindow lw = null;
-		// String txt = "";
-		// String appName = "";
-		// String slaName = "";
-		// License license = null;
-		// ArrayList<License> licenseList = new ArrayList<License>();
-		// ArrayList<File> list = new ArrayList<File>();
-		// AALService aal = null;
-		// try {
-		// DocumentBuilder builder = fact.newDocumentBuilder();
-		// Document doc = builder.parse(licenceFile);
-		// for(int k = 0; k < doc.getElementsByTagName("usrv:srv").getLength();
-		// k++) {
-		// aal = new AALService();
-		// for(int ac = 0; ac <
-		// doc.getElementsByTagName("usrv:application").getLength(); ac++) {
-		// UAPP uap = new UAPP();
-		// Node node =
-		// (Node)doc.getElementsByTagName("usrv:application").item(ac);
-		// NodeList nodeList = node.getChildNodes();
-		// for(int b = 0; b < node.getChildNodes().getLength(); b++) {
-		//
-		// if(nodeList.item(b).getNodeName().equals("usrv:artifactID")) {
-		// uap.setServiceId(nodeList.item(b).getTextContent());
-		// System.err.println(uap.getServiceId());
-		// }
-		// if(nodeList.item(b).getNodeName().equals("usrv:location")) {
-		// uap.setUappLocation(nodeList.item(b).getTextContent());
-		// }
-		// if(nodeList.item(b).getNodeName().equals("usrv:name")) {
-		// uap.setName(nodeList.item(b).getTextContent());
-		// System.err.println(uap.getName());
-		// }
-		//
-		// }
-		// aal.getUaapList().add(uap);
-		// }
-		// aal.setName(doc.getElementsByTagName("usrv:name").item(0).getTextContent());
-		// aal.setProvider(doc.getElementsByTagName("usrv:serviceProvider").item(0).getTextContent());
-		// aal.setDescription(doc.getElementsByTagName("usrv:description").item(0).getTextContent());
-		// aal.setMajor(Integer.parseInt(doc.getElementsByTagName("usrv:major").item(0).getTextContent()));
-		// aal.setMinor(Integer.parseInt(doc.getElementsByTagName("usrv:minor").item(0).getTextContent()));
-		// aal.setMicro(Integer.parseInt(doc.getElementsByTagName("usrv:micro").item(0).getTextContent()));
-		// String h =
-		// doc.getElementsByTagName("usrv:tags").item(0).getTextContent();
-		// for(String t : h.split(",")) {
-		// aal.getTags().add(t);
-		// }
-		// license = new License();
-		// for(int s = 0; s < doc.getElementsByTagName("usrv:sla").getLength();
-		// s++) {
-		// Node node = (Node) doc.getElementsByTagName("usrv:sla").item(s);
-		// NodeList nodeList = node.getChildNodes();
-		// for(int c = 0; c < nodeList.getLength(); c++) {
-		// if(nodeList.item(c).getNodeName().equals("usrv:name")) {
-		// slaName = nodeList.item(c).getTextContent();
-		// license.setAppName(slaName);
-		// }
-		// if(nodeList.item(c).getNodeName().equals("usrv:link")) {
-		// String link = nodeList.item(c).getTextContent();
-		// link = link.substring(link.lastIndexOf("/"));
-		// File file = new
-		// File(System.getenv("systemdrive")+"/"+dir+"/licenses"+link);
-		// license.getSlaList().add(file);
-		// }
-		// }
-		// }
-		//
-		// for(int i = 0; i <
-		// doc.getElementsByTagName("usrv:license").getLength(); i++) {
-		// Node n = (Node) doc.getElementsByTagName("usrv:license").item(i);
-		// NodeList nlist = n.getChildNodes();
-		//
-		// for(int j = 0; j < nlist.getLength(); j++) {
-		// if(nlist.item(j).getNodeName().equals("usrv:link")) {
-		// txt = nlist.item(j).getTextContent();
-		// txt = txt.substring(txt.lastIndexOf("/"));
-		// l = new File(System.getenv("systemdrive")+"/"+dir+"/licenses"+txt);
-		// list.add(l);
-		// }
-		//
-		// }
-		// }
-		// license.setLicense(list);
-		// licenseList.add(license);
-		// aal.setLicenses(license);
-		// }
-		// lw = new LicenceWindow(app, licenseList, aal);
-		// app.getMainWindow().addWindow(lw);
-		// } catch (ParserConfigurationException e) {
-		// // TODO Auto-generated catch block
-		// e.printStackTrace();
-		// } catch (SAXException e) {
-		// // TODO Auto-generated catch block
-		// e.printStackTrace();
-		// } catch (IOException e) {
-		// // TODO Auto-generated catch block
-		// e.printStackTrace();
-		// }
-		// UsrvInformationWindow info = new UsrvInformationWindow();
-		// UsrvInfoController infoController = new UsrvInfoController(aal, lw,
-		// app);
-		// app.getMainWindow().addWindow(lw);
-		// app.getMainWindow().addWindow(info);
-		// ToDo: install AAL services with DeployManager and delete temp usrv
-		// file with unziped folders
+		try {
+			app.getMainWindow().removeWindow(installWindow);
+			String f = event.getFilename();
+			String file = f.substring(0, f.lastIndexOf("."));
 
-		}catch(Throwable t){
+			System.err.println("The local file: " + file);
+			frontend.installService(Activator.getSessionKey(), file, "");
+			// iw.installProcess(System.getenv("systemdrive")+"/tempUsrvFiles/");
+			// File licenceFile = new
+			// File(System.getenv("systemdrive")+"/"+dir+"/config/hwo.usrv.xml");
+			// DocumentBuilderFactory fact =
+			// DocumentBuilderFactory.newInstance();
+			// File l = null;
+			// LicenceWindow lw = null;
+			// String txt = "";
+			// String appName = "";
+			// String slaName = "";
+			// License license = null;
+			// ArrayList<License> licenseList = new ArrayList<License>();
+			// ArrayList<File> list = new ArrayList<File>();
+			// AALService aal = null;
+			// try {
+			// DocumentBuilder builder = fact.newDocumentBuilder();
+			// Document doc = builder.parse(licenceFile);
+			// for(int k = 0; k <
+			// doc.getElementsByTagName("usrv:srv").getLength();
+			// k++) {
+			// aal = new AALService();
+			// for(int ac = 0; ac <
+			// doc.getElementsByTagName("usrv:application").getLength(); ac++) {
+			// UAPP uap = new UAPP();
+			// Node node =
+			// (Node)doc.getElementsByTagName("usrv:application").item(ac);
+			// NodeList nodeList = node.getChildNodes();
+			// for(int b = 0; b < node.getChildNodes().getLength(); b++) {
+			//
+			// if(nodeList.item(b).getNodeName().equals("usrv:artifactID")) {
+			// uap.setServiceId(nodeList.item(b).getTextContent());
+			// System.err.println(uap.getServiceId());
+			// }
+			// if(nodeList.item(b).getNodeName().equals("usrv:location")) {
+			// uap.setUappLocation(nodeList.item(b).getTextContent());
+			// }
+			// if(nodeList.item(b).getNodeName().equals("usrv:name")) {
+			// uap.setName(nodeList.item(b).getTextContent());
+			// System.err.println(uap.getName());
+			// }
+			//
+			// }
+			// aal.getUaapList().add(uap);
+			// }
+			// aal.setName(doc.getElementsByTagName("usrv:name").item(0).getTextContent());
+			// aal.setProvider(doc.getElementsByTagName("usrv:serviceProvider").item(0).getTextContent());
+			// aal.setDescription(doc.getElementsByTagName("usrv:description").item(0).getTextContent());
+			// aal.setMajor(Integer.parseInt(doc.getElementsByTagName("usrv:major").item(0).getTextContent()));
+			// aal.setMinor(Integer.parseInt(doc.getElementsByTagName("usrv:minor").item(0).getTextContent()));
+			// aal.setMicro(Integer.parseInt(doc.getElementsByTagName("usrv:micro").item(0).getTextContent()));
+			// String h =
+			// doc.getElementsByTagName("usrv:tags").item(0).getTextContent();
+			// for(String t : h.split(",")) {
+			// aal.getTags().add(t);
+			// }
+			// license = new License();
+			// for(int s = 0; s <
+			// doc.getElementsByTagName("usrv:sla").getLength();
+			// s++) {
+			// Node node = (Node) doc.getElementsByTagName("usrv:sla").item(s);
+			// NodeList nodeList = node.getChildNodes();
+			// for(int c = 0; c < nodeList.getLength(); c++) {
+			// if(nodeList.item(c).getNodeName().equals("usrv:name")) {
+			// slaName = nodeList.item(c).getTextContent();
+			// license.setAppName(slaName);
+			// }
+			// if(nodeList.item(c).getNodeName().equals("usrv:link")) {
+			// String link = nodeList.item(c).getTextContent();
+			// link = link.substring(link.lastIndexOf("/"));
+			// File file = new
+			// File(System.getenv("systemdrive")+"/"+dir+"/licenses"+link);
+			// license.getSlaList().add(file);
+			// }
+			// }
+			// }
+			//
+			// for(int i = 0; i <
+			// doc.getElementsByTagName("usrv:license").getLength(); i++) {
+			// Node n = (Node) doc.getElementsByTagName("usrv:license").item(i);
+			// NodeList nlist = n.getChildNodes();
+			//
+			// for(int j = 0; j < nlist.getLength(); j++) {
+			// if(nlist.item(j).getNodeName().equals("usrv:link")) {
+			// txt = nlist.item(j).getTextContent();
+			// txt = txt.substring(txt.lastIndexOf("/"));
+			// l = new
+			// File(System.getenv("systemdrive")+"/"+dir+"/licenses"+txt);
+			// list.add(l);
+			// }
+			//
+			// }
+			// }
+			// license.setLicense(list);
+			// licenseList.add(license);
+			// aal.setLicenses(license);
+			// }
+			// lw = new LicenceWindow(app, licenseList, aal);
+			// app.getMainWindow().addWindow(lw);
+			// } catch (ParserConfigurationException e) {
+			// // TODO Auto-generated catch block
+			// e.printStackTrace();
+			// } catch (SAXException e) {
+			// // TODO Auto-generated catch block
+			// e.printStackTrace();
+			// } catch (IOException e) {
+			// // TODO Auto-generated catch block
+			// e.printStackTrace();
+			// }
+			// UsrvInformationWindow info = new UsrvInformationWindow();
+			// UsrvInfoController infoController = new UsrvInfoController(aal,
+			// lw,
+			// app);
+			// app.getMainWindow().addWindow(lw);
+			// app.getMainWindow().addWindow(info);
+			// ToDo: install AAL services with DeployManager and delete temp
+			// usrv
+			// file with unziped folders
+
+		} catch (Throwable t) {
 			t.printStackTrace();
 			throw new RuntimeException(t);
 		}

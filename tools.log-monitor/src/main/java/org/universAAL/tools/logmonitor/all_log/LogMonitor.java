@@ -20,39 +20,37 @@ import org.universAAL.tools.logmonitor.all_log.gui.AllLogPanel;
  */
 public class LogMonitor implements LogListenerEx {
 
-    private Hashtable<Integer, LogEntry> entries = new Hashtable<Integer, LogEntry>();
-    int num = 0;
-    AllLogPanel panel;
+	private Hashtable<Integer, LogEntry> entries = new Hashtable<Integer, LogEntry>();
+	int num = 0;
+	AllLogPanel panel;
 
-    public LogMonitor() {
-	panel = new AllLogPanel(this);
-    }
+	public LogMonitor() {
+		panel = new AllLogPanel(this);
+	}
 
-    /**
-     * @see org.universAAL.middleware.container.LogListener
-     */
-    public void log(int logLevel, String module, String pkg, String cls,
-	    String method, Object[] msgPart, Throwable t) {
+	/**
+	 * @see org.universAAL.middleware.container.LogListener
+	 */
+	public void log(int logLevel, String module, String pkg, String cls, String method, Object[] msgPart, Throwable t) {
 
-	LogEntry le = new LogEntry(logLevel, module, pkg, cls, method, msgPart,
-		t);
-	entries.put(Integer.valueOf(num++), le);
-	panel.addMessage(le);
-    }
+		LogEntry le = new LogEntry(logLevel, module, pkg, cls, method, msgPart, t);
+		entries.put(Integer.valueOf(num++), le);
+		panel.addMessage(le);
+	}
 
-    public JComponent getComponent() {
-	return panel;
-    }
+	public JComponent getComponent() {
+		return panel;
+	}
 
-    public String getTitle() {
-	return "All Messages";
-    }
+	public String getTitle() {
+		return "All Messages";
+	}
 
-    public LogEntry getLogEntry(int index) {
-	return entries.get(Integer.valueOf(index));
-    }
+	public LogEntry getLogEntry(int index) {
+		return entries.get(Integer.valueOf(index));
+	}
 
-    @Override
-    public void stop() {
-    }
+	@Override
+	public void stop() {
+	}
 }

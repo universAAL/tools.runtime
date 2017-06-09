@@ -5,7 +5,6 @@
 // Generated on: 2012.07.12 at 04:29:40 PM MESZ 
 //
 
-
 package org.universAAL.ucc.configuration.model.configurationinstances;
 
 import java.util.ArrayList;
@@ -19,11 +18,13 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
-
 /**
- * <p>Java class for ConfigurationInstance complex type.
+ * <p>
+ * Java class for ConfigurationInstance complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="ConfigurationInstance">
@@ -47,230 +48,208 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ConfigurationInstance", propOrder = {
-    "configOption"
-})
+@XmlType(name = "ConfigurationInstance", propOrder = { "configOption" })
 public class ConfigurationInstance {
 
-    protected List<ConfigOption> configOption;
-    @XmlAttribute
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    @XmlID
-    @XmlSchemaType(name = "ID")
-    protected String id;
-    @XmlAttribute
-    protected String usecaseid;
-    @XmlAttribute
-    protected String version;
-    @XmlAttribute
-    protected String author;
-    @XmlAttribute
-    protected Boolean active;
-    @XmlAttribute
-    protected Boolean isPrimary;
-    @XmlAttribute
-    protected Boolean isSecondary;
+	protected List<ConfigOption> configOption;
+	@XmlAttribute
+	@XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+	@XmlID
+	@XmlSchemaType(name = "ID")
+	protected String id;
+	@XmlAttribute
+	protected String usecaseid;
+	@XmlAttribute
+	protected String version;
+	@XmlAttribute
+	protected String author;
+	@XmlAttribute
+	protected Boolean active;
+	@XmlAttribute
+	protected Boolean isPrimary;
+	@XmlAttribute
+	protected Boolean isSecondary;
 
-    /**
-     * Gets the value of the configOption property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the configOption property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getConfigOption().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link ConfigOption }
-     * 
-     * 
-     */
-    public List<ConfigOption> getConfigOption() {
-        if (configOption == null) {
-            configOption = new ArrayList<ConfigOption>();
-        }
-        return this.configOption;
-    }
+	/**
+	 * Gets the value of the configOption property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the configOption property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getConfigOption().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link ConfigOption }
+	 * 
+	 * 
+	 */
+	public List<ConfigOption> getConfigOption() {
+		if (configOption == null) {
+			configOption = new ArrayList<ConfigOption>();
+		}
+		return this.configOption;
+	}
 
-    /**
-     * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getId() {
-        return id;
-    }
+	/**
+	 * Gets the value of the id property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getId() {
+		return id;
+	}
 
-    /**
-     * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setId(String value) {
-        this.id = value;
-    }
+	/**
+	 * Sets the value of the id property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setId(String value) {
+		this.id = value;
+	}
 
-    /**
-     * Gets the value of the usecaseid property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getUsecaseid() {
-        return usecaseid;
-    }
+	/**
+	 * Gets the value of the usecaseid property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getUsecaseid() {
+		return usecaseid;
+	}
 
-    /**
-     * Sets the value of the usecaseid property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setUsecaseid(String value) {
-        this.usecaseid = value;
-    }
+	/**
+	 * Sets the value of the usecaseid property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setUsecaseid(String value) {
+		this.usecaseid = value;
+	}
 
-    /**
-     * Gets the value of the version property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getVersion() {
-        return version;
-    }
+	/**
+	 * Gets the value of the version property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getVersion() {
+		return version;
+	}
 
-    /**
-     * Sets the value of the version property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setVersion(String value) {
-        this.version = value;
-    }
+	/**
+	 * Sets the value of the version property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setVersion(String value) {
+		this.version = value;
+	}
 
-    /**
-     * Gets the value of the author property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getAuthor() {
-        return author;
-    }
+	/**
+	 * Gets the value of the author property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getAuthor() {
+		return author;
+	}
 
-    /**
-     * Sets the value of the author property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setAuthor(String value) {
-        this.author = value;
-    }
+	/**
+	 * Sets the value of the author property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setAuthor(String value) {
+		this.author = value;
+	}
 
-    /**
-     * Gets the value of the active property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isActive() {
-        return active;
-    }
+	/**
+	 * Gets the value of the active property.
+	 * 
+	 * @return possible object is {@link Boolean }
+	 * 
+	 */
+	public Boolean isActive() {
+		return active;
+	}
 
-    /**
-     * Sets the value of the active property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setActive(Boolean value) {
-        this.active = value;
-    }
+	/**
+	 * Sets the value of the active property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link Boolean }
+	 * 
+	 */
+	public void setActive(Boolean value) {
+		this.active = value;
+	}
 
-    /**
-     * Gets the value of the isPrimary property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isIsPrimary() {
-        return isPrimary;
-    }
+	/**
+	 * Gets the value of the isPrimary property.
+	 * 
+	 * @return possible object is {@link Boolean }
+	 * 
+	 */
+	public Boolean isIsPrimary() {
+		return isPrimary;
+	}
 
-    /**
-     * Sets the value of the isPrimary property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setIsPrimary(Boolean value) {
-        this.isPrimary = value;
-    }
+	/**
+	 * Sets the value of the isPrimary property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link Boolean }
+	 * 
+	 */
+	public void setIsPrimary(Boolean value) {
+		this.isPrimary = value;
+	}
 
-    /**
-     * Gets the value of the isSecondary property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isIsSecondary() {
-        return isSecondary;
-    }
+	/**
+	 * Gets the value of the isSecondary property.
+	 * 
+	 * @return possible object is {@link Boolean }
+	 * 
+	 */
+	public Boolean isIsSecondary() {
+		return isSecondary;
+	}
 
-    /**
-     * Sets the value of the isSecondary property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setIsSecondary(Boolean value) {
-        this.isSecondary = value;
-    }
-    
-    @Override
-    public String toString() {
-    	return id;
-    }
+	/**
+	 * Sets the value of the isSecondary property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link Boolean }
+	 * 
+	 */
+	public void setIsSecondary(Boolean value) {
+		this.isSecondary = value;
+	}
+
+	@Override
+	public String toString() {
+		return id;
+	}
 
 }

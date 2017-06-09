@@ -21,17 +21,17 @@ public class HumansWindow extends Window {
 	private UccUI app;
 	private ResourceBundle bundle;
 	private String base;
-	
+
 	public HumansWindow(UccUI app) throws JAXBException, IOException, ParseException {
 		base = "resources.ucc";
 		bundle = ResourceBundle.getBundle(base);
 		StringBuffer breadcrump = new StringBuffer();
 		int counter = 0;
-		for(Window w : app.getMainWindow().getChildWindows()) {
+		for (Window w : app.getMainWindow().getChildWindows()) {
 			counter++;
-			if(counter == app.getMainWindow().getChildWindows().size())
-				breadcrump.append(w.getCaption()+" > ");
-		}		
+			if (counter == app.getMainWindow().getChildWindows().size())
+				breadcrump.append(w.getCaption() + " > ");
+		}
 		breadcrump.append(bundle.getString("persons.title"));
 		setCaption(breadcrump.toString());
 		this.app = app;
@@ -50,11 +50,11 @@ public class HumansWindow extends Window {
 		setContent(split);
 		new PersonWindowController(this, app);
 	}
-	
+
 	public void addFirstComponent(Component c) {
 		split.setFirstComponent(c);
 	}
-	
+
 	public void addSecondComponent(Component c) {
 		split.setSecondComponent(c);
 	}

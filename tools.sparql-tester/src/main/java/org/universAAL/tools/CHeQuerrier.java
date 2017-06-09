@@ -39,29 +39,23 @@ import org.universAAL.ontology.che.ContextHistoryService;
 public class CHeQuerrier {
 
 	private static final String UTF_8 = "utf-8";
-	private static final String OUTPUT_RESULT_STRING = ContextHistoryOntology.NAMESPACE
-			+ "outputfromCHE";
-	
+	private static final String OUTPUT_RESULT_STRING = ContextHistoryOntology.NAMESPACE + "outputfromCHE";
+
 	private ModuleContext owner;
-	
-	public CHeQuerrier(ModuleContext mc){
+
+	public CHeQuerrier(ModuleContext mc) {
 		this.owner = mc;
 	}
 
-	String unserialisedQuery(String query){
-		ServiceRequest getQuery = new ServiceRequest(new ContextHistoryService(
-				null), null);
+	String unserialisedQuery(String query) {
+		ServiceRequest getQuery = new ServiceRequest(new ContextHistoryService(null), null);
 
-		MergedRestriction r = MergedRestriction.getFixedValueRestriction(
-				ContextHistoryService.PROP_PROCESSES, query);
+		MergedRestriction r = MergedRestriction.getFixedValueRestriction(ContextHistoryService.PROP_PROCESSES, query);
 
 		getQuery.getRequestedService().addInstanceLevelRestriction(r,
 				new String[] { ContextHistoryService.PROP_PROCESSES });
-		getQuery.addSimpleOutputBinding(
-				new ProcessOutput(OUTPUT_RESULT_STRING), new PropertyPath(null,
-						true,
-						new String[] { ContextHistoryService.PROP_RETURNS })
-						.getThePath());
+		getQuery.addSimpleOutputBinding(new ProcessOutput(OUTPUT_RESULT_STRING),
+				new PropertyPath(null, true, new String[] { ContextHistoryService.PROP_RETURNS }).getThePath());
 		ServiceCaller sc = new DefaultServiceCaller(owner);
 		ServiceResponse sr = sc.call(getQuery);
 		sc.close();
@@ -74,7 +68,7 @@ public class CHeQuerrier {
 		}
 		throw new RuntimeException("No output in response: \n" + getSerializer().serialize(sr));
 	}
-	
+
 	public Object query(String query) {
 		try {
 			Object res = getSerializer().deserialize(unserialisedQuery(query));
@@ -85,16 +79,14 @@ public class CHeQuerrier {
 	}
 
 	private MessageContentSerializer getSerializer() {
-		return (MessageContentSerializer) owner.getContainer()
-				.fetchSharedObject(owner, 
-						new Object[] { MessageContentSerializer.class.getName() });
+		return (MessageContentSerializer) owner.getContainer().fetchSharedObject(owner,
+				new Object[] { MessageContentSerializer.class.getName() });
 	}
 
-	public static InputStream getResource(String Rfile){
-		return CHeQuerrier.class.getClassLoader()
-					.getResourceAsStream(Rfile);
+	public static InputStream getResource(String Rfile) {
+		return CHeQuerrier.class.getClassLoader().getResourceAsStream(Rfile);
 	}
-	
+
 	public static String getQuery(InputStream file, String[] params) {
 		String query = "";
 		try {

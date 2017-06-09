@@ -17,30 +17,30 @@ import javax.swing.SwingUtilities;
  */
 public class MainGui extends JFrame {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    public static JTabbedPane tabbedPane;
+	public static JTabbedPane tabbedPane;
 
-    /**
-     * Create the main frame.
-     */
-    public MainGui() {
-	super("Log Monitor");
+	/**
+	 * Create the main frame.
+	 */
+	public MainGui() {
+		super("Log Monitor");
 
-	tabbedPane = new JTabbedPane();
-	getContentPane().add(tabbedPane, BorderLayout.CENTER);
+		tabbedPane = new JTabbedPane();
+		getContentPane().add(tabbedPane, BorderLayout.CENTER);
 
-	setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-	setSize(1000, 700);
-	setVisible(true);
-    }
+		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		setSize(1000, 700);
+		setVisible(true);
+	}
 
-    public void addComponent(final String title, final JComponent comp) {
-	// System.out.println("Logmonitor: Adding Panel " + title);
-	SwingUtilities.invokeLater(new Runnable() {
-	    public void run() {
-		tabbedPane.addTab(title, comp);
-	    }
-	});
-    }
+	public void addComponent(final String title, final JComponent comp) {
+		// System.out.println("Logmonitor: Adding Panel " + title);
+		SwingUtilities.invokeLater(new Runnable() {
+			public void run() {
+				tabbedPane.addTab(title, comp);
+			}
+		});
+	}
 }

@@ -30,8 +30,7 @@ public class ServiceManagment implements IServiceManagement {
 			NodeList nodeList = doc.getElementsByTagName("service");
 			for (int i = 0; i < nodeList.getLength(); i++) {
 				Element element = (Element) nodeList.item(i);
-				services = services + "<serviceId>"
-						+ element.getAttribute("serviceId") + "</serviceId>";
+				services = services + "<serviceId>" + element.getAttribute("serviceId") + "</serviceId>";
 			}
 
 			// return list;
@@ -57,16 +56,14 @@ public class ServiceManagment implements IServiceManagement {
 			Element serviceEl = getService(serviceId, doc);
 			System.err.println(serviceEl.getNodeName());
 			NodeList nodeList = serviceEl.getElementsByTagName("bundle");
-			System.out
-					.println("[ServiceManagement.getInstalledUnitsForService] the number of nodes for bundle: "
-							+ nodeList.getLength());
+			System.out.println("[ServiceManagement.getInstalledUnitsForService] the number of nodes for bundle: "
+					+ nodeList.getLength());
 			for (int i = 0; i < nodeList.getLength(); i++) {
 				Element element = (Element) nodeList.item(i);
-				System.err.println(element.getNodeName() + " "+element.getNodeValue());
-					services = services + "<unit><id>" + element.getAttribute("id")
-							+ "</id><version>" + element.getAttribute("version")
-							+ "</version></unit>";
-				
+				System.err.println(element.getNodeName() + " " + element.getNodeValue());
+				services = services + "<unit><id>" + element.getAttribute("id") + "</id><version>"
+						+ element.getAttribute("version") + "</version></unit>";
+
 			}
 			services += "</serviceUnits>";
 			return services;
@@ -78,37 +75,35 @@ public class ServiceManagment implements IServiceManagement {
 
 	public static Element getService(String serviceId, Document doc) {
 		NodeList nodeList = doc.getChildNodes();
-		System.out.println("[nodeList] the number of child nodes: "
-				+ nodeList.getLength());
+		System.out.println("[nodeList] the number of child nodes: " + nodeList.getLength());
 		for (int i = 0; i < nodeList.getLength(); i++) {
 			System.err.println(i);
 			Node el = nodeList.item(i);
-			NodeList nl =  el.getChildNodes();
-			System.err.println("Services: "+nl.getLength());
-			for(int j = 0; j < nl.getLength(); j++) {
-				if(nl.item(j).getNodeName().equals("service")) {
-					Element elem = (Element)nl.item(j);
-					System.err.println("Service Id: "+elem.getAttribute("serviceId"));
-					if(elem.getAttribute("serviceId").equals(serviceId)) {
-					
+			NodeList nl = el.getChildNodes();
+			System.err.println("Services: " + nl.getLength());
+			for (int j = 0; j < nl.getLength(); j++) {
+				if (nl.item(j).getNodeName().equals("service")) {
+					Element elem = (Element) nl.item(j);
+					System.err.println("Service Id: " + elem.getAttribute("serviceId"));
+					if (elem.getAttribute("serviceId").equals(serviceId)) {
+
 						return elem;
 					}
 				}
 			}
 		}
-		System.out
-				.println("[ServiceManagement.getService] there is no service with id: "
-						+ serviceId);
+		System.out.println("[ServiceManagement.getService] there is no service with id: " + serviceId);
 		return null;
 	}
-	
+
 	public boolean isServiceId(String serviceId) {
-		if(new File(Model.SERVICEFILENAME).exists()) {
+		if (new File(Model.SERVICEFILENAME).exists()) {
 			Document doc = Model.getSrvDocument();
 			Element ser = getService(serviceId, doc);
-			if(ser != null)
+			if (ser != null)
 				return true;
-		} return false;
+		}
+		return false;
 	}
 
 	/**
@@ -122,12 +117,12 @@ public class ServiceManagment implements IServiceManagement {
 			List<String> list = new ArrayList<String>();
 			Document doc = Model.getSrvDocument();
 			Element serviceEl = getService(serviceId, doc);
-			if(serviceEl != null) {
-			NodeList nodeList = serviceEl.getElementsByTagName("application");
-			for (int i = 0; i < nodeList.getLength(); i++) {
-				Element element = (Element) nodeList.item(i);
-				list.add(element.getAttribute("appId"));
-			}
+			if (serviceEl != null) {
+				NodeList nodeList = serviceEl.getElementsByTagName("application");
+				for (int i = 0; i < nodeList.getLength(); i++) {
+					Element element = (Element) nodeList.item(i);
+					list.add(element.getAttribute("appId"));
+				}
 			}
 
 			return list;
@@ -135,31 +130,25 @@ public class ServiceManagment implements IServiceManagement {
 			return new ArrayList<String>();
 		}
 	}
-	
-	
-	
+
 	/**
 	 * set userID value for the MenuEntry
 	 */
 	public void addUserIDToMenuEntry(String serviceId, String userID) {
-		if(new File(Model.SERVICEFILENAME).exists()) {
+		if (new File(Model.SERVICEFILENAME).exists()) {
 			Document doc = Model.getSrvDocument();
 			Element el = getService(serviceId, doc);
 			NodeList nodeList = el.getChildNodes();
-			for(int i = 0; i < nodeList.getLength(); i++) {
+			for (int i = 0; i < nodeList.getLength(); i++) {
 				Element entry = (Element) nodeList.item(i);
-				if(entry.getNodeName().equals("menuEntry")) {
-					if(entry.getAttribute("userID").equals("") || entry.getAttribute("userID") == null)
+				if (entry.getNodeName().equals("menuEntry")) {
+					if (entry.getAttribute("userID").equals("") || entry.getAttribute("userID") == null)
 						entry.setAttribute("userID", userID);
-					
-				
+
 				}
 			}
 			try {
-				TransformerFactory
-				.newInstance()
-				.newTransformer()
-				.transform(new DOMSource(doc),
+				TransformerFactory.newInstance().newTransformer().transform(new DOMSource(doc),
 						new StreamResult(Model.SERVICEFILENAME));
 			} catch (TransformerConfigurationException e) {
 				// TODO Auto-generated catch block
@@ -172,9 +161,8 @@ public class ServiceManagment implements IServiceManagement {
 				e.printStackTrace();
 			}
 
-
 		}
-		
+
 	}
 
 }

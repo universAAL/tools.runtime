@@ -18,28 +18,27 @@ import com.vaadin.ui.TextField;
 @SuppressWarnings("serial")
 public class SaveFormFactory implements FormFieldFactory {
 
-	
 	public Field createField(Item item, Object propertyId, Component uiContext) {
-		
+
 		String pid = (String) propertyId;
-		if("useCaseId".equals(pid)){
+		if ("useCaseId".equals(pid)) {
 			TextField field = new TextField("Usecase bundle name");
 			field.setReadOnly(true);
 			return field;
-		}else if("id".equals(pid)){
+		} else if ("id".equals(pid)) {
 			TextField textField = new TextField("ID");
 			textField.setRequired(true);
 			textField.setRequiredError("Give an id");
 			textField.setImmediate(true);
 			textField.setValidationVisible(true);
 			return textField;
-		}else if("version".equals(pid)){
+		} else if ("version".equals(pid)) {
 			return new TextField("Version");
-		}else if("author".equals(pid)){
+		} else if ("author".equals(pid)) {
 			return new TextField("Author");
-		}else if("primary".equals(pid)){
+		} else if ("primary".equals(pid)) {
 			return new CheckBox("Primary");
-		}else if("secondary".equals(pid)){
+		} else if ("secondary".equals(pid)) {
 			return new CheckBox("Secondary");
 		}
 		return null;

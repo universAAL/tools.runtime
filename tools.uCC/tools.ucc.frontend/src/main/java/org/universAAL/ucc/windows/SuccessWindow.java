@@ -51,13 +51,13 @@ public class SuccessWindow extends Window implements Button.ClickListener {
 		setModal(true);
 		setClosable(false);
 
-}
+	}
 
 	public void buttonClick(ClickEvent event) {
-		if(nw != null) {
+		if (nw != null) {
 			app.getMainWindow().addWindow(nw);
 		}
 		close();
 	}
-		
-	}
+
+}

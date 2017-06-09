@@ -5,7 +5,6 @@
 // Generated on: 2012.08.02 at 01:53:27 PM MESZ 
 //
 
-
 package org.universAAL.ucc.configuration.model.configurationdefinition;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -13,11 +12,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for SPARQLConfigItem complex type.
+ * <p>
+ * Java class for SPARQLConfigItem complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="SPARQLConfigItem">
@@ -34,38 +35,31 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SPARQLConfigItem", propOrder = {
-    "query"
-})
-public class SPARQLConfigItem
-    extends ConfigItem
-{
+@XmlType(name = "SPARQLConfigItem", propOrder = { "query" })
+public class SPARQLConfigItem extends ConfigItem {
 
-    @XmlElement(required = true)
-    protected String query;
+	@XmlElement(required = true)
+	protected String query;
 
-    /**
-     * Gets the value of the query property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getQuery() {
-        return query;
-    }
+	/**
+	 * Gets the value of the query property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getQuery() {
+		return query;
+	}
 
-    /**
-     * Sets the value of the query property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setQuery(String value) {
-        this.query = value;
-    }
+	/**
+	 * Sets the value of the query property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setQuery(String value) {
+		this.query = value;
+	}
 
 }

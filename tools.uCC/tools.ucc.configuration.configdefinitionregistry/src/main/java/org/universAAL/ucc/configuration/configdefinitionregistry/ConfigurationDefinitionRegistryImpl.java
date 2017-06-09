@@ -14,35 +14,37 @@ import org.universAAL.ucc.configuration.model.configurationdefinition.Configurat
 
 /**
  * The implementation of the configuration definition registry interface.
+ * 
  * @author Sebastian.Schoebinge
  *
  */
 
-public class ConfigurationDefinitionRegistryImpl implements
-		ConfigurationDefinitionRegistry {
+public class ConfigurationDefinitionRegistryImpl implements ConfigurationDefinitionRegistry {
 
-	//Logger logger = LoggerFactory.getLogger(ConfigurationDefinitionRegistryImpl.class);
-	
+	// Logger logger =
+	// LoggerFactory.getLogger(ConfigurationDefinitionRegistryImpl.class);
+
 	HashMap<String, Configuration> configDefs;
-	
+
 	LinkedList<ConfigurationDefinitionRegistryChanged> listeners;
-	
+
 	public ConfigurationDefinitionRegistryImpl() {
 		configDefs = new HashMap<String, Configuration>();
 		listeners = new LinkedList<ConfigurationDefinitionRegistryChanged>();
 	}
-	
+
 	public void registerConfigurationDefinition(URL configURL) {
-		
+
 		LogUtils.logInfo(Activator.getContext(), this.getClass(), "registerConfigurationDefinition",
 				new Object[] { "register file: " + configURL }, null);
-		
-		try{
+
+		try {
 			Configuration config = JAXB.unmarshal(configURL, Configuration.class);
 			configDefs.put(config.getBundlename(), config);
 			updateListeners();
-		}catch(Exception e){
-			LogUtils.logError((ModuleContext) Activator.getContext(), this.getClass(), "registerConfigurationDefinition",
+		} catch (Exception e) {
+			LogUtils.logError((ModuleContext) Activator.getContext(), this.getClass(),
+					"registerConfigurationDefinition",
 					new Object[] { "Failed to register configuration definition: " + e.getMessage() }, null);
 		}
 	}
@@ -52,34 +54,33 @@ public class ConfigurationDefinitionRegistryImpl implements
 	}
 
 	public void unregisterConfigurationDefinition(URL configURL) {
-		
+
 		LogUtils.logInfo(Activator.getContext(), this.getClass(), "unregisterConfigurationDefinition",
 				new Object[] { "unregister file: " + configURL }, null);
 
-		try{
+		try {
 			Configuration config = JAXB.unmarshal(configURL, Configuration.class);
 			configDefs.remove(config.getBundlename());
 			updateListeners();
-		}catch(Exception e){
-			LogUtils.logError((ModuleContext) Activator.getContext(), this.getClass(), "unregisterConfigurationDefinition",
+		} catch (Exception e) {
+			LogUtils.logError((ModuleContext) Activator.getContext(), this.getClass(),
+					"unregisterConfigurationDefinition",
 					new Object[] { "Failed to unregister configuration definition: " + e.getMessage() }, null);
 		}
 	}
 
-	public void addConfigurationDefinitionRegistryChanged(
-			ConfigurationDefinitionRegistryChanged listener) {
-		if(listener != null){
+	public void addConfigurationDefinitionRegistryChanged(ConfigurationDefinitionRegistryChanged listener) {
+		if (listener != null) {
 			listeners.add(listener);
 		}
 	}
 
-	public void removeConfigurationDefinitionRegistryChanged(
-			ConfigurationDefinitionRegistryChanged listener) {
+	public void removeConfigurationDefinitionRegistryChanged(ConfigurationDefinitionRegistryChanged listener) {
 		listeners.remove(listener);
 	}
-	
-	private void updateListeners(){
-		for(ConfigurationDefinitionRegistryChanged listener : listeners){
+
+	private void updateListeners() {
+		for (ConfigurationDefinitionRegistryChanged listener : listeners) {
 			listener.configurationDefinitionRegistryChanged();
 		}
 	}

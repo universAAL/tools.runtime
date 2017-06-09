@@ -39,90 +39,95 @@ import org.universAAL.ucc.configuration.view.ConfigurationOverviewWindow;
  */
 
 public class VaadinConfigurationController {
-	
+
 	private ConfigurationOverviewWindow view;
 	private Configurator configurator;
 	private ConfigOptionRegistry modelRegistry;
 	private ConfigurationInstancesStorage storage;
-//	private String flatId; 
-	
+	// private String flatId;
+
 	/**
-	 * Create the configuration option registry and the directory for the given configuration definition. 
+	 * Create the configuration option registry and the directory for the given
+	 * configuration definition.
+	 * 
 	 * @param view
 	 * @param config
 	 */
 	public VaadinConfigurationController(ConfigurationOverviewWindow view, Configuration config) {
 		this.view = view;
-//		this.flatId = view.getFlatId();
+		// this.flatId = view.getFlatId();
 		modelRegistry = new ConfigOptionRegistry();
 		configurator = new Configurator(config);
 		File file = new File(Activator.getTmpConfigFiles(), config.getBundlename());
-		if(!file.isDirectory()){
-			try{
+		if (!file.isDirectory()) {
+			try {
 				file.mkdir();
-			}catch(Exception e){
+			} catch (Exception e) {
 				LogUtils.logError(Activator.getContext(), this.getClass(), "VaadinConfigurationController",
 						new Object[] { "Could not create directory: " + file }, null);
 			}
 		}
-		
-		BundleContext context = Activator.bc;//FrameworkUtil.getBundle(this.getClass()).getBundleContext();
+
+		BundleContext context = Activator.bc;// FrameworkUtil.getBundle(this.getClass()).getBundleContext();
 		ServiceReference reference = context.getServiceReference(ConfigurationInstancesStorage.class.getName());
 		storage = (ConfigurationInstancesStorage) context.getService(reference);
 	}
-		
+
 	public Configurator getConfigurator() {
 		return configurator;
 	}
-	
+
 	/**
-	 * Load the configuration option from configuration definition and create the models.
+	 * Load the configuration option from configuration definition and create
+	 * the models.
 	 */
-	public void loadConfigurationItems(){
+	public void loadConfigurationItems() {
 		Configuration config = configurator.getConfigDefinition();
 		List<Category> categories = config.getCategory();
 		LogUtils.logInfo(Activator.getContext(), this.getClass(), "loadConfigurationItems",
 				new Object[] { "Starting loop over all categories: " + categories.size() }, null);
-		
-		for(Category cat: categories){
+
+		for (Category cat : categories) {
 			LogUtils.logInfo(Activator.getContext(), this.getClass(), "loadConfigurationItems",
 					new Object[] { "Category: " + cat.getLabel() }, null);
 			List<Object> configItems = cat.getSPARQLConfigItemAndMapConfigItemAndSimpleConfigItem();
-			for(Object item: configItems){
-				if(item instanceof SimpleConfigItem){
-					new SimpleConfigurationOption((SimpleConfigItem)item, cat, modelRegistry);
-				}else if(item instanceof MapConfigItem){
-					new MapConfigurationOption((MapConfigItem)item, cat, modelRegistry);
+			for (Object item : configItems) {
+				if (item instanceof SimpleConfigItem) {
+					new SimpleConfigurationOption((SimpleConfigItem) item, cat, modelRegistry);
+				} else if (item instanceof MapConfigItem) {
+					new MapConfigurationOption((MapConfigItem) item, cat, modelRegistry);
 				}
 			}
 		}
 		setDefaultValues();
 	}
-	
+
 	/**
-	 * Set the default values for all configuration options which are in the registry.
+	 * Set the default values for all configuration options which are in the
+	 * registry.
 	 */
-	private void setDefaultValues(){
+	private void setDefaultValues() {
 		LogUtils.logInfo(Activator.getContext(), this.getClass(), "setDefaultValues",
 				new Object[] { "set default values." }, null);
-		for(ConfigurationOption option: modelRegistry.getAll()){
-			if(option instanceof SimpleConfigurationOption){
+		for (ConfigurationOption option : modelRegistry.getAll()) {
+			if (option instanceof SimpleConfigurationOption) {
 				SimpleConfigurationOption sOption = (SimpleConfigurationOption) option;
 				sOption.setDefaultValue();
 			}
 		}
 	}
-	
-	
+
 	/**
 	 * Save the configuration instance.
+	 * 
 	 * @param configOptions
 	 * @param saveOptions
 	 * @param force
 	 * @throws ConfigurationInstanceAlreadyExistsException
 	 */
-	public void saveConfiguration(List<ConfigurationOption> configOptions, ConfigurationSaveOptions saveOptions, boolean force) throws ConfigurationInstanceAlreadyExistsException {
-		
+	public void saveConfiguration(List<ConfigurationOption> configOptions, ConfigurationSaveOptions saveOptions,
+			boolean force) throws ConfigurationInstanceAlreadyExistsException {
+
 		ConfigurationInstance instance = new ObjectFactory().createConfigurationInstance();
 		instance.setId(saveOptions.getId());
 		instance.setUsecaseid(saveOptions.getUseCaseId());
@@ -130,33 +135,34 @@ public class VaadinConfigurationController {
 		instance.setIsSecondary(saveOptions.isSecondary());
 		instance.setAuthor(saveOptions.getAuthor());
 		instance.setVersion(saveOptions.getVersion());
-		
-		BundleContext context = Activator.bc;//FrameworkUtil.getBundle(this.getClass()).getBundleContext();
+
+		BundleContext context = Activator.bc;// FrameworkUtil.getBundle(this.getClass()).getBundleContext();
 		ServiceReference reference = context.getServiceReference(ConfigurationInstancesStorage.class.getName());
 		ConfigurationInstancesStorage storage = (ConfigurationInstancesStorage) context.getService(reference);
-				
-		if(storage.contains(instance) && !force){
+
+		if (storage.contains(instance) && !force) {
 			throw new ConfigurationInstanceAlreadyExistsException();
 		}
-		
+
 		configurator.getConfigInstance().getConfigOption().clear();
-		for(ConfigurationOption cOpt : configOptions){
+		for (ConfigurationOption cOpt : configOptions) {
 			instance.getConfigOption().add(cOpt.getConfigOption());
 		}
-		
-		if(storage.contains(instance)){
+
+		if (storage.contains(instance)) {
 			storage.replaceConfigurationInstance(instance);
-		}else{
+		} else {
 			storage.addConfigurationInstance(instance);
 		}
-			view.removeWindow(view.configurationWindow);
+		view.removeWindow(view.configurationWindow);
 	}
-	
+
 	/**
-	 * Check the dependencies of all configuration options which are in the registry.
+	 * Check the dependencies of all configuration options which are in the
+	 * registry.
 	 */
 	public void checkDependencies() {
-		for(ConfigurationOption option:  modelRegistry.getAll()){
+		for (ConfigurationOption option : modelRegistry.getAll()) {
 			option.checkDependencies();
 		}
 	}
@@ -164,16 +170,17 @@ public class VaadinConfigurationController {
 	public ConfigOptionRegistry getModelRegistry() {
 		return modelRegistry;
 	}
-	
+
 	/**
-	 * Set the values of the configuration instance to the configuration options.
+	 * Set the values of the configuration instance to the configuration
+	 * options.
 	 */
 	public void initializeValues() {
 		LogUtils.logInfo(Activator.getContext(), this.getClass(), "initializeValues",
 				new Object[] { "initialize values." }, null);
-		for(ConfigOption option: configurator.getConfigInstance().getConfigOption()){
+		for (ConfigOption option : configurator.getConfigInstance().getConfigOption()) {
 			ConfigurationOption model = modelRegistry.getConfigOptionForId(option.getId());
-			if(model != null){
+			if (model != null) {
 				LogUtils.logInfo(Activator.getContext(), this.getClass(), "initializeValues",
 						new Object[] { "set value for: " + model.getId() }, null);
 				try {
@@ -182,7 +189,7 @@ public class VaadinConfigurationController {
 					LogUtils.logError(Activator.getContext(), this.getClass(), "initializeValues",
 							new Object[] { "Value isn't valid!" }, null);
 				}
-			}else{
+			} else {
 				LogUtils.logInfo(Activator.getContext(), this.getClass(), "initializeValues",
 						new Object[] { "model for id: " + option.getId() + " not found!" }, null);
 			}
@@ -193,10 +200,10 @@ public class VaadinConfigurationController {
 		configurator.setConfigurationInstance(value);
 	}
 
-	public void deleteConfigurationInstance() {		
+	public void deleteConfigurationInstance() {
 		if (!storage.removeConfigurationInstance(configurator.getConfigInstance())) {
-		   view.showNotification("Deletion failed!", Window.Notification.TYPE_ERROR_MESSAGE);
-			
+			view.showNotification("Deletion failed!", Window.Notification.TYPE_ERROR_MESSAGE);
+
 		}
 	}
 
@@ -212,14 +219,13 @@ public class VaadinConfigurationController {
 		this.view = view;
 	}
 
-//	public String getFlatId() {
-//		return flatId;
-//	}
-//
-//	public void setFlatId(String flatId) {
-//		this.flatId = flatId;
-//	}
-//	
-	
+	// public String getFlatId() {
+	// return flatId;
+	// }
+	//
+	// public void setFlatId(String flatId) {
+	// this.flatId = flatId;
+	// }
+	//
 
 }

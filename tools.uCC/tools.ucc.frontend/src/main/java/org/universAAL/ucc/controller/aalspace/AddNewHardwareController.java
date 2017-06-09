@@ -53,8 +53,7 @@ import com.vaadin.ui.Window.Notification;
  * 
  */
 
-public class AddNewHardwareController implements Button.ClickListener,
-		Window.CloseListener {
+public class AddNewHardwareController implements Button.ClickListener, Window.CloseListener {
 	private AddNewHardwareWindow win;
 	private UccUI app;
 	private BundleContext context;
@@ -77,8 +76,7 @@ public class AddNewHardwareController implements Button.ClickListener,
 	private ArrayList<OntologyInstance> savedObjects;
 	private boolean saved;
 
-	public AddNewHardwareController(AddNewHardwareWindow window,
-			HardwareWindow hWin, RoomsWindow rWin, UccUI app)
+	public AddNewHardwareController(AddNewHardwareWindow window, HardwareWindow hWin, RoomsWindow rWin, UccUI app)
 			throws JAXBException, IOException, ParseException {
 		device = Activator.getDB().getAbsolutePath();
 		ontoProfile = device + "/EmptyHardware.xml";
@@ -90,9 +88,8 @@ public class AddNewHardwareController implements Button.ClickListener,
 		this.rWindow = rWin;
 		actualFlat = device + "/Hardware.xml";
 		actualRoomFile = device + "/Rooms.xml";
-		context = Activator.bc;//FrameworkUtil.getBundle(getClass()).getBundleContext();
-		ServiceReference ref = context.getServiceReference(DataAccess.class
-				.getName());
+		context = Activator.bc;// FrameworkUtil.getBundle(getClass()).getBundleContext();
+		ServiceReference ref = context.getServiceReference(DataAccess.class.getName());
 		dataAccess = (DataAccess) context.getService(ref);
 		context.ungetService(ref);
 		savedObjects = dataAccess.getFormFields(actualFlat);
@@ -250,8 +247,7 @@ public class AddNewHardwareController implements Button.ClickListener,
 
 	}
 
-	private TabForm createForm(SimpleObject simpleObject, TabForm form)
-			throws ParseException {
+	private TabForm createForm(SimpleObject simpleObject, TabForm form) throws ParseException {
 		if (simpleObject instanceof CalendarValue) {
 			CalendarValue cal = (CalendarValue) simpleObject;
 			PopupDateField date = new PopupDateField(cal.getLabel());
@@ -280,8 +276,7 @@ public class AddNewHardwareController implements Button.ClickListener,
 				}
 				if (st.getValidator() != null) {
 					if (st.getValidator().equals("EmailValidator")) {
-						area.addValidator(new EmailValidator(
-								"The Emailaddress isn't correct"));
+						area.addValidator(new EmailValidator("The Emailaddress isn't correct"));
 					}
 				}
 				form.addField(st.getLabel(), area);
@@ -296,8 +291,7 @@ public class AddNewHardwareController implements Button.ClickListener,
 				}
 				if (st.getValidator() != null) {
 					if (st.getValidator().equals("EmailValidator")) {
-						tf.addValidator(new EmailValidator(
-								"The Emailaddress isn't correct"));
+						tf.addValidator(new EmailValidator("The Emailaddress isn't correct"));
 					}
 				}
 				form.addField(simpleObject.getLabel(), tf);
@@ -316,11 +310,9 @@ public class AddNewHardwareController implements Button.ClickListener,
 			if (integer.getValidator() != null) {
 				if (integer.getValidator().equals("RegexpValidator")) {
 					if (integer.getName().contains("postalCode")) {
-						t.addValidator(new RegexpValidator("[1-9][0-9]{4}",
-								"The postal code isn't correct"));
+						t.addValidator(new RegexpValidator("[1-9][0-9]{4}", "The postal code isn't correct"));
 					} else {
-						t.addValidator(new RegexpValidator("[1-9][0-9]*",
-								"Please insert an valid number"));
+						t.addValidator(new RegexpValidator("[1-9][0-9]*", "Please insert an valid number"));
 					}
 				}
 			}
@@ -348,8 +340,7 @@ public class AddNewHardwareController implements Button.ClickListener,
 			}
 			if (doub.getValidator() != null) {
 				if (doub.getValidator().equals("RegexpValidator")) {
-					tf.addValidator(new RegexpValidator("[0-9]*[.][0-9]{5}",
-							"Please insert a valid floating number"));
+					tf.addValidator(new RegexpValidator("[0-9]*[.][0-9]{5}", "Please insert a valid floating number"));
 				}
 			}
 			form.addField(doub.getLabel(), tf);
@@ -362,8 +353,7 @@ public class AddNewHardwareController implements Button.ClickListener,
 	String ro = "";
 
 	public void buttonClick(ClickEvent event) {
-		if (event.getButton() == ((TabForm) tabSheet.getSelectedTab())
-				.getSaveButton()) {
+		if (event.getButton() == ((TabForm) tabSheet.getSelectedTab()).getSaveButton()) {
 			saved = true;
 			TabForm tab = (TabForm) tabSheet.getSelectedTab();
 			String tabHeader = tabSheet.getTab(tab).getCaption();
@@ -373,8 +363,7 @@ public class AddNewHardwareController implements Button.ClickListener,
 			room.setName(tabHeader);
 			// SimpleObjects
 			ArrayList<SimpleObject> simpleObjects = new ArrayList<SimpleObject>();
-			for (SimpleObject sim : subprofiles.get(tabHeader)
-					.getSimpleObjects()) {
+			for (SimpleObject sim : subprofiles.get(tabHeader).getSimpleObjects()) {
 				if (sim instanceof StringValue) {
 					StringValue s = (StringValue) sim;
 					s.setValue((String) tab.getField(s.getLabel()).getValue());
@@ -386,39 +375,31 @@ public class AddNewHardwareController implements Button.ClickListener,
 				}
 				if (sim instanceof IntegerValue) {
 					IntegerValue integer = (IntegerValue) sim;
-					if (isIntegerNum(tab.getField(sim.getLabel()).getValue()
-							.toString()))
-						integer.setValue(Integer.parseInt(tab
-								.getField(sim.getLabel()).getValue().toString()));
+					if (isIntegerNum(tab.getField(sim.getLabel()).getValue().toString()))
+						integer.setValue(Integer.parseInt(tab.getField(sim.getLabel()).getValue().toString()));
 					else
 						integer.setValue(0);
 					simpleObjects.add(integer);
 				}
 				if (sim instanceof DoubleValue) {
 					DoubleValue doub = (DoubleValue) sim;
-					if (isDoubleNum(tab.getField(doub.getLabel()).getValue()
-							.toString()))
-						doub.setValue(Double.parseDouble(tab
-								.getField(doub.getLabel()).getValue()
-								.toString()));
+					if (isDoubleNum(tab.getField(doub.getLabel()).getValue().toString()))
+						doub.setValue(Double.parseDouble(tab.getField(doub.getLabel()).getValue().toString()));
 					else
 						doub.setValue(0.0);
 					simpleObjects.add(doub);
 				}
 				if (sim instanceof BooleanValue) {
 					BooleanValue bool = (BooleanValue) sim;
-					bool.setValue((Boolean) tab.getField(bool.getLabel())
-							.getValue());
+					bool.setValue((Boolean) tab.getField(bool.getLabel()).getValue());
 					simpleObjects.add(bool);
 				}
 				if (sim instanceof CalendarValue) {
 					CalendarValue cal = (CalendarValue) sim;
 					DateFormat df = new SimpleDateFormat();
 					if (cal.getName().equals("hardwareSettingTime")) {
-						tab.getField(sim.getLabel()).setValue(
-								df.format(new Date()));
-						String date = df.format((Date) tab.getField(
-								sim.getLabel()).getValue());
+						tab.getField(sim.getLabel()).setValue(df.format(new Date()));
+						String date = df.format((Date) tab.getField(sim.getLabel()).getValue());
 						cal.setCalendar(date);
 					} else {
 						cal.setCalendar("");
@@ -432,22 +413,19 @@ public class AddNewHardwareController implements Button.ClickListener,
 			// EnumObjects
 			ArrayList<EnumObject> enums = new ArrayList<EnumObject>();
 			for (EnumObject en : subprofiles.get(tabHeader).getEnums()) {
-				en.setSelectedValue((String) tab.getField(en.getType())
-						.getValue());
+				en.setSelectedValue((String) tab.getField(en.getType()).getValue());
 				enums.add(en);
 			}
 			sub.setEnums(enums);
 
 			// CollectionValues
 			ArrayList<CollectionValues> collections = new ArrayList<CollectionValues>();
-			for (CollectionValues cols : subprofiles.get(tabHeader)
-					.getCollections()) {
+			for (CollectionValues cols : subprofiles.get(tabHeader).getCollections()) {
 				Collection<SimpleObject> values = new ArrayList<SimpleObject>();
 				Collection<SimpleObject> newVal = null;
 				for (SimpleObject sim : cols.getCollection()) {
 					if (sim instanceof StringValue) {
-						newVal = (Collection<SimpleObject>) tab.getField(
-								cols.getLabel()).getValue();
+						newVal = (Collection<SimpleObject>) tab.getField(cols.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i < array.length; i++) {
 							StringValue n = new StringValue();
@@ -459,8 +437,7 @@ public class AddNewHardwareController implements Button.ClickListener,
 							values.add(n);
 						}
 					} else if (sim instanceof IntegerValue) {
-						newVal = (Collection<SimpleObject>) tab.getField(
-								cols.getLabel()).getValue();
+						newVal = (Collection<SimpleObject>) tab.getField(cols.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i < array.length; i++) {
 							IntegerValue n = new IntegerValue();
@@ -476,8 +453,7 @@ public class AddNewHardwareController implements Button.ClickListener,
 						}
 
 					} else if (sim instanceof DoubleValue) {
-						newVal = (Collection<SimpleObject>) tab.getField(
-								cols.getLabel()).getValue();
+						newVal = (Collection<SimpleObject>) tab.getField(cols.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i < array.length; i++) {
 							DoubleValue n = new DoubleValue();
@@ -486,8 +462,7 @@ public class AddNewHardwareController implements Button.ClickListener,
 							n.setRequired(sim.isRequired());
 							n.setValidator(sim.getValidator());
 							if (isDoubleNum(array[i].toString()))
-								n.setValue(Double.parseDouble(array[i]
-										.toString()));
+								n.setValue(Double.parseDouble(array[i].toString()));
 							else
 								n.setValue(0.0);
 							values.add(n);
@@ -502,8 +477,7 @@ public class AddNewHardwareController implements Button.ClickListener,
 
 			// /ROOM PRofile
 			ArrayList<SimpleObject> roomObjects = new ArrayList<SimpleObject>();
-			for (SimpleObject sim : roomprofiles.get(tabHeader)
-					.getSimpleObjects()) {
+			for (SimpleObject sim : roomprofiles.get(tabHeader).getSimpleObjects()) {
 				if (sim instanceof StringValue) {
 					StringValue s = (StringValue) sim;
 					s.setValue((String) tab.getField(s.getLabel()).getValue());
@@ -515,29 +489,23 @@ public class AddNewHardwareController implements Button.ClickListener,
 				}
 				if (sim instanceof IntegerValue) {
 					IntegerValue integer = (IntegerValue) sim;
-					if (isIntegerNum(tab.getField(sim.getLabel()).getValue()
-							.toString()))
-						integer.setValue(Integer.parseInt(tab
-								.getField(sim.getLabel()).getValue().toString()));
+					if (isIntegerNum(tab.getField(sim.getLabel()).getValue().toString()))
+						integer.setValue(Integer.parseInt(tab.getField(sim.getLabel()).getValue().toString()));
 					else
 						integer.setValue(0);
 					roomObjects.add(integer);
 				}
 				if (sim instanceof DoubleValue) {
 					DoubleValue doub = (DoubleValue) sim;
-					if (isDoubleNum(tab.getField(doub.getLabel()).getValue()
-							.toString()))
-						doub.setValue(Double.parseDouble(tab
-								.getField(doub.getLabel()).getValue()
-								.toString()));
+					if (isDoubleNum(tab.getField(doub.getLabel()).getValue().toString()))
+						doub.setValue(Double.parseDouble(tab.getField(doub.getLabel()).getValue().toString()));
 					else
 						doub.setValue(0.0);
 					roomObjects.add(doub);
 				}
 				if (sim instanceof BooleanValue) {
 					BooleanValue bool = (BooleanValue) sim;
-					bool.setValue((Boolean) tab.getField(bool.getLabel())
-							.getValue());
+					bool.setValue((Boolean) tab.getField(bool.getLabel()).getValue());
 					roomObjects.add(bool);
 				}
 				if (sim instanceof CalendarValue) {
@@ -558,8 +526,7 @@ public class AddNewHardwareController implements Button.ClickListener,
 			// EnumObjects
 			ArrayList<EnumObject> ens = new ArrayList<EnumObject>();
 			for (EnumObject en : roomprofiles.get(tabHeader).getEnums()) {
-				en.setSelectedValue((String) tab.getField(en.getType())
-						.getValue());
+				en.setSelectedValue((String) tab.getField(en.getType()).getValue());
 				ens.add(en);
 				if (en.getType().equals("devicetype")) {
 					hw = en.getSelectedValue();
@@ -571,14 +538,12 @@ public class AddNewHardwareController implements Button.ClickListener,
 
 			// CollectionValues
 			ArrayList<CollectionValues> rCollections = new ArrayList<CollectionValues>();
-			for (CollectionValues cols : roomprofiles.get(tabHeader)
-					.getCollections()) {
+			for (CollectionValues cols : roomprofiles.get(tabHeader).getCollections()) {
 				Collection<SimpleObject> values = new ArrayList<SimpleObject>();
 				Collection<SimpleObject> newVal = null;
 				for (SimpleObject sim : cols.getCollection()) {
 					if (sim instanceof StringValue) {
-						newVal = (Collection<SimpleObject>) tab.getField(
-								cols.getLabel()).getValue();
+						newVal = (Collection<SimpleObject>) tab.getField(cols.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i < array.length; i++) {
 							StringValue n = new StringValue();
@@ -590,8 +555,7 @@ public class AddNewHardwareController implements Button.ClickListener,
 							values.add(n);
 						}
 					} else if (sim instanceof IntegerValue) {
-						newVal = (Collection<SimpleObject>) tab.getField(
-								cols.getLabel()).getValue();
+						newVal = (Collection<SimpleObject>) tab.getField(cols.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i < array.length; i++) {
 							IntegerValue n = new IntegerValue();
@@ -607,8 +571,7 @@ public class AddNewHardwareController implements Button.ClickListener,
 						}
 
 					} else if (sim instanceof DoubleValue) {
-						newVal = (Collection<SimpleObject>) tab.getField(
-								cols.getLabel()).getValue();
+						newVal = (Collection<SimpleObject>) tab.getField(cols.getLabel()).getValue();
 						Object[] array = newVal.toArray();
 						for (int i = 0; i < array.length; i++) {
 							DoubleValue n = new DoubleValue();
@@ -617,8 +580,7 @@ public class AddNewHardwareController implements Button.ClickListener,
 							n.setRequired(sim.isRequired());
 							n.setValidator(sim.getValidator());
 							if (isDoubleNum(array[i].toString()))
-								n.setValue(Double.parseDouble(array[i]
-										.toString()));
+								n.setValue(Double.parseDouble(array[i].toString()));
 							else
 								n.setValue(0.0);
 							values.add(n);
@@ -632,11 +594,9 @@ public class AddNewHardwareController implements Button.ClickListener,
 			room.setCollections(rCollections);
 			for (OntologyInstance ont : savedObjects) {
 				if (tab.getField("Device Address:") != null
-						&& tab.getField("Device Address:").getValue()
-								.equals(ont.getId())) {
+						&& tab.getField("Device Address:").getValue().equals(ont.getId())) {
 					tab.getField("Device Address:").setValue("");
-					app.getMainWindow().showNotification(
-							"You can't add a device twice",
+					app.getMainWindow().showNotification("You can't add a device twice",
 							Notification.TYPE_HUMANIZED_MESSAGE);
 					return;
 				}
@@ -661,15 +621,13 @@ public class AddNewHardwareController implements Button.ClickListener,
 					if (w instanceof RoomsWindow) {
 						RoomsWindow rooms = (RoomsWindow) w;
 						rooms.getUserTree().addItem(ontId);
-						rooms.getUserTree().setParent(ontId,
-								tab.getField("rooms").getValue());
+						rooms.getUserTree().setParent(ontId, tab.getField("rooms").getValue());
 						rooms.getUserTree().setChildrenAllowed(ontId, false);
 					}
 					if (w instanceof HardwareWindow) {
 						HardwareWindow hw = (HardwareWindow) w;
 						hw.getUserTree().addItem(ontId);
-						hw.getUserTree().setParent(ontId,
-								tab.getField("devicetype").getValue());
+						hw.getUserTree().setParent(ontId, tab.getField("devicetype").getValue());
 						hw.getUserTree().setChildrenAllowed(ontId, false);
 					}
 				}
@@ -690,8 +648,7 @@ public class AddNewHardwareController implements Button.ClickListener,
 						users.getUserTree().addItem(ontId);
 						users.getUserTree().setParent(ontId, hw);
 						users.getUserTree().setChildrenAllowed(ontId, false);
-					} else 
-					if (w instanceof RoomsWindow) {
+					} else if (w instanceof RoomsWindow) {
 						RoomsWindow rs = (RoomsWindow) w;
 						rs.getUserTree().addItem(ontId);
 						rs.getUserTree().setParent(ontId, ro);
@@ -700,9 +657,7 @@ public class AddNewHardwareController implements Button.ClickListener,
 				}
 			}
 
-			app.getMainWindow().showNotification(
-					tab.getHeader() + " was saved",
-					Notification.POSITION_CENTERED);
+			app.getMainWindow().showNotification(tab.getHeader() + " was saved", Notification.POSITION_CENTERED);
 
 		}
 
@@ -728,10 +683,8 @@ public class AddNewHardwareController implements Button.ClickListener,
 
 	public void windowClose(CloseEvent e) {
 		if (tabSheet.getComponentCount() > 0 && saved)
-			app.getMainWindow()
-					.showNotification(
-							"The device won't be added, <br> because you've broken the operation",
-							Notification.TYPE_HUMANIZED_MESSAGE);
+			app.getMainWindow().showNotification("The device won't be added, <br> because you've broken the operation",
+					Notification.TYPE_HUMANIZED_MESSAGE);
 
 	}
 

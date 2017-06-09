@@ -27,100 +27,98 @@ import org.universAAL.tools.logmonitor.service_bus_matching.URI;
  */
 public class Gui extends JPanel implements ListSelectionListener {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    /**
-     * The graphics panel where the content is drawn.
-     */
-    MatchmakingPane pane = new MatchmakingPane();
+	/**
+	 * The graphics panel where the content is drawn.
+	 */
+	MatchmakingPane pane = new MatchmakingPane();
 
-    /**
-     * The table containing a list of all messages.
-     */
-    JTable table;
+	/**
+	 * The table containing a list of all messages.
+	 */
+	JTable table;
 
-    /**
-     * Create the main frame.
-     */
-    public Gui() {
-	this.setLayout(new BorderLayout());
-	// Message overview
-	DefaultTableModel model = new DefaultTableModel();
-	model.addColumn("Time");
-	model.addColumn("Request");
-	model.addColumn("Matches");
-	model.addColumn("Result");
-	table = new JTable(model);
-	table.getSelectionModel().addListSelectionListener(this);
+	/**
+	 * Create the main frame.
+	 */
+	public Gui() {
+		this.setLayout(new BorderLayout());
+		// Message overview
+		DefaultTableModel model = new DefaultTableModel();
+		model.addColumn("Time");
+		model.addColumn("Request");
+		model.addColumn("Matches");
+		model.addColumn("Result");
+		table = new JTable(model);
+		table.getSelectionModel().addListSelectionListener(this);
 
-	// overall view
-	JScrollPane scrollPaneLeft = new JScrollPane(table);
-	JScrollPane scrollPaneRight = new JScrollPane(pane);
+		// overall view
+		JScrollPane scrollPaneLeft = new JScrollPane(table);
+		JScrollPane scrollPaneRight = new JScrollPane(pane);
 
-	JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,
-		scrollPaneLeft, scrollPaneRight);
-	splitPane.setDividerLocation(0.4);
-	add(splitPane, BorderLayout.CENTER);
-    }
-
-    /**
-     * Called whenever the value of the selection in the table showing the list
-     * of all messages changes.
-     * 
-     * @param e
-     *            The event that characterizes the change.
-     */
-    public void valueChanged(ListSelectionEvent e) {
-	if (!e.getValueIsAdjusting()) {
-	    int viewRow = table.getSelectedRow();
-	    if (viewRow >= 0) {
-		Matchmaking m = LogMonitor.instance.getMatchmaking(viewRow);
-		// Matchmaking m = new Matchmaking();
-		// m.serviceURI = "serviceURI";
-		// m.numMatches = 0;
-		// m.date = new Date();
-		pane.show(m);
-		pane.setSelectionStart(0);
-		pane.setSelectionEnd(0);
-	    }
+		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, scrollPaneLeft, scrollPaneRight);
+		splitPane.setDividerLocation(0.4);
+		add(splitPane, BorderLayout.CENTER);
 	}
-    }
-    
-    public void setSelection(int idx) {
-	ListSelectionModel selectionModel = table.getSelectionModel();
-	selectionModel.setSelectionInterval(idx, idx);
-    }
 
-    /**
-     * Add a new entry.
-     * 
-     * @param m
-     *            The matchmaking.
-     */
-    public int notify(Matchmaking m) {
-	// add entry to table
-	DefaultTableModel model = (DefaultTableModel) table.getModel();
-	String result = m.getResult();
-	model.addRow(new Object[] { m.getDateString(),
-		URI.get(m.serviceURI, true), "" + m.numMatches, result });
-	return model.getRowCount() - 1;
+	/**
+	 * Called whenever the value of the selection in the table showing the list
+	 * of all messages changes.
+	 * 
+	 * @param e
+	 *            The event that characterizes the change.
+	 */
+	public void valueChanged(ListSelectionEvent e) {
+		if (!e.getValueIsAdjusting()) {
+			int viewRow = table.getSelectedRow();
+			if (viewRow >= 0) {
+				Matchmaking m = LogMonitor.instance.getMatchmaking(viewRow);
+				// Matchmaking m = new Matchmaking();
+				// m.serviceURI = "serviceURI";
+				// m.numMatches = 0;
+				// m.date = new Date();
+				pane.show(m);
+				pane.setSelectionStart(0);
+				pane.setSelectionEnd(0);
+			}
+		}
+	}
 
-	// if this is the first entry: show in panel
-	// if (model.getRowCount() == 1) {
-	// model.setsel
-	// panel.show(m);
+	public void setSelection(int idx) {
+		ListSelectionModel selectionModel = table.getSelectionModel();
+		selectionModel.setSelectionInterval(idx, idx);
+	}
+
+	/**
+	 * Add a new entry.
+	 * 
+	 * @param m
+	 *            The matchmaking.
+	 */
+	public int notify(Matchmaking m) {
+		// add entry to table
+		DefaultTableModel model = (DefaultTableModel) table.getModel();
+		String result = m.getResult();
+		model.addRow(new Object[] { m.getDateString(), URI.get(m.serviceURI, true), "" + m.numMatches, result });
+		return model.getRowCount() - 1;
+
+		// if this is the first entry: show in panel
+		// if (model.getRowCount() == 1) {
+		// model.setsel
+		// panel.show(m);
+		// }
+	}
+
+	// // main method for testing
+	// public static void main(String[] args) {
+	// Gui frame = new Gui();
+	//
+	// // Matchmaking m = new Matchmaking();
+	// // m.serviceURI = "serviceURI";
+	// // m.numMatches = 0;
+	// // m.date = new Date();
+	// // frame.notify(m);
+	// // frame.notify(m);
 	// }
-    }
-
-    // // main method for testing
-    // public static void main(String[] args) {
-    // Gui frame = new Gui();
-    //
-    // // Matchmaking m = new Matchmaking();
-    // // m.serviceURI = "serviceURI";
-    // // m.numMatches = 0;
-    // // m.date = new Date();
-    // // frame.notify(m);
-    // // frame.notify(m);
-    // }
 }

@@ -20,7 +20,7 @@ public class AccountWindow extends Window {
 	private CheckBox check;
 	private String base;
 	private ResourceBundle bundle;
-	
+
 	public AccountWindow() {
 		base = "resources.ucc";
 		bundle = ResourceBundle.getBundle(base);
@@ -98,7 +98,5 @@ public class AccountWindow extends Window {
 	public void setCheck(CheckBox check) {
 		this.check = check;
 	}
-	
-	
 
 }

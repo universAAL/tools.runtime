@@ -9,9 +9,9 @@ package org.universAAL.ucc.configuration.model;
  */
 
 public class SimpleConfigItemTypes {
-	
+
 	public final static String INTEGER = "int";
 	public final static String STRING = "string";
 	public final static String DOUBLE = "double";
-	
+
 }
