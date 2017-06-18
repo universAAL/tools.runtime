@@ -84,7 +84,7 @@ public class Test extends BusTestCase {
 		mc.setAttribute(AccessControl.PROP_MODE_UPDATE, "always");
 
 		Activator.mc = mc;
-		((JUnitModuleContext) mc).setLogLevel(LogLevel.DEBUG);
+		//((JUnitModuleContext) mc).setLogLevel(LogLevel.DEBUG);
 
 		// init bus tracker
 		org.universAAL.middleware.tracker.impl.Activator.fetchParams = new Object[] {
