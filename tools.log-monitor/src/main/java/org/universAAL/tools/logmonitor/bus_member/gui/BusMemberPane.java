@@ -12,8 +12,8 @@ import javax.swing.KeyStroke;
 import javax.swing.text.DefaultCaret;
 
 import org.universAAL.middleware.interfaces.PeerCard;
-import org.universAAL.middleware.interfaces.aalspace.AALSpaceCard;
-import org.universAAL.middleware.interfaces.aalspace.AALSpaceDescriptor;
+import org.universAAL.middleware.interfaces.space.SpaceCard;
+import org.universAAL.middleware.interfaces.space.SpaceDescriptor;
 import org.universAAL.tools.logmonitor.MemberData;
 import org.universAAL.tools.logmonitor.service_bus_matching.URI;
 import org.universAAL.tools.logmonitor.util.ClipboardHandling;
@@ -36,7 +36,7 @@ public class BusMemberPane extends HTMLBusOperationsPane {
 
 	private enType type = enType.NOTHING;
 	private PeerCard peerCard = null;
-	private AALSpaceDescriptor space = null;
+	private SpaceDescriptor space = null;
 	private MemberData member = null;
 
 	public BusMemberPane() {
@@ -69,7 +69,7 @@ public class BusMemberPane extends HTMLBusOperationsPane {
 		showHTML();
 	}
 
-	public void show(AALSpaceDescriptor space) {
+	public void show(SpaceDescriptor space) {
 		type = enType.SPACE;
 		setNull();
 		this.space = space;
@@ -166,13 +166,13 @@ public class BusMemberPane extends HTMLBusOperationsPane {
 		s.append(getTableEndHTML());
 	}
 
-	private void createSpaceHTML(StringBuilder s, AALSpaceDescriptor space) {
+	private void createSpaceHTML(StringBuilder s, SpaceDescriptor space) {
 		s.append("<h1>Space</h1>\n");
 		if (space == null) {
 			s.append("no space descriptor available<br>\n");
 			return;
 		}
-		AALSpaceCard sc = space.getSpaceCard();
+		SpaceCard sc = space.getSpaceCard();
 		if (sc == null) {
 			s.append("no space card available<br>\n");
 			return;
@@ -185,7 +185,7 @@ public class BusMemberPane extends HTMLBusOperationsPane {
 		s.append(getVTableRowWithTitleHTML("Peering channel", sc.getPeeringChannel()));
 		s.append(getVTableRowWithTitleHTML("Peering channel name", sc.getPeeringChannelName()));
 		s.append(getVTableRowWithTitleHTML("Retry", String.valueOf(sc.getRetry())));
-		s.append(getVTableRowWithTitleHTML("Space life time", String.valueOf(sc.getAalSpaceLifeTime())));
+		s.append(getVTableRowWithTitleHTML("Space life time", String.valueOf(sc.getSpaceLifeTime())));
 		s.append(getTableEndHTML());
 	}
 }

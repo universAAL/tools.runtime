@@ -11,7 +11,7 @@ import org.universAAL.middleware.managers.api.MatchingResult;
 import org.universAAL.middleware.managers.api.UAPPPackage;
 import org.universAAL.middleware.interfaces.PeerCard;
 import org.universAAL.middleware.interfaces.PeerRole;
-import org.universAAL.middleware.managers.api.AALSpaceManager;
+import org.universAAL.middleware.managers.api.SpaceManager;
 import org.universAAL.middleware.managers.api.DeployManager;
 import org.universAAL.ucc.controller.Activator;
 
@@ -22,7 +22,7 @@ public class Installer implements IInstaller {
 	 * 
 	 */
 	public Map<String, PeerCard> getPeers() {
-		AALSpaceManager aalSpaceManager = Activator.getAALSpaceManager();
+		SpaceManager aalSpaceManager = Activator.getAALSpaceManager();
 		Map peers = new HashMap();
 		if (aalSpaceManager != null) {
 			peers = aalSpaceManager.getPeers();
@@ -66,7 +66,7 @@ public class Installer implements IInstaller {
 	}
 
 	public MatchingResult getMatchingPeers(Map<String, Serializable> filter) {
-		AALSpaceManager aalSpaceManager = Activator.getAALSpaceManager();
+		SpaceManager aalSpaceManager = Activator.getAALSpaceManager();
 		System.err.println("[[IInstaller]]: getMatchingPeers()");
 		if (aalSpaceManager != null) {
 			System.err.println("[[Installer]] AALSPACEMANAGER is not NULL " + aalSpaceManager.getPeers());
@@ -87,7 +87,7 @@ public class Installer implements IInstaller {
 	}
 
 	public Map<String, Serializable> getPeerAttributes(List<String> attributes, PeerCard target) {
-		AALSpaceManager aalSpaceManager = Activator.getAALSpaceManager();
+		SpaceManager aalSpaceManager = Activator.getAALSpaceManager();
 
 		if (aalSpaceManager != null) {
 			Map<String, Serializable> result = aalSpaceManager.getPeerAttributes(attributes, target);

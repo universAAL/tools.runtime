@@ -4,7 +4,7 @@ import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.universAAL.middleware.container.ModuleContext;
 import org.universAAL.middleware.container.osgi.uAALBundleContainer;
-import org.universAAL.middleware.managers.api.AALSpaceManager;
+import org.universAAL.middleware.managers.api.SpaceManager;
 import org.universAAL.middleware.managers.api.DeployManager;
 import org.universAAL.ucc.api.IDeinstaller;
 import org.universAAL.ucc.api.IInstaller;
@@ -21,7 +21,7 @@ public class Activator implements BundleActivator {
 
 	private static BundleContext context;
 	private static DeployManager deployManager;
-	private static AALSpaceManager aalSpaceManager;
+	private static SpaceManager aalSpaceManager;
 
 	static BundleContext getContext() {
 		return context;
@@ -65,14 +65,14 @@ public class Activator implements BundleActivator {
 		// moduleContext.getContainer().fetchSharedObject(moduleContext,new
 		// Object[]{AALSpaceManager.class.getName().toString()});
 		Object aalManagers = moduleContext.getContainer().fetchSharedObject(moduleContext,
-				new Object[] { AALSpaceManager.class.getName().toString() });
+				new Object[] { SpaceManager.class.getName().toString() });
 		if (aalManagers != null) {
 			// moduleContext.logDebug("[ucc.controller.Activator.getManagers]
 			// AALSpaceManagers found...",
 			// null, null);
 			System.out.println("[ucc.controller.Activator.getManagers] AALManagers found...");
-			if (aalManagers instanceof AALSpaceManager) {
-				aalSpaceManager = (AALSpaceManager) aalManagers;
+			if (aalManagers instanceof SpaceManager) {
+				aalSpaceManager = (SpaceManager) aalManagers;
 			}
 
 			else {
@@ -100,7 +100,7 @@ public class Activator implements BundleActivator {
 		}
 	}
 
-	public static AALSpaceManager getAALSpaceManager() {
+	public static SpaceManager getAALSpaceManager() {
 		return aalSpaceManager;
 	}
 

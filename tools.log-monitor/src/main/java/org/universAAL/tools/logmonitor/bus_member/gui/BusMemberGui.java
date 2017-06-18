@@ -23,7 +23,7 @@ import javax.swing.tree.TreeNode;
 import javax.swing.tree.TreePath;
 
 import org.universAAL.middleware.interfaces.PeerCard;
-import org.universAAL.middleware.interfaces.aalspace.AALSpaceDescriptor;
+import org.universAAL.middleware.interfaces.space.SpaceDescriptor;
 import org.universAAL.middleware.rdf.Resource;
 import org.universAAL.tools.logmonitor.BusMemberListener;
 import org.universAAL.tools.logmonitor.MemberData;
@@ -52,7 +52,7 @@ public class BusMemberGui extends JPanel implements TreeSelectionListener, BusMe
 
 	private Hashtable<String, PeerCard> peerCards = new Hashtable<String, PeerCard>();
 	private Hashtable<String, MemberData> memberData = new Hashtable<String, MemberData>();
-	private AALSpaceDescriptor space = null;
+	private SpaceDescriptor space = null;
 
 	private String PREFIX_PEER = "Peer: ";
 
@@ -250,7 +250,7 @@ public class BusMemberGui extends JPanel implements TreeSelectionListener, BusMe
 		tree.expandPath(treePath);
 	}
 
-	public void setSpace(AALSpaceDescriptor space) {
+	public void setSpace(SpaceDescriptor space) {
 		this.space = space;
 	}
 
