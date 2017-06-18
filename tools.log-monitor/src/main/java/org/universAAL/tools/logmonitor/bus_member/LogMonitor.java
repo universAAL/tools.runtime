@@ -17,11 +17,11 @@ import org.universAAL.tools.logmonitor.bus_member.gui.BusMemberGui;
 public class LogMonitor implements LogListenerEx {
 
 	private BusMemberGui gui = new BusMemberGui();
-	private SpaceListener spaceListener = null;
+	private MySpaceListener spaceListener = null;
 
 	public LogMonitor() {
 		// start space listener
-		spaceListener = new SpaceListener(gui);
+		spaceListener = new MySpaceListener(gui);
 		spaceListener.start();
 	}
 

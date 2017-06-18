@@ -6,7 +6,7 @@ import org.universAAL.middleware.container.SharedObjectListener;
 import org.universAAL.middleware.interfaces.PeerCard;
 import org.universAAL.middleware.interfaces.space.SpaceDescriptor;
 import org.universAAL.middleware.interfaces.space.SpaceStatus;
-import org.universAAL.middleware.managers.api.AALSpaceListener;
+import org.universAAL.middleware.managers.api.SpaceListener;
 import org.universAAL.middleware.managers.api.SpaceManager;
 import org.universAAL.tools.logmonitor.Activator;
 import org.universAAL.tools.logmonitor.bus_member.gui.BusMemberGui;
@@ -16,12 +16,12 @@ import org.universAAL.tools.logmonitor.bus_member.gui.BusMemberGui;
  * @author Carsten Stockloew
  * 
  */
-public class SpaceListener implements AALSpaceListener, Runnable, SharedObjectListener {
+public class MySpaceListener implements SpaceListener, Runnable, SharedObjectListener {
 
 	private SpaceManager theAALSpaceManager = null;
 	private BusMemberGui gui = null;
 
-	public SpaceListener(BusMemberGui gui) {
+	public MySpaceListener(BusMemberGui gui) {
 		this.gui = gui;
 	}
 
@@ -42,7 +42,7 @@ public class SpaceListener implements AALSpaceListener, Runnable, SharedObjectLi
 		// remove me as AALSpaceListener
 		synchronized (this) {
 			if (theAALSpaceManager != null) {
-				theAALSpaceManager.removeAALSpaceListener(this);
+				theAALSpaceManager.removeSpaceListener(this);
 			}
 		}
 	}
@@ -57,17 +57,17 @@ public class SpaceListener implements AALSpaceListener, Runnable, SharedObjectLi
 	}
 
 	@Override
-	public void aalSpaceJoined(SpaceDescriptor spaceDescriptor) {
+	public void spaceJoined(SpaceDescriptor spaceDescriptor) {
 		gui.setSpace(spaceDescriptor);
 	}
 
 	@Override
-	public void aalSpaceLost(SpaceDescriptor spaceDescriptor) {
+	public void spaceLost(SpaceDescriptor spaceDescriptor) {
 		gui.setSpace(spaceDescriptor);
 	}
 
 	@Override
-	public void newPeerJoined(PeerCard peer) {
+	public void peerJoined(PeerCard peer) {
 		gui.add(peer);
 	}
 
@@ -77,7 +77,7 @@ public class SpaceListener implements AALSpaceListener, Runnable, SharedObjectLi
 	}
 
 	@Override
-	public void aalSpaceStatusChanged(SpaceStatus status) {
+	public void spaceStatusChanged(SpaceStatus status) {
 		// not needed
 	}
 
@@ -91,7 +91,7 @@ public class SpaceListener implements AALSpaceListener, Runnable, SharedObjectLi
 		if (sharedObj instanceof SpaceManager) {
 			synchronized (this) {
 				theAALSpaceManager = (SpaceManager) sharedObj;
-				theAALSpaceManager.addAALSpaceListener(this);
+				theAALSpaceManager.addSpaceListener(this);
 				gui.setSpace(theAALSpaceManager.getSpaceDescriptor());
 
 				Map<String, PeerCard> peers = theAALSpaceManager.getPeers();
