@@ -1,6 +1,6 @@
 package org.universAAL.ucc.database.parser;
 
-import org.universAAL.middleware.deploymanager.uapp.model.AalUapp;
+import org.universAAL.middleware.managers.deploy.uapp.model.AalUapp;
 import org.universAAL.ucc.model.usrv.AalUsrv;
 
 /**

@@ -3,7 +3,7 @@ package org.universAAL.ucc.model;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.universAAL.middleware.deploymanager.uapp.model.Part;
+import org.universAAL.middleware.managers.deploy.uapp.model.Part;
 
 /**
  * An UAPPPart represents a single part of a uapp file. It has a name, an appId,

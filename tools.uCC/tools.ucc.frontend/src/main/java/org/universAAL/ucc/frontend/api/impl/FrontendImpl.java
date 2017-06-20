@@ -24,18 +24,18 @@ import java.util.zip.ZipException;
 import java.util.zip.ZipFile;
 
 import org.universAAL.middleware.container.utils.LogUtils;
-import org.universAAL.middleware.deploymanager.uapp.model.AalUapp;
-import org.universAAL.middleware.deploymanager.uapp.model.Bundle;
-import org.universAAL.middleware.deploymanager.uapp.model.DeploymentUnit;
-import org.universAAL.middleware.deploymanager.uapp.model.Feature;
-import org.universAAL.middleware.deploymanager.uapp.model.Part.PartRequirements;
-import org.universAAL.middleware.deploymanager.uapp.model.ReqType;
 import org.universAAL.ucc.model.usrv.AalUsrv;
 import org.universAAL.ucc.model.usrv.AalUsrv.Srv;
 import org.universAAL.ucc.model.usrv.ApplicationType;
-import org.universAAL.middleware.deploymanager.uapp.model.Part;
 import org.universAAL.middleware.managers.api.InstallationResults;
 import org.universAAL.middleware.managers.api.InstallationResultsDetails;
+import org.universAAL.middleware.managers.deploy.uapp.model.AalUapp;
+import org.universAAL.middleware.managers.deploy.uapp.model.Bundle;
+import org.universAAL.middleware.managers.deploy.uapp.model.DeploymentUnit;
+import org.universAAL.middleware.managers.deploy.uapp.model.Feature;
+import org.universAAL.middleware.managers.deploy.uapp.model.Part;
+import org.universAAL.middleware.managers.deploy.uapp.model.ReqType;
+import org.universAAL.middleware.managers.deploy.uapp.model.Part.PartRequirements;
 import org.universAAL.middleware.rdf.Resource;
 import org.universAAL.middleware.service.CallStatus;
 import org.universAAL.middleware.service.ServiceRequest;
@@ -467,7 +467,7 @@ public class FrontendImpl implements IFrontend {
 
 			}
 			if (ls.isSetLicense()) {
-				for (org.universAAL.middleware.deploymanager.uapp.model.LicenseType lt : ls.getLicense()) {
+				for (org.universAAL.middleware.managers.deploy.uapp.model.LicenseType lt : ls.getLicense()) {
 
 					System.err.println("LicenseType is set!!! " + lt.getLink());
 					if (lt.isSetLink() && !lt.getLink().trim().isEmpty()) {

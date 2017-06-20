@@ -3,6 +3,9 @@ package org.universAAL.tools.logmonitor.test;
 import org.universAAL.middleware.bus.junit.BusTestCase;
 import org.universAAL.middleware.bus.permission.AccessControl;
 import org.universAAL.middleware.container.ModuleContext;
+import org.universAAL.middleware.container.JUnit.JUnitContainer;
+import org.universAAL.middleware.container.JUnit.JUnitModuleContext;
+import org.universAAL.middleware.container.JUnit.JUnitModuleContext.LogLevel;
 import org.universAAL.middleware.container.utils.LogUtils;
 import org.universAAL.middleware.context.ContextEvent;
 import org.universAAL.middleware.context.ContextEventPattern;
@@ -34,10 +37,6 @@ import org.universAAL.tools.logmonitor.Activator;
 import org.universAAL.tools.logmonitor.BusMemberMonitor;
 
 import java.awt.HeadlessException;
-
-import org.universAAL.container.JUnit.JUnitContainer;
-import org.universAAL.container.JUnit.JUnitModuleContext;
-import org.universAAL.container.JUnit.JUnitModuleContext.LogLevel;
 
 public class Test extends BusTestCase {
 	static boolean isSetUp = false;

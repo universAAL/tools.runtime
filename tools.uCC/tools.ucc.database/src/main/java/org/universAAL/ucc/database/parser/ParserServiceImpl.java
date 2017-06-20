@@ -6,7 +6,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
-import org.universAAL.middleware.deploymanager.uapp.model.AalUapp;
+import org.universAAL.middleware.managers.deploy.uapp.model.AalUapp;
 import org.universAAL.ucc.model.usrv.AalUsrv;
 
 public class ParserServiceImpl implements ParserService {
@@ -19,7 +19,7 @@ public class ParserServiceImpl implements ParserService {
 			// jc =
 			// JAXBContext.newInstance("org.universAAL.middleware.deploymanager.uapp.model",
 			// AalUapp.class.getClassLoader());
-			jc = JAXBContext.newInstance(org.universAAL.middleware.deploymanager.uapp.model.ObjectFactory.class);
+			jc = JAXBContext.newInstance(org.universAAL.middleware.managers.deploy.uapp.model.ObjectFactory.class);
 		} catch (JAXBException e) {
 			e.printStackTrace();
 		}
