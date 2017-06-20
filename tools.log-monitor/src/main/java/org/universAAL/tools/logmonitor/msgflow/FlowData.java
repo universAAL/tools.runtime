@@ -92,7 +92,7 @@ public class FlowData {
 		} else {
 			name = getShortURI(m.serviceURI) + " " + m.getResult();
 		}
-		source = ((Resource) (m.request.getProperty(ServiceRequest.PROP_uAAL_SERVICE_CALLER))).getURI();
+		source = ((Resource) (m.request.getProperty(ServiceRequest.PROP_SERVICE_CALLER))).getURI();
 		List<String> providers = new ArrayList<String>();
 		for (SingleMatching single : m.matchings) {
 			if (single.success != null) {
