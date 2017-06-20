@@ -5,7 +5,7 @@ import java.util.List;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.universAAL.middleware.container.ModuleContext;
-import org.universAAL.middleware.container.osgi.uAALBundleContainer;
+import org.universAAL.middleware.container.osgi.OSGiContainer;
 import org.universAAL.middleware.container.utils.LogUtils;
 import org.universAAL.ontology.phThing.Device;
 import org.universAAL.ontology.profile.AALSpace;
@@ -35,7 +35,7 @@ public class Activator implements BundleActivator {
 	 */
 	public void start(BundleContext context) throws Exception {
 		Activator.context = context;
-		Activator.moduleContext = uAALBundleContainer.THE_CONTAINER.registerModule(new Object[] { context });
+		Activator.moduleContext = OSGiContainer.THE_CONTAINER.registerModule(new Object[] { context });
 
 		LogUtils.logInfo(moduleContext, Activator.class, "start", "starting Activator");
 		this.context.registerService(ProfileAgent.class.getName(), new ProfileAgentImpl(moduleContext), null);

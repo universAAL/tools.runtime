@@ -9,7 +9,7 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
 import org.osgi.framework.ServiceRegistration;
 import org.universAAL.middleware.container.ModuleContext;
-import org.universAAL.middleware.container.osgi.uAALBundleContainer;
+import org.universAAL.middleware.container.osgi.OSGiContainer;
 import org.universAAL.ontology.phThing.Device;
 import org.universAAL.ontology.profile.AALSpace;
 import org.universAAL.ontology.profile.User;
@@ -63,7 +63,7 @@ public class Activator implements BundleActivator {
 	 */
 	public void start(BundleContext bundleContext) throws Exception {
 		Activator.context = bundleContext;
-		mc = uAALBundleContainer.THE_CONTAINER.registerModule(new Object[] { context });
+		mc = OSGiContainer.THE_CONTAINER.registerModule(new Object[] { context });
 
 		userxml = new File(new File(new File(mc.getConfigHome().getParent(), "uCC"), "user"), "users.xml");
 

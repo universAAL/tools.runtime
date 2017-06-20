@@ -3,7 +3,7 @@ package org.universAAL.ucc.controller;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.universAAL.middleware.container.ModuleContext;
-import org.universAAL.middleware.container.osgi.uAALBundleContainer;
+import org.universAAL.middleware.container.osgi.OSGiContainer;
 import org.universAAL.middleware.managers.api.SpaceManager;
 import org.universAAL.middleware.managers.api.DeployManager;
 import org.universAAL.ucc.api.IDeinstaller;
@@ -53,7 +53,7 @@ public class Activator implements BundleActivator {
 
 	private void getManagers() {
 		System.out.println("[ucc.controller.Activator.getManagers]");
-		ModuleContext moduleContext = uAALBundleContainer.THE_CONTAINER.registerModule(new Object[] { context });
+		ModuleContext moduleContext = OSGiContainer.THE_CONTAINER.registerModule(new Object[] { context });
 
 		if (moduleContext == null) {
 			System.out.println("[ucc.controller.Activator.getManagers] moduleContext is null!");

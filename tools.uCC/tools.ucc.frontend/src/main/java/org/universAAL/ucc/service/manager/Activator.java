@@ -11,7 +11,7 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
 import org.osgi.framework.ServiceRegistration;
 import org.universAAL.middleware.container.ModuleContext;
-import org.universAAL.middleware.container.osgi.uAALBundleContainer;
+import org.universAAL.middleware.container.osgi.OSGiContainer;
 import org.universAAL.middleware.service.DefaultServiceCaller;
 import org.universAAL.middleware.service.ServiceCaller;
 //import org.universAAL.middleware.service.ServiceResponse;
@@ -56,7 +56,7 @@ public class Activator implements BundleActivator {
 
 	public void start(BundleContext context) throws Exception {
 		Activator.bc = context;
-		mContext = uAALBundleContainer.THE_CONTAINER.registerModule(new Object[] { context });
+		mContext = OSGiContainer.THE_CONTAINER.registerModule(new Object[] { context });
 
 		configHome = new File(mContext.getConfigHome().getParentFile(), "uCC");
 		tempUsrvFiles = new File(configHome, "tempUsrvFiles");

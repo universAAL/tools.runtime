@@ -3,7 +3,7 @@ package org.universAAL.tools.makrorecorder.swingGUI;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.universAAL.middleware.container.ModuleContext;
-import org.universAAL.middleware.container.osgi.uAALBundleContainer;
+import org.universAAL.middleware.container.osgi.OSGiContainer;
 
 import org.universAAL.middleware.serialization.MessageContentSerializer;
 
@@ -24,7 +24,7 @@ public class Activator implements BundleActivator {
 
 	public void start(BundleContext context) throws Exception {
 		bundleContext = context;
-		moduleContext = uAALBundleContainer.THE_CONTAINER.registerModule(new Object[] { bundleContext });
+		moduleContext = OSGiContainer.THE_CONTAINER.registerModule(new Object[] { bundleContext });
 		serializer = (MessageContentSerializer) context
 				.getService(context.getServiceReference(MessageContentSerializer.class.getName()));
 

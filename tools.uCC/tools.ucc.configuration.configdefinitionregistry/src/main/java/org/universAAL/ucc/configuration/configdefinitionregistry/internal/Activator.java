@@ -4,7 +4,7 @@ import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
 import org.universAAL.middleware.container.ModuleContext;
-import org.universAAL.middleware.container.osgi.uAALBundleContainer;
+import org.universAAL.middleware.container.osgi.OSGiContainer;
 import org.universAAL.ucc.configuration.configdefinitionregistry.ConfigurationDefinitionRegistryImpl;
 import org.universAAL.ucc.configuration.configdefinitionregistry.interfaces.ConfigurationDefinitionRegistry;
 
@@ -37,7 +37,7 @@ public class Activator implements BundleActivator {
 	 */
 	public void start(BundleContext bundleContext) throws Exception {
 
-		Activator.moduleContext = uAALBundleContainer.THE_CONTAINER.registerModule(new Object[] { context });
+		Activator.moduleContext = OSGiContainer.THE_CONTAINER.registerModule(new Object[] { context });
 
 		Activator.context = bundleContext;
 		context.registerService(ConfigurationDefinitionRegistry.class.getName(),

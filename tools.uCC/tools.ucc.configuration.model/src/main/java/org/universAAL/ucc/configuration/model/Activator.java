@@ -3,7 +3,7 @@ package org.universAAL.ucc.configuration.model;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.universAAL.middleware.container.ModuleContext;
-import org.universAAL.middleware.container.osgi.uAALBundleContainer;
+import org.universAAL.middleware.container.osgi.OSGiContainer;
 
 public class Activator implements BundleActivator {
 
@@ -27,7 +27,7 @@ public class Activator implements BundleActivator {
 	 */
 	public void start(BundleContext bundleContext) throws Exception {
 		Activator.context = bundleContext;
-		mc = uAALBundleContainer.THE_CONTAINER.registerModule(new Object[] { context });
+		mc = OSGiContainer.THE_CONTAINER.registerModule(new Object[] { context });
 
 	}
 

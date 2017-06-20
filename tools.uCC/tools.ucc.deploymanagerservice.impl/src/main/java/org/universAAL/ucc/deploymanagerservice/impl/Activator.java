@@ -13,7 +13,7 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
 import org.osgi.framework.ServiceRegistration;
 import org.universAAL.middleware.container.ModuleContext;
-import org.universAAL.middleware.container.osgi.uAALBundleContainer;
+import org.universAAL.middleware.container.osgi.OSGiContainer;
 import org.universAAL.ucc.deploymanagerservice.DeployManagerService;
 import org.universAAL.ucc.frontend.api.IFrontend;
 
@@ -24,7 +24,7 @@ public class Activator implements BundleActivator {
 
 	public void start(BundleContext bc) throws Exception {
 		context = bc;
-		ModuleContext mc = uAALBundleContainer.THE_CONTAINER.registerModule(new Object[] { context });
+		ModuleContext mc = OSGiContainer.THE_CONTAINER.registerModule(new Object[] { context });
 
 		File setupProps = new File(new File(new File(mc.getConfigHome().getParentFile(), "uCC"), "setup"),
 				"setup.properties");
