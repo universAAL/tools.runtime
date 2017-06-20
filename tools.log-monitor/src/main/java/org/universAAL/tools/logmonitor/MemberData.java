@@ -132,8 +132,8 @@ public class MemberData {
 		String s = id;
 		int idx = id.lastIndexOf('#');
 		s = id.substring(0, idx);
-		if (s.startsWith(AbstractBus.uAAL_OPTIONAL_URI_PREFIX))
-			s = s.substring(AbstractBus.uAAL_OPTIONAL_URI_PREFIX.length());
+		if (s.startsWith(AbstractBus.OPTIONAL_URI_PREFIX))
+			s = s.substring(AbstractBus.OPTIONAL_URI_PREFIX.length());
 		int idx2 = s.lastIndexOf('/');
 		space = s.substring(0, idx2);
 		peer = s.substring(idx2 + 1);
