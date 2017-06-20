@@ -25,7 +25,7 @@ import org.universAAL.middleware.rdf.Resource;
 
 /**
  * The main frame.
- * 
+ *
  * @author Carsten Stockloew
  */
 public class OntologyGui extends JPanel implements TreeSelectionListener {
@@ -89,7 +89,7 @@ public class OntologyGui extends JPanel implements TreeSelectionListener {
 					DefaultMutableTreeNode group = appOnts;
 
 					String module = OntologyManagement.getInstance().getRegisteringModuleID(ontURI);
-					if (ontURI.toLowerCase().startsWith(Resource.uAAL_NAMESPACE_PREFIX.toLowerCase())) {
+					if (ontURI.toLowerCase().startsWith(Resource.NAMESPACE_PREFIX.toLowerCase())) {
 						if (module.startsWith("mw."))
 							group = mwOnts;
 						else if (module.startsWith("ont."))

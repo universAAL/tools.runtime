@@ -834,7 +834,7 @@ public class FrontendImpl implements IFrontend {
 
 		ServiceRequest sr = new ServiceRequest(new ProfilingService(), null);
 		sr.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS },
-				new User(Constants.uAAL_MIDDLEWARE_LOCAL_ID_PREFIX + userID));
+				new User(Constants.MIDDLEWARE_LOCAL_ID_PREFIX + userID));
 		sr.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS, Profilable.PROP_HAS_PROFILE,
 				Profile.PROP_HAS_SUB_PROFILE, MenuProfile.PROP_ENTRY }, me);
 		sr.addRemoveEffect(new String[] { ProfilingService.PROP_CONTROLS, Profilable.PROP_HAS_PROFILE,
@@ -844,7 +844,7 @@ public class FrontendImpl implements IFrontend {
 		if (res.getCallStatus() == CallStatus.succeeded) {
 			LogUtils.logDebug(Activator.getmContext(), FrontendImpl.class, "removeEntry",
 					new Object[] { "existing menu entry " + entryName + " for user ",
-							Constants.uAAL_MIDDLEWARE_LOCAL_ID_PREFIX + userID, " added." },
+							Constants.MIDDLEWARE_LOCAL_ID_PREFIX + userID, " added." },
 					null);
 		} else {
 			LogUtils.logDebug(Activator.getmContext(), FrontendImpl.class, "removeEntry",
