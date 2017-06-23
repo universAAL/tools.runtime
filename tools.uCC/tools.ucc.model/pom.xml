@@ -33,9 +33,9 @@
 						<Bundle-Name>${project.groupId}.${project.artifactId}</Bundle-Name>
 						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
 						<Bundle-Version>${project.version}</Bundle-Version>
-						<Export-Package>org.universAAL.ucc.model.*</Export-Package>
-<!-- 							org.universAAL.ucc.model, org.universAAL.ucc.model.jaxb, -->
-<!-- 							org.universAAL.ucc.model.usrv</Export-Package> -->
+						<Export-Package>org.universAAL.tools.ucc.model.*</Export-Package>
+<!-- 							org.universAAL.tools.ucc.model, org.universAAL.tools.ucc.model.jaxb, -->
+<!-- 							org.universAAL.tools.ucc.model.usrv</Export-Package> -->
 					</instructions>
 				</configuration>
 			</plugin>

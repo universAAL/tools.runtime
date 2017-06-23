@@ -60,9 +60,9 @@
 				<configuration>
 					<instructions>
 						<Bundle-Name>${project.name}</Bundle-Name>
-						<Bundle-Activator>org.universAAL.ucc.profile.agent.osgi.Activator</Bundle-Activator>
+						<Bundle-Activator>org.universAAL.tools.ucc.profile.agent.osgi.Activator</Bundle-Activator>
 						<Bundle-Description>${project.description}</Bundle-Description>
-						<Export-Package>org.universAAL.ucc.profile.agent</Export-Package>
+						<Export-Package>org.universAAL.tools.ucc.profile.agent</Export-Package>
 						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
 					</instructions>
 				</configuration>

@@ -34,7 +34,7 @@
 						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
 						<Bundle-Name>${project.groupId}.${project.artifactId}</Bundle-Name>
 						<Bundle-Version>${project.version}</Bundle-Version>
-						<Export-Package>org.universAAL.ucc.configuration.model.*</Export-Package>
+						<Export-Package>org.universAAL.tools.ucc.configuration.model.*</Export-Package>
 					</instructions>
 				</configuration>
 			</plugin>

@@ -101,39 +101,39 @@
 						<Bundle-Name>${project.groupId}.${project.artifactId}</Bundle-Name>
 						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
 						<Bundle-Version>${project.version}</Bundle-Version>
-						<Bundle-Activator>org.universAAL.ucc.service.manager.Activator</Bundle-Activator>
+						<Bundle-Activator>org.universAAL.tools.ucc.service.manager.Activator</Bundle-Activator>
 						<Bundle-Vendor>FZI Karlsruhe</Bundle-Vendor>
 <!-- 						<Private-Package>javax.xml.bind.*</Private-Package> -->
 						<Private-Package>
-							org.universAAL.ucc.client.util,
-							org.universAAL.ucc.subscriber,
-							<!-- org.universAAL.ucc.webconnection,-->
-							org.universAAL.ucc.windows,
-							org.universAAL.ucc.controller.desktop, 
-							org.universAAL.ucc.controller.install, 
-							org.universAAL.ucc.controller.aalspace, 
-							org.universAAL.ucc.controller.preferences, 
-							org.universAAL.ucc.controller.ustore.*, 
-							org.universAAL.ucc.frontend.*,
-							org.universAAL.commerce.ustore.tools,
-							org.universAAL.ucc.service.*
+							org.universAAL.tools.ucc.client.util,
+							org.universAAL.tools.ucc.subscriber,
+							<!-- org.universAAL.tools.ucc.webconnection,-->
+							org.universAAL.tools.ucc.windows,
+							org.universAAL.tools.ucc.controller.desktop, 
+							org.universAAL.tools.ucc.controller.install, 
+							org.universAAL.tools.ucc.controller.space, 
+							org.universAAL.tools.ucc.controller.preferences, 
+							org.universAAL.tools.ucc.controller.ustore.*, 
+							org.universAAL.tools.ucc.frontend.*,
+							org.universAAL.tools.ucc.commerce.ustore.tools,
+							org.universAAL.tools.ucc.service.*
 						</Private-Package>
 						<Export-Package>
-<!-- 							org.universAAL.ucc.client.util, -->
-<!-- 							org.universAAL.ucc.controller.desktop, -->
-<!-- 							org.universAAL.ucc.controller.install, -->
-<!-- 							org.universAAL.ucc.controller.aalspace, -->
-<!-- 							org.universAAL.ucc.subscriber, -->
-<!-- 							org.universAAL.ucc.controller.preferences, -->
-							org.universAAL.ucc.frontend.api
-<!-- 							org.universAAL.ucc.frontend.api.impl, -->
-<!-- 							org.universAAL.ucc.service.api, -->
-<!-- 							org.universAAL.ucc.service.impl, -->
-<!-- 							org.universAAL.ucc.service.manager, -->
-<!-- 							org.universAAL.ucc.ustore.ws.client, -->
-<!-- 							org.universAAL.ucc.webconnection, -->
-<!-- 							org.universAAL.ucc.windows, -->
-<!-- 							org.universAAL.ucc.controller.ustore.services -->
+<!-- 							org.universAAL.tools.ucc.client.util, -->
+<!-- 							org.universAAL.tools.ucc.controller.desktop, -->
+<!-- 							org.universAAL.tools.ucc.controller.install, -->
+<!-- 							org.universAAL.tools.ucc.controller.aalspace, -->
+<!-- 							org.universAAL.tools.ucc.subscriber, -->
+<!-- 							org.universAAL.tools.ucc.controller.preferences, -->
+							org.universAAL.tools.ucc.frontend.api
+<!-- 							org.universAAL.tools.ucc.frontend.api.impl, -->
+<!-- 							org.universAAL.tools.ucc.service.api, -->
+<!-- 							org.universAAL.tools.ucc.service.impl, -->
+<!-- 							org.universAAL.tools.ucc.service.manager, -->
+<!-- 							org.universAAL.tools.ucc.ustore.ws.client, -->
+<!-- 							org.universAAL.tools.ucc.webconnection, -->
+<!-- 							org.universAAL.tools.ucc.windows, -->
+<!-- 							org.universAAL.tools.ucc.controller.ustore.services -->
 							</Export-Package>
 <!-- 						<Require-Bundle>com.vaadin;bundle-version="6.8.3"</Require-Bundle> -->
 						<Service-Component>OSGI-INF/ucc.xml</Service-Component>

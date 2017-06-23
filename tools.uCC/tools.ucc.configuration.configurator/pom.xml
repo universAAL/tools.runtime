@@ -49,10 +49,10 @@
 						<Bundle-Name>${project.groupId}.${project.artifactId}</Bundle-Name>
 						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
 						<Bundle-Version>${project.version}</Bundle-Version>
-						<Bundle-Activator>org.universAAL.ucc.configuration.internal.Activator</Bundle-Activator>
-						<Export-Package>org.universAAL.ucc.configuration.beans,
-							org.universAAL.ucc.configuration.view,
-							org.universAAL.ucc.configuration.internal</Export-Package>
+						<Bundle-Activator>org.universAAL.tools.ucc.configuration.internal.Activator</Bundle-Activator>
+						<Export-Package>org.universAAL.tools.ucc.configuration.beans,
+							org.universAAL.tools.ucc.configuration.view,
+							org.universAAL.tools.ucc.configuration.internal</Export-Package>
 					</instructions>
 				</configuration>
 			</plugin>

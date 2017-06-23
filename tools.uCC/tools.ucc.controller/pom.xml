@@ -35,11 +35,11 @@
 				<configuration>
 					<instructions>
 						<Bundle-Name>${project.groupId}.${project.artifactId}</Bundle-Name>
-						<Bundle-Activator>org.universAAL.ucc.controller.Activator</Bundle-Activator>
+						<Bundle-Activator>org.universAAL.tools.ucc.controller.Activator</Bundle-Activator>
 						<Bundle-Description>${project.description}</Bundle-Description>
 						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
 						<Bundle-Version>${project.version}</Bundle-Version>
-						<Export-Package>org.universAAL.ucc.api</Export-Package>
+						<Export-Package>org.universAAL.tools.ucc.api</Export-Package>
 					</instructions>
 				</configuration>
 			</plugin>

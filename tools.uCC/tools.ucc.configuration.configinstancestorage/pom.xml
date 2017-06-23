@@ -38,13 +38,13 @@
 						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
 						<Bundle-Name>${project.groupId}.${project.artifactId}</Bundle-Name>
 						<Bundle-Version>${project.version}</Bundle-Version>
-						<Bundle-Activator>org.universAAL.ucc.configuration.storage.internal.Activator</Bundle-Activator>
-						<Export-Package>org.universAAL.ucc.configuration.api,
-							org.universAAL.ucc.configuration.storage,
-							org.universAAL.ucc.configuration.storage.exceptions,
-							org.universAAL.ucc.configuration.storage.interfaces,
-							org.universAAL.ucc.configuration.storage.internal,
-							org.universAAL.ucc.configuration.storage.servicetracker</Export-Package>
+						<Bundle-Activator>org.universAAL.tools.ucc.configuration.storage.internal.Activator</Bundle-Activator>
+						<Export-Package>org.universAAL.tools.ucc.configuration.api,
+							org.universAAL.tools.ucc.configuration.storage,
+							org.universAAL.tools.ucc.configuration.storage.exceptions,
+							org.universAAL.tools.ucc.configuration.storage.interfaces,
+							org.universAAL.tools.ucc.configuration.storage.internal,
+							org.universAAL.tools.ucc.configuration.storage.servicetracker</Export-Package>
 					</instructions>
 				</configuration>
 			</plugin>

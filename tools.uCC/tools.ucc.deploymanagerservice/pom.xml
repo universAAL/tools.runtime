@@ -26,7 +26,7 @@
 						<Bundle-Description>${project.description}</Bundle-Description>
 						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
 						<Import-Package>javax.jws,org.osgi.framework;version="[1,2)"</Import-Package>
-						<Export-Package>org.universAAL.ucc.deploymanagerservice</Export-Package>
+						<Export-Package>org.universAAL.tools.ucc.deploymanagerservice</Export-Package>
 					</instructions>
 				</configuration>
 			</plugin>

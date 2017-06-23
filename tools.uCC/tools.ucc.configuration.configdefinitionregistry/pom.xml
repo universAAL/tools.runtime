@@ -38,10 +38,10 @@
 						<Bundle-Name>${project.groupId}.${project.artifactId}</Bundle-Name>
 						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
 						<Bundle-Version>${project.version}</Bundle-Version>
-						<Bundle-Activator>org.universAAL.ucc.configuration.configdefinitionregistry.internal.Activator</Bundle-Activator>
-						<Export-Package>org.universAAL.ucc.configuration.configdefinitionregistry.*,
-							org.universAAL.ucc.configuration.configdefinitionregistry.interfaces.*,
-							org.universAAL.ucc.configuration.configdefinitionregistry.internal.*</Export-Package>
+						<Bundle-Activator>org.universAAL.tools.ucc.configuration.configdefinitionregistry.internal.Activator</Bundle-Activator>
+						<Export-Package>org.universAAL.tools.ucc.configuration.configdefinitionregistry.*,
+							org.universAAL.tools.ucc.configuration.configdefinitionregistry.interfaces.*,
+							org.universAAL.tools.ucc.configuration.configdefinitionregistry.internal.*</Export-Package>
 					</instructions>
 				</configuration>
 			</plugin>

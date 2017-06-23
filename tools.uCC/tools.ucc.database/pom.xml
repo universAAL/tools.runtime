@@ -36,15 +36,15 @@
 					<instructions>
 						<Bundle-Name>${project.groupId}.${project.artifactId}</Bundle-Name>
 						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-						<Bundle-Activator>org.universAAL.ucc.database.Activator</Bundle-Activator>
-						<Export-Package>org.universAAL.ucc.database.aalspace,
-							org.universAAL.ucc.database.listener.interfaces,
-							org.universAAL.ucc.database.listener.services,
-							org.universAAL.ucc.startup.api,
-							org.universAAL.ucc.startup.api.impl,
-							org.universAAL.ucc.startup.model,
-							org.universAAL.ucc.database.parser</Export-Package>
-						<Private-Package>org.universAAL.ucc.database</Private-Package>
+						<Bundle-Activator>org.universAAL.tools.ucc.database.Activator</Bundle-Activator>
+						<Export-Package>org.universAAL.tools.ucc.database.space,
+							org.universAAL.tools.ucc.database.listener.interfaces,
+							org.universAAL.tools.ucc.database.listener.services,
+							org.universAAL.tools.ucc.startup.api,
+							org.universAAL.tools.ucc.startup.api.impl,
+							org.universAAL.tools.ucc.startup.model,
+							org.universAAL.tools.ucc.database.parser</Export-Package>
+						<Private-Package>org.universAAL.tools.ucc.database</Private-Package>
 					</instructions>
 				</configuration>
 			</plugin>

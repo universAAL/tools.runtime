@@ -45,13 +45,13 @@
 						<Bundle-Description>Implementation of a service for deploy manager
 							service for uStore</Bundle-Description>
 						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-						<Bundle-Activator>org.universAAL.ucc.deploymanager
+						<Bundle-Activator>org.universAAL.tools.ucc.deploymanager
 							service.impl.Activator</Bundle-Activator>
 						<Import-Package>org.universAAL.middleware.container.utils,
 							org.universAAL.middleware.container,
 							org.universAAL.middleware.container.osgi,
-							org.universAAL.ucc.deploymanagerservice,
-							org.universAAL.ucc.frontend.api,org.osgi.framework;version="[1,2)"</Import-Package>
+							org.universAAL.tools.ucc.deploymanagerservice,
+							org.universAAL.tools.ucc.frontend.api,org.osgi.framework;version="[1,2)"</Import-Package>
 					</instructions>
 				</configuration>
 			</plugin>
