@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="c13190" href="./SimpleConfigItemTypes.html" title="org.universAAL.tools.ucc.configuration.model.SimpleConfigItemTypes" alt="" coords="15,17,177,42"/>
+<area shape="rect" id="node1" href="./SimpleConfigItemTypes.html" title="&lt;TABLE&gt;" alt="" coords="5,5,187,53"/>
+<area shape="rect" id="c13191" href="./SimpleConfigurationOption.html" title="org.universAAL.tools.ucc.configuration.model.SimpleConfigurationOption" alt="" coords="95,113,271,138"/>
+<area shape="rect" id="node2" href="./SimpleConfigurationOption.html" title="&lt;TABLE&gt;" alt="" coords="84,101,281,149"/>
+<area shape="rect" id="c13192" href="./Configurator.html" title="org.universAAL.tools.ucc.configuration.model.Configurator" alt="" coords="402,17,494,42"/>
+<area shape="rect" id="node3" href="./Configurator.html" title="&lt;TABLE&gt;" alt="" coords="392,5,504,53"/>
+<area shape="rect" id="c13193" href="./Cardinality.html" title="org.universAAL.tools.ucc.configuration.model.Cardinality" alt="" coords="539,17,621,42"/>
+<area shape="rect" id="node4" href="./Cardinality.html" title="&lt;TABLE&gt;" alt="" coords="528,5,632,53"/>
+<area shape="rect" id="c13194" href="./ConfigOptionRegistry.html" title="org.universAAL.tools.ucc.configuration.model.ConfigOptionRegistry" alt="" coords="666,17,811,42"/>
+<area shape="rect" id="node5" href="./ConfigOptionRegistry.html" title="&lt;TABLE&gt;" alt="" coords="656,5,821,53"/>
+<area shape="rect" id="c13195" href="./ConfigurationOption.html" title="org.universAAL.tools.ucc.configuration.model.ConfigurationOption" alt="" coords="221,17,357,42"/>
+<area shape="rect" id="node6" href="./ConfigurationOption.html" title="&lt;TABLE&gt;" alt="" coords="211,5,368,53"/>
+<area shape="rect" id="c13196" href="./MapConfigurationOption.html" title="org.universAAL.tools.ucc.configuration.model.MapConfigurationOption" alt="" coords="315,113,477,138"/>
+<area shape="rect" id="node7" href="./MapConfigurationOption.html" title="&lt;TABLE&gt;" alt="" coords="305,101,487,149"/>
+<area shape="rect" id="c13197" href="./Activator.html" title="org.universAAL.tools.ucc.configuration.model.Activator" alt="" coords="855,17,929,42"/>
+<area shape="rect" id="node8" href="./Activator.html" title="&lt;TABLE&gt;" alt="" coords="845,5,939,53"/>
+</map>

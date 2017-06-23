@@ -46,35 +46,7 @@ under the License.
           <tbody>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configinstancestorage//checkstyle.html#org.universAAL.ucc.configuration.storage.internal.Activator.java">org/universAAL/ucc/configuration/storage/internal/Activator.java</a>
-                </td>
-                <td>
-                  3
-                </td>
-                <td>
-                  1
-                </td>
-                <td>
-                  10
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configinstancestorage//checkstyle.html#org.universAAL.ucc.configuration.api.ConfigPreferences.java">org/universAAL/ucc/configuration/api/ConfigPreferences.java</a>
-                </td>
-                <td>
-                  6
-                </td>
-                <td>
-                  1
-                </td>
-                <td>
-                  23
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configinstancestorage//checkstyle.html#org.universAAL.ucc.configuration.storage.exceptions.NoConfigurationFoundException.java">org/universAAL/ucc/configuration/storage/exceptions/NoConfigurationFoundException.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configinstancestorage//checkstyle.html#org.universAAL.tools.ucc.configuration.storage.exceptions.NoConfigurationFoundException.java">org/universAAL/tools/ucc/configuration/storage/exceptions/NoConfigurationFoundException.java</a>
                 </td>
                 <td>
                   2
@@ -88,21 +60,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configinstancestorage//checkstyle.html#org.universAAL.ucc.configuration.storage.servicetracker.StorageServiceTracker.java">org/universAAL/ucc/configuration/storage/servicetracker/StorageServiceTracker.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
-                </td>
-                <td>
-                  4
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configinstancestorage//checkstyle.html#org.universAAL.ucc.configuration.storage.interfaces.StorageChangedListener.java">org/universAAL/ucc/configuration/storage/interfaces/StorageChangedListener.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configinstancestorage//checkstyle.html#org.universAAL.tools.ucc.configuration.storage.interfaces.StorageChangedListener.java">org/universAAL/tools/ucc/configuration/storage/interfaces/StorageChangedListener.java</a>
                 </td>
                 <td>
                   1
@@ -116,7 +74,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configinstancestorage//checkstyle.html#org.universAAL.ucc.configuration.storage.ConfigurationInstancesStorageImpl.java">org/universAAL/ucc/configuration/storage/ConfigurationInstancesStorageImpl.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configinstancestorage//checkstyle.html#org.universAAL.tools.ucc.configuration.storage.ConfigurationInstancesStorageImpl.java">org/universAAL/tools/ucc/configuration/storage/ConfigurationInstancesStorageImpl.java</a>
                 </td>
                 <td>
                   3
@@ -130,10 +88,52 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configinstancestorage//checkstyle.html#org.universAAL.ucc.configuration.storage.interfaces.ConfigurationInstancesStorage.java">org/universAAL/ucc/configuration/storage/interfaces/ConfigurationInstancesStorage.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configinstancestorage//checkstyle.html#org.universAAL.tools.ucc.configuration.storage.servicetracker.StorageServiceTracker.java">org/universAAL/tools/ucc/configuration/storage/servicetracker/StorageServiceTracker.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  4
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configinstancestorage//checkstyle.html#org.universAAL.tools.ucc.configuration.storage.interfaces.ConfigurationInstancesStorage.java">org/universAAL/tools/ucc/configuration/storage/interfaces/ConfigurationInstancesStorage.java</a>
                 </td>
                 <td>
                   7
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  10
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configinstancestorage//checkstyle.html#org.universAAL.tools.ucc.configuration.api.ConfigPreferences.java">org/universAAL/tools/ucc/configuration/api/ConfigPreferences.java</a>
+                </td>
+                <td>
+                  6
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  23
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configinstancestorage//checkstyle.html#org.universAAL.tools.ucc.configuration.storage.internal.Activator.java">org/universAAL/tools/ucc/configuration/storage/internal/Activator.java</a>
+                </td>
+                <td>
+                  3
                 </td>
                 <td>
                   1

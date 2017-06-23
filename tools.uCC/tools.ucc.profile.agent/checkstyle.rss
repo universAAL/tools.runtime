@@ -46,21 +46,7 @@ under the License.
           <tbody>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.profile.agent//checkstyle.html#org.universAAL.ucc.profile.agent.ProfileAgent.java">org/universAAL/ucc/profile/agent/ProfileAgent.java</a>
-                </td>
-                <td>
-                  25
-                </td>
-                <td>
-                  2
-                </td>
-                <td>
-                  50
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.profile.agent//checkstyle.html#org.universAAL.ucc.profile.agent.osgi.Activator.java">org/universAAL/ucc/profile/agent/osgi/Activator.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.profile.agent//checkstyle.html#org.universAAL.tools.ucc.profile.agent.osgi.Activator.java">org/universAAL/tools/ucc/profile/agent/osgi/Activator.java</a>
                 </td>
                 <td>
                   18
@@ -74,7 +60,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.profile.agent//checkstyle.html#org.universAAL.ucc.profile.agent.impl.ProfileAgentImpl.java">org/universAAL/ucc/profile/agent/impl/ProfileAgentImpl.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.profile.agent//checkstyle.html#org.universAAL.tools.ucc.profile.agent.impl.ProfileAgentImpl.java">org/universAAL/tools/ucc/profile/agent/impl/ProfileAgentImpl.java</a>
                 </td>
                 <td>
                   4
@@ -84,6 +70,20 @@ under the License.
                 </td>
                 <td>
                   126
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.profile.agent//checkstyle.html#org.universAAL.tools.ucc.profile.agent.ProfileAgent.java">org/universAAL/tools/ucc/profile/agent/ProfileAgent.java</a>
+                </td>
+                <td>
+                  25
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  50
                 </td>
               </tr>
                       </tbody>

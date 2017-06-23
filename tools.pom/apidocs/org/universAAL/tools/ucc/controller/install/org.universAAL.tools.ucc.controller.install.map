@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="c20719" href="./DeinstallController.html" title="org.universAAL.tools.ucc.controller.install.DeinstallController" alt="" coords="16,17,144,42"/>
+<area shape="rect" id="node1" href="./DeinstallController.html" title="&lt;TABLE&gt;" alt="" coords="5,5,155,53"/>
+<area shape="rect" id="c20720" href="./UsrvInfoController.html" title="org.universAAL.tools.ucc.controller.install.UsrvInfoController" alt="" coords="189,17,315,42"/>
+<area shape="rect" id="node2" href="./UsrvInfoController.html" title="&lt;TABLE&gt;" alt="" coords="179,5,325,53"/>
+<area shape="rect" id="c20721" href="./AALServiceReceiver.html" title="org.universAAL.tools.ucc.controller.install.AALServiceReceiver" alt="" coords="360,17,501,42"/>
+<area shape="rect" id="node3" href="./AALServiceReceiver.html" title="&lt;TABLE&gt;" alt="" coords="349,5,512,53"/>
+<area shape="rect" id="c20722" href="./LicenseController.html" title="org.universAAL.tools.ucc.controller.install.LicenseController" alt="" coords="546,17,667,42"/>
+<area shape="rect" id="node4" href="./LicenseController.html" title="&lt;TABLE&gt;" alt="" coords="536,5,677,53"/>
+<area shape="rect" id="c20723" href="./DeploymentInfoController.html" title="org.universAAL.tools.ucc.controller.install.DeploymentInfoController" alt="" coords="711,17,881,42"/>
+<area shape="rect" id="node5" href="./DeploymentInfoController.html" title="&lt;TABLE&gt;" alt="" coords="701,5,891,53"/>
+</map>

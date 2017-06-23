@@ -1,0 +1,30 @@
+<map id="G" name="G">
+<area shape="rect" id="c13508" href="./Configuration.html" title="org.universAAL.tools.ucc.configuration.model.configurationdefinition.Configuration" alt="" coords="70,17,167,42"/>
+<area shape="rect" id="node1" href="./Configuration.html" title="&lt;TABLE&gt;" alt="" coords="60,5,177,53"/>
+<area shape="rect" id="c13509" href="./SPARQLConfigItem.html" title="org.universAAL.tools.ucc.configuration.model.configurationdefinition.SPARQLConfigItem" alt="" coords="16,113,155,138"/>
+<area shape="rect" id="node2" href="./SPARQLConfigItem.html" title="&lt;TABLE&gt;" alt="" coords="5,101,165,149"/>
+<area shape="rect" id="c13510" href="./MapConfigItem.html" title="org.universAAL.tools.ucc.configuration.model.configurationdefinition.MapConfigItem" alt="" coords="200,113,309,138"/>
+<area shape="rect" id="node3" href="./MapConfigItem.html" title="&lt;TABLE&gt;" alt="" coords="189,101,320,149"/>
+<area shape="rect" id="c13511" href="./SimpleConfigItem.html" title="org.universAAL.tools.ucc.configuration.model.configurationdefinition.SimpleConfigItem" alt="" coords="355,113,480,138"/>
+<area shape="rect" id="node4" href="./SimpleConfigItem.html" title="&lt;TABLE&gt;" alt="" coords="344,101,491,149"/>
+<area shape="rect" id="c13512" href="./Option.html" title="org.universAAL.tools.ucc.configuration.model.configurationdefinition.Option" alt="" coords="343,17,401,42"/>
+<area shape="rect" id="node5" href="./Option.html" title="&lt;TABLE&gt;" alt="" coords="332,5,412,53"/>
+<area shape="rect" id="c13513" href="./Category.html" title="org.universAAL.tools.ucc.configuration.model.configurationdefinition.Category" alt="" coords="446,17,519,42"/>
+<area shape="rect" id="node6" href="./Category.html" title="&lt;TABLE&gt;" alt="" coords="436,5,529,53"/>
+<area shape="rect" id="c13514" href="./Options.html" title="org.universAAL.tools.ucc.configuration.model.configurationdefinition.Options" alt="" coords="563,17,629,42"/>
+<area shape="rect" id="node7" href="./Options.html" title="&lt;TABLE&gt;" alt="" coords="553,5,639,53"/>
+<area shape="rect" id="c13515" href="./ObjectFactory.html" title="org.universAAL.tools.ucc.configuration.model.configurationdefinition.ObjectFactory" alt="" coords="673,17,775,42"/>
+<area shape="rect" id="node8" href="./ObjectFactory.html" title="&lt;TABLE&gt;" alt="" coords="663,5,785,53"/>
+<area shape="rect" id="c13516" href="./Validator.html" title="org.universAAL.tools.ucc.configuration.model.configurationdefinition.Validator" alt="" coords="820,17,892,42"/>
+<area shape="rect" id="node9" href="./Validator.html" title="&lt;TABLE&gt;" alt="" coords="809,5,903,53"/>
+<area shape="rect" id="c13517" href="./Item.html" title="org.universAAL.tools.ucc.configuration.model.configurationdefinition.Item" alt="" coords="939,17,986,42"/>
+<area shape="rect" id="node10" href="./Item.html" title="&lt;TABLE&gt;" alt="" coords="927,5,999,53"/>
+<area shape="rect" id="c13518" href="./OnConfigurationModelChangedListener.html" title="org.universAAL.tools.ucc.configuration.model.configurationdefinition.OnConfigurationModelChangedListener" alt="" coords="1033,17,1281,42"/>
+<area shape="rect" id="node11" href="./OnConfigurationModelChangedListener.html" title="&lt;TABLE&gt;" alt="" coords="1023,5,1292,53"/>
+<area shape="rect" id="c13519" href="./Validators.html" title="org.universAAL.tools.ucc.configuration.model.configurationdefinition.Validators" alt="" coords="1326,17,1405,42"/>
+<area shape="rect" id="node12" href="./Validators.html" title="&lt;TABLE&gt;" alt="" coords="1316,5,1415,53"/>
+<area shape="rect" id="c13520" href="./Dependency.html" title="org.universAAL.tools.ucc.configuration.model.configurationdefinition.Dependency" alt="" coords="1449,17,1543,42"/>
+<area shape="rect" id="node13" href="./Dependency.html" title="&lt;TABLE&gt;" alt="" coords="1439,5,1553,53"/>
+<area shape="rect" id="c13521" href="./ConfigItem.html" title="org.universAAL.tools.ucc.configuration.model.configurationdefinition.ConfigItem" alt="" coords="212,17,297,42"/>
+<area shape="rect" id="node14" href="./ConfigItem.html" title="&lt;TABLE&gt;" alt="" coords="201,5,308,53"/>
+</map>

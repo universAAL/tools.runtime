@@ -46,7 +46,7 @@ under the License.
           <tbody>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.validators.IntMinMaxValidator.java">org/universAAL/ucc/configuration/model/validators/IntMinMaxValidator.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.servicetracker.ValidationServiceTracker.java">org/universAAL/tools/ucc/configuration/model/servicetracker/ValidationServiceTracker.java</a>
                 </td>
                 <td>
                   0
@@ -55,26 +55,96 @@ under the License.
                   0
                 </td>
                 <td>
-                  10
+                  12
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.configurationdefinition.SimpleConfigItem.java">org/universAAL/ucc/configuration/model/configurationdefinition/SimpleConfigItem.java</a>
-                </td>
-                <td>
-                  17
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.interfaces.ConfigurationValidatorFactory.java">org/universAAL/tools/ucc/configuration/model/interfaces/ConfigurationValidatorFactory.java</a>
                 </td>
                 <td>
                   0
                 </td>
                 <td>
-                  6
+                  0
+                </td>
+                <td>
+                  2
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.configurationdefinition.Validators.java">org/universAAL/ucc/configuration/model/configurationdefinition/Validators.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.Activator.java">org/universAAL/tools/ucc/configuration/model/Activator.java</a>
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  9
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.validators.IntegerValidator.java">org/universAAL/tools/ucc/configuration/model/validators/IntegerValidator.java</a>
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  8
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.SimpleConfigurationOption.java">org/universAAL/tools/ucc/configuration/model/SimpleConfigurationOption.java</a>
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  4
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.configurationdefinition.MapConfigItem.java">org/universAAL/tools/ucc/configuration/model/configurationdefinition/MapConfigItem.java</a>
+                </td>
+                <td>
+                  13
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  3
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.exceptions.ValidationException.java">org/universAAL/tools/ucc/configuration/model/exceptions/ValidationException.java</a>
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  1
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.configurationdefinition.Dependency.java">org/universAAL/tools/ucc/configuration/model/configurationdefinition/Dependency.java</a>
                 </td>
                 <td>
                   16
@@ -88,139 +158,13 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.configurationdefinition.OnConfigurationModelChangedListener.java">org/universAAL/ucc/configuration/model/configurationdefinition/OnConfigurationModelChangedListener.java</a>
-                </td>
-                <td>
-                  13
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  3
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.interfaces.ConfigurationValidatorFactory.java">org/universAAL/ucc/configuration/model/interfaces/ConfigurationValidatorFactory.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.SimpleConfigItemTypes.java">org/universAAL/ucc/configuration/model/SimpleConfigItemTypes.java</a>
-                </td>
-                <td>
-                  5
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  4
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.ConfigOptionRegistry.java">org/universAAL/ucc/configuration/model/ConfigOptionRegistry.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.validators.RegExpValidator.java">org/universAAL/tools/ucc/configuration/model/validators/RegExpValidator.java</a>
                 </td>
                 <td>
                   2
                 </td>
                 <td>
                   0
-                </td>
-                <td>
-                  26
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.configurationdefinition.Category.java">org/universAAL/ucc/configuration/model/configurationdefinition/Category.java</a>
-                </td>
-                <td>
-                  31
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  12
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.interfaces.OnConfigurationChangedListener.java">org/universAAL/ucc/configuration/model/interfaces/OnConfigurationChangedListener.java</a>
-                </td>
-                <td>
-                  2
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.configurationdefinition.ConfigItem.java">org/universAAL/ucc/configuration/model/configurationdefinition/ConfigItem.java</a>
-                </td>
-                <td>
-                  42
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  24
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.configurationdefinition.MapConfigItem.java">org/universAAL/ucc/configuration/model/configurationdefinition/MapConfigItem.java</a>
-                </td>
-                <td>
-                  13
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  3
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.validators.DoubleValidator.java">org/universAAL/ucc/configuration/model/validators/DoubleValidator.java</a>
-                </td>
-                <td>
-                  1
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  8
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.servicetracker.ListenerServiceTracker.java">org/universAAL/ucc/configuration/model/servicetracker/ListenerServiceTracker.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
                 </td>
                 <td>
                   10
@@ -228,147 +172,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.configurationinstances.package-info.java">org/universAAL/ucc/configuration/model/configurationinstances/package-info.java</a>
-                </td>
-                <td>
-                  6
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.Cardinality.java">org/universAAL/ucc/configuration/model/Cardinality.java</a>
-                </td>
-                <td>
-                  5
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  11
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.interfaces.OnConfigurationChangedListenerFactory.java">org/universAAL/ucc/configuration/model/interfaces/OnConfigurationChangedListenerFactory.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.exceptions.ValidationException.java">org/universAAL/ucc/configuration/model/exceptions/ValidationException.java</a>
-                </td>
-                <td>
-                  2
-                </td>
-                <td>
-                  1
-                </td>
-                <td>
-                  1
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.configurationinstances.ObjectFactory.java">org/universAAL/ucc/configuration/model/configurationinstances/ObjectFactory.java</a>
-                </td>
-                <td>
-                  12
-                </td>
-                <td>
-                  1
-                </td>
-                <td>
-                  15
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.SimpleConfigurationOption.java">org/universAAL/ucc/configuration/model/SimpleConfigurationOption.java</a>
-                </td>
-                <td>
-                  2
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  4
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.interfaces.ConfigurationValidator.java">org/universAAL/ucc/configuration/model/interfaces/ConfigurationValidator.java</a>
-                </td>
-                <td>
-                  5
-                </td>
-                <td>
-                  1
-                </td>
-                <td>
-                  7
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.Configurator.java">org/universAAL/ucc/configuration/model/Configurator.java</a>
-                </td>
-                <td>
-                  2
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  9
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.validators.DoubleMinMaxValidator.java">org/universAAL/ucc/configuration/model/validators/DoubleMinMaxValidator.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
-                </td>
-                <td>
-                  10
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.configurationdefinition.SPARQLConfigItem.java">org/universAAL/ucc/configuration/model/configurationdefinition/SPARQLConfigItem.java</a>
-                </td>
-                <td>
-                  13
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  3
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.ConfigurationOption.java">org/universAAL/ucc/configuration/model/ConfigurationOption.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.ConfigurationOption.java">org/universAAL/tools/ucc/configuration/model/ConfigurationOption.java</a>
                 </td>
                 <td>
                   11
@@ -382,66 +186,24 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.configurationdefinition.Option.java">org/universAAL/ucc/configuration/model/configurationdefinition/Option.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.Cardinality.java">org/universAAL/tools/ucc/configuration/model/Cardinality.java</a>
                 </td>
                 <td>
-                  15
+                  5
                 </td>
                 <td>
                   0
                 </td>
                 <td>
-                  9
+                  11
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.configurationinstances.Value.java">org/universAAL/ucc/configuration/model/configurationinstances/Value.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.configurationdefinition.Category.java">org/universAAL/tools/ucc/configuration/model/configurationdefinition/Category.java</a>
                 </td>
                 <td>
-                  17
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  6
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.validators.IntegerValidator.java">org/universAAL/ucc/configuration/model/validators/IntegerValidator.java</a>
-                </td>
-                <td>
-                  2
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  8
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.interfaces.ModelRegistryChangedListener.java">org/universAAL/ucc/configuration/model/interfaces/ModelRegistryChangedListener.java</a>
-                </td>
-                <td>
-                  1
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.servicetracker.ValidationServiceTracker.java">org/universAAL/ucc/configuration/model/servicetracker/ValidationServiceTracker.java</a>
-                </td>
-                <td>
-                  0
+                  31
                 </td>
                 <td>
                   0
@@ -452,52 +214,24 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.validators.RegExpValidator.java">org/universAAL/ucc/configuration/model/validators/RegExpValidator.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.SimpleConfigItemTypes.java">org/universAAL/tools/ucc/configuration/model/SimpleConfigItemTypes.java</a>
                 </td>
                 <td>
-                  2
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  10
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.configurationdefinition.ObjectFactory.java">org/universAAL/ucc/configuration/model/configurationdefinition/ObjectFactory.java</a>
-                </td>
-                <td>
-                  22
-                </td>
-                <td>
-                  1
-                </td>
-                <td>
-                  45
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.validators.URLValidator.java">org/universAAL/ucc/configuration/model/validators/URLValidator.java</a>
+                  5
                 </td>
                 <td>
                   0
                 </td>
                 <td>
-                  0
-                </td>
-                <td>
-                  8
+                  4
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.configurationdefinition.Item.java">org/universAAL/ucc/configuration/model/configurationdefinition/Item.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.configurationdefinition.Options.java">org/universAAL/tools/ucc/configuration/model/configurationdefinition/Options.java</a>
                 </td>
                 <td>
-                  13
+                  16
                 </td>
                 <td>
                   0
@@ -508,21 +242,35 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.Activator.java">org/universAAL/ucc/configuration/model/Activator.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.servicetracker.ListenerServiceTracker.java">org/universAAL/tools/ucc/configuration/model/servicetracker/ListenerServiceTracker.java</a>
                 </td>
                 <td>
-                  2
+                  0
                 </td>
                 <td>
                   1
                 </td>
                 <td>
-                  9
+                  10
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.configurationdefinition.Configuration.java">org/universAAL/ucc/configuration/model/configurationdefinition/Configuration.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.ConfigOptionRegistry.java">org/universAAL/tools/ucc/configuration/model/ConfigOptionRegistry.java</a>
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  26
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.configurationdefinition.Configuration.java">org/universAAL/tools/ucc/configuration/model/configurationdefinition/Configuration.java</a>
                 </td>
                 <td>
                   32
@@ -536,7 +284,21 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.MapConfigurationOption.java">org/universAAL/ucc/configuration/model/MapConfigurationOption.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.Configurator.java">org/universAAL/tools/ucc/configuration/model/Configurator.java</a>
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  9
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.MapConfigurationOption.java">org/universAAL/tools/ucc/configuration/model/MapConfigurationOption.java</a>
                 </td>
                 <td>
                   2
@@ -550,7 +312,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.configurationdefinition.package-info.java">org/universAAL/ucc/configuration/model/configurationdefinition/package-info.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.configurationinstances.package-info.java">org/universAAL/tools/ucc/configuration/model/configurationinstances/package-info.java</a>
                 </td>
                 <td>
                   6
@@ -564,7 +326,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.configurationdefinition.Validator.java">org/universAAL/ucc/configuration/model/configurationdefinition/Validator.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.configurationdefinition.Validator.java">org/universAAL/tools/ucc/configuration/model/configurationdefinition/Validator.java</a>
                 </td>
                 <td>
                   21
@@ -578,21 +340,49 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.configurationdefinition.Options.java">org/universAAL/ucc/configuration/model/configurationdefinition/Options.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.configurationinstances.ObjectFactory.java">org/universAAL/tools/ucc/configuration/model/configurationinstances/ObjectFactory.java</a>
                 </td>
                 <td>
-                  16
+                  12
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  15
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.configurationdefinition.Option.java">org/universAAL/tools/ucc/configuration/model/configurationdefinition/Option.java</a>
+                </td>
+                <td>
+                  15
                 </td>
                 <td>
                   0
                 </td>
                 <td>
-                  3
+                  9
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.configurationinstances.ConfigurationInstance.java">org/universAAL/ucc/configuration/model/configurationinstances/ConfigurationInstance.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.interfaces.OnConfigurationChangedListener.java">org/universAAL/tools/ucc/configuration/model/interfaces/OnConfigurationChangedListener.java</a>
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.configurationinstances.ConfigurationInstance.java">org/universAAL/tools/ucc/configuration/model/configurationinstances/ConfigurationInstance.java</a>
                 </td>
                 <td>
                   45
@@ -606,7 +396,21 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.configurationdefinition.Dependency.java">org/universAAL/ucc/configuration/model/configurationdefinition/Dependency.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.interfaces.OnConfigurationChangedListenerFactory.java">org/universAAL/tools/ucc/configuration/model/interfaces/OnConfigurationChangedListenerFactory.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  2
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.configurationdefinition.Validators.java">org/universAAL/tools/ucc/configuration/model/configurationdefinition/Validators.java</a>
                 </td>
                 <td>
                   16
@@ -620,7 +424,77 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.ucc.configuration.model.configurationinstances.ConfigOption.java">org/universAAL/ucc/configuration/model/configurationinstances/ConfigOption.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.configurationinstances.Value.java">org/universAAL/tools/ucc/configuration/model/configurationinstances/Value.java</a>
+                </td>
+                <td>
+                  17
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  6
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.validators.DoubleValidator.java">org/universAAL/tools/ucc/configuration/model/validators/DoubleValidator.java</a>
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  8
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.configurationdefinition.SPARQLConfigItem.java">org/universAAL/tools/ucc/configuration/model/configurationdefinition/SPARQLConfigItem.java</a>
+                </td>
+                <td>
+                  13
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  3
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.validators.URLValidator.java">org/universAAL/tools/ucc/configuration/model/validators/URLValidator.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  8
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.configurationdefinition.Item.java">org/universAAL/tools/ucc/configuration/model/configurationdefinition/Item.java</a>
+                </td>
+                <td>
+                  13
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  3
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.configurationinstances.ConfigOption.java">org/universAAL/tools/ucc/configuration/model/configurationinstances/ConfigOption.java</a>
                 </td>
                 <td>
                   21
@@ -630,6 +504,132 @@ under the License.
                 </td>
                 <td>
                   6
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.configurationdefinition.ObjectFactory.java">org/universAAL/tools/ucc/configuration/model/configurationdefinition/ObjectFactory.java</a>
+                </td>
+                <td>
+                  22
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  45
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.validators.IntMinMaxValidator.java">org/universAAL/tools/ucc/configuration/model/validators/IntMinMaxValidator.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  10
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.configurationdefinition.SimpleConfigItem.java">org/universAAL/tools/ucc/configuration/model/configurationdefinition/SimpleConfigItem.java</a>
+                </td>
+                <td>
+                  17
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  6
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.configurationdefinition.OnConfigurationModelChangedListener.java">org/universAAL/tools/ucc/configuration/model/configurationdefinition/OnConfigurationModelChangedListener.java</a>
+                </td>
+                <td>
+                  13
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  3
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.configurationdefinition.package-info.java">org/universAAL/tools/ucc/configuration/model/configurationdefinition/package-info.java</a>
+                </td>
+                <td>
+                  6
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.validators.DoubleMinMaxValidator.java">org/universAAL/tools/ucc/configuration/model/validators/DoubleMinMaxValidator.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  10
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.interfaces.ModelRegistryChangedListener.java">org/universAAL/tools/ucc/configuration/model/interfaces/ModelRegistryChangedListener.java</a>
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.configurationdefinition.ConfigItem.java">org/universAAL/tools/ucc/configuration/model/configurationdefinition/ConfigItem.java</a>
+                </td>
+                <td>
+                  42
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  24
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.model//checkstyle.html#org.universAAL.tools.ucc.configuration.model.interfaces.ConfigurationValidator.java">org/universAAL/tools/ucc/configuration/model/interfaces/ConfigurationValidator.java</a>
+                </td>
+                <td>
+                  5
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  7
                 </td>
               </tr>
                       </tbody>

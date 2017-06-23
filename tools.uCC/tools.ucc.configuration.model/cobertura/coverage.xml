@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="634" branches-covered="0" branches-valid="194" complexity="1.7487437185929648" version="2.1.1" timestamp="1498209339055">
+<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="634" branches-covered="0" branches-valid="194" complexity="1.7487437185929648" version="2.1.1" timestamp="1498233069121">
 	<sources>
 		<source>--source</source>
 		<source>/home/travis/build/universAAL/tools.runtime/tools.uCC/tools.ucc.configuration.model/src/main/java</source>
 	</sources>
 	<packages>
-		<package name="org.universAAL.ucc.configuration.model" line-rate="0.0" branch-rate="0.0" complexity="2.171875">
+		<package name="org.universAAL.tools.ucc.configuration.model" line-rate="0.0" branch-rate="0.0" complexity="2.171875">
 			<classes>
-				<class name="org.universAAL.ucc.configuration.model.Activator" filename="org/universAAL/ucc/configuration/model/Activator.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.Activator" filename="org/universAAL/tools/ucc/configuration/model/Activator.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -51,7 +51,7 @@
 						<line number="42" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.Cardinality" filename="org/universAAL/ucc/configuration/model/Cardinality.java" line-rate="0.0" branch-rate="0.0" complexity="3.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.Cardinality" filename="org/universAAL/tools/ucc/configuration/model/Cardinality.java" line-rate="0.0" branch-rate="0.0" complexity="3.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
@@ -155,7 +155,7 @@
 						<line number="58" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.ConfigOptionRegistry" filename="org/universAAL/ucc/configuration/model/ConfigOptionRegistry.java" line-rate="0.0" branch-rate="0.0" complexity="1.5">
+				<class name="org.universAAL.tools.ucc.configuration.model.ConfigOptionRegistry" filename="org/universAAL/tools/ucc/configuration/model/ConfigOptionRegistry.java" line-rate="0.0" branch-rate="0.0" complexity="1.5">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -165,7 +165,7 @@
 								<line number="31" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="addListener" signature="(Lorg/universAAL/ucc/configuration/model/interfaces/ModelRegistryChangedListener;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="addListener" signature="(Lorg/universAAL/tools/ucc/configuration/model/interfaces/ModelRegistryChangedListener;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="76" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
@@ -183,7 +183,7 @@
 								<line number="64" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getConfigOptionForId" signature="(Ljava/lang/String;)Lorg/universAAL/ucc/configuration/model/ConfigurationOption;" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="getConfigOptionForId" signature="(Ljava/lang/String;)Lorg/universAAL/tools/ucc/configuration/model/ConfigurationOption;" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="47" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
@@ -199,7 +199,7 @@
 								<line number="100" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="register" signature="(Lorg/universAAL/ucc/configuration/model/ConfigurationOption;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="register" signature="(Lorg/universAAL/tools/ucc/configuration/model/ConfigurationOption;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="34" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
@@ -240,7 +240,7 @@
 								<line number="59" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="removeListener" signature="(Lorg/universAAL/ucc/configuration/model/interfaces/ModelRegistryChangedListener;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="removeListener" signature="(Lorg/universAAL/tools/ucc/configuration/model/interfaces/ModelRegistryChangedListener;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="82" hits="0" branch="false"/>
 								<line number="83" hits="0" branch="false"/>
@@ -325,9 +325,9 @@
 						<line number="100" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.ConfigurationOption" filename="org/universAAL/ucc/configuration/model/ConfigurationOption.java" line-rate="0.0" branch-rate="0.0" complexity="2.7058823529411766">
+				<class name="org.universAAL.tools.ucc.configuration.model.ConfigurationOption" filename="org/universAAL/tools/ucc/configuration/model/ConfigurationOption.java" line-rate="0.0" branch-rate="0.0" complexity="2.7058823529411766">
 					<methods>
-						<method name="&lt;init&gt;" signature="(Lorg/universAAL/ucc/configuration/model/configurationdefinition/ConfigItem;Lorg/universAAL/ucc/configuration/model/configurationdefinition/Category;Lorg/universAAL/ucc/configuration/model/ConfigOptionRegistry;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="&lt;init&gt;" signature="(Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/ConfigItem;Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/Category;Lorg/universAAL/tools/ucc/configuration/model/ConfigOptionRegistry;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="60" hits="0" branch="false"/>
 								<line number="61" hits="0" branch="false"/>
@@ -348,7 +348,7 @@
 								<line number="80" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="addExternalListener" signature="(Lorg/universAAL/ucc/configuration/model/interfaces/OnConfigurationChangedListener;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="addExternalListener" signature="(Lorg/universAAL/tools/ucc/configuration/model/interfaces/OnConfigurationChangedListener;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="168" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
@@ -361,7 +361,7 @@
 								<line number="173" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="addListener" signature="(Lorg/universAAL/ucc/configuration/model/interfaces/OnConfigurationChangedListener;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="addListener" signature="(Lorg/universAAL/tools/ucc/configuration/model/interfaces/OnConfigurationChangedListener;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="160" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
@@ -374,7 +374,7 @@
 								<line number="165" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="addValidator" signature="(Ljava/lang/String;Lorg/universAAL/ucc/configuration/model/interfaces/ConfigurationValidator;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="addValidator" signature="(Ljava/lang/String;Lorg/universAAL/tools/ucc/configuration/model/interfaces/ConfigurationValidator;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="352" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
@@ -455,7 +455,7 @@
 								<line number="36" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="compareTo" signature="(Lorg/universAAL/ucc/configuration/model/ConfigurationOption;)I" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="compareTo" signature="(Lorg/universAAL/tools/ucc/configuration/model/ConfigurationOption;)I" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="420" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
@@ -500,12 +500,12 @@
 								<line number="157" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getCategory" signature="()Lorg/universAAL/ucc/configuration/model/configurationdefinition/Category;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="getCategory" signature="()Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/Category;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="337" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getConfigOption" signature="()Lorg/universAAL/ucc/configuration/model/configurationinstances/ConfigOption;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="getConfigOption" signature="()Lorg/universAAL/tools/ucc/configuration/model/configurationinstances/ConfigOption;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="348" hits="0" branch="false"/>
 							</lines>
@@ -601,19 +601,19 @@
 								<line number="304" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="removeExternalListener" signature="(Lorg/universAAL/ucc/configuration/model/interfaces/OnConfigurationChangedListener;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="removeExternalListener" signature="(Lorg/universAAL/tools/ucc/configuration/model/interfaces/OnConfigurationChangedListener;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="451" hits="0" branch="false"/>
 								<line number="452" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="removeListener" signature="(Lorg/universAAL/ucc/configuration/model/interfaces/OnConfigurationChangedListener;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="removeListener" signature="(Lorg/universAAL/tools/ucc/configuration/model/interfaces/OnConfigurationChangedListener;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="430" hits="0" branch="false"/>
 								<line number="431" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="removeValidator" signature="(Lorg/universAAL/ucc/configuration/model/interfaces/ConfigurationValidator;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="removeValidator" signature="(Lorg/universAAL/tools/ucc/configuration/model/interfaces/ConfigurationValidator;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="441" hits="0" branch="false"/>
 								<line number="442" hits="0" branch="false"/>
@@ -626,7 +626,7 @@
 								<line number="107" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="setCardinality" signature="(Lorg/universAAL/ucc/configuration/model/Cardinality;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="setCardinality" signature="(Lorg/universAAL/tools/ucc/configuration/model/Cardinality;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="341" hits="0" branch="false"/>
 								<line number="342" hits="0" branch="false"/>
@@ -760,7 +760,7 @@
 								<line number="124" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="setValue" signature="(Lorg/universAAL/ucc/configuration/model/configurationinstances/Value;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="setValue" signature="(Lorg/universAAL/tools/ucc/configuration/model/configurationinstances/Value;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="89" hits="0" branch="true" condition-coverage="0% (0/4)">
 									<conditions>
@@ -1173,9 +1173,9 @@
 						<line number="452" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.Configurator" filename="org/universAAL/ucc/configuration/model/Configurator.java" line-rate="0.0" branch-rate="0.0" complexity="1.25">
+				<class name="org.universAAL.tools.ucc.configuration.model.Configurator" filename="org/universAAL/tools/ucc/configuration/model/Configurator.java" line-rate="0.0" branch-rate="0.0" complexity="1.25">
 					<methods>
-						<method name="&lt;init&gt;" signature="(Lorg/universAAL/ucc/configuration/model/configurationdefinition/Configuration;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="&lt;init&gt;" signature="(Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/Configuration;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="28" hits="0" branch="false"/>
 								<line number="29" hits="0" branch="false"/>
@@ -1183,17 +1183,17 @@
 								<line number="31" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getConfigDefinition" signature="()Lorg/universAAL/ucc/configuration/model/configurationdefinition/Configuration;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="getConfigDefinition" signature="()Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/Configuration;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="21" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getConfigInstance" signature="()Lorg/universAAL/ucc/configuration/model/configurationinstances/ConfigurationInstance;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="getConfigInstance" signature="()Lorg/universAAL/tools/ucc/configuration/model/configurationinstances/ConfigurationInstance;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="25" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="setConfigurationInstance" signature="(Lorg/universAAL/ucc/configuration/model/configurationinstances/ConfigurationInstance;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="setConfigurationInstance" signature="(Lorg/universAAL/tools/ucc/configuration/model/configurationinstances/ConfigurationInstance;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="34" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
@@ -1221,9 +1221,9 @@
 						<line number="37" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.MapConfigurationOption" filename="org/universAAL/ucc/configuration/model/MapConfigurationOption.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.MapConfigurationOption" filename="org/universAAL/tools/ucc/configuration/model/MapConfigurationOption.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
-						<method name="&lt;init&gt;" signature="(Lorg/universAAL/ucc/configuration/model/configurationdefinition/MapConfigItem;Lorg/universAAL/ucc/configuration/model/configurationdefinition/Category;Lorg/universAAL/ucc/configuration/model/ConfigOptionRegistry;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="&lt;init&gt;" signature="(Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/MapConfigItem;Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/Category;Lorg/universAAL/tools/ucc/configuration/model/ConfigOptionRegistry;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="22" hits="0" branch="false"/>
 								<line number="23" hits="0" branch="false"/>
@@ -1247,7 +1247,7 @@
 						<line number="30" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.SimpleConfigItemTypes" filename="org/universAAL/ucc/configuration/model/SimpleConfigItemTypes.java" line-rate="0.0" branch-rate="1.0" complexity="0.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.SimpleConfigItemTypes" filename="org/universAAL/tools/ucc/configuration/model/SimpleConfigItemTypes.java" line-rate="0.0" branch-rate="1.0" complexity="0.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -1259,9 +1259,9 @@
 						<line number="11" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.SimpleConfigurationOption" filename="org/universAAL/ucc/configuration/model/SimpleConfigurationOption.java" line-rate="0.0" branch-rate="0.0" complexity="1.6666666666666667">
+				<class name="org.universAAL.tools.ucc.configuration.model.SimpleConfigurationOption" filename="org/universAAL/tools/ucc/configuration/model/SimpleConfigurationOption.java" line-rate="0.0" branch-rate="0.0" complexity="1.6666666666666667">
 					<methods>
-						<method name="&lt;init&gt;" signature="(Lorg/universAAL/ucc/configuration/model/configurationdefinition/SimpleConfigItem;Lorg/universAAL/ucc/configuration/model/configurationdefinition/Category;Lorg/universAAL/ucc/configuration/model/ConfigOptionRegistry;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="&lt;init&gt;" signature="(Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/SimpleConfigItem;Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/Category;Lorg/universAAL/tools/ucc/configuration/model/ConfigOptionRegistry;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="23" hits="0" branch="false"/>
 								<line number="24" hits="0" branch="false"/>
@@ -1309,9 +1309,9 @@
 				</class>
 			</classes>
 		</package>
-		<package name="org.universAAL.ucc.configuration.model.configurationdefinition" line-rate="0.0" branch-rate="0.0" complexity="1.1408450704225352">
+		<package name="org.universAAL.tools.ucc.configuration.model.configurationdefinition" line-rate="0.0" branch-rate="0.0" complexity="1.1408450704225352">
 			<classes>
-				<class name="org.universAAL.ucc.configuration.model.configurationdefinition.Category" filename="org/universAAL/ucc/configuration/model/configurationdefinition/Category.java" line-rate="0.0" branch-rate="0.0" complexity="1.1428571428571428">
+				<class name="org.universAAL.tools.ucc.configuration.model.configurationdefinition.Category" filename="org/universAAL/tools/ucc/configuration/model/configurationdefinition/Category.java" line-rate="0.0" branch-rate="0.0" complexity="1.1428571428571428">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -1383,7 +1383,7 @@
 						<line number="164" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.configurationdefinition.ConfigItem" filename="org/universAAL/ucc/configuration/model/configurationdefinition/ConfigItem.java" line-rate="0.0" branch-rate="0.0" complexity="1.25">
+				<class name="org.universAAL.tools.ucc.configuration.model.configurationdefinition.ConfigItem" filename="org/universAAL/tools/ucc/configuration/model/configurationdefinition/ConfigItem.java" line-rate="0.0" branch-rate="0.0" complexity="1.25">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -1401,7 +1401,7 @@
 								<line number="240" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getDependencies" signature="()Lorg/universAAL/ucc/configuration/model/configurationdefinition/Dependency;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="getDependencies" signature="()Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/Dependency;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="128" hits="0" branch="false"/>
 							</lines>
@@ -1421,12 +1421,12 @@
 								<line number="86" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getOnConfigurationModelChangedListener" signature="()Lorg/universAAL/ucc/configuration/model/configurationdefinition/OnConfigurationModelChangedListener;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="getOnConfigurationModelChangedListener" signature="()Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/OnConfigurationModelChangedListener;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="170" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getValidators" signature="()Lorg/universAAL/ucc/configuration/model/configurationdefinition/Validators;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="getValidators" signature="()Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/Validators;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="149" hits="0" branch="false"/>
 							</lines>
@@ -1454,7 +1454,7 @@
 								<line number="253" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="setDependencies" signature="(Lorg/universAAL/ucc/configuration/model/configurationdefinition/Dependency;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="setDependencies" signature="(Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/Dependency;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="139" hits="0" branch="false"/>
 								<line number="140" hits="0" branch="false"/>
@@ -1478,13 +1478,13 @@
 								<line number="98" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="setOnConfigurationModelChangedListener" signature="(Lorg/universAAL/ucc/configuration/model/configurationdefinition/OnConfigurationModelChangedListener;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="setOnConfigurationModelChangedListener" signature="(Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/OnConfigurationModelChangedListener;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="181" hits="0" branch="false"/>
 								<line number="182" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="setValidators" signature="(Lorg/universAAL/ucc/configuration/model/configurationdefinition/Validators;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="setValidators" signature="(Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/Validators;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="160" hits="0" branch="false"/>
 								<line number="161" hits="0" branch="false"/>
@@ -1531,7 +1531,7 @@
 						<line number="253" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.configurationdefinition.Configuration" filename="org/universAAL/ucc/configuration/model/configurationdefinition/Configuration.java" line-rate="0.0" branch-rate="0.0" complexity="1.1">
+				<class name="org.universAAL.tools.ucc.configuration.model.configurationdefinition.Configuration" filename="org/universAAL/tools/ucc/configuration/model/configurationdefinition/Configuration.java" line-rate="0.0" branch-rate="0.0" complexity="1.1">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -1623,7 +1623,7 @@
 						<line number="188" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.configurationdefinition.Dependency" filename="org/universAAL/ucc/configuration/model/configurationdefinition/Dependency.java" line-rate="0.0" branch-rate="0.0" complexity="2.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.configurationdefinition.Dependency" filename="org/universAAL/tools/ucc/configuration/model/configurationdefinition/Dependency.java" line-rate="0.0" branch-rate="0.0" complexity="2.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -1653,7 +1653,7 @@
 						<line number="72" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.configurationdefinition.Item" filename="org/universAAL/ucc/configuration/model/configurationdefinition/Item.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.configurationdefinition.Item" filename="org/universAAL/tools/ucc/configuration/model/configurationdefinition/Item.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -1679,19 +1679,19 @@
 						<line number="65" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.configurationdefinition.MapConfigItem" filename="org/universAAL/ucc/configuration/model/configurationdefinition/MapConfigItem.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.configurationdefinition.MapConfigItem" filename="org/universAAL/tools/ucc/configuration/model/configurationdefinition/MapConfigItem.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="39" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getOptions" signature="()Lorg/universAAL/ucc/configuration/model/configurationdefinition/Options;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="getOptions" signature="()Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/Options;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="51" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="setOptions" signature="(Lorg/universAAL/ucc/configuration/model/configurationdefinition/Options;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="setOptions" signature="(Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/Options;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="62" hits="0" branch="false"/>
 								<line number="63" hits="0" branch="false"/>
@@ -1705,7 +1705,7 @@
 						<line number="63" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.configurationdefinition.ObjectFactory" filename="org/universAAL/ucc/configuration/model/configurationdefinition/ObjectFactory.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.configurationdefinition.ObjectFactory" filename="org/universAAL/tools/ucc/configuration/model/configurationdefinition/ObjectFactory.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;clinit&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -1718,72 +1718,72 @@
 								<line number="39" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createCategory" signature="()Lorg/universAAL/ucc/configuration/model/configurationdefinition/Category;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createCategory" signature="()Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/Category;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="78" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createConfigItem" signature="()Lorg/universAAL/ucc/configuration/model/configurationdefinition/ConfigItem;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createConfigItem" signature="()Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/ConfigItem;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="46" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createConfiguration" signature="()Lorg/universAAL/ucc/configuration/model/configurationdefinition/Configuration;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createConfiguration" signature="()Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/Configuration;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="134" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createConfiguration" signature="(Lorg/universAAL/ucc/configuration/model/configurationdefinition/Configuration;)Ljavax/xml/bind/JAXBElement;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createConfiguration" signature="(Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/Configuration;)Ljavax/xml/bind/JAXBElement;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="152" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createDependency" signature="()Lorg/universAAL/ucc/configuration/model/configurationdefinition/Dependency;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createDependency" signature="()Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/Dependency;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="110" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createItem" signature="()Lorg/universAAL/ucc/configuration/model/configurationdefinition/Item;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createItem" signature="()Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/Item;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="142" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createMapConfigItem" signature="()Lorg/universAAL/ucc/configuration/model/configurationdefinition/MapConfigItem;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createMapConfigItem" signature="()Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/MapConfigItem;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="102" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createOnConfigurationModelChangedListener" signature="()Lorg/universAAL/ucc/configuration/model/configurationdefinition/OnConfigurationModelChangedListener;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createOnConfigurationModelChangedListener" signature="()Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/OnConfigurationModelChangedListener;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="118" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createOption" signature="()Lorg/universAAL/ucc/configuration/model/configurationdefinition/Option;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createOption" signature="()Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/Option;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="86" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createOptions" signature="()Lorg/universAAL/ucc/configuration/model/configurationdefinition/Options;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createOptions" signature="()Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/Options;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="70" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createSPARQLConfigItem" signature="()Lorg/universAAL/ucc/configuration/model/configurationdefinition/SPARQLConfigItem;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createSPARQLConfigItem" signature="()Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/SPARQLConfigItem;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="126" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createSimpleConfigItem" signature="()Lorg/universAAL/ucc/configuration/model/configurationdefinition/SimpleConfigItem;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createSimpleConfigItem" signature="()Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/SimpleConfigItem;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="94" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createValidator" signature="()Lorg/universAAL/ucc/configuration/model/configurationdefinition/Validator;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createValidator" signature="()Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/Validator;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="62" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createValidators" signature="()Lorg/universAAL/ucc/configuration/model/configurationdefinition/Validators;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createValidators" signature="()Lorg/universAAL/tools/ucc/configuration/model/configurationdefinition/Validators;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="54" hits="0" branch="false"/>
 							</lines>
@@ -1809,7 +1809,7 @@
 						<line number="152" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.configurationdefinition.OnConfigurationModelChangedListener" filename="org/universAAL/ucc/configuration/model/configurationdefinition/OnConfigurationModelChangedListener.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.configurationdefinition.OnConfigurationModelChangedListener" filename="org/universAAL/tools/ucc/configuration/model/configurationdefinition/OnConfigurationModelChangedListener.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -1835,7 +1835,7 @@
 						<line number="67" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.configurationdefinition.Option" filename="org/universAAL/ucc/configuration/model/configurationdefinition/Option.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.configurationdefinition.Option" filename="org/universAAL/tools/ucc/configuration/model/configurationdefinition/Option.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -1881,7 +1881,7 @@
 						<line number="84" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.configurationdefinition.Options" filename="org/universAAL/ucc/configuration/model/configurationdefinition/Options.java" line-rate="0.0" branch-rate="0.0" complexity="2.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.configurationdefinition.Options" filename="org/universAAL/tools/ucc/configuration/model/configurationdefinition/Options.java" line-rate="0.0" branch-rate="0.0" complexity="2.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -1911,7 +1911,7 @@
 						<line number="72" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.configurationdefinition.SPARQLConfigItem" filename="org/universAAL/ucc/configuration/model/configurationdefinition/SPARQLConfigItem.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.configurationdefinition.SPARQLConfigItem" filename="org/universAAL/tools/ucc/configuration/model/configurationdefinition/SPARQLConfigItem.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -1937,7 +1937,7 @@
 						<line number="63" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.configurationdefinition.SimpleConfigItem" filename="org/universAAL/ucc/configuration/model/configurationdefinition/SimpleConfigItem.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.configurationdefinition.SimpleConfigItem" filename="org/universAAL/tools/ucc/configuration/model/configurationdefinition/SimpleConfigItem.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -1977,7 +1977,7 @@
 						<line number="92" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.configurationdefinition.Validator" filename="org/universAAL/ucc/configuration/model/configurationdefinition/Validator.java" line-rate="0.0" branch-rate="0.0" complexity="1.3333333333333333">
+				<class name="org.universAAL.tools.ucc.configuration.model.configurationdefinition.Validator" filename="org/universAAL/tools/ucc/configuration/model/configurationdefinition/Validator.java" line-rate="0.0" branch-rate="0.0" complexity="1.3333333333333333">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -2021,7 +2021,7 @@
 						<line number="102" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.configurationdefinition.Validators" filename="org/universAAL/ucc/configuration/model/configurationdefinition/Validators.java" line-rate="0.0" branch-rate="0.0" complexity="2.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.configurationdefinition.Validators" filename="org/universAAL/tools/ucc/configuration/model/configurationdefinition/Validators.java" line-rate="0.0" branch-rate="0.0" complexity="2.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -2051,7 +2051,7 @@
 						<line number="73" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.configurationdefinition.package-info" filename="org/universAAL/ucc/configuration/model/configurationdefinition/package-info.java" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.configurationdefinition.package-info" filename="org/universAAL/tools/ucc/configuration/model/configurationdefinition/package-info.java" line-rate="1.0" branch-rate="1.0" complexity="0.0">
 					<methods>
 					</methods>
 					<lines>
@@ -2059,9 +2059,9 @@
 				</class>
 			</classes>
 		</package>
-		<package name="org.universAAL.ucc.configuration.model.configurationinstances" line-rate="0.0" branch-rate="0.0" complexity="1.0714285714285714">
+		<package name="org.universAAL.tools.ucc.configuration.model.configurationinstances" line-rate="0.0" branch-rate="0.0" complexity="1.0714285714285714">
 			<classes>
-				<class name="org.universAAL.ucc.configuration.model.configurationinstances.ConfigOption" filename="org/universAAL/ucc/configuration/model/configurationinstances/ConfigOption.java" line-rate="0.0" branch-rate="0.0" complexity="1.3333333333333333">
+				<class name="org.universAAL.tools.ucc.configuration.model.configurationinstances.ConfigOption" filename="org/universAAL/tools/ucc/configuration/model/configurationinstances/ConfigOption.java" line-rate="0.0" branch-rate="0.0" complexity="1.3333333333333333">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -2105,7 +2105,7 @@
 						<line number="103" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.configurationinstances.ConfigurationInstance" filename="org/universAAL/ucc/configuration/model/configurationinstances/ConfigurationInstance.java" line-rate="0.0" branch-rate="0.0" complexity="1.0625">
+				<class name="org.universAAL.tools.ucc.configuration.model.configurationinstances.ConfigurationInstance" filename="org/universAAL/tools/ucc/configuration/model/configurationinstances/ConfigurationInstance.java" line-rate="0.0" branch-rate="0.0" complexity="1.0625">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -2239,7 +2239,7 @@
 						<line number="252" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.configurationinstances.ObjectFactory" filename="org/universAAL/ucc/configuration/model/configurationinstances/ObjectFactory.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.configurationinstances.ObjectFactory" filename="org/universAAL/tools/ucc/configuration/model/configurationinstances/ObjectFactory.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;clinit&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -2252,22 +2252,22 @@
 								<line number="40" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createConfigOption" signature="()Lorg/universAAL/ucc/configuration/model/configurationinstances/ConfigOption;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createConfigOption" signature="()Lorg/universAAL/tools/ucc/configuration/model/configurationinstances/ConfigOption;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="47" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createConfiguration" signature="(Lorg/universAAL/ucc/configuration/model/configurationinstances/ConfigurationInstance;)Ljavax/xml/bind/JAXBElement;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createConfiguration" signature="(Lorg/universAAL/tools/ucc/configuration/model/configurationinstances/ConfigurationInstance;)Ljavax/xml/bind/JAXBElement;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="73" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createConfigurationInstance" signature="()Lorg/universAAL/ucc/configuration/model/configurationinstances/ConfigurationInstance;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createConfigurationInstance" signature="()Lorg/universAAL/tools/ucc/configuration/model/configurationinstances/ConfigurationInstance;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="63" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createValue" signature="()Lorg/universAAL/ucc/configuration/model/configurationinstances/Value;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createValue" signature="()Lorg/universAAL/tools/ucc/configuration/model/configurationinstances/Value;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="55" hits="0" branch="false"/>
 							</lines>
@@ -2283,7 +2283,7 @@
 						<line number="73" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.configurationinstances.Value" filename="org/universAAL/ucc/configuration/model/configurationinstances/Value.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.configurationinstances.Value" filename="org/universAAL/tools/ucc/configuration/model/configurationinstances/Value.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -2323,7 +2323,7 @@
 						<line number="85" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.configurationinstances.package-info" filename="org/universAAL/ucc/configuration/model/configurationinstances/package-info.java" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.configurationinstances.package-info" filename="org/universAAL/tools/ucc/configuration/model/configurationinstances/package-info.java" line-rate="1.0" branch-rate="1.0" complexity="0.0">
 					<methods>
 					</methods>
 					<lines>
@@ -2331,9 +2331,9 @@
 				</class>
 			</classes>
 		</package>
-		<package name="org.universAAL.ucc.configuration.model.exceptions" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+		<package name="org.universAAL.tools.ucc.configuration.model.exceptions" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 			<classes>
-				<class name="org.universAAL.ucc.configuration.model.exceptions.ValidationException" filename="org/universAAL/ucc/configuration/model/exceptions/ValidationException.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.exceptions.ValidationException" filename="org/universAAL/tools/ucc/configuration/model/exceptions/ValidationException.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -2349,33 +2349,33 @@
 				</class>
 			</classes>
 		</package>
-		<package name="org.universAAL.ucc.configuration.model.interfaces" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+		<package name="org.universAAL.tools.ucc.configuration.model.interfaces" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 			<classes>
-				<class name="org.universAAL.ucc.configuration.model.interfaces.ConfigurationValidator" filename="org/universAAL/ucc/configuration/model/interfaces/ConfigurationValidator.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.interfaces.ConfigurationValidator" filename="org/universAAL/tools/ucc/configuration/model/interfaces/ConfigurationValidator.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 					</methods>
 					<lines>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.interfaces.ConfigurationValidatorFactory" filename="org/universAAL/ucc/configuration/model/interfaces/ConfigurationValidatorFactory.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.interfaces.ConfigurationValidatorFactory" filename="org/universAAL/tools/ucc/configuration/model/interfaces/ConfigurationValidatorFactory.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 					</methods>
 					<lines>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.interfaces.ModelRegistryChangedListener" filename="org/universAAL/ucc/configuration/model/interfaces/ModelRegistryChangedListener.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.interfaces.ModelRegistryChangedListener" filename="org/universAAL/tools/ucc/configuration/model/interfaces/ModelRegistryChangedListener.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 					</methods>
 					<lines>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.interfaces.OnConfigurationChangedListener" filename="org/universAAL/ucc/configuration/model/interfaces/OnConfigurationChangedListener.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.interfaces.OnConfigurationChangedListener" filename="org/universAAL/tools/ucc/configuration/model/interfaces/OnConfigurationChangedListener.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 					</methods>
 					<lines>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.interfaces.OnConfigurationChangedListenerFactory" filename="org/universAAL/ucc/configuration/model/interfaces/OnConfigurationChangedListenerFactory.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.interfaces.OnConfigurationChangedListenerFactory" filename="org/universAAL/tools/ucc/configuration/model/interfaces/OnConfigurationChangedListenerFactory.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 					</methods>
 					<lines>
@@ -2383,11 +2383,11 @@
 				</class>
 			</classes>
 		</package>
-		<package name="org.universAAL.ucc.configuration.model.servicetracker" line-rate="0.0" branch-rate="0.0" complexity="2.0">
+		<package name="org.universAAL.tools.ucc.configuration.model.servicetracker" line-rate="0.0" branch-rate="0.0" complexity="2.0">
 			<classes>
-				<class name="org.universAAL.ucc.configuration.model.servicetracker.ListenerServiceTracker" filename="org/universAAL/ucc/configuration/model/servicetracker/ListenerServiceTracker.java" line-rate="0.0" branch-rate="0.0" complexity="2.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.servicetracker.ListenerServiceTracker" filename="org/universAAL/tools/ucc/configuration/model/servicetracker/ListenerServiceTracker.java" line-rate="0.0" branch-rate="0.0" complexity="2.0">
 					<methods>
-						<method name="&lt;init&gt;" signature="(Lorg/osgi/framework/BundleContext;Ljava/lang/String;Lorg/universAAL/ucc/configuration/model/ConfigurationOption;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="&lt;init&gt;" signature="(Lorg/osgi/framework/BundleContext;Ljava/lang/String;Lorg/universAAL/tools/ucc/configuration/model/ConfigurationOption;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="20" hits="0" branch="false"/>
 								<line number="21" hits="0" branch="false"/>
@@ -2471,9 +2471,9 @@
 						<line number="60" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.servicetracker.ValidationServiceTracker" filename="org/universAAL/ucc/configuration/model/servicetracker/ValidationServiceTracker.java" line-rate="0.0" branch-rate="0.0" complexity="2.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.servicetracker.ValidationServiceTracker" filename="org/universAAL/tools/ucc/configuration/model/servicetracker/ValidationServiceTracker.java" line-rate="0.0" branch-rate="0.0" complexity="2.0">
 					<methods>
-						<method name="&lt;init&gt;" signature="(Lorg/osgi/framework/BundleContext;Ljava/lang/String;Lorg/universAAL/ucc/configuration/model/ConfigurationOption;[Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="&lt;init&gt;" signature="(Lorg/osgi/framework/BundleContext;Ljava/lang/String;Lorg/universAAL/tools/ucc/configuration/model/ConfigurationOption;[Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="22" hits="0" branch="false"/>
 								<line number="23" hits="0" branch="false"/>
@@ -2565,16 +2565,16 @@
 				</class>
 			</classes>
 		</package>
-		<package name="org.universAAL.ucc.configuration.model.validators" line-rate="0.0" branch-rate="0.0" complexity="3.5454545454545454">
+		<package name="org.universAAL.tools.ucc.configuration.model.validators" line-rate="0.0" branch-rate="0.0" complexity="3.5454545454545454">
 			<classes>
-				<class name="org.universAAL.ucc.configuration.model.validators.DoubleMinMaxValidator" filename="org/universAAL/ucc/configuration/model/validators/DoubleMinMaxValidator.java" line-rate="0.0" branch-rate="0.0" complexity="4.666666666666667">
+				<class name="org.universAAL.tools.ucc.configuration.model.validators.DoubleMinMaxValidator" filename="org/universAAL/tools/ucc/configuration/model/validators/DoubleMinMaxValidator.java" line-rate="0.0" branch-rate="0.0" complexity="4.666666666666667">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="10" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="isValid" signature="(Lorg/universAAL/ucc/configuration/model/ConfigOptionRegistry;Lorg/universAAL/ucc/configuration/model/configurationinstances/Value;)Z" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="isValid" signature="(Lorg/universAAL/tools/ucc/configuration/model/ConfigOptionRegistry;Lorg/universAAL/tools/ucc/configuration/model/configurationinstances/Value;)Z" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="16" hits="0" branch="false"/>
 								<line number="17" hits="0" branch="true" condition-coverage="0% (0/4)">
@@ -2604,7 +2604,7 @@
 								<line number="53" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="validate" signature="(Lorg/universAAL/ucc/configuration/model/ConfigOptionRegistry;Lorg/universAAL/ucc/configuration/model/configurationinstances/Value;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="validate" signature="(Lorg/universAAL/tools/ucc/configuration/model/ConfigOptionRegistry;Lorg/universAAL/tools/ucc/configuration/model/configurationinstances/Value;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="26" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
@@ -2679,7 +2679,7 @@
 						<line number="53" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.validators.DoubleValidator" filename="org/universAAL/ucc/configuration/model/validators/DoubleValidator.java" line-rate="0.0" branch-rate="0.0" complexity="3.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.validators.DoubleValidator" filename="org/universAAL/tools/ucc/configuration/model/validators/DoubleValidator.java" line-rate="0.0" branch-rate="0.0" complexity="3.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -2688,7 +2688,7 @@
 								<line number="21" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="isValid" signature="(Lorg/universAAL/ucc/configuration/model/ConfigOptionRegistry;Lorg/universAAL/ucc/configuration/model/configurationinstances/Value;)Z" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="isValid" signature="(Lorg/universAAL/tools/ucc/configuration/model/ConfigOptionRegistry;Lorg/universAAL/tools/ucc/configuration/model/configurationinstances/Value;)Z" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="24" hits="0" branch="true" condition-coverage="0% (0/6)">
 									<conditions>
@@ -2710,7 +2710,7 @@
 								<line number="45" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="validate" signature="(Lorg/universAAL/ucc/configuration/model/ConfigOptionRegistry;Lorg/universAAL/ucc/configuration/model/configurationinstances/Value;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="validate" signature="(Lorg/universAAL/tools/ucc/configuration/model/ConfigOptionRegistry;Lorg/universAAL/tools/ucc/configuration/model/configurationinstances/Value;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="37" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
@@ -2749,14 +2749,14 @@
 						<line number="45" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.validators.IntMinMaxValidator" filename="org/universAAL/ucc/configuration/model/validators/IntMinMaxValidator.java" line-rate="0.0" branch-rate="0.0" complexity="5.333333333333333">
+				<class name="org.universAAL.tools.ucc.configuration.model.validators.IntMinMaxValidator" filename="org/universAAL/tools/ucc/configuration/model/validators/IntMinMaxValidator.java" line-rate="0.0" branch-rate="0.0" complexity="5.333333333333333">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="10" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="isValid" signature="(Lorg/universAAL/ucc/configuration/model/ConfigOptionRegistry;Lorg/universAAL/ucc/configuration/model/configurationinstances/Value;)Z" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="isValid" signature="(Lorg/universAAL/tools/ucc/configuration/model/ConfigOptionRegistry;Lorg/universAAL/tools/ucc/configuration/model/configurationinstances/Value;)Z" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="15" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
@@ -2792,7 +2792,7 @@
 								<line number="56" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="validate" signature="(Lorg/universAAL/ucc/configuration/model/ConfigOptionRegistry;Lorg/universAAL/ucc/configuration/model/configurationinstances/Value;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="validate" signature="(Lorg/universAAL/tools/ucc/configuration/model/ConfigOptionRegistry;Lorg/universAAL/tools/ucc/configuration/model/configurationinstances/Value;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="29" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
@@ -2873,7 +2873,7 @@
 						<line number="56" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.validators.IntegerValidator" filename="org/universAAL/ucc/configuration/model/validators/IntegerValidator.java" line-rate="0.0" branch-rate="0.0" complexity="3.0">
+				<class name="org.universAAL.tools.ucc.configuration.model.validators.IntegerValidator" filename="org/universAAL/tools/ucc/configuration/model/validators/IntegerValidator.java" line-rate="0.0" branch-rate="0.0" complexity="3.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -2882,7 +2882,7 @@
 								<line number="22" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="isValid" signature="(Lorg/universAAL/ucc/configuration/model/ConfigOptionRegistry;Lorg/universAAL/ucc/configuration/model/configurationinstances/Value;)Z" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="isValid" signature="(Lorg/universAAL/tools/ucc/configuration/model/ConfigOptionRegistry;Lorg/universAAL/tools/ucc/configuration/model/configurationinstances/Value;)Z" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="25" hits="0" branch="true" condition-coverage="0% (0/6)">
 									<conditions>
@@ -2904,7 +2904,7 @@
 								<line number="46" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="validate" signature="(Lorg/universAAL/ucc/configuration/model/ConfigOptionRegistry;Lorg/universAAL/ucc/configuration/model/configurationinstances/Value;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="validate" signature="(Lorg/universAAL/tools/ucc/configuration/model/ConfigOptionRegistry;Lorg/universAAL/tools/ucc/configuration/model/configurationinstances/Value;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="38" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
@@ -2943,14 +2943,14 @@
 						<line number="46" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.validators.RegExpValidator" filename="org/universAAL/ucc/configuration/model/validators/RegExpValidator.java" line-rate="0.0" branch-rate="0.0" complexity="3.3333333333333335">
+				<class name="org.universAAL.tools.ucc.configuration.model.validators.RegExpValidator" filename="org/universAAL/tools/ucc/configuration/model/validators/RegExpValidator.java" line-rate="0.0" branch-rate="0.0" complexity="3.3333333333333335">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="19" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="isValid" signature="(Lorg/universAAL/ucc/configuration/model/ConfigOptionRegistry;Lorg/universAAL/ucc/configuration/model/configurationinstances/Value;)Z" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="isValid" signature="(Lorg/universAAL/tools/ucc/configuration/model/ConfigOptionRegistry;Lorg/universAAL/tools/ucc/configuration/model/configurationinstances/Value;)Z" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="25" hits="0" branch="true" condition-coverage="0% (0/4)">
 									<conditions>
@@ -2975,7 +2975,7 @@
 								<line number="43" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="validate" signature="(Lorg/universAAL/ucc/configuration/model/ConfigOptionRegistry;Lorg/universAAL/ucc/configuration/model/configurationinstances/Value;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="validate" signature="(Lorg/universAAL/tools/ucc/configuration/model/ConfigOptionRegistry;Lorg/universAAL/tools/ucc/configuration/model/configurationinstances/Value;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="36" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
@@ -3015,7 +3015,7 @@
 						<line number="43" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.model.validators.URLValidator" filename="org/universAAL/ucc/configuration/model/validators/URLValidator.java" line-rate="0.0" branch-rate="0.0" complexity="2.8">
+				<class name="org.universAAL.tools.ucc.configuration.model.validators.URLValidator" filename="org/universAAL/tools/ucc/configuration/model/validators/URLValidator.java" line-rate="0.0" branch-rate="0.0" complexity="2.8">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -3033,7 +3033,7 @@
 								<line number="59" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="isValid" signature="(Lorg/universAAL/ucc/configuration/model/ConfigOptionRegistry;Lorg/universAAL/ucc/configuration/model/configurationinstances/Value;)Z" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="isValid" signature="(Lorg/universAAL/tools/ucc/configuration/model/ConfigOptionRegistry;Lorg/universAAL/tools/ucc/configuration/model/configurationinstances/Value;)Z" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="22" hits="0" branch="true" condition-coverage="0% (0/4)">
 									<conditions>
@@ -3063,7 +3063,7 @@
 								<line number="51" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="validate" signature="(Lorg/universAAL/ucc/configuration/model/ConfigOptionRegistry;Lorg/universAAL/ucc/configuration/model/configurationinstances/Value;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="validate" signature="(Lorg/universAAL/tools/ucc/configuration/model/ConfigOptionRegistry;Lorg/universAAL/tools/ucc/configuration/model/configurationinstances/Value;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="44" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>

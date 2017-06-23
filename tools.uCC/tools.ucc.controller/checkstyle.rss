@@ -46,7 +46,7 @@ under the License.
           <tbody>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.controller//checkstyle.html#org.universAAL.ucc.api.IDeinstaller.java">org/universAAL/ucc/api/IDeinstaller.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.controller//checkstyle.html#org.universAAL.tools.ucc.api.IDeinstaller.java">org/universAAL/tools/ucc/api/IDeinstaller.java</a>
                 </td>
                 <td>
                   1
@@ -60,21 +60,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.controller//checkstyle.html#org.universAAL.ucc.api.IInstaller.java">org/universAAL/ucc/api/IInstaller.java</a>
-                </td>
-                <td>
-                  1
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  4
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.controller//checkstyle.html#org.universAAL.ucc.api.impl.Installer.java">org/universAAL/ucc/api/impl/Installer.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.controller//checkstyle.html#org.universAAL.tools.ucc.api.impl.Installer.java">org/universAAL/tools/ucc/api/impl/Installer.java</a>
                 </td>
                 <td>
                   1
@@ -88,21 +74,21 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.controller//checkstyle.html#org.universAAL.ucc.controller.Activator.java">org/universAAL/ucc/controller/Activator.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.controller//checkstyle.html#org.universAAL.tools.ucc.api.IInstaller.java">org/universAAL/tools/ucc/api/IInstaller.java</a>
                 </td>
                 <td>
-                  3
+                  1
                 </td>
                 <td>
-                  2
+                  0
                 </td>
                 <td>
-                  11
+                  4
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.controller//checkstyle.html#org.universAAL.ucc.api.impl.Deinstaller.java">org/universAAL/ucc/api/impl/Deinstaller.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.controller//checkstyle.html#org.universAAL.tools.ucc.api.impl.Deinstaller.java">org/universAAL/tools/ucc/api/impl/Deinstaller.java</a>
                 </td>
                 <td>
                   0
@@ -112,6 +98,20 @@ under the License.
                 </td>
                 <td>
                   3
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.controller//checkstyle.html#org.universAAL.tools.ucc.controller.Activator.java">org/universAAL/tools/ucc/controller/Activator.java</a>
+                </td>
+                <td>
+                  3
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  11
                 </td>
               </tr>
                       </tbody>

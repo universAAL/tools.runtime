@@ -104,13 +104,13 @@
 <th>Class</th>
 <th>Bugs</th></tr>
 <tr class="b">
-<td><a href="#org.universAAL.ucc.profile.agent.impl.ProfileAgentImpl">org.universAAL.ucc.profile.agent.impl.ProfileAgentImpl</a></td>
+<td><a href="#org.universAAL.tools.ucc.profile.agent.impl.ProfileAgentImpl">org.universAAL.tools.ucc.profile.agent.impl.ProfileAgentImpl</a></td>
 <td>1</td></tr>
 <tr class="a">
-<td><a href="#org.universAAL.ucc.profile.agent.osgi.Activator">org.universAAL.ucc.profile.agent.osgi.Activator</a></td>
-<td>7</td></tr></table></div><a name="org.universAAL.ucc.profile.agent.impl.ProfileAgentImpl"></a>
+<td><a href="#org.universAAL.tools.ucc.profile.agent.osgi.Activator">org.universAAL.tools.ucc.profile.agent.osgi.Activator</a></td>
+<td>7</td></tr></table></div><a name="org.universAAL.tools.ucc.profile.agent.impl.ProfileAgentImpl"></a>
 <div class="section">
-<h3><a name="org.universAAL.ucc.profile.agent.impl.ProfileAgentImpl"></a>org.universAAL.ucc.profile.agent.impl.ProfileAgentImpl</h3>
+<h3><a name="org.universAAL.tools.ucc.profile.agent.impl.ProfileAgentImpl"></a>org.universAAL.tools.ucc.profile.agent.impl.ProfileAgentImpl</h3>
 <table border="0" class="bodyTable">
 <tr class="b">
 <th>Bug</th>
@@ -119,13 +119,13 @@
 <th>Line</th>
 <th>Priority</th></tr>
 <tr class="a">
-<td>Write to static field org.universAAL.ucc.profile.agent.impl.ProfileAgentImpl.caller from instance method new org.universAAL.ucc.profile.agent.impl.ProfileAgentImpl(ModuleContext)</td>
+<td>Write to static field org.universAAL.tools.ucc.profile.agent.impl.ProfileAgentImpl.caller from instance method new org.universAAL.tools.ucc.profile.agent.impl.ProfileAgentImpl(ModuleContext)</td>
 <td>STYLE</td>
 <td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD">ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD</a></td>
-<td>55</td>
-<td>High</td></tr></table></div><a name="org.universAAL.ucc.profile.agent.osgi.Activator"></a>
+<td>54</td>
+<td>High</td></tr></table></div><a name="org.universAAL.tools.ucc.profile.agent.osgi.Activator"></a>
 <div class="section">
-<h3><a name="org.universAAL.ucc.profile.agent.osgi.Activator"></a>org.universAAL.ucc.profile.agent.osgi.Activator</h3>
+<h3><a name="org.universAAL.tools.ucc.profile.agent.osgi.Activator"></a>org.universAAL.tools.ucc.profile.agent.osgi.Activator</h3>
 <table border="0" class="bodyTable">
 <tr class="b">
 <th>Bug</th>
@@ -134,46 +134,46 @@
 <th>Line</th>
 <th>Priority</th></tr>
 <tr class="a">
-<td>instanceof will always return true for all non-null values in org.universAAL.ucc.profile.agent.osgi.Activator.test(), since all org.universAAL.ontology.profile.User are instances of org.universAAL.ontology.profile.User</td>
+<td>instanceof will always return true for all non-null values in org.universAAL.tools.ucc.profile.agent.osgi.Activator.test(), since all org.universAAL.ontology.profile.User are instances of org.universAAL.ontology.profile.User</td>
 <td>STYLE</td>
 <td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#BC_VACUOUS_INSTANCEOF">BC_VACUOUS_INSTANCEOF</a></td>
-<td>206</td>
+<td>202</td>
 <td>Medium</td></tr>
 <tr class="b">
-<td>instanceof will always return true for all non-null values in org.universAAL.ucc.profile.agent.osgi.Activator.testSpaceServer(), since all org.universAAL.ontology.phThing.Device are instances of org.universAAL.ontology.phThing.Device</td>
+<td>instanceof will always return true for all non-null values in org.universAAL.tools.ucc.profile.agent.osgi.Activator.testSpaceServer(), since all org.universAAL.ontology.phThing.Device are instances of org.universAAL.ontology.phThing.Device</td>
 <td>STYLE</td>
 <td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#BC_VACUOUS_INSTANCEOF">BC_VACUOUS_INSTANCEOF</a></td>
-<td>104</td>
+<td>100</td>
 <td>Medium</td></tr>
 <tr class="a">
-<td>Dead store to aalSpaceProfile in org.universAAL.ucc.profile.agent.osgi.Activator.test()</td>
+<td>Dead store to aalSpaceProfile in org.universAAL.tools.ucc.profile.agent.osgi.Activator.test()</td>
+<td>STYLE</td>
+<td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#DLS_DEAD_LOCAL_STORE">DLS_DEAD_LOCAL_STORE</a></td>
+<td>160</td>
+<td>High</td></tr>
+<tr class="b">
+<td>Dead store to userProfile in org.universAAL.tools.ucc.profile.agent.osgi.Activator.test()</td>
+<td>STYLE</td>
+<td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#DLS_DEAD_LOCAL_STORE">DLS_DEAD_LOCAL_STORE</a></td>
+<td>159</td>
+<td>High</td></tr>
+<tr class="a">
+<td>Dead store to userProfile2 in org.universAAL.tools.ucc.profile.agent.osgi.Activator.test()</td>
 <td>STYLE</td>
 <td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#DLS_DEAD_LOCAL_STORE">DLS_DEAD_LOCAL_STORE</a></td>
 <td>164</td>
 <td>High</td></tr>
 <tr class="b">
-<td>Dead store to userProfile in org.universAAL.ucc.profile.agent.osgi.Activator.test()</td>
-<td>STYLE</td>
-<td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#DLS_DEAD_LOCAL_STORE">DLS_DEAD_LOCAL_STORE</a></td>
-<td>163</td>
-<td>High</td></tr>
-<tr class="a">
-<td>Dead store to userProfile2 in org.universAAL.ucc.profile.agent.osgi.Activator.test()</td>
-<td>STYLE</td>
-<td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#DLS_DEAD_LOCAL_STORE">DLS_DEAD_LOCAL_STORE</a></td>
-<td>168</td>
-<td>High</td></tr>
-<tr class="b">
-<td>org.universAAL.ucc.profile.agent.osgi.Activator.context should be package protected</td>
+<td>org.universAAL.tools.ucc.profile.agent.osgi.Activator.context should be package protected</td>
 <td>MALICIOUS_CODE</td>
 <td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#MS_PKGPROTECT">MS_PKGPROTECT</a></td>
-<td>25</td>
+<td>21</td>
 <td>Medium</td></tr>
 <tr class="a">
-<td>Write to static field org.universAAL.ucc.profile.agent.osgi.Activator.context from instance method org.universAAL.ucc.profile.agent.osgi.Activator.start(BundleContext)</td>
+<td>Write to static field org.universAAL.tools.ucc.profile.agent.osgi.Activator.context from instance method org.universAAL.tools.ucc.profile.agent.osgi.Activator.start(BundleContext)</td>
 <td>STYLE</td>
 <td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD">ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD</a></td>
-<td>37</td>
+<td>33</td>
 <td>Medium</td></tr></table></div>
       </div>
     </div>

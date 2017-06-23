@@ -46,21 +46,7 @@ under the License.
           <tbody>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.deploymanagerservice.impl//checkstyle.html#org.universAAL.ucc.deploymanagerservice.impl.Activator.java">org/universAAL/ucc/deploymanagerservice/impl/Activator.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  1
-                </td>
-                <td>
-                  10
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.deploymanagerservice.impl//checkstyle.html#org.universAAL.ucc.deploymanagerservice.impl.DeployManagerServiceImpl.java">org/universAAL/ucc/deploymanagerservice/impl/DeployManagerServiceImpl.java</a>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.deploymanagerservice.impl//checkstyle.html#org.universAAL.tools.ucc.deploymanagerservice.impl.DeployManagerServiceImpl.java">org/universAAL/tools/ucc/deploymanagerservice/impl/DeployManagerServiceImpl.java</a>
                 </td>
                 <td>
                   3
@@ -70,6 +56,20 @@ under the License.
                 </td>
                 <td>
                   19
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.deploymanagerservice.impl//checkstyle.html#org.universAAL.tools.ucc.deploymanagerservice.impl.Activator.java">org/universAAL/tools/ucc/deploymanagerservice/impl/Activator.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  10
                 </td>
               </tr>
                       </tbody>

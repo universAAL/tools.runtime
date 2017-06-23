@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="54" branches-covered="0" branches-valid="8" complexity="1.3076923076923077" version="2.1.1" timestamp="1498209542247">
+<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="54" branches-covered="0" branches-valid="8" complexity="1.3076923076923077" version="2.1.1" timestamp="1498233264566">
 	<sources>
 		<source>--source</source>
 		<source>/home/travis/build/universAAL/tools.runtime/tools.uCC/tools.ucc.deploymanagerservice.impl/src/main/java</source>
 	</sources>
 	<packages>
-		<package name="org.universAAL.ucc.deploymanagerservice.impl" line-rate="0.0" branch-rate="0.0" complexity="1.3076923076923077">
+		<package name="org.universAAL.tools.ucc.deploymanagerservice.impl" line-rate="0.0" branch-rate="0.0" complexity="1.3076923076923077">
 			<classes>
-				<class name="org.universAAL.ucc.deploymanagerservice.impl.Activator" filename="org/universAAL/ucc/deploymanagerservice/impl/Activator.java" line-rate="0.0" branch-rate="0.0" complexity="2.0">
+				<class name="org.universAAL.tools.ucc.deploymanagerservice.impl.Activator" filename="org/universAAL/tools/ucc/deploymanagerservice/impl/Activator.java" line-rate="0.0" branch-rate="0.0" complexity="2.0">
 					<methods>
 						<method name="&lt;clinit&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -21,7 +21,7 @@
 								<line number="20" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getFrontend" signature="()Lorg/universAAL/ucc/frontend/api/IFrontend;" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="getFrontend" signature="()Lorg/universAAL/tools/ucc/frontend/api/IFrontend;" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="64" hits="0" branch="false"/>
 								<line number="65" hits="0" branch="true" condition-coverage="0% (0/2)">
@@ -141,7 +141,7 @@
 						<line number="76" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.deploymanagerservice.impl.DeployManagerServiceImpl" filename="org/universAAL/ucc/deploymanagerservice/impl/DeployManagerServiceImpl.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.deploymanagerservice.impl.DeployManagerServiceImpl" filename="org/universAAL/tools/ucc/deploymanagerservice/impl/DeployManagerServiceImpl.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>

@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="471" branches-covered="0" branches-valid="82" complexity="1.631578947368421" version="2.1.1" timestamp="1498209292172">
+<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="471" branches-covered="0" branches-valid="82" complexity="1.631578947368421" version="2.1.1" timestamp="1498233022030">
 	<sources>
 		<source>--source</source>
 		<source>/home/travis/build/universAAL/tools.runtime/tools.uCC/tools.ucc.database/src/main/java</source>
 	</sources>
 	<packages>
-		<package name="org.universAAL.ucc.database" line-rate="0.0" branch-rate="0.0" complexity="1.4285714285714286">
+		<package name="org.universAAL.tools.ucc.database" line-rate="0.0" branch-rate="0.0" complexity="1.4285714285714286">
 			<classes>
-				<class name="org.universAAL.ucc.database.Activator" filename="org/universAAL/ucc/database/Activator.java" line-rate="0.0" branch-rate="0.0" complexity="1.4285714285714286">
+				<class name="org.universAAL.tools.ucc.database.Activator" filename="org/universAAL/tools/ucc/database/Activator.java" line-rate="0.0" branch-rate="0.0" complexity="1.4285714285714286">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -129,7 +129,7 @@
 								<line number="50" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getProfileAgent" signature="()Lorg/universAAL/ucc/profile/agent/ProfileAgent;" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="getProfileAgent" signature="()Lorg/universAAL/tools/ucc/profile/agent/ProfileAgent;" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="250" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
@@ -341,15 +341,261 @@
 				</class>
 			</classes>
 		</package>
-		<package name="org.universAAL.ucc.database.aalspace" line-rate="0.0" branch-rate="0.0" complexity="2.5555555555555554">
+		<package name="org.universAAL.tools.ucc.database.listener.interfaces" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 			<classes>
-				<class name="org.universAAL.ucc.database.aalspace.DataAccess" filename="org/universAAL/ucc/database/aalspace/DataAccess.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.database.listener.interfaces.OntologyChangedListener" filename="org/universAAL/tools/ucc/database/listener/interfaces/OntologyChangedListener.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 					</methods>
 					<lines>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.database.aalspace.DataAccessImpl" filename="org/universAAL/ucc/database/aalspace/DataAccessImpl.java" line-rate="0.0" branch-rate="0.0" complexity="4.111111111111111">
+				<class name="org.universAAL.tools.ucc.database.listener.interfaces.OntologySupplierService" filename="org/universAAL/tools/ucc/database/listener/interfaces/OntologySupplierService.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="org.universAAL.tools.ucc.database.listener.services" line-rate="0.0" branch-rate="0.0" complexity="1.4">
+			<classes>
+				<class name="org.universAAL.tools.ucc.database.listener.services.OntologySupplierServiceImpl" filename="org/universAAL/tools/ucc/database/listener/services/OntologySupplierServiceImpl.java" line-rate="0.0" branch-rate="0.0" complexity="1.4">
+					<methods>
+						<method name="&lt;clinit&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="15" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="14" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="addListener" signature="(Lorg/universAAL/tools/ucc/database/listener/interfaces/OntologyChangedListener;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="18" hits="0" branch="false"/>
+								<line number="20" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getListeners" signature="()Ljava/util/ArrayList;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="41" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getOntology" signature="(Ljava/lang/String;)Ljava/util/ArrayList;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="32" hits="0" branch="false"/>
+								<line number="33" hits="0" branch="false"/>
+								<line number="34" hits="0" branch="false"/>
+								<line number="35" hits="0" branch="false"/>
+								<line number="37" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="removeListener" signature="(Lorg/universAAL/tools/ucc/database/listener/interfaces/OntologyChangedListener;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="23" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="24" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="25" hits="0" branch="false"/>
+								<line number="27" hits="0" branch="false"/>
+								<line number="29" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="setListeners" signature="(Ljava/util/ArrayList;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="45" hits="0" branch="false"/>
+								<line number="46" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="14" hits="0" branch="false"/>
+						<line number="15" hits="0" branch="false"/>
+						<line number="18" hits="0" branch="false"/>
+						<line number="20" hits="0" branch="false"/>
+						<line number="23" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="24" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="25" hits="0" branch="false"/>
+						<line number="27" hits="0" branch="false"/>
+						<line number="29" hits="0" branch="false"/>
+						<line number="32" hits="0" branch="false"/>
+						<line number="33" hits="0" branch="false"/>
+						<line number="34" hits="0" branch="false"/>
+						<line number="35" hits="0" branch="false"/>
+						<line number="37" hits="0" branch="false"/>
+						<line number="41" hits="0" branch="false"/>
+						<line number="45" hits="0" branch="false"/>
+						<line number="46" hits="0" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="org.universAAL.tools.ucc.database.parser" line-rate="0.0" branch-rate="1.0" complexity="2.5">
+			<classes>
+				<class name="org.universAAL.tools.ucc.database.parser.ParserService" filename="org/universAAL/tools/ucc/database/parser/ParserService.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+				<class name="org.universAAL.tools.ucc.database.parser.ParserServiceImpl" filename="org/universAAL/tools/ucc/database/parser/ParserServiceImpl.java" line-rate="0.0" branch-rate="1.0" complexity="4.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="12" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getUapp" signature="(Ljava/lang/String;)Lorg/universAAL/middleware/managers/deploy/uapp/model/AalUapp;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="15" hits="0" branch="false"/>
+								<line number="16" hits="0" branch="false"/>
+								<line number="17" hits="0" branch="false"/>
+								<line number="22" hits="0" branch="false"/>
+								<line number="23" hits="0" branch="false"/>
+								<line number="24" hits="0" branch="false"/>
+								<line number="25" hits="0" branch="false"/>
+								<line number="27" hits="0" branch="false"/>
+								<line number="28" hits="0" branch="false"/>
+								<line number="29" hits="0" branch="false"/>
+								<line number="30" hits="0" branch="false"/>
+								<line number="33" hits="0" branch="false"/>
+								<line number="34" hits="0" branch="false"/>
+								<line number="35" hits="0" branch="false"/>
+								<line number="36" hits="0" branch="false"/>
+								<line number="37" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getUsrv" signature="(Ljava/lang/String;)Lorg/universAAL/tools/ucc/model/usrv/AalUsrv;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="41" hits="0" branch="false"/>
+								<line number="42" hits="0" branch="false"/>
+								<line number="43" hits="0" branch="false"/>
+								<line number="47" hits="0" branch="false"/>
+								<line number="48" hits="0" branch="false"/>
+								<line number="49" hits="0" branch="false"/>
+								<line number="50" hits="0" branch="false"/>
+								<line number="52" hits="0" branch="false"/>
+								<line number="53" hits="0" branch="false"/>
+								<line number="54" hits="0" branch="false"/>
+								<line number="55" hits="0" branch="false"/>
+								<line number="58" hits="0" branch="false"/>
+								<line number="59" hits="0" branch="false"/>
+								<line number="60" hits="0" branch="false"/>
+								<line number="61" hits="0" branch="false"/>
+								<line number="62" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="12" hits="0" branch="false"/>
+						<line number="15" hits="0" branch="false"/>
+						<line number="16" hits="0" branch="false"/>
+						<line number="17" hits="0" branch="false"/>
+						<line number="22" hits="0" branch="false"/>
+						<line number="23" hits="0" branch="false"/>
+						<line number="24" hits="0" branch="false"/>
+						<line number="25" hits="0" branch="false"/>
+						<line number="27" hits="0" branch="false"/>
+						<line number="28" hits="0" branch="false"/>
+						<line number="29" hits="0" branch="false"/>
+						<line number="30" hits="0" branch="false"/>
+						<line number="33" hits="0" branch="false"/>
+						<line number="34" hits="0" branch="false"/>
+						<line number="35" hits="0" branch="false"/>
+						<line number="36" hits="0" branch="false"/>
+						<line number="37" hits="0" branch="false"/>
+						<line number="41" hits="0" branch="false"/>
+						<line number="42" hits="0" branch="false"/>
+						<line number="43" hits="0" branch="false"/>
+						<line number="47" hits="0" branch="false"/>
+						<line number="48" hits="0" branch="false"/>
+						<line number="49" hits="0" branch="false"/>
+						<line number="50" hits="0" branch="false"/>
+						<line number="52" hits="0" branch="false"/>
+						<line number="53" hits="0" branch="false"/>
+						<line number="54" hits="0" branch="false"/>
+						<line number="55" hits="0" branch="false"/>
+						<line number="58" hits="0" branch="false"/>
+						<line number="59" hits="0" branch="false"/>
+						<line number="60" hits="0" branch="false"/>
+						<line number="61" hits="0" branch="false"/>
+						<line number="62" hits="0" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="org.universAAL.tools.ucc.database.preferences" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+			<classes>
+				<class name="org.universAAL.tools.ucc.database.preferences.UserAccountDB" filename="org/universAAL/tools/ucc/database/preferences/UserAccountDB.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="org.universAAL.tools.ucc.database.preferences.impl" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+			<classes>
+				<class name="org.universAAL.tools.ucc.database.preferences.impl.UserAccountDBImpl" filename="org/universAAL/tools/ucc/database/preferences/impl/UserAccountDBImpl.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="15" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getPreferencesData" signature="(Ljava/lang/String;)Lorg/universAAL/tools/ucc/model/preferences/Preferences;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="23" hits="0" branch="false"/>
+								<line number="24" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="saveStoreAccessData" signature="(Lorg/universAAL/tools/ucc/model/preferences/Preferences;Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="18" hits="0" branch="false"/>
+								<line number="20" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="updatePreferencesData" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="30" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="15" hits="0" branch="false"/>
+						<line number="18" hits="0" branch="false"/>
+						<line number="20" hits="0" branch="false"/>
+						<line number="23" hits="0" branch="false"/>
+						<line number="24" hits="0" branch="false"/>
+						<line number="30" hits="0" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="org.universAAL.tools.ucc.database.space" line-rate="0.0" branch-rate="0.0" complexity="2.5555555555555554">
+			<classes>
+				<class name="org.universAAL.tools.ucc.database.space.DataAccess" filename="org/universAAL/tools/ucc/database/space/DataAccess.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+				<class name="org.universAAL.tools.ucc.database.space.DataAccessImpl" filename="org/universAAL/tools/ucc/database/space/DataAccessImpl.java" line-rate="0.0" branch-rate="0.0" complexity="4.111111111111111">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -561,7 +807,7 @@
 								<line number="25" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="saveUserData" signature="(Ljava/lang/String;Lorg/universAAL/ucc/model/jaxb/OntologyInstance;)Z" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="saveUserData" signature="(Ljava/lang/String;Lorg/universAAL/tools/ucc/model/jaxb/OntologyInstance;)Z" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="51" hits="0" branch="false"/>
 								<line number="52" hits="0" branch="false"/>
@@ -571,7 +817,7 @@
 								<line number="57" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="saveUserDataInCHE" signature="(Lorg/universAAL/ucc/model/jaxb/OntologyInstance;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="saveUserDataInCHE" signature="(Lorg/universAAL/tools/ucc/model/jaxb/OntologyInstance;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="83" hits="0" branch="false"/>
 								<line number="85" hits="0" branch="false"/>
@@ -999,15 +1245,9 @@
 				</class>
 			</classes>
 		</package>
-		<package name="org.universAAL.ucc.database.listener.interfaces" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+		<package name="org.universAAL.tools.ucc.startup.api" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 			<classes>
-				<class name="org.universAAL.ucc.database.listener.interfaces.OntologyChangedListener" filename="org/universAAL/ucc/database/listener/interfaces/OntologyChangedListener.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
-					<methods>
-					</methods>
-					<lines>
-					</lines>
-				</class>
-				<class name="org.universAAL.ucc.database.listener.interfaces.OntologySupplierService" filename="org/universAAL/ucc/database/listener/interfaces/OntologySupplierService.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.startup.api.Setup" filename="org/universAAL/tools/ucc/startup/api/Setup.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 					</methods>
 					<lines>
@@ -1015,348 +1255,107 @@
 				</class>
 			</classes>
 		</package>
-		<package name="org.universAAL.ucc.database.listener.services" line-rate="0.0" branch-rate="0.0" complexity="1.4">
+		<package name="org.universAAL.tools.ucc.startup.api.impl" line-rate="0.0" branch-rate="0.0" complexity="2.5">
 			<classes>
-				<class name="org.universAAL.ucc.database.listener.services.OntologySupplierServiceImpl" filename="org/universAAL/ucc/database/listener/services/OntologySupplierServiceImpl.java" line-rate="0.0" branch-rate="0.0" complexity="1.4">
+				<class name="org.universAAL.tools.ucc.startup.api.impl.SetupImpl" filename="org/universAAL/tools/ucc/startup/api/impl/SetupImpl.java" line-rate="0.0" branch-rate="0.0" complexity="2.5">
 					<methods>
-						<method name="&lt;clinit&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="15" hits="0" branch="false"/>
-							</lines>
-						</method>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="14" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="addListener" signature="(Lorg/universAAL/ucc/database/listener/interfaces/OntologyChangedListener;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="18" hits="0" branch="false"/>
-								<line number="20" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="getListeners" signature="()Ljava/util/ArrayList;" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="41" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="getOntology" signature="(Ljava/lang/String;)Ljava/util/ArrayList;" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="32" hits="0" branch="false"/>
-								<line number="33" hits="0" branch="false"/>
-								<line number="34" hits="0" branch="false"/>
-								<line number="35" hits="0" branch="false"/>
-								<line number="37" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="removeListener" signature="(Lorg/universAAL/ucc/database/listener/interfaces/OntologyChangedListener;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
-							<lines>
-								<line number="23" hits="0" branch="true" condition-coverage="0% (0/2)">
-									<conditions>
-										<condition number="0" type="jump" coverage="0%"/>
-									</conditions>
-								</line>
-								<line number="24" hits="0" branch="true" condition-coverage="0% (0/2)">
-									<conditions>
-										<condition number="0" type="jump" coverage="0%"/>
-									</conditions>
-								</line>
-								<line number="25" hits="0" branch="false"/>
-								<line number="27" hits="0" branch="false"/>
-								<line number="29" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="setListeners" signature="(Ljava/util/ArrayList;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="45" hits="0" branch="false"/>
-								<line number="46" hits="0" branch="false"/>
-							</lines>
-						</method>
-					</methods>
-					<lines>
-						<line number="14" hits="0" branch="false"/>
-						<line number="15" hits="0" branch="false"/>
-						<line number="18" hits="0" branch="false"/>
-						<line number="20" hits="0" branch="false"/>
-						<line number="23" hits="0" branch="true" condition-coverage="0% (0/2)">
-							<conditions>
-								<condition number="0" type="jump" coverage="0%"/>
-							</conditions>
-						</line>
-						<line number="24" hits="0" branch="true" condition-coverage="0% (0/2)">
-							<conditions>
-								<condition number="0" type="jump" coverage="0%"/>
-							</conditions>
-						</line>
-						<line number="25" hits="0" branch="false"/>
-						<line number="27" hits="0" branch="false"/>
-						<line number="29" hits="0" branch="false"/>
-						<line number="32" hits="0" branch="false"/>
-						<line number="33" hits="0" branch="false"/>
-						<line number="34" hits="0" branch="false"/>
-						<line number="35" hits="0" branch="false"/>
-						<line number="37" hits="0" branch="false"/>
-						<line number="41" hits="0" branch="false"/>
-						<line number="45" hits="0" branch="false"/>
-						<line number="46" hits="0" branch="false"/>
-					</lines>
-				</class>
-			</classes>
-		</package>
-		<package name="org.universAAL.ucc.database.parser" line-rate="0.0" branch-rate="1.0" complexity="2.5">
-			<classes>
-				<class name="org.universAAL.ucc.database.parser.ParserService" filename="org/universAAL/ucc/database/parser/ParserService.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
-					<methods>
-					</methods>
-					<lines>
-					</lines>
-				</class>
-				<class name="org.universAAL.ucc.database.parser.ParserServiceImpl" filename="org/universAAL/ucc/database/parser/ParserServiceImpl.java" line-rate="0.0" branch-rate="1.0" complexity="4.0">
-					<methods>
-						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="12" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="getUapp" signature="(Ljava/lang/String;)Lorg/universAAL/middleware/managers/deploy/uapp/model/AalUapp;" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="15" hits="0" branch="false"/>
-								<line number="16" hits="0" branch="false"/>
-								<line number="17" hits="0" branch="false"/>
-								<line number="22" hits="0" branch="false"/>
-								<line number="23" hits="0" branch="false"/>
-								<line number="24" hits="0" branch="false"/>
-								<line number="25" hits="0" branch="false"/>
-								<line number="27" hits="0" branch="false"/>
-								<line number="28" hits="0" branch="false"/>
-								<line number="29" hits="0" branch="false"/>
-								<line number="30" hits="0" branch="false"/>
-								<line number="33" hits="0" branch="false"/>
-								<line number="34" hits="0" branch="false"/>
-								<line number="35" hits="0" branch="false"/>
-								<line number="36" hits="0" branch="false"/>
-								<line number="37" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="getUsrv" signature="(Ljava/lang/String;)Lorg/universAAL/ucc/model/usrv/AalUsrv;" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="41" hits="0" branch="false"/>
-								<line number="42" hits="0" branch="false"/>
-								<line number="43" hits="0" branch="false"/>
-								<line number="47" hits="0" branch="false"/>
-								<line number="48" hits="0" branch="false"/>
-								<line number="49" hits="0" branch="false"/>
-								<line number="50" hits="0" branch="false"/>
-								<line number="52" hits="0" branch="false"/>
-								<line number="53" hits="0" branch="false"/>
-								<line number="54" hits="0" branch="false"/>
-								<line number="55" hits="0" branch="false"/>
-								<line number="58" hits="0" branch="false"/>
-								<line number="59" hits="0" branch="false"/>
-								<line number="60" hits="0" branch="false"/>
-								<line number="61" hits="0" branch="false"/>
-								<line number="62" hits="0" branch="false"/>
-							</lines>
-						</method>
-					</methods>
-					<lines>
-						<line number="12" hits="0" branch="false"/>
-						<line number="15" hits="0" branch="false"/>
-						<line number="16" hits="0" branch="false"/>
-						<line number="17" hits="0" branch="false"/>
-						<line number="22" hits="0" branch="false"/>
-						<line number="23" hits="0" branch="false"/>
-						<line number="24" hits="0" branch="false"/>
-						<line number="25" hits="0" branch="false"/>
-						<line number="27" hits="0" branch="false"/>
-						<line number="28" hits="0" branch="false"/>
-						<line number="29" hits="0" branch="false"/>
-						<line number="30" hits="0" branch="false"/>
-						<line number="33" hits="0" branch="false"/>
-						<line number="34" hits="0" branch="false"/>
-						<line number="35" hits="0" branch="false"/>
-						<line number="36" hits="0" branch="false"/>
-						<line number="37" hits="0" branch="false"/>
-						<line number="41" hits="0" branch="false"/>
-						<line number="42" hits="0" branch="false"/>
-						<line number="43" hits="0" branch="false"/>
-						<line number="47" hits="0" branch="false"/>
-						<line number="48" hits="0" branch="false"/>
-						<line number="49" hits="0" branch="false"/>
-						<line number="50" hits="0" branch="false"/>
-						<line number="52" hits="0" branch="false"/>
-						<line number="53" hits="0" branch="false"/>
-						<line number="54" hits="0" branch="false"/>
-						<line number="55" hits="0" branch="false"/>
-						<line number="58" hits="0" branch="false"/>
-						<line number="59" hits="0" branch="false"/>
-						<line number="60" hits="0" branch="false"/>
-						<line number="61" hits="0" branch="false"/>
-						<line number="62" hits="0" branch="false"/>
-					</lines>
-				</class>
-			</classes>
-		</package>
-		<package name="org.universAAL.ucc.database.preferences" line-rate="1.0" branch-rate="1.0" complexity="1.0">
-			<classes>
-				<class name="org.universAAL.ucc.database.preferences.UserAccountDB" filename="org/universAAL/ucc/database/preferences/UserAccountDB.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
-					<methods>
-					</methods>
-					<lines>
-					</lines>
-				</class>
-			</classes>
-		</package>
-		<package name="org.universAAL.ucc.database.preferences.impl" line-rate="0.0" branch-rate="1.0" complexity="1.0">
-			<classes>
-				<class name="org.universAAL.ucc.database.preferences.impl.UserAccountDBImpl" filename="org/universAAL/ucc/database/preferences/impl/UserAccountDBImpl.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
-					<methods>
-						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="15" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="getPreferencesData" signature="(Ljava/lang/String;)Lorg/universAAL/ucc/model/preferences/Preferences;" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="23" hits="0" branch="false"/>
-								<line number="24" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="saveStoreAccessData" signature="(Lorg/universAAL/ucc/model/preferences/Preferences;Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="18" hits="0" branch="false"/>
-								<line number="20" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="updatePreferencesData" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="30" hits="0" branch="false"/>
-							</lines>
-						</method>
-					</methods>
-					<lines>
-						<line number="15" hits="0" branch="false"/>
-						<line number="18" hits="0" branch="false"/>
-						<line number="20" hits="0" branch="false"/>
-						<line number="23" hits="0" branch="false"/>
-						<line number="24" hits="0" branch="false"/>
-						<line number="30" hits="0" branch="false"/>
-					</lines>
-				</class>
-			</classes>
-		</package>
-		<package name="org.universAAL.ucc.startup.api" line-rate="1.0" branch-rate="1.0" complexity="1.0">
-			<classes>
-				<class name="org.universAAL.ucc.startup.api.Setup" filename="org/universAAL/ucc/startup/api/Setup.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
-					<methods>
-					</methods>
-					<lines>
-					</lines>
-				</class>
-			</classes>
-		</package>
-		<package name="org.universAAL.ucc.startup.api.impl" line-rate="0.0" branch-rate="0.0" complexity="2.5">
-			<classes>
-				<class name="org.universAAL.ucc.startup.api.impl.SetupImpl" filename="org/universAAL/ucc/startup/api/impl/SetupImpl.java" line-rate="0.0" branch-rate="0.0" complexity="2.5">
-					<methods>
-						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="17" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="deleteAllUsers" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="73" hits="0" branch="false"/>
+								<line number="74" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="deleteUser" signature="(Lorg/universAAL/ucc/startup/model/UserAccountInfo;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="deleteUser" signature="(Lorg/universAAL/tools/ucc/startup/model/UserAccountInfo;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
-								<line number="53" hits="0" branch="false"/>
 								<line number="54" hits="0" branch="false"/>
-								<line number="55" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="55" hits="0" branch="false"/>
+								<line number="56" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="56" hits="0" branch="true" condition-coverage="0% (0/4)">
+								<line number="57" hits="0" branch="true" condition-coverage="0% (0/4)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 										<condition number="1" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="62" hits="0" branch="false"/>
-								<line number="64" hits="0" branch="false"/>
+								<line number="63" hits="0" branch="false"/>
 								<line number="65" hits="0" branch="false"/>
 								<line number="66" hits="0" branch="false"/>
 								<line number="67" hits="0" branch="false"/>
-								<line number="69" hits="0" branch="false"/>
+								<line number="68" hits="0" branch="false"/>
+								<line number="70" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="getUsers" signature="()Ljava/util/List;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="26" hits="0" branch="false"/>
 								<line number="27" hits="0" branch="false"/>
+								<line number="28" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="saveUser" signature="(Lorg/universAAL/ucc/startup/model/UserAccountInfo;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="saveUser" signature="(Lorg/universAAL/tools/ucc/startup/model/UserAccountInfo;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
-								<line number="76" hits="0" branch="false"/>
 								<line number="77" hits="0" branch="false"/>
 								<line number="78" hits="0" branch="false"/>
-								<line number="79" hits="0" branch="true" condition-coverage="0% (0/2)">
-									<conditions>
-										<condition number="0" type="jump" coverage="0%"/>
-									</conditions>
-								</line>
+								<line number="79" hits="0" branch="false"/>
 								<line number="80" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="81" hits="0" branch="false"/>
-								<line number="82" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="81" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="83" hits="0" branch="false"/>
+								<line number="82" hits="0" branch="false"/>
+								<line number="83" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
 								<line number="84" hits="0" branch="false"/>
-								<line number="87" hits="0" branch="false"/>
-								<line number="88" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="85" hits="0" branch="false"/>
+								<line number="88" hits="0" branch="false"/>
+								<line number="89" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="89" hits="0" branch="false"/>
-								<line number="92" hits="0" branch="false"/>
-								<line number="94" hits="0" branch="false"/>
-								<line number="96" hits="0" branch="false"/>
+								<line number="90" hits="0" branch="false"/>
+								<line number="93" hits="0" branch="false"/>
+								<line number="95" hits="0" branch="false"/>
+								<line number="97" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="saveUsers" signature="(Ljava/util/List;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="20" hits="0" branch="false"/>
 								<line number="21" hits="0" branch="false"/>
 								<line number="22" hits="0" branch="false"/>
 								<line number="23" hits="0" branch="false"/>
+								<line number="24" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="updateUser" signature="(Lorg/universAAL/ucc/startup/model/UserAccountInfo;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="updateUser" signature="(Lorg/universAAL/tools/ucc/startup/model/UserAccountInfo;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
-								<line number="31" hits="0" branch="false"/>
 								<line number="32" hits="0" branch="false"/>
 								<line number="33" hits="0" branch="false"/>
-								<line number="34" hits="0" branch="true" condition-coverage="0% (0/2)">
-									<conditions>
-										<condition number="0" type="jump" coverage="0%"/>
-									</conditions>
-								</line>
+								<line number="34" hits="0" branch="false"/>
 								<line number="35" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="36" hits="0" branch="false"/>
+								<line number="36" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
 								<line number="37" hits="0" branch="false"/>
 								<line number="38" hits="0" branch="false"/>
 								<line number="39" hits="0" branch="false"/>
@@ -1365,36 +1364,36 @@
 								<line number="42" hits="0" branch="false"/>
 								<line number="43" hits="0" branch="false"/>
 								<line number="44" hits="0" branch="false"/>
-								<line number="46" hits="0" branch="false"/>
+								<line number="45" hits="0" branch="false"/>
 								<line number="47" hits="0" branch="false"/>
 								<line number="48" hits="0" branch="false"/>
 								<line number="49" hits="0" branch="false"/>
 								<line number="50" hits="0" branch="false"/>
+								<line number="51" hits="0" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="17" hits="0" branch="false"/>
-						<line number="20" hits="0" branch="false"/>
+						<line number="18" hits="0" branch="false"/>
 						<line number="21" hits="0" branch="false"/>
 						<line number="22" hits="0" branch="false"/>
 						<line number="23" hits="0" branch="false"/>
-						<line number="26" hits="0" branch="false"/>
+						<line number="24" hits="0" branch="false"/>
 						<line number="27" hits="0" branch="false"/>
-						<line number="31" hits="0" branch="false"/>
+						<line number="28" hits="0" branch="false"/>
 						<line number="32" hits="0" branch="false"/>
 						<line number="33" hits="0" branch="false"/>
-						<line number="34" hits="0" branch="true" condition-coverage="0% (0/2)">
-							<conditions>
-								<condition number="0" type="jump" coverage="0%"/>
-							</conditions>
-						</line>
+						<line number="34" hits="0" branch="false"/>
 						<line number="35" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="36" hits="0" branch="false"/>
+						<line number="36" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
 						<line number="37" hits="0" branch="false"/>
 						<line number="38" hits="0" branch="false"/>
 						<line number="39" hits="0" branch="false"/>
@@ -1403,69 +1402,70 @@
 						<line number="42" hits="0" branch="false"/>
 						<line number="43" hits="0" branch="false"/>
 						<line number="44" hits="0" branch="false"/>
-						<line number="46" hits="0" branch="false"/>
+						<line number="45" hits="0" branch="false"/>
 						<line number="47" hits="0" branch="false"/>
 						<line number="48" hits="0" branch="false"/>
 						<line number="49" hits="0" branch="false"/>
 						<line number="50" hits="0" branch="false"/>
-						<line number="53" hits="0" branch="false"/>
+						<line number="51" hits="0" branch="false"/>
 						<line number="54" hits="0" branch="false"/>
-						<line number="55" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="55" hits="0" branch="false"/>
+						<line number="56" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="56" hits="0" branch="true" condition-coverage="0% (0/4)">
+						<line number="57" hits="0" branch="true" condition-coverage="0% (0/4)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 								<condition number="1" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="62" hits="0" branch="false"/>
-						<line number="64" hits="0" branch="false"/>
+						<line number="63" hits="0" branch="false"/>
 						<line number="65" hits="0" branch="false"/>
 						<line number="66" hits="0" branch="false"/>
 						<line number="67" hits="0" branch="false"/>
-						<line number="69" hits="0" branch="false"/>
-						<line number="73" hits="0" branch="false"/>
-						<line number="76" hits="0" branch="false"/>
+						<line number="68" hits="0" branch="false"/>
+						<line number="70" hits="0" branch="false"/>
+						<line number="74" hits="0" branch="false"/>
 						<line number="77" hits="0" branch="false"/>
 						<line number="78" hits="0" branch="false"/>
-						<line number="79" hits="0" branch="true" condition-coverage="0% (0/2)">
-							<conditions>
-								<condition number="0" type="jump" coverage="0%"/>
-							</conditions>
-						</line>
+						<line number="79" hits="0" branch="false"/>
 						<line number="80" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="81" hits="0" branch="false"/>
-						<line number="82" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="81" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="83" hits="0" branch="false"/>
+						<line number="82" hits="0" branch="false"/>
+						<line number="83" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
 						<line number="84" hits="0" branch="false"/>
-						<line number="87" hits="0" branch="false"/>
-						<line number="88" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="85" hits="0" branch="false"/>
+						<line number="88" hits="0" branch="false"/>
+						<line number="89" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="89" hits="0" branch="false"/>
-						<line number="92" hits="0" branch="false"/>
-						<line number="94" hits="0" branch="false"/>
-						<line number="96" hits="0" branch="false"/>
+						<line number="90" hits="0" branch="false"/>
+						<line number="93" hits="0" branch="false"/>
+						<line number="95" hits="0" branch="false"/>
+						<line number="97" hits="0" branch="false"/>
 					</lines>
 				</class>
 			</classes>
 		</package>
-		<package name="org.universAAL.ucc.startup.model" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+		<package name="org.universAAL.tools.ucc.startup.model" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 			<classes>
-				<class name="org.universAAL.ucc.startup.model.Role" filename="org/universAAL/ucc/startup/model/Role.java" line-rate="0.0" branch-rate="1.0" complexity="0.0">
+				<class name="org.universAAL.tools.ucc.startup.model.Role" filename="org/universAAL/tools/ucc/startup/model/Role.java" line-rate="0.0" branch-rate="1.0" complexity="0.0">
 					<methods>
 						<method name="&lt;clinit&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -1477,11 +1477,11 @@
 							<lines>
 							</lines>
 						</method>
-						<method name="valueOf" signature="(Ljava/lang/String;)Lorg/universAAL/ucc/startup/model/Role;" line-rate="1.0" branch-rate="1.0" complexity="0">
+						<method name="valueOf" signature="(Ljava/lang/String;)Lorg/universAAL/tools/ucc/startup/model/Role;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
 							</lines>
 						</method>
-						<method name="values" signature="()[Lorg/universAAL/ucc/startup/model/Role;" line-rate="1.0" branch-rate="1.0" complexity="0">
+						<method name="values" signature="()[Lorg/universAAL/tools/ucc/startup/model/Role;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
 							</lines>
 						</method>
@@ -1491,7 +1491,7 @@
 						<line number="10" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.startup.model.UccUsers" filename="org/universAAL/ucc/startup/model/UccUsers.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.startup.model.UccUsers" filename="org/universAAL/tools/ucc/startup/model/UccUsers.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -1519,7 +1519,7 @@
 						<line number="40" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.startup.model.User" filename="org/universAAL/ucc/startup/model/User.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.startup.model.User" filename="org/universAAL/tools/ucc/startup/model/User.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -1587,7 +1587,7 @@
 						<line number="92" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.startup.model.UserAccountInfo" filename="org/universAAL/ucc/startup/model/UserAccountInfo.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.startup.model.UserAccountInfo" filename="org/universAAL/tools/ucc/startup/model/UserAccountInfo.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>

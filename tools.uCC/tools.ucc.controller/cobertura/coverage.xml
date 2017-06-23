@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="93" branches-covered="0" branches-valid="22" complexity="2.0" version="2.1.1" timestamp="1498209235553">
+<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="93" branches-covered="0" branches-valid="22" complexity="2.0" version="2.1.1" timestamp="1498232995400">
 	<sources>
 		<source>/home/travis/build/universAAL/tools.runtime/tools.uCC/tools.ucc.controller/src/main/java</source>
 		<source>--source</source>
 	</sources>
 	<packages>
-		<package name="org.universAAL.ucc.api" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+		<package name="org.universAAL.tools.ucc.api" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 			<classes>
-				<class name="org.universAAL.ucc.api.IDeinstaller" filename="org/universAAL/ucc/api/IDeinstaller.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.api.IDeinstaller" filename="org/universAAL/tools/ucc/api/IDeinstaller.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 					</methods>
 					<lines>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.api.IInstaller" filename="org/universAAL/ucc/api/IInstaller.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.api.IInstaller" filename="org/universAAL/tools/ucc/api/IInstaller.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 					</methods>
 					<lines>
@@ -23,9 +23,9 @@
 				</class>
 			</classes>
 		</package>
-		<package name="org.universAAL.ucc.api.impl" line-rate="0.0" branch-rate="0.0" complexity="3.2">
+		<package name="org.universAAL.tools.ucc.api.impl" line-rate="0.0" branch-rate="0.0" complexity="3.2">
 			<classes>
-				<class name="org.universAAL.ucc.api.impl.Deinstaller" filename="org/universAAL/ucc/api/impl/Deinstaller.java" line-rate="0.0" branch-rate="0.0" complexity="3.0">
+				<class name="org.universAAL.tools.ucc.api.impl.Deinstaller" filename="org/universAAL/tools/ucc/api/impl/Deinstaller.java" line-rate="0.0" branch-rate="0.0" complexity="3.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -65,7 +65,7 @@
 						<line number="20" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.api.impl.Installer" filename="org/universAAL/ucc/api/impl/Installer.java" line-rate="0.0" branch-rate="0.0" complexity="3.25">
+				<class name="org.universAAL.tools.ucc.api.impl.Installer" filename="org/universAAL/tools/ucc/api/impl/Installer.java" line-rate="0.0" branch-rate="0.0" complexity="3.25">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -249,9 +249,9 @@
 				</class>
 			</classes>
 		</package>
-		<package name="org.universAAL.ucc.controller" line-rate="0.0" branch-rate="0.0" complexity="1.8333333333333333">
+		<package name="org.universAAL.tools.ucc.controller" line-rate="0.0" branch-rate="0.0" complexity="1.8333333333333333">
 			<classes>
-				<class name="org.universAAL.ucc.controller.Activator" filename="org/universAAL/ucc/controller/Activator.java" line-rate="0.0" branch-rate="0.0" complexity="1.8333333333333333">
+				<class name="org.universAAL.tools.ucc.controller.Activator" filename="org/universAAL/tools/ucc/controller/Activator.java" line-rate="0.0" branch-rate="0.0" complexity="1.8333333333333333">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>

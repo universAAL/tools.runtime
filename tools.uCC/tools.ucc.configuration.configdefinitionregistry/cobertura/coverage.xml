@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="40" branches-covered="0" branches-valid="4" complexity="1.25" version="2.1.1" timestamp="1498209359485">
+<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="40" branches-covered="0" branches-valid="4" complexity="1.25" version="2.1.1" timestamp="1498233088786">
 	<sources>
 		<source>/home/travis/build/universAAL/tools.runtime/tools.uCC/tools.ucc.configuration.configdefinitionregistry/src/main/java</source>
 		<source>--source</source>
 	</sources>
 	<packages>
-		<package name="org.universAAL.ucc.configuration.configdefinitionregistry" line-rate="0.0" branch-rate="0.0" complexity="1.5714285714285714">
+		<package name="org.universAAL.tools.ucc.configuration.configdefinitionregistry" line-rate="0.0" branch-rate="0.0" complexity="1.5714285714285714">
 			<classes>
-				<class name="org.universAAL.ucc.configuration.configdefinitionregistry.ConfigurationDefinitionRegistryImpl" filename="org/universAAL/ucc/configuration/configdefinitionregistry/ConfigurationDefinitionRegistryImpl.java" line-rate="0.0" branch-rate="0.0" complexity="1.5714285714285714">
+				<class name="org.universAAL.tools.ucc.configuration.configdefinitionregistry.ConfigurationDefinitionRegistryImpl" filename="org/universAAL/tools/ucc/configuration/configdefinitionregistry/ConfigurationDefinitionRegistryImpl.java" line-rate="0.0" branch-rate="0.0" complexity="1.5714285714285714">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -19,7 +19,7 @@
 								<line number="34" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="addConfigurationDefinitionRegistryChanged" signature="(Lorg/universAAL/ucc/configuration/configdefinitionregistry/interfaces/ConfigurationDefinitionRegistryChanged;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="addConfigurationDefinitionRegistryChanged" signature="(Lorg/universAAL/tools/ucc/configuration/configdefinitionregistry/interfaces/ConfigurationDefinitionRegistryChanged;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="73" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
@@ -48,7 +48,7 @@
 								<line number="50" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="removeConfigurationDefinitionRegistryChanged" signature="(Lorg/universAAL/ucc/configuration/configdefinitionregistry/interfaces/ConfigurationDefinitionRegistryChanged;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="removeConfigurationDefinitionRegistryChanged" signature="(Lorg/universAAL/tools/ucc/configuration/configdefinitionregistry/interfaces/ConfigurationDefinitionRegistryChanged;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="79" hits="0" branch="false"/>
 								<line number="80" hits="0" branch="false"/>
@@ -125,15 +125,15 @@
 				</class>
 			</classes>
 		</package>
-		<package name="org.universAAL.ucc.configuration.configdefinitionregistry.interfaces" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+		<package name="org.universAAL.tools.ucc.configuration.configdefinitionregistry.interfaces" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 			<classes>
-				<class name="org.universAAL.ucc.configuration.configdefinitionregistry.interfaces.ConfigurationDefinitionRegistry" filename="org/universAAL/ucc/configuration/configdefinitionregistry/interfaces/ConfigurationDefinitionRegistry.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.configuration.configdefinitionregistry.interfaces.ConfigurationDefinitionRegistry" filename="org/universAAL/tools/ucc/configuration/configdefinitionregistry/interfaces/ConfigurationDefinitionRegistry.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 					</methods>
 					<lines>
 					</lines>
 				</class>
-				<class name="org.universAAL.ucc.configuration.configdefinitionregistry.interfaces.ConfigurationDefinitionRegistryChanged" filename="org/universAAL/ucc/configuration/configdefinitionregistry/interfaces/ConfigurationDefinitionRegistryChanged.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.configuration.configdefinitionregistry.interfaces.ConfigurationDefinitionRegistryChanged" filename="org/universAAL/tools/ucc/configuration/configdefinitionregistry/interfaces/ConfigurationDefinitionRegistryChanged.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 					</methods>
 					<lines>
@@ -141,9 +141,9 @@
 				</class>
 			</classes>
 		</package>
-		<package name="org.universAAL.ucc.configuration.configdefinitionregistry.internal" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+		<package name="org.universAAL.tools.ucc.configuration.configdefinitionregistry.internal" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 			<classes>
-				<class name="org.universAAL.ucc.configuration.configdefinitionregistry.internal.Activator" filename="org/universAAL/ucc/configuration/configdefinitionregistry/internal/Activator.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.configuration.configdefinitionregistry.internal.Activator" filename="org/universAAL/tools/ucc/configuration/configdefinitionregistry/internal/Activator.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
