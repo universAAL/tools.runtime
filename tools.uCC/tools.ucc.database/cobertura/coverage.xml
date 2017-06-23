@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="471" branches-covered="0" branches-valid="82" complexity="1.631578947368421" version="2.1.1" timestamp="1497760657449">
+<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="471" branches-covered="0" branches-valid="82" complexity="1.631578947368421" version="2.1.1" timestamp="1498209292172">
 	<sources>
 		<source>--source</source>
 		<source>/home/travis/build/universAAL/tools.runtime/tools.uCC/tools.ucc.database/src/main/java</source>
@@ -1118,7 +1118,7 @@
 								<line number="12" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getUapp" signature="(Ljava/lang/String;)Lorg/universAAL/middleware/deploymanager/uapp/model/AalUapp;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="getUapp" signature="(Ljava/lang/String;)Lorg/universAAL/middleware/managers/deploy/uapp/model/AalUapp;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="15" hits="0" branch="false"/>
 								<line number="16" hits="0" branch="false"/>

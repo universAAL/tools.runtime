@@ -1,12 +1,12 @@
 <map id="G" name="G">
-<area shape="rect" id="c77256" href="./OnConfigurationChangedListener.html" title="org.universAAL.ucc.configuration.model.interfaces.OnConfigurationChangedListener" alt="" coords="339,11,552,53"/>
+<area shape="rect" id="c77569" href="./OnConfigurationChangedListener.html" title="org.universAAL.ucc.configuration.model.interfaces.OnConfigurationChangedListener" alt="" coords="339,11,552,53"/>
 <area shape="rect" id="node1" href="./OnConfigurationChangedListener.html" title="&lt;TABLE&gt;" alt="" coords="328,6,563,58"/>
-<area shape="rect" id="c77281" href="../../view/SimpleConfiguratorPasswordField.html" title="org.universAAL.ucc.configuration.view.SimpleConfiguratorPasswordField" alt="" coords="15,118,233,143"/>
+<area shape="rect" id="c77594" href="../../view/SimpleConfiguratorPasswordField.html" title="org.universAAL.ucc.configuration.view.SimpleConfiguratorPasswordField" alt="" coords="15,118,233,143"/>
 <area shape="rect" id="node2" href="../../view/SimpleConfiguratorPasswordField.html" title="&lt;TABLE&gt;" alt="" coords="5,107,243,155"/>
-<area shape="rect" id="c77285" href="../../view/ConfigurationListSelect.html" title="org.universAAL.ucc.configuration.view.ConfigurationListSelect" alt="" coords="277,118,433,143"/>
+<area shape="rect" id="c77598" href="../../view/ConfigurationListSelect.html" title="org.universAAL.ucc.configuration.view.ConfigurationListSelect" alt="" coords="277,118,433,143"/>
 <area shape="rect" id="node3" href="../../view/ConfigurationListSelect.html" title="&lt;TABLE&gt;" alt="" coords="267,107,443,155"/>
-<area shape="rect" id="c77286" href="../../view/MultiselectionList.html" title="org.universAAL.ucc.configuration.view.MultiselectionList" alt="" coords="477,118,598,143"/>
+<area shape="rect" id="c77599" href="../../view/MultiselectionList.html" title="org.universAAL.ucc.configuration.view.MultiselectionList" alt="" coords="477,118,598,143"/>
 <area shape="rect" id="node4" href="../../view/MultiselectionList.html" title="&lt;TABLE&gt;" alt="" coords="467,107,608,155"/>
-<area shape="rect" id="c77288" href="../../view/SimpleConfiguratorTextField.html" title="org.universAAL.ucc.configuration.view.SimpleConfiguratorTextField" alt="" coords="642,118,827,143"/>
+<area shape="rect" id="c77601" href="../../view/SimpleConfiguratorTextField.html" title="org.universAAL.ucc.configuration.view.SimpleConfiguratorTextField" alt="" coords="642,118,827,143"/>
 <area shape="rect" id="node5" href="../../view/SimpleConfiguratorTextField.html" title="&lt;TABLE&gt;" alt="" coords="632,107,837,155"/>
 </map>

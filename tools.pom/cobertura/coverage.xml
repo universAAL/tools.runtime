@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="5.839842324257245E-4" branch-rate="0.0" lines-covered="8" lines-valid="13699" branches-covered="0" branches-valid="3981" complexity="1.9663648124191462" version="2.1.1" timestamp="1497761015315">
+<coverage line-rate="5.839842324257245E-4" branch-rate="0.0" lines-covered="8" lines-valid="13699" branches-covered="0" branches-valid="3981" complexity="1.9663648124191462" version="2.1.1" timestamp="1498209598062">
 	<sources>
 		<source>/home/travis/build/universAAL/tools.runtime/tools.makro-recorder/tools.makro-recorder.swingGUI/src/main/java</source>
 		<source>/home/travis/build/universAAL/tools.runtime/tools.pom/tools.karaf.feature/src/main/features</source>
@@ -2918,7 +2918,7 @@
 						<line number="42" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.tools.logmonitor.bus_member.SpaceListener" filename="org/universAAL/tools/logmonitor/bus_member/SpaceListener.java" line-rate="0.0" branch-rate="0.0" complexity="1.8333333333333333">
+				<class name="org.universAAL.tools.logmonitor.bus_member.MySpaceListener" filename="org/universAAL/tools/logmonitor/bus_member/MySpaceListener.java" line-rate="0.0" branch-rate="0.0" complexity="1.8333333333333333">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Lorg/universAAL/tools/logmonitor/bus_member/gui/BusMemberGui;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -2927,23 +2927,6 @@
 								<line number="24" hits="0" branch="false"/>
 								<line number="25" hits="0" branch="false"/>
 								<line number="26" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="aalSpaceJoined" signature="(Lorg/universAAL/middleware/interfaces/aalspace/AALSpaceDescriptor;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="61" hits="0" branch="false"/>
-								<line number="62" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="aalSpaceLost" signature="(Lorg/universAAL/middleware/interfaces/aalspace/AALSpaceDescriptor;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="66" hits="0" branch="false"/>
-								<line number="67" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="aalSpaceStatusChanged" signature="(Lorg/universAAL/middleware/interfaces/aalspace/AALSpaceStatus;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="82" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="getMyPeerCard" signature="()Lorg/universAAL/middleware/interfaces/PeerCard;" line-rate="0.0" branch-rate="0.0" complexity="0">
@@ -2959,7 +2942,7 @@
 								<line number="56" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="newPeerJoined" signature="(Lorg/universAAL/middleware/interfaces/PeerCard;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="peerJoined" signature="(Lorg/universAAL/middleware/interfaces/PeerCard;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="71" hits="0" branch="false"/>
 								<line number="72" hits="0" branch="false"/>
@@ -3016,6 +2999,23 @@
 								<line number="112" hits="0" branch="false"/>
 								<line number="113" hits="0" branch="false"/>
 								<line number="115" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="spaceJoined" signature="(Lorg/universAAL/middleware/interfaces/space/SpaceDescriptor;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="61" hits="0" branch="false"/>
+								<line number="62" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="spaceLost" signature="(Lorg/universAAL/middleware/interfaces/space/SpaceDescriptor;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="66" hits="0" branch="false"/>
+								<line number="67" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="spaceStatusChanged" signature="(Lorg/universAAL/middleware/interfaces/space/SpaceStatus;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="82" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="start" signature="()V" line-rate="0.0" branch-rate="0.0" complexity="0">
@@ -3184,7 +3184,7 @@
 							<lines>
 							</lines>
 						</method>
-						<method name="access$1000" signature="(Lorg/universAAL/tools/logmonitor/bus_member/gui/BusMemberGui;)Lorg/universAAL/middleware/interfaces/aalspace/AALSpaceDescriptor;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="access$1000" signature="(Lorg/universAAL/tools/logmonitor/bus_member/gui/BusMemberGui;)Lorg/universAAL/middleware/interfaces/space/SpaceDescriptor;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="36" hits="0" branch="false"/>
 							</lines>
@@ -3280,7 +3280,7 @@
 								<line number="147" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="setSpace" signature="(Lorg/universAAL/middleware/interfaces/aalspace/AALSpaceDescriptor;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="setSpace" signature="(Lorg/universAAL/middleware/interfaces/space/SpaceDescriptor;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="254" hits="0" branch="false"/>
 								<line number="255" hits="0" branch="false"/>
@@ -3926,7 +3926,7 @@
 								<line number="167" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createSpaceHTML" signature="(Ljava/lang/StringBuilder;Lorg/universAAL/middleware/interfaces/aalspace/AALSpaceDescriptor;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="createSpaceHTML" signature="(Ljava/lang/StringBuilder;Lorg/universAAL/middleware/interfaces/space/SpaceDescriptor;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="170" hits="0" branch="false"/>
 								<line number="171" hits="0" branch="true" condition-coverage="0% (0/2)">
@@ -3981,7 +3981,7 @@
 								<line number="70" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="show" signature="(Lorg/universAAL/middleware/interfaces/aalspace/AALSpaceDescriptor;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="show" signature="(Lorg/universAAL/middleware/interfaces/space/SpaceDescriptor;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="73" hits="0" branch="false"/>
 								<line number="74" hits="0" branch="false"/>
@@ -23767,7 +23767,7 @@
 								<line number="20" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getAALSpaceManager" signature="()Lorg/universAAL/middleware/managers/api/AALSpaceManager;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="getAALSpaceManager" signature="()Lorg/universAAL/middleware/managers/api/SpaceManager;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="104" hits="0" branch="false"/>
 							</lines>
@@ -37667,7 +37667,7 @@
 								<line number="12" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getUapp" signature="(Ljava/lang/String;)Lorg/universAAL/middleware/deploymanager/uapp/model/AalUapp;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="getUapp" signature="(Ljava/lang/String;)Lorg/universAAL/middleware/managers/deploy/uapp/model/AalUapp;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="15" hits="0" branch="false"/>
 								<line number="16" hits="0" branch="false"/>
@@ -40348,7 +40348,7 @@
 								<line number="32" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIILjava/lang/String;ZLorg/universAAL/middleware/deploymanager/uapp/model/Part;Ljava/lang/String;Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIILjava/lang/String;ZLorg/universAAL/middleware/managers/deploy/uapp/model/Part;Ljava/lang/String;Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="29" hits="0" branch="false"/>
 								<line number="35" hits="0" branch="false"/>
@@ -40418,7 +40418,7 @@
 								<line number="50" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getPart" signature="()Lorg/universAAL/middleware/deploymanager/uapp/model/Part;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="getPart" signature="()Lorg/universAAL/middleware/managers/deploy/uapp/model/Part;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="114" hits="0" branch="false"/>
 							</lines>
@@ -40492,7 +40492,7 @@
 								<line number="55" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="setPart" signature="(Lorg/universAAL/middleware/deploymanager/uapp/model/Part;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="setPart" signature="(Lorg/universAAL/middleware/managers/deploy/uapp/model/Part;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="118" hits="0" branch="false"/>
 								<line number="119" hits="0" branch="false"/>

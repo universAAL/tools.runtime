@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="9701" branches-covered="0" branches-valid="2828" complexity="1.8428493746601413" version="2.1.1" timestamp="1497761038736">
+<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="9701" branches-covered="0" branches-valid="2828" complexity="1.8428493746601413" version="2.1.1" timestamp="1498209620040">
 	<sources>
 		<source>/home/travis/build/universAAL/tools.runtime/tools.uCC/tools.ucc.vaadin.themes/src/main/java</source>
 		<source>--source</source>
@@ -8068,7 +8068,7 @@
 								<line number="20" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getAALSpaceManager" signature="()Lorg/universAAL/middleware/managers/api/AALSpaceManager;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="getAALSpaceManager" signature="()Lorg/universAAL/middleware/managers/api/SpaceManager;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="104" hits="0" branch="false"/>
 							</lines>
@@ -21968,7 +21968,7 @@
 								<line number="12" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getUapp" signature="(Ljava/lang/String;)Lorg/universAAL/middleware/deploymanager/uapp/model/AalUapp;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="getUapp" signature="(Ljava/lang/String;)Lorg/universAAL/middleware/managers/deploy/uapp/model/AalUapp;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="15" hits="0" branch="false"/>
 								<line number="16" hits="0" branch="false"/>
@@ -24649,7 +24649,7 @@
 								<line number="32" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIILjava/lang/String;ZLorg/universAAL/middleware/deploymanager/uapp/model/Part;Ljava/lang/String;Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIILjava/lang/String;ZLorg/universAAL/middleware/managers/deploy/uapp/model/Part;Ljava/lang/String;Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="29" hits="0" branch="false"/>
 								<line number="35" hits="0" branch="false"/>
@@ -24719,7 +24719,7 @@
 								<line number="50" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getPart" signature="()Lorg/universAAL/middleware/deploymanager/uapp/model/Part;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="getPart" signature="()Lorg/universAAL/middleware/managers/deploy/uapp/model/Part;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="114" hits="0" branch="false"/>
 							</lines>
@@ -24793,7 +24793,7 @@
 								<line number="55" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="setPart" signature="(Lorg/universAAL/middleware/deploymanager/uapp/model/Part;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="setPart" signature="(Lorg/universAAL/middleware/managers/deploy/uapp/model/Part;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="118" hits="0" branch="false"/>
 								<line number="119" hits="0" branch="false"/>

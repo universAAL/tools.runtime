@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./all_log/LogMonitor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.tools.logmonitor.bus_member.LogMonitor
-	c68053 [label=<<table title="org.universAAL.tools.logmonitor.bus_member.LogMonitor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./bus_member/LogMonitor.html">
+	c68054 [label=<<table title="org.universAAL.tools.logmonitor.bus_member.LogMonitor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./bus_member/LogMonitor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LogMonitor </td></tr>
 		</table></td></tr>
@@ -57,7 +57,7 @@ digraph G {
 	//org.universAAL.tools.logmonitor.all_log.LogMonitor implements org.universAAL.tools.logmonitor.LogListenerEx
 	c68047:p -> c68049:p [dir=back,arrowtail=empty,style=dashed];
 	//org.universAAL.tools.logmonitor.bus_member.LogMonitor implements org.universAAL.tools.logmonitor.LogListenerEx
-	c68047:p -> c68053:p [dir=back,arrowtail=empty,style=dashed];
+	c68047:p -> c68054:p [dir=back,arrowtail=empty,style=dashed];
 	//org.universAAL.tools.logmonitor.msgflow.LogMonitor implements org.universAAL.tools.logmonitor.LogListenerEx
 	c68047:p -> c68057:p [dir=back,arrowtail=empty,style=dashed];
 	//org.universAAL.tools.logmonitor.ontology.LogMonitor implements org.universAAL.tools.logmonitor.LogListenerEx

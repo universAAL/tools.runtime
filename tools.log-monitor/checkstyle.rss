@@ -28,7 +28,7 @@ under the License.
       <title>File: 45,
              Errors: 722,
              Warnings: 41,
-             Infos: 147
+             Infos: 146
       </title>
             <link>/checkstyle.html</link>
       <description>
@@ -266,20 +266,6 @@ under the License.
                 </td>
                 <td>
                   29
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.bus_member.SpaceListener.java">org/universAAL/tools/logmonitor/bus_member/SpaceListener.java</a>
-                </td>
-                <td>
-                  2
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  15
                 </td>
               </tr>
                           <tr>
@@ -581,7 +567,7 @@ under the License.
                   <a href="/checkstyle.html#org.universAAL.tools.logmonitor.ontology.gui.OntologyGui.java">org/universAAL/tools/logmonitor/ontology/gui/OntologyGui.java</a>
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   1
@@ -602,6 +588,20 @@ under the License.
                 </td>
                 <td>
                   16
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="/checkstyle.html#org.universAAL.tools.logmonitor.bus_member.MySpaceListener.java">org/universAAL/tools/logmonitor/bus_member/MySpaceListener.java</a>
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  15
                 </td>
               </tr>
                           <tr>

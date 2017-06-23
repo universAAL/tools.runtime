@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="217" branches-covered="0" branches-valid="30" complexity="1.962962962962963" version="2.1.1" timestamp="1497760473037">
+<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="217" branches-covered="0" branches-valid="30" complexity="1.962962962962963" version="2.1.1" timestamp="1498209127425">
 	<sources>
 		<source>/home/travis/build/universAAL/tools.runtime/tools.sparql-tester/src/main/java</source>
 		<source>--source</source>

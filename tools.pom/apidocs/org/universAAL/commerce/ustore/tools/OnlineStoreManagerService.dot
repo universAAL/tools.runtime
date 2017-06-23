@@ -10,15 +10,15 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// org.universAAL.commerce.ustore.tools.OnlineStoreManagerService
-	c78533 [label=<<table title="org.universAAL.commerce.ustore.tools.OnlineStoreManagerService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OnlineStoreManagerService.html">
+	c78846 [label=<<table title="org.universAAL.commerce.ustore.tools.OnlineStoreManagerService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OnlineStoreManagerService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OnlineStoreManagerService </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OnlineStoreManagerService.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//org.universAAL.commerce.ustore.tools.OnlineStoreManagerService extends javax.xml.ws.Service
-	c78607:p -> c78533:p [dir=back,arrowtail=empty];
+	c78920:p -> c78846:p [dir=back,arrowtail=empty];
 	// javax.xml.ws.Service
-	c78607 [label=<<table title="javax.xml.ws.Service" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/javax/xml/ws/Service.html">
+	c78920 [label=<<table title="javax.xml.ws.Service" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/javax/xml/ws/Service.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Service </td></tr>
 		</table></td></tr>

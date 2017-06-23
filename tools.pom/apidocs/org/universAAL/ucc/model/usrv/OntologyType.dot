@@ -10,15 +10,15 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// org.universAAL.ucc.model.usrv.OntologyType
-	c80564 [label=<<table title="org.universAAL.ucc.model.usrv.OntologyType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OntologyType.html">
+	c80877 [label=<<table title="org.universAAL.ucc.model.usrv.OntologyType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OntologyType.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OntologyType </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OntologyType.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//org.universAAL.ucc.model.usrv.OntologyType implements java.io.Serializable
-	c80780:p -> c80564:p [dir=back,arrowtail=empty,style=dashed];
+	c81093:p -> c80877:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c80780 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html">
+	c81093 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>

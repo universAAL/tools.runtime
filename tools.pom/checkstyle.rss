@@ -28,7 +28,7 @@ under the License.
       <title>File: 292,
              Errors: 5238,
              Warnings: 174,
-             Infos: 2319
+             Infos: 2318
       </title>
             <link>http://xtras/tools.runtime/tools.pom//checkstyle.html</link>
       <description>
@@ -1068,20 +1068,6 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="http://xtras/tools.runtime/tools.pom//checkstyle.html#org.universAAL.tools.logmonitor.bus_member.SpaceListener.java">org/universAAL/tools/logmonitor/bus_member/SpaceListener.java</a>
-                </td>
-                <td>
-                  2
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  15
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="http://xtras/tools.runtime/tools.pom//checkstyle.html#org.universAAL.ucc.windows.DeinstallWindow.java">org/universAAL/ucc/windows/DeinstallWindow.java</a>
                 </td>
                 <td>
@@ -1715,7 +1701,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.pom//checkstyle.html#org.universAAL.tools.logmonitor.ontology.gui.OntologyGui.java">org/universAAL/tools/logmonitor/ontology/gui/OntologyGui.java</a>
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   1
@@ -2240,6 +2226,20 @@ under the License.
                 </td>
                 <td>
                   16
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="http://xtras/tools.runtime/tools.pom//checkstyle.html#org.universAAL.tools.logmonitor.bus_member.MySpaceListener.java">org/universAAL/tools/logmonitor/bus_member/MySpaceListener.java</a>
+                </td>
+                <td>
+                  2
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  15
                 </td>
               </tr>
                           <tr>
