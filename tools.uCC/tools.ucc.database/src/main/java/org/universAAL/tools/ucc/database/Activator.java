@@ -11,7 +11,7 @@ import org.osgi.framework.ServiceRegistration;
 import org.universAAL.middleware.container.ModuleContext;
 import org.universAAL.middleware.container.osgi.OSGiContainer;
 import org.universAAL.ontology.phThing.Device;
-import org.universAAL.ontology.profile.AALSpace;
+import org.universAAL.ontology.profile.Space;
 import org.universAAL.ontology.profile.User;
 import org.universAAL.tools.ucc.database.listener.interfaces.OntologySupplierService;
 import org.universAAL.tools.ucc.database.listener.services.OntologySupplierServiceImpl;
@@ -147,10 +147,10 @@ public class Activator implements BundleActivator {
 	 * with profileagent.
 	 */
 	private void createEmptyDevice() {
-		AALSpace mySpace = null;
-		List<AALSpace> spaces = pAgent.getSpaces();
+		Space mySpace = null;
+		List<Space> spaces = pAgent.getSpaces();
 		if (spaces == null) {
-			mySpace = new AALSpace(HOME_SPACE);
+			mySpace = new Space(HOME_SPACE);
 			pAgent.addSpace(mySpace);
 		}
 		Device dev = new Device(DEVICE_SPACE + "Device");

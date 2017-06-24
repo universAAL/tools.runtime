@@ -7,7 +7,7 @@ import java.util.List;
 import javax.xml.bind.JAXB;
 
 import org.universAAL.ontology.phThing.Device;
-import org.universAAL.ontology.profile.AALSpace;
+import org.universAAL.ontology.profile.Space;
 import org.universAAL.ontology.profile.User;
 import org.universAAL.tools.ucc.database.Activator;
 import org.universAAL.tools.ucc.model.jaxb.*;
@@ -168,7 +168,7 @@ public class DataAccessImpl implements DataAccess {
 		}
 		// Devices
 		else if (instance.equals("Device")) {
-			for (AALSpace space : pAgent.getSpaces()) {
+			for (Space space : pAgent.getSpaces()) {
 				for (Device dev : pAgent.getAllDevices(space)) {
 					rooms.add((String) dev.getProperty(Activator.DEVICE_SPACE + "room"));
 					devTypes.add((String) dev.getProperty(Activator.DEVICE_SPACE + "deviceType"));

@@ -14,10 +14,10 @@ import org.universAAL.middleware.service.ServiceRequest;
 import org.universAAL.middleware.service.ServiceResponse;
 import org.universAAL.middleware.service.owls.process.ProcessOutput;
 import org.universAAL.ontology.phThing.Device;
-import org.universAAL.ontology.profile.AALService;
-import org.universAAL.ontology.profile.AALServiceProfile;
-import org.universAAL.ontology.profile.AALSpace;
-import org.universAAL.ontology.profile.AALSpaceProfile;
+import org.universAAL.ontology.profile.AppService;
+import org.universAAL.ontology.profile.AppServiceProfile;
+import org.universAAL.ontology.profile.Space;
+import org.universAAL.ontology.profile.SpaceProfile;
 import org.universAAL.ontology.profile.Profilable;
 import org.universAAL.ontology.profile.Profile;
 import org.universAAL.ontology.profile.SubProfile;
@@ -266,12 +266,12 @@ public class ProfileAgentImpl implements ProfileAgent {
 		return null;
 	}
 
-	public void addAALSpaceProfile(User user, AALSpaceProfile aalSpaceProfile) {
+	public void addAALSpaceProfile(User user, SpaceProfile aalSpaceProfile) {
 		// TODO Auto-generated method stub
 
 	}
 
-	public void changeAALSpaceProfile(User user, AALSpaceProfile aalSpaceProfile) {
+	public void changeAALSpaceProfile(User user, SpaceProfile aalSpaceProfile) {
 		// TODO Auto-generated method stub
 
 	}
@@ -417,11 +417,11 @@ public class ProfileAgentImpl implements ProfileAgent {
 	}
 
 	/*** use space server ********/
-	public String addSpace(AALSpace space) {
+	public String addSpace(Space space) {
 		return genericAdd(space, Path.at(ProfilingService.PROP_CONTROLS).path);
 	}
 
-	public AALSpace getSpace(AALSpace space) {
+	public Space getSpace(Space space) {
 		String[] path = Path.at(ProfilingService.PROP_CONTROLS).path;
 		ServiceResponse resp = caller
 				.call(UtilEditor.requestGet(ProfilingService.MY_URI, path, Arg.in(space), Arg.out(OUTPUT)));
@@ -429,7 +429,7 @@ public class ProfileAgentImpl implements ProfileAgent {
 			Object out = getReturnValue(resp.getOutputs(), OUTPUT);
 			if (out != null) {
 				System.out.println(out.toString());
-				return (AALSpace) out;
+				return (Space) out;
 			} else {
 				System.out.println("NOTHING!");
 				return null;
@@ -440,10 +440,10 @@ public class ProfileAgentImpl implements ProfileAgent {
 		}
 	}
 
-	public List<AALSpace> getSpaces() {
+	public List<Space> getSpaces() {
 		Request req = new Request(new ProfilingService(null));
 		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.out(OUTPUT));
-		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.type(AALSpace.MY_URI)); // This
+		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.type(Space.MY_URI)); // This
 																						// only
 																						// works
 																						// if
@@ -461,12 +461,12 @@ public class ProfileAgentImpl implements ProfileAgent {
 			if (out != null) {
 				System.out.println(out.toString());
 				// get each device using the uri
-				List<AALSpace> spaces = new ArrayList();
+				List<Space> spaces = new ArrayList();
 				List outl = (List) out;
 				Object ur;
 				for (int i = 0; i < outl.size(); i++) {
 					ur = (Object) outl.get(i);
-					AALSpace u = getSpace(new AALSpace(ur.toString()));
+					Space u = getSpace(new Space(ur.toString()));
 					spaces.add(u);
 				}
 				return spaces;
@@ -480,22 +480,22 @@ public class ProfileAgentImpl implements ProfileAgent {
 		}
 	}
 
-	public String addSpaceProfile(AALSpaceProfile aalSpaceProfile) {
+	public String addSpaceProfile(SpaceProfile aalSpaceProfile) {
 		return genericAdd(aalSpaceProfile,
 				Path.at(ProfilingService.PROP_CONTROLS).to(Profilable.PROP_HAS_PROFILE).path);
 	}
 
 	public String getDevice(Device device) {
 		return genericGet(device, Path.at(ProfilingService.PROP_CONTROLS).to(Profilable.PROP_HAS_PROFILE)
-				.to(AALSpaceProfile.PROP_INSTALLED_HARDWARE).path);
+				.to(SpaceProfile.PROP_INSTALLED_HARDWARE).path);
 	}
 
 	public String addDevice(Device device) {
 		return genericAdd(device, Path.at(ProfilingService.PROP_CONTROLS).to(Profilable.PROP_HAS_PROFILE)
-				.to(AALSpaceProfile.PROP_INSTALLED_HARDWARE).path);
+				.to(SpaceProfile.PROP_INSTALLED_HARDWARE).path);
 	}
 
-	public String addDevice(Device device, AALSpace space) {
+	public String addDevice(Device device, Space space) {
 		String result = addDevice(device);
 		if (result.equals("call_succeeded"))
 			return addDeviceToSpace(device, space);
@@ -507,7 +507,7 @@ public class ProfileAgentImpl implements ProfileAgent {
 		Device device;
 		Resource res = new Device(uri);
 		String[] path = Path.at(ProfilingService.PROP_CONTROLS).to(Profilable.PROP_HAS_PROFILE)
-				.to(AALSpaceProfile.PROP_INSTALLED_HARDWARE).path;
+				.to(SpaceProfile.PROP_INSTALLED_HARDWARE).path;
 		ServiceResponse resp = caller
 				.call(UtilEditor.requestGet(ProfilingService.MY_URI, path, Arg.in(res), Arg.out(OUTPUT)));
 		if (resp.getCallStatus() == CallStatus.succeeded) {
@@ -528,7 +528,7 @@ public class ProfileAgentImpl implements ProfileAgent {
 
 	public boolean updateDevice(Device device) {
 		String result = genericChange(device, Path.at(ProfilingService.PROP_CONTROLS).to(Profilable.PROP_HAS_PROFILE)
-				.to(AALSpaceProfile.PROP_INSTALLED_HARDWARE).path);
+				.to(SpaceProfile.PROP_INSTALLED_HARDWARE).path);
 		if (result.equals("call_succeeded"))
 			return true;
 		else
@@ -537,7 +537,7 @@ public class ProfileAgentImpl implements ProfileAgent {
 
 	public boolean deleteDevice(String uri) {
 		String result = genericRemove(new Device(uri), Path.at(ProfilingService.PROP_CONTROLS)
-				.to(Profilable.PROP_HAS_PROFILE).to(AALSpaceProfile.PROP_INSTALLED_HARDWARE).path);
+				.to(Profilable.PROP_HAS_PROFILE).to(SpaceProfile.PROP_INSTALLED_HARDWARE).path);
 		if (result.equals("call_succeeded"))
 			return true;
 		else
@@ -545,14 +545,14 @@ public class ProfileAgentImpl implements ProfileAgent {
 	}
 
 	// Has not been tested - wait for space server!!!
-	public List<Device> getAllDevices(AALSpace space) {
+	public List<Device> getAllDevices(Space space) {
 		ServiceRequest req = new ServiceRequest(new ProfilingService(), null);
 		req.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS }, space);
-		req.addTypeFilter(new String[] { ProfilingService.PROP_CONTROLS }, AALSpace.MY_URI);
+		req.addTypeFilter(new String[] { ProfilingService.PROP_CONTROLS }, Space.MY_URI);
 		req.addRequiredOutput(OUTPUT, new String[] { ProfilingService.PROP_CONTROLS, Profilable.PROP_HAS_PROFILE,
-				AALSpaceProfile.PROP_INSTALLED_HARDWARE });
+				SpaceProfile.PROP_INSTALLED_HARDWARE });
 		req.addTypeFilter(new String[] { ProfilingService.PROP_CONTROLS, Profilable.PROP_HAS_PROFILE,
-				AALSpaceProfile.PROP_INSTALLED_HARDWARE }, Device.MY_URI);
+				SpaceProfile.PROP_INSTALLED_HARDWARE }, Device.MY_URI);
 		ServiceResponse resp = caller.call(req);
 		if (resp.getCallStatus() == CallStatus.succeeded) {
 			Object out = getReturnValue(resp.getOutputs(), OUTPUT_GETUSERS);
@@ -583,43 +583,43 @@ public class ProfileAgentImpl implements ProfileAgent {
 		}
 	}
 
-	public String getSpaceProfile(AALSpaceProfile aalSpaceProfile) {
+	public String getSpaceProfile(SpaceProfile aalSpaceProfile) {
 		return genericGet(aalSpaceProfile,
 				Path.at(ProfilingService.PROP_CONTROLS).to(Profilable.PROP_HAS_PROFILE).path);
 	}
 
-	public String addDeviceToSpace(Device dev, AALSpace aalSpace) {
+	public String addDeviceToSpace(Device dev, Space aalSpace) {
 		Request req = new Request(new ProfilingService(null));
 		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.in(aalSpace));
-		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.type(AALSpace.MY_URI));
+		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.type(Space.MY_URI));
 		req.put(Path.at(ProfilingService.PROP_CONTROLS).to(Profilable.PROP_HAS_PROFILE)
-				.to(AALSpaceProfile.PROP_INSTALLED_HARDWARE), Arg.add(dev));
+				.to(SpaceProfile.PROP_INSTALLED_HARDWARE), Arg.add(dev));
 		ServiceResponse resp = caller.call(req);
 		return resp.getCallStatus().name();
 	}
 
-	public String getDevicesOfSpace(AALSpace aalSpace) {
+	public String getDevicesOfSpace(Space aalSpace) {
 		Request req = new Request(new ProfilingService(null));
 		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.in(aalSpace));
-		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.type(AALSpace.MY_URI));
+		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.type(Space.MY_URI));
 		req.put(Path.at(ProfilingService.PROP_CONTROLS).to(Profilable.PROP_HAS_PROFILE)
-				.to(AALSpaceProfile.PROP_INSTALLED_HARDWARE), Arg.out(OUTPUT));
+				.to(SpaceProfile.PROP_INSTALLED_HARDWARE), Arg.out(OUTPUT));
 		ServiceResponse resp = caller.call(req);
 		return getListOfResults(resp);
 	}
 
-	public String addService(AALService aalService) {
+	public String addService(AppService aalService) {
 		return genericAdd(aalService, Path.at(ProfilingService.PROP_CONTROLS).path);
 	}
 
-	public String getService(AALService aalService) {
+	public String getService(AppService aalService) {
 		return genericGet(aalService, Path.at(ProfilingService.PROP_CONTROLS).path);
 	}
 
 	public String getServices() {
 		Request req = new Request(new ProfilingService(null));
 		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.out(OUTPUT));
-		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.type(AALService.MY_URI)); // This
+		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.type(AppService.MY_URI)); // This
 																						// only
 																						// works
 																						// if
@@ -634,67 +634,67 @@ public class ProfileAgentImpl implements ProfileAgent {
 		return getListOfResults(resp);
 	}
 
-	public String changeService(AALService aalService) {
+	public String changeService(AppService aalService) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public String removeService(AALService aalService) {
+	public String removeService(AppService aalService) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public String addServiceProf(AALServiceProfile aalServiceProfile) {
+	public String addServiceProf(AppServiceProfile aalServiceProfile) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public String getServiceProf(AALServiceProfile aalServiceProfile) {
+	public String getServiceProf(AppServiceProfile aalServiceProfile) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public String changeServiceProf(AALServiceProfile aalServiceProfile) {
+	public String changeServiceProf(AppServiceProfile aalServiceProfile) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public String removeServiceProf(AALServiceProfile aalServiceProfile) {
+	public String removeServiceProf(AppServiceProfile aalServiceProfile) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public String addServicesToSpace(AALSpace aalSpace, AALService serv) {
+	public String addServicesToSpace(Space aalSpace, AppService serv) {
 		Request req = new Request(new ProfilingService(null));
 		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.in(aalSpace));
-		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.type(AALSpace.MY_URI));
+		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.type(Space.MY_URI));
 		req.put(Path.at(ProfilingService.PROP_CONTROLS).to(Profilable.PROP_HAS_PROFILE)
-				.to(AALSpaceProfile.PROP_INSTALLED_SERVICES), Arg.add(serv));
+				.to(SpaceProfile.PROP_INSTALLED_SERVICES), Arg.add(serv));
 		ServiceResponse resp = caller.call(req);
 		return resp.getCallStatus().name();
 	}
 
-	public String getServicesOfSpace(AALSpace aalSpace) {
+	public String getServicesOfSpace(Space aalSpace) {
 		Request req = new Request(new ProfilingService(null));
 		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.in(aalSpace));
-		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.type(AALSpace.MY_URI));
+		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.type(Space.MY_URI));
 		req.put(Path.at(ProfilingService.PROP_CONTROLS).to(Profilable.PROP_HAS_PROFILE)
-				.to(AALSpaceProfile.PROP_INSTALLED_SERVICES), Arg.out(OUTPUT));
+				.to(SpaceProfile.PROP_INSTALLED_SERVICES), Arg.out(OUTPUT));
 		ServiceResponse resp = caller.call(req);
 		return getListOfResults(resp);
 	}
 
-	public String getHROfServ(AALService aalService) {
+	public String getHROfServ(AppService aalService) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public String getHWOfServ(AALService aalService) {
+	public String getHWOfServ(AppService aalService) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public String getAppOfServ(AALService aalService) {
+	public String getAppOfServ(AppService aalService) {
 		// TODO Auto-generated method stub
 		return null;
 	}

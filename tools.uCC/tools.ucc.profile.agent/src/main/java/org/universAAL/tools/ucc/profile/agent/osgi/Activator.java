@@ -8,8 +8,8 @@ import org.universAAL.middleware.container.ModuleContext;
 import org.universAAL.middleware.container.osgi.OSGiContainer;
 import org.universAAL.middleware.container.utils.LogUtils;
 import org.universAAL.ontology.phThing.Device;
-import org.universAAL.ontology.profile.AALSpace;
-import org.universAAL.ontology.profile.AALSpaceProfile;
+import org.universAAL.ontology.profile.Space;
+import org.universAAL.ontology.profile.SpaceProfile;
 import org.universAAL.ontology.profile.AssistedPerson;
 import org.universAAL.ontology.profile.User;
 import org.universAAL.ontology.profile.UserProfile;
@@ -51,7 +51,7 @@ public class Activator implements BundleActivator {
 		String device1URI = "urn:org.universAAL.aal_space:test_env#Device1";
 		String device2URI = "urn:org.universAAL.aal_space:test_env#Device2";
 
-		AALSpace space = new AALSpace(spaceURI);
+		Space space = new Space(spaceURI);
 		// AALSpaceProfile aalSpaceProfile = new
 		// AALSpaceProfile(aalSpaceProfileURI);
 
@@ -60,10 +60,10 @@ public class Activator implements BundleActivator {
 
 		/* test add/get space */
 		System.out.println("[TEST] getting all AAL spaces...");
-		List<AALSpace> spaces = agent.getSpaces();
+		List<Space> spaces = agent.getSpaces();
 		if (spaces == null) {
 			// TODO: create the space with appropriate properties from MW
-			AALSpace myspace = new AALSpace(spaceURI);
+			Space myspace = new Space(spaceURI);
 			agent.addSpace(myspace);
 			spaces = agent.getSpaces();
 		}
@@ -157,7 +157,7 @@ public class Activator implements BundleActivator {
 		User maria = new User(userURI);
 		// AssistedPerson maria = new AssistedPerson(userURI);
 		UserProfile userProfile = new UserProfile(userProfileURI);
-		AALSpaceProfile aalSpaceProfile = new AALSpaceProfile(aalSpaceProfileURI);
+		SpaceProfile aalSpaceProfile = new SpaceProfile(aalSpaceProfileURI);
 
 		User john = new User(userURI2);
 		// AssistedPerson john = new AssistedPerson(userURI2);
