@@ -30,9 +30,9 @@ import org.universAAL.tools.logmonitor.service_bus_matching.URI;
 /**
  * HTML-based Pane that handles bus operations, i.e. service profiles/requests
  * and context events/event patterns.
- * 
+ *
  * @author Carsten Stockloew
- * 
+ *
  */
 public class HTMLBusOperationsPane extends HTMLVisibilityPane {
 	private static final long serialVersionUID = 1L;
@@ -40,7 +40,7 @@ public class HTMLBusOperationsPane extends HTMLVisibilityPane {
 	/**
 	 * Get the html-code for all representations (serialized, abstract..) of a
 	 * context event pattern.
-	 * 
+	 *
 	 * @param s
 	 * @param info
 	 * @param profileURI
@@ -314,7 +314,7 @@ public class HTMLBusOperationsPane extends HTMLVisibilityPane {
 	/**
 	 * Get the html-code for all representations (serialized, abstract..) of a
 	 * service profile.
-	 * 
+	 *
 	 * @param s
 	 * @param info
 	 * @param profileURI

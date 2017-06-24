@@ -1,9 +1,9 @@
 package org.universAAL.tools.ucc.configuration.model;
 
 /**
- * 
+ *
  * A class to handle cardinalities like 0..1, 0..*, 1..1
- * 
+ *
  * @author Sebastian.Schoebinge
  *
  */
@@ -17,7 +17,7 @@ public class Cardinality {
 
 	/**
 	 * Splits the input string by ".." into top and bottom limit.
-	 * 
+	 *
 	 * @param cardinality
 	 */
 	public Cardinality(String cardinality) {
@@ -33,7 +33,7 @@ public class Cardinality {
 
 	/**
 	 * Checks if the cardinality has the bottom limit 0 or not.
-	 * 
+	 *
 	 * @return true if the bottom limit doesnt fits "0".
 	 */
 	public boolean isRequired() {
@@ -43,7 +43,7 @@ public class Cardinality {
 	}
 
 	/**
-	 * 
+	 *
 	 * @return true if the top limit isn't 1 or 0.
 	 */
 	public boolean allowMultiselection() {

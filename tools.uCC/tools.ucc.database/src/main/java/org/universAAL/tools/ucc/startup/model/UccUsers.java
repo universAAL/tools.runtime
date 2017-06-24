@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * All user in AAL space and uCC.
- * 
+ *
  * @author Nicole Merkle
  *
  */
@@ -21,7 +21,7 @@ public class UccUsers {
 
 	/**
 	 * Gets all user of uCC
-	 * 
+	 *
 	 * @return a list of users
 	 */
 	@XmlElement(name = "user")
@@ -31,7 +31,7 @@ public class UccUsers {
 
 	/**
 	 * Sets all User of uCC.
-	 * 
+	 *
 	 * @param allUser
 	 *            a list of all users
 	 */

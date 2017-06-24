@@ -8,10 +8,10 @@ import org.universAAL.tools.ucc.configuration.model.configurationinstances.Value
 import org.universAAL.tools.ucc.configuration.model.exceptions.ValidationException;
 
 /**
- * 
+ *
  * This class represents the the simple configuration item of xml configuration
  * definition.
- * 
+ *
  * @author Sebastian.Schoebinge
  *
  */

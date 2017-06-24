@@ -1,11 +1,11 @@
 package org.universAAL.tools.ucc.configuration.beans;
 
 /**
- * 
+ *
  * A bean class for the form to save a configuration instance.
- * 
+ *
  * @author Sebastian.Schoebinge
- * 
+ *
  */
 
 public class ConfigurationSaveOptions {

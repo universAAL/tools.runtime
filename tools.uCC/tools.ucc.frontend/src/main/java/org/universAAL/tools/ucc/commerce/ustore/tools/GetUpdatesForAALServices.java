@@ -8,11 +8,11 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * <p>
  * Clase Java para getUpdatesForAALServices complex type.
- * 
+ *
  * <p>
  * El siguiente fragmento de esquema especifica el contenido que se espera que
  * haya en esta clase.
- * 
+ *
  * <pre>
  * &lt;complexType name="getUpdatesForAALServices">
  *   &lt;complexContent>
@@ -24,8 +24,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "getUpdatesForAALServices", propOrder = { "sessionKey" })
@@ -35,9 +35,9 @@ public class GetUpdatesForAALServices {
 
 	/**
 	 * Obtiene el valor de la propiedad sessionKey.
-	 * 
+	 *
 	 * @return possible object is {@link String }
-	 * 
+	 *
 	 */
 	public String getSessionKey() {
 		return sessionKey;
@@ -45,10 +45,10 @@ public class GetUpdatesForAALServices {
 
 	/**
 	 * Define el valor de la propiedad sessionKey.
-	 * 
+	 *
 	 * @param value
 	 *            allowed object is {@link String }
-	 * 
+	 *
 	 */
 	public void setSessionKey(String value) {
 		this.sessionKey = value;

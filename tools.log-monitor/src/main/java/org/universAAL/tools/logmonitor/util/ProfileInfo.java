@@ -7,7 +7,7 @@ package org.universAAL.tools.logmonitor.util;
 import org.universAAL.middleware.service.owls.profile.ServiceProfile;
 
 /**
- * 
+ *
  * @author Carsten Stockloew
  *
  */

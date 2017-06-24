@@ -21,10 +21,10 @@ import org.universAAL.tools.ucc.configuration.internal.Activator;
 import org.universAAL.tools.ucc.configuration.model.ConfigurationOption;
 
 /**
- * 
+ *
  * This is a special window to ask for extra information about the instance
  * which should be saved.
- * 
+ *
  * @author Sebastian Schoebinger
  *
  */

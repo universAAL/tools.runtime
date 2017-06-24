@@ -10,11 +10,11 @@ import org.universAAL.middleware.container.utils.LogUtils;
 import org.universAAL.tools.ucc.configuration.model.interfaces.ModelRegistryChangedListener;
 
 /**
- * 
+ *
  * The registry class to manage the configuration options. Every configuration
  * option adds itself to this registry. You can ask the registry for
  * configuration options by its id's.
- * 
+ *
  * @author Sebastian.Schoebinge
  *
  */

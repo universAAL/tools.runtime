@@ -4,10 +4,10 @@ import org.universAAL.tools.ucc.deploymanagerservice.DeployManagerService;
 
 /**
  * Implemenation of the DeployManager Web service
- * 
+ *
  * @author sji
  * @modified by Nicole Merkle
- * 
+ *
  */
 
 public class DeployManagerServiceImpl implements DeployManagerService {

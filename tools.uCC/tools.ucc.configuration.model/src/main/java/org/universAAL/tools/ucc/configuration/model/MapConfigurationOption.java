@@ -7,10 +7,10 @@ import org.universAAL.tools.ucc.configuration.model.configurationdefinition.MapC
 import org.universAAL.tools.ucc.configuration.model.configurationdefinition.Option;
 
 /**
- * 
+ *
  * This class represents the map configuration item of the xml configuration
  * definition.
- * 
+ *
  * @author Sebastian.Schoebinge
  *
  */

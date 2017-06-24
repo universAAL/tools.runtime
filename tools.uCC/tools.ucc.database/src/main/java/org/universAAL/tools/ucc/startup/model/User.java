@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * A User of uCC with name, password and role.
- * 
+ *
  * @author Nicole Merkle
  *
  */
@@ -17,7 +17,7 @@ public class User {
 
 	/**
 	 * Gets the name of a user.
-	 * 
+	 *
 	 * @return name of a user
 	 */
 	public String getName() {
@@ -26,7 +26,7 @@ public class User {
 
 	/**
 	 * Sets the name of a user.
-	 * 
+	 *
 	 * @param name
 	 *            the name of a user
 	 */
@@ -36,7 +36,7 @@ public class User {
 
 	/**
 	 * Gets the password of a user.
-	 * 
+	 *
 	 * @return the password of a user
 	 */
 	public String getPassword() {
@@ -45,7 +45,7 @@ public class User {
 
 	/**
 	 * Sets the password of a user
-	 * 
+	 *
 	 * @param password
 	 *            the password of a user
 	 */
@@ -55,7 +55,7 @@ public class User {
 
 	/**
 	 * Gets the role of a user.
-	 * 
+	 *
 	 * @return the role of a user
 	 */
 	public List<Role> getRole() {
@@ -64,7 +64,7 @@ public class User {
 
 	/**
 	 * Sets the role of a user.
-	 * 
+	 *
 	 * @param role
 	 *            the role of a user
 	 */
@@ -74,7 +74,7 @@ public class User {
 
 	/**
 	 * Shows if the checkbox is checked
-	 * 
+	 *
 	 * @return true or false
 	 */
 	public boolean isChecked() {
@@ -83,7 +83,7 @@ public class User {
 
 	/**
 	 * Sets, if the checkbox is checked
-	 * 
+	 *
 	 * @param checked
 	 *            true of false
 	 */

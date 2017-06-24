@@ -7,7 +7,7 @@ import org.universAAL.tools.ucc.configuration.model.interfaces.ConfigurationVali
 
 /**
  * This validator class checks whether the value is of type double or not.
- * 
+ *
  * @author Sebastian.Schoebinge
  *
  */

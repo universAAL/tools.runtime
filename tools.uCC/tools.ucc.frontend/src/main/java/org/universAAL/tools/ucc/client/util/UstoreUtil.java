@@ -23,7 +23,7 @@ import org.universAAL.tools.ucc.startup.model.UserAccountInfo;
 
 /**
  * Client for the Webservice communication with uStore
- * 
+ *
  * @author Nicole Merkle
  *
  */
@@ -50,7 +50,7 @@ public class UstoreUtil {
 
 	/**
 	 * Registers user to uStore
-	 * 
+	 *
 	 * @return answer of the uStore registration
 	 * @throws UAALException
 	 */
@@ -84,7 +84,7 @@ public class UstoreUtil {
 
 	/**
 	 * Gets a session key from uStore.
-	 * 
+	 *
 	 * @return session key from uStore
 	 */
 	public String getSessionKey() {

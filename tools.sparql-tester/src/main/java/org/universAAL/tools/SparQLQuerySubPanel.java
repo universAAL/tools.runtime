@@ -113,7 +113,7 @@ public class SparQLQuerySubPanel extends JPanel implements Runnable {
 	}
 
 	/**
-	 * 
+	 *
 	 */
 	public void clear() {
 		this.query.setText("");

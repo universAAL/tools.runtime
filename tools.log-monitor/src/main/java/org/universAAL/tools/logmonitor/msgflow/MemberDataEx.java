@@ -21,9 +21,9 @@ package org.universAAL.tools.logmonitor.msgflow;
 import org.universAAL.tools.logmonitor.MemberData;
 
 /**
- * 
+ *
  * @author Carsten Stockloew
- * 
+ *
  */
 public class MemberDataEx {
 	public MemberData member;

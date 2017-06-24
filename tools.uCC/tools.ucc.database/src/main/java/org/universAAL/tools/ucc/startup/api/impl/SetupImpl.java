@@ -11,7 +11,7 @@ import org.universAAL.tools.ucc.startup.model.UserAccountInfo;
 import javax.xml.bind.JAXB;
 
 /**
- * 
+ *
  * @author Nicole Merkle
  *
  */

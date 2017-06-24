@@ -17,7 +17,7 @@ import org.universAAL.tools.logmonitor.rdfvis.gui.GraphPanel;
  * {@link org.universAAL.middleware.rdf.Resource} corresponds to a
  * {@link org.universAAL.tools.logmonitor.rdfvis.Node} in the visualization and
  * every property to an Edge.
- * 
+ *
  * @author Carsten Stockloew
  */
 public class Edge implements Comparable<Object> {
@@ -51,7 +51,7 @@ public class Edge implements Comparable<Object> {
 
 	/**
 	 * Create a new Edge.
-	 * 
+	 *
 	 * @param name
 	 *            The name of the edge.
 	 * @param child
@@ -64,7 +64,7 @@ public class Edge implements Comparable<Object> {
 
 	/**
 	 * Create a new Edge.
-	 * 
+	 *
 	 * @param name
 	 *            The name of the edge.
 	 * @param child
@@ -80,7 +80,7 @@ public class Edge implements Comparable<Object> {
 
 	/**
 	 * Set the child node.
-	 * 
+	 *
 	 * @param child
 	 *            The child node.
 	 */
@@ -92,7 +92,7 @@ public class Edge implements Comparable<Object> {
 
 	/**
 	 * Get the child node of this object.
-	 * 
+	 *
 	 * @return The child.
 	 */
 	public Node getChild() {
@@ -101,7 +101,7 @@ public class Edge implements Comparable<Object> {
 
 	/**
 	 * Get the name of this object.
-	 * 
+	 *
 	 * @return The name.
 	 */
 	String getName() {
@@ -110,7 +110,7 @@ public class Edge implements Comparable<Object> {
 
 	/**
 	 * Draw this edge (draw an arrow from the parent node to the child node).
-	 * 
+	 *
 	 * @param g
 	 *            The graphics to draw to.
 	 * @param parent
@@ -163,7 +163,7 @@ public class Edge implements Comparable<Object> {
 
 	/**
 	 * Draws an arrow on the given Graphics2D context.
-	 * 
+	 *
 	 * @param g
 	 *            The Graphics2D context to draw on.
 	 * @param x
@@ -220,7 +220,7 @@ public class Edge implements Comparable<Object> {
 
 	/**
 	 * Compares this object with the specified object for order.
-	 * 
+	 *
 	 * @param o
 	 *            The Object to be compared.
 	 * @return A negative integer, zero, or a positive integer as this object is

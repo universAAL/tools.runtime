@@ -36,10 +36,10 @@ import org.universAAL.tools.ucc.configuration.storage.interfaces.ConfigurationIn
 import org.universAAL.tools.ucc.configuration.storage.interfaces.StorageChangedListener;
 
 /**
- * 
+ *
  * This window shows an overview about the configuration. E. g. the id of the
  * configuration definition and the configuration instances.
- * 
+ *
  * @author Sebastian Schoebinger
  *
  */

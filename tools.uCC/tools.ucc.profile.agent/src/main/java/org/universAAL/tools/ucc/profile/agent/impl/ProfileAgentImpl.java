@@ -56,7 +56,7 @@ public class ProfileAgentImpl implements ProfileAgent {
 
 	/**
 	 * add user to CHE via Profiling server
-	 * 
+	 *
 	 * @param user
 	 * @return ?
 	 */
@@ -70,7 +70,7 @@ public class ProfileAgentImpl implements ProfileAgent {
 
 	/**
 	 * get user from CHE
-	 * 
+	 *
 	 * @param user
 	 * @return User instance, if exists; null, if not exists (registered)
 	 */
@@ -706,10 +706,10 @@ public class ProfileAgentImpl implements ProfileAgent {
 
 	/**
 	 * get user profile for user with userId (use Profiling server)
-	 * 
+	 *
 	 * @return String representation of the User profile TODO: check with ustore
 	 *         the format
-	 * 
+	 *
 	 */
 	public String getUserProfile(String userID) {
 		String userURI = USER_URI_PREFIX + userID;

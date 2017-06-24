@@ -36,7 +36,7 @@ import com.vaadin.ui.Window.Notification;
 
 /**
  * Controlls the whole rendering of the uCC.
- * 
+ *
  * @author Nicole Merkle
  *
  */

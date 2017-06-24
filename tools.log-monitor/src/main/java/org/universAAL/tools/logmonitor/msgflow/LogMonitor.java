@@ -31,9 +31,9 @@ import org.universAAL.tools.logmonitor.MemberData;
 import org.universAAL.tools.logmonitor.msgflow.gui.MsgFlowGui;
 
 /**
- * 
+ *
  * @author Carsten Stockloew
- * 
+ *
  */
 public class LogMonitor extends ContextSubscriber implements LogListenerEx, BusMemberListener {
 

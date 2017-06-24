@@ -14,7 +14,7 @@ import org.universAAL.tools.ucc.configuration.model.configurationdefinition.Conf
 
 /**
  * The implementation of the configuration definition registry interface.
- * 
+ *
  * @author Sebastian.Schoebinge
  *
  */

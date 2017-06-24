@@ -3,7 +3,7 @@ package org.universAAL.tools.ucc.database.listener.interfaces;
 import org.universAAL.tools.ucc.model.jaxb.OntologyInstance;
 
 /**
- * 
+ *
  * @author Nicole Merkle
  *
  */

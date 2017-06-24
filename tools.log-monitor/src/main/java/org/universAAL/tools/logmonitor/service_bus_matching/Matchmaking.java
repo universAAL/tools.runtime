@@ -14,9 +14,9 @@ import org.universAAL.middleware.rdf.Resource;
 import org.universAAL.middleware.service.ServiceRequest;
 
 /**
- * 
+ *
  * @author Carsten Stockloew
- * 
+ *
  */
 public class Matchmaking {
 
@@ -62,20 +62,20 @@ public class Matchmaking {
 
 		/**
 		 * A message is a standardized message if:
-		 * 
+		 *
 		 * - element 1 is a String with a short reason
-		 * 
+		 *
 		 * - element n-4 is an Integer with an error code
-		 * 
+		 *
 		 * - element n-2 is a String with a detailed reason
-		 * 
+		 *
 		 * - element n-1 (the last element) is an Integer with the logID (to
 		 * track different log messages that belong together)
-		 * 
+		 *
 		 * - elements inbetween (n-3 and n-5 are typically Strings that describe
 		 * the elements n-4 and n-2 for readers of the log (for people not using
 		 * this LogMonitor)
-		 * 
+		 *
 		 * @param msgPart
 		 */
 		public void processStandardMessage(Object[] msgPart) {
@@ -121,7 +121,7 @@ public class Matchmaking {
 
 	/**
 	 * Get the date as a string.
-	 * 
+	 *
 	 * @return The date as a string.
 	 */
 	public String getDateString() {
@@ -140,7 +140,7 @@ public class Matchmaking {
 
 	/**
 	 * Determines whether the request has exactly one matching profile.
-	 * 
+	 *
 	 * @return
 	 */
 	public boolean hasOneResult() {

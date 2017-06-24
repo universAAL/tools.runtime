@@ -26,9 +26,9 @@ import org.universAAL.tools.logmonitor.util.ClipboardHandling;
 import org.universAAL.tools.logmonitor.util.HTMLVisibilityPane;
 
 /**
- * 
+ *
  * @author Carsten Stockloew
- * 
+ *
  */
 public class OntologyPane extends HTMLVisibilityPane {
 

@@ -21,9 +21,9 @@ import org.universAAL.tools.ucc.configuration.model.exceptions.ValidationExcepti
 import org.universAAL.tools.ucc.configuration.model.interfaces.OnConfigurationChangedListener;
 
 /**
- * 
+ *
  * This class is the visual representation of a map configuration item.
- * 
+ *
  * @author Sebastian Schoebinger
  *
  */

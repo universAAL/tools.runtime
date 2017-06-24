@@ -10,9 +10,9 @@ import org.universAAL.middleware.container.LogListener;
  * Implementation of the {@link org.universAAL.middleware.util.LogListener}
  * interface to be called from
  * {@link org.universAAL.middleware.container.utils.LogUtils}
- * 
+ *
  * @author Carsten Stockloew
- * 
+ *
  */
 public class LogMonitor implements LogListener {
 

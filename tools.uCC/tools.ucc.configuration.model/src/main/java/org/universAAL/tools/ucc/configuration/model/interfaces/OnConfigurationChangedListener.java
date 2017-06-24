@@ -5,7 +5,7 @@ import org.universAAL.tools.ucc.configuration.model.ConfigurationOption;
 
 /**
  * The listener interfaces for configuration option changes
- * 
+ *
  * @author Sebastian.Schoebinge
  *
  */
@@ -13,7 +13,7 @@ import org.universAAL.tools.ucc.configuration.model.ConfigurationOption;
 public interface OnConfigurationChangedListener {
 
 	/**
-	 * 
+	 *
 	 * @param registry
 	 *            is the ConfigurationOptionRegistry from which you can get all
 	 *            configuration options.

@@ -53,7 +53,7 @@ import com.vaadin.ui.Window.Notification;
 
 /**
  * Profile controller for adding devices to rooms.
- * 
+ *
  * @author Nicole Merkle
  *
  */

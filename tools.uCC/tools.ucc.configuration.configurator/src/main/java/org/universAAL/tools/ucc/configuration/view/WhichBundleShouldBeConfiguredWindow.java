@@ -14,9 +14,9 @@ import com.vaadin.ui.Window;
 import com.vaadin.ui.Button.ClickEvent;
 
 /**
- * 
+ *
  * On this window the user selects which bundle he wants to configure.
- * 
+ *
  * @author Sebastian Schoebinger
  *
  */

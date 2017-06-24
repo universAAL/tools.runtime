@@ -6,9 +6,9 @@ import java.util.ArrayList;
 /**
  * A License belongs to an usrv file and can have an arbitrary count of software
  * licenses and software end user licenses
- * 
+ *
  * @author Nicole Merkle
- * 
+ *
  */
 public class License {
 	private String appName;

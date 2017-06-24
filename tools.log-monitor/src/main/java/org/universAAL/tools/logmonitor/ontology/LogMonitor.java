@@ -15,9 +15,9 @@ import org.universAAL.tools.logmonitor.LogListenerEx;
 import org.universAAL.tools.logmonitor.ontology.gui.OntologyGui;
 
 /**
- * 
+ *
  * @author Carsten Stockloew
- * 
+ *
  */
 public class LogMonitor implements LogListenerEx, OntologyListener {
 

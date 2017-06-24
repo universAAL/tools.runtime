@@ -9,7 +9,7 @@ import javax.swing.JComponent;
 import org.universAAL.middleware.container.LogListener;
 
 /**
- * 
+ *
  * @author Carsten Stockloew
  */
 public interface LogListenerEx extends LogListener {

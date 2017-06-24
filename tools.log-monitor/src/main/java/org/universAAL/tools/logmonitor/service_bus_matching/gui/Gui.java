@@ -21,9 +21,9 @@ import org.universAAL.tools.logmonitor.service_bus_matching.URI;
 
 /**
  * The main frame.
- * 
+ *
  * @author cstockloew
- * 
+ *
  */
 public class Gui extends JPanel implements ListSelectionListener {
 
@@ -65,7 +65,7 @@ public class Gui extends JPanel implements ListSelectionListener {
 	/**
 	 * Called whenever the value of the selection in the table showing the list
 	 * of all messages changes.
-	 * 
+	 *
 	 * @param e
 	 *            The event that characterizes the change.
 	 */
@@ -92,7 +92,7 @@ public class Gui extends JPanel implements ListSelectionListener {
 
 	/**
 	 * Add a new entry.
-	 * 
+	 *
 	 * @param m
 	 *            The matchmaking.
 	 */

@@ -56,7 +56,7 @@ public class SimpleConfiguratorPasswordField extends PasswordField implements On
 
 	/**
 	 * Set default validators for double and integer.
-	 * 
+	 *
 	 * @param option
 	 */
 	private void setDefaultValidators(SimpleConfigurationOption option) {

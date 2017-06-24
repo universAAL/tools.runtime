@@ -20,7 +20,7 @@ import javax.swing.JTextPane;
 import javax.swing.TransferHandler;
 
 /**
- * 
+ *
  * @author Carsten Stockloew
  */
 public class ClipboardHandling extends AbstractAction {

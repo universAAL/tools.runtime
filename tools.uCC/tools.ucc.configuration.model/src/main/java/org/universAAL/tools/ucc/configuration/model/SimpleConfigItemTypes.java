@@ -1,9 +1,9 @@
 package org.universAAL.tools.ucc.configuration.model;
 
 /**
- * 
+ *
  * A class to specify the types of simple configuration items.
- * 
+ *
  * @author Sebastian.Schoebinge
  *
  */

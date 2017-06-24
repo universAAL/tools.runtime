@@ -31,9 +31,9 @@ import org.universAAL.tools.logmonitor.service_bus_matching.Matchmaking.SingleMa
 import org.universAAL.tools.logmonitor.util.ProfileInfo;
 
 /**
- * 
+ *
  * @author Carsten Stockloew
- * 
+ *
  */
 public class FlowData {
 

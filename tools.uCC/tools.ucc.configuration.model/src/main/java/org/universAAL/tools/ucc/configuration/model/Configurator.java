@@ -5,10 +5,10 @@ import org.universAAL.tools.ucc.configuration.model.configurationinstances.Confi
 import org.universAAL.tools.ucc.configuration.model.configurationinstances.ObjectFactory;
 
 /**
- * 
+ *
  * This class holds both, the configuration definition and the configuration
  * instance.
- * 
+ *
  * @author Sebastian.Schoebinge
  *
  */

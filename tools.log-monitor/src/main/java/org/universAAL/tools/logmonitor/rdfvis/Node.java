@@ -26,7 +26,7 @@ import org.universAAL.tools.logmonitor.rdfvis.gui.GraphPanel;
  * {@link org.universAAL.middleware.rdf.Resource} corresponds to a Node in the
  * visualization and every property to an
  * {@link org.universAAL.tools.logmonitor.rdfvis.Edge}.
- * 
+ *
  * @author Carsten Stockloew
  */
 public class Node {
@@ -101,7 +101,7 @@ public class Node {
 
 	/**
 	 * Create a new node.
-	 * 
+	 *
 	 * @param name
 	 *            The {@link #name} of the node.
 	 */
@@ -111,7 +111,7 @@ public class Node {
 
 	/**
 	 * Create a new literal node.
-	 * 
+	 *
 	 * @param literalType
 	 *            The type of the RDF literal (e.g. int, String..).
 	 * @param name
@@ -126,7 +126,7 @@ public class Node {
 	/**
 	 * Add a new child to the end of the list of children. Thus, the list of
 	 * children may be unsorted after insertion.
-	 * 
+	 *
 	 * @param edgeName
 	 *            The name of the edge.
 	 * @param child
@@ -139,7 +139,7 @@ public class Node {
 	/**
 	 * Add a new child to the end of the list of children. Thus, the list of
 	 * children may be unsorted after insertion.
-	 * 
+	 *
 	 * @param edgeName
 	 *            The name of the edge.
 	 * @param child
@@ -156,7 +156,7 @@ public class Node {
 
 	/**
 	 * Create the node structure from a resource.
-	 * 
+	 *
 	 * @param r
 	 *            The source Resource.
 	 * @return The node containing all important information from the Resource.
@@ -167,7 +167,7 @@ public class Node {
 
 	/**
 	 * Create the node structure from a resource.
-	 * 
+	 *
 	 * @param r
 	 *            The source Resource.
 	 * @param visitedElements
@@ -252,7 +252,7 @@ public class Node {
 
 	/**
 	 * Draw this node.
-	 * 
+	 *
 	 * @param g
 	 *            The Graphics object to draw to.
 	 * @param xoff

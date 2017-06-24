@@ -8,10 +8,10 @@ import org.universAAL.tools.ucc.configuration.model.exceptions.ValidationExcepti
 import org.universAAL.tools.ucc.configuration.model.interfaces.ConfigurationValidator;
 
 /**
- * 
+ *
  * This validator let you define a regular expression and cheks whether the
  * value fits this expression or not.
- * 
+ *
  * @author Sebastian.Schoebinge
  *
  */

@@ -53,7 +53,7 @@ import com.vaadin.ui.Window.Notification;
 
 /**
  * User profile controller for adding new person to AAL space.
- * 
+ *
  * @author Nicole Merkle
  *
  */

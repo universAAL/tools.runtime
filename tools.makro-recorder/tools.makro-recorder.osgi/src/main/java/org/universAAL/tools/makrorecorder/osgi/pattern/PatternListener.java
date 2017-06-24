@@ -9,7 +9,7 @@ import org.universAAL.middleware.rdf.Resource;
 import org.universAAL.tools.makrorecorder.osgi.Activator;
 
 /**
- * 
+ *
  * @author maxim djakow
  */
 public class PatternListener extends ContextSubscriber {

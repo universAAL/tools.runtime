@@ -11,7 +11,7 @@ import org.universAAL.middleware.managers.api.UAPPPackage;
 
 /**
  * Installer Interface for installing AAL services.
- * 
+ *
  * @author Shanshan Jiang
  *
  */

@@ -30,7 +30,7 @@ import org.universAAL.tools.logmonitor.MemberData;
 
 /**
  * The main frame.
- * 
+ *
  * @author Carsten Stockloew
  */
 public class BusMemberGui extends JPanel implements TreeSelectionListener, BusMemberListener {
@@ -161,7 +161,7 @@ public class BusMemberGui extends JPanel implements TreeSelectionListener, BusMe
 
 	/**
 	 * Add a new entry.
-	 * 
+	 *
 	 * @param m
 	 *            The MemberData.
 	 */

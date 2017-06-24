@@ -23,9 +23,9 @@ import org.universAAL.tools.logmonitor.all_log.LogMonitor;
 /**
  * The main frame containing the list of all messages/log entry and the panel
  * for graphical drawing of the graph.
- * 
+ *
  * @author Carsten Stockloew
- * 
+ *
  */
 public class AllLogPanel extends JPanel implements ListSelectionListener {
 
@@ -84,7 +84,7 @@ public class AllLogPanel extends JPanel implements ListSelectionListener {
 
 	/**
 	 * Add a new log entry.
-	 * 
+	 *
 	 * @param le
 	 *            The log entry.
 	 */
@@ -101,7 +101,7 @@ public class AllLogPanel extends JPanel implements ListSelectionListener {
 	/**
 	 * Called whenever the value of the selection in the table showing the list
 	 * of all messages changes.
-	 * 
+	 *
 	 * @param e
 	 *            The event that characterizes the change.
 	 */

@@ -20,9 +20,9 @@ import org.universAAL.tools.logmonitor.service_bus_matching.URI;
 /**
  * HTML-based Pane with basic functionality, e.g. creating tables, links, and
  * images.
- * 
+ *
  * @author Carsten Stockloew
- * 
+ *
  */
 public class HTMLPaneBase extends JTextPane {
 	private static final long serialVersionUID = 1L;

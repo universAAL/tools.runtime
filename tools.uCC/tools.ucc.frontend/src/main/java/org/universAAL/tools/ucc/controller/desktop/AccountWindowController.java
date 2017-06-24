@@ -19,7 +19,7 @@ import com.vaadin.ui.Window.Notification;
 
 /**
  * Controller for AccountWindow.
- * 
+ *
  * @author Nicole Merkle
  *
  */

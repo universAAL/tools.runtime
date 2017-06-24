@@ -12,7 +12,7 @@ import javax.swing.JTabbedPane;
 import javax.swing.SwingUtilities;
 
 /**
- * 
+ *
  * @author Carsten Stockloew
  */
 public class MainGui extends JFrame {

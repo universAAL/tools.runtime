@@ -21,13 +21,13 @@ import org.universAAL.tools.ucc.configuration.storage.interfaces.StorageChangedL
 import org.universAAL.tools.ucc.configuration.storage.internal.Activator;
 
 /**
- * 
+ *
  * Implementation of the configuration instages storage interface. On startup it
  * loads all configuration instances from file system.
- * 
+ *
  * New configuration instances could be added at runtime, where all
  * StorageChangedListener will be informed.
- * 
+ *
  * @author Sebastian.Schoebinge
  *
  */

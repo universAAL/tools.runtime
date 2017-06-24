@@ -78,11 +78,11 @@ import com.vaadin.ui.Window;
  * Implements the install and de-install processes. Is interface for the
  * DeployManagerService to trigger the different processes like installation and
  * de-installation.
- * 
+ *
  * @author Nicole Merkle
- * 
+ *
  *         modified by Shanshan, 13-03-2013
- * 
+ *
  */
 
 public class FrontendImpl implements IFrontend {
@@ -174,7 +174,7 @@ public class FrontendImpl implements IFrontend {
 
 	/**
 	 * Downloads usrv file from the given download uri
-	 * 
+	 *
 	 * @param downloadUri
 	 *            link from where to download the usrv file
 	 */
@@ -218,7 +218,7 @@ public class FrontendImpl implements IFrontend {
 	/**
 	 * Parses the given configuration xml from an uapp file to get some
 	 * information from the uapp file
-	 * 
+	 *
 	 */
 	private ArrayList<UAPP> parseUappConfiguration(String f, String serviceId) {
 		ArrayList<UAPP> appsList = new ArrayList<UAPP>();
@@ -523,7 +523,7 @@ public class FrontendImpl implements IFrontend {
 	/**
 	 * Parses the given configuration xml from the usrv file to get some
 	 * information about the usrv.
-	 * 
+	 *
 	 * @return AALService with some information about the usrv file
 	 * @throws SAXException
 	 * @throws IOException

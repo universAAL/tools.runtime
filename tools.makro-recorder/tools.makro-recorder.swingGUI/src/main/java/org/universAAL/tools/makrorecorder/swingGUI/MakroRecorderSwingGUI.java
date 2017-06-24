@@ -29,7 +29,7 @@ import org.universAAL.tools.makrorecorder.swingGUI.pattern.PatternEditFrame;
 
 public class MakroRecorderSwingGUI extends JFrame implements Observer {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 

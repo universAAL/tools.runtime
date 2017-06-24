@@ -51,7 +51,7 @@ import com.vaadin.ui.Window.Notification;
 
 /**
  * Controlls the ToolWindow.
- * 
+ *
  * @author Nicole Merkle
  *
  */

@@ -12,7 +12,7 @@ import org.universAAL.middleware.service.owls.profile.ServiceProfile;
 /**
  * This class gets a {@link org.universAAL.middleware.rdf.Resource} and tries to
  * interpret the content to give a short description.
- * 
+ *
  * @author Carsten Stockloew
  */
 public class ResourceInterpreter {
@@ -22,7 +22,7 @@ public class ResourceInterpreter {
 
 	/**
 	 * Interpret a ServiceRealization.
-	 * 
+	 *
 	 * @param r
 	 *            The Resource representing the ServiceRealization.
 	 * @return The interpretation string.
@@ -58,7 +58,7 @@ public class ResourceInterpreter {
 
 	/**
 	 * Interpret a ServiceRequest.
-	 * 
+	 *
 	 * @param r
 	 *            The Resource representing the ServiceRequest.
 	 * @return The interpretation string.
@@ -92,7 +92,7 @@ public class ResourceInterpreter {
 
 	/**
 	 * Interpret a Resource.
-	 * 
+	 *
 	 * @param r
 	 *            The resource.
 	 * @return The interpretation string.

@@ -19,9 +19,9 @@ import org.universAAL.tools.logmonitor.util.PatternInfo;
 import org.universAAL.tools.logmonitor.util.ProfileInfo;
 
 /**
- * 
+ *
  * @author Carsten Stockloew
- * 
+ *
  */
 public class MemberData {
 	public String id;

@@ -8,11 +8,11 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * <p>
  * Clase Java para getSessionKey complex type.
- * 
+ *
  * <p>
  * El siguiente fragmento de esquema especifica el contenido que se espera que
  * haya en esta clase.
- * 
+ *
  * <pre>
  * &lt;complexType name="getSessionKey">
  *   &lt;complexContent>
@@ -25,8 +25,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "getSessionKey", propOrder = { "userName", "password" })
@@ -37,9 +37,9 @@ public class GetSessionKey {
 
 	/**
 	 * Obtiene el valor de la propiedad userName.
-	 * 
+	 *
 	 * @return possible object is {@link String }
-	 * 
+	 *
 	 */
 	public String getUserName() {
 		return userName;
@@ -47,10 +47,10 @@ public class GetSessionKey {
 
 	/**
 	 * Define el valor de la propiedad userName.
-	 * 
+	 *
 	 * @param value
 	 *            allowed object is {@link String }
-	 * 
+	 *
 	 */
 	public void setUserName(String value) {
 		this.userName = value;
@@ -58,9 +58,9 @@ public class GetSessionKey {
 
 	/**
 	 * Obtiene el valor de la propiedad password.
-	 * 
+	 *
 	 * @return possible object is {@link String }
-	 * 
+	 *
 	 */
 	public String getPassword() {
 		return password;
@@ -68,10 +68,10 @@ public class GetSessionKey {
 
 	/**
 	 * Define el valor de la propiedad password.
-	 * 
+	 *
 	 * @param value
 	 *            allowed object is {@link String }
-	 * 
+	 *
 	 */
 	public void setPassword(String value) {
 		this.password = value;

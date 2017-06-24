@@ -6,9 +6,9 @@ import org.universAAL.tools.ucc.configuration.model.exceptions.ValidationExcepti
 import org.universAAL.tools.ucc.configuration.model.interfaces.ConfigurationValidator;
 
 /**
- * 
+ *
  * This validator class checks whether the value is of type int or not.
- * 
+ *
  * @author Sebastian.Schoebinge
  *
  */

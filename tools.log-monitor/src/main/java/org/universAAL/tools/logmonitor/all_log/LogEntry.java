@@ -7,7 +7,7 @@ package org.universAAL.tools.logmonitor.all_log;
 import java.util.Date;
 
 /**
- * 
+ *
  * @author Carsten Stockloew
  */
 public class LogEntry {

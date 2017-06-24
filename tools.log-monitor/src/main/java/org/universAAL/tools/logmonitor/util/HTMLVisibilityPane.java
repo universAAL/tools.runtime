@@ -11,9 +11,9 @@ import javax.swing.event.HyperlinkListener;
 
 /**
  * HTML-based Pane that handles visibility of parts of the text.
- * 
+ *
  * @author Carsten Stockloew
- * 
+ *
  */
 public class HTMLVisibilityPane extends HTMLPaneBase {
 	private static final long serialVersionUID = 1L;

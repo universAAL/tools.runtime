@@ -15,7 +15,7 @@ import org.universAAL.tools.logmonitor.rdfvis.gui.RDFVis;
  * Implementation of the {@link org.universAAL.middleware.util.LogListener}
  * interface to be called from
  * {@link org.universAAL.middleware.container.utils.LogUtils}.
- * 
+ *
  * @author Carsten Stockloew
  */
 public class LogMonitor implements LogListenerEx {

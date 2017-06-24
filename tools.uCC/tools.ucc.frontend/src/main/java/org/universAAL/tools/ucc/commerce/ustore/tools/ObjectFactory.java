@@ -16,7 +16,7 @@ import javax.xml.namespace.QName;
  * can consist of schema derived interfaces and classes representing the binding
  * of schema type definitions, element declarations and model groups. Factory
  * methods for each of these are provided in this class.
- * 
+ *
  */
 @XmlRegistry
 public class ObjectFactory {
@@ -55,14 +55,14 @@ public class ObjectFactory {
 	/**
 	 * Create a new ObjectFactory that can be used to create new instances of
 	 * schema derived classes for package: org.universAAL.commerce.ustore.tools
-	 * 
+	 *
 	 */
 	public ObjectFactory() {
 	}
 
 	/**
 	 * Create an instance of {@link PurchaseFreeAALService }
-	 * 
+	 *
 	 */
 	public PurchaseFreeAALService createPurchaseFreeAALService() {
 		return new PurchaseFreeAALService();
@@ -70,7 +70,7 @@ public class ObjectFactory {
 
 	/**
 	 * Create an instance of {@link RegisterDeployManager }
-	 * 
+	 *
 	 */
 	public RegisterDeployManager createRegisterDeployManager() {
 		return new RegisterDeployManager();
@@ -78,7 +78,7 @@ public class ObjectFactory {
 
 	/**
 	 * Create an instance of {@link GetUpdatesForAALServicesResponse }
-	 * 
+	 *
 	 */
 	public GetUpdatesForAALServicesResponse createGetUpdatesForAALServicesResponse() {
 		return new GetUpdatesForAALServicesResponse();
@@ -86,7 +86,7 @@ public class ObjectFactory {
 
 	/**
 	 * Create an instance of {@link GetFreeAALServicesResponse }
-	 * 
+	 *
 	 */
 	public GetFreeAALServicesResponse createGetFreeAALServicesResponse() {
 		return new GetFreeAALServicesResponse();
@@ -94,7 +94,7 @@ public class ObjectFactory {
 
 	/**
 	 * Create an instance of {@link GetFreeAALServices }
-	 * 
+	 *
 	 */
 	public GetFreeAALServices createGetFreeAALServices() {
 		return new GetFreeAALServices();
@@ -102,7 +102,7 @@ public class ObjectFactory {
 
 	/**
 	 * Create an instance of {@link GetUserProfileResponse }
-	 * 
+	 *
 	 */
 	public GetUserProfileResponse createGetUserProfileResponse() {
 		return new GetUserProfileResponse();
@@ -110,7 +110,7 @@ public class ObjectFactory {
 
 	/**
 	 * Create an instance of {@link UAALException }
-	 * 
+	 *
 	 */
 	public UAALException createUAALException() {
 		return new UAALException();
@@ -118,7 +118,7 @@ public class ObjectFactory {
 
 	/**
 	 * Create an instance of {@link GetPurchasedAALServicesResponse }
-	 * 
+	 *
 	 */
 	public GetPurchasedAALServicesResponse createGetPurchasedAALServicesResponse() {
 		return new GetPurchasedAALServicesResponse();
@@ -126,7 +126,7 @@ public class ObjectFactory {
 
 	/**
 	 * Create an instance of {@link GetUpdatesForAALServices }
-	 * 
+	 *
 	 */
 	public GetUpdatesForAALServices createGetUpdatesForAALServices() {
 		return new GetUpdatesForAALServices();
@@ -134,7 +134,7 @@ public class ObjectFactory {
 
 	/**
 	 * Create an instance of {@link RegisterDeployManagerResponse }
-	 * 
+	 *
 	 */
 	public RegisterDeployManagerResponse createRegisterDeployManagerResponse() {
 		return new RegisterDeployManagerResponse();
@@ -142,7 +142,7 @@ public class ObjectFactory {
 
 	/**
 	 * Create an instance of {@link GetSessionKeyResponse }
-	 * 
+	 *
 	 */
 	public GetSessionKeyResponse createGetSessionKeyResponse() {
 		return new GetSessionKeyResponse();
@@ -150,7 +150,7 @@ public class ObjectFactory {
 
 	/**
 	 * Create an instance of {@link GetSessionKey }
-	 * 
+	 *
 	 */
 	public GetSessionKey createGetSessionKey() {
 		return new GetSessionKey();
@@ -158,7 +158,7 @@ public class ObjectFactory {
 
 	/**
 	 * Create an instance of {@link GetUserProfile }
-	 * 
+	 *
 	 */
 	public GetUserProfile createGetUserProfile() {
 		return new GetUserProfile();
@@ -166,7 +166,7 @@ public class ObjectFactory {
 
 	/**
 	 * Create an instance of {@link GetPurchasedAALServices }
-	 * 
+	 *
 	 */
 	public GetPurchasedAALServices createGetPurchasedAALServices() {
 		return new GetPurchasedAALServices();
@@ -174,7 +174,7 @@ public class ObjectFactory {
 
 	/**
 	 * Create an instance of {@link PurchaseFreeAALServiceResponse }
-	 * 
+	 *
 	 */
 	public PurchaseFreeAALServiceResponse createPurchaseFreeAALServiceResponse() {
 		return new PurchaseFreeAALServiceResponse();
@@ -183,7 +183,7 @@ public class ObjectFactory {
 	/**
 	 * Create an instance of {@link JAXBElement }{@code <}{@link UAALException
 	 * }{@code >}}
-	 * 
+	 *
 	 */
 	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "uAALException")
 	public JAXBElement<UAALException> createUAALException(UAALException value) {
@@ -193,7 +193,7 @@ public class ObjectFactory {
 	/**
 	 * Create an instance of {@link JAXBElement
 	 * }{@code <}{@link GetPurchasedAALServicesResponse }{@code >}}
-	 * 
+	 *
 	 */
 	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "getPurchasedAALServicesResponse")
 	public JAXBElement<GetPurchasedAALServicesResponse> createGetPurchasedAALServicesResponse(
@@ -205,7 +205,7 @@ public class ObjectFactory {
 	/**
 	 * Create an instance of {@link JAXBElement
 	 * }{@code <}{@link GetUpdatesForAALServices }{@code >}}
-	 * 
+	 *
 	 */
 	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "getUpdatesForAALServices")
 	public JAXBElement<GetUpdatesForAALServices> createGetUpdatesForAALServices(GetUpdatesForAALServices value) {
@@ -216,7 +216,7 @@ public class ObjectFactory {
 	/**
 	 * Create an instance of {@link JAXBElement
 	 * }{@code <}{@link GetUserProfileResponse }{@code >}}
-	 * 
+	 *
 	 */
 	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "getUserProfileResponse")
 	public JAXBElement<GetUserProfileResponse> createGetUserProfileResponse(GetUserProfileResponse value) {
@@ -227,7 +227,7 @@ public class ObjectFactory {
 	/**
 	 * Create an instance of {@link JAXBElement
 	 * }{@code <}{@link GetSessionKeyResponse }{@code >}}
-	 * 
+	 *
 	 */
 	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "getSessionKeyResponse")
 	public JAXBElement<GetSessionKeyResponse> createGetSessionKeyResponse(GetSessionKeyResponse value) {
@@ -238,7 +238,7 @@ public class ObjectFactory {
 	/**
 	 * Create an instance of {@link JAXBElement
 	 * }{@code <}{@link RegisterDeployManagerResponse }{@code >}}
-	 * 
+	 *
 	 */
 	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "registerDeployManagerResponse")
 	public JAXBElement<RegisterDeployManagerResponse> createRegisterDeployManagerResponse(
@@ -250,7 +250,7 @@ public class ObjectFactory {
 	/**
 	 * Create an instance of {@link JAXBElement
 	 * }{@code <}{@link GetPurchasedAALServices }{@code >}}
-	 * 
+	 *
 	 */
 	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "getPurchasedAALServices")
 	public JAXBElement<GetPurchasedAALServices> createGetPurchasedAALServices(GetPurchasedAALServices value) {
@@ -261,7 +261,7 @@ public class ObjectFactory {
 	/**
 	 * Create an instance of {@link JAXBElement }{@code <}{@link GetUserProfile
 	 * }{@code >}}
-	 * 
+	 *
 	 */
 	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "getUserProfile")
 	public JAXBElement<GetUserProfile> createGetUserProfile(GetUserProfile value) {
@@ -271,7 +271,7 @@ public class ObjectFactory {
 	/**
 	 * Create an instance of {@link JAXBElement }{@code <}{@link GetSessionKey
 	 * }{@code >}}
-	 * 
+	 *
 	 */
 	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "getSessionKey")
 	public JAXBElement<GetSessionKey> createGetSessionKey(GetSessionKey value) {
@@ -281,7 +281,7 @@ public class ObjectFactory {
 	/**
 	 * Create an instance of {@link JAXBElement
 	 * }{@code <}{@link PurchaseFreeAALServiceResponse }{@code >}}
-	 * 
+	 *
 	 */
 	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "purchaseFreeAALServiceResponse")
 	public JAXBElement<PurchaseFreeAALServiceResponse> createPurchaseFreeAALServiceResponse(
@@ -293,7 +293,7 @@ public class ObjectFactory {
 	/**
 	 * Create an instance of {@link JAXBElement
 	 * }{@code <}{@link PurchaseFreeAALService }{@code >}}
-	 * 
+	 *
 	 */
 	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "purchaseFreeAALService")
 	public JAXBElement<PurchaseFreeAALService> createPurchaseFreeAALService(PurchaseFreeAALService value) {
@@ -304,7 +304,7 @@ public class ObjectFactory {
 	/**
 	 * Create an instance of {@link JAXBElement
 	 * }{@code <}{@link RegisterDeployManager }{@code >}}
-	 * 
+	 *
 	 */
 	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "registerDeployManager")
 	public JAXBElement<RegisterDeployManager> createRegisterDeployManager(RegisterDeployManager value) {
@@ -315,7 +315,7 @@ public class ObjectFactory {
 	/**
 	 * Create an instance of {@link JAXBElement
 	 * }{@code <}{@link GetUpdatesForAALServicesResponse }{@code >}}
-	 * 
+	 *
 	 */
 	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "getUpdatesForAALServicesResponse")
 	public JAXBElement<GetUpdatesForAALServicesResponse> createGetUpdatesForAALServicesResponse(
@@ -327,7 +327,7 @@ public class ObjectFactory {
 	/**
 	 * Create an instance of {@link JAXBElement
 	 * }{@code <}{@link GetFreeAALServices }{@code >}}
-	 * 
+	 *
 	 */
 	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "getFreeAALServices")
 	public JAXBElement<GetFreeAALServices> createGetFreeAALServices(GetFreeAALServices value) {
@@ -337,7 +337,7 @@ public class ObjectFactory {
 	/**
 	 * Create an instance of {@link JAXBElement
 	 * }{@code <}{@link GetFreeAALServicesResponse }{@code >}}
-	 * 
+	 *
 	 */
 	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "getFreeAALServicesResponse")
 	public JAXBElement<GetFreeAALServicesResponse> createGetFreeAALServicesResponse(GetFreeAALServicesResponse value) {

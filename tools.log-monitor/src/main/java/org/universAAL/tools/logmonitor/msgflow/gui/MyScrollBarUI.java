@@ -29,9 +29,9 @@ import javax.swing.plaf.basic.BasicScrollBarUI;
 import org.universAAL.tools.logmonitor.msgflow.FlowData;
 
 /**
- * 
+ *
  * @author Carsten Stockloew
- * 
+ *
  */
 public class MyScrollBarUI extends BasicScrollBarUI {
 	public ScrollBarUI defaultUI = null;

@@ -10,9 +10,9 @@ import org.universAAL.tools.logmonitor.LogListenerEx;
 import org.universAAL.tools.logmonitor.bus_member.gui.BusMemberGui;
 
 /**
- * 
+ *
  * @author Carsten Stockloew
- * 
+ *
  */
 public class LogMonitor implements LogListenerEx {
 

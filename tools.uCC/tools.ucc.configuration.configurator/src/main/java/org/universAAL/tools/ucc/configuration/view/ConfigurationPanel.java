@@ -12,10 +12,10 @@ import org.universAAL.tools.ucc.configuration.model.configurationdefinition.Cate
 import org.universAAL.tools.ucc.configuration.model.configurationinstances.ObjectFactory;
 
 /**
- * 
+ *
  * The configuration panel represents the categories from the configuration
  * definition.
- * 
+ *
  * @author Sebastian Schoebinger
  *
  */
@@ -30,7 +30,7 @@ public class ConfigurationPanel extends Panel {
 	}
 
 	/**
-	 * 
+	 *
 	 * @return a list of all configuration options on this panel.
 	 */
 	public List<ConfigurationOption> getConfigOptions() {
@@ -62,7 +62,7 @@ public class ConfigurationPanel extends Panel {
 	}
 
 	/**
-	 * 
+	 *
 	 * @return true if all configuration options on this panel are valid else
 	 *         false.
 	 */

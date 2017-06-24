@@ -24,7 +24,7 @@ public class Activator implements BundleActivator {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.osgi.framework.BundleActivator#start(org.osgi.framework.BundleContext
 	 * )
@@ -125,7 +125,7 @@ public class Activator implements BundleActivator {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.osgi.framework.BundleActivator#stop(org.osgi.framework.BundleContext)
 	 */
@@ -166,9 +166,9 @@ public class Activator implements BundleActivator {
 		/*
 		 * Device device1 = new Device(device1URI); Device device2 = new
 		 * Device(device2URI);
-		 * 
+		 *
 		 * AALSpace space = new AALSpace(spaceURI);
-		 * 
+		 *
 		 * AALService service1 = new AALService(service1URI); AALService
 		 * service2 = new AALService(service2URI);
 		 */
@@ -209,11 +209,11 @@ public class Activator implements BundleActivator {
 		 * System.out.println("[TEST] adding user profile..." +
 		 * userProfile.toString()); System.out.println("Result is: " +
 		 * agent.addUserProfile(userProfile));
-		 * 
+		 *
 		 * System.out.println("[TEST] adding user profile to user ...");
 		 * System.out.println("Result is: " + agent.addUserProfile(maria,
 		 * userProfile));
-		 * 
+		 *
 		 * System.out.println("[TEST] getting user profile..."); String
 		 * gottenUserProfile = agent.getUserProfile(maria);
 		 * System.out.println("[TEST] gotten user profile:" +
@@ -224,7 +224,7 @@ public class Activator implements BundleActivator {
 		 * System.out.println("[TEST] adding user profile2..." +
 		 * userProfile2.toString()); System.out.println("Result is: " +
 		 * agent.addUserProfile(userProfile2));
-		 * 
+		 *
 		 * System.out.println("[TEST] adding user profile to user2/john ...");
 		 * System.out.println("Result is: " + agent.addUserProfile(john,
 		 * userProfile2));
@@ -252,11 +252,11 @@ public class Activator implements BundleActivator {
 		 * deleteRes = agent.deleteUser(userURI); if (deleteRes)
 		 * System.out.println("[TEST] the delete is successful"); else
 		 * System.out.println("[TEST] the delete is not successful");
-		 * 
+		 *
 		 * System.out.println("[TEST] getting all users "); List<User> users2 =
 		 * agent.getAllUsers(); System.out.println("The result: " +
 		 * users2.toString());
-		 * 
+		 *
 		 * // testing - actually need some more info to test for the user?
 		 * System.out.println("[TEST] updating user ..."+per.getURI());
 		 * System.out.println("Result is: " + agent.updateUser(per));
@@ -274,7 +274,7 @@ public class Activator implements BundleActivator {
 		 * userIDProfile.getUSERNAME() + "/" + userIDProfile.getPASSWORD());
 		 * System.out.println("Add subprofile to user Maria. Result is: " +
 		 * agent.addUserSubprofile(maria, userIDProfile));
-		 * 
+		 *
 		 * //HealthProfile healthProfile = new HealthProfile(healthProfileURI);
 		 * //healthProfile.addTreatment(new
 		 * TakeMeasurementActivity(healthProfileURI+"treatment"));
@@ -284,18 +284,18 @@ public class Activator implements BundleActivator {
 		 * healthProfile.getPropertyURIs());
 		 * //System.out.println("Add subprofile to user Maria. Result is: " +
 		 * agent.addUserSubprofile(maria, healthProfile));
-		 * 
-		 * 
+		 *
+		 *
 		 * System.out.println("[TEST] getting user subprofiles..."); // should
 		 * be a list of String of urn String gotUserIdProfile =
 		 * agent.getUserSubprofiles(maria);
 		 * System.out.println("[TEST] gotten user ID profiles:" +
 		 * gotUserIdProfile);
-		 * 
+		 *
 		 * System.out.println("[TEST] get userID profile: " +
 		 * agent.getUserProfile(gotUserIdProfile));
-		 * 
-		 * 
+		 *
+		 *
 		 * /* for (int i=0; i<gotUserIdProfile.size(); i++) { if
 		 * (gotUserIdProfile.get(i) instanceof UserIDProfile) {
 		 * System.out.println("the username: " +
@@ -307,7 +307,7 @@ public class Activator implements BundleActivator {
 		/* test add/get user subprofile via user profile */
 		/*
 		 * System.out.println("[TEST] adding user ID subprofile...");
-		 * 
+		 *
 		 * System.out.println("Result is: " +
 		 * agent.addUserSubprofile(userProfile, userIDProfile));
 		 */
@@ -327,7 +327,7 @@ public class Activator implements BundleActivator {
 		 * gotUserIdProfile2.toString());
 		 * System.out.println("[TEST] gotten user subprofiles:" +
 		 * gotUserIdProfile2.toString()); }
-		 * 
+		 *
 		 */
 	}
 

@@ -7,9 +7,9 @@ package org.universAAL.tools.logmonitor.util;
 import org.universAAL.middleware.context.ContextEventPattern;
 
 /**
- * 
+ *
  * @author Carsten Stockloew
- * 
+ *
  */
 public class PatternInfo {
 

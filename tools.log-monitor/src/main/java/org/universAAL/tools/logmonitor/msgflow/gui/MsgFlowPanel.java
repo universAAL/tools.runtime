@@ -56,7 +56,7 @@ import org.universAAL.tools.logmonitor.service_bus_matching.Matchmaking;
 
 /**
  * The graphical panel showing the message flow.
- * 
+ *
  * @author Carsten Stockloew
  */
 public class MsgFlowPanel extends JPanel {
@@ -251,7 +251,7 @@ public class MsgFlowPanel extends JPanel {
 
 	/**
 	 * Show the context menu at the given coordinates.
-	 * 
+	 *
 	 * @param x
 	 *            The x-coordinate.
 	 * @param y
@@ -310,7 +310,7 @@ public class MsgFlowPanel extends JPanel {
 
 	/**
 	 * Paint this component.
-	 * 
+	 *
 	 * @param g
 	 *            The graphics context.
 	 */

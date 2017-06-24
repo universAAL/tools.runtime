@@ -1,7 +1,7 @@
 package org.universAAL.tools.logmonitor.service_bus_matching;
 
 /**
- * 
+ *
  * @author Carsten Stockloew
  *
  */

@@ -20,9 +20,9 @@ import org.universAAL.tools.logmonitor.util.HTMLBusOperationsPane;
 import org.universAAL.tools.logmonitor.util.ProfileInfo;
 
 /**
- * 
+ *
  * @author Carsten Stockloew
- * 
+ *
  */
 public class MatchmakingPane extends HTMLBusOperationsPane {
 	private static final long serialVersionUID = 1L;
@@ -265,10 +265,10 @@ public class MatchmakingPane extends HTMLBusOperationsPane {
 			 * if (single.success.booleanValue()) {
 			 * s.append(getTableRowHTML(single.profileURI)); } }
 			 * s.append(getTableEndHTML());
-			 * 
+			 *
 			 * s.append("\n<p>The following " + m.numMatchingAfterProviderFilter
 			 * + " services have are available after filtering:</p>\n");
-			 * 
+			 *
 			 * s.append(getTableStartHTML(0)); for (String srvURI :
 			 * m.matchingsProvFilt) { s.append(getTableRowHTML(srvURI)); }
 			 * s.append(getTableEndHTML());

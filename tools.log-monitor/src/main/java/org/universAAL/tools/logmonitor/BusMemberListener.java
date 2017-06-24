@@ -21,9 +21,9 @@ package org.universAAL.tools.logmonitor;
 import org.universAAL.middleware.rdf.Resource;
 
 /**
- * 
+ *
  * @author Carsten Stockloew
- * 
+ *
  */
 public interface BusMemberListener {
 	public void add(final MemberData m);

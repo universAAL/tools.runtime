@@ -13,9 +13,9 @@ import org.universAAL.middleware.managers.distributedmw.api.DistributedBusMember
 import org.universAAL.middleware.rdf.Resource;
 
 /**
- * 
+ *
  * @author Carsten Stockloew
- * 
+ *
  */
 public class BusMemberMonitor implements DistributedBusMemberListener {
 	public static BusMemberMonitor instance = null;

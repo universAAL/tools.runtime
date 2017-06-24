@@ -11,7 +11,7 @@ import org.universAAL.tools.logmonitor.Utils;
 import org.universAAL.tools.logmonitor.all_log.LogEntry;
 
 /**
- * 
+ *
  * @author Carsten Stockloew
  */
 public class MessagePanel extends JTextPane {

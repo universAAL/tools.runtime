@@ -46,7 +46,7 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 public class SparQLQueryPanel extends JPanel {
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = -4140386150426349342L;
 	private JButton btnQuery;

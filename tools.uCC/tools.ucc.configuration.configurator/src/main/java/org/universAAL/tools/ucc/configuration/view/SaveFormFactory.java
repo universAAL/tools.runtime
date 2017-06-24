@@ -8,9 +8,9 @@ import com.vaadin.ui.FormFieldFactory;
 import com.vaadin.ui.TextField;
 
 /**
- * 
+ *
  * This is a factory class for the form to save an configuration instance.
- * 
+ *
  * @author Sebastian Schoebinger
  *
  */

@@ -24,9 +24,9 @@ import org.universAAL.tools.logmonitor.service_bus_matching.gui.Gui;
 import org.universAAL.tools.logmonitor.util.ProfileInfo;
 
 /**
- * 
+ *
  * @author Carsten Stockloew
- * 
+ *
  */
 public class LogMonitor implements LogListenerEx {
 
@@ -63,7 +63,7 @@ public class LogMonitor implements LogListenerEx {
 	 * @see org.universAAL.middleware.container.LogListener#log(int,
 	 * java.lang.String, java.lang.String, java.lang.String, java.lang.String,
 	 * java.lang.Object[], java.lang.Throwable)
-	 * 
+	 *
 	 * The general format that we assume:
 	 * 0:     a String containing something like "Mismatch detected: "
 	 * 1:     a reason (very short)
@@ -73,12 +73,12 @@ public class LogMonitor implements LogListenerEx {
 	 * l-3:   something like " detailed error message: "
 	 * l-2:   the detailed error message
 	 * l-1:   log ID
-	 * 
+	 *
 	 * error code overview:
 	 * 0-999:     data representation
 	 * 1000-1999: service bus
 	 * 2000-2999: context bus
-	 * 
+	 *
 	 * error code details:
 	 * 1000: ProcessResult "requested output not available" (none available)
 	 * 1001: ProcessResult "requested output not available"

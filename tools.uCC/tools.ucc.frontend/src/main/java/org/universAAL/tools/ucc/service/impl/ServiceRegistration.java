@@ -47,19 +47,19 @@ public class ServiceRegistration implements IServiceRegistration {
 	/*
 	 * public boolean registerAppAndBundles(String serviceId, String appId, Map
 	 * bundles) { return addAppAndBundlesToXML(serviceId, appId, bundles); }
-	 * 
-	 * 
+	 *
+	 *
 	 * private boolean addAppAndBundlesToXML(String serviceId, String appId, Map
 	 * bundles) { boolean success = true; try {
-	 * 
+	 *
 	 * Document doc = Model.getSrvDocument();
-	 * 
+	 *
 	 * Element element = ServiceManagment.getService(serviceId, doc); if
 	 * (element==null) { element = doc.createElement("service");
 	 * doc.getDocumentElement().appendChild(element);
 	 * element.setAttribute("serviceId", serviceId); } Element appRoot =
 	 * doc.createElement("application"); element.appendChild(appRoot);
-	 * 
+	 *
 	 * appRoot.setAttribute("appId", appId); Iterator entries =
 	 * bundles.entrySet().iterator(); while (entries.hasNext()) { Map.Entry
 	 * entry = (Map.Entry) entries.next(); String bundleId =
@@ -70,10 +70,10 @@ public class ServiceRegistration implements IServiceRegistration {
 	 * doc.createElement("bundle"); bundleEl.setAttribute("id", bundleId);
 	 * bundleEl.setAttribute("version", bundleVersion);
 	 * appRoot.appendChild(bundleEl); }
-	 * 
+	 *
 	 * TransformerFactory.newInstance().newTransformer().transform( new
 	 * DOMSource(doc), new StreamResult(Model.SERVICEFILENAME));
-	 * 
+	 *
 	 * } catch (Exception e){ e.printStackTrace(); success = false; } return
 	 * success; }
 	 */
@@ -129,7 +129,7 @@ public class ServiceRegistration implements IServiceRegistration {
 	 * TransformerFactory.newInstance().newTransformer().transform( new
 	 * DOMSource(doc), new StreamResult(Model.SERVICEFILENAME)); } catch
 	 * (Exception e) { e.printStackTrace(); success = false; }
-	 * 
+	 *
 	 * return success; }
 	 */
 

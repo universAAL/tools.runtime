@@ -6,14 +6,14 @@ import org.universAAL.tools.ucc.startup.model.UserAccountInfo;
 
 /**
  * Database operations for user account controlling.
- * 
+ *
  * @author Nicole Merkle
  *
  */
 public interface Setup {
 	/**
 	 * Saves a list of Users
-	 * 
+	 *
 	 * @param users
 	 *            a list of users
 	 * @param file
@@ -23,7 +23,7 @@ public interface Setup {
 
 	/**
 	 * Gets a list of users.
-	 * 
+	 *
 	 * @param file
 	 *            the file for persistence
 	 * @return a list of users
@@ -32,7 +32,7 @@ public interface Setup {
 
 	/**
 	 * Deletes a user.
-	 * 
+	 *
 	 * @param user
 	 *            the user to delete
 	 * @param file
@@ -42,7 +42,7 @@ public interface Setup {
 
 	/**
 	 * Updates a user
-	 * 
+	 *
 	 * @param user
 	 *            the user to update
 	 * @param file
@@ -52,7 +52,7 @@ public interface Setup {
 
 	/**
 	 * Deletes all users.
-	 * 
+	 *
 	 * @param file
 	 *            the file for persistence
 	 */
@@ -60,7 +60,7 @@ public interface Setup {
 
 	/**
 	 * Saves a user.
-	 * 
+	 *
 	 * @param user
 	 *            the user to save
 	 * @param file

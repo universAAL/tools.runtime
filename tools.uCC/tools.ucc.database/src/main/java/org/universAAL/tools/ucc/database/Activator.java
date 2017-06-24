@@ -27,7 +27,7 @@ import org.universAAL.tools.ucc.startup.model.UserAccountInfo;
 
 /**
  * Activator of ucc.database
- * 
+ *
  * @author Nicole Merkle
  *
  */
@@ -56,7 +56,7 @@ public class Activator implements BundleActivator {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.osgi.framework.BundleActivator#start(org.osgi.framework.BundleContext
 	 * )
@@ -228,7 +228,7 @@ public class Activator implements BundleActivator {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * org.osgi.framework.BundleActivator#stop(org.osgi.framework.BundleContext)
 	 */
@@ -243,7 +243,7 @@ public class Activator implements BundleActivator {
 
 	/**
 	 * Gets an instance of the profileagent, which supports access to the CHE
-	 * 
+	 *
 	 * @return a profileagent
 	 */
 	public static ProfileAgent getProfileAgent() {

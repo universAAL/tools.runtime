@@ -8,9 +8,9 @@ import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Window;
 
 /**
- * 
+ *
  * An simple yes/no dialog to ask the user simple yes/no questions.
- * 
+ *
  * @author Sebastian Schoebinger
  *
  */

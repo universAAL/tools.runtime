@@ -2,7 +2,7 @@ package org.universAAL.tools.ucc.startup.model;
 
 /**
  * Roles of the user in AAL space.
- * 
+ *
  * @author Nicole Merkle
  *
  */

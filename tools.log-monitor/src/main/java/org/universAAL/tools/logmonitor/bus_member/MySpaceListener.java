@@ -12,9 +12,9 @@ import org.universAAL.tools.logmonitor.Activator;
 import org.universAAL.tools.logmonitor.bus_member.gui.BusMemberGui;
 
 /**
- * 
+ *
  * @author Carsten Stockloew
- * 
+ *
  */
 public class MySpaceListener implements SpaceListener, Runnable, SharedObjectListener {
 

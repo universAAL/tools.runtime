@@ -25,7 +25,7 @@ import org.universAAL.tools.logmonitor.rdfvis.Node;
 
 /**
  * The graphical panel showing the node graph.
- * 
+ *
  * @author Carsten Stockloew
  */
 public class GraphPanel extends JPanel {
@@ -90,7 +90,7 @@ public class GraphPanel extends JPanel {
 
 		/**
 		 * Internal method to get the node at a specific coordinate.
-		 * 
+		 *
 		 * @param n
 		 *            The root node; the method goes recursively through all
 		 *            child nodes.
@@ -147,7 +147,7 @@ public class GraphPanel extends JPanel {
 
 	/**
 	 * Show the context menu at the given coordinates.
-	 * 
+	 *
 	 * @param x
 	 *            The x-coordinate.
 	 * @param y
@@ -169,7 +169,7 @@ public class GraphPanel extends JPanel {
 	 * Get the maximum of two points, i.e. the returned point contains the
 	 * maximum of the two x-coordinates and the maximum of the two
 	 * y-coordinates.
-	 * 
+	 *
 	 * @param p1
 	 *            The first point.
 	 * @param p2
@@ -182,7 +182,7 @@ public class GraphPanel extends JPanel {
 
 	/**
 	 * Draw the complete graph with all nodes and all edges.
-	 * 
+	 *
 	 * @param g
 	 *            The graphics context.
 	 * @param node
@@ -225,7 +225,7 @@ public class GraphPanel extends JPanel {
 
 	/**
 	 * Paint this component.
-	 * 
+	 *
 	 * @param g
 	 *            The graphics context.
 	 */
@@ -255,7 +255,7 @@ public class GraphPanel extends JPanel {
 
 	/**
 	 * Show a specific graph.
-	 * 
+	 *
 	 * @param n
 	 *            The root node of the graph to draw.
 	 */

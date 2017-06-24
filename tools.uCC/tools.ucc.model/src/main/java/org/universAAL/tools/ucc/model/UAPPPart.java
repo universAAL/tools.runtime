@@ -9,9 +9,9 @@ import org.universAAL.middleware.managers.deploy.uapp.model.Part;
  * An UAPPPart represents a single part of a uapp file. It has a name, an appId,
  * a uapplocation, a version, a description and consists a Part, a bundleId and
  * bundleVersion.
- * 
+ *
  * @author Nicole Merkle
- * 
+ *
  */
 
 public class UAPPPart {

@@ -27,7 +27,7 @@ import javax.swing.ScrollPaneConstants;
 
 /**
  * The scroll pane holding the graphical panel showing the message flow.
- * 
+ *
  * @author Carsten Stockloew
  */
 public class MsgFlowGui extends JScrollPane {

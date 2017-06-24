@@ -16,9 +16,9 @@ import org.universAAL.tools.ucc.configuration.model.validators.DoubleValidator;
 import org.universAAL.tools.ucc.configuration.model.validators.IntegerValidator;
 
 /**
- * 
+ *
  * This is the visual representation of simple configuration items.
- * 
+ *
  * @author Sebastian Schoebinger
  *
  */
@@ -65,7 +65,7 @@ public class SimpleConfiguratorTextField extends TextField implements OnConfigur
 
 	/**
 	 * Set default validators for double and integer.
-	 * 
+	 *
 	 * @param option
 	 */
 	private void setDefaultValidators(SimpleConfigurationOption option) {

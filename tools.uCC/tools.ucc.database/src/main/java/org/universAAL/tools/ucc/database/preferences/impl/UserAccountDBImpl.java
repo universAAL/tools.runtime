@@ -8,7 +8,7 @@ import org.universAAL.tools.ucc.database.preferences.UserAccountDB;
 import org.universAAL.tools.ucc.model.preferences.Preferences;
 
 /**
- * 
+ *
  * @author Nicole Merkle
  *
  */

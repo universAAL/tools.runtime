@@ -11,14 +11,14 @@ import java.util.GregorianCalendar;
 import org.universAAL.middleware.container.LogListener;
 
 /**
- * 
+ *
  * @author Carsten Stockloew
  */
 public class Utils {
 
 	/**
 	 * Get the date as a string.
-	 * 
+	 *
 	 * @return The date as a string.
 	 */
 	public static String getDateString(Date date) {

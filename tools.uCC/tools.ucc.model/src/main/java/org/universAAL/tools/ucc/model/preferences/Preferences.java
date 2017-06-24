@@ -4,9 +4,9 @@ package org.universAAL.tools.ucc.model.preferences;
  * The preferences contains the setup information of uCC. It has a admin user
  * with a password, a ip to access the uCC, an ip to communicate with the uStore
  * and a language setting parameter.
- * 
+ *
  * @author Nicole Merkle
- * 
+ *
  */
 public class Preferences {
 	private String admin = "";

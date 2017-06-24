@@ -5,15 +5,15 @@ import javax.jws.WebService;
 
 /**
  * The interface for uStore to interact with uCC (the local deploy manager)
- * 
+ *
  * @author sji
- * 
+ *
  */
 @WebService(serviceName = "DeployManagerService", portName = "DeployManagerServicePort")
 public interface DeployManagerService {
 	/**
 	 * install a service as specified in the .usrv file
-	 * 
+	 *
 	 * @param sessionKey
 	 *            : the sessionKey for the interaction obtained when uCC
 	 *            registers with uStore
@@ -26,7 +26,7 @@ public interface DeployManagerService {
 
 	/**
 	 * update a service as specified in the .usrv file
-	 * 
+	 *
 	 * @param sessionKey
 	 *            : the sessionKey for the interaction obtained when uCC
 	 *            registers with uStore
@@ -39,20 +39,20 @@ public interface DeployManagerService {
 
 	/**
 	 * uninstall a service
-	 * 
+	 *
 	 * @param sessionKey
 	 *            : the sessionKey for the interaction obtained when uCC
 	 *            registers with uStore
 	 * @param serviceId
 	 *            : the uStore service id for the service to be uninstalled
-	 * 
+	 *
 	 */
 	public void uninstall(@WebParam(name = "sessionKey") String sessionKey,
 			@WebParam(name = "serviceId") String serviceId);
 
 	/**
 	 * get all installed services
-	 * 
+	 *
 	 * @param sessionKey
 	 *            : the sessionKey for the interaction obtained when uCC
 	 *            registers with uStore
@@ -64,7 +64,7 @@ public interface DeployManagerService {
 
 	/**
 	 * get the installed application units for a service
-	 * 
+	 *
 	 * @param sessionKey
 	 *            : the sessionKey for the interaction obtained when uCC
 	 *            registers with uStore
@@ -80,7 +80,7 @@ public interface DeployManagerService {
 
 	/**
 	 * get the AAL space profile
-	 * 
+	 *
 	 * @return The AAL space profile in the following template: TODO: decide
 	 *         what to return, whether to use AALSpaceCard or AALSpaceDescriptor
 	 *         as defined in the mw.interfaces.aalspace. Suggest to return a
@@ -90,7 +90,7 @@ public interface DeployManagerService {
 	public String getAALSpaceProfile();
 
 	/**
-	 * 
+	 *
 	 * @param sessionKey
 	 *            : the sessionKey for the interaction obtained when uCC
 	 *            registers with uStore

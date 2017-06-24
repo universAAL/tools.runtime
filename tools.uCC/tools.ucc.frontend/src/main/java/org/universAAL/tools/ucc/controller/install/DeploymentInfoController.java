@@ -357,7 +357,7 @@ public class DeploymentInfoController implements Button.ClickListener, ValueChan
 	// advanced check
 	// Currently only simplified checks
 	/**
-	 * 
+	 *
 	 * @param reqs
 	 *            - a list of ReqAtom for a part
 	 * @param partId

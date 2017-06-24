@@ -34,7 +34,7 @@ import org.universAAL.tools.logmonitor.rdfvis.Node;
 /**
  * The main frame containing the list of all messages/log entry and the panel
  * for graphical drawing of the graph.
- * 
+ *
  * @author Carsten Stockloew
  */
 public class RDFVis extends JPanel implements ListSelectionListener {
@@ -84,7 +84,7 @@ public class RDFVis extends JPanel implements ListSelectionListener {
 
 		/**
 		 * Get the date as a string.
-		 * 
+		 *
 		 * @return The date as a string.
 		 */
 		String getDateString() {
@@ -264,7 +264,7 @@ public class RDFVis extends JPanel implements ListSelectionListener {
 
 	/**
 	 * Add a new log entry.
-	 * 
+	 *
 	 * @param cls
 	 *            The class which has called the logger.
 	 * @param method
@@ -282,7 +282,7 @@ public class RDFVis extends JPanel implements ListSelectionListener {
 
 	/**
 	 * Add a new log entry.
-	 * 
+	 *
 	 * @param cls
 	 *            The class which has called the logger.
 	 * @param method
@@ -316,7 +316,7 @@ public class RDFVis extends JPanel implements ListSelectionListener {
 	/**
 	 * Called whenever the value of the selection in the table showing the list
 	 * of all messages changes.
-	 * 
+	 *
 	 * @param e
 	 *            The event that characterizes the change.
 	 */
@@ -333,7 +333,7 @@ public class RDFVis extends JPanel implements ListSelectionListener {
 	/*
 	 * // main method for testing public static void main(String[] args) {
 	 * RDFVis frame = new RDFVis();
-	 * 
+	 *
 	 * Node n = new Node("root"); for (int i=0; i<4; i++)
 	 * n.addChild("link2child"+i, new Node("child"+i));
 	 * n.children.get(0).getChild().theClass = String.class;
@@ -342,9 +342,9 @@ public class RDFVis extends JPanel implements ListSelectionListener {
 	 * n.children.get(2).getChild().addChild("link2child_2_1ccccc", n, true);
 	 * n.children.get(3).getChild().addChild("link2child_3_1", n, true);
 	 * frame.addMessage("","","4", n, new Date());
-	 * 
+	 *
 	 * n = new Node("root"); frame.addMessage("","","single", n, new Date());
-	 * 
+	 *
 	 * n = new Node("root"); n.addChild("a1", new Node("a1")); n.addChild("a5",
 	 * new Node("a5")); n.addChild("a3", new Node("a3"));
 	 * n.addChild(Edge.typeString, new Node(Edge.typeString));

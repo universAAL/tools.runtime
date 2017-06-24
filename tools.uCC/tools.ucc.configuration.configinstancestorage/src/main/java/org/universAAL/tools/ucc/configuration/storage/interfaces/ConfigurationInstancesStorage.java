@@ -7,9 +7,9 @@ import org.universAAL.tools.ucc.configuration.model.configurationinstances.Confi
 import org.universAAL.tools.ucc.configuration.storage.exceptions.NoConfigurationFoundException;
 
 /**
- * 
+ *
  * The configuration instance storage interface.
- * 
+ *
  * @author Sebastian.Schoebinge
  *
  */
@@ -23,28 +23,28 @@ public interface ConfigurationInstancesStorage {
 
 	/**
 	 * Adds the configuration instance and saves it to the physical storage.
-	 * 
+	 *
 	 * @param instance
 	 */
 	void addConfigurationInstance(ConfigurationInstance instance);
 
 	/**
 	 * Replace the instance with the same id.
-	 * 
+	 *
 	 * @param instance
 	 */
 	void replaceConfigurationInstance(ConfigurationInstance instance);
 
 	/**
 	 * Removes the given instance also from the physical storage
-	 * 
+	 *
 	 * @param instance
 	 * @return if the deletion was successful or net.
 	 */
 	boolean removeConfigurationInstance(ConfigurationInstance instance);
 
 	/**
-	 * 
+	 *
 	 * @param bundlename
 	 * @return all instances for the given bundle.
 	 */
@@ -53,7 +53,7 @@ public interface ConfigurationInstancesStorage {
 	boolean contains(ConfigurationInstance configInstance);
 
 	/**
-	 * 
+	 *
 	 * @param bundle
 	 * @return a configuration instance for the given bundle.
 	 * @throws NoConfigurationFoundException

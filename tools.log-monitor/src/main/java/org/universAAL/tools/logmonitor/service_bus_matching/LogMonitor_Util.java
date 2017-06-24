@@ -22,7 +22,7 @@ import org.universAAL.tools.logmonitor.service_bus_matching.Matchmaking.SingleMa
 
 /**
  * A utility class with methods to, e.g., print info to stdout.
- * 
+ *
  * @author Carsten Stockloew
  */
 public class LogMonitor_Util {

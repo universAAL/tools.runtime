@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.*;
 
 /**
  * A Collection with simple datatypes.
- * 
+ *
  * @author Nicole Merkle
  *
  */
@@ -27,7 +27,7 @@ public class CollectionValues {
 
 	/**
 	 * Gets a collection
-	 * 
+	 *
 	 * @return
 	 */
 	@XmlElementWrapper(name = "values")
@@ -42,7 +42,7 @@ public class CollectionValues {
 
 	/**
 	 * Sets a collection
-	 * 
+	 *
 	 * @param collection
 	 */
 	public void setCollection(Collection<SimpleObject> collection) {

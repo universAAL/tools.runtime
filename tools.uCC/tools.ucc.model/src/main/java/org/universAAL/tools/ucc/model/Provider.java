@@ -3,9 +3,9 @@ package org.universAAL.tools.ucc.model;
 /**
  * The provider of a usrv file. Has a name, a telephone-number, email and
  * optionally website.
- * 
+ *
  * @author Nicole Merkle
- * 
+ *
  */
 
 public class Provider {

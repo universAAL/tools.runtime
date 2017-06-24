@@ -8,7 +8,7 @@ import org.universAAL.tools.ucc.model.jaxb.Subprofile;
 
 /**
  * DataAccess allows database operations to CHE and JAXB XML files
- * 
+ *
  * @author Nicole Merkle
  *
  */
@@ -17,7 +17,7 @@ public interface DataAccess {
 	// For JAXB usage
 	/**
 	 * Updates User in XML representation
-	 * 
+	 *
 	 * @param file
 	 *            xml file to update
 	 * @param id
@@ -30,7 +30,7 @@ public interface DataAccess {
 	/**
 	 * Gets the Datafields of a XML instance to generate a view for
 	 * userinterface
-	 * 
+	 *
 	 * @param file
 	 *            xml file, which is unmarshalled
 	 * @return a list of ontology instances
@@ -39,7 +39,7 @@ public interface DataAccess {
 
 	/**
 	 * Deletes a User from the XML file.
-	 * 
+	 *
 	 * @param file
 	 *            file where the user is persisted.
 	 * @param instance
@@ -50,7 +50,7 @@ public interface DataAccess {
 
 	/**
 	 * Saves a new Userprofile
-	 * 
+	 *
 	 * @param file
 	 *            xml file in which to save
 	 * @param ontologyInstnce
@@ -61,7 +61,7 @@ public interface DataAccess {
 
 	/**
 	 * Gets an empty ontology profile to create a user interface
-	 * 
+	 *
 	 * @param profile
 	 *            the xml file with the ontology profile
 	 * @return a list with ontology instances
@@ -71,7 +71,7 @@ public interface DataAccess {
 	// For CHE usage
 	/**
 	 * Saves user in CHE.
-	 * 
+	 *
 	 * @param ont
 	 *            the user instance
 	 */
@@ -79,7 +79,7 @@ public interface DataAccess {
 
 	/**
 	 * Gets empty ontology instances for creating a user interface
-	 * 
+	 *
 	 * @param instance
 	 *            the type (user/device) of ontology instance
 	 * @return a list of ontology instances
@@ -88,7 +88,7 @@ public interface DataAccess {
 
 	/**
 	 * Updates a given user in CHE
-	 * 
+	 *
 	 * @param id
 	 *            Id of the user
 	 * @param subprofiles
@@ -98,7 +98,7 @@ public interface DataAccess {
 
 	/**
 	 * Deletes a given user from CHE
-	 * 
+	 *
 	 * @param instance
 	 *            the user, who will be deleted
 	 */

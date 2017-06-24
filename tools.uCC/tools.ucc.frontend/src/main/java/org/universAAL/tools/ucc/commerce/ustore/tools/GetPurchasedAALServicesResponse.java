@@ -9,11 +9,11 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * <p>
  * Clase Java para getPurchasedAALServicesResponse complex type.
- * 
+ *
  * <p>
  * El siguiente fragmento de esquema especifica el contenido que se espera que
  * haya en esta clase.
- * 
+ *
  * <pre>
  * &lt;complexType name="getPurchasedAALServicesResponse">
  *   &lt;complexContent>
@@ -25,8 +25,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "getPurchasedAALServicesResponse", propOrder = { "_return" })
@@ -37,9 +37,9 @@ public class GetPurchasedAALServicesResponse {
 
 	/**
 	 * Obtiene el valor de la propiedad return.
-	 * 
+	 *
 	 * @return possible object is {@link String }
-	 * 
+	 *
 	 */
 	public String getReturn() {
 		return _return;
@@ -47,10 +47,10 @@ public class GetPurchasedAALServicesResponse {
 
 	/**
 	 * Define el valor de la propiedad return.
-	 * 
+	 *
 	 * @param value
 	 *            allowed object is {@link String }
-	 * 
+	 *
 	 */
 	public void setReturn(String value) {
 		this._return = value;

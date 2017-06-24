@@ -21,11 +21,11 @@ import org.universAAL.tools.ucc.configuration.storage.internal.Activator;
 import org.universAAL.tools.ucc.configuration.storage.servicetracker.StorageServiceTracker;
 
 /**
- * 
+ *
  * This configuration preferences class loads the configuration instance for the
  * given bundle from the configuration instances storage. It could be asked for
  * a configuration option value by the id of this configuration option.
- * 
+ *
  * @author Sebastian.Schoebinge
  *
  */
@@ -52,7 +52,7 @@ public class ConfigPreferences implements StorageChangedListener {
 
 	/**
 	 * Get the storage service and add the current instance as change listener.
-	 * 
+	 *
 	 * @param bundle
 	 *            is the bundle for which the configuration was defined.
 	 */
@@ -76,7 +76,7 @@ public class ConfigPreferences implements StorageChangedListener {
 	}
 
 	/**
-	 * 
+	 *
 	 * @param id
 	 * @param defaultValue
 	 * @return the value for the given id or the defaultValue.

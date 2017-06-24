@@ -12,7 +12,7 @@ import org.universAAL.middleware.service.owls.process.ProcessParameter;
 
 // util for strings from classexpressions
 /**
- * 
+ *
  * @author Carsten Stockloew
  *
  */

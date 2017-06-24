@@ -24,11 +24,11 @@ import org.universAAL.tools.ucc.configuration.model.servicetracker.ListenerServi
 import org.universAAL.tools.ucc.configuration.model.servicetracker.ValidationServiceTracker;
 
 /**
- * 
+ *
  * This class is an abstraction of the configuration items in XML configuration
  * definition file. It holds the configuration definition of the item, the
  * validators and some other logic.
- * 
+ *
  * @author Sebastian.Schoebinge
  *
  */
@@ -51,7 +51,7 @@ public abstract class ConfigurationOption implements Comparable<ConfigurationOpt
 	/**
 	 * Load validators and on configuration changed listeners. Resister at the
 	 * configuration option registry
-	 * 
+	 *
 	 * @param configItem
 	 * @param category
 	 * @param configOptionRegistry
@@ -81,7 +81,7 @@ public abstract class ConfigurationOption implements Comparable<ConfigurationOpt
 
 	/**
 	 * Set the value, execute validators and update the listeners.
-	 * 
+	 *
 	 * @param value
 	 * @throws ValidationException
 	 */
@@ -108,7 +108,7 @@ public abstract class ConfigurationOption implements Comparable<ConfigurationOpt
 
 	/**
 	 * Set value for multiple selection.
-	 * 
+	 *
 	 * @param configValues
 	 * @throws ValidationException
 	 */
@@ -137,7 +137,7 @@ public abstract class ConfigurationOption implements Comparable<ConfigurationOpt
 	/**
 	 * Executes the validators and if an error accrues the ValidationException
 	 * will be thrown.
-	 * 
+	 *
 	 * @throws ValidationException
 	 */
 	public void doDeepValidation() throws ValidationException {
@@ -287,7 +287,7 @@ public abstract class ConfigurationOption implements Comparable<ConfigurationOpt
 	/**
 	 * The configuration option is valid if all validators valid and if it is
 	 * required it also needs a value.
-	 * 
+	 *
 	 * @return
 	 */
 	public boolean isValid() {
@@ -314,7 +314,7 @@ public abstract class ConfigurationOption implements Comparable<ConfigurationOpt
 
 	/**
 	 * Executes all validators.
-	 * 
+	 *
 	 * @return
 	 */
 	private boolean allValidatorsValid() {

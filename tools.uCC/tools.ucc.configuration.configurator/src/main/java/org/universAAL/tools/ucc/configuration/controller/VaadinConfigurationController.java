@@ -30,9 +30,9 @@ import org.universAAL.tools.ucc.configuration.storage.interfaces.ConfigurationIn
 import org.universAAL.tools.ucc.configuration.view.ConfigurationOverviewWindow;
 
 /**
- * 
+ *
  * This class controls the configurator.
- * 
+ *
  * @author Sebastian Schoebinger
  *
  */
@@ -48,7 +48,7 @@ public class VaadinConfigurationController {
 	/**
 	 * Create the configuration option registry and the directory for the given
 	 * configuration definition.
-	 * 
+	 *
 	 * @param view
 	 * @param config
 	 */
@@ -118,7 +118,7 @@ public class VaadinConfigurationController {
 
 	/**
 	 * Save the configuration instance.
-	 * 
+	 *
 	 * @param configOptions
 	 * @param saveOptions
 	 * @param force

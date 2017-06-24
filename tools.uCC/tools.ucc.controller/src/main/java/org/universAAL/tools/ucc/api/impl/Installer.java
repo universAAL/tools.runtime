@@ -19,7 +19,7 @@ public class Installer implements IInstaller {
 
 	/**
 	 * get peers in AALSpace from the AALSpaceManager
-	 * 
+	 *
 	 */
 	public Map<String, PeerCard> getPeers() {
 		SpaceManager aalSpaceManager = Activator.getAALSpaceManager();

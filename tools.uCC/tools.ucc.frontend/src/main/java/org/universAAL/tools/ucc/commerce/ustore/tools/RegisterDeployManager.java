@@ -8,11 +8,11 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * <p>
  * Clase Java para registerDeployManager complex type.
- * 
+ *
  * <p>
  * El siguiente fragmento de esquema especifica el contenido que se espera que
  * haya en esta clase.
- * 
+ *
  * <pre>
  * &lt;complexType name="registerDeployManager">
  *   &lt;complexContent>
@@ -28,8 +28,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "registerDeployManager", propOrder = { "sessionKey", "adminUserName", "adminPassword", "ipAddress",
@@ -44,9 +44,9 @@ public class RegisterDeployManager {
 
 	/**
 	 * Obtiene el valor de la propiedad sessionKey.
-	 * 
+	 *
 	 * @return possible object is {@link String }
-	 * 
+	 *
 	 */
 	public String getSessionKey() {
 		return sessionKey;
@@ -54,10 +54,10 @@ public class RegisterDeployManager {
 
 	/**
 	 * Define el valor de la propiedad sessionKey.
-	 * 
+	 *
 	 * @param value
 	 *            allowed object is {@link String }
-	 * 
+	 *
 	 */
 	public void setSessionKey(String value) {
 		this.sessionKey = value;
@@ -65,9 +65,9 @@ public class RegisterDeployManager {
 
 	/**
 	 * Obtiene el valor de la propiedad adminUserName.
-	 * 
+	 *
 	 * @return possible object is {@link String }
-	 * 
+	 *
 	 */
 	public String getAdminUserName() {
 		return adminUserName;
@@ -75,10 +75,10 @@ public class RegisterDeployManager {
 
 	/**
 	 * Define el valor de la propiedad adminUserName.
-	 * 
+	 *
 	 * @param value
 	 *            allowed object is {@link String }
-	 * 
+	 *
 	 */
 	public void setAdminUserName(String value) {
 		this.adminUserName = value;
@@ -86,9 +86,9 @@ public class RegisterDeployManager {
 
 	/**
 	 * Obtiene el valor de la propiedad adminPassword.
-	 * 
+	 *
 	 * @return possible object is {@link String }
-	 * 
+	 *
 	 */
 	public String getAdminPassword() {
 		return adminPassword;
@@ -96,10 +96,10 @@ public class RegisterDeployManager {
 
 	/**
 	 * Define el valor de la propiedad adminPassword.
-	 * 
+	 *
 	 * @param value
 	 *            allowed object is {@link String }
-	 * 
+	 *
 	 */
 	public void setAdminPassword(String value) {
 		this.adminPassword = value;
@@ -107,9 +107,9 @@ public class RegisterDeployManager {
 
 	/**
 	 * Obtiene el valor de la propiedad ipAddress.
-	 * 
+	 *
 	 * @return possible object is {@link String }
-	 * 
+	 *
 	 */
 	public String getIpAddress() {
 		return ipAddress;
@@ -117,10 +117,10 @@ public class RegisterDeployManager {
 
 	/**
 	 * Define el valor de la propiedad ipAddress.
-	 * 
+	 *
 	 * @param value
 	 *            allowed object is {@link String }
-	 * 
+	 *
 	 */
 	public void setIpAddress(String value) {
 		this.ipAddress = value;
@@ -128,9 +128,9 @@ public class RegisterDeployManager {
 
 	/**
 	 * Obtiene el valor de la propiedad port.
-	 * 
+	 *
 	 * @return possible object is {@link String }
-	 * 
+	 *
 	 */
 	public String getPort() {
 		return port;
@@ -138,10 +138,10 @@ public class RegisterDeployManager {
 
 	/**
 	 * Define el valor de la propiedad port.
-	 * 
+	 *
 	 * @param value
 	 *            allowed object is {@link String }
-	 * 
+	 *
 	 */
 	public void setPort(String value) {
 		this.port = value;

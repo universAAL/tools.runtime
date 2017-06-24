@@ -5,9 +5,9 @@ import org.universAAL.tools.ucc.configuration.model.configurationinstances.Value
 import org.universAAL.tools.ucc.configuration.model.exceptions.ValidationException;
 
 /**
- * 
+ *
  * The interface for validators how want to validate configuration options
- * 
+ *
  * @author Sebastian.Schoebinge
  *
  */
@@ -16,7 +16,7 @@ public interface ConfigurationValidator {
 
 	/**
 	 * Checks if the value is valid.
-	 * 
+	 *
 	 * @param value
 	 * @return true if the value is valid else false.
 	 */
@@ -25,7 +25,7 @@ public interface ConfigurationValidator {
 	/**
 	 * Does the same as the isValid method but is able to thow an exception with
 	 * an error message.
-	 * 
+	 *
 	 * @param value
 	 * @throws ValidationException
 	 */
@@ -34,7 +34,7 @@ public interface ConfigurationValidator {
 	/**
 	 * This method is used to set the attributes which where defined in the
 	 * configuration definition.
-	 * 
+	 *
 	 * @param attributes
 	 */
 	public void setAttributes(String[] attributes);

@@ -10,11 +10,11 @@ import org.universAAL.tools.ucc.configuration.storage.ConfigurationInstancesStor
 import org.universAAL.tools.ucc.configuration.storage.interfaces.ConfigurationInstancesStorage;
 
 /**
- * 
+ *
  * This activator class registers the configuration instances storage service.
- * 
+ *
  * @author Sebastian.Schoebinge
- * 
+ *
  */
 
 public class Activator implements BundleActivator {

@@ -48,9 +48,9 @@ import com.vaadin.ui.Window.Notification;
 
 /**
  * Controller for adding a new Person to AAL space.
- * 
+ *
  * @author Nicole Merkle
- * 
+ *
  */
 
 public class AddNewHardwareController implements Button.ClickListener, Window.CloseListener {
