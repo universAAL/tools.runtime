@@ -28,7 +28,7 @@ under the License.
       <title>File: 16,
              Errors: 132,
              Warnings: 12,
-             Infos: 55
+             Infos: 3
       </title>
             <link>http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html</link>
       <description>
@@ -49,7 +49,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.tools.ucc.startup.api.Setup.java">org/universAAL/tools/ucc/startup/api/Setup.java</a>
                 </td>
                 <td>
-                  7
+                  0
                 </td>
                 <td>
                   1
@@ -63,7 +63,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.tools.ucc.database.parser.ParserService.java">org/universAAL/tools/ucc/database/parser/ParserService.java</a>
                 </td>
                 <td>
-                  3
+                  0
                 </td>
                 <td>
                   1
@@ -77,7 +77,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.tools.ucc.database.space.DataAccess.java">org/universAAL/tools/ucc/database/space/DataAccess.java</a>
                 </td>
                 <td>
-                  10
+                  0
                 </td>
                 <td>
                   1
@@ -91,7 +91,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.tools.ucc.startup.model.User.java">org/universAAL/tools/ucc/startup/model/User.java</a>
                 </td>
                 <td>
-                  9
+                  0
                 </td>
                 <td>
                   0
@@ -105,7 +105,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.tools.ucc.database.listener.interfaces.OntologyChangedListener.java">org/universAAL/tools/ucc/database/listener/interfaces/OntologyChangedListener.java</a>
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   1
@@ -133,7 +133,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.tools.ucc.startup.model.UccUsers.java">org/universAAL/tools/ucc/startup/model/UccUsers.java</a>
                 </td>
                 <td>
-                  3
+                  0
                 </td>
                 <td>
                   0
@@ -147,7 +147,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.tools.ucc.startup.api.impl.SetupImpl.java">org/universAAL/tools/ucc/startup/api/impl/SetupImpl.java</a>
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   2
@@ -161,7 +161,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.tools.ucc.database.Activator.java">org/universAAL/tools/ucc/database/Activator.java</a>
                 </td>
                 <td>
-                  4
+                  0
                 </td>
                 <td>
                   1
@@ -175,7 +175,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.tools.ucc.startup.model.UserAccountInfo.java">org/universAAL/tools/ucc/startup/model/UserAccountInfo.java</a>
                 </td>
                 <td>
-                  9
+                  0
                 </td>
                 <td>
                   0
@@ -203,7 +203,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.tools.ucc.startup.model.Role.java">org/universAAL/tools/ucc/startup/model/Role.java</a>
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   1
@@ -231,7 +231,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.tools.ucc.database.preferences.UserAccountDB.java">org/universAAL/tools/ucc/database/preferences/UserAccountDB.java</a>
                 </td>
                 <td>
-                  3
+                  0
                 </td>
                 <td>
                   1
@@ -259,7 +259,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.database//checkstyle.html#org.universAAL.tools.ucc.database.preferences.impl.UserAccountDBImpl.java">org/universAAL/tools/ucc/database/preferences/impl/UserAccountDBImpl.java</a>
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   1

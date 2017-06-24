@@ -28,7 +28,7 @@ under the License.
       <title>File: 4,
              Errors: 29,
              Warnings: 3,
-             Infos: 12
+             Infos: 1
       </title>
             <link>http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configdefinitionregistry//checkstyle.html</link>
       <description>
@@ -49,7 +49,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configdefinitionregistry//checkstyle.html#org.universAAL.tools.ucc.configuration.configdefinitionregistry.ConfigurationDefinitionRegistryImpl.java">org/universAAL/tools/ucc/configuration/configdefinitionregistry/ConfigurationDefinitionRegistryImpl.java</a>
                 </td>
                 <td>
-                  2
+                  1
                 </td>
                 <td>
                   1
@@ -63,7 +63,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configdefinitionregistry//checkstyle.html#org.universAAL.tools.ucc.configuration.configdefinitionregistry.interfaces.ConfigurationDefinitionRegistry.java">org/universAAL/tools/ucc/configuration/configdefinitionregistry/interfaces/ConfigurationDefinitionRegistry.java</a>
                 </td>
                 <td>
-                  5
+                  0
                 </td>
                 <td>
                   1
@@ -91,7 +91,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.configuration.configdefinitionregistry//checkstyle.html#org.universAAL.tools.ucc.configuration.configdefinitionregistry.internal.Activator.java">org/universAAL/tools/ucc/configuration/configdefinitionregistry/internal/Activator.java</a>
                 </td>
                 <td>
-                  5
+                  0
                 </td>
                 <td>
                   1

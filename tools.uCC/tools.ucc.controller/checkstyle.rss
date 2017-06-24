@@ -28,7 +28,7 @@ under the License.
       <title>File: 5,
              Errors: 29,
              Warnings: 4,
-             Infos: 6
+             Infos: 0
       </title>
             <link>http://xtras/tools.runtime/tools.uCC/tools.ucc.controller//checkstyle.html</link>
       <description>
@@ -49,7 +49,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.controller//checkstyle.html#org.universAAL.tools.ucc.api.IDeinstaller.java">org/universAAL/tools/ucc/api/IDeinstaller.java</a>
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   1
@@ -63,7 +63,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.controller//checkstyle.html#org.universAAL.tools.ucc.api.impl.Installer.java">org/universAAL/tools/ucc/api/impl/Installer.java</a>
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   0
@@ -77,7 +77,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.controller//checkstyle.html#org.universAAL.tools.ucc.api.IInstaller.java">org/universAAL/tools/ucc/api/IInstaller.java</a>
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   0
@@ -105,7 +105,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.controller//checkstyle.html#org.universAAL.tools.ucc.controller.Activator.java">org/universAAL/tools/ucc/controller/Activator.java</a>
                 </td>
                 <td>
-                  3
+                  0
                 </td>
                 <td>
                   2

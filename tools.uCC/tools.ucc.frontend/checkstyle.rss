@@ -28,7 +28,7 @@ under the License.
       <title>File: 76,
              Errors: 1362,
              Warnings: 56,
-             Infos: 288
+             Infos: 85
       </title>
             <link>http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html</link>
       <description>
@@ -77,7 +77,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.controller.desktop.AccountWindowController.java">org/universAAL/tools/ucc/controller/desktop/AccountWindowController.java</a>
                 </td>
                 <td>
-                  2
+                  1
                 </td>
                 <td>
                   1
@@ -105,7 +105,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.controller.desktop.ToolController.java">org/universAAL/tools/ucc/controller/desktop/ToolController.java</a>
                 </td>
                 <td>
-                  3
+                  2
                 </td>
                 <td>
                   0
@@ -147,7 +147,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.commerce.ustore.tools.OnlineStoreManager.java">org/universAAL/tools/ucc/commerce/ustore/tools/OnlineStoreManager.java</a>
                 </td>
                 <td>
-                  15
+                  14
                 </td>
                 <td>
                   0
@@ -161,7 +161,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.commerce.ustore.tools.RegisterDeployManager.java">org/universAAL/tools/ucc/commerce/ustore/tools/RegisterDeployManager.java</a>
                 </td>
                 <td>
-                  24
+                  0
                 </td>
                 <td>
                   0
@@ -175,7 +175,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.controller.install.DeploymentInfoController.java">org/universAAL/tools/ucc/controller/install/DeploymentInfoController.java</a>
                 </td>
                 <td>
-                  2
+                  1
                 </td>
                 <td>
                   2
@@ -189,7 +189,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.commerce.ustore.tools.GetSessionKey.java">org/universAAL/tools/ucc/commerce/ustore/tools/GetSessionKey.java</a>
                 </td>
                 <td>
-                  12
+                  0
                 </td>
                 <td>
                   0
@@ -217,7 +217,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.commerce.ustore.tools.GetUserProfileResponse.java">org/universAAL/tools/ucc/commerce/ustore/tools/GetUserProfileResponse.java</a>
                 </td>
                 <td>
-                  8
+                  0
                 </td>
                 <td>
                   1
@@ -245,7 +245,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.commerce.ustore.tools.UAALException.java">org/universAAL/tools/ucc/commerce/ustore/tools/UAALException.java</a>
                 </td>
                 <td>
-                  8
+                  0
                 </td>
                 <td>
                   0
@@ -329,7 +329,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.frontend.api.impl.FrontendImpl.java">org/universAAL/tools/ucc/frontend/api/impl/FrontendImpl.java</a>
                 </td>
                 <td>
-                  16
+                  10
                 </td>
                 <td>
                   11
@@ -371,7 +371,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.commerce.ustore.tools.GetSessionKeyResponse.java">org/universAAL/tools/ucc/commerce/ustore/tools/GetSessionKeyResponse.java</a>
                 </td>
                 <td>
-                  8
+                  0
                 </td>
                 <td>
                   1
@@ -385,7 +385,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.commerce.ustore.tools.GetPurchasedAALServicesResponse.java">org/universAAL/tools/ucc/commerce/ustore/tools/GetPurchasedAALServicesResponse.java</a>
                 </td>
                 <td>
-                  8
+                  0
                 </td>
                 <td>
                   1
@@ -399,7 +399,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.commerce.ustore.tools.ObjectFactory.java">org/universAAL/tools/ucc/commerce/ustore/tools/ObjectFactory.java</a>
                 </td>
                 <td>
-                  49
+                  17
                 </td>
                 <td>
                   15
@@ -525,7 +525,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.commerce.ustore.tools.GetFreeAALServicesResponse.java">org/universAAL/tools/ucc/commerce/ustore/tools/GetFreeAALServicesResponse.java</a>
                 </td>
                 <td>
-                  8
+                  0
                 </td>
                 <td>
                   1
@@ -553,7 +553,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.controller.space.AddNewHardwareController.java">org/universAAL/tools/ucc/controller/space/AddNewHardwareController.java</a>
                 </td>
                 <td>
-                  4
+                  2
                 </td>
                 <td>
                   1
@@ -595,7 +595,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.controller.space.AddNewPersonController.java">org/universAAL/tools/ucc/controller/space/AddNewPersonController.java</a>
                 </td>
                 <td>
-                  3
+                  2
                 </td>
                 <td>
                   0
@@ -609,7 +609,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.commerce.ustore.tools.GetFreeAALServices.java">org/universAAL/tools/ucc/commerce/ustore/tools/GetFreeAALServices.java</a>
                 </td>
                 <td>
-                  10
+                  0
                 </td>
                 <td>
                   0
@@ -623,7 +623,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.commerce.ustore.tools.RegisterDeployManagerResponse.java">org/universAAL/tools/ucc/commerce/ustore/tools/RegisterDeployManagerResponse.java</a>
                 </td>
                 <td>
-                  4
+                  0
                 </td>
                 <td>
                   0
@@ -651,7 +651,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.client.util.UstoreUtil.java">org/universAAL/tools/ucc/client/util/UstoreUtil.java</a>
                 </td>
                 <td>
-                  6
+                  3
                 </td>
                 <td>
                   1
@@ -665,7 +665,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.commerce.ustore.tools.GetUpdatesForAALServices.java">org/universAAL/tools/ucc/commerce/ustore/tools/GetUpdatesForAALServices.java</a>
                 </td>
                 <td>
-                  8
+                  0
                 </td>
                 <td>
                   0
@@ -679,7 +679,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.commerce.ustore.tools.GetUserProfile.java">org/universAAL/tools/ucc/commerce/ustore/tools/GetUserProfile.java</a>
                 </td>
                 <td>
-                  8
+                  0
                 </td>
                 <td>
                   0
@@ -707,7 +707,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.commerce.ustore.tools.PurchaseFreeAALService.java">org/universAAL/tools/ucc/commerce/ustore/tools/PurchaseFreeAALService.java</a>
                 </td>
                 <td>
-                  12
+                  0
                 </td>
                 <td>
                   0
@@ -749,7 +749,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.service.impl.ServiceManagment.java">org/universAAL/tools/ucc/service/impl/ServiceManagment.java</a>
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   0
@@ -805,7 +805,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.service.impl.ServiceRegistration.java">org/universAAL/tools/ucc/service/impl/ServiceRegistration.java</a>
                 </td>
                 <td>
-                  8
+                  0
                 </td>
                 <td>
                   0
@@ -903,7 +903,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.commerce.ustore.tools.OnlineStoreManagerService.java">org/universAAL/tools/ucc/commerce/ustore/tools/OnlineStoreManagerService.java</a>
                 </td>
                 <td>
-                  8
+                  6
                 </td>
                 <td>
                   1
@@ -959,7 +959,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.controller.space.RoomsWindowController.java">org/universAAL/tools/ucc/controller/space/RoomsWindowController.java</a>
                 </td>
                 <td>
-                  2
+                  1
                 </td>
                 <td>
                   2
@@ -1057,7 +1057,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.controller.desktop.DesktopController.java">org/universAAL/tools/ucc/controller/desktop/DesktopController.java</a>
                 </td>
                 <td>
-                  7
+                  6
                 </td>
                 <td>
                   1
@@ -1071,7 +1071,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.commerce.ustore.tools.GetUpdatesForAALServicesResponse.java">org/universAAL/tools/ucc/commerce/ustore/tools/GetUpdatesForAALServicesResponse.java</a>
                 </td>
                 <td>
-                  8
+                  0
                 </td>
                 <td>
                   1
@@ -1085,7 +1085,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.commerce.ustore.tools.GetPurchasedAALServices.java">org/universAAL/tools/ucc/commerce/ustore/tools/GetPurchasedAALServices.java</a>
                 </td>
                 <td>
-                  8
+                  0
                 </td>
                 <td>
                   0
@@ -1099,7 +1099,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.uCC/tools.ucc.frontend//checkstyle.html#org.universAAL.tools.ucc.commerce.ustore.tools.PurchaseFreeAALServiceResponse.java">org/universAAL/tools/ucc/commerce/ustore/tools/PurchaseFreeAALServiceResponse.java</a>
                 </td>
                 <td>
-                  8
+                  0
                 </td>
                 <td>
                   1

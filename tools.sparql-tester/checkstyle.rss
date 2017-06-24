@@ -28,7 +28,7 @@ under the License.
       <title>File: 4,
              Errors: 44,
              Warnings: 4,
-             Infos: 13
+             Infos: 7
       </title>
             <link>http://xtras/tools.runtime/tools.sparql-tester//checkstyle.html</link>
       <description>
@@ -63,7 +63,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.sparql-tester//checkstyle.html#org.universAAL.tools.SparQLQueryPanel.java">org/universAAL/tools/SparQLQueryPanel.java</a>
                 </td>
                 <td>
-                  8
+                  7
                 </td>
                 <td>
                   1
@@ -77,7 +77,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.sparql-tester//checkstyle.html#org.universAAL.tools.SparQLQuerySubPanel.java">org/universAAL/tools/SparQLQuerySubPanel.java</a>
                 </td>
                 <td>
-                  1
+                  0
                 </td>
                 <td>
                   1
@@ -91,7 +91,7 @@ under the License.
                   <a href="http://xtras/tools.runtime/tools.sparql-tester//checkstyle.html#org.universAAL.tools.CHeQuerrier.java">org/universAAL/tools/CHeQuerrier.java</a>
                 </td>
                 <td>
-                  4
+                  0
                 </td>
                 <td>
                   2
