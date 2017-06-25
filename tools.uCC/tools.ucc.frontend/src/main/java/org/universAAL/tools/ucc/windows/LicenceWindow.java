@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import org.universAAL.tools.ucc.controller.install.LicenseController;
-import org.universAAL.tools.ucc.model.AALService;
+import org.universAAL.tools.ucc.model.Service;
 import org.universAAL.tools.ucc.model.UAPP;
 import org.universAAL.tools.ucc.model.install.License;
 
@@ -41,7 +41,7 @@ public class LicenceWindow extends Window {
 	private Tree tree;
 	private UAPP installingApplication;
 
-	public LicenceWindow(UccUI app, ArrayList<License> licenses, AALService aal, UAPP installApp) throws IOException {
+	public LicenceWindow(UccUI app, ArrayList<License> licenses, Service service, UAPP installApp) throws IOException {
 		res = ResourceBundle.getBundle(base);
 		setCaption(res.getString("license.capt"));
 		this.app = app;
@@ -125,7 +125,7 @@ public class LicenceWindow extends Window {
 		center();
 		hp.setSecondComponent(vl);
 		setClosable(false);
-		lic = new LicenseController(app, this, licenses, aal, installingApplication);
+		lic = new LicenseController(app, this, licenses, service, installingApplication);
 		tree.addListener(lic);
 		op.addListener(lic);
 	}

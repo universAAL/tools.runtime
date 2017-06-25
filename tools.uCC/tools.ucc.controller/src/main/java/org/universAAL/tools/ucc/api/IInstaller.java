@@ -10,14 +10,14 @@ import org.universAAL.middleware.managers.api.MatchingResult;
 import org.universAAL.middleware.managers.api.UAPPPackage;
 
 /**
- * Installer Interface for installing AAL services.
+ * Installer Interface for installing universAAL services.
  *
  * @author Shanshan Jiang
  *
  */
 public interface IInstaller {
 
-	// interface with MW: call AALSpaceManager
+	// interface with MW: call SpaceManager
 	public Map getPeers();
 
 	public MatchingResult getMatchingPeers(Map<String, Serializable> filter);

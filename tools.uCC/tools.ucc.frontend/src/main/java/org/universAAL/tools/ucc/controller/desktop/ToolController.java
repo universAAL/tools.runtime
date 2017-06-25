@@ -16,7 +16,7 @@ import javax.xml.bind.JAXBException;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
 import org.universAAL.tools.ucc.configuration.view.WhichBundleShouldBeConfiguredWindow;
-import org.universAAL.tools.ucc.controller.install.AALServiceReceiver;
+import org.universAAL.tools.ucc.controller.install.ServiceReceiver;
 import org.universAAL.tools.ucc.controller.install.DeinstallController;
 import org.universAAL.tools.ucc.controller.ustore.services.PurchasedServicesController;
 import org.universAAL.tools.ucc.frontend.api.IFrontend;
@@ -115,7 +115,7 @@ public class ToolController implements Button.ClickListener, Upload.FinishedList
 		}
 		if (event.getButton() == toolWin.getInstallButton()) {
 			// Later uncomment again only for testing commented out!
-			Upload up = new Upload("", new AALServiceReceiver());
+			Upload up = new Upload("", new ServiceReceiver());
 			up.setButtonCaption(res.getString("install.button"));
 			up.addListener((Upload.FinishedListener) this);
 			up.addListener((Upload.FailedListener) this);
@@ -325,14 +325,14 @@ public class ToolController implements Button.ClickListener, Upload.FinishedList
 			// License license = null;
 			// ArrayList<License> licenseList = new ArrayList<License>();
 			// ArrayList<File> list = new ArrayList<File>();
-			// AALService aal = null;
+			// Service service = null;
 			// try {
 			// DocumentBuilder builder = fact.newDocumentBuilder();
 			// Document doc = builder.parse(licenceFile);
 			// for(int k = 0; k <
 			// doc.getElementsByTagName("usrv:srv").getLength();
 			// k++) {
-			// aal = new AALService();
+			// service = new Service();
 			// for(int ac = 0; ac <
 			// doc.getElementsByTagName("usrv:application").getLength(); ac++) {
 			// UAPP uap = new UAPP();
@@ -354,18 +354,18 @@ public class ToolController implements Button.ClickListener, Upload.FinishedList
 			// }
 			//
 			// }
-			// aal.getUaapList().add(uap);
+			// service.getUaapList().add(uap);
 			// }
-			// aal.setName(doc.getElementsByTagName("usrv:name").item(0).getTextContent());
-			// aal.setProvider(doc.getElementsByTagName("usrv:serviceProvider").item(0).getTextContent());
-			// aal.setDescription(doc.getElementsByTagName("usrv:description").item(0).getTextContent());
-			// aal.setMajor(Integer.parseInt(doc.getElementsByTagName("usrv:major").item(0).getTextContent()));
-			// aal.setMinor(Integer.parseInt(doc.getElementsByTagName("usrv:minor").item(0).getTextContent()));
-			// aal.setMicro(Integer.parseInt(doc.getElementsByTagName("usrv:micro").item(0).getTextContent()));
+			// service.setName(doc.getElementsByTagName("usrv:name").item(0).getTextContent());
+			// service.setProvider(doc.getElementsByTagName("usrv:serviceProvider").item(0).getTextContent());
+			// service.setDescription(doc.getElementsByTagName("usrv:description").item(0).getTextContent());
+			// service.setMajor(Integer.parseInt(doc.getElementsByTagName("usrv:major").item(0).getTextContent()));
+			// service.setMinor(Integer.parseInt(doc.getElementsByTagName("usrv:minor").item(0).getTextContent()));
+			// service.setMicro(Integer.parseInt(doc.getElementsByTagName("usrv:micro").item(0).getTextContent()));
 			// String h =
 			// doc.getElementsByTagName("usrv:tags").item(0).getTextContent();
 			// for(String t : h.split(",")) {
-			// aal.getTags().add(t);
+			// service.getTags().add(t);
 			// }
 			// license = new License();
 			// for(int s = 0; s <
@@ -406,9 +406,9 @@ public class ToolController implements Button.ClickListener, Upload.FinishedList
 			// }
 			// license.setLicense(list);
 			// licenseList.add(license);
-			// aal.setLicenses(license);
+			// service.setLicenses(license);
 			// }
-			// lw = new LicenceWindow(app, licenseList, aal);
+			// lw = new LicenceWindow(app, licenseList, service);
 			// app.getMainWindow().addWindow(lw);
 			// } catch (ParserConfigurationException e) {
 			// // TODO Auto-generated catch block
@@ -421,12 +421,12 @@ public class ToolController implements Button.ClickListener, Upload.FinishedList
 			// e.printStackTrace();
 			// }
 			// UsrvInformationWindow info = new UsrvInformationWindow();
-			// UsrvInfoController infoController = new UsrvInfoController(aal,
+			// UsrvInfoController infoController = new UsrvInfoController(service,
 			// lw,
 			// app);
 			// app.getMainWindow().addWindow(lw);
 			// app.getMainWindow().addWindow(info);
-			// ToDo: install AAL services with DeployManager and delete temp
+			// ToDo: install service services with DeployManager and delete temp
 			// usrv
 			// file with unziped folders
 

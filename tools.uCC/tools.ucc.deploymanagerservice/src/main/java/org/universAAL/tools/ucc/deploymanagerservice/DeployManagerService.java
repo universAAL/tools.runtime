@@ -79,15 +79,15 @@ public interface DeployManagerService {
 			@WebParam(name = "serviceId") String serviceId);
 
 	/**
-	 * get the AAL space profile
+	 * get the space profile
 	 *
-	 * @return The AAL space profile in the following template: TODO: decide
-	 *         what to return, whether to use AALSpaceCard or AALSpaceDescriptor
-	 *         as defined in the mw.interfaces.aalspace. Suggest to return a
+	 * @return The space profile in the following template: TODO: decide
+	 *         what to return, whether to use SpaceCard or SpaceDescriptor
+	 *         as defined in the mw.interfaces.space. Suggest to return a
 	 *         list of properties of capabilities and functionalities in the
 	 *         form of <propertyName, propValue, criteria>
 	 */
-	public String getAALSpaceProfile();
+	public String getSpaceProfile();
 
 	/**
 	 *

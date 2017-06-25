@@ -46,20 +46,20 @@ public class Activator implements BundleActivator {
 	private void testSpaceServer() {
 		ProfileAgentImpl agent = new ProfileAgentImpl(moduleContext);
 
-		String spaceURI = "urn:org.universAAL.aal_space:test_env#my_home_space";
-		String aalSpaceProfileURI = "urn:org.universAAL.aal_space:test_env#some_space_profile";
-		String device1URI = "urn:org.universAAL.aal_space:test_env#Device1";
-		String device2URI = "urn:org.universAAL.aal_space:test_env#Device2";
+		String spaceURI = "urn:org.universAAL.space:test_env#my_home_space";
+		String spaceProfileURI = "urn:org.universAAL.space:test_env#some_space_profile";
+		String device1URI = "urn:org.universAAL.space:test_env#Device1";
+		String device2URI = "urn:org.universAAL.space:test_env#Device2";
 
 		Space space = new Space(spaceURI);
-		// AALSpaceProfile aalSpaceProfile = new
-		// AALSpaceProfile(aalSpaceProfileURI);
+		// SpaceProfile spaceProfile = new
+		// SpaceProfile(spaceProfileURI);
 
 		Device device1 = new Device(device1URI);
 		Device device2 = new Device(device2URI);
 
 		/* test add/get space */
-		System.out.println("[TEST] getting all AAL spaces...");
+		System.out.println("[TEST] getting all spaces...");
 		List<Space> spaces = agent.getSpaces();
 		if (spaces == null) {
 			// TODO: create the space with appropriate properties from MW
@@ -72,21 +72,21 @@ public class Activator implements BundleActivator {
 			System.out.println("[TEST] has a space: " + spaces.get(i).getURI());
 		}
 
-		// System.out.println("[TEST] adding AAL space ..." + space.getURI());
+		// System.out.println("[TEST] adding space ..." + space.getURI());
 		// System.out.println("Result is: " + agent.addSpace(space));
-		System.out.println("[TEST] getting AAL space..." + space.getURI());
+		System.out.println("[TEST] getting space..." + space.getURI());
 		System.out.println("Result is: " + agent.getSpace(space));
-		System.out.println("[TEST] getting all AAL spaces...");
+		System.out.println("[TEST] getting all  spaces...");
 		System.out.println("Result is: " + agent.getSpaces());
 
 		/* test add/get space profile */
 		/*
-		 * System.out.println("[TEST] adding aalspace profile..." +
-		 * aalSpaceProfile.getURI()); System.out.println("Result is: " +
-		 * agent.addSpaceProfile(aalSpaceProfile));
-		 * System.out.println("[TEST] getting AAL space profile ..." +
-		 * aalSpaceProfile.getURI()); System.out.println("Result is: " +
-		 * agent.getSpaceProfile(aalSpaceProfile));
+		 * System.out.println("[TEST] adding space profile..." +
+		 * spaceProfile.getURI()); System.out.println("Result is: " +
+		 * agent.addSpaceProfile(spaceProfile));
+		 * System.out.println("[TEST] getting space profile ..." +
+		 * spaceProfile.getURI()); System.out.println("Result is: " +
+		 * agent.getSpaceProfile(spaceProfile));
 		 */
 		/* test add space profile to a space */
 
@@ -137,27 +137,27 @@ public class Activator implements BundleActivator {
 		ProfileAgentImpl agent = new ProfileAgentImpl(moduleContext);
 
 		String userID = "Maria";
-		String userURI = "urn:org.universAAL.aal_space:test_env#" + userID;
-		String userProfileURI = "urn:org.universAAL.aal_space:test_env#Maria_user_profile";
-		String userIDProfileURI = "urn:org.universAAL.aal_space:test_env#Maria_userID_profile";
+		String userURI = "urn:org.universAAL.space:test_env#" + userID;
+		String userProfileURI = "urn:org.universAAL.space:test_env#Maria_user_profile";
+		String userIDProfileURI = "urn:org.universAAL.space:test_env#Maria_userID_profile";
 		// String healthProfileURI =
-		// "urn:org.universAAL.aal_space:test_env#Maria_health_profile";
-		String aalSpaceProfileURI = "urn:org.universAAL.aal_space:test_env#some_space_profile";
-		String device1URI = "urn:org.universAAL.aal_space:test_env#Device1";
-		String device2URI = "urn:org.universAAL.aal_space:test_env#Device2";
-		String spaceURI = "urn:org.universAAL.aal_space:test_env#space";
-		String service1URI = "urn:org.universAAL.aal_space:test_env#Service1";
-		String service2URI = "urn:org.universAAL.aal_space:test_env#Service2";
+		// "urn:org.universAAL.space:test_env#Maria_health_profile";
+		String spaceProfileURI = "urn:org.universAAL.space:test_env#some_space_profile";
+		String device1URI = "urn:org.universAAL.space:test_env#Device1";
+		String device2URI = "urn:org.universAAL.space:test_env#Device2";
+		String spaceURI = "urn:org.universAAL.space:test_env#space";
+		String service1URI = "urn:org.universAAL.space:test_env#Service1";
+		String service2URI = "urn:org.universAAL.space:test_env#Service2";
 
 		String userID2 = "John";
-		String userURI2 = "urn:org.universAAL.aal_space:test_env#" + userID2;
-		String userProfileURI2 = "urn:org.universAAL.aal_space:test_env#John_user_profile";
-		String userIDProfileURI2 = "urn:org.universAAL.aal_space:test_env#John_userID_profile";
+		String userURI2 = "urn:org.universAAL.space:test_env#" + userID2;
+		String userProfileURI2 = "urn:org.universAAL.space:test_env#John_user_profile";
+		String userIDProfileURI2 = "urn:org.universAAL.space:test_env#John_userID_profile";
 
 		User maria = new User(userURI);
 		// AssistedPerson maria = new AssistedPerson(userURI);
 		UserProfile userProfile = new UserProfile(userProfileURI);
-		SpaceProfile aalSpaceProfile = new SpaceProfile(aalSpaceProfileURI);
+		SpaceProfile spaceProfile = new SpaceProfile(spaceProfileURI);
 
 		User john = new User(userURI2);
 		// AssistedPerson john = new AssistedPerson(userURI2);
@@ -167,10 +167,10 @@ public class Activator implements BundleActivator {
 		 * Device device1 = new Device(device1URI); Device device2 = new
 		 * Device(device2URI);
 		 *
-		 * AALSpace space = new AALSpace(spaceURI);
+		 * Space space = new Space(spaceURI);
 		 *
-		 * AALService service1 = new AALService(service1URI); AALService
-		 * service2 = new AALService(service2URI);
+		 * Service service1 = new Service(service1URI); Service
+		 * service2 = new Service(service2URI);
 		 */
 
 		/**** TESTING PROFILING SERVER *************/
@@ -191,7 +191,7 @@ public class Activator implements BundleActivator {
 		// System.out.println("[TEST] getting user with uri " + userURI2);
 		// System.out.println("Result is: " + agent.getUser(userURI2));
 
-		String perURI = "urn:org.universAAL.aal_space:test_env#Per";
+		String perURI = "urn:org.universAAL.space:test_env#Per";
 		// AssistedPerson per = new AssistedPerson(perURI);
 		User per = new User(perURI);
 		System.out.println("[TEST] adding user ..." + per.getURI());

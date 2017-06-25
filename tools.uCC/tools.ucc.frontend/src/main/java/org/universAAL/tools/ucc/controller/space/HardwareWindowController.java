@@ -77,7 +77,7 @@ public class HardwareWindowController implements Property.ValueChangeListener, B
 		actualFlat = device + "/Hardware.xml";
 		actualRoom = device + "/Rooms.xml";
 		context = Activator.bc;
-		// mContext = uAALBundleContainer.THE_CONTAINER.registerModule(new
+		// mContext = OSGiContainer.THE_CONTAINER.registerModule(new
 		// Object[] { context });
 		// sensorEventSubscriber = SensorEventSubscriber.getInstance(mContext,
 		// context);

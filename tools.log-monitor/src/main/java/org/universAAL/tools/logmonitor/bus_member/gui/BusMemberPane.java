@@ -47,8 +47,8 @@ public class BusMemberPane extends HTMLBusOperationsPane {
 
 		// overwrite ctrl-c
 		final BusMemberPane pane = this;
-		getInputMap().put(KeyStroke.getKeyStroke(KeyEvent.VK_C, InputEvent.CTRL_DOWN_MASK), "uaal_copy");
-		getActionMap().put("uaal_copy",
+		getInputMap().put(KeyStroke.getKeyStroke(KeyEvent.VK_C, InputEvent.CTRL_DOWN_MASK), "universAAL_copy");
+		getActionMap().put("universAAL_copy",
 				new ClipboardHandling(new HashMap<String, String>(), getTransferHandler(), pane));
 	}
 

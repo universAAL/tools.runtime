@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * All user in AAL space and uCC.
+ * All user in space and uCC.
  *
  * @author Nicole Merkle
  *

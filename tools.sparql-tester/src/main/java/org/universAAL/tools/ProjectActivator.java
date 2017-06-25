@@ -36,7 +36,7 @@ public class ProjectActivator implements ModuleActivator {
 		context = ctxt;
 		LogUtils.logDebug(context, getClass(), "start", "Starting.");
 		/*
-		 * uAAL stuff
+		 * universAAL stuff
 		 */
 		querrier = new CHeQuerrier(context);
 		EventQueue.invokeLater(new Runnable() {
@@ -62,7 +62,7 @@ public class ProjectActivator implements ModuleActivator {
 	public void stop(ModuleContext ctxt) throws Exception {
 		LogUtils.logDebug(context, getClass(), "stop", "Stopping.");
 		/*
-		 * close uAAL stuff
+		 * close universAAL stuff
 		 */
 		querrier = null;
 		frame.dispose();

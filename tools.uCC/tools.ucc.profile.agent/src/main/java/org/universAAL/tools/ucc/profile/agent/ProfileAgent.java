@@ -137,9 +137,9 @@ public interface ProfileAgent {
 	 * @param user
 	 *            The user who performed the operation
 	 *
-	 * @return list of AALSpace profiles, which owner is the given user
+	 * @return list of Space profiles, which owner is the given user
 	 */
-	public List<SpaceProfile> getAALSpaceProfiles(User user);
+	public List<SpaceProfile> getSpaceProfiles(User user);
 
 	/**
 	 * Stores the new {@link org.universAAL.ontology.profile.SpaceProfile}
@@ -148,10 +148,10 @@ public interface ProfileAgent {
 	 * @param user
 	 *            The user who performed the action
 	 *
-	 * @param aalSpaceProfile
-	 *            The AAL space profile for the user
+	 * @param spaceProfile
+	 *            The space profile for the user
 	 */
-	public void addAALSpaceProfile(User user, SpaceProfile aalSpaceProfile);
+	public void addSpaceProfile(User user, SpaceProfile spaceProfile);
 
 	/**
 	 * Changes the existing
@@ -160,10 +160,10 @@ public interface ProfileAgent {
 	 *
 	 * @param user
 	 *
-	 * @param aalSpaceProfile
-	 *            The AAL space profile for the user to be changed
+	 * @param spaceProfile
+	 *            The space profile for the user to be changed
 	 */
-	public void changeAALSpaceProfile(User user, SpaceProfile aalSpaceProfile);
+	public void changeSpaceProfile(User user, SpaceProfile spaceProfile);
 
 	/**
 	 * Removes the existing
@@ -171,15 +171,15 @@ public interface ProfileAgent {
 	 * performed by the user.
 	 *
 	 * @param user
-	 *            The user whose AAL space profile is to be removed
+	 *            The user whose space profile is to be removed
 	 */
-	public void removeAALSpaceProfile(User user);
+	public void removeSpaceProfile(User user);
 
 	/************* The following APIs use Space server ***********************/
 
 	/** For testing ***/
 
-	public String addSpaceProfile(SpaceProfile aalSpaceProfile);
+	public String addSpaceProfile(SpaceProfile spaceProfile);
 
 	/** Used by uCC ****/
 
@@ -202,38 +202,38 @@ public interface ProfileAgent {
 
 	// TODO: check which methods below are really needed for uCC
 
-	public String getSpaceProfile(SpaceProfile aalSpaceProfile);
+	public String getSpaceProfile(SpaceProfile spaceProfile);
 
-	public String addService(AppService aalService);
+	public String addService(AppService service);
 
-	public String getService(AppService aalService);
+	public String getService(AppService service);
 
-	public String changeService(AppService aalService);
+	public String changeService(AppService service);
 
-	public String removeService(AppService aalService);
+	public String removeService(AppService service);
 
 	public String getServices();
 
-	public String addServiceProf(AppServiceProfile aalServiceProfile);
+	public String addServiceProf(AppServiceProfile serviceProfile);
 
-	public String getServiceProf(AppServiceProfile aalServiceProfile);
+	public String getServiceProf(AppServiceProfile serviceProfile);
 
-	public String changeServiceProf(AppServiceProfile aalServiceProfile);
+	public String changeServiceProf(AppServiceProfile serviceProfile);
 
-	public String removeServiceProf(AppServiceProfile aalServiceProfile);
+	public String removeServiceProf(AppServiceProfile serviceProfile);
 
-	public String addServicesToSpace(Space aalSpace, AppService serv);
+	public String addServicesToSpace(Space space, AppService serv);
 
-	public String getServicesOfSpace(Space aalSpace);
+	public String getServicesOfSpace(Space space);
 
-	public String getHROfServ(AppService aalService);
+	public String getHROfServ(AppService service);
 
-	public String getHWOfServ(AppService aalService);
+	public String getHWOfServ(AppService service);
 
-	public String getAppOfServ(AppService aalService);
+	public String getAppOfServ(AppService service);
 
 	/************* APIs for uCC/uStore Web services **********************/
-	public String getAALSpaceProfile();
+	public String getSpaceProfile();
 
 	public String getUserProfile(String userId);
 

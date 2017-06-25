@@ -9,7 +9,7 @@ import org.universAAL.tools.ucc.service.manager.Activator;
 
 import com.vaadin.ui.Upload.Receiver;
 
-public class AALServiceReceiver implements Receiver {
+public class ServiceReceiver implements Receiver {
 
 	public OutputStream receiveUpload(String filename, String mimeType) {
 		OutputStream os = null;

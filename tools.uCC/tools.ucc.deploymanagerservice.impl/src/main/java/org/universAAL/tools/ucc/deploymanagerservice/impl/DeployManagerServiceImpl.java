@@ -41,7 +41,7 @@ public class DeployManagerServiceImpl implements DeployManagerService {
 		return units;
 	}
 
-	public String getAALSpaceProfile() {
+	public String getSpaceProfile() {
 		return null;
 	}
 

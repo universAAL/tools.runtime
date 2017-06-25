@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import org.universAAL.tools.ucc.model.install.License;
 
-public class AALService {
+public class Service {
 	private String serviceId;
 	private int minor = 0;
 	private int major = 0;
@@ -19,12 +19,12 @@ public class AALService {
 	private String iconPath;
 	private String menuName;
 
-	public AALService() {
+	public Service() {
 		tags = new ArrayList<String>();
 		uaapList = new ArrayList<UAPP>();
 	}
 
-	public AALService(String serviceId, int minor, int major, int micro, String description, String name,
+	public Service(String serviceId, int minor, int major, int micro, String description, String name,
 			String provider, ArrayList<String> tags, License licenses, String ontologyUri, String iconPath) {
 		this.serviceId = serviceId;
 		this.minor = minor;

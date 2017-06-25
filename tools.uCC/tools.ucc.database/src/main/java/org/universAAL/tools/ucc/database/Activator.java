@@ -41,9 +41,9 @@ public class Activator implements BundleActivator {
 	private ServiceRegistration reg4;
 	private static ProfileAgent pAgent;
 	private static ServiceReference pRef;
-	public static final String USER_SPACE = "urn:org.universAAL.aal_space:user_env#";
-	public static final String HOME_SPACE = "urn:org.universAAL.aal.space:home_env#my_home_space";
-	public static final String DEVICE_SPACE = "urn:org.universAAL.aal.space:home_env#";
+	public static final String USER_SPACE = "urn:org.universAAL.space:user_env#";
+	public static final String HOME_SPACE = "urn:org.universAAL.space:home_env#my_home_space";
+	public static final String DEVICE_SPACE = "urn:org.universAAL.space:home_env#";
 	private static File userxml;
 
 	public static BundleContext getContext() {

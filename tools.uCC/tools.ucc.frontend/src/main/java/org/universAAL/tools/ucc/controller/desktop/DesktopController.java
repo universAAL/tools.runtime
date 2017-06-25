@@ -157,7 +157,7 @@ public class DesktopController implements Button.ClickListener {
 					// Later comment out, only CHE is to be used
 					List<UserAccountInfo> users = setup.getUsers();
 					if (users.size() <= 1) {
-						// AAL Space test
+						// Space test
 						DataAccess da = Activator.getDataAccess();
 						ArrayList<OntologyInstance> ontList = da.getEmptyCHEFormFields("User");
 						String uname = "";

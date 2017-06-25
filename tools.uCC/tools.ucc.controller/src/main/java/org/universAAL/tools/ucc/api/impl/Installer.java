@@ -18,14 +18,14 @@ import org.universAAL.middleware.managers.api.DeployManager;
 public class Installer implements IInstaller {
 
 	/**
-	 * get peers in AALSpace from the AALSpaceManager
+	 * get peers in Space from the SpaceManager
 	 *
 	 */
 	public Map<String, PeerCard> getPeers() {
-		SpaceManager aalSpaceManager = Activator.getAALSpaceManager();
+		SpaceManager spaceManager = Activator.getSpaceManager();
 		Map peers = new HashMap();
-		if (aalSpaceManager != null) {
-			peers = aalSpaceManager.getPeers();
+		if (spaceManager != null) {
+			peers = spaceManager.getPeers();
 			System.out.println("[Installer.getPeers()] " + peers.toString());
 		} else {
 			// use faked data to test without really connected to DeployManager
@@ -66,12 +66,12 @@ public class Installer implements IInstaller {
 	}
 
 	public MatchingResult getMatchingPeers(Map<String, Serializable> filter) {
-		SpaceManager aalSpaceManager = Activator.getAALSpaceManager();
+		SpaceManager spaceManager = Activator.getSpaceManager();
 		System.err.println("[[IInstaller]]: getMatchingPeers()");
-		if (aalSpaceManager != null) {
-			System.err.println("[[Installer]] AALSPACEMANAGER is not NULL " + aalSpaceManager.getPeers());
+		if (spaceManager != null) {
+			System.err.println("[[Installer]] SPACEMANAGER is not NULL " + spaceManager.getPeers());
 			System.err.println("[[Installer]] filer: " + filter.size() + " " + filter.toString());
-			MatchingResult result = aalSpaceManager.getMatchingPeers(filter);
+			MatchingResult result = spaceManager.getMatchingPeers(filter);
 			System.err.println(result.getPeers().toString());
 			PeerCard[] peers = result.getPeers();
 			System.err.println("PEERS SIZE: " + peers.length);
@@ -81,23 +81,23 @@ public class Installer implements IInstaller {
 			System.err.println("[[Installer] BEFORE return of MatchingResult");
 			return result;
 		}
-		System.out.println("[Installer.getMatchingPeers()] can not get AALSpaceManager");
+		System.out.println("[Installer.getMatchingPeers()] can not get SpaceManager");
 		return null;
 
 	}
 
 	public Map<String, Serializable> getPeerAttributes(List<String> attributes, PeerCard target) {
-		SpaceManager aalSpaceManager = Activator.getAALSpaceManager();
+		SpaceManager spaceManager = Activator.getSpaceManager();
 
-		if (aalSpaceManager != null) {
-			Map<String, Serializable> result = aalSpaceManager.getPeerAttributes(attributes, target);
+		if (spaceManager != null) {
+			Map<String, Serializable> result = spaceManager.getPeerAttributes(attributes, target);
 
 			for (String s : result.keySet()) {
 				System.out.println("[Installer.getMatchingPeers()] has an attribute: " + result.get(s));
 			}
 			return result;
 		}
-		System.out.println("[Installer.getPeerAttributes()] can not get AALSpaceManager");
+		System.out.println("[Installer.getPeerAttributes()] can not get SpaceManager");
 		return null;
 	}
 

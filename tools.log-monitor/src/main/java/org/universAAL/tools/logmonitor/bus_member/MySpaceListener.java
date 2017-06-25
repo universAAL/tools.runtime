@@ -18,7 +18,7 @@ import org.universAAL.tools.logmonitor.bus_member.gui.BusMemberGui;
  */
 public class MySpaceListener implements SpaceListener, Runnable, SharedObjectListener {
 
-	private SpaceManager theAALSpaceManager = null;
+	private SpaceManager theSpaceManager = null;
 	private BusMemberGui gui = null;
 
 	public MySpaceListener(BusMemberGui gui) {
@@ -26,7 +26,7 @@ public class MySpaceListener implements SpaceListener, Runnable, SharedObjectLis
 	}
 
 	public void start() {
-		// get AAL Space Manager to register this listener
+		// get Space Manager to register this listener
 		Object[] o = Activator.mc.getContainer().fetchSharedObject(Activator.mc,
 				new Object[] { SpaceManager.class.getName() }, this);
 		if (o != null) {
@@ -39,18 +39,18 @@ public class MySpaceListener implements SpaceListener, Runnable, SharedObjectLis
 	}
 
 	public void stop() {
-		// remove me as AALSpaceListener
+		// remove me as SpaceListener
 		synchronized (this) {
-			if (theAALSpaceManager != null) {
-				theAALSpaceManager.removeSpaceListener(this);
+			if (theSpaceManager != null) {
+				theSpaceManager.removeSpaceListener(this);
 			}
 		}
 	}
 
 	public PeerCard getMyPeerCard() {
 		synchronized (this) {
-			if (theAALSpaceManager != null) {
-				return theAALSpaceManager.getMyPeerCard();
+			if (theSpaceManager != null) {
+				return theSpaceManager.getMyPeerCard();
 			}
 		}
 		return null;
@@ -90,17 +90,17 @@ public class MySpaceListener implements SpaceListener, Runnable, SharedObjectLis
 	public void sharedObjectAdded(Object sharedObj, Object removeHook) {
 		if (sharedObj instanceof SpaceManager) {
 			synchronized (this) {
-				theAALSpaceManager = (SpaceManager) sharedObj;
-				theAALSpaceManager.addSpaceListener(this);
-				gui.setSpace(theAALSpaceManager.getSpaceDescriptor());
+				theSpaceManager = (SpaceManager) sharedObj;
+				theSpaceManager.addSpaceListener(this);
+				gui.setSpace(theSpaceManager.getSpaceDescriptor());
 
-				Map<String, PeerCard> peers = theAALSpaceManager.getPeers();
+				Map<String, PeerCard> peers = theSpaceManager.getPeers();
 				if (peers != null) {
 					for (PeerCard pc : peers.values()) {
 						gui.add(pc);
 					}
 				}
-				gui.add(theAALSpaceManager.getMyPeerCard());
+				gui.add(theSpaceManager.getMyPeerCard());
 			}
 		}
 	}
@@ -109,7 +109,7 @@ public class MySpaceListener implements SpaceListener, Runnable, SharedObjectLis
 	public void sharedObjectRemoved(Object removeHook) {
 		if (removeHook instanceof SpaceManager) {
 			synchronized (this) {
-				theAALSpaceManager = null;
+				theSpaceManager = null;
 			}
 		}
 	}

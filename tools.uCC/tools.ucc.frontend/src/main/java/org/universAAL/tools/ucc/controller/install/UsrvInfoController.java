@@ -3,7 +3,7 @@ package org.universAAL.tools.ucc.controller.install;
 import java.io.File;
 import java.util.ResourceBundle;
 
-import org.universAAL.tools.ucc.model.AALService;
+import org.universAAL.tools.ucc.model.Service;
 import org.universAAL.tools.ucc.service.manager.Activator;
 import org.universAAL.tools.ucc.windows.LicenceWindow;
 import org.universAAL.tools.ucc.windows.UccUI;
@@ -14,14 +14,14 @@ import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Window;
 
 public class UsrvInfoController implements Button.ClickListener {
-	// private AALService usrv;
+	// private Service usrv;
 	private UsrvInformationWindow win;
 	private LicenceWindow lWin;
 	private UccUI app;
 	private String base;
 	private ResourceBundle bundle;
 
-	public UsrvInfoController(AALService usrv, LicenceWindow lw, UccUI app) {
+	public UsrvInfoController(Service usrv, LicenceWindow lw, UccUI app) {
 		System.err.println("in UsrvInfoController");
 		base = "resources.ucc";
 		bundle = ResourceBundle.getBundle(base);

@@ -17,7 +17,7 @@ import org.universAAL.middleware.service.owls.profile.ServiceProfile;
  */
 public class ResourceInterpreter {
 
-	private static final String ServiceRealization_uAAL_SERVICE_PROFILE = Resource.VOCABULARY_NAMESPACE
+	private static final String ServiceRealization_SERVICE_PROFILE = Resource.VOCABULARY_NAMESPACE
 			+ "theProfile";
 
 	/**
@@ -31,7 +31,7 @@ public class ResourceInterpreter {
 		Object o;
 		String out;
 
-		if (!((o = r.getProperty(ServiceRealization_uAAL_SERVICE_PROFILE)) instanceof Resource))
+		if (!((o = r.getProperty(ServiceRealization_SERVICE_PROFILE)) instanceof Resource))
 			return "";
 		ServiceProfile p = (ServiceProfile) o;
 

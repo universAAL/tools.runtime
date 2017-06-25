@@ -21,36 +21,36 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-	private final static QName _UAALException_QNAME = new QName("http://tools.ustore.commerce.universaal.org/",
-			"uAALException");
-	private final static QName _GetPurchasedAALServicesResponse_QNAME = new QName(
-			"http://tools.ustore.commerce.universaal.org/", "getPurchasedAALServicesResponse");
-	private final static QName _GetUpdatesForAALServices_QNAME = new QName(
-			"http://tools.ustore.commerce.universaal.org/", "getUpdatesForAALServices");
+	private final static QName _USTORE_Exception_QNAME = new QName("http://tools.ustore.commerce.universaal.org/",
+			"uStoreException");
+	private final static QName _GetPurchasedServicesResponse_QNAME = new QName(
+			"http://tools.ustore.commerce.universaal.org/", "getPurchasedServicesResponse");
+	private final static QName _GetUpdatesForServices_QNAME = new QName(
+			"http://tools.ustore.commerce.universaal.org/", "getUpdatesForServices");
 	private final static QName _GetUserProfileResponse_QNAME = new QName("http://tools.ustore.commerce.universaal.org/",
 			"getUserProfileResponse");
 	private final static QName _GetSessionKeyResponse_QNAME = new QName("http://tools.ustore.commerce.universaal.org/",
 			"getSessionKeyResponse");
 	private final static QName _RegisterDeployManagerResponse_QNAME = new QName(
 			"http://tools.ustore.commerce.universaal.org/", "registerDeployManagerResponse");
-	private final static QName _GetPurchasedAALServices_QNAME = new QName(
-			"http://tools.ustore.commerce.universaal.org/", "getPurchasedAALServices");
+	private final static QName _GetPurchasedServices_QNAME = new QName(
+			"http://tools.ustore.commerce.universaal.org/", "getPurchasedServices");
 	private final static QName _GetUserProfile_QNAME = new QName("http://tools.ustore.commerce.universaal.org/",
 			"getUserProfile");
 	private final static QName _GetSessionKey_QNAME = new QName("http://tools.ustore.commerce.universaal.org/",
 			"getSessionKey");
-	private final static QName _PurchaseFreeAALServiceResponse_QNAME = new QName(
-			"http://tools.ustore.commerce.universaal.org/", "purchaseFreeAALServiceResponse");
-	private final static QName _PurchaseFreeAALService_QNAME = new QName("http://tools.ustore.commerce.universaal.org/",
-			"purchaseFreeAALService");
+	private final static QName _PurchaseFreeServiceResponse_QNAME = new QName(
+			"http://tools.ustore.commerce.universaal.org/", "purchaseFreeServiceResponse");
+	private final static QName _PurchaseFreeService_QNAME = new QName("http://tools.ustore.commerce.universaal.org/",
+			"purchaseFreeService");
 	private final static QName _RegisterDeployManager_QNAME = new QName("http://tools.ustore.commerce.universaal.org/",
 			"registerDeployManager");
-	private final static QName _GetUpdatesForAALServicesResponse_QNAME = new QName(
-			"http://tools.ustore.commerce.universaal.org/", "getUpdatesForAALServicesResponse");
-	private final static QName _GetFreeAALServices_QNAME = new QName("http://tools.ustore.commerce.universaal.org/",
-			"getFreeAALServices");
-	private final static QName _GetFreeAALServicesResponse_QNAME = new QName(
-			"http://tools.ustore.commerce.universaal.org/", "getFreeAALServicesResponse");
+	private final static QName _GetUpdatesForServicesResponse_QNAME = new QName(
+			"http://tools.ustore.commerce.universaal.org/", "getUpdatesForServicesResponse");
+	private final static QName _GetFreeServices_QNAME = new QName("http://tools.ustore.commerce.universaal.org/",
+			"getFreeServices");
+	private final static QName _GetFreeServicesResponse_QNAME = new QName(
+			"http://tools.ustore.commerce.universaal.org/", "getFreeServicesResponse");
 
 	/**
 	 * Create a new ObjectFactory that can be used to create new instances of
@@ -61,11 +61,11 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link PurchaseFreeAALService }
+	 * Create an instance of {@link PurchaseFreeService }
 	 *
 	 */
-	public PurchaseFreeAALService createPurchaseFreeAALService() {
-		return new PurchaseFreeAALService();
+	public PurchaseFreeService createPurchaseFreeService() {
+		return new PurchaseFreeService();
 	}
 
 	/**
@@ -77,27 +77,27 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link GetUpdatesForAALServicesResponse }
+	 * Create an instance of {@link GetUpdatesForServicesResponse }
 	 *
 	 */
-	public GetUpdatesForAALServicesResponse createGetUpdatesForAALServicesResponse() {
-		return new GetUpdatesForAALServicesResponse();
+	public GetUpdatesForServicesResponse createGetUpdatesForServicesResponse() {
+		return new GetUpdatesForServicesResponse();
 	}
 
 	/**
-	 * Create an instance of {@link GetFreeAALServicesResponse }
+	 * Create an instance of {@link GetFreeServicesResponse }
 	 *
 	 */
-	public GetFreeAALServicesResponse createGetFreeAALServicesResponse() {
-		return new GetFreeAALServicesResponse();
+	public GetFreeServicesResponse createGetFreeServicesResponse() {
+		return new GetFreeServicesResponse();
 	}
 
 	/**
-	 * Create an instance of {@link GetFreeAALServices }
+	 * Create an instance of {@link GetFreeServices }
 	 *
 	 */
-	public GetFreeAALServices createGetFreeAALServices() {
-		return new GetFreeAALServices();
+	public GetFreeServices createGetFreeServices() {
+		return new GetFreeServices();
 	}
 
 	/**
@@ -109,27 +109,27 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link UAALException }
+	 * Create an instance of {@link UStoreException }
 	 *
 	 */
-	public UAALException createUAALException() {
-		return new UAALException();
+	public UStoreException createUStoreException() {
+		return new UStoreException();
 	}
 
 	/**
-	 * Create an instance of {@link GetPurchasedAALServicesResponse }
+	 * Create an instance of {@link GetPurchasedServicesResponse }
 	 *
 	 */
-	public GetPurchasedAALServicesResponse createGetPurchasedAALServicesResponse() {
-		return new GetPurchasedAALServicesResponse();
+	public GetPurchasedServicesResponse createGetPurchasedServicesResponse() {
+		return new GetPurchasedServicesResponse();
 	}
 
 	/**
-	 * Create an instance of {@link GetUpdatesForAALServices }
+	 * Create an instance of {@link GetUpdatesForServices }
 	 *
 	 */
-	public GetUpdatesForAALServices createGetUpdatesForAALServices() {
-		return new GetUpdatesForAALServices();
+	public GetUpdatesForServices createGetUpdatesForServices() {
+		return new GetUpdatesForServices();
 	}
 
 	/**
@@ -165,52 +165,52 @@ public class ObjectFactory {
 	}
 
 	/**
-	 * Create an instance of {@link GetPurchasedAALServices }
+	 * Create an instance of {@link GetPurchasedServices }
 	 *
 	 */
-	public GetPurchasedAALServices createGetPurchasedAALServices() {
-		return new GetPurchasedAALServices();
+	public GetPurchasedServices createGetPurchasedServices() {
+		return new GetPurchasedServices();
 	}
 
 	/**
-	 * Create an instance of {@link PurchaseFreeAALServiceResponse }
+	 * Create an instance of {@link PurchaseFreeServiceResponse }
 	 *
 	 */
-	public PurchaseFreeAALServiceResponse createPurchaseFreeAALServiceResponse() {
-		return new PurchaseFreeAALServiceResponse();
+	public PurchaseFreeServiceResponse createPurchaseFreeServiceResponse() {
+		return new PurchaseFreeServiceResponse();
 	}
 
 	/**
-	 * Create an instance of {@link JAXBElement }{@code <}{@link UAALException
+	 * Create an instance of {@link JAXBElement }{@code <}{@link UStoreException
 	 * }{@code >}}
 	 *
 	 */
-	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "uAALException")
-	public JAXBElement<UAALException> createUAALException(UAALException value) {
-		return new JAXBElement<UAALException>(_UAALException_QNAME, UAALException.class, null, value);
+	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "UStoreException")
+	public JAXBElement<UStoreException> createUStoreException(UStoreException value) {
+		return new JAXBElement<UStoreException>(_USTORE_Exception_QNAME, UStoreException.class, null, value);
 	}
 
 	/**
 	 * Create an instance of {@link JAXBElement
-	 * }{@code <}{@link GetPurchasedAALServicesResponse }{@code >}}
+	 * }{@code <}{@link GetPurchasedServicesResponse }{@code >}}
 	 *
 	 */
-	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "getPurchasedAALServicesResponse")
-	public JAXBElement<GetPurchasedAALServicesResponse> createGetPurchasedAALServicesResponse(
-			GetPurchasedAALServicesResponse value) {
-		return new JAXBElement<GetPurchasedAALServicesResponse>(_GetPurchasedAALServicesResponse_QNAME,
-				GetPurchasedAALServicesResponse.class, null, value);
+	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "getPurchasedServicesResponse")
+	public JAXBElement<GetPurchasedServicesResponse> createGetPurchasedServicesResponse(
+			GetPurchasedServicesResponse value) {
+		return new JAXBElement<GetPurchasedServicesResponse>(_GetPurchasedServicesResponse_QNAME,
+				GetPurchasedServicesResponse.class, null, value);
 	}
 
 	/**
 	 * Create an instance of {@link JAXBElement
-	 * }{@code <}{@link GetUpdatesForAALServices }{@code >}}
+	 * }{@code <}{@link GetUpdatesForServices }{@code >}}
 	 *
 	 */
-	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "getUpdatesForAALServices")
-	public JAXBElement<GetUpdatesForAALServices> createGetUpdatesForAALServices(GetUpdatesForAALServices value) {
-		return new JAXBElement<GetUpdatesForAALServices>(_GetUpdatesForAALServices_QNAME,
-				GetUpdatesForAALServices.class, null, value);
+	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "getUpdatesForServices")
+	public JAXBElement<GetUpdatesForServices> createGetUpdatesForServices(GetUpdatesForServices value) {
+		return new JAXBElement<GetUpdatesForServices>(_GetUpdatesForServices_QNAME,
+				GetUpdatesForServices.class, null, value);
 	}
 
 	/**
@@ -249,12 +249,12 @@ public class ObjectFactory {
 
 	/**
 	 * Create an instance of {@link JAXBElement
-	 * }{@code <}{@link GetPurchasedAALServices }{@code >}}
+	 * }{@code <}{@link GetPurchasedServices }{@code >}}
 	 *
 	 */
-	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "getPurchasedAALServices")
-	public JAXBElement<GetPurchasedAALServices> createGetPurchasedAALServices(GetPurchasedAALServices value) {
-		return new JAXBElement<GetPurchasedAALServices>(_GetPurchasedAALServices_QNAME, GetPurchasedAALServices.class,
+	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "getPurchasedServices")
+	public JAXBElement<GetPurchasedServices> createGetPurchasedServices(GetPurchasedServices value) {
+		return new JAXBElement<GetPurchasedServices>(_GetPurchasedServices_QNAME, GetPurchasedServices.class,
 				null, value);
 	}
 
@@ -280,24 +280,24 @@ public class ObjectFactory {
 
 	/**
 	 * Create an instance of {@link JAXBElement
-	 * }{@code <}{@link PurchaseFreeAALServiceResponse }{@code >}}
+	 * }{@code <}{@link PurchaseFreeServiceResponse }{@code >}}
 	 *
 	 */
-	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "purchaseFreeAALServiceResponse")
-	public JAXBElement<PurchaseFreeAALServiceResponse> createPurchaseFreeAALServiceResponse(
-			PurchaseFreeAALServiceResponse value) {
-		return new JAXBElement<PurchaseFreeAALServiceResponse>(_PurchaseFreeAALServiceResponse_QNAME,
-				PurchaseFreeAALServiceResponse.class, null, value);
+	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "purchaseFreeServiceResponse")
+	public JAXBElement<PurchaseFreeServiceResponse> createPurchaseFreeServiceResponse(
+			PurchaseFreeServiceResponse value) {
+		return new JAXBElement<PurchaseFreeServiceResponse>(_PurchaseFreeServiceResponse_QNAME,
+				PurchaseFreeServiceResponse.class, null, value);
 	}
 
 	/**
 	 * Create an instance of {@link JAXBElement
-	 * }{@code <}{@link PurchaseFreeAALService }{@code >}}
+	 * }{@code <}{@link PurchaseFreeService }{@code >}}
 	 *
 	 */
-	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "purchaseFreeAALService")
-	public JAXBElement<PurchaseFreeAALService> createPurchaseFreeAALService(PurchaseFreeAALService value) {
-		return new JAXBElement<PurchaseFreeAALService>(_PurchaseFreeAALService_QNAME, PurchaseFreeAALService.class,
+	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "purchaseFreeService")
+	public JAXBElement<PurchaseFreeService> createPurchaseFreeService(PurchaseFreeService value) {
+		return new JAXBElement<PurchaseFreeService>(_PurchaseFreeService_QNAME, PurchaseFreeService.class,
 				null, value);
 	}
 
@@ -314,35 +314,35 @@ public class ObjectFactory {
 
 	/**
 	 * Create an instance of {@link JAXBElement
-	 * }{@code <}{@link GetUpdatesForAALServicesResponse }{@code >}}
+	 * }{@code <}{@link GetUpdatesForServicesResponse }{@code >}}
 	 *
 	 */
-	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "getUpdatesForAALServicesResponse")
-	public JAXBElement<GetUpdatesForAALServicesResponse> createGetUpdatesForAALServicesResponse(
-			GetUpdatesForAALServicesResponse value) {
-		return new JAXBElement<GetUpdatesForAALServicesResponse>(_GetUpdatesForAALServicesResponse_QNAME,
-				GetUpdatesForAALServicesResponse.class, null, value);
+	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "getUpdatesForServicesResponse")
+	public JAXBElement<GetUpdatesForServicesResponse> createGetUpdatesForServicesResponse(
+			GetUpdatesForServicesResponse value) {
+		return new JAXBElement<GetUpdatesForServicesResponse>(_GetUpdatesForServicesResponse_QNAME,
+				GetUpdatesForServicesResponse.class, null, value);
 	}
 
 	/**
 	 * Create an instance of {@link JAXBElement
-	 * }{@code <}{@link GetFreeAALServices }{@code >}}
+	 * }{@code <}{@link GetFreeServices }{@code >}}
 	 *
 	 */
-	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "getFreeAALServices")
-	public JAXBElement<GetFreeAALServices> createGetFreeAALServices(GetFreeAALServices value) {
-		return new JAXBElement<GetFreeAALServices>(_GetFreeAALServices_QNAME, GetFreeAALServices.class, null, value);
+	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "getFreeServices")
+	public JAXBElement<GetFreeServices> createGetFreeServices(GetFreeServices value) {
+		return new JAXBElement<GetFreeServices>(_GetFreeServices_QNAME, GetFreeServices.class, null, value);
 	}
 
 	/**
 	 * Create an instance of {@link JAXBElement
-	 * }{@code <}{@link GetFreeAALServicesResponse }{@code >}}
+	 * }{@code <}{@link GetFreeServicesResponse }{@code >}}
 	 *
 	 */
-	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "getFreeAALServicesResponse")
-	public JAXBElement<GetFreeAALServicesResponse> createGetFreeAALServicesResponse(GetFreeAALServicesResponse value) {
-		return new JAXBElement<GetFreeAALServicesResponse>(_GetFreeAALServicesResponse_QNAME,
-				GetFreeAALServicesResponse.class, null, value);
+	@XmlElementDecl(namespace = "http://tools.ustore.commerce.universaal.org/", name = "getFreeServicesResponse")
+	public JAXBElement<GetFreeServicesResponse> createGetFreeServicesResponse(GetFreeServicesResponse value) {
+		return new JAXBElement<GetFreeServicesResponse>(_GetFreeServicesResponse_QNAME,
+				GetFreeServicesResponse.class, null, value);
 	}
 
 }

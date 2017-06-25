@@ -21,7 +21,7 @@ public class Activator implements BundleActivator {
 
 	private static BundleContext context;
 	private static DeployManager deployManager;
-	private static SpaceManager aalSpaceManager;
+	private static SpaceManager spaceManager;
 
 	static BundleContext getContext() {
 		return context;
@@ -61,31 +61,31 @@ public class Activator implements BundleActivator {
 		} else {
 			System.out.println("[ucc.controller.Activator.getManagers] moduleContext exists!");
 		}
-		// Object[] aalManagers = (Object[])
+		// Object[] managers = (Object[])
 		// moduleContext.getContainer().fetchSharedObject(moduleContext,new
-		// Object[]{AALSpaceManager.class.getName().toString()});
-		Object aalManagers = moduleContext.getContainer().fetchSharedObject(moduleContext,
+		// Object[]{SpaceManager.class.getName().toString()});
+		Object managers = moduleContext.getContainer().fetchSharedObject(moduleContext,
 				new Object[] { SpaceManager.class.getName().toString() });
-		if (aalManagers != null) {
+		if (managers != null) {
 			// moduleContext.logDebug("[ucc.controller.Activator.getManagers]
-			// AALSpaceManagers found...",
+			// SpaceManagers found...",
 			// null, null);
-			System.out.println("[ucc.controller.Activator.getManagers] AALManagers found...");
-			if (aalManagers instanceof SpaceManager) {
-				aalSpaceManager = (SpaceManager) aalManagers;
+			System.out.println("[ucc.controller.Activator.getManagers] Managers found...");
+			if (managers instanceof SpaceManager) {
+				spaceManager = (SpaceManager) managers;
 			}
 
 			else {
 				// moduleContext.logWarn("[ucc.controller.Activator.getManagers]
-				// No AALSpaceManagers found",
+				// No SpaceManagers found",
 				// null, null);
-				System.out.println("[ucc.controller.Activator.getManagers]No AALSpaceManagers found");
+				System.out.println("[ucc.controller.Activator.getManagers]No SpaceManagers found");
 			}
 		} else {
 			// moduleContext.logWarn("[ucc.controller.Activator.getManagers] No
-			// AALSpaceManagers found",
+			// SpaceManagers found",
 			// null, null);
-			System.out.println("[ucc.controller.Activator.getManagers]No AALManagers found");
+			System.out.println("[ucc.controller.Activator.getManagers]No Managers found");
 		}
 
 		Object refs = moduleContext.getContainer().fetchSharedObject(moduleContext,
@@ -100,8 +100,8 @@ public class Activator implements BundleActivator {
 		}
 	}
 
-	public static SpaceManager getAALSpaceManager() {
-		return aalSpaceManager;
+	public static SpaceManager getSpaceManager() {
+		return spaceManager;
 	}
 
 	public static DeployManager getDeployManager() {

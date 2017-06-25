@@ -18,20 +18,20 @@ import javax.xml.ws.ResponseWrapper;
 public interface OnlineStoreManager {
 
 	@WebResult(name = "return", targetNamespace = "")
-	@RequestWrapper(localName = "getUpdatesForAALServices", targetNamespace = "http://tools.ustore.commerce.universaal.org/", className = "org.universAAL.commerce.ustore.tools.GetUpdatesForAALServices")
+	@RequestWrapper(localName = "getUpdatesForServices", targetNamespace = "http://tools.ustore.commerce.universaal.org/", className = "org.universAAL.commerce.ustore.tools.GetUpdatesForServices")
 	@WebMethod
-	@ResponseWrapper(localName = "getUpdatesForAALServicesResponse", targetNamespace = "http://tools.ustore.commerce.universaal.org/", className = "org.universAAL.commerce.ustore.tools.GetUpdatesForAALServicesResponse")
-	public java.lang.String getUpdatesForAALServices(
+	@ResponseWrapper(localName = "getUpdatesForServicesResponse", targetNamespace = "http://tools.ustore.commerce.universaal.org/", className = "org.universAAL.commerce.ustore.tools.GetUpdatesForServicesResponse")
+	public java.lang.String getUpdatesForServices(
 			@WebParam(name = "sessionKey", targetNamespace = "") java.lang.String sessionKey)
-			throws UAALException_Exception;
+			throws UStoreException_Exception;
 
 	@WebResult(name = "return", targetNamespace = "")
-	@RequestWrapper(localName = "getFreeAALServices", targetNamespace = "http://tools.ustore.commerce.universaal.org/", className = "org.universAAL.commerce.ustore.tools.GetFreeAALServices")
+	@RequestWrapper(localName = "getFreeServices", targetNamespace = "http://tools.ustore.commerce.universaal.org/", className = "org.universAAL.commerce.ustore.tools.GetFreeServices")
 	@WebMethod
-	@ResponseWrapper(localName = "getFreeAALServicesResponse", targetNamespace = "http://tools.ustore.commerce.universaal.org/", className = "org.universAAL.commerce.ustore.tools.GetFreeAALServicesResponse")
-	public java.lang.String getFreeAALServices(
+	@ResponseWrapper(localName = "getFreeServicesResponse", targetNamespace = "http://tools.ustore.commerce.universaal.org/", className = "org.universAAL.commerce.ustore.tools.GetFreeServicesResponse")
+	public java.lang.String getFreeServices(
 			@WebParam(name = "sessionKey", targetNamespace = "") java.lang.String sessionKey,
-			@WebParam(name = "isFitToUser", targetNamespace = "") boolean isFitToUser) throws UAALException_Exception;
+			@WebParam(name = "isFitToUser", targetNamespace = "") boolean isFitToUser) throws UStoreException_Exception;
 
 	@WebResult(name = "return", targetNamespace = "")
 	@RequestWrapper(localName = "getUserProfile", targetNamespace = "http://tools.ustore.commerce.universaal.org/", className = "org.universAAL.commerce.ustore.tools.GetUserProfile")
@@ -39,15 +39,15 @@ public interface OnlineStoreManager {
 	@ResponseWrapper(localName = "getUserProfileResponse", targetNamespace = "http://tools.ustore.commerce.universaal.org/", className = "org.universAAL.commerce.ustore.tools.GetUserProfileResponse")
 	public java.lang.String getUserProfile(
 			@WebParam(name = "sessionKey", targetNamespace = "") java.lang.String sessionKey)
-			throws UAALException_Exception;
+			throws UStoreException_Exception;
 
 	@WebResult(name = "return", targetNamespace = "")
-	@RequestWrapper(localName = "getPurchasedAALServices", targetNamespace = "http://tools.ustore.commerce.universaal.org/", className = "org.universAAL.commerce.ustore.tools.GetPurchasedAALServices")
+	@RequestWrapper(localName = "getPurchasedServices", targetNamespace = "http://tools.ustore.commerce.universaal.org/", className = "org.universAAL.commerce.ustore.tools.GetPurchasedServices")
 	@WebMethod
-	@ResponseWrapper(localName = "getPurchasedAALServicesResponse", targetNamespace = "http://tools.ustore.commerce.universaal.org/", className = "org.universAAL.commerce.ustore.tools.GetPurchasedAALServicesResponse")
-	public java.lang.String getPurchasedAALServices(
+	@ResponseWrapper(localName = "getPurchasedServicesResponse", targetNamespace = "http://tools.ustore.commerce.universaal.org/", className = "org.universAAL.commerce.ustore.tools.GetPurchasedServicesResponse")
+	public java.lang.String getPurchasedServices(
 			@WebParam(name = "sessionKey", targetNamespace = "") java.lang.String sessionKey)
-			throws UAALException_Exception;
+			throws UStoreException_Exception;
 
 	@WebResult(name = "return", targetNamespace = "")
 	@RequestWrapper(localName = "getSessionKey", targetNamespace = "http://tools.ustore.commerce.universaal.org/", className = "org.universAAL.commerce.ustore.tools.GetSessionKey")
@@ -55,7 +55,7 @@ public interface OnlineStoreManager {
 	@ResponseWrapper(localName = "getSessionKeyResponse", targetNamespace = "http://tools.ustore.commerce.universaal.org/", className = "org.universAAL.commerce.ustore.tools.GetSessionKeyResponse")
 	public java.lang.String getSessionKey(@WebParam(name = "userName", targetNamespace = "") java.lang.String userName,
 			@WebParam(name = "password", targetNamespace = "") java.lang.String password)
-			throws UAALException_Exception;
+			throws UStoreException_Exception;
 
 	@RequestWrapper(localName = "registerDeployManager", targetNamespace = "http://tools.ustore.commerce.universaal.org/", className = "org.universAAL.commerce.ustore.tools.RegisterDeployManager")
 	@WebMethod
@@ -64,14 +64,14 @@ public interface OnlineStoreManager {
 			@WebParam(name = "adminUserName", targetNamespace = "") java.lang.String adminUserName,
 			@WebParam(name = "adminPassword", targetNamespace = "") java.lang.String adminPassword,
 			@WebParam(name = "ipAddress", targetNamespace = "") java.lang.String ipAddress,
-			@WebParam(name = "port", targetNamespace = "") java.lang.String port) throws UAALException_Exception;
+			@WebParam(name = "port", targetNamespace = "") java.lang.String port) throws UStoreException_Exception;
 
 	@WebResult(name = "return", targetNamespace = "")
-	@RequestWrapper(localName = "purchaseFreeAALService", targetNamespace = "http://tools.ustore.commerce.universaal.org/", className = "org.universAAL.commerce.ustore.tools.PurchaseFreeAALService")
+	@RequestWrapper(localName = "purchaseFreeService", targetNamespace = "http://tools.ustore.commerce.universaal.org/", className = "org.universAAL.commerce.ustore.tools.PurchaseFreeService")
 	@WebMethod
-	@ResponseWrapper(localName = "purchaseFreeAALServiceResponse", targetNamespace = "http://tools.ustore.commerce.universaal.org/", className = "org.universAAL.commerce.ustore.tools.PurchaseFreeAALServiceResponse")
-	public java.lang.String purchaseFreeAALService(
+	@ResponseWrapper(localName = "purchaseFreeServiceResponse", targetNamespace = "http://tools.ustore.commerce.universaal.org/", className = "org.universAAL.commerce.ustore.tools.PurchaseFreeServiceResponse")
+	public java.lang.String purchaseFreeService(
 			@WebParam(name = "sessionKey", targetNamespace = "") java.lang.String sessionKey,
 			@WebParam(name = "serviceId", targetNamespace = "") java.lang.String serviceId)
-			throws UAALException_Exception;
+			throws UStoreException_Exception;
 }

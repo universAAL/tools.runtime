@@ -21,7 +21,7 @@ import org.universAAL.ontology.profile.service.ProfilingService;
 import org.universAAL.ontology.profile.ui.mainmenu.MenuEntry;
 import org.universAAL.ontology.profile.ui.mainmenu.MenuProfile;
 import org.universAAL.tools.ucc.database.space.DataAccess;
-import org.universAAL.tools.ucc.model.AALService;
+import org.universAAL.tools.ucc.model.Service;
 import org.universAAL.tools.ucc.model.jaxb.EnumObject;
 import org.universAAL.tools.ucc.model.jaxb.OntologyInstance;
 import org.universAAL.tools.ucc.model.jaxb.SimpleObject;
@@ -44,21 +44,21 @@ public class SelectUserWindow extends Window implements Button.ClickListener {
 	private Button ok;
 	private Button cancel;
 	private Button addUser;
-	private AALService aal;
+	private Service service;
 	private UccUI app;
 	private VerticalLayout vl;
 
-	public SelectUserWindow(List<String> users, AALService aal, UccUI app) {
+	public SelectUserWindow(List<String> users, Service service, UccUI app) {
 		super("Select User");
-		this.aal = aal;
+		this.service = service;
 		this.app = app;
 		vl = new VerticalLayout();
 		vl.setSizeFull();
 		vl.setMargin(true);
 		vl.setSpacing(true);
 		setContent(vl);
-		Label l = new Label("For which user do you want to install the AAL service?");
-		list = new ListSelect("List of users in AAL space");
+		Label l = new Label("For which user do you want to install the service?");
+		list = new ListSelect("List of users in space");
 		list.setImmediate(true);
 		list.setMultiSelect(false);
 		list.setWidth("200px");
@@ -110,11 +110,11 @@ public class SelectUserWindow extends Window implements Button.ClickListener {
 			app.getMainWindow().addWindow(anpw);
 		}
 		if (event.getButton() == ok) {
-			System.err.println("AAL-NAME: " + aal.getName());
-			System.err.println("ONTOLOGY-URI: " + aal.getOntologyUri());
-			System.err.println("ICON-PATH: " + aal.getIconPath());
-			addEntry((list.getValue()).toString(), aal.getMenuName(), aal.getUaapList().get(0).getProvider()
-					.getWebsite()/* getProvider() */, aal.getOntologyUri(), aal.getIconPath());
+			System.err.println("SERVICE-NAME: " + service.getName());
+			System.err.println("ONTOLOGY-URI: " + service.getOntologyUri());
+			System.err.println("ICON-PATH: " + service.getIconPath());
+			addEntry((list.getValue()).toString(), service.getMenuName(), service.getUaapList().get(0).getProvider()
+					.getWebsite()/* getProvider() */, service.getOntologyUri(), service.getIconPath());
 			close();
 			app.getMainWindow().showNotification("", "The MenuEntry was successfully added",
 					Notification.TYPE_HUMANIZED_MESSAGE);
@@ -126,18 +126,18 @@ public class SelectUserWindow extends Window implements Button.ClickListener {
 
 	}
 
-	// Adds a MenuEntry for new installed AAL service to Endusers view
+	// Adds a MenuEntry for new installed service to Endusers view
 	// private void addEntry(String userID, String entryName, String vendor,
 	// String serviceClass, String iconURL)
 	// {
 	// System.err.println("User-ID:
-	// "+Constants.uAAL_MIDDLEWARE_LOCAL_ID_PREFIX+userID);
+	// "+Constants.MIDDLEWARE_LOCAL_ID_PREFIX+userID);
 	// System.err.println("Menu-Entry Name: "+entryName);
 	// System.err.println("Vendor: "+vendor);
 	// System.err.println("Service-Class: "+serviceClass);
 	// System.err.println("Icon-URL: "+iconURL);
 	// String[] pathElems = null;
-	// Activator.getMgmt().addUserIDToMenuEntry(aal.getServiceId(), userID);
+	// Activator.getMgmt().addUserIDToMenuEntry(service.getServiceId(), userID);
 	// if(iconURL.contains("/")) {
 	// pathElems = iconURL.split("/");
 	// } else if(iconURL.contains("\\")) {
@@ -180,7 +180,7 @@ public class SelectUserWindow extends Window implements Button.ClickListener {
 	// System.err.println("The Category-Path: "+category);
 	// ServiceRequest sr = new ServiceRequest(new ProfilingService(), null);
 	// sr.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS },
-	// new User(Constants.uAAL_MIDDLEWARE_LOCAL_ID_PREFIX+userID));
+	// new User(Constants.MIDDLEWARE_LOCAL_ID_PREFIX+userID));
 	// sr.addAddEffect(new String[] { ProfilingService.PROP_CONTROLS,
 	// Profilable.PROP_HAS_PROFILE, Profile.PROP_HAS_SUB_PROFILE,
 	// MenuProfile.PROP_ENTRY }, me);
@@ -189,7 +189,7 @@ public class SelectUserWindow extends Window implements Button.ClickListener {
 	// LogUtils.logDebug(Activator.getmContext(), SelectUserWindow.class,
 	// "addEntry", new Object[] {
 	// "new menu entry ", entryName, "for user"+
-	// Constants.uAAL_MIDDLEWARE_LOCAL_ID_PREFIX+userID+" added."
+	// Constants.MIDDLEWARE_LOCAL_ID_PREFIX+userID+" added."
 	// }, null);
 	// else
 	// LogUtils.logDebug(Activator.getmContext(), SelectUserWindow.class,
@@ -201,7 +201,7 @@ public class SelectUserWindow extends Window implements Button.ClickListener {
 	public void addEntry(String userID, String entryName, String vendor, String serviceClass, String iconURL) {
 		if ("".equals(iconURL))
 			iconURL = null;
-		Activator.getMgmt().addUserIDToMenuEntry(aal.getServiceId(), userID);
+		Activator.getMgmt().addUserIDToMenuEntry(service.getServiceId(), userID);
 		MenuEntry me = new MenuEntry(null);
 		me.setVendor(new Resource(vendor));
 		me.setServiceClass(new Resource(serviceClass));
@@ -281,8 +281,8 @@ public class SelectUserWindow extends Window implements Button.ClickListener {
 		vl.setMargin(true);
 		vl.setSpacing(true);
 		setContent(vl);
-		Label l = new Label("For which user do you want to install the AAL service?");
-		list = new ListSelect("List of users in AAL space");
+		Label l = new Label("For which user do you want to install the service?");
+		list = new ListSelect("List of users in space");
 		list.setImmediate(true);
 		list.setMultiSelect(false);
 		list.setWidth("200px");

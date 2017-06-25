@@ -15,8 +15,8 @@ import org.osgi.framework.FrameworkUtil;
 import org.osgi.framework.ServiceReference;
 import org.universAAL.tools.ucc.commerce.ustore.tools.OnlineStoreManager;
 import org.universAAL.tools.ucc.commerce.ustore.tools.OnlineStoreManagerService;
-import org.universAAL.tools.ucc.commerce.ustore.tools.UAALException;
-import org.universAAL.tools.ucc.commerce.ustore.tools.UAALException_Exception;
+import org.universAAL.tools.ucc.commerce.ustore.tools.UStoreException;
+import org.universAAL.tools.ucc.commerce.ustore.tools.UStoreException_Exception;
 import org.universAAL.tools.ucc.service.manager.Activator;
 import org.universAAL.tools.ucc.startup.api.Setup;
 import org.universAAL.tools.ucc.startup.model.UserAccountInfo;
@@ -52,7 +52,7 @@ public class UstoreUtil {
 	 * Registers user to uStore
 	 *
 	 * @return answer of the uStore registration
-	 * @throws UAALException
+	 * @throws UStoreException
 	 */
 	public void registerUser(String sessionKey) {
 		Reader reader = null;
@@ -76,10 +76,9 @@ public class UstoreUtil {
 		System.err.println(adminUserName + " " + adminPassword + " " + sessionKey + " " + portNum + " " + " " + idAddr);
 		try {
 			client.registerDeployManager(sessionKey, adminUserName, adminPassword, idAddr, portNum);
-		} catch (UAALException_Exception e) {
+		} catch (UStoreException_Exception e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	/**
@@ -97,7 +96,7 @@ public class UstoreUtil {
 					&& !info.getPassword().equals("")) {
 				try {
 					sessionKey = client.getSessionKey(info.getName(), info.getPassword());
-				} catch (UAALException_Exception e) {
+				} catch (UStoreException_Exception e) {
 					e.printStackTrace();
 				}
 			}

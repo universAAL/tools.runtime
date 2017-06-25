@@ -8,14 +8,14 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>
- * Clase Java para getUpdatesForAALServicesResponse complex type.
+ * Clase Java para getUpdatesForServicesResponse complex type.
  *
  * <p>
  * El siguiente fragmento de esquema especifica el contenido que se espera que
  * haya en esta clase.
  *
  * <pre>
- * &lt;complexType name="getUpdatesForAALServicesResponse">
+ * &lt;complexType name="getUpdatesForServicesResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -29,8 +29,8 @@ import javax.xml.bind.annotation.XmlType;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "getUpdatesForAALServicesResponse", propOrder = { "_return" })
-public class GetUpdatesForAALServicesResponse {
+@XmlType(name = "getUpdatesForServicesResponse", propOrder = { "_return" })
+public class GetUpdatesForServicesResponse {
 
 	@XmlElement(name = "return")
 	protected String _return;

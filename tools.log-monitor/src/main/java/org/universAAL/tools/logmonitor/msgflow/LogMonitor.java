@@ -44,7 +44,7 @@ public class LogMonitor extends ContextSubscriber implements LogListenerEx, BusM
 		super(Activator.mc, new ContextEventPattern[] { new ContextEventPattern() });
 		setLabel("Log Monitor Context Subscriber for Message Flow");
 		setComment(
-				"The Log Monitor requires a context subscriber with an empty pattern to receive all context events from nodes in the AAL Space.");
+				"The Log Monitor requires a context subscriber with an empty pattern to receive all context events from nodes in the Space.");
 	}
 
 	public void log(int logLevel, String module, String pkg, String cls, String method, Object[] msgPart, Throwable t) {

@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-import org.universAAL.tools.ucc.model.AALService;
+import org.universAAL.tools.ucc.model.Service;
 import org.universAAL.tools.ucc.model.UAPP;
 import org.universAAL.tools.ucc.model.install.License;
 import org.universAAL.tools.ucc.service.manager.Activator;
@@ -32,18 +32,18 @@ public class LicenseController implements Property.ValueChangeListener, ClickLis
 	private ResourceBundle res;
 	private ArrayList<License> lix;
 	private UccUI app;
-	private AALService aal;
+	private Service service;
 	private static int appCounter;
 	private UAPP installingApplication;
 
-	public LicenseController(UccUI app, LicenceWindow win, ArrayList<License> lix, AALService aal, UAPP installingApp) {
+	public LicenseController(UccUI app, LicenceWindow win, ArrayList<License> lix, Service service, UAPP installingApp) {
 		res = ResourceBundle.getBundle(base);
 		this.win = win;
 		this.lix = lix;
 		this.app = app;
-		this.aal = aal;
+		this.service = service;
 		this.installingApplication = installingApp;
-		appCounter = aal.getUaapList().size();
+		appCounter = service.getUaapList().size();
 		win.getGo().addListener((Button.ClickListener) this);
 		win.getCancel().addListener((Button.ClickListener) this);
 	}
@@ -105,7 +105,6 @@ public class LicenseController implements Property.ValueChangeListener, ClickLis
 				win.getGo().setEnabled(false);
 			}
 		}
-
 	}
 
 	public void buttonClick(ClickEvent event) {
@@ -117,15 +116,14 @@ public class LicenseController implements Property.ValueChangeListener, ClickLis
 		if (event.getButton() == win.getGo()) {
 			app.getMainWindow().removeWindow(win);
 			// Test, if uapps size greater than 0
-			if (aal.getUaapList().size() > 0) {
+			if (service.getUaapList().size() > 0) {
 				System.err.println("[LicenseController]: appCounter " + appCounter);
 				// Load Infoview for Deployment of uapps
 				DeploymentInformationView div = new DeploymentInformationView(app);
-				new DeploymentInfoController(app, aal, div, installingApplication);
+				new DeploymentInfoController(app, service, div, installingApplication);
 				app.getMainWindow().addWindow(div);
 			}
 		}
-
 	}
 
 	private void deleteFiles(File path) {
@@ -137,7 +135,5 @@ public class LicenseController implements Property.ValueChangeListener, ClickLis
 			if (!del.getPath().substring(del.getPath().lastIndexOf(".") + 1).equals("usrv"))
 				del.delete();
 		}
-
 	}
-
 }

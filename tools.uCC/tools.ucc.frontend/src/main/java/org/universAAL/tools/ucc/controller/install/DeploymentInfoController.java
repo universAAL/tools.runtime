@@ -23,7 +23,7 @@ import org.universAAL.tools.ucc.configuration.configdefinitionregistry.interface
 import org.universAAL.tools.ucc.configuration.model.configurationdefinition.Configuration;
 import org.universAAL.tools.ucc.configuration.view.ConfigurationOverviewWindow;
 import org.universAAL.tools.ucc.database.space.DataAccess;
-import org.universAAL.tools.ucc.model.AALService;
+import org.universAAL.tools.ucc.model.Service;
 import org.universAAL.tools.ucc.model.UAPP;
 import org.universAAL.tools.ucc.model.UAPPPart;
 import org.universAAL.tools.ucc.model.UAPPReqAtom;
@@ -52,7 +52,7 @@ import com.vaadin.ui.Window.Notification;
 
 public class DeploymentInfoController implements Button.ClickListener, ValueChangeListener {
 	private DeploymentInformationView win;
-	private AALService aal;
+	private Service service;
 	private UccUI app;
 	private HashMap<String, DeployStrategyView> dsvMap;
 	private HashMap<String, DeployConfigView> dcvMap;
@@ -68,14 +68,14 @@ public class DeploymentInfoController implements Button.ClickListener, ValueChan
 	private UAPP installingApp;
 	private Map<Part, List<PeerCard>> config;
 
-	public DeploymentInfoController(UccUI app, AALService aal, DeploymentInformationView win, UAPP uAPP) {
+	public DeploymentInfoController(UccUI app, Service service, DeploymentInformationView win, UAPP uAPP) {
 		base = "resources.ucc";
 		bundle = ResourceBundle.getBundle(base);
 		installer = Activator.getInstaller();
 		srvRegistration = Activator.getReg();
 		this.installingApp = uAPP;
 		bc = Activator.bc;// FrameworkUtil.getBundle(getClass()).getBundleContext();
-		this.aal = aal;
+		this.service = service;
 		this.win = win;
 		this.app = app;
 		dsvMap = new HashMap<String, DeployStrategyView>();
@@ -83,23 +83,23 @@ public class DeploymentInfoController implements Button.ClickListener, ValueChan
 		mapLayout = new HashMap<Part, List<PeerCard>>();
 		int i = 0;
 		String labelName = "";
-		for (UAPP ua : aal.getUaapList()) {
+		for (UAPP ua : service.getUaapList()) {
 			for (Map.Entry<String, UAPPPart> applicationPart : ua.getParts().entrySet()) {
 				i++;
 				if (i == 1) {
 					selected = applicationPart.getValue().getPart().getPartId();
 				}
-				System.err.println(applicationPart.getValue().getPart().getPartId() + " " + aal.getUaapList().size());
+				System.err.println(applicationPart.getValue().getPart().getPartId() + " " + service.getUaapList().size());
 				labelName = applicationPart.getValue().getPart().getPartId() + ":"
 						+ applicationPart.getValue().getPart().getBundleId();
 				win.getTree().addItem(labelName);
 				win.getTree().setChildrenAllowed(labelName, false);
-				DeployStrategyView dsv = new DeployStrategyView(aal.getName(), aal.getServiceId(),
+				DeployStrategyView dsv = new DeployStrategyView(service.getName(), service.getServiceId(),
 						applicationPart.getValue().getUappLocation());
 				dsv.getOptions().addListener(this);
 				dsvMap.put(applicationPart.getValue().getPart().getPartId(), dsv);
 
-				DeployConfigView dcv = new DeployConfigView(app, aal.getServiceId(),
+				DeployConfigView dcv = new DeployConfigView(app, service.getServiceId(),
 						applicationPart.getValue().getUappLocation());
 				dcv.getTxt().setValue(applicationPart.getValue().getPart().getPartId());
 				dcv.getTxt().setEnabled(false);
@@ -145,7 +145,7 @@ public class DeploymentInfoController implements Button.ClickListener, ValueChan
 			peers = installer.getPeers();
 
 			// Going throug every UAPP to build the installation layout
-			// for(UAPP up : aal.getUaapList()) {
+			// for(UAPP up : service.getUaapList()) {
 			for (Map.Entry<String, UAPPPart> uapp : installingApp.getParts().entrySet()) {
 
 				// Selected part in tree
@@ -197,7 +197,7 @@ public class DeploymentInfoController implements Button.ClickListener, ValueChan
 				}
 
 				// Output to console about the parts
-				// for(UAPP up : aal.getUaapList()) {
+				// for(UAPP up : service.getUaapList()) {
 				// for(Map.Entry<String, UAPPPart> applicationPart :
 				// installingApp.getParts().entrySet()) {
 
@@ -218,7 +218,7 @@ public class DeploymentInfoController implements Button.ClickListener, ValueChan
 				System.err.println("LOCATION URI: " + appLocation);
 				File uf = new File(appLocation.trim());
 				String appId = installingApp.getAppID();
-				UAPPPackage uapack = new UAPPPackage(aal.getServiceId(), appId, uf.toURI(), peerMap);
+				UAPPPackage uapack = new UAPPPackage(service.getServiceId(), appId, uf.toURI(), peerMap);
 				InstallationResultsDetails res = installer.requestToInstall(uapack);
 				showInstallationResultToUser(res);
 
@@ -264,9 +264,9 @@ public class DeploymentInfoController implements Button.ClickListener, ValueChan
 	}
 
 	public void valueChange(ValueChangeEvent event) {
-		for (UAPP up : aal.getUaapList()) {
+		for (UAPP up : service.getUaapList()) {
 			for (Map.Entry<String, UAPPPart> ua : up.getParts().entrySet()) {
-				System.err.println(aal.getUaapList().size());
+				System.err.println(service.getUaapList().size());
 				if (event.getProperty().toString().startsWith(ua.getValue().getPart().getPartId())) {
 					selected = event.getProperty().toString();
 					DeployStrategyView dsv = dsvMap.get(ua.getValue().getPart().getPartId());
@@ -365,7 +365,7 @@ public class DeploymentInfoController implements Button.ClickListener, ValueChan
 	 * @return
 	 */
 	public static List<PeerCard> getValidPeers(List<UAPPReqAtom> reqs, String PartId) {
-		// convert reqs to filter to call MW/AALSpaceManager
+		// convert reqs to filter to call MW/SpaceManager
 		// the map for reqAtom value that is set other than equal
 		List<UAPPReqAtom> toCheck = new ArrayList<UAPPReqAtom>();
 		// the map to be sent to MW for fast equal checking
@@ -446,13 +446,13 @@ public class DeploymentInfoController implements Button.ClickListener, ValueChan
 
 		if (res.getGlobalResult().toString().equals(InstallationResults.SUCCESS.name())) {
 			// Register installed apps
-			System.err.println(aal.getUaapList().size());
-			// for(UAPP uapp : aal.getUaapList()){
+			System.err.println(service.getUaapList().size());
+			// for(UAPP uapp : service.getUaapList()){
 			// for(Map.Entry<String, UAPPPart> entry :
 			// uapp.getParts().entrySet()) {
-			srvRegistration.registerApp(aal.getServiceId(), installingApp.getAppID(), aal.getMenuName(),
-					aal.getUaapList().get(0).getProvider().getWebsite(), aal.getOntologyUri(),
-					aal.getIconPath()/* entry.getValue().getAppId() */);
+			srvRegistration.registerApp(service.getServiceId(), installingApp.getAppID(), service.getMenuName(),
+					service.getUaapList().get(0).getProvider().getWebsite(), service.getOntologyUri(),
+					service.getIconPath()/* entry.getValue().getAppId() */);
 			// srvRegistration.registerBundle(entry.getValue().getPart().getPartId(),
 			// entry.getValue().getPart().getBundleId(),
 			// entry.getValue().getPart().getBundleVersion());
@@ -525,7 +525,7 @@ public class DeploymentInfoController implements Button.ClickListener, ValueChan
 				}
 				users.add(uname);
 			}
-			SelectUserWindow suw = new SelectUserWindow(users, aal, app);
+			SelectUserWindow suw = new SelectUserWindow(users, service, app);
 			app.getMainWindow().addWindow(suw);
 
 		} else if (res.getGlobalResult().toString().equals(InstallationResults.APPLICATION_ALREADY_INSTALLED.name())) {
@@ -572,7 +572,7 @@ public class DeploymentInfoController implements Button.ClickListener, ValueChan
 			// }
 			//
 			// }
-			// SelectUserWindow suw = new SelectUserWindow(users, aal);
+			// SelectUserWindow suw = new SelectUserWindow(users, service);
 			// app.getMainWindow().addWindow(suw);
 
 		} else {

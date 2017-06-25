@@ -7,19 +7,19 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>
- * Clase Java para getFreeAALServices complex type.
+ * Clase Java para purchaseFreeService complex type.
  *
  * <p>
  * El siguiente fragmento de esquema especifica el contenido que se espera que
  * haya en esta clase.
  *
  * <pre>
- * &lt;complexType name="getFreeAALServices">
+ * &lt;complexType name="purchaseFreeService">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="sessionKey" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="isFitToUser" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="serviceId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,11 +29,11 @@ import javax.xml.bind.annotation.XmlType;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "getFreeAALServices", propOrder = { "sessionKey", "isFitToUser" })
-public class GetFreeAALServices {
+@XmlType(name = "purchaseFreeService", propOrder = { "sessionKey", "serviceId" })
+public class PurchaseFreeService {
 
 	protected String sessionKey;
-	protected boolean isFitToUser;
+	protected String serviceId;
 
 	/**
 	 * Obtiene el valor de la propiedad sessionKey.
@@ -57,19 +57,24 @@ public class GetFreeAALServices {
 	}
 
 	/**
-	 * Obtiene el valor de la propiedad isFitToUser.
+	 * Obtiene el valor de la propiedad serviceId.
+	 *
+	 * @return possible object is {@link String }
 	 *
 	 */
-	public boolean isIsFitToUser() {
-		return isFitToUser;
+	public String getServiceId() {
+		return serviceId;
 	}
 
 	/**
-	 * Define el valor de la propiedad isFitToUser.
+	 * Define el valor de la propiedad serviceId.
+	 *
+	 * @param value
+	 *            allowed object is {@link String }
 	 *
 	 */
-	public void setIsFitToUser(boolean value) {
-		this.isFitToUser = value;
+	public void setServiceId(String value) {
+		this.serviceId = value;
 	}
 
 }

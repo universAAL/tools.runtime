@@ -123,9 +123,9 @@ public class UccUI extends Application {
 		uhl.setStyleName("uAAL");
 		uhl.setSpacing(true);
 		uhl.setMargin(true);
-		Label uAAL = new Label("universAAL Control Center", Label.CONTENT_XHTML);
-		uhl.addComponent(uAAL);
-		uhl.setComponentAlignment(uAAL, Alignment.MIDDLE_RIGHT);
+		Label uCC = new Label("universAAL Control Center", Label.CONTENT_XHTML);
+		uhl.addComponent(uCC);
+		uhl.setComponentAlignment(uCC, Alignment.MIDDLE_RIGHT);
 		mainLayout.setSpacing(true);
 		vs.setFirstComponent(mainLayout);
 

@@ -47,7 +47,7 @@ import com.vaadin.ui.Window.CloseEvent;
 import com.vaadin.ui.Window.Notification;
 
 /**
- * Controller for adding a new Person to AAL space.
+ * Controller for adding a new Person to space.
  *
  * @author Nicole Merkle
  *

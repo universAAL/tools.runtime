@@ -7,19 +7,18 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>
- * Clase Java para purchaseFreeAALService complex type.
+ * Clase Java para getUpdatesForServices complex type.
  *
  * <p>
  * El siguiente fragmento de esquema especifica el contenido que se espera que
  * haya en esta clase.
  *
  * <pre>
- * &lt;complexType name="purchaseFreeAALService">
+ * &lt;complexType name="getUpdatesForServices">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="sessionKey" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="serviceId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,11 +28,10 @@ import javax.xml.bind.annotation.XmlType;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "purchaseFreeAALService", propOrder = { "sessionKey", "serviceId" })
-public class PurchaseFreeAALService {
+@XmlType(name = "getUpdatesForServices", propOrder = { "sessionKey" })
+public class GetUpdatesForServices {
 
 	protected String sessionKey;
-	protected String serviceId;
 
 	/**
 	 * Obtiene el valor de la propiedad sessionKey.
@@ -54,27 +52,6 @@ public class PurchaseFreeAALService {
 	 */
 	public void setSessionKey(String value) {
 		this.sessionKey = value;
-	}
-
-	/**
-	 * Obtiene el valor de la propiedad serviceId.
-	 *
-	 * @return possible object is {@link String }
-	 *
-	 */
-	public String getServiceId() {
-		return serviceId;
-	}
-
-	/**
-	 * Define el valor de la propiedad serviceId.
-	 *
-	 * @param value
-	 *            allowed object is {@link String }
-	 *
-	 */
-	public void setServiceId(String value) {
-		this.serviceId = value;
 	}
 
 }

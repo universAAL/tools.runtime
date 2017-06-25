@@ -38,8 +38,8 @@ public class HTMLPaneBase extends JTextPane {
 		((DefaultCaret) getCaret()).setUpdatePolicy(DefaultCaret.NEVER_UPDATE);
 
 		// overwrite ctrl-c
-		getInputMap().put(KeyStroke.getKeyStroke(KeyEvent.VK_C, InputEvent.CTRL_DOWN_MASK), "uaal_copy");
-		getActionMap().put("uaal_copy", new ClipboardHandling(urlReplacement, getTransferHandler(), this));
+		getInputMap().put(KeyStroke.getKeyStroke(KeyEvent.VK_C, InputEvent.CTRL_DOWN_MASK), "universAAL_copy");
+		getActionMap().put("universAAL_copy", new ClipboardHandling(urlReplacement, getTransferHandler(), this));
 	}
 
 	protected void setShowFullURI(boolean show) {

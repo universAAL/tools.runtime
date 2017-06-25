@@ -7,18 +7,18 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>
- * Clase Java para getPurchasedAALServices complex type.
+ * Clase Java para UStoreException complex type.
  *
  * <p>
  * El siguiente fragmento de esquema especifica el contenido que se espera que
  * haya en esta clase.
  *
  * <pre>
- * &lt;complexType name="getPurchasedAALServices">
+ * &lt;complexType name="UStoreException">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="sessionKey" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="message" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -28,30 +28,30 @@ import javax.xml.bind.annotation.XmlType;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "getPurchasedAALServices", propOrder = { "sessionKey" })
-public class GetPurchasedAALServices {
+@XmlType(name = "UStoreException", propOrder = { "message" })
+public class UStoreException {
 
-	protected String sessionKey;
+	protected String message;
 
 	/**
-	 * Obtiene el valor de la propiedad sessionKey.
+	 * Obtiene el valor de la propiedad message.
 	 *
 	 * @return possible object is {@link String }
 	 *
 	 */
-	public String getSessionKey() {
-		return sessionKey;
+	public String getMessage() {
+		return message;
 	}
 
 	/**
-	 * Define el valor de la propiedad sessionKey.
+	 * Define el valor de la propiedad message.
 	 *
 	 * @param value
 	 *            allowed object is {@link String }
 	 *
 	 */
-	public void setSessionKey(String value) {
-		this.sessionKey = value;
+	public void setMessage(String value) {
+		this.message = value;
 	}
 
 }

@@ -90,7 +90,7 @@ public class Activator implements BundleActivator {
 			in.close();
 		}
 
-		// Write Techician/Deployer into AALSpace
+		// Write Techician/Deployer into Space
 		OntologyInstance ont = new OntologyInstance();
 		ont.setId("admin");
 		ont.setType("User");

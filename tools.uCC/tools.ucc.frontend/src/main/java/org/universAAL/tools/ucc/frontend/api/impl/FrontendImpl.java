@@ -47,7 +47,7 @@ import org.universAAL.ontology.profile.ui.mainmenu.MenuProfile;
 import org.universAAL.tools.ucc.controller.install.UsrvInfoController;
 import org.universAAL.tools.ucc.database.parser.ParserService;
 import org.universAAL.tools.ucc.frontend.api.IFrontend;
-import org.universAAL.tools.ucc.model.AALService;
+import org.universAAL.tools.ucc.model.Service;
 import org.universAAL.tools.ucc.model.AppItem;
 import org.universAAL.tools.ucc.model.Provider;
 import org.universAAL.tools.ucc.model.RegisteredService;
@@ -93,7 +93,7 @@ public class FrontendImpl implements IFrontend {
 	private static String userSession;
 	private String base;
 	private ResourceBundle bundle;
-	private AALService aal;
+	private Service service;
 
 	public FrontendImpl() {
 		base = "resources.ucc";
@@ -103,7 +103,7 @@ public class FrontendImpl implements IFrontend {
 
 	public boolean installService(String sessionkey, String serviceId, String serviceLink) {
 		startUCC();
-		aal = new AALService();
+		service = new Service();
 		// check for sessionkey
 		// if(sessionkey.equals(DesktopController.getSessionKey())) {
 		// downloads a usrv-file from the given download-uri
@@ -246,20 +246,20 @@ public class FrontendImpl implements IFrontend {
 			if (uapp.getApp().getMenuEntry().getIcon().getName() != null
 					&& !uapp.getApp().getMenuEntry().getIcon().getName().equals("")) {
 				icon_name = uapp.getApp().getMenuEntry().getIcon().getName();
-				aal.setIconPath(icon_name);
+				service.setIconPath(icon_name);
 			}
 			if (uapp.getApp().getMenuEntry().getIcon().getPath() != null
 					&& !uapp.getApp().getMenuEntry().getIcon().getPath().equals("")) {
 				icon_path = uapp.getApp().getMenuEntry().getIcon().getPath();
-				aal.setIconPath(icon_path);
+				service.setIconPath(icon_path);
 			}
 			menuName = uapp.getApp().getMenuEntry().getMenuName();
 			System.err.println(icon_path);
 			System.err.println(app_ontology_uri);
 			System.err.println(menuName);
 		}
-		aal.setMenuName(menuName);
-		aal.setOntologyUri(app_ontology_uri);
+		service.setMenuName(menuName);
+		service.setOntologyUri(app_ontology_uri);
 		List<Part> parts = uapp.getApplicationPart().getPart();
 
 		// Creating an new UAPP on uCC side
@@ -397,17 +397,17 @@ public class FrontendImpl implements IFrontend {
 			if (uapp.getApp().isSetVersion()) {
 				if (uapp.getApp().getVersion().isSetMajor()) {
 					ua.setMajor(uapp.getApp().getVersion().getMajor());
-					aal.setMajor(ua.getMajor());
+					service.setMajor(ua.getMajor());
 					System.err.println(ua.getMajor());
 				}
 				if (uapp.getApp().getVersion().isSetMinor()) {
 					ua.setMinor(uapp.getApp().getVersion().getMinor());
-					aal.setMinor(ua.getMinor());
+					service.setMinor(ua.getMinor());
 					System.err.println(ua.getMinor());
 				}
 				if (uapp.getApp().getVersion().isSetMicro()) {
 					ua.setMicro(uapp.getApp().getVersion().getMicro());
-					aal.setMicro(ua.getMicro());
+					service.setMicro(ua.getMicro());
 					System.err.println(ua.getMicro());
 				}
 
@@ -509,12 +509,12 @@ public class FrontendImpl implements IFrontend {
 			// }
 			license.setLicense(list);
 			licenseList.add(license);
-			aal.setLicenses(license);
+			service.setLicenses(license);
 
 		}
 		System.err.println("Size of APP-List " + appsList.size());
-		aal.setUaapList(appsList);
-		parseConfiguration(serviceId + "_temp", appsList, licenseList, aal);
+		service.setUaapList(appsList);
+		parseConfiguration(serviceId + "_temp", appsList, licenseList, service);
 
 		return appsList;
 
@@ -524,12 +524,12 @@ public class FrontendImpl implements IFrontend {
 	 * Parses the given configuration xml from the usrv file to get some
 	 * information about the usrv.
 	 *
-	 * @return AALService with some information about the usrv file
+	 * @return Service with some information about the usrv file
 	 * @throws SAXException
 	 * @throws IOException
 	 */
-	private AALService parseConfiguration(String f, ArrayList<UAPP> apps, ArrayList<License> licenseList,
-			AALService aal) {
+	private Service parseConfiguration(String f, ArrayList<UAPP> apps, ArrayList<License> licenseList,
+			Service service) {
 
 		// Parsing usrv.xml
 		ParserService ps = Activator.getParserService();
@@ -561,65 +561,65 @@ public class FrontendImpl implements IFrontend {
 		// for(Map.Entry<String, UAPPPart> part :
 		// modelUAAP.getParts().entrySet()) {
 		// modelUAAP.getParts().put(part.getKey(), part.getValue());
-		// aal.getUaapList().add( modelUAAP );
+		// service.getUaapList().add( modelUAAP );
 		// }
 		// }
 		/*
-		 * for (UAPP up : aal.getUaapList()) { for (Map.Entry<String, UAPPPart>
+		 * for (UAPP up : service.getUaapList()) { for (Map.Entry<String, UAPPPart>
 		 * ua : up.getParts().entrySet()) {
 		 * System.err.println(ua.getValue().getAppId());
-		 * aal.getUaapList().add(up); } }
+		 * service.getUaapList().add(up); } }
 		 */
 		if (usrv.isSetSrv()) {
 			if (usrv.getSrv().isSetServiceId()) {
 				System.err.println("Service-ID: " + usrv.getSrv().getServiceId());
-				aal.setServiceId(usrv.getSrv().getServiceId());
+				service.setServiceId(usrv.getSrv().getServiceId());
 			}
 			if (usrv.getSrv().isSetName()) {
-				aal.setName(usrv.getSrv().getName());
+				service.setName(usrv.getSrv().getName());
 				System.err.println("Service-Name: " + usrv.getSrv().getName());
 			}
 			if (usrv.getSrv().isSetServiceProvider()) {
-				aal.setProvider(usrv.getSrv().getServiceProvider().getOrganizationName());
-				System.err.println("ServiceProvider: " + aal.getProvider());
+				service.setProvider(usrv.getSrv().getServiceProvider().getOrganizationName());
+				System.err.println("ServiceProvider: " + service.getProvider());
 			}
 			if (usrv.getSrv().isSetDescription()) {
-				aal.setDescription(usrv.getSrv().getDescription());
-				System.err.println("Description: " + aal.getDescription());
+				service.setDescription(usrv.getSrv().getDescription());
+				System.err.println("Description: " + service.getDescription());
 			}
 
 			// if(usrv.getSrv().isSetVersion()) {
 			// if(usrv.getSrv().getVersion().isSetMajor()) {
-			// aal.setMajor(usrv.getSrv().getVersion().getMajor());
-			// System.err.println(aal.getMajor());
+			// service.setMajor(usrv.getSrv().getVersion().getMajor());
+			// System.err.println(service.getMajor());
 			// }
 			// if(usrv.getSrv().getVersion().isSetMinor()) {
-			// aal.setMinor(usrv.getSrv().getVersion().getMinor());
-			// System.err.println(aal.getMinor());
+			// service.setMinor(usrv.getSrv().getVersion().getMinor());
+			// System.err.println(service.getMinor());
 			// }
 			// if(usrv.getSrv().getVersion().isSetMicro()) {
-			// aal.setMicro(usrv.getSrv().getVersion().getMicro());
-			// System.err.println(aal.getMicro());
+			// service.setMicro(usrv.getSrv().getVersion().getMicro());
+			// System.err.println(service.getMicro());
 			// }
 			// }
 			if (usrv.getSrv().isSetTags()) {
-				aal.getTags().add(usrv.getSrv().getTags());
-				System.err.println("Tags: " + aal.getTags());
+				service.getTags().add(usrv.getSrv().getTags());
+				System.err.println("Tags: " + service.getTags());
 			}
 
 			System.err.println("SET LicenseWindow");
 
-			boolean isAlreadyInstalled = Activator.getMgmt().isServiceId(aal.getServiceId());
+			boolean isAlreadyInstalled = Activator.getMgmt().isServiceId(service.getServiceId());
 
 			if (!isAlreadyInstalled) {
 				LicenceWindow lw = null;
-				for (UAPP installingApp : aal.getUaapList()) {
+				for (UAPP installingApp : service.getUaapList()) {
 					try {
-						lw = new LicenceWindow(UccUI.getInstance(), licenseList, aal, installingApp);
+						lw = new LicenceWindow(UccUI.getInstance(), licenseList, service, installingApp);
 					} catch (IOException e) {
 						e.printStackTrace();
 					}
-					new UsrvInfoController(aal, lw, UccUI.getInstance());
+					new UsrvInfoController(service, lw, UccUI.getInstance());
 				}
 			} else {
 				NoConfigurationWindow ncw = new NoConfigurationWindow(bundle.getString("srv.already.exists"));
@@ -627,7 +627,7 @@ public class FrontendImpl implements IFrontend {
 				return null;
 			}
 		}
-		return aal;
+		return service;
 	}
 
 	private String createUAPPLocation(String path, String newPath) {
@@ -649,7 +649,7 @@ public class FrontendImpl implements IFrontend {
 	}
 
 	/**
-	 * Uninstalls the a installed AAL service.
+	 * Uninstalls the a installed service.
 	 */
 	public void uninstallService(String sessionKey, String serviceId) {
 		// get the list of uapps installed for this serviceId
@@ -850,5 +850,4 @@ public class FrontendImpl implements IFrontend {
 					new Object[] { "callstatus is not succeeded" }, null);
 		}
 	}
-
 }
