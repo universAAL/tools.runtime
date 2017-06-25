@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// org.universAAL.tools.ucc.configuration.model.Cardinality
-	c38394 [label=<<table title="org.universAAL.tools.ucc.configuration.model.Cardinality" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Cardinality.html">
+	c37773 [label=<<table title="org.universAAL.tools.ucc.configuration.model.Cardinality" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Cardinality.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Cardinality </td></tr>
 		</table></td></tr>

@@ -107,7 +107,7 @@
 <td><a href="#org.universAAL.tools.ucc.client.util.UstoreUtil">org.universAAL.tools.ucc.client.util.UstoreUtil</a></td>
 <td>3</td></tr>
 <tr class="a">
-<td><a href="#org.universAAL.tools.ucc.commerce.ustore.tools.UAALException">org.universAAL.tools.ucc.commerce.ustore.tools.UAALException</a></td>
+<td><a href="#org.universAAL.tools.ucc.commerce.ustore.tools.UStoreException">org.universAAL.tools.ucc.commerce.ustore.tools.UStoreException</a></td>
 <td>1</td></tr>
 <tr class="b">
 <td><a href="#org.universAAL.tools.ucc.controller.desktop.DesktopController">org.universAAL.tools.ucc.controller.desktop.DesktopController</a></td>
@@ -198,9 +198,9 @@
 <td>BAD_PRACTICE</td>
 <td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#OS_OPEN_STREAM">OS_OPEN_STREAM</a></td>
 <td>60</td>
-<td>Medium</td></tr></table></div><a name="org.universAAL.tools.ucc.commerce.ustore.tools.UAALException"></a>
+<td>Medium</td></tr></table></div><a name="org.universAAL.tools.ucc.commerce.ustore.tools.UStoreException"></a>
 <div class="section">
-<h3><a name="org.universAAL.tools.ucc.commerce.ustore.tools.UAALException"></a>org.universAAL.tools.ucc.commerce.ustore.tools.UAALException</h3>
+<h3><a name="org.universAAL.tools.ucc.commerce.ustore.tools.UStoreException"></a>org.universAAL.tools.ucc.commerce.ustore.tools.UStoreException</h3>
 <table border="0" class="bodyTable">
 <tr class="a">
 <th>Bug</th>
@@ -209,7 +209,7 @@
 <th>Line</th>
 <th>Priority</th></tr>
 <tr class="b">
-<td>Class org.universAAL.tools.ucc.commerce.ustore.tools.UAALException is not derived from an Exception, even though it is named as such</td>
+<td>Class org.universAAL.tools.ucc.commerce.ustore.tools.UStoreException is not derived from an Exception, even though it is named as such</td>
 <td>BAD_PRACTICE</td>
 <td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#NM_CLASS_NOT_EXCEPTION">NM_CLASS_NOT_EXCEPTION</a></td>
 <td>32</td>
@@ -371,37 +371,37 @@
 <td>261</td>
 <td>Medium</td></tr>
 <tr class="a">
-<td>Class org.universAAL.tools.ucc.controller.install.DeploymentInfoController defines non-transient non-serializable instance field aal</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#SE_BAD_FIELD">SE_BAD_FIELD</a></td>
-<td></td>
-<td>Medium</td></tr>
-<tr class="b">
 <td>Class org.universAAL.tools.ucc.controller.install.DeploymentInfoController defines non-transient non-serializable instance field config</td>
 <td>BAD_PRACTICE</td>
 <td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#SE_BAD_FIELD">SE_BAD_FIELD</a></td>
 <td></td>
 <td>Medium</td></tr>
-<tr class="a">
+<tr class="b">
 <td>Class org.universAAL.tools.ucc.controller.install.DeploymentInfoController defines non-transient non-serializable instance field installingApp</td>
 <td>BAD_PRACTICE</td>
 <td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#SE_BAD_FIELD">SE_BAD_FIELD</a></td>
 <td></td>
 <td>Medium</td></tr>
-<tr class="b">
+<tr class="a">
 <td>Class org.universAAL.tools.ucc.controller.install.DeploymentInfoController defines non-transient non-serializable instance field mapLayout</td>
 <td>BAD_PRACTICE</td>
 <td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#SE_BAD_FIELD">SE_BAD_FIELD</a></td>
 <td></td>
 <td>Medium</td></tr>
-<tr class="a">
+<tr class="b">
 <td>Class org.universAAL.tools.ucc.controller.install.DeploymentInfoController defines non-transient non-serializable instance field peers</td>
 <td>BAD_PRACTICE</td>
 <td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#SE_BAD_FIELD">SE_BAD_FIELD</a></td>
 <td></td>
 <td>Medium</td></tr>
+<tr class="a">
+<td>Class org.universAAL.tools.ucc.controller.install.DeploymentInfoController defines non-transient non-serializable instance field service</td>
+<td>BAD_PRACTICE</td>
+<td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#SE_BAD_FIELD">SE_BAD_FIELD</a></td>
+<td></td>
+<td>Medium</td></tr>
 <tr class="b">
-<td>Write to static field org.universAAL.tools.ucc.controller.install.DeploymentInfoController.installer from instance method new org.universAAL.tools.ucc.controller.install.DeploymentInfoController(UccUI, AALService, DeploymentInformationView, UAPP)</td>
+<td>Write to static field org.universAAL.tools.ucc.controller.install.DeploymentInfoController.installer from instance method new org.universAAL.tools.ucc.controller.install.DeploymentInfoController(UccUI, Service, DeploymentInformationView, UAPP)</td>
 <td>STYLE</td>
 <td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD">ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD</a></td>
 <td>74</td>
@@ -449,7 +449,7 @@
 <td>Possible null pointer dereference in org.universAAL.tools.ucc.controller.install.LicenseController.deleteFiles(File) due to return value of called method</td>
 <td>STYLE</td>
 <td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE">NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE</a></td>
-<td>133</td>
+<td>131</td>
 <td>Medium</td></tr>
 <tr class="b">
 <td>Null passed for non-null parameter of new java.io.BufferedReader(Reader) in org.universAAL.tools.ucc.controller.install.LicenseController.valueChange(Property$ValueChangeEvent)</td>
@@ -473,28 +473,28 @@
 <td>Exceptional return value of java.io.File.delete() ignored in org.universAAL.tools.ucc.controller.install.LicenseController.deleteFiles(File)</td>
 <td>BAD_PRACTICE</td>
 <td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#RV_RETURN_VALUE_IGNORED_BAD_PRACTICE">RV_RETURN_VALUE_IGNORED_BAD_PRACTICE</a></td>
-<td>138</td>
+<td>136</td>
 <td>Medium</td></tr>
 <tr class="b">
-<td>Class org.universAAL.tools.ucc.controller.install.LicenseController defines non-transient non-serializable instance field aal</td>
-<td>BAD_PRACTICE</td>
-<td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#SE_BAD_FIELD">SE_BAD_FIELD</a></td>
-<td></td>
-<td>Medium</td></tr>
-<tr class="a">
 <td>Class org.universAAL.tools.ucc.controller.install.LicenseController defines non-transient non-serializable instance field installingApplication</td>
 <td>BAD_PRACTICE</td>
 <td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#SE_BAD_FIELD">SE_BAD_FIELD</a></td>
 <td></td>
 <td>Medium</td></tr>
-<tr class="b">
+<tr class="a">
 <td>Class org.universAAL.tools.ucc.controller.install.LicenseController defines non-transient non-serializable instance field lix</td>
 <td>BAD_PRACTICE</td>
 <td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#SE_BAD_FIELD">SE_BAD_FIELD</a></td>
 <td></td>
 <td>Medium</td></tr>
+<tr class="b">
+<td>Class org.universAAL.tools.ucc.controller.install.LicenseController defines non-transient non-serializable instance field service</td>
+<td>BAD_PRACTICE</td>
+<td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#SE_BAD_FIELD">SE_BAD_FIELD</a></td>
+<td></td>
+<td>Medium</td></tr>
 <tr class="a">
-<td>Write to static field org.universAAL.tools.ucc.controller.install.LicenseController.appCounter from instance method new org.universAAL.tools.ucc.controller.install.LicenseController(UccUI, LicenceWindow, ArrayList, AALService, UAPP)</td>
+<td>Write to static field org.universAAL.tools.ucc.controller.install.LicenseController.appCounter from instance method new org.universAAL.tools.ucc.controller.install.LicenseController(UccUI, LicenceWindow, ArrayList, Service, UAPP)</td>
 <td>STYLE</td>
 <td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD">ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD</a></td>
 <td>46</td>
@@ -863,7 +863,7 @@
 <td>141</td>
 <td>Medium</td></tr>
 <tr class="b">
-<td>Possible null pointer dereference in org.universAAL.tools.ucc.frontend.api.impl.FrontendImpl.parseConfiguration(String, ArrayList, ArrayList, AALService) due to return value of called method</td>
+<td>Possible null pointer dereference in org.universAAL.tools.ucc.frontend.api.impl.FrontendImpl.parseConfiguration(String, ArrayList, ArrayList, Service) due to return value of called method</td>
 <td>STYLE</td>
 <td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE">NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE</a></td>
 <td>540</td>
@@ -1082,13 +1082,13 @@
 <th>Line</th>
 <th>Priority</th></tr>
 <tr class="b">
-<td>Found reliance on default encoding in new org.universAAL.tools.ucc.windows.LicenceWindow(UccUI, ArrayList, AALService, UAPP): new java.io.FileReader(File)</td>
+<td>Found reliance on default encoding in new org.universAAL.tools.ucc.windows.LicenceWindow(UccUI, ArrayList, Service, UAPP): new java.io.FileReader(File)</td>
 <td>I18N</td>
 <td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#DM_DEFAULT_ENCODING">DM_DEFAULT_ENCODING</a></td>
 <td>85</td>
 <td>High</td></tr>
 <tr class="a">
-<td>new org.universAAL.tools.ucc.windows.LicenceWindow(UccUI, ArrayList, AALService, UAPP) may fail to close stream</td>
+<td>new org.universAAL.tools.ucc.windows.LicenceWindow(UccUI, ArrayList, Service, UAPP) may fail to close stream</td>
 <td>BAD_PRACTICE</td>
 <td><a class="externalLink" href="http://findbugs.sourceforge.net/bugDescriptions.html#OS_OPEN_STREAM">OS_OPEN_STREAM</a></td>
 <td>87</td>

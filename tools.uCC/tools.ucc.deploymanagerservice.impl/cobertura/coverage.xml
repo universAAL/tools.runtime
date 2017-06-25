@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="54" branches-covered="0" branches-valid="8" complexity="1.3076923076923077" version="2.1.1" timestamp="1498297929735">
+<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="54" branches-covered="0" branches-valid="8" complexity="1.3076923076923077" version="2.1.1" timestamp="1498393449576">
 	<sources>
 		<source>--source</source>
 		<source>/home/travis/build/universAAL/tools.runtime/tools.uCC/tools.ucc.deploymanagerservice.impl/src/main/java</source>
@@ -148,11 +148,6 @@
 								<line number="13" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getAALSpaceProfile" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="45" hits="0" branch="false"/>
-							</lines>
-						</method>
 						<method name="getInstalledServices" signature="(Ljava/lang/String;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="35" hits="0" branch="false"/>
@@ -169,6 +164,11 @@
 							<lines>
 								<line number="53" hits="0" branch="false"/>
 								<line number="54" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getSpaceProfile" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="45" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="getUserProfile" signature="(Ljava/lang/String;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">

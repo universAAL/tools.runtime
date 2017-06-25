@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// org.universAAL.tools.ucc.configuration.model.ConfigurationOption
-	c71016 [label=<<table title="org.universAAL.tools.ucc.configuration.model.ConfigurationOption" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConfigurationOption.html">
+	c70395 [label=<<table title="org.universAAL.tools.ucc.configuration.model.ConfigurationOption" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConfigurationOption.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ConfigurationOption </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./ConfigurationOption.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.tools.ucc.configuration.model.MapConfigurationOption
-	c71017 [label=<<table title="org.universAAL.tools.ucc.configuration.model.MapConfigurationOption" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MapConfigurationOption.html">
+	c70396 [label=<<table title="org.universAAL.tools.ucc.configuration.model.MapConfigurationOption" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MapConfigurationOption.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MapConfigurationOption </td></tr>
 		</table></td></tr>
 		</table>>, URL="./MapConfigurationOption.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//org.universAAL.tools.ucc.configuration.model.MapConfigurationOption extends org.universAAL.tools.ucc.configuration.model.ConfigurationOption
-	c71016:p -> c71017:p [dir=back,arrowtail=empty];
+	c70395:p -> c70396:p [dir=back,arrowtail=empty];
 }
 

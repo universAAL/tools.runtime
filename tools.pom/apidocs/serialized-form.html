@@ -1039,17 +1039,17 @@
 <li class="blockList">
 <h2 title="Package">Package&nbsp;org.universAAL.tools.ucc.commerce.ustore.tools</h2>
 <ul class="blockList">
-<li class="blockList"><a name="org.universAAL.tools.ucc.commerce.ustore.tools.UAALException_Exception">
+<li class="blockList"><a name="org.universAAL.tools.ucc.commerce.ustore.tools.UStoreException_Exception">
 <!--   -->
 </a>
-<h3>Class <a href="org/universAAL/tools/ucc/commerce/ustore/tools/UAALException_Exception.html" title="class in org.universAAL.tools.ucc.commerce.ustore.tools">org.universAAL.tools.ucc.commerce.ustore.tools.UAALException_Exception</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a> implements Serializable</h3>
+<h3>Class <a href="org/universAAL/tools/ucc/commerce/ustore/tools/UStoreException_Exception.html" title="class in org.universAAL.tools.ucc.commerce.ustore.tools">org.universAAL.tools.ucc.commerce.ustore.tools.UStoreException_Exception</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a> implements Serializable</h3>
 <ul class="blockList">
 <li class="blockList">
 <h3>Serialized Fields</h3>
 <ul class="blockList">
 <li class="blockListLast">
-<h4>uAALException</h4>
-<pre><a href="org/universAAL/tools/ucc/commerce/ustore/tools/UAALException.html" title="class in org.universAAL.tools.ucc.commerce.ustore.tools">UAALException</a> uAALException</pre>
+<h4>uStoreException</h4>
+<pre><a href="org/universAAL/tools/ucc/commerce/ustore/tools/UStoreException.html" title="class in org.universAAL.tools.ucc.commerce.ustore.tools">UStoreException</a> uStoreException</pre>
 </li>
 </ul>
 </li>
@@ -1489,11 +1489,6 @@
 <li class="blockList">
 <h2 title="Package">Package&nbsp;org.universAAL.tools.ucc.controller.install</h2>
 <ul class="blockList">
-<li class="blockList"><a name="org.universAAL.tools.ucc.controller.install.AALServiceReceiver">
-<!--   -->
-</a>
-<h3>Class <a href="org/universAAL/tools/ucc/controller/install/AALServiceReceiver.html" title="class in org.universAAL.tools.ucc.controller.install">org.universAAL.tools.ucc.controller.install.AALServiceReceiver</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
-</li>
 <li class="blockList"><a name="org.universAAL.tools.ucc.controller.install.DeinstallController">
 <!--   -->
 </a>
@@ -1539,8 +1534,8 @@
 <pre><a href="org/universAAL/tools/ucc/windows/DeploymentInformationView.html" title="class in org.universAAL.tools.ucc.windows">DeploymentInformationView</a> win</pre>
 </li>
 <li class="blockList">
-<h4>aal</h4>
-<pre><a href="org/universAAL/tools/ucc/model/AALService.html" title="class in org.universAAL.tools.ucc.model">AALService</a> aal</pre>
+<h4>service</h4>
+<pre><a href="org/universAAL/tools/ucc/model/Service.html" title="class in org.universAAL.tools.ucc.model">Service</a> service</pre>
 </li>
 <li class="blockList">
 <h4>app</h4>
@@ -1627,8 +1622,8 @@
 <pre><a href="org/universAAL/tools/ucc/windows/UccUI.html" title="class in org.universAAL.tools.ucc.windows">UccUI</a> app</pre>
 </li>
 <li class="blockList">
-<h4>aal</h4>
-<pre><a href="org/universAAL/tools/ucc/model/AALService.html" title="class in org.universAAL.tools.ucc.model">AALService</a> aal</pre>
+<h4>service</h4>
+<pre><a href="org/universAAL/tools/ucc/model/Service.html" title="class in org.universAAL.tools.ucc.model">Service</a> service</pre>
 </li>
 <li class="blockListLast">
 <h4>installingApplication</h4>
@@ -1637,6 +1632,11 @@
 </ul>
 </li>
 </ul>
+</li>
+<li class="blockList"><a name="org.universAAL.tools.ucc.controller.install.ServiceReceiver">
+<!--   -->
+</a>
+<h3>Class <a href="org/universAAL/tools/ucc/controller/install/ServiceReceiver.html" title="class in org.universAAL.tools.ucc.controller.install">org.universAAL.tools.ucc.controller.install.ServiceReceiver</a> extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
 </li>
 <li class="blockList"><a name="org.universAAL.tools.ucc.controller.install.UsrvInfoController">
 <!--   -->
@@ -4148,8 +4148,8 @@
 <pre>com.vaadin.ui.Button addUser</pre>
 </li>
 <li class="blockList">
-<h4>aal</h4>
-<pre><a href="org/universAAL/tools/ucc/model/AALService.html" title="class in org.universAAL.tools.ucc.model">AALService</a> aal</pre>
+<h4>service</h4>
+<pre><a href="org/universAAL/tools/ucc/model/Service.html" title="class in org.universAAL.tools.ucc.model">Service</a> service</pre>
 </li>
 <li class="blockList">
 <h4>app</h4>

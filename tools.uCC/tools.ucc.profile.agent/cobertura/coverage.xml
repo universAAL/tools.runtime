@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="444" branches-covered="0" branches-valid="90" complexity="1.709090909090909" version="2.1.1" timestamp="1498297639888">
+<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="444" branches-covered="0" branches-valid="90" complexity="1.709090909090909" version="2.1.1" timestamp="1498393154243">
 	<sources>
 		<source>--source</source>
 		<source>/home/travis/build/universAAL/tools.runtime/tools.uCC/tools.ucc.profile.agent/src/main/java</source>
@@ -33,18 +33,13 @@
 								<line number="55" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="addAALSpaceProfile" signature="(Lorg/universAAL/ontology/profile/User;Lorg/universAAL/ontology/profile/AALSpaceProfile;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="272" hits="0" branch="false"/>
-							</lines>
-						</method>
 						<method name="addDevice" signature="(Lorg/universAAL/ontology/phThing/Device;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="494" hits="0" branch="false"/>
 								<line number="495" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="addDevice" signature="(Lorg/universAAL/ontology/phThing/Device;Lorg/universAAL/ontology/profile/AALSpace;)Ljava/lang/String;" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="addDevice" signature="(Lorg/universAAL/ontology/phThing/Device;Lorg/universAAL/ontology/profile/Space;)Ljava/lang/String;" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="499" hits="0" branch="false"/>
 								<line number="500" hits="0" branch="true" condition-coverage="0% (0/2)">
@@ -56,7 +51,7 @@
 								<line number="503" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="addDeviceToSpace" signature="(Lorg/universAAL/ontology/phThing/Device;Lorg/universAAL/ontology/profile/AALSpace;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="addDeviceToSpace" signature="(Lorg/universAAL/ontology/phThing/Device;Lorg/universAAL/ontology/profile/Space;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="592" hits="0" branch="false"/>
 								<line number="593" hits="0" branch="false"/>
@@ -67,17 +62,17 @@
 								<line number="598" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="addService" signature="(Lorg/universAAL/ontology/profile/AALService;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="addService" signature="(Lorg/universAAL/ontology/profile/AppService;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="612" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="addServiceProf" signature="(Lorg/universAAL/ontology/profile/AALServiceProfile;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="addServiceProf" signature="(Lorg/universAAL/ontology/profile/AppServiceProfile;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="649" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="addServicesToSpace" signature="(Lorg/universAAL/ontology/profile/AALSpace;Lorg/universAAL/ontology/profile/AALService;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="addServicesToSpace" signature="(Lorg/universAAL/ontology/profile/Space;Lorg/universAAL/ontology/profile/AppService;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="668" hits="0" branch="false"/>
 								<line number="669" hits="0" branch="false"/>
@@ -88,15 +83,20 @@
 								<line number="674" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="addSpace" signature="(Lorg/universAAL/ontology/profile/AALSpace;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="addSpace" signature="(Lorg/universAAL/ontology/profile/Space;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="421" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="addSpaceProfile" signature="(Lorg/universAAL/ontology/profile/AALSpaceProfile;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="addSpaceProfile" signature="(Lorg/universAAL/ontology/profile/SpaceProfile;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="484" hits="0" branch="false"/>
 								<line number="485" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="addSpaceProfile" signature="(Lorg/universAAL/ontology/profile/User;Lorg/universAAL/ontology/profile/SpaceProfile;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="272" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="addSubProfile" signature="(Lorg/universAAL/ontology/profile/SubProfile;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
@@ -158,19 +158,19 @@
 								<line number="416" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="changeAALSpaceProfile" signature="(Lorg/universAAL/ontology/profile/User;Lorg/universAAL/ontology/profile/AALSpaceProfile;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="277" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="changeService" signature="(Lorg/universAAL/ontology/profile/AALService;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="changeService" signature="(Lorg/universAAL/ontology/profile/AppService;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="639" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="changeServiceProf" signature="(Lorg/universAAL/ontology/profile/AALServiceProfile;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="changeServiceProf" signature="(Lorg/universAAL/ontology/profile/AppServiceProfile;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="659" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="changeSpaceProfile" signature="(Lorg/universAAL/ontology/profile/User;Lorg/universAAL/ontology/profile/SpaceProfile;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="277" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="changeUserProfile" signature="(Lorg/universAAL/ontology/profile/User;Lorg/universAAL/ontology/profile/UserProfile;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
@@ -240,17 +240,7 @@
 								<line number="756" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getAALSpaceProfile" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="704" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="getAALSpaceProfiles" signature="(Lorg/universAAL/ontology/profile/User;)Ljava/util/List;" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="266" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="getAllDevices" signature="(Lorg/universAAL/ontology/profile/AALSpace;)Ljava/util/List;" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="getAllDevices" signature="(Lorg/universAAL/ontology/profile/Space;)Ljava/util/List;" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="549" hits="0" branch="false"/>
 								<line number="550" hits="0" branch="false"/>
@@ -323,7 +313,7 @@
 								<line number="152" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getAppOfServ" signature="(Lorg/universAAL/ontology/profile/AALService;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="getAppOfServ" signature="(Lorg/universAAL/ontology/profile/AppService;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="699" hits="0" branch="false"/>
 							</lines>
@@ -360,7 +350,7 @@
 								<line number="490" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getDevicesOfSpace" signature="(Lorg/universAAL/ontology/profile/AALSpace;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="getDevicesOfSpace" signature="(Lorg/universAAL/ontology/profile/Space;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="602" hits="0" branch="false"/>
 								<line number="603" hits="0" branch="false"/>
@@ -371,12 +361,12 @@
 								<line number="608" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getHROfServ" signature="(Lorg/universAAL/ontology/profile/AALService;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="getHROfServ" signature="(Lorg/universAAL/ontology/profile/AppService;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="689" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getHWOfServ" signature="(Lorg/universAAL/ontology/profile/AALService;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="getHWOfServ" signature="(Lorg/universAAL/ontology/profile/AppService;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="694" hits="0" branch="false"/>
 							</lines>
@@ -433,12 +423,12 @@
 								<line number="212" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getService" signature="(Lorg/universAAL/ontology/profile/AALService;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="getService" signature="(Lorg/universAAL/ontology/profile/AppService;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="616" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getServiceProf" signature="(Lorg/universAAL/ontology/profile/AALServiceProfile;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="getServiceProf" signature="(Lorg/universAAL/ontology/profile/AppServiceProfile;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="654" hits="0" branch="false"/>
 							</lines>
@@ -452,7 +442,7 @@
 								<line number="634" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getServicesOfSpace" signature="(Lorg/universAAL/ontology/profile/AALSpace;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="getServicesOfSpace" signature="(Lorg/universAAL/ontology/profile/Space;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="678" hits="0" branch="false"/>
 								<line number="679" hits="0" branch="false"/>
@@ -463,7 +453,7 @@
 								<line number="684" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getSpace" signature="(Lorg/universAAL/ontology/profile/AALSpace;)Lorg/universAAL/ontology/profile/AALSpace;" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="getSpace" signature="(Lorg/universAAL/ontology/profile/Space;)Lorg/universAAL/ontology/profile/Space;" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="425" hits="0" branch="false"/>
 								<line number="426" hits="0" branch="false"/>
@@ -487,10 +477,20 @@
 								<line number="439" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getSpaceProfile" signature="(Lorg/universAAL/ontology/profile/AALSpaceProfile;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="getSpaceProfile" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="704" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getSpaceProfile" signature="(Lorg/universAAL/ontology/profile/SpaceProfile;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="587" hits="0" branch="false"/>
 								<line number="588" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getSpaceProfiles" signature="(Lorg/universAAL/ontology/profile/User;)Ljava/util/List;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="266" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="getSpaces" signature="()Ljava/util/List;" line-rate="0.0" branch-rate="0.0" complexity="0">
@@ -709,19 +709,19 @@
 								<line number="404" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="removeAALSpaceProfile" signature="(Lorg/universAAL/ontology/profile/User;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="282" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="removeService" signature="(Lorg/universAAL/ontology/profile/AALService;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="removeService" signature="(Lorg/universAAL/ontology/profile/AppService;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="644" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="removeServiceProf" signature="(Lorg/universAAL/ontology/profile/AALServiceProfile;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="removeServiceProf" signature="(Lorg/universAAL/ontology/profile/AppServiceProfile;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="664" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="removeSpaceProfile" signature="(Lorg/universAAL/ontology/profile/User;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="282" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="removeUserProfile" signature="(Lorg/universAAL/ontology/profile/User;)V" line-rate="0.0" branch-rate="1.0" complexity="0">

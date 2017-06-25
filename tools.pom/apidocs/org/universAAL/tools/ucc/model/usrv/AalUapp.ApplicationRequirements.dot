@@ -10,15 +10,15 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// org.universAAL.tools.ucc.model.usrv.AalUapp.ApplicationRequirements
-	c28395 [label=<<table title="org.universAAL.tools.ucc.model.usrv.AalUapp.ApplicationRequirements" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AalUapp.ApplicationRequirements.html">
+	c27774 [label=<<table title="org.universAAL.tools.ucc.model.usrv.AalUapp.ApplicationRequirements" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AalUapp.ApplicationRequirements.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ApplicationRequirements </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AalUapp.ApplicationRequirements.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//org.universAAL.tools.ucc.model.usrv.AalUapp.ApplicationRequirements implements java.io.Serializable
-	c28574:p -> c28395:p [dir=back,arrowtail=empty,style=dashed];
+	c27953:p -> c27774:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c28574 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html">
+	c27953 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>

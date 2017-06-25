@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="5782" branches-covered="0" branches-valid="1766" complexity="3.032258064516129" version="2.1.1" timestamp="1498297887341">
+<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="5782" branches-covered="0" branches-valid="1766" complexity="3.032258064516129" version="2.1.1" timestamp="1498393404728">
 	<sources>
 		<source>--source</source>
 		<source>/home/travis/build/universAAL/tools.runtime/tools.uCC/tools.ucc.frontend/src/main/java</source>
@@ -31,31 +31,31 @@
 						</method>
 						<method name="getSessionKey" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
+								<line number="91" hits="0" branch="false"/>
 								<line number="92" hits="0" branch="false"/>
-								<line number="93" hits="0" branch="false"/>
-								<line number="95" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="94" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="96" hits="0" branch="true" condition-coverage="0% (0/6)">
+								<line number="95" hits="0" branch="true" condition-coverage="0% (0/6)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 										<condition number="1" type="jump" coverage="0%"/>
 										<condition number="2" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="97" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="96" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
+								<line number="98" hits="0" branch="false"/>
 								<line number="99" hits="0" branch="false"/>
 								<line number="100" hits="0" branch="false"/>
 								<line number="101" hits="0" branch="false"/>
-								<line number="102" hits="0" branch="false"/>
+								<line number="103" hits="0" branch="false"/>
 								<line number="104" hits="0" branch="false"/>
-								<line number="105" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="registerUser" signature="(Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
@@ -79,7 +79,7 @@
 								<line number="79" hits="0" branch="false"/>
 								<line number="80" hits="0" branch="false"/>
 								<line number="81" hits="0" branch="false"/>
-								<line number="83" hits="0" branch="false"/>
+								<line number="82" hits="0" branch="false"/>
 							</lines>
 						</method>
 					</methods>
@@ -113,39 +113,39 @@
 						<line number="79" hits="0" branch="false"/>
 						<line number="80" hits="0" branch="false"/>
 						<line number="81" hits="0" branch="false"/>
-						<line number="83" hits="0" branch="false"/>
+						<line number="82" hits="0" branch="false"/>
+						<line number="91" hits="0" branch="false"/>
 						<line number="92" hits="0" branch="false"/>
-						<line number="93" hits="0" branch="false"/>
-						<line number="95" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="94" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="96" hits="0" branch="true" condition-coverage="0% (0/6)">
+						<line number="95" hits="0" branch="true" condition-coverage="0% (0/6)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 								<condition number="1" type="jump" coverage="0%"/>
 								<condition number="2" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="97" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="96" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
+						<line number="98" hits="0" branch="false"/>
 						<line number="99" hits="0" branch="false"/>
 						<line number="100" hits="0" branch="false"/>
 						<line number="101" hits="0" branch="false"/>
-						<line number="102" hits="0" branch="false"/>
+						<line number="103" hits="0" branch="false"/>
 						<line number="104" hits="0" branch="false"/>
-						<line number="105" hits="0" branch="false"/>
 					</lines>
 				</class>
 			</classes>
 		</package>
 		<package name="org.universAAL.tools.ucc.commerce.ustore.tools" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 			<classes>
-				<class name="org.universAAL.tools.ucc.commerce.ustore.tools.GetFreeAALServices" filename="org/universAAL/tools/ucc/commerce/ustore/tools/GetFreeAALServices.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.commerce.ustore.tools.GetFreeServices" filename="org/universAAL/tools/ucc/commerce/ustore/tools/GetFreeServices.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -185,7 +185,7 @@
 						<line number="73" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.tools.ucc.commerce.ustore.tools.GetFreeAALServicesResponse" filename="org/universAAL/tools/ucc/commerce/ustore/tools/GetFreeAALServicesResponse.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.commerce.ustore.tools.GetFreeServicesResponse" filename="org/universAAL/tools/ucc/commerce/ustore/tools/GetFreeServicesResponse.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -211,7 +211,7 @@
 						<line number="57" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.tools.ucc.commerce.ustore.tools.GetPurchasedAALServices" filename="org/universAAL/tools/ucc/commerce/ustore/tools/GetPurchasedAALServices.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.commerce.ustore.tools.GetPurchasedServices" filename="org/universAAL/tools/ucc/commerce/ustore/tools/GetPurchasedServices.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -237,7 +237,7 @@
 						<line number="55" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.tools.ucc.commerce.ustore.tools.GetPurchasedAALServicesResponse" filename="org/universAAL/tools/ucc/commerce/ustore/tools/GetPurchasedAALServicesResponse.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.commerce.ustore.tools.GetPurchasedServicesResponse" filename="org/universAAL/tools/ucc/commerce/ustore/tools/GetPurchasedServicesResponse.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -329,7 +329,7 @@
 						<line number="57" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.tools.ucc.commerce.ustore.tools.GetUpdatesForAALServices" filename="org/universAAL/tools/ucc/commerce/ustore/tools/GetUpdatesForAALServices.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.commerce.ustore.tools.GetUpdatesForServices" filename="org/universAAL/tools/ucc/commerce/ustore/tools/GetUpdatesForServices.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -355,7 +355,7 @@
 						<line number="55" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.tools.ucc.commerce.ustore.tools.GetUpdatesForAALServicesResponse" filename="org/universAAL/tools/ucc/commerce/ustore/tools/GetUpdatesForAALServicesResponse.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.commerce.ustore.tools.GetUpdatesForServicesResponse" filename="org/universAAL/tools/ucc/commerce/ustore/tools/GetUpdatesForServicesResponse.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -460,42 +460,42 @@
 								<line number="61" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createGetFreeAALServices" signature="()Lorg/universAAL/tools/ucc/commerce/ustore/tools/GetFreeAALServices;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createGetFreeServices" signature="()Lorg/universAAL/tools/ucc/commerce/ustore/tools/GetFreeServices;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="100" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createGetFreeAALServices" signature="(Lorg/universAAL/tools/ucc/commerce/ustore/tools/GetFreeAALServices;)Ljavax/xml/bind/JAXBElement;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createGetFreeServices" signature="(Lorg/universAAL/tools/ucc/commerce/ustore/tools/GetFreeServices;)Ljavax/xml/bind/JAXBElement;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="334" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createGetFreeAALServicesResponse" signature="()Lorg/universAAL/tools/ucc/commerce/ustore/tools/GetFreeAALServicesResponse;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createGetFreeServicesResponse" signature="()Lorg/universAAL/tools/ucc/commerce/ustore/tools/GetFreeServicesResponse;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="92" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createGetFreeAALServicesResponse" signature="(Lorg/universAAL/tools/ucc/commerce/ustore/tools/GetFreeAALServicesResponse;)Ljavax/xml/bind/JAXBElement;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createGetFreeServicesResponse" signature="(Lorg/universAAL/tools/ucc/commerce/ustore/tools/GetFreeServicesResponse;)Ljavax/xml/bind/JAXBElement;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="344" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createGetPurchasedAALServices" signature="()Lorg/universAAL/tools/ucc/commerce/ustore/tools/GetPurchasedAALServices;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createGetPurchasedServices" signature="()Lorg/universAAL/tools/ucc/commerce/ustore/tools/GetPurchasedServices;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="172" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createGetPurchasedAALServices" signature="(Lorg/universAAL/tools/ucc/commerce/ustore/tools/GetPurchasedAALServices;)Ljavax/xml/bind/JAXBElement;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createGetPurchasedServices" signature="(Lorg/universAAL/tools/ucc/commerce/ustore/tools/GetPurchasedServices;)Ljavax/xml/bind/JAXBElement;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="257" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createGetPurchasedAALServicesResponse" signature="()Lorg/universAAL/tools/ucc/commerce/ustore/tools/GetPurchasedAALServicesResponse;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createGetPurchasedServicesResponse" signature="()Lorg/universAAL/tools/ucc/commerce/ustore/tools/GetPurchasedServicesResponse;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="124" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createGetPurchasedAALServicesResponse" signature="(Lorg/universAAL/tools/ucc/commerce/ustore/tools/GetPurchasedAALServicesResponse;)Ljavax/xml/bind/JAXBElement;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createGetPurchasedServicesResponse" signature="(Lorg/universAAL/tools/ucc/commerce/ustore/tools/GetPurchasedServicesResponse;)Ljavax/xml/bind/JAXBElement;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="201" hits="0" branch="false"/>
 							</lines>
@@ -520,22 +520,22 @@
 								<line number="234" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createGetUpdatesForAALServices" signature="()Lorg/universAAL/tools/ucc/commerce/ustore/tools/GetUpdatesForAALServices;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createGetUpdatesForServices" signature="()Lorg/universAAL/tools/ucc/commerce/ustore/tools/GetUpdatesForServices;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="132" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createGetUpdatesForAALServices" signature="(Lorg/universAAL/tools/ucc/commerce/ustore/tools/GetUpdatesForAALServices;)Ljavax/xml/bind/JAXBElement;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createGetUpdatesForServices" signature="(Lorg/universAAL/tools/ucc/commerce/ustore/tools/GetUpdatesForServices;)Ljavax/xml/bind/JAXBElement;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="212" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createGetUpdatesForAALServicesResponse" signature="()Lorg/universAAL/tools/ucc/commerce/ustore/tools/GetUpdatesForAALServicesResponse;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createGetUpdatesForServicesResponse" signature="()Lorg/universAAL/tools/ucc/commerce/ustore/tools/GetUpdatesForServicesResponse;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="84" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createGetUpdatesForAALServicesResponse" signature="(Lorg/universAAL/tools/ucc/commerce/ustore/tools/GetUpdatesForAALServicesResponse;)Ljavax/xml/bind/JAXBElement;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createGetUpdatesForServicesResponse" signature="(Lorg/universAAL/tools/ucc/commerce/ustore/tools/GetUpdatesForServicesResponse;)Ljavax/xml/bind/JAXBElement;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="323" hits="0" branch="false"/>
 							</lines>
@@ -560,22 +560,22 @@
 								<line number="223" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createPurchaseFreeAALService" signature="()Lorg/universAAL/tools/ucc/commerce/ustore/tools/PurchaseFreeAALService;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createPurchaseFreeService" signature="()Lorg/universAAL/tools/ucc/commerce/ustore/tools/PurchaseFreeService;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="68" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createPurchaseFreeAALService" signature="(Lorg/universAAL/tools/ucc/commerce/ustore/tools/PurchaseFreeAALService;)Ljavax/xml/bind/JAXBElement;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createPurchaseFreeService" signature="(Lorg/universAAL/tools/ucc/commerce/ustore/tools/PurchaseFreeService;)Ljavax/xml/bind/JAXBElement;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="300" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createPurchaseFreeAALServiceResponse" signature="()Lorg/universAAL/tools/ucc/commerce/ustore/tools/PurchaseFreeAALServiceResponse;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createPurchaseFreeServiceResponse" signature="()Lorg/universAAL/tools/ucc/commerce/ustore/tools/PurchaseFreeServiceResponse;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="180" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createPurchaseFreeAALServiceResponse" signature="(Lorg/universAAL/tools/ucc/commerce/ustore/tools/PurchaseFreeAALServiceResponse;)Ljavax/xml/bind/JAXBElement;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createPurchaseFreeServiceResponse" signature="(Lorg/universAAL/tools/ucc/commerce/ustore/tools/PurchaseFreeServiceResponse;)Ljavax/xml/bind/JAXBElement;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="289" hits="0" branch="false"/>
 							</lines>
@@ -600,12 +600,12 @@
 								<line number="246" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createUAALException" signature="()Lorg/universAAL/tools/ucc/commerce/ustore/tools/UAALException;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createUStoreException" signature="()Lorg/universAAL/tools/ucc/commerce/ustore/tools/UStoreException;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="116" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="createUAALException" signature="(Lorg/universAAL/tools/ucc/commerce/ustore/tools/UAALException;)Ljavax/xml/bind/JAXBElement;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="createUStoreException" signature="(Lorg/universAAL/tools/ucc/commerce/ustore/tools/UStoreException;)Ljavax/xml/bind/JAXBElement;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="190" hits="0" branch="false"/>
 							</lines>
@@ -731,7 +731,7 @@
 						<line number="71" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.tools.ucc.commerce.ustore.tools.PurchaseFreeAALService" filename="org/universAAL/tools/ucc/commerce/ustore/tools/PurchaseFreeAALService.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.commerce.ustore.tools.PurchaseFreeService" filename="org/universAAL/tools/ucc/commerce/ustore/tools/PurchaseFreeService.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -771,7 +771,7 @@
 						<line number="78" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.tools.ucc.commerce.ustore.tools.PurchaseFreeAALServiceResponse" filename="org/universAAL/tools/ucc/commerce/ustore/tools/PurchaseFreeAALServiceResponse.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.commerce.ustore.tools.PurchaseFreeServiceResponse" filename="org/universAAL/tools/ucc/commerce/ustore/tools/PurchaseFreeServiceResponse.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -891,7 +891,7 @@
 						<line number="31" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.tools.ucc.commerce.ustore.tools.UAALException" filename="org/universAAL/tools/ucc/commerce/ustore/tools/UAALException.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.commerce.ustore.tools.UStoreException" filename="org/universAAL/tools/ucc/commerce/ustore/tools/UStoreException.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -917,7 +917,7 @@
 						<line number="55" hits="0" branch="false"/>
 					</lines>
 				</class>
-				<class name="org.universAAL.tools.ucc.commerce.ustore.tools.UAALException_Exception" filename="org/universAAL/tools/ucc/commerce/ustore/tools/UAALException_Exception.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+				<class name="org.universAAL.tools.ucc.commerce.ustore.tools.UStoreException_Exception" filename="org/universAAL/tools/ucc/commerce/ustore/tools/UStoreException_Exception.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
@@ -937,21 +937,21 @@
 								<line number="26" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Lorg/universAAL/tools/ucc/commerce/ustore/tools/UAALException;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Lorg/universAAL/tools/ucc/commerce/ustore/tools/UStoreException;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="29" hits="0" branch="false"/>
 								<line number="30" hits="0" branch="false"/>
 								<line number="31" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Lorg/universAAL/tools/ucc/commerce/ustore/tools/UAALException;Ljava/lang/Throwable;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Lorg/universAAL/tools/ucc/commerce/ustore/tools/UStoreException;Ljava/lang/Throwable;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="35" hits="0" branch="false"/>
 								<line number="36" hits="0" branch="false"/>
 								<line number="37" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="getFaultInfo" signature="()Lorg/universAAL/tools/ucc/commerce/ustore/tools/UAALException;" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="getFaultInfo" signature="()Lorg/universAAL/tools/ucc/commerce/ustore/tools/UStoreException;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="40" hits="0" branch="false"/>
 							</lines>
@@ -2257,34 +2257,6 @@
 		</package>
 		<package name="org.universAAL.tools.ucc.controller.install" line-rate="0.0" branch-rate="0.0" complexity="6.777777777777778">
 			<classes>
-				<class name="org.universAAL.tools.ucc.controller.install.AALServiceReceiver" filename="org/universAAL/tools/ucc/controller/install/AALServiceReceiver.java" line-rate="0.0" branch-rate="1.0" complexity="2.0">
-					<methods>
-						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="12" hits="0" branch="false"/>
-							</lines>
-						</method>
-						<method name="receiveUpload" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/io/OutputStream;" line-rate="0.0" branch-rate="1.0" complexity="0">
-							<lines>
-								<line number="15" hits="0" branch="false"/>
-								<line number="17" hits="0" branch="false"/>
-								<line number="18" hits="0" branch="false"/>
-								<line number="19" hits="0" branch="false"/>
-								<line number="20" hits="0" branch="false"/>
-								<line number="21" hits="0" branch="false"/>
-							</lines>
-						</method>
-					</methods>
-					<lines>
-						<line number="12" hits="0" branch="false"/>
-						<line number="15" hits="0" branch="false"/>
-						<line number="17" hits="0" branch="false"/>
-						<line number="18" hits="0" branch="false"/>
-						<line number="19" hits="0" branch="false"/>
-						<line number="20" hits="0" branch="false"/>
-						<line number="21" hits="0" branch="false"/>
-					</lines>
-				</class>
 				<class name="org.universAAL.tools.ucc.controller.install.DeinstallController" filename="org/universAAL/tools/ucc/controller/install/DeinstallController.java" line-rate="0.0" branch-rate="0.0" complexity="2.5">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Lorg/universAAL/tools/ucc/windows/DeinstallWindow;Lorg/universAAL/tools/ucc/windows/UccUI;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
@@ -2363,7 +2335,7 @@
 				</class>
 				<class name="org.universAAL.tools.ucc.controller.install.DeploymentInfoController" filename="org/universAAL/tools/ucc/controller/install/DeploymentInfoController.java" line-rate="0.0" branch-rate="0.0" complexity="9.875">
 					<methods>
-						<method name="&lt;init&gt;" signature="(Lorg/universAAL/tools/ucc/windows/UccUI;Lorg/universAAL/tools/ucc/model/AALService;Lorg/universAAL/tools/ucc/windows/DeploymentInformationView;Lorg/universAAL/tools/ucc/model/UAPP;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="&lt;init&gt;" signature="(Lorg/universAAL/tools/ucc/windows/UccUI;Lorg/universAAL/tools/ucc/model/Service;Lorg/universAAL/tools/ucc/windows/DeploymentInformationView;Lorg/universAAL/tools/ucc/model/UAPP;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="59" hits="0" branch="false"/>
 								<line number="60" hits="0" branch="false"/>
@@ -3573,7 +3545,7 @@
 				</class>
 				<class name="org.universAAL.tools.ucc.controller.install.LicenseController" filename="org/universAAL/tools/ucc/controller/install/LicenseController.java" line-rate="0.0" branch-rate="0.0" complexity="6.25">
 					<methods>
-						<method name="&lt;init&gt;" signature="(Lorg/universAAL/tools/ucc/windows/UccUI;Lorg/universAAL/tools/ucc/windows/LicenceWindow;Ljava/util/ArrayList;Lorg/universAAL/tools/ucc/model/AALService;Lorg/universAAL/tools/ucc/model/UAPP;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+						<method name="&lt;init&gt;" signature="(Lorg/universAAL/tools/ucc/windows/UccUI;Lorg/universAAL/tools/ucc/windows/LicenceWindow;Ljava/util/ArrayList;Lorg/universAAL/tools/ucc/model/Service;Lorg/universAAL/tools/ucc/model/UAPP;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="31" hits="0" branch="false"/>
 								<line number="39" hits="0" branch="false"/>
@@ -3591,54 +3563,54 @@
 						</method>
 						<method name="buttonClick" signature="(Lcom/vaadin/ui/Button$ClickEvent;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
-								<line number="112" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="111" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
+								<line number="112" hits="0" branch="false"/>
 								<line number="113" hits="0" branch="false"/>
 								<line number="114" hits="0" branch="false"/>
-								<line number="115" hits="0" branch="false"/>
-								<line number="117" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="116" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="118" hits="0" branch="false"/>
-								<line number="120" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="117" hits="0" branch="false"/>
+								<line number="119" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="121" hits="0" branch="false"/>
+								<line number="120" hits="0" branch="false"/>
+								<line number="122" hits="0" branch="false"/>
 								<line number="123" hits="0" branch="false"/>
 								<line number="124" hits="0" branch="false"/>
-								<line number="125" hits="0" branch="false"/>
-								<line number="129" hits="0" branch="false"/>
+								<line number="127" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="deleteFiles" signature="(Ljava/io/File;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
-								<line number="132" hits="0" branch="false"/>
-								<line number="133" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="130" hits="0" branch="false"/>
+								<line number="131" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="134" hits="0" branch="true" condition-coverage="0% (0/4)">
+								<line number="132" hits="0" branch="true" condition-coverage="0% (0/4)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 										<condition number="1" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
-								<line number="135" hits="0" branch="false"/>
-								<line number="137" hits="0" branch="true" condition-coverage="0% (0/2)">
+								<line number="133" hits="0" branch="false"/>
+								<line number="135" hits="0" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
 								</line>
+								<line number="136" hits="0" branch="false"/>
 								<line number="138" hits="0" branch="false"/>
-								<line number="141" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="valueChange" signature="(Lcom/vaadin/data/Property$ValueChangeEvent;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
@@ -3725,7 +3697,7 @@
 									</conditions>
 								</line>
 								<line number="105" hits="0" branch="false"/>
-								<line number="109" hits="0" branch="false"/>
+								<line number="108" hits="0" branch="false"/>
 							</lines>
 						</method>
 					</methods>
@@ -3824,56 +3796,84 @@
 							</conditions>
 						</line>
 						<line number="105" hits="0" branch="false"/>
-						<line number="109" hits="0" branch="false"/>
-						<line number="112" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="108" hits="0" branch="false"/>
+						<line number="111" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
+						<line number="112" hits="0" branch="false"/>
 						<line number="113" hits="0" branch="false"/>
 						<line number="114" hits="0" branch="false"/>
-						<line number="115" hits="0" branch="false"/>
-						<line number="117" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="116" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="118" hits="0" branch="false"/>
-						<line number="120" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="117" hits="0" branch="false"/>
+						<line number="119" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="121" hits="0" branch="false"/>
+						<line number="120" hits="0" branch="false"/>
+						<line number="122" hits="0" branch="false"/>
 						<line number="123" hits="0" branch="false"/>
 						<line number="124" hits="0" branch="false"/>
-						<line number="125" hits="0" branch="false"/>
-						<line number="129" hits="0" branch="false"/>
-						<line number="132" hits="0" branch="false"/>
-						<line number="133" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="127" hits="0" branch="false"/>
+						<line number="130" hits="0" branch="false"/>
+						<line number="131" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="134" hits="0" branch="true" condition-coverage="0% (0/4)">
+						<line number="132" hits="0" branch="true" condition-coverage="0% (0/4)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 								<condition number="1" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="135" hits="0" branch="false"/>
-						<line number="137" hits="0" branch="true" condition-coverage="0% (0/2)">
+						<line number="133" hits="0" branch="false"/>
+						<line number="135" hits="0" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
+						<line number="136" hits="0" branch="false"/>
 						<line number="138" hits="0" branch="false"/>
-						<line number="141" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="org.universAAL.tools.ucc.controller.install.ServiceReceiver" filename="org/universAAL/tools/ucc/controller/install/ServiceReceiver.java" line-rate="0.0" branch-rate="1.0" complexity="2.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="12" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="receiveUpload" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/io/OutputStream;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="15" hits="0" branch="false"/>
+								<line number="17" hits="0" branch="false"/>
+								<line number="18" hits="0" branch="false"/>
+								<line number="19" hits="0" branch="false"/>
+								<line number="20" hits="0" branch="false"/>
+								<line number="21" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="12" hits="0" branch="false"/>
+						<line number="15" hits="0" branch="false"/>
+						<line number="17" hits="0" branch="false"/>
+						<line number="18" hits="0" branch="false"/>
+						<line number="19" hits="0" branch="false"/>
+						<line number="20" hits="0" branch="false"/>
+						<line number="21" hits="0" branch="false"/>
 					</lines>
 				</class>
 				<class name="org.universAAL.tools.ucc.controller.install.UsrvInfoController" filename="org/universAAL/tools/ucc/controller/install/UsrvInfoController.java" line-rate="0.0" branch-rate="0.0" complexity="3.6666666666666665">
 					<methods>
-						<method name="&lt;init&gt;" signature="(Lorg/universAAL/tools/ucc/model/AALService;Lorg/universAAL/tools/ucc/windows/LicenceWindow;Lorg/universAAL/tools/ucc/windows/UccUI;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="&lt;init&gt;" signature="(Lorg/universAAL/tools/ucc/model/Service;Lorg/universAAL/tools/ucc/windows/LicenceWindow;Lorg/universAAL/tools/ucc/windows/UccUI;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="24" hits="0" branch="false"/>
 								<line number="25" hits="0" branch="false"/>
@@ -13874,7 +13874,7 @@
 								<line number="172" hits="0" branch="false"/>
 							</lines>
 						</method>
-						<method name="parseConfiguration" signature="(Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Lorg/universAAL/tools/ucc/model/AALService;)Lorg/universAAL/tools/ucc/model/AALService;" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="parseConfiguration" signature="(Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Lorg/universAAL/tools/ucc/model/Service;)Lorg/universAAL/tools/ucc/model/Service;" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="535" hits="0" branch="false"/>
 								<line number="537" hits="0" branch="false"/>
@@ -17907,7 +17907,7 @@
 				</class>
 				<class name="org.universAAL.tools.ucc.windows.LicenceWindow" filename="org/universAAL/tools/ucc/windows/LicenceWindow.java" line-rate="0.0" branch-rate="0.0" complexity="2.25">
 					<methods>
-						<method name="&lt;init&gt;" signature="(Lorg/universAAL/tools/ucc/windows/UccUI;Ljava/util/ArrayList;Lorg/universAAL/tools/ucc/model/AALService;Lorg/universAAL/tools/ucc/model/UAPP;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="&lt;init&gt;" signature="(Lorg/universAAL/tools/ucc/windows/UccUI;Ljava/util/ArrayList;Lorg/universAAL/tools/ucc/model/Service;Lorg/universAAL/tools/ucc/model/UAPP;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="34" hits="0" branch="false"/>
 								<line number="44" hits="0" branch="false"/>
@@ -18915,7 +18915,7 @@
 				</class>
 				<class name="org.universAAL.tools.ucc.windows.SelectUserWindow" filename="org/universAAL/tools/ucc/windows/SelectUserWindow.java" line-rate="0.0" branch-rate="0.0" complexity="3.25">
 					<methods>
-						<method name="&lt;init&gt;" signature="(Ljava/util/List;Lorg/universAAL/tools/ucc/model/AALService;Lorg/universAAL/tools/ucc/windows/UccUI;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+						<method name="&lt;init&gt;" signature="(Ljava/util/List;Lorg/universAAL/tools/ucc/model/Service;Lorg/universAAL/tools/ucc/windows/UccUI;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
 							<lines>
 								<line number="52" hits="0" branch="false"/>
 								<line number="53" hits="0" branch="false"/>
