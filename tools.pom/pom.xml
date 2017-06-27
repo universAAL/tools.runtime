@@ -5,11 +5,11 @@
   <parent>
     <groupId>org.universAAL</groupId>
     <artifactId>uAAL.pom</artifactId>
-    <version>3.4.1-SNAPSHOT</version>
+    <version>3.4.2-SNAPSHOT</version>
   </parent>
   <groupId>org.universAAL.tools</groupId>
   <artifactId>tools.pom</artifactId>
-  <version>3.4.1-SNAPSHOT</version>
+  <version>3.4.2-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>universAAL Tools Suite</name>
   <description></description>
@@ -25,75 +25,80 @@
       <dependency>
         <groupId>org.universAAL.middleware</groupId>
         <artifactId>mw.pom</artifactId>
-        <version>3.4.1-SNAPSHOT</version>
+        <version>3.4.2-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>org.universAAL.middleware</groupId>
         <artifactId>mw.pom.osgi</artifactId>
-        <version>3.4.1-SNAPSHOT</version>
+        <version>3.4.2-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>org.universAAL.ontology</groupId>
         <artifactId>ont.pom</artifactId>
-        <version>3.4.1-SNAPSHOT</version>
+        <version>3.4.2-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>org.universAAL.ui</groupId>
         <artifactId>ui.pom</artifactId>
-        <version>3.4.1-SNAPSHOT</version>
+        <version>3.4.2-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>org.universAAL.lddi</groupId>
         <artifactId>lddi.pom</artifactId>
-        <version>3.4.1-SNAPSHOT</version>
+        <version>3.4.2-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>org.universAAL.lddi</groupId>
         <artifactId>lddi.pom.common</artifactId>
-        <version>3.4.1-SNAPSHOT</version>
+        <version>3.4.2-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>org.universAAL.lddi</groupId>
         <artifactId>lddi.pom.bluetooth</artifactId>
-        <version>3.4.1-SNAPSHOT</version>
+        <version>3.4.2-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>org.universAAL.lddi</groupId>
         <artifactId>lddi.pom.knx</artifactId>
-        <version>3.4.1-SNAPSHOT</version>
+        <version>3.4.2-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>org.universAAL.support</groupId>
         <artifactId>utilities.pom</artifactId>
-        <version>3.4.1-SNAPSHOT</version>
+        <version>3.4.2-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>org.universAAL.tools</groupId>
         <artifactId>tools.log-monitor</artifactId>
-        <version>3.4.1-SNAPSHOT</version>
+        <version>3.4.2-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>org.universAAL.tools</groupId>
         <artifactId>tools.sparql-tester</artifactId>
-        <version>3.4.1-SNAPSHOT</version>
+        <version>3.4.2-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.universAAL.tools</groupId>
+        <artifactId>tools.karaf.feature</artifactId>
+        <version>3.4.2-SNAPSHOT</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

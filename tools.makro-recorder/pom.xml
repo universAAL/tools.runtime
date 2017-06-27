@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.universAAL.tools</groupId>
-		<artifactId>tools.pom</artifactId>
-		<version>3.4.1-SNAPSHOT</version>
-		<relativePath>../tools.pom/pom.xml</relativePath>
-	</parent>
-	<packaging>pom</packaging>
-	<artifactId>tools.makro-recorder</artifactId>
-	<name>universAAL Tools Makro Recorder Suite</name>
-	<version>3.4.1-SNAPSHOT</version>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.universAAL.tools</groupId>
+    <artifactId>tools.pom</artifactId>
+    <version>3.4.2-SNAPSHOT</version>
+    <relativePath>../tools.pom/pom.xml</relativePath>
+  </parent>
+  <artifactId>tools.makro-recorder</artifactId>
+  <version>3.4.2-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>universAAL Tools Makro Recorder Suite</name>
   <modules>
-  	<module>tools.makro-recorder.osgi</module>
-  	<module>tools.makro-recorder.swingGUI</module>
+    <module>tools.makro-recorder.osgi</module>
+    <module>tools.makro-recorder.swingGUI</module>
   </modules>
-  
   <dependencyManagement>
     <dependencies>
       <dependency>
-		<groupId>org.universAAL.tools</groupId>
+        <groupId>org.universAAL.tools</groupId>
         <artifactId>tools.makro-recorder.osgi</artifactId>
-	     <version>3.4.1-SNAPSHOT</version>
+        <version>3.4.2-SNAPSHOT</version>
       </dependency>
       <dependency>
-		<groupId>org.universAAL.tools</groupId>
+        <groupId>org.universAAL.tools</groupId>
         <artifactId>tools.makro-recorder.swingGUI</artifactId>
-	     <version>3.4.1-SNAPSHOT</version>
+        <version>3.4.2-SNAPSHOT</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

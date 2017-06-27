@@ -3,13 +3,13 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-	<groupId>org.universAAL.tools</groupId>
-	<artifactId>tools.pom</artifactId>
-    <version>3.4.1-SNAPSHOT</version>
+    <groupId>org.universAAL.tools</groupId>
+    <artifactId>tools.pom</artifactId>
+    <version>3.4.2-SNAPSHOT</version>
   </parent>
   <groupId>org.universAAL.tools</groupId>
   <artifactId>tools.karaf.feature</artifactId>
-  <version>3.4.1-SNAPSHOT</version>
+  <version>3.4.2-SNAPSHOT</version>
   <name>universAAL Karaf Feature</name>
   <properties>
     <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
@@ -23,14 +23,14 @@
       <groupId>org.universAAL.ontology</groupId>
       <artifactId>ont.karaf.feature</artifactId>
     </dependency>
-      <dependency>
-        <groupId>org.universAAL.tools</groupId>
-        <artifactId>tools.log-monitor</artifactId>
-      </dependency>
-      <dependency>
-        <groupId>org.universAAL.tools</groupId>
-        <artifactId>tools.sparql-tester</artifactId>
-      </dependency>
+    <dependency>
+      <groupId>org.universAAL.tools</groupId>
+      <artifactId>tools.log-monitor</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.universAAL.tools</groupId>
+      <artifactId>tools.sparql-tester</artifactId>
+    </dependency>
   </dependencies>
   <build>
     <sourceDirectory>${basedir}/src/main/features</sourceDirectory>

@@ -1,50 +1,49 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.universAAL.tools</groupId>
-		<artifactId>tools.ucc.pom</artifactId>
-		<version>3.4.1-SNAPSHOT</version>
-		<relativePath>../tools.ucc.pom/pom.xml</relativePath>
-	</parent>
-	<artifactId>tools.ucc.configuration.configdefinitionregistry</artifactId>
-	<version>3.4.1-SNAPSHOT</version>
-	<packaging>bundle</packaging>
-	<name>universAAL Tools uCC Configuration Config Definition Registry</name>
-
-	<dependencies>
-		<dependency>
-			<groupId>org.universAAL.middleware</groupId>
-			<artifactId>mw.container.osgi</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.universAAL.tools</groupId>
-			<artifactId>tools.ucc.configuration.model</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.osgi</groupId>
-			<artifactId>org.osgi.core</artifactId>
-		</dependency>
-	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>maven-bundle-plugin</artifactId>
-				<extensions>true</extensions>
-				<configuration>
-					<instructions>
-						<Bundle-Name>${project.groupId}.${project.artifactId}</Bundle-Name>
-						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-						<Bundle-Version>${project.version}</Bundle-Version>
-						<Bundle-Activator>org.universAAL.tools.ucc.configuration.configdefinitionregistry.internal.Activator</Bundle-Activator>
-						<Export-Package>org.universAAL.tools.ucc.configuration.configdefinitionregistry.*,
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.universAAL.tools</groupId>
+    <artifactId>tools.ucc.pom</artifactId>
+    <version>3.4.2-SNAPSHOT</version>
+    <relativePath>../tools.ucc.pom/pom.xml</relativePath>
+  </parent>
+  <artifactId>tools.ucc.configuration.configdefinitionregistry</artifactId>
+  <version>3.4.2-SNAPSHOT</version>
+  <packaging>bundle</packaging>
+  <name>universAAL Tools uCC Configuration Config Definition Registry</name>
+  <dependencies>
+    <dependency>
+      <groupId>org.universAAL.middleware</groupId>
+      <artifactId>mw.container.osgi</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.universAAL.tools</groupId>
+      <artifactId>tools.ucc.configuration.model</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.core</artifactId>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Bundle-Name>${project.groupId}.${project.artifactId}</Bundle-Name>
+            <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+            <Bundle-Version>${project.version}</Bundle-Version>
+            <Bundle-Activator>org.universAAL.tools.ucc.configuration.configdefinitionregistry.internal.Activator</Bundle-Activator>
+            <Export-Package>org.universAAL.tools.ucc.configuration.configdefinitionregistry.*,
 							org.universAAL.tools.ucc.configuration.configdefinitionregistry.interfaces.*,
 							org.universAAL.tools.ucc.configuration.configdefinitionregistry.internal.*</Export-Package>
-					</instructions>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+          </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

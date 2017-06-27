@@ -1,60 +1,59 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.universAAL.tools</groupId>
-		<artifactId>tools.ucc.pom</artifactId>
-		<version>3.4.1-SNAPSHOT</version>
-		<relativePath>../tools.ucc.pom/pom.xml</relativePath>
-	</parent>
-	<artifactId>tools.ucc.deploymanagerservice.impl</artifactId>
-	<version>3.4.1-SNAPSHOT</version>
-	<packaging>bundle</packaging>
-	<name>universAAL Tools uCC Deploy Manager Service Implementation</name>
-	<description>uCC deploy manager service implementation for uStore</description>
-
-	<dependencies>
-		<dependency>
-			<groupId>org.osgi</groupId>
-			<artifactId>org.osgi.core</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.universAAL.tools</groupId>
-			<artifactId>tools.ucc.deploymanagerservice</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.universAAL.tools</groupId>
-			<artifactId>tools.ucc.frontend</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.universAAL.middleware</groupId>
-			<artifactId>mw.container.osgi</artifactId>
-		</dependency>
-	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>maven-bundle-plugin</artifactId>
-				<extensions>true</extensions>
-				<configuration>
-					<instructions>
-						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-						<Bundle-Name>${project.artifactId}</Bundle-Name>
-						<Bundle-Description>Implementation of a service for deploy manager
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.universAAL.tools</groupId>
+    <artifactId>tools.ucc.pom</artifactId>
+    <version>3.4.2-SNAPSHOT</version>
+    <relativePath>../tools.ucc.pom/pom.xml</relativePath>
+  </parent>
+  <artifactId>tools.ucc.deploymanagerservice.impl</artifactId>
+  <version>3.4.2-SNAPSHOT</version>
+  <packaging>bundle</packaging>
+  <name>universAAL Tools uCC Deploy Manager Service Implementation</name>
+  <description>uCC deploy manager service implementation for uStore</description>
+  <dependencies>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.universAAL.tools</groupId>
+      <artifactId>tools.ucc.deploymanagerservice</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.universAAL.tools</groupId>
+      <artifactId>tools.ucc.frontend</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.universAAL.middleware</groupId>
+      <artifactId>mw.container.osgi</artifactId>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+            <Bundle-Name>${project.artifactId}</Bundle-Name>
+            <Bundle-Description>Implementation of a service for deploy manager
 							service for uStore</Bundle-Description>
-						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-						<Bundle-Activator>org.universAAL.tools.ucc.deploymanager
+            <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+            <Bundle-Activator>org.universAAL.tools.ucc.deploymanager
 							service.impl.Activator</Bundle-Activator>
-						<Import-Package>org.universAAL.middleware.container.utils,
+            <Import-Package>org.universAAL.middleware.container.utils,
 							org.universAAL.middleware.container,
 							org.universAAL.middleware.container.osgi,
 							org.universAAL.tools.ucc.deploymanagerservice,
 							org.universAAL.tools.ucc.frontend.api,org.osgi.framework;version="[1,2)"</Import-Package>
-					</instructions>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+          </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

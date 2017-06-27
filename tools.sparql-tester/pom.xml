@@ -5,11 +5,11 @@
   <parent>
     <groupId>org.universAAL.tools</groupId>
     <artifactId>tools.pom</artifactId>
-    <version>3.4.1-SNAPSHOT</version>
+    <version>3.4.2-SNAPSHOT</version>
     <relativePath>../tools.pom/pom.xml</relativePath>
   </parent>
   <artifactId>tools.sparql-tester</artifactId>
-  <version>3.4.1-SNAPSHOT</version>
+  <version>3.4.2-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <name>universAAL Tools SPARQL Tester</name>
   <description>A runtime tool to inject SPARQL queries into the CHe query service.</description>
