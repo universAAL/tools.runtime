@@ -26,7 +26,7 @@
           
                 <div class="xleft">
         <span id="publishDate">Last Published: 2017</span>
-                  &nbsp;| <span id="projectVersion">Version: 3.4.1-SNAPSHOT</span>
+                  &nbsp;| <span id="projectVersion">Version: 3.4.2-SNAPSHOT</span>
                       </div>
             <div class="xright">                    <a href="./" title="universAAL Tools uCC Karaf feature">universAAL Tools uCC Karaf feature</a>
             
@@ -109,57 +109,45 @@ does not match convention: ^universAAL uCC .*<br />
 <th>Check</th>
 <th>Status</th></tr>
 <tr class="b">
-<td>tools.pom</td>
-<td>DependencyManagementCheckFix</td>
-<td><b>Failed</b><br /><tt>dependencyManagement Conformance Directive Fail :<br />
-It seems the POM has a dependencyManagement malformed section.<br />
-	org.universAAL.tools:tools.karaf.feature, version should be : 3.4.1-SNAPSHOT<br /></tt></td></tr>
-<tr class="a">
 <td>tools.log-monitor</td>
 <td>DecoupleCheck</td>
 <td><b>Failed</b><br /><tt>The following Files are not Container Decoupled:<br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/Activator.html">org.universAAL.tools.logmonitor.Activator</a><br />
 To solve this problem, make sure there are no OSGi imports in your classes, unless the package that contains them has explicitly &quot;osgi&quot; in it's name.<br /></tt></td></tr>
-<tr class="b">
+<tr class="a">
 <td>tools.log-monitor</td>
 <td>LicenseHeaderCheckFix</td>
 <td><b>Failed</b><br /><tt>The following Files seem not to have a proper License Header:<br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/Activator.html">org.universAAL.tools.logmonitor.Activator</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/BusMemberMonitor.html">org.universAAL.tools.logmonitor.BusMemberMonitor</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/LogListenerEx.html">org.universAAL.tools.logmonitor.LogListenerEx</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/LogMonitor.html">org.universAAL.tools.logmonitor.LogMonitor</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/MainGui.html">org.universAAL.tools.logmonitor.MainGui</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/MemberData.html">org.universAAL.tools.logmonitor.MemberData</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/Utils.html">org.universAAL.tools.logmonitor.Utils</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/all_log/LogEntry.html">org.universAAL.tools.logmonitor.all_log.LogEntry</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/all_log/LogMonitor.html">org.universAAL.tools.logmonitor.all_log.LogMonitor</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/all_log/gui/AllLogPanel.html">org.universAAL.tools.logmonitor.all_log.gui.AllLogPanel</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/all_log/gui/MessagePanel.html">org.universAAL.tools.logmonitor.all_log.gui.MessagePanel</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/bus_member/LogMonitor.html">org.universAAL.tools.logmonitor.bus_member.LogMonitor</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/bus_member/MySpaceListener.html">org.universAAL.tools.logmonitor.bus_member.MySpaceListener</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/bus_member/gui/BusMemberGui.html">org.universAAL.tools.logmonitor.bus_member.gui.BusMemberGui</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/bus_member/gui/BusMemberPane.html">org.universAAL.tools.logmonitor.bus_member.gui.BusMemberPane</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/ontology/LogMonitor.html">org.universAAL.tools.logmonitor.ontology.LogMonitor</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/ontology/gui/OntologyGui.html">org.universAAL.tools.logmonitor.ontology.gui.OntologyGui</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/ontology/gui/OntologyPane.html">org.universAAL.tools.logmonitor.ontology.gui.OntologyPane</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/rdfvis/Edge.html">org.universAAL.tools.logmonitor.rdfvis.Edge</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/rdfvis/LogMonitor.html">org.universAAL.tools.logmonitor.rdfvis.LogMonitor</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/rdfvis/Node.html">org.universAAL.tools.logmonitor.rdfvis.Node</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/rdfvis/ResourceInterpreter.html">org.universAAL.tools.logmonitor.rdfvis.ResourceInterpreter</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/rdfvis/gui/GraphPanel.html">org.universAAL.tools.logmonitor.rdfvis.gui.GraphPanel</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/rdfvis/gui/RDFVis.html">org.universAAL.tools.logmonitor.rdfvis.gui.RDFVis</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/service_bus_matching/CEStringUtil.html">org.universAAL.tools.logmonitor.service_bus_matching.CEStringUtil</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/service_bus_matching/LogMonitor.html">org.universAAL.tools.logmonitor.service_bus_matching.LogMonitor</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/service_bus_matching/LogMonitor_Util.html">org.universAAL.tools.logmonitor.service_bus_matching.LogMonitor_Util</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/service_bus_matching/Matchmaking.html">org.universAAL.tools.logmonitor.service_bus_matching.Matchmaking</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/service_bus_matching/Sparul.html">org.universAAL.tools.logmonitor.service_bus_matching.Sparul</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/service_bus_matching/URI.html">org.universAAL.tools.logmonitor.service_bus_matching.URI</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/service_bus_matching/gui/Gui.html">org.universAAL.tools.logmonitor.service_bus_matching.gui.Gui</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/service_bus_matching/gui/MatchmakingPane.html">org.universAAL.tools.logmonitor.service_bus_matching.gui.MatchmakingPane</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/util/ClipboardHandling.html">org.universAAL.tools.logmonitor.util.ClipboardHandling</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/util/HTMLBusOperationsPane.html">org.universAAL.tools.logmonitor.util.HTMLBusOperationsPane</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/util/HTMLPaneBase.html">org.universAAL.tools.logmonitor.util.HTMLPaneBase</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/util/HTMLVisibilityPane.html">org.universAAL.tools.logmonitor.util.HTMLVisibilityPane</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/util/PatternInfo.html">org.universAAL.tools.logmonitor.util.PatternInfo</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/logmonitor/util/ProfileInfo.html">org.universAAL.tools.logmonitor.util.ProfileInfo</a><br />
 Make sure all your classes have an Apache Software Licence Header<br />
  see license at <a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><br /></tt></td></tr>
-<tr class="a">
+<tr class="b">
 <td>tools.makro-recorder.osgi</td>
 <td>LicenseFileCheckFix</td>
 <td><b>Failed</b><br /><tt>License File does not exist: ASL2.0.txt<br />
 License File does not exist: NOTICE.txt<br />
 <br /></tt></td></tr>
-<tr class="b">
+<tr class="a">
 <td>tools.makro-recorder.osgi</td>
 <td>LicenseHeaderCheckFix</td>
 <td><b>Failed</b><br /><tt>The following Files seem not to have a proper License Header:<br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/makrorecorder/osgi/Activator.html">org.universAAL.tools.makrorecorder.osgi.Activator</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/makrorecorder/osgi/MakroRecorder.html">org.universAAL.tools.makrorecorder.osgi.MakroRecorder</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/makrorecorder/osgi/pattern/BusRecorder.html">org.universAAL.tools.makrorecorder.osgi.pattern.BusRecorder</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/makrorecorder/osgi/pattern/Pattern.html">org.universAAL.tools.makrorecorder.osgi.pattern.Pattern</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/makrorecorder/osgi/pattern/PatternListener.html">org.universAAL.tools.makrorecorder.osgi.pattern.PatternListener</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/makrorecorder/osgi/pattern/PatternXMLParser.html">org.universAAL.tools.makrorecorder.osgi.pattern.PatternXMLParser</a><br />
 Make sure all your classes have an Apache Software Licence Header<br />
  see license at <a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><br /></tt></td></tr>
-<tr class="a">
+<tr class="b">
 <td>tools.makro-recorder.swingGUI</td>
 <td>DecoupleCheck</td>
 <td><b>Failed</b><br /><tt>The following Files are not Container Decoupled:<br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/makrorecorder/swingGUI/Activator.html">org.universAAL.tools.makrorecorder.swingGUI.Activator</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/makrorecorder/swingGUI/MakroRecorderSwingGUI.html">org.universAAL.tools.makrorecorder.swingGUI.MakroRecorderSwingGUI</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/makrorecorder/swingGUI/pattern/PatternEditFrame.html">org.universAAL.tools.makrorecorder.swingGUI.pattern.PatternEditFrame</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/makrorecorder/swingGUI/pattern/PatternPanel.html">org.universAAL.tools.makrorecorder.swingGUI.pattern.PatternPanel</a><br />
 To solve this problem, make sure there are no OSGi imports in your classes, unless the package that contains them has explicitly &quot;osgi&quot; in it's name.<br /></tt></td></tr>
-<tr class="b">
+<tr class="a">
 <td>tools.makro-recorder.swingGUI</td>
 <td>LicenseFileCheckFix</td>
 <td><b>Failed</b><br /><tt>License File does not exist: ASL2.0.txt<br />
 License File does not exist: NOTICE.txt<br />
 <br /></tt></td></tr>
-<tr class="a">
+<tr class="b">
 <td>tools.makro-recorder.swingGUI</td>
 <td>LicenseHeaderCheckFix</td>
 <td><b>Failed</b><br /><tt>The following Files seem not to have a proper License Header:<br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/makrorecorder/swingGUI/Activator.html">org.universAAL.tools.makrorecorder.swingGUI.Activator</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/makrorecorder/swingGUI/MakroRecorderSwingGUI.html">org.universAAL.tools.makrorecorder.swingGUI.MakroRecorderSwingGUI</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/makrorecorder/swingGUI/pattern/PatternEditFrame.html">org.universAAL.tools.makrorecorder.swingGUI.pattern.PatternEditFrame</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/makrorecorder/swingGUI/pattern/PatternPanel.html">org.universAAL.tools.makrorecorder.swingGUI.pattern.PatternPanel</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/makrorecorder/swingGUI/pattern/resource/EditResourceGUI.html">org.universAAL.tools.makrorecorder.swingGUI.pattern.resource.EditResourceGUI</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/makrorecorder/swingGUI/pattern/resource/ResourceInfoPanel.html">org.universAAL.tools.makrorecorder.swingGUI.pattern.resource.ResourceInfoPanel</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/makrorecorder/swingGUI/pattern/resource/ResourceList.html">org.universAAL.tools.makrorecorder.swingGUI.pattern.resource.ResourceList</a><br />&#160;&#160;&#160;&#160;<a href="xref/org/universAAL/tools/makrorecorder/swingGUI/pattern/resource/ResourceTree.html">org.universAAL.tools.makrorecorder.swingGUI.pattern.resource.ResourceTree</a><br />
 Make sure all your classes have an Apache Software Licence Header<br />
  see license at <a class="externalLink" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><br /></tt></td></tr>
-<tr class="b">
-<td>tools.ucc.pom</td>
-<td>DependencyManagementCheckFix</td>
-<td><b>Failed</b><br /><tt>dependencyManagement Conformance Directive Fail :<br />
-It seems the POM has a dependencyManagement malformed section.<br />
-	org.universAAL.tools:tools.ucc.composite, version should be : 3.4.1-SNAPSHOT<br /></tt></td></tr>
 <tr class="a">
 <td>tools.ucc.pom</td>
 <td>MavenCoordinateCheck</td>
@@ -410,7 +398,7 @@ GroupId: org.universAAL.tools<br />
 does not match convention: ^org\.universAAL\.tools\.ucc<br />
 Artifact Name: universAAL Tools uCC Composite<br />
 does not match convention: ^universAAL uCC .*<br />
-<br /></tt></td></tr></table><br />3 out of 21 modules are compliant.</div>
+<br /></tt></td></tr></table><br />4 out of 21 modules are compliant.</div>
       </div>
     </div>
     <div class="clear">

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="5.839842324257245E-4" branch-rate="0.0" lines-covered="8" lines-valid="13699" branches-covered="0" branches-valid="3981" complexity="1.9663648124191462" version="2.1.1" timestamp="1498393505180">
+<coverage line-rate="5.839842324257245E-4" branch-rate="0.0" lines-covered="8" lines-valid="13699" branches-covered="0" branches-valid="3981" complexity="1.9663648124191462" version="2.1.1" timestamp="1498735593592">
 	<sources>
 		<source>/home/travis/build/universAAL/tools.runtime/tools.makro-recorder/tools.makro-recorder.swingGUI/src/main/java</source>
 		<source>/home/travis/build/universAAL/tools.runtime/tools.pom/tools.karaf.feature/src/main/features</source>
