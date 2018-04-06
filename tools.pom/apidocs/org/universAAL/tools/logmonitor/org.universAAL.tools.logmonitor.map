@@ -1,18 +1,18 @@
 <map id="G" name="G">
-<area shape="rect" id="c0" href="./Activator.html" title="org.universAAL.tools.logmonitor.Activator" alt="" coords="15,19,89,45"/>
-<area shape="rect" id="node1" href="./Activator.html" title="&lt;TABLE&gt;" alt="" coords="5,8,99,56"/>
-<area shape="rect" id="c1" href="./Utils.html" title="org.universAAL.tools.logmonitor.Utils" alt="" coords="135,19,183,45"/>
-<area shape="rect" id="node2" href="./Utils.html" title="&lt;TABLE&gt;" alt="" coords="123,8,195,56"/>
-<area shape="rect" id="c2" href="./MemberData.html" title="org.universAAL.tools.logmonitor.MemberData" alt="" coords="229,19,325,45"/>
-<area shape="rect" id="node3" href="./MemberData.html" title="&lt;TABLE&gt;" alt="" coords="219,8,336,56"/>
-<area shape="rect" id="c3" href="./BusMemberListener.html" title="org.universAAL.tools.logmonitor.BusMemberListener" alt="" coords="370,11,507,53"/>
-<area shape="rect" id="node4" href="./BusMemberListener.html" title="&lt;TABLE&gt;" alt="" coords="360,6,517,58"/>
-<area shape="rect" id="c4" href="./BusMemberMonitor.html" title="org.universAAL.tools.logmonitor.BusMemberMonitor" alt="" coords="552,19,685,45"/>
-<area shape="rect" id="node5" href="./BusMemberMonitor.html" title="&lt;TABLE&gt;" alt="" coords="541,8,696,56"/>
-<area shape="rect" id="c5" href="./MainGui.html" title="org.universAAL.tools.logmonitor.MainGui" alt="" coords="731,19,800,45"/>
-<area shape="rect" id="node6" href="./MainGui.html" title="&lt;TABLE&gt;" alt="" coords="720,8,811,56"/>
-<area shape="rect" id="c6" href="./LogListenerEx.html" title="org.universAAL.tools.logmonitor.LogListenerEx" alt="" coords="845,11,949,53"/>
-<area shape="rect" id="node7" href="./LogListenerEx.html" title="&lt;TABLE&gt;" alt="" coords="835,6,960,58"/>
-<area shape="rect" id="c7" href="./LogMonitor.html" title="org.universAAL.tools.logmonitor.LogMonitor" alt="" coords="995,19,1080,45"/>
-<area shape="rect" id="node8" href="./LogMonitor.html" title="&lt;TABLE&gt;" alt="" coords="984,8,1091,56"/>
+<area shape="rect" id="node1_0" href="./Activator.html" title="org.universAAL.tools.logmonitor.Activator" alt="" coords="15,20,89,47"/>
+<area shape="rect" id="node1" href="./Activator.html" title="&lt;TABLE&gt;" alt="" coords="5,9,99,57"/>
+<area shape="rect" id="node2_1" href="./Utils.html" title="org.universAAL.tools.logmonitor.Utils" alt="" coords="136,20,184,47"/>
+<area shape="rect" id="node2" href="./Utils.html" title="&lt;TABLE&gt;" alt="" coords="124,9,196,57"/>
+<area shape="rect" id="node3_2" href="./MemberData.html" title="org.universAAL.tools.logmonitor.MemberData" alt="" coords="231,20,327,47"/>
+<area shape="rect" id="node3" href="./MemberData.html" title="&lt;TABLE&gt;" alt="" coords="220,9,337,57"/>
+<area shape="rect" id="node4_3" href="./BusMemberListener.html" title="org.universAAL.tools.logmonitor.BusMemberListener" alt="" coords="373,11,510,55"/>
+<area shape="rect" id="node4" href="./BusMemberListener.html" title="&lt;TABLE&gt;" alt="" coords="362,6,521,61"/>
+<area shape="rect" id="node5_4" href="./BusMemberMonitor.html" title="org.universAAL.tools.logmonitor.BusMemberMonitor" alt="" coords="556,20,689,47"/>
+<area shape="rect" id="node5" href="./BusMemberMonitor.html" title="&lt;TABLE&gt;" alt="" coords="545,9,700,57"/>
+<area shape="rect" id="node6_5" href="./MainGui.html" title="org.universAAL.tools.logmonitor.MainGui" alt="" coords="735,20,804,47"/>
+<area shape="rect" id="node6" href="./MainGui.html" title="&lt;TABLE&gt;" alt="" coords="724,9,815,57"/>
+<area shape="rect" id="node7_6" href="./LogListenerEx.html" title="org.universAAL.tools.logmonitor.LogListenerEx" alt="" coords="849,11,953,55"/>
+<area shape="rect" id="node7" href="./LogListenerEx.html" title="&lt;TABLE&gt;" alt="" coords="839,6,964,61"/>
+<area shape="rect" id="node8_7" href="./LogMonitor.html" title="org.universAAL.tools.logmonitor.LogMonitor" alt="" coords="999,20,1084,47"/>
+<area shape="rect" id="node8" href="./LogMonitor.html" title="&lt;TABLE&gt;" alt="" coords="988,9,1095,57"/>
 </map>

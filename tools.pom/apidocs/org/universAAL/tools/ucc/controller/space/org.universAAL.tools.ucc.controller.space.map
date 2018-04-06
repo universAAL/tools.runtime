@@ -1,12 +1,12 @@
 <map id="G" name="G">
-<area shape="rect" id="c21345" href="./AddNewPersonController.html" title="org.universAAL.tools.ucc.controller.space.AddNewPersonController" alt="" coords="16,17,184,42"/>
+<area shape="rect" id="node1_0" href="./AddNewPersonController.html" title="org.universAAL.tools.ucc.controller.space.AddNewPersonController" alt="" coords="16,16,184,43"/>
 <area shape="rect" id="node1" href="./AddNewPersonController.html" title="&lt;TABLE&gt;" alt="" coords="5,5,195,53"/>
-<area shape="rect" id="c21346" href="./PersonWindowController.html" title="org.universAAL.tools.ucc.controller.space.PersonWindowController" alt="" coords="229,17,395,42"/>
+<area shape="rect" id="node2_1" href="./PersonWindowController.html" title="org.universAAL.tools.ucc.controller.space.PersonWindowController" alt="" coords="229,16,395,43"/>
 <area shape="rect" id="node2" href="./PersonWindowController.html" title="&lt;TABLE&gt;" alt="" coords="219,5,405,53"/>
-<area shape="rect" id="c21347" href="./HardwareWindowController.html" title="org.universAAL.tools.ucc.controller.space.HardwareWindowController" alt="" coords="439,17,619,42"/>
-<area shape="rect" id="node3" href="./HardwareWindowController.html" title="&lt;TABLE&gt;" alt="" coords="429,5,629,53"/>
-<area shape="rect" id="c21348" href="./RoomsWindowController.html" title="org.universAAL.tools.ucc.controller.space.RoomsWindowController" alt="" coords="664,17,829,42"/>
-<area shape="rect" id="node4" href="./RoomsWindowController.html" title="&lt;TABLE&gt;" alt="" coords="653,5,840,53"/>
-<area shape="rect" id="c21349" href="./AddNewHardwareController.html" title="org.universAAL.tools.ucc.controller.space.AddNewHardwareController" alt="" coords="874,17,1057,42"/>
-<area shape="rect" id="node5" href="./AddNewHardwareController.html" title="&lt;TABLE&gt;" alt="" coords="864,5,1067,53"/>
+<area shape="rect" id="node3_2" href="./HardwareWindowController.html" title="org.universAAL.tools.ucc.controller.space.HardwareWindowController" alt="" coords="441,16,621,43"/>
+<area shape="rect" id="node3" href="./HardwareWindowController.html" title="&lt;TABLE&gt;" alt="" coords="430,5,631,53"/>
+<area shape="rect" id="node4_3" href="./RoomsWindowController.html" title="org.universAAL.tools.ucc.controller.space.RoomsWindowController" alt="" coords="667,16,832,43"/>
+<area shape="rect" id="node4" href="./RoomsWindowController.html" title="&lt;TABLE&gt;" alt="" coords="656,5,843,53"/>
+<area shape="rect" id="node5_4" href="./AddNewHardwareController.html" title="org.universAAL.tools.ucc.controller.space.AddNewHardwareController" alt="" coords="878,16,1061,43"/>
+<area shape="rect" id="node5" href="./AddNewHardwareController.html" title="&lt;TABLE&gt;" alt="" coords="867,5,1071,53"/>
 </map>

@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="c74892" href="./MySpaceListener.html" title="org.universAAL.tools.logmonitor.bus_member.MySpaceListener" alt="" coords="147,118,269,143"/>
-<area shape="rect" id="node1" href="./MySpaceListener.html" title="&lt;TABLE&gt;" alt="" coords="137,107,279,155"/>
-<area shape="rect" id="c75190" href="http://java.sun.com/j2se/1.4.2/docs/api/org/universAAL/middleware/managers/api/SpaceListener.html" title="org.universAAL.middleware.managers.api.SpaceListener" alt="" coords="16,11,120,53"/>
-<area shape="rect" id="node2" href="http://java.sun.com/j2se/1.4.2/docs/api/org/universAAL/middleware/managers/api/SpaceListener.html" title="&lt;TABLE&gt;" alt="" coords="5,6,131,58"/>
-<area shape="rect" id="c75191" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Runnable.html" title="java.lang.Runnable" alt="" coords="165,11,251,53"/>
-<area shape="rect" id="node4" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Runnable.html" title="&lt;TABLE&gt;" alt="" coords="155,6,261,58"/>
-<area shape="rect" id="c75192" href="http://java.sun.com/j2se/1.4.2/docs/api/org/universAAL/middleware/container/SharedObjectListener.html" title="org.universAAL.middleware.container.SharedObjectListener" alt="" coords="295,11,441,53"/>
-<area shape="rect" id="node6" href="http://java.sun.com/j2se/1.4.2/docs/api/org/universAAL/middleware/container/SharedObjectListener.html" title="&lt;TABLE&gt;" alt="" coords="285,6,451,58"/>
+<area shape="rect" id="node1_0" href="./MySpaceListener.html" title="org.universAAL.tools.logmonitor.bus_member.MySpaceListener" alt="" coords="147,120,269,147"/>
+<area shape="rect" id="node1" href="./MySpaceListener.html" title="&lt;TABLE&gt;" alt="" coords="137,109,279,157"/>
+<area shape="rect" id="node2_1" href="http://java.sun.com/j2se/1.4.2/docs/api/org/universAAL/middleware/managers/api/SpaceListener.html" title="org.universAAL.middleware.managers.api.SpaceListener" alt="" coords="16,11,120,55"/>
+<area shape="rect" id="node2" href="http://java.sun.com/j2se/1.4.2/docs/api/org/universAAL/middleware/managers/api/SpaceListener.html" title="&lt;TABLE&gt;" alt="" coords="5,6,131,61"/>
+<area shape="rect" id="node3_2" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Runnable.html" title="java.lang.Runnable" alt="" coords="165,11,251,55"/>
+<area shape="rect" id="node3" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Runnable.html" title="&lt;TABLE&gt;" alt="" coords="155,6,261,61"/>
+<area shape="rect" id="node4_3" href="http://java.sun.com/j2se/1.4.2/docs/api/org/universAAL/middleware/container/SharedObjectListener.html" title="org.universAAL.middleware.container.SharedObjectListener" alt="" coords="297,11,442,55"/>
+<area shape="rect" id="node4" href="http://java.sun.com/j2se/1.4.2/docs/api/org/universAAL/middleware/container/SharedObjectListener.html" title="&lt;TABLE&gt;" alt="" coords="286,6,453,61"/>
 </map>

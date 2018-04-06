@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="c630" href="./MessagePanel.html" title="org.universAAL.tools.logmonitor.all_log.gui.MessagePanel" alt="" coords="16,17,123,42"/>
+<area shape="rect" id="node1_0" href="./MessagePanel.html" title="org.universAAL.tools.logmonitor.all_log.gui.MessagePanel" alt="" coords="16,16,123,43"/>
 <area shape="rect" id="node1" href="./MessagePanel.html" title="&lt;TABLE&gt;" alt="" coords="5,5,133,53"/>
-<area shape="rect" id="c631" href="./AllLogPanel.html" title="org.universAAL.tools.logmonitor.all_log.gui.AllLogPanel" alt="" coords="167,17,257,42"/>
-<area shape="rect" id="node2" href="./AllLogPanel.html" title="&lt;TABLE&gt;" alt="" coords="157,5,267,53"/>
+<area shape="rect" id="node2_1" href="./AllLogPanel.html" title="org.universAAL.tools.logmonitor.all_log.gui.AllLogPanel" alt="" coords="169,16,258,43"/>
+<area shape="rect" id="node2" href="./AllLogPanel.html" title="&lt;TABLE&gt;" alt="" coords="158,5,269,53"/>
 </map>

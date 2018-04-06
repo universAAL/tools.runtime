@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="c1879" href="./MsgFlowPanel.html" title="org.universAAL.tools.logmonitor.msgflow.gui.MsgFlowPanel" alt="" coords="16,17,123,42"/>
+<area shape="rect" id="node1_0" href="./MsgFlowPanel.html" title="org.universAAL.tools.logmonitor.msgflow.gui.MsgFlowPanel" alt="" coords="16,16,123,43"/>
 <area shape="rect" id="node1" href="./MsgFlowPanel.html" title="&lt;TABLE&gt;" alt="" coords="5,5,133,53"/>
-<area shape="rect" id="c1880" href="./MsgFlowPanel.MyViewport.html" title="org.universAAL.tools.logmonitor.msgflow.gui.MsgFlowPanel.MyViewport" alt="" coords="167,17,257,42"/>
-<area shape="rect" id="node2" href="./MsgFlowPanel.MyViewport.html" title="&lt;TABLE&gt;" alt="" coords="157,5,267,53"/>
-<area shape="rect" id="c1881" href="./MyScrollBarUI.html" title="org.universAAL.tools.logmonitor.msgflow.gui.MyScrollBarUI" alt="" coords="301,17,406,42"/>
-<area shape="rect" id="node3" href="./MyScrollBarUI.html" title="&lt;TABLE&gt;" alt="" coords="291,5,416,53"/>
-<area shape="rect" id="c1882" href="./MsgFlowGui.html" title="org.universAAL.tools.logmonitor.msgflow.gui.MsgFlowGui" alt="" coords="451,17,544,42"/>
-<area shape="rect" id="node4" href="./MsgFlowGui.html" title="&lt;TABLE&gt;" alt="" coords="440,5,555,53"/>
+<area shape="rect" id="node2_1" href="./MsgFlowPanel.MyViewport.html" title="org.universAAL.tools.logmonitor.msgflow.gui.MsgFlowPanel.MyViewport" alt="" coords="169,16,258,43"/>
+<area shape="rect" id="node2" href="./MsgFlowPanel.MyViewport.html" title="&lt;TABLE&gt;" alt="" coords="158,5,269,53"/>
+<area shape="rect" id="node3_2" href="./MyScrollBarUI.html" title="org.universAAL.tools.logmonitor.msgflow.gui.MyScrollBarUI" alt="" coords="303,16,409,43"/>
+<area shape="rect" id="node3" href="./MyScrollBarUI.html" title="&lt;TABLE&gt;" alt="" coords="293,5,419,53"/>
+<area shape="rect" id="node4_3" href="./MsgFlowGui.html" title="org.universAAL.tools.logmonitor.msgflow.gui.MsgFlowGui" alt="" coords="455,16,548,43"/>
+<area shape="rect" id="node4" href="./MsgFlowGui.html" title="&lt;TABLE&gt;" alt="" coords="444,5,559,53"/>
 </map>

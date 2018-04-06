@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="c12565" href="./User.html" title="org.universAAL.tools.ucc.startup.model.User" alt="" coords="17,19,66,45"/>
-<area shape="rect" id="node1" href="./User.html" title="&lt;TABLE&gt;" alt="" coords="5,8,77,56"/>
-<area shape="rect" id="c12566" href="./UccUsers.html" title="org.universAAL.tools.ucc.startup.model.UccUsers" alt="" coords="112,19,192,45"/>
-<area shape="rect" id="node2" href="./UccUsers.html" title="&lt;TABLE&gt;" alt="" coords="101,8,203,56"/>
-<area shape="rect" id="c12567" href="./Role.html" title="org.universAAL.tools.ucc.startup.model.Role" alt="" coords="237,11,342,53"/>
-<area shape="rect" id="node3" href="./Role.html" title="&lt;TABLE&gt;" alt="" coords="227,6,352,58"/>
-<area shape="rect" id="c12568" href="./UserAccountInfo.html" title="org.universAAL.tools.ucc.startup.model.UserAccountInfo" alt="" coords="386,19,505,45"/>
-<area shape="rect" id="node4" href="./UserAccountInfo.html" title="&lt;TABLE&gt;" alt="" coords="376,8,515,56"/>
+<area shape="rect" id="node1_0" href="./User.html" title="org.universAAL.tools.ucc.startup.model.User" alt="" coords="17,20,66,47"/>
+<area shape="rect" id="node1" href="./User.html" title="&lt;TABLE&gt;" alt="" coords="5,9,77,57"/>
+<area shape="rect" id="node2_1" href="./UccUsers.html" title="org.universAAL.tools.ucc.startup.model.UccUsers" alt="" coords="112,20,192,47"/>
+<area shape="rect" id="node2" href="./UccUsers.html" title="&lt;TABLE&gt;" alt="" coords="101,9,203,57"/>
+<area shape="rect" id="node3_2" href="./Role.html" title="org.universAAL.tools.ucc.startup.model.Role" alt="" coords="238,11,343,55"/>
+<area shape="rect" id="node3" href="./Role.html" title="&lt;TABLE&gt;" alt="" coords="227,6,354,61"/>
+<area shape="rect" id="node4_3" href="./UserAccountInfo.html" title="org.universAAL.tools.ucc.startup.model.UserAccountInfo" alt="" coords="389,20,507,47"/>
+<area shape="rect" id="node4" href="./UserAccountInfo.html" title="&lt;TABLE&gt;" alt="" coords="378,9,518,57"/>
 </map>

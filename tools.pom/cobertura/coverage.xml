@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="5.839842324257245E-4" branch-rate="0.0" lines-covered="8" lines-valid="13699" branches-covered="0" branches-valid="3981" complexity="1.9663648124191462" version="2.1.1" timestamp="1498735593592">
+<coverage line-rate="5.845389449072045E-4" branch-rate="0.0" lines-covered="8" lines-valid="13686" branches-covered="0" branches-valid="3981" complexity="1.9663648124191462" version="2.1.1" timestamp="1523032910202">
 	<sources>
 		<source>/home/travis/build/universAAL/tools.runtime/tools.makro-recorder/tools.makro-recorder.swingGUI/src/main/java</source>
 		<source>/home/travis/build/universAAL/tools.runtime/tools.pom/tools.karaf.feature/src/main/features</source>
@@ -41637,7 +41637,6 @@
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="167" hits="0" branch="false"/>
-								<line number="1448" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="getApp" signature="()Lorg/universAAL/tools/ucc/model/usrv/AalUapp$App;" line-rate="0.0" branch-rate="1.0" complexity="0">
@@ -41783,7 +41782,6 @@
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="1448" hits="0" branch="false"/>
 					</lines>
 				</class>
 				<class name="org.universAAL.tools.ucc.model.usrv.AalUapp$App" filename="org/universAAL/tools/ucc/model/usrv/AalUapp.java" line-rate="0.0" branch-rate="0.0" complexity="1.125">
@@ -41791,7 +41789,6 @@
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="383" hits="0" branch="false"/>
-								<line number="916" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="getAppId" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
@@ -42111,7 +42108,6 @@
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="916" hits="0" branch="false"/>
 					</lines>
 				</class>
 				<class name="org.universAAL.tools.ucc.model.usrv.AalUapp$App$Licenses" filename="org/universAAL/tools/ucc/model/usrv/AalUapp.java" line-rate="0.0" branch-rate="0.0" complexity="1.125">
@@ -42119,7 +42115,6 @@
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="724" hits="0" branch="false"/>
-								<line number="816" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="getLicense" signature="()Ljava/util/List;" line-rate="0.0" branch-rate="0.0" complexity="0">
@@ -42195,7 +42190,6 @@
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="816" hits="0" branch="false"/>
 					</lines>
 				</class>
 				<class name="org.universAAL.tools.ucc.model.usrv.AalUapp$App$Licenses$Sla" filename="org/universAAL/tools/ucc/model/usrv/AalUapp.java" line-rate="0.0" branch-rate="0.0" complexity="1.125">
@@ -42271,7 +42265,6 @@
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="918" hits="0" branch="false"/>
-								<line number="1026" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="getIcon" signature="()Lorg/universAAL/tools/ucc/model/usrv/AalUapp$App$MenuEntry$Icon;" line-rate="0.0" branch-rate="1.0" complexity="0">
@@ -42361,7 +42354,6 @@
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="1026" hits="0" branch="false"/>
 					</lines>
 				</class>
 				<class name="org.universAAL.tools.ucc.model.usrv.AalUapp$App$MenuEntry$Icon" filename="org/universAAL/tools/ucc/model/usrv/AalUapp.java" line-rate="0.0" branch-rate="0.0" complexity="1.125">
@@ -42491,7 +42483,6 @@
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="1197" hits="0" branch="false"/>
-								<line number="1279" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="getContactPoint" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
@@ -42553,7 +42544,6 @@
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="1279" hits="0" branch="false"/>
 					</lines>
 				</class>
 				<class name="org.universAAL.tools.ucc.model.usrv.AalUapp$ApplicationManagement$RemoteManagement" filename="org/universAAL/tools/ucc/model/usrv/AalUapp.java" line-rate="0.0" branch-rate="0.0" complexity="1.125">
@@ -42751,7 +42741,6 @@
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="119" hits="0" branch="false"/>
-								<line number="574" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="getComponents" signature="()Lorg/universAAL/tools/ucc/model/usrv/AalUsrv$Components;" line-rate="0.0" branch-rate="1.0" complexity="0">
@@ -42869,7 +42858,6 @@
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="574" hits="0" branch="false"/>
 					</lines>
 				</class>
 				<class name="org.universAAL.tools.ucc.model.usrv.AalUsrv$Components" filename="org/universAAL/tools/ucc/model/usrv/AalUsrv.java" line-rate="0.0" branch-rate="0.0" complexity="1.2222222222222223">
@@ -43123,7 +43111,6 @@
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="577" hits="0" branch="false"/>
-								<line number="844" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="getDescription" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
@@ -43367,7 +43354,6 @@
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="844" hits="0" branch="false"/>
 					</lines>
 				</class>
 				<class name="org.universAAL.tools.ucc.model.usrv.AalUsrv$Srv$Licenses" filename="org/universAAL/tools/ucc/model/usrv/AalUsrv.java" line-rate="0.0" branch-rate="0.0" complexity="1.2222222222222223">
@@ -43375,7 +43361,6 @@
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="846" hits="0" branch="false"/>
-								<line number="940" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="getLicense" signature="()Ljava/util/List;" line-rate="0.0" branch-rate="0.0" complexity="0">
@@ -43451,7 +43436,6 @@
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="940" hits="0" branch="false"/>
 					</lines>
 				</class>
 				<class name="org.universAAL.tools.ucc.model.usrv.AalUsrv$Srv$Licenses$Sla" filename="org/universAAL/tools/ucc/model/usrv/AalUsrv.java" line-rate="0.0" branch-rate="0.0" complexity="1.2222222222222223">
@@ -44167,7 +44151,6 @@
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="60" hits="0" branch="false"/>
-								<line number="298" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="getCertificate" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
@@ -44397,7 +44380,6 @@
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="298" hits="0" branch="false"/>
 					</lines>
 				</class>
 				<class name="org.universAAL.tools.ucc.model.usrv.ContactType$OtherChannel" filename="org/universAAL/tools/ucc/model/usrv/ContactType.java" line-rate="0.0" branch-rate="0.0" complexity="1.0">
@@ -44553,7 +44535,6 @@
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="90" hits="0" branch="false"/>
-								<line number="252" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="getContainerUnit" signature="()Lorg/universAAL/tools/ucc/model/usrv/DeploymentUnit$ContainerUnit;" line-rate="0.0" branch-rate="1.0" complexity="0">
@@ -44671,7 +44652,6 @@
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="252" hits="0" branch="false"/>
 					</lines>
 				</class>
 				<class name="org.universAAL.tools.ucc.model.usrv.DeploymentUnit$ContainerUnit" filename="org/universAAL/tools/ucc/model/usrv/DeploymentUnit.java" line-rate="0.0" branch-rate="0.0" complexity="1.0444444444444445">
@@ -44679,7 +44659,6 @@
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="254" hits="0" branch="false"/>
-								<line number="568" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="getAndroid" signature="()Lorg/universAAL/tools/ucc/model/usrv/DeploymentUnit$ContainerUnit$Android;" line-rate="0.0" branch-rate="1.0" complexity="0">
@@ -44853,7 +44832,6 @@
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="568" hits="0" branch="false"/>
 					</lines>
 				</class>
 				<class name="org.universAAL.tools.ucc.model.usrv.DeploymentUnit$ContainerUnit$Android" filename="org/universAAL/tools/ucc/model/usrv/DeploymentUnit.java" line-rate="0.0" branch-rate="0.0" complexity="1.0444444444444445">
@@ -46459,7 +46437,6 @@
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="60" hits="0" branch="false"/>
-								<line number="170" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="getLocation" signature="()Lorg/universAAL/tools/ucc/model/usrv/OntologyType$Location;" line-rate="0.0" branch-rate="1.0" complexity="0">
@@ -46549,7 +46526,6 @@
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="170" hits="0" branch="false"/>
 					</lines>
 				</class>
 				<class name="org.universAAL.tools.ucc.model.usrv.OntologyType$Location" filename="org/universAAL/tools/ucc/model/usrv/OntologyType.java" line-rate="0.0" branch-rate="0.0" complexity="1.1666666666666667">
@@ -46681,7 +46657,6 @@
 						<method name="&lt;init&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
 								<line number="76" hits="0" branch="false"/>
-								<line number="387" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="getBundleId" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
@@ -46911,7 +46886,6 @@
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
 						</line>
-						<line number="387" hits="0" branch="false"/>
 					</lines>
 				</class>
 				<class name="org.universAAL.tools.ucc.model.usrv.Part$PartCapabilities" filename="org/universAAL/tools/ucc/model/usrv/Part.java" line-rate="0.0" branch-rate="0.0" complexity="1.2962962962962963">

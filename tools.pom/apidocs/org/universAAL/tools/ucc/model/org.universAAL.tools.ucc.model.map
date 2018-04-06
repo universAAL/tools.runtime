@@ -1,18 +1,18 @@
 <map id="G" name="G">
-<area shape="rect" id="c6265" href="./AppItem.html" title="org.universAAL.tools.ucc.model.AppItem" alt="" coords="16,17,85,42"/>
+<area shape="rect" id="node1_0" href="./AppItem.html" title="org.universAAL.tools.ucc.model.AppItem" alt="" coords="16,16,85,43"/>
 <area shape="rect" id="node1" href="./AppItem.html" title="&lt;TABLE&gt;" alt="" coords="5,5,96,53"/>
-<area shape="rect" id="c6266" href="./RegisteredService.html" title="org.universAAL.tools.ucc.model.RegisteredService" alt="" coords="131,17,259,42"/>
+<area shape="rect" id="node2_1" href="./RegisteredService.html" title="org.universAAL.tools.ucc.model.RegisteredService" alt="" coords="131,16,259,43"/>
 <area shape="rect" id="node2" href="./RegisteredService.html" title="&lt;TABLE&gt;" alt="" coords="120,5,269,53"/>
-<area shape="rect" id="c6267" href="./Activator.html" title="org.universAAL.tools.ucc.model.Activator" alt="" coords="303,17,377,42"/>
-<area shape="rect" id="node3" href="./Activator.html" title="&lt;TABLE&gt;" alt="" coords="293,5,387,53"/>
-<area shape="rect" id="c6268" href="./UAPPReqAtom.html" title="org.universAAL.tools.ucc.model.UAPPReqAtom" alt="" coords="421,17,534,42"/>
-<area shape="rect" id="node4" href="./UAPPReqAtom.html" title="&lt;TABLE&gt;" alt="" coords="411,5,544,53"/>
-<area shape="rect" id="c6269" href="./Provider.html" title="org.universAAL.tools.ucc.model.Provider" alt="" coords="579,17,648,42"/>
-<area shape="rect" id="node5" href="./Provider.html" title="&lt;TABLE&gt;" alt="" coords="568,5,659,53"/>
-<area shape="rect" id="c6270" href="./UAPPPart.html" title="org.universAAL.tools.ucc.model.UAPPPart" alt="" coords="693,17,774,42"/>
-<area shape="rect" id="node6" href="./UAPPPart.html" title="&lt;TABLE&gt;" alt="" coords="683,5,784,53"/>
-<area shape="rect" id="c6271" href="./UAPP.html" title="org.universAAL.tools.ucc.model.UAPP" alt="" coords="818,17,875,42"/>
-<area shape="rect" id="node7" href="./UAPP.html" title="&lt;TABLE&gt;" alt="" coords="808,5,885,53"/>
-<area shape="rect" id="c6272" href="./Service.html" title="org.universAAL.tools.ucc.model.Service" alt="" coords="919,17,985,42"/>
-<area shape="rect" id="node8" href="./Service.html" title="&lt;TABLE&gt;" alt="" coords="909,5,995,53"/>
+<area shape="rect" id="node3_2" href="./Activator.html" title="org.universAAL.tools.ucc.model.Activator" alt="" coords="305,16,378,43"/>
+<area shape="rect" id="node3" href="./Activator.html" title="&lt;TABLE&gt;" alt="" coords="294,5,389,53"/>
+<area shape="rect" id="node4_3" href="./UAPPReqAtom.html" title="org.universAAL.tools.ucc.model.UAPPReqAtom" alt="" coords="423,16,537,43"/>
+<area shape="rect" id="node4" href="./UAPPReqAtom.html" title="&lt;TABLE&gt;" alt="" coords="413,5,547,53"/>
+<area shape="rect" id="node5_4" href="./Provider.html" title="org.universAAL.tools.ucc.model.Provider" alt="" coords="583,16,652,43"/>
+<area shape="rect" id="node5" href="./Provider.html" title="&lt;TABLE&gt;" alt="" coords="572,5,663,53"/>
+<area shape="rect" id="node6_5" href="./UAPPPart.html" title="org.universAAL.tools.ucc.model.UAPPPart" alt="" coords="698,16,779,43"/>
+<area shape="rect" id="node6" href="./UAPPPart.html" title="&lt;TABLE&gt;" alt="" coords="687,5,790,53"/>
+<area shape="rect" id="node7_6" href="./UAPP.html" title="org.universAAL.tools.ucc.model.UAPP" alt="" coords="825,16,882,43"/>
+<area shape="rect" id="node7" href="./UAPP.html" title="&lt;TABLE&gt;" alt="" coords="814,5,893,53"/>
+<area shape="rect" id="node8_7" href="./Service.html" title="org.universAAL.tools.ucc.model.Service" alt="" coords="927,16,993,43"/>
+<area shape="rect" id="node8" href="./Service.html" title="&lt;TABLE&gt;" alt="" coords="917,5,1003,53"/>
 </map>

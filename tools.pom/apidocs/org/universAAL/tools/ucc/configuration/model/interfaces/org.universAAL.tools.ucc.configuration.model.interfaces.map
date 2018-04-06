@@ -1,12 +1,12 @@
 <map id="G" name="G">
-<area shape="rect" id="c14457" href="./OnConfigurationChangedListenerFactory.html" title="org.universAAL.tools.ucc.configuration.model.interfaces.OnConfigurationChangedListenerFactory" alt="" coords="15,11,273,53"/>
-<area shape="rect" id="node1" href="./OnConfigurationChangedListenerFactory.html" title="&lt;TABLE&gt;" alt="" coords="5,6,283,58"/>
-<area shape="rect" id="c14458" href="./ConfigurationValidatorFactory.html" title="org.universAAL.tools.ucc.configuration.model.interfaces.ConfigurationValidatorFactory" alt="" coords="317,11,510,53"/>
-<area shape="rect" id="node2" href="./ConfigurationValidatorFactory.html" title="&lt;TABLE&gt;" alt="" coords="307,6,520,58"/>
-<area shape="rect" id="c14459" href="./ModelRegistryChangedListener.html" title="org.universAAL.tools.ucc.configuration.model.interfaces.ModelRegistryChangedListener" alt="" coords="555,11,757,53"/>
-<area shape="rect" id="node3" href="./ModelRegistryChangedListener.html" title="&lt;TABLE&gt;" alt="" coords="544,6,768,58"/>
-<area shape="rect" id="c14460" href="./OnConfigurationChangedListener.html" title="org.universAAL.tools.ucc.configuration.model.interfaces.OnConfigurationChangedListener" alt="" coords="803,11,1016,53"/>
-<area shape="rect" id="node4" href="./OnConfigurationChangedListener.html" title="&lt;TABLE&gt;" alt="" coords="792,6,1027,58"/>
-<area shape="rect" id="c14461" href="./ConfigurationValidator.html" title="org.universAAL.tools.ucc.configuration.model.interfaces.ConfigurationValidator" alt="" coords="1061,11,1211,53"/>
-<area shape="rect" id="node5" href="./ConfigurationValidator.html" title="&lt;TABLE&gt;" alt="" coords="1051,6,1221,58"/>
+<area shape="rect" id="node1_0" href="./OnConfigurationChangedListenerFactory.html" title="org.universAAL.tools.ucc.configuration.model.interfaces.OnConfigurationChangedListenerFactory" alt="" coords="15,11,273,55"/>
+<area shape="rect" id="node1" href="./OnConfigurationChangedListenerFactory.html" title="&lt;TABLE&gt;" alt="" coords="5,6,283,61"/>
+<area shape="rect" id="node2_1" href="./ConfigurationValidatorFactory.html" title="org.universAAL.tools.ucc.configuration.model.interfaces.ConfigurationValidatorFactory" alt="" coords="318,11,511,55"/>
+<area shape="rect" id="node2" href="./ConfigurationValidatorFactory.html" title="&lt;TABLE&gt;" alt="" coords="307,6,522,61"/>
+<area shape="rect" id="node3_2" href="./ModelRegistryChangedListener.html" title="org.universAAL.tools.ucc.configuration.model.interfaces.ModelRegistryChangedListener" alt="" coords="557,11,760,55"/>
+<area shape="rect" id="node3" href="./ModelRegistryChangedListener.html" title="&lt;TABLE&gt;" alt="" coords="547,6,771,61"/>
+<area shape="rect" id="node4_3" href="./OnConfigurationChangedListener.html" title="org.universAAL.tools.ucc.configuration.model.interfaces.OnConfigurationChangedListener" alt="" coords="805,11,1019,55"/>
+<area shape="rect" id="node4" href="./OnConfigurationChangedListener.html" title="&lt;TABLE&gt;" alt="" coords="795,6,1029,61"/>
+<area shape="rect" id="node5_4" href="./ConfigurationValidator.html" title="org.universAAL.tools.ucc.configuration.model.interfaces.ConfigurationValidator" alt="" coords="1064,11,1213,55"/>
+<area shape="rect" id="node5" href="./ConfigurationValidator.html" title="&lt;TABLE&gt;" alt="" coords="1053,6,1224,61"/>
 </map>
