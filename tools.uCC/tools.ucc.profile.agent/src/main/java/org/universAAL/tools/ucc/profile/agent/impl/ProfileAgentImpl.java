@@ -16,19 +16,19 @@ import org.universAAL.middleware.service.owls.process.ProcessOutput;
 import org.universAAL.ontology.phThing.Device;
 import org.universAAL.ontology.profile.AppService;
 import org.universAAL.ontology.profile.AppServiceProfile;
-import org.universAAL.ontology.profile.Space;
-import org.universAAL.ontology.profile.SpaceProfile;
 import org.universAAL.ontology.profile.Profilable;
 import org.universAAL.ontology.profile.Profile;
+import org.universAAL.ontology.profile.Space;
+import org.universAAL.ontology.profile.SpaceProfile;
 import org.universAAL.ontology.profile.SubProfile;
 import org.universAAL.ontology.profile.User;
 import org.universAAL.ontology.profile.UserProfile;
 import org.universAAL.ontology.profile.service.ProfilingService;
-import org.universAAL.support.utils.service.Arg;
-import org.universAAL.support.utils.service.Path;
-import org.universAAL.support.utils.service.low.Request;
-import org.universAAL.support.utils.service.mid.UtilEditor;
 import org.universAAL.tools.ucc.profile.agent.ProfileAgent;
+import org.universAAL.utilities.api.service.Arg;
+import org.universAAL.utilities.api.service.Path;
+import org.universAAL.utilities.api.service.low.Request;
+import org.universAAL.utilities.api.service.mid.UtilEditor;
 
 public class ProfileAgentImpl implements ProfileAgent {
 	private static ServiceCaller caller = null;
@@ -36,11 +36,16 @@ public class ProfileAgentImpl implements ProfileAgent {
 	// TODO: to be updated according to what we need
 	private static final String PROFILE_AGENT_NAMESPACE = "http://ontology.itaca.es/ProfileAGENT.owl#";
 
-	private static final String OUTPUT_GETPROFILABLE = PROFILE_AGENT_NAMESPACE + "out1";
-	private static final String OUTPUT_GETPROFILE = PROFILE_AGENT_NAMESPACE + "out2";
-	private static final String OUTPUT_GETUSERS = PROFILE_AGENT_NAMESPACE + "out3";
-	private static final String OUTPUT_GETSUBPROFILES = PROFILE_AGENT_NAMESPACE + "out4";
-	private static final String OUTPUT_GETSUBPROFILE = PROFILE_AGENT_NAMESPACE + "out5";
+	private static final String OUTPUT_GETPROFILABLE = PROFILE_AGENT_NAMESPACE
+			+ "out1";
+	private static final String OUTPUT_GETPROFILE = PROFILE_AGENT_NAMESPACE
+			+ "out2";
+	private static final String OUTPUT_GETUSERS = PROFILE_AGENT_NAMESPACE
+			+ "out3";
+	private static final String OUTPUT_GETSUBPROFILES = PROFILE_AGENT_NAMESPACE
+			+ "out4";
+	private static final String OUTPUT_GETSUBPROFILE = PROFILE_AGENT_NAMESPACE
+			+ "out5";
 	// USER_URI=USER_URI_PREFIX + UserID
 	private static final String USER_URI_PREFIX = "urn:org.universAAL.space:test_env#";
 	// static final String CONTEXT_HISTORY_HTL_IMPL_NAMESPACE =
@@ -61,7 +66,8 @@ public class ProfileAgentImpl implements ProfileAgent {
 	 * @return ?
 	 */
 	public String addUser(User user) {
-		System.out.println("Profile Agent: add user with URI: " + user.getURI());
+		System.out
+				.println("Profile Agent: add user with URI: " + user.getURI());
 		ServiceRequest req = new ServiceRequest(new ProfilingService(), null);
 		req.addAddEffect(new String[] { ProfilingService.PROP_CONTROLS }, user);
 		ServiceResponse resp = caller.call(req);
@@ -77,8 +83,10 @@ public class ProfileAgentImpl implements ProfileAgent {
 	public User getUser(User user) {
 		System.out.println("Profile agent: get user: " + user.getURI());
 		ServiceRequest req = new ServiceRequest(new ProfilingService(), null);
-		req.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS }, user);
-		req.addRequiredOutput(OUTPUT_GETPROFILABLE, new String[] { ProfilingService.PROP_CONTROLS });
+		req.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS },
+				user);
+		req.addRequiredOutput(OUTPUT_GETPROFILABLE,
+				new String[] { ProfilingService.PROP_CONTROLS });
 		ServiceResponse resp = caller.call(req);
 		if (resp.getCallStatus() == CallStatus.succeeded) {
 			Object out = getReturnValue(resp.getOutputs(), OUTPUT_GETPROFILABLE);
@@ -98,14 +106,17 @@ public class ProfileAgentImpl implements ProfileAgent {
 		System.out.println("Profile agent: get user with URI: " + uri);
 		User user = new User(uri);
 		ServiceRequest req = new ServiceRequest(new ProfilingService(), null);
-		req.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS }, user);
-		req.addRequiredOutput(OUTPUT_GETPROFILABLE, new String[] { ProfilingService.PROP_CONTROLS });
+		req.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS },
+				user);
+		req.addRequiredOutput(OUTPUT_GETPROFILABLE,
+				new String[] { ProfilingService.PROP_CONTROLS });
 		ServiceResponse resp = caller.call(req);
 		if (resp.getCallStatus() == CallStatus.succeeded) {
 			Object out = getReturnValue(resp.getOutputs(), OUTPUT_GETPROFILABLE);
 			if (out != null) {
 
-				System.out.println("Profile agent: result got is - " + out.toString());
+				System.out.println("Profile agent: result got is - "
+						+ out.toString());
 
 				return (User) out;
 			} else {
@@ -121,8 +132,10 @@ public class ProfileAgentImpl implements ProfileAgent {
 	public List<User> getAllUsers() {
 		System.out.println("Profile Agent: getAllUsers");
 		ServiceRequest req = new ServiceRequest(new ProfilingService(), null);
-		req.addRequiredOutput(OUTPUT_GETUSERS, new String[] { ProfilingService.PROP_CONTROLS });
-		req.addTypeFilter(Path.at(ProfilingService.PROP_CONTROLS).path, User.MY_URI);
+		req.addRequiredOutput(OUTPUT_GETUSERS,
+				new String[] { ProfilingService.PROP_CONTROLS });
+		req.addTypeFilter(Path.at(ProfilingService.PROP_CONTROLS).path,
+				User.MY_URI);
 		ServiceResponse resp = caller.call(req);
 		if (resp.getCallStatus() == CallStatus.succeeded) {
 			Object out = getReturnValue(resp.getOutputs(), OUTPUT_GETUSERS);
@@ -156,7 +169,8 @@ public class ProfileAgentImpl implements ProfileAgent {
 	public boolean updateUser(User user) {
 		System.out.println("Profile Agent: update user: " + user.getURI());
 		ServiceRequest req = new ServiceRequest(new ProfilingService(), null);
-		req.addChangeEffect(new String[] { ProfilingService.PROP_CONTROLS }, user);
+		req.addChangeEffect(new String[] { ProfilingService.PROP_CONTROLS },
+				user);
 		ServiceResponse resp = caller.call(req);
 		System.out.println("The result: " + resp.getCallStatus().name());
 		if (resp.getCallStatus() == CallStatus.succeeded)
@@ -169,8 +183,10 @@ public class ProfileAgentImpl implements ProfileAgent {
 		System.out.println("Profile Agent: delete User: " + uri);
 		User user = new User(uri);
 		ServiceRequest req = new ServiceRequest(new ProfilingService(), null);
-		MergedRestriction r1 = MergedRestriction.getFixedValueRestriction(ProfilingService.PROP_CONTROLS, user);
-		req.getRequestedService().addInstanceLevelRestriction(r1, new String[] { ProfilingService.PROP_CONTROLS });
+		MergedRestriction r1 = MergedRestriction.getFixedValueRestriction(
+				ProfilingService.PROP_CONTROLS, user);
+		req.getRequestedService().addInstanceLevelRestriction(r1,
+				new String[] { ProfilingService.PROP_CONTROLS });
 		req.addRemoveEffect(new String[] { ProfilingService.PROP_CONTROLS });
 		ServiceResponse resp = caller.call(req);
 		System.out.println("The result: " + resp.getCallStatus().name());
@@ -182,13 +198,14 @@ public class ProfileAgentImpl implements ProfileAgent {
 
 	private ServiceRequest userProfileRequest(User user) {
 		ServiceRequest req = new ServiceRequest(new ProfilingService(), null);
-		req.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS }, user);
+		req.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS },
+				user);
 
-		req.addTypeFilter(new String[] { ProfilingService.PROP_CONTROLS, Profilable.PROP_HAS_PROFILE },
-				UserProfile.MY_URI);
+		req.addTypeFilter(new String[] { ProfilingService.PROP_CONTROLS,
+				Profilable.PROP_HAS_PROFILE }, UserProfile.MY_URI);
 
-		req.addRequiredOutput(OUTPUT_GETPROFILE,
-				new String[] { ProfilingService.PROP_CONTROLS, Profilable.PROP_HAS_PROFILE });
+		req.addRequiredOutput(OUTPUT_GETPROFILE, new String[] {
+				ProfilingService.PROP_CONTROLS, Profilable.PROP_HAS_PROFILE });
 
 		return req;
 	}
@@ -204,28 +221,34 @@ public class ProfileAgentImpl implements ProfileAgent {
 					if (returnValue == null)
 						returnValue = output.getParameterValue();
 					else
-						System.out.println("Profile Agent: redundant return value!");
+						System.out
+								.println("Profile Agent: redundant return value!");
 				else
-					System.out.println("Profile Agent - output ignored: " + output.getURI());
+					System.out.println("Profile Agent - output ignored: "
+							+ output.getURI());
 			}
 
 		return returnValue;
 	}
 
 	public String addUserProfile(UserProfile profile) {
-		System.out.println("Profile Agent: add user Profile: " + profile.getURI());
+		System.out.println("Profile Agent: add user Profile: "
+				+ profile.getURI());
 		ServiceRequest req = new ServiceRequest(new ProfilingService(), null);
-		req.addAddEffect(new String[] { ProfilingService.PROP_CONTROLS, Profilable.PROP_HAS_PROFILE }, profile);
+		req.addAddEffect(new String[] { ProfilingService.PROP_CONTROLS,
+				Profilable.PROP_HAS_PROFILE }, profile);
 		ServiceResponse resp = caller.call(req);
 		return resp.getCallStatus().name();
 	}
 
 	public String getUserProfile(User user) {
-		System.out.println("Profile agent: get user profile for user: " + user.getURI());
+		System.out.println("Profile agent: get user profile for user: "
+				+ user.getURI());
 		ServiceRequest req = new ServiceRequest(new ProfilingService(), null);
-		req.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS }, user);
-		req.addRequiredOutput(OUTPUT_GETPROFILE,
-				new String[] { ProfilingService.PROP_CONTROLS, Profilable.PROP_HAS_PROFILE });
+		req.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS },
+				user);
+		req.addRequiredOutput(OUTPUT_GETPROFILE, new String[] {
+				ProfilingService.PROP_CONTROLS, Profilable.PROP_HAS_PROFILE });
 		ServiceResponse resp = caller.call(req);
 		if (resp.getCallStatus() == CallStatus.succeeded) {
 			Object out = getReturnValue(resp.getOutputs(), OUTPUT_GETPROFILE);
@@ -245,8 +268,10 @@ public class ProfileAgentImpl implements ProfileAgent {
 	public String addUserProfile(User user, UserProfile profile) {
 		System.out.println("Profile agent: addProfile to an user");
 		ServiceRequest req = new ServiceRequest(new ProfilingService(), null);
-		req.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS }, user);
-		req.addAddEffect(new String[] { ProfilingService.PROP_CONTROLS, Profilable.PROP_HAS_PROFILE }, profile);
+		req.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS },
+				user);
+		req.addAddEffect(new String[] { ProfilingService.PROP_CONTROLS,
+				Profilable.PROP_HAS_PROFILE }, profile);
 		ServiceResponse resp = caller.call(req);
 		return resp.getCallStatus().name();
 	}
@@ -282,10 +307,12 @@ public class ProfileAgentImpl implements ProfileAgent {
 	}
 
 	public String addSubProfile(SubProfile profile) {
-		System.out.println("Profile agent: add subProfile" + profile.getPropertyURIs().toString());
+		System.out.println("Profile agent: add subProfile"
+				+ profile.getPropertyURIs().toString());
 		ServiceRequest req = new ServiceRequest(new ProfilingService(), null);
-		req.addAddEffect(new String[] { ProfilingService.PROP_CONTROLS, Profilable.PROP_HAS_PROFILE,
-				Profile.PROP_HAS_SUB_PROFILE }, profile);
+		req.addAddEffect(new String[] { ProfilingService.PROP_CONTROLS,
+				Profilable.PROP_HAS_PROFILE, Profile.PROP_HAS_SUB_PROFILE },
+				profile);
 		ServiceResponse resp = caller.call(req);
 		return resp.getCallStatus().name();
 	}
@@ -293,10 +320,12 @@ public class ProfileAgentImpl implements ProfileAgent {
 	public SubProfile getSubProfile(SubProfile profile) {
 		System.out.println("Profile Agent: Get SubProfile");
 		ServiceRequest req = new ServiceRequest(new ProfilingService(), null);
-		req.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS, Profilable.PROP_HAS_PROFILE,
-				Profile.PROP_HAS_SUB_PROFILE }, profile);
-		req.addRequiredOutput(OUTPUT_GETSUBPROFILE, new String[] { ProfilingService.PROP_CONTROLS,
-				Profilable.PROP_HAS_PROFILE, Profile.PROP_HAS_SUB_PROFILE });
+		req.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS,
+				Profilable.PROP_HAS_PROFILE, Profile.PROP_HAS_SUB_PROFILE },
+				profile);
+		req.addRequiredOutput(OUTPUT_GETSUBPROFILE, new String[] {
+				ProfilingService.PROP_CONTROLS, Profilable.PROP_HAS_PROFILE,
+				Profile.PROP_HAS_SUB_PROFILE });
 		ServiceResponse resp = caller.call(req);
 		if (resp.getCallStatus() == CallStatus.succeeded) {
 			Object out = getReturnValue(resp.getOutputs(), OUTPUT_GETSUBPROFILE);
@@ -314,14 +343,18 @@ public class ProfileAgentImpl implements ProfileAgent {
 	}
 
 	public String getUserSubprofiles(User user) {
-		System.out.println("Profile agent: get all Subprofiles for user: " + user.getURI());
+		System.out.println("Profile agent: get all Subprofiles for user: "
+				+ user.getURI());
 		ServiceRequest req = new ServiceRequest(new ProfilingService(), null);
-		req.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS }, user);
-		req.addRequiredOutput(OUTPUT_GETSUBPROFILES, new String[] { ProfilingService.PROP_CONTROLS,
-				Profilable.PROP_HAS_PROFILE, Profile.PROP_HAS_SUB_PROFILE });
+		req.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS },
+				user);
+		req.addRequiredOutput(OUTPUT_GETSUBPROFILES, new String[] {
+				ProfilingService.PROP_CONTROLS, Profilable.PROP_HAS_PROFILE,
+				Profile.PROP_HAS_SUB_PROFILE });
 		ServiceResponse resp = caller.call(req);
 		if (resp.getCallStatus() == CallStatus.succeeded) {
-			Object out = getReturnValue(resp.getOutputs(), OUTPUT_GETSUBPROFILES);
+			Object out = getReturnValue(resp.getOutputs(),
+					OUTPUT_GETSUBPROFILES);
 			if (out != null) {
 				System.out.println(out.toString());
 				return out.toString();
@@ -360,12 +393,14 @@ public class ProfileAgentImpl implements ProfileAgent {
 	// }
 
 	public String addUserSubprofile(User user, SubProfile subProfile) {
-		System.out.println(
-				"Profile agent: add subProfile for user: " + user.getURI() + " subProfile: " + subProfile.toString());
+		System.out.println("Profile agent: add subProfile for user: "
+				+ user.getURI() + " subProfile: " + subProfile.toString());
 		ServiceRequest req = new ServiceRequest(new ProfilingService(), null);
-		req.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS }, user);
-		req.addAddEffect(new String[] { ProfilingService.PROP_CONTROLS, Profilable.PROP_HAS_PROFILE,
-				Profile.PROP_HAS_SUB_PROFILE }, subProfile);
+		req.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS },
+				user);
+		req.addAddEffect(new String[] { ProfilingService.PROP_CONTROLS,
+				Profilable.PROP_HAS_PROFILE, Profile.PROP_HAS_SUB_PROFILE },
+				subProfile);
 		ServiceResponse resp = caller.call(req);
 		return resp.getCallStatus().name();
 	}
@@ -381,17 +416,22 @@ public class ProfileAgentImpl implements ProfileAgent {
 	}
 
 	public List getUserSubprofiles(UserProfile profile) {
-		System.out.println("Profile Agent: get Subprofiles for userprofile: " + profile.getURI());
+		System.out.println("Profile Agent: get Subprofiles for userprofile: "
+				+ profile.getURI());
 		ServiceRequest req = new ServiceRequest(new ProfilingService(), null);
-		req.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS, Profilable.PROP_HAS_PROFILE }, profile);
-		req.addTypeFilter(new String[] { ProfilingService.PROP_CONTROLS, Profilable.PROP_HAS_PROFILE,
-				Profile.PROP_HAS_SUB_PROFILE }, SubProfile.MY_URI);
-		req.addRequiredOutput(OUTPUT_GETSUBPROFILES, new String[] { ProfilingService.PROP_CONTROLS,
-				Profilable.PROP_HAS_PROFILE, Profile.PROP_HAS_SUB_PROFILE });
+		req.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS,
+				Profilable.PROP_HAS_PROFILE }, profile);
+		req.addTypeFilter(new String[] { ProfilingService.PROP_CONTROLS,
+				Profilable.PROP_HAS_PROFILE, Profile.PROP_HAS_SUB_PROFILE },
+				SubProfile.MY_URI);
+		req.addRequiredOutput(OUTPUT_GETSUBPROFILES, new String[] {
+				ProfilingService.PROP_CONTROLS, Profilable.PROP_HAS_PROFILE,
+				Profile.PROP_HAS_SUB_PROFILE });
 		ServiceResponse resp = caller.call(req);
 		if (resp.getCallStatus() == CallStatus.succeeded) {
 			// System.out.println(resp.getOutputs());
-			Object out = getReturnValue(resp.getOutputs(), OUTPUT_GETSUBPROFILES);
+			Object out = getReturnValue(resp.getOutputs(),
+					OUTPUT_GETSUBPROFILES);
 			if (out != null) {
 				System.out.println(out.toString());
 				return (List) out;
@@ -405,13 +445,17 @@ public class ProfileAgentImpl implements ProfileAgent {
 		}
 	}
 
-	public String addUserSubprofile(UserProfile userProfile, SubProfile subProfile) {
-		System.out.println("Profile Agent: add subprofile for userProfile: " + userProfile.getURI() + " subprofile: "
+	public String addUserSubprofile(UserProfile userProfile,
+			SubProfile subProfile) {
+		System.out.println("Profile Agent: add subprofile for userProfile: "
+				+ userProfile.getURI() + " subprofile: "
 				+ subProfile.toString());
 		ServiceRequest req = new ServiceRequest(new ProfilingService(), null);
-		req.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS, Profilable.PROP_HAS_PROFILE }, userProfile);
-		req.addAddEffect(new String[] { ProfilingService.PROP_CONTROLS, Profilable.PROP_HAS_PROFILE,
-				Profile.PROP_HAS_SUB_PROFILE }, subProfile);
+		req.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS,
+				Profilable.PROP_HAS_PROFILE }, userProfile);
+		req.addAddEffect(new String[] { ProfilingService.PROP_CONTROLS,
+				Profilable.PROP_HAS_PROFILE, Profile.PROP_HAS_SUB_PROFILE },
+				subProfile);
 		ServiceResponse resp = caller.call(req);
 		return resp.getCallStatus().name();
 	}
@@ -423,8 +467,8 @@ public class ProfileAgentImpl implements ProfileAgent {
 
 	public Space getSpace(Space space) {
 		String[] path = Path.at(ProfilingService.PROP_CONTROLS).path;
-		ServiceResponse resp = caller
-				.call(UtilEditor.requestGet(ProfilingService.MY_URI, path, Arg.in(space), Arg.out(OUTPUT)));
+		ServiceResponse resp = caller.call(UtilEditor.requestGet(
+				ProfilingService.MY_URI, path, Arg.in(space), Arg.out(OUTPUT)));
 		if (resp.getCallStatus() == CallStatus.succeeded) {
 			Object out = getReturnValue(resp.getOutputs(), OUTPUT);
 			if (out != null) {
@@ -444,17 +488,17 @@ public class ProfileAgentImpl implements ProfileAgent {
 		Request req = new Request(new ProfilingService(null));
 		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.out(OUTPUT));
 		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.type(Space.MY_URI)); // This
-																						// only
-																						// works
-																						// if
-																						// type
-																						// is
-																						// set
-																						// as
-																						// instance
-																						// restriction
-																						// in
-																						// serv
+																					// only
+																					// works
+																					// if
+																					// type
+																					// is
+																					// set
+																					// as
+																					// instance
+																					// restriction
+																					// in
+																					// serv
 		ServiceResponse resp = caller.call(req);
 		if (resp.getCallStatus() == CallStatus.succeeded) {
 			Object out = getReturnValue(resp.getOutputs(), OUTPUT);
@@ -481,18 +525,24 @@ public class ProfileAgentImpl implements ProfileAgent {
 	}
 
 	public String addSpaceProfile(SpaceProfile spaceProfile) {
-		return genericAdd(spaceProfile,
-				Path.at(ProfilingService.PROP_CONTROLS).to(Profilable.PROP_HAS_PROFILE).path);
+		return genericAdd(spaceProfile, Path.at(ProfilingService.PROP_CONTROLS)
+				.to(Profilable.PROP_HAS_PROFILE).path);
 	}
 
 	public String getDevice(Device device) {
-		return genericGet(device, Path.at(ProfilingService.PROP_CONTROLS).to(Profilable.PROP_HAS_PROFILE)
-				.to(SpaceProfile.PROP_INSTALLED_HARDWARE).path);
+		return genericGet(
+				device,
+				Path.at(ProfilingService.PROP_CONTROLS)
+						.to(Profilable.PROP_HAS_PROFILE)
+						.to(SpaceProfile.PROP_INSTALLED_HARDWARE).path);
 	}
 
 	public String addDevice(Device device) {
-		return genericAdd(device, Path.at(ProfilingService.PROP_CONTROLS).to(Profilable.PROP_HAS_PROFILE)
-				.to(SpaceProfile.PROP_INSTALLED_HARDWARE).path);
+		return genericAdd(
+				device,
+				Path.at(ProfilingService.PROP_CONTROLS)
+						.to(Profilable.PROP_HAS_PROFILE)
+						.to(SpaceProfile.PROP_INSTALLED_HARDWARE).path);
 	}
 
 	public String addDevice(Device device, Space space) {
@@ -506,10 +556,11 @@ public class ProfileAgentImpl implements ProfileAgent {
 	public Device getDevice(String uri) {
 		Device device;
 		Resource res = new Device(uri);
-		String[] path = Path.at(ProfilingService.PROP_CONTROLS).to(Profilable.PROP_HAS_PROFILE)
+		String[] path = Path.at(ProfilingService.PROP_CONTROLS)
+				.to(Profilable.PROP_HAS_PROFILE)
 				.to(SpaceProfile.PROP_INSTALLED_HARDWARE).path;
-		ServiceResponse resp = caller
-				.call(UtilEditor.requestGet(ProfilingService.MY_URI, path, Arg.in(res), Arg.out(OUTPUT)));
+		ServiceResponse resp = caller.call(UtilEditor.requestGet(
+				ProfilingService.MY_URI, path, Arg.in(res), Arg.out(OUTPUT)));
 		if (resp.getCallStatus() == CallStatus.succeeded) {
 			Object out = getReturnValue(resp.getOutputs(), OUTPUT);
 			if (out != null) {
@@ -527,8 +578,11 @@ public class ProfileAgentImpl implements ProfileAgent {
 	}
 
 	public boolean updateDevice(Device device) {
-		String result = genericChange(device, Path.at(ProfilingService.PROP_CONTROLS).to(Profilable.PROP_HAS_PROFILE)
-				.to(SpaceProfile.PROP_INSTALLED_HARDWARE).path);
+		String result = genericChange(
+				device,
+				Path.at(ProfilingService.PROP_CONTROLS)
+						.to(Profilable.PROP_HAS_PROFILE)
+						.to(SpaceProfile.PROP_INSTALLED_HARDWARE).path);
 		if (result.equals("call_succeeded"))
 			return true;
 		else
@@ -536,8 +590,11 @@ public class ProfileAgentImpl implements ProfileAgent {
 	}
 
 	public boolean deleteDevice(String uri) {
-		String result = genericRemove(new Device(uri), Path.at(ProfilingService.PROP_CONTROLS)
-				.to(Profilable.PROP_HAS_PROFILE).to(SpaceProfile.PROP_INSTALLED_HARDWARE).path);
+		String result = genericRemove(
+				new Device(uri),
+				Path.at(ProfilingService.PROP_CONTROLS)
+						.to(Profilable.PROP_HAS_PROFILE)
+						.to(SpaceProfile.PROP_INSTALLED_HARDWARE).path);
 		if (result.equals("call_succeeded"))
 			return true;
 		else
@@ -547,11 +604,15 @@ public class ProfileAgentImpl implements ProfileAgent {
 	// Has not been tested - wait for space server!!!
 	public List<Device> getAllDevices(Space space) {
 		ServiceRequest req = new ServiceRequest(new ProfilingService(), null);
-		req.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS }, space);
-		req.addTypeFilter(new String[] { ProfilingService.PROP_CONTROLS }, Space.MY_URI);
-		req.addRequiredOutput(OUTPUT, new String[] { ProfilingService.PROP_CONTROLS, Profilable.PROP_HAS_PROFILE,
+		req.addValueFilter(new String[] { ProfilingService.PROP_CONTROLS },
+				space);
+		req.addTypeFilter(new String[] { ProfilingService.PROP_CONTROLS },
+				Space.MY_URI);
+		req.addRequiredOutput(OUTPUT, new String[] {
+				ProfilingService.PROP_CONTROLS, Profilable.PROP_HAS_PROFILE,
 				SpaceProfile.PROP_INSTALLED_HARDWARE });
-		req.addTypeFilter(new String[] { ProfilingService.PROP_CONTROLS, Profilable.PROP_HAS_PROFILE,
+		req.addTypeFilter(new String[] { ProfilingService.PROP_CONTROLS,
+				Profilable.PROP_HAS_PROFILE,
 				SpaceProfile.PROP_INSTALLED_HARDWARE }, Device.MY_URI);
 		ServiceResponse resp = caller.call(req);
 		if (resp.getCallStatus() == CallStatus.succeeded) {
@@ -584,15 +645,16 @@ public class ProfileAgentImpl implements ProfileAgent {
 	}
 
 	public String getSpaceProfile(SpaceProfile spaceProfile) {
-		return genericGet(spaceProfile,
-				Path.at(ProfilingService.PROP_CONTROLS).to(Profilable.PROP_HAS_PROFILE).path);
+		return genericGet(spaceProfile, Path.at(ProfilingService.PROP_CONTROLS)
+				.to(Profilable.PROP_HAS_PROFILE).path);
 	}
 
 	public String addDeviceToSpace(Device dev, Space space) {
 		Request req = new Request(new ProfilingService(null));
 		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.in(space));
 		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.type(Space.MY_URI));
-		req.put(Path.at(ProfilingService.PROP_CONTROLS).to(Profilable.PROP_HAS_PROFILE)
+		req.put(Path.at(ProfilingService.PROP_CONTROLS)
+				.to(Profilable.PROP_HAS_PROFILE)
 				.to(SpaceProfile.PROP_INSTALLED_HARDWARE), Arg.add(dev));
 		ServiceResponse resp = caller.call(req);
 		return resp.getCallStatus().name();
@@ -602,7 +664,8 @@ public class ProfileAgentImpl implements ProfileAgent {
 		Request req = new Request(new ProfilingService(null));
 		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.in(space));
 		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.type(Space.MY_URI));
-		req.put(Path.at(ProfilingService.PROP_CONTROLS).to(Profilable.PROP_HAS_PROFILE)
+		req.put(Path.at(ProfilingService.PROP_CONTROLS)
+				.to(Profilable.PROP_HAS_PROFILE)
 				.to(SpaceProfile.PROP_INSTALLED_HARDWARE), Arg.out(OUTPUT));
 		ServiceResponse resp = caller.call(req);
 		return getListOfResults(resp);
@@ -619,17 +682,18 @@ public class ProfileAgentImpl implements ProfileAgent {
 	public String getServices() {
 		Request req = new Request(new ProfilingService(null));
 		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.out(OUTPUT));
-		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.type(AppService.MY_URI)); // This
-																						// only
-																						// works
-																						// if
-																						// type
-																						// set
-																						// as
-																						// instance
-																						// restriction
-																						// in
-																						// serv
+		req.put(Path.at(ProfilingService.PROP_CONTROLS),
+				Arg.type(AppService.MY_URI)); // This
+												// only
+												// works
+												// if
+												// type
+												// set
+												// as
+												// instance
+												// restriction
+												// in
+												// serv
 		ServiceResponse resp = caller.call(req);
 		return getListOfResults(resp);
 	}
@@ -668,7 +732,8 @@ public class ProfileAgentImpl implements ProfileAgent {
 		Request req = new Request(new ProfilingService(null));
 		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.in(space));
 		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.type(Space.MY_URI));
-		req.put(Path.at(ProfilingService.PROP_CONTROLS).to(Profilable.PROP_HAS_PROFILE)
+		req.put(Path.at(ProfilingService.PROP_CONTROLS)
+				.to(Profilable.PROP_HAS_PROFILE)
 				.to(SpaceProfile.PROP_INSTALLED_SERVICES), Arg.add(serv));
 		ServiceResponse resp = caller.call(req);
 		return resp.getCallStatus().name();
@@ -678,7 +743,8 @@ public class ProfileAgentImpl implements ProfileAgent {
 		Request req = new Request(new ProfilingService(null));
 		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.in(space));
 		req.put(Path.at(ProfilingService.PROP_CONTROLS), Arg.type(Space.MY_URI));
-		req.put(Path.at(ProfilingService.PROP_CONTROLS).to(Profilable.PROP_HAS_PROFILE)
+		req.put(Path.at(ProfilingService.PROP_CONTROLS)
+				.to(Profilable.PROP_HAS_PROFILE)
 				.to(SpaceProfile.PROP_INSTALLED_SERVICES), Arg.out(OUTPUT));
 		ServiceResponse resp = caller.call(req);
 		return getListOfResults(resp);
@@ -735,24 +801,27 @@ public class ProfileAgentImpl implements ProfileAgent {
 
 	/**** utility functions *****/
 	private String genericAdd(Resource res, String[] path) {
-		ServiceResponse resp = caller.call(UtilEditor.requestAdd(ProfilingService.MY_URI, path, Arg.add(res)));
+		ServiceResponse resp = caller.call(UtilEditor.requestAdd(
+				ProfilingService.MY_URI, path, Arg.add(res)));
 		return resp.getCallStatus().name();
 	}
 
 	private String genericGet(Resource res, String[] path) {
-		ServiceResponse resp = caller
-				.call(UtilEditor.requestGet(ProfilingService.MY_URI, path, Arg.in(res), Arg.out(OUTPUT)));
+		ServiceResponse resp = caller.call(UtilEditor.requestGet(
+				ProfilingService.MY_URI, path, Arg.in(res), Arg.out(OUTPUT)));
 
 		return getListOfResults(resp);
 	}
 
 	private String genericChange(Resource res, String[] path) {
-		ServiceResponse resp = caller.call(UtilEditor.requestChange(ProfilingService.MY_URI, path, Arg.change(res)));
+		ServiceResponse resp = caller.call(UtilEditor.requestChange(
+				ProfilingService.MY_URI, path, Arg.change(res)));
 		return resp.getCallStatus().name();
 	}
 
 	private String genericRemove(Resource res, String[] path) {
-		ServiceResponse resp = caller.call(UtilEditor.requestRemove(ProfilingService.MY_URI, path, Arg.remove(res)));
+		ServiceResponse resp = caller.call(UtilEditor.requestRemove(
+				ProfilingService.MY_URI, path, Arg.remove(res)));
 		return resp.getCallStatus().name();
 	}
 
